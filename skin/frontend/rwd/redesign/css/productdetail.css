@@ -1,0 +1,8 @@
+.images-slider-prev {
+   height: 40px;
+    cursor: pointer;
+}
+.images-slider-next {
+    margin-top: 10px;
+    cursor: pointer;
+}
