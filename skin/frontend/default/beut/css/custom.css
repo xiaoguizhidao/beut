@@ -1,0 +1,75 @@
+/*
+ * Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Sep 4, 2013
+ */
+.bottom-desc {
+	background: #f9f9f9;
+	color: #002C53;
+	font-size: 15px;
+}
+.bottom-desc .category-description {
+	width: 600px;
+	padding: 20px 0;
+	height: auto;
+}
+.bottom-desc .category-description h1{
+	text-align: center;
+	border-bottom: none;
+	text-decoration: underline;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+.bottom-desc .category-description h2{
+	text-align: center;
+	border-bottom: none;
+	text-decoration: underline;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+.bottom-desc .category-description h3{
+	text-align: center;
+	border-bottom: none;
+	text-decoration: underline;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+.bottom-desc .category-description p{
+	text-align: justify;
+	
+}
+
+#category-banner .page-title {
+	display: inline-block;
+	height: 250px;
+	padding: 0;
+}
+#category-banner .page-title .page-title-wrap{
+	 margin-top: 60px !important;
+}
+.add-to-wishlist {
+	float: left;
+    height: 35px;
+	left: auto;
+	top: auto;   
+    margin-left: 10px;
+    margin-top: 10px;
+	position: relative;
+    width: 130px;
+}
+.product-shop .product-options-bottom .add-to-cart, .add-to-box .add-to-cart{
+	float: left;
+    margin: 10px 0 0;
+    text-align: left;
+	padding: 0;
+}
+#category-banner {
+	text-align: center;
+}
+#category-banner .page-title .page-title-wrap {
+	
+}
+.MagicThumb-expanded {
+	z-index: 1000000 !important;
+}
+.header .logo {
+	width: 210px;
+}

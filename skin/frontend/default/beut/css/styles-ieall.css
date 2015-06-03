@@ -1,0 +1,8 @@
+.footer .form-subscribe input.input-text{
+	width: 160px;
+	margin-left: 10px;
+}
+
+.footer .form-subscribe label, .footer .form-subscribe .input-box, .footer .form-subscribe button.button{
+	margin-left: 0px;
+}

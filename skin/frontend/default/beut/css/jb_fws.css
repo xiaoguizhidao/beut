@@ -1,0 +1,333 @@
+body { 
+    margin:0;
+    padding:0;
+}
+
+.JB_FWS * {
+    margin:0;
+    padding:0;
+}
+
+.JB_FWS {
+    width:100%;
+    height:430px;
+    background:#fff;
+    float:left;
+    position: relative;
+    width:100%;
+    overflow: hidden;
+}
+
+.JB_Border {
+    width:100%;
+    height:15px;
+    position: absolute;
+}
+
+.JB_Border.Top {
+    top:0;
+    left:0;
+}
+.JB_Border.Bottom {
+    bottom:0;
+    left:0;
+}
+
+.JB_Border.Top.ZigZag {
+    background-image:url("../img_slide/zigzag_border_top.png");
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+}
+.JB_Border.Bottom.ZigZag {
+    background-image:url("../img_slide/zigzag_border_bottom.png");
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+}
+
+.JB_Border.Top.Paper {
+    background-image:url("../img_slide/torn_paper_bg_top.png");
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+}
+.JB_Border.Bottom.Paper {
+    background-image:url("../img_slide/torn_paper_bg_bottom.png");
+    background-repeat: repeat-x;
+    background-position: 0px 100%;
+}
+
+.JB_Button_Left {
+    padding:15px;
+    width:21px;
+    height:30px;
+    background-image: url("../img_slide/left_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    top:50%;
+    left:0;
+    cursor: pointer;
+    margin-top: -30px;
+}
+
+.JB_Button_Left_BG {
+    padding:15px;
+    width:21px;
+    height:30px;
+    background-color:#000;
+    opacity:0.44;
+    position: absolute;
+    top:50%;
+    left:0;
+    margin-top: -30px;
+}
+
+.JB_Button_Right {
+    padding:15px;
+    width:21px;
+    height:30px;
+    background-image: url("../img_slide/right_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    top:50%;
+    right:0;
+    cursor: pointer;
+    margin-top: -30px;
+}
+
+.JB_Button_Right_BG {
+    padding:15px;
+    width:21px;
+    height:30px;
+    background-color:#000;
+    opacity:0.44;
+    position: absolute;
+    top:50%;
+    right:0;
+    margin-top: -30px;
+}
+
+.JB_Container {
+
+    width:9999px;
+    height:430px;
+    margin:0 auto;
+    position: absolute;
+    overflow: hidden;
+    left:0;
+
+    cursor:hand;
+    cursor:grab!important;
+    cursor:-moz-grab;
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur), pointer!important;
+    cursor:-webkit-grab;
+}
+
+.JB_Slide {
+    height:430px;
+    float:left;
+    position: relative;
+}
+
+.JB_Slide_Content {
+    width:960px;
+    margin: 0 auto;
+    margin-top:15px;
+    position: relative;
+}
+
+.JB_Slide_Content.one{
+	margin-top: 140px;
+}
+
+
+.JB_Slide_Content.two{
+	margin-left: 680px;
+}
+
+.JB_Slide_Content.three{
+	margin-left: 680px;
+	margin-top: 140px;
+}
+
+.JB_Slide_Content.four{
+	margin-left: 680px;
+}
+
+.JB_Pagination {
+    width:100%;
+    height:12px;
+    position: absolute;
+    bottom:15px;
+    left:0;
+}
+
+.JB_Pages {
+    display: table;
+    margin: 0 auto;
+}
+
+.JB_Page {
+    background-image:url("../img_slide/pagination_button.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width:13px;
+    height:12px;
+    float:left;
+    margin-left:5px;
+    cursor: pointer;
+}
+.JB_Page:hover, .JB_Page.active  {
+    background-position: -13px 0px;
+}
+
+.JB_ReadMore {
+    float:left;
+    color:#fff;
+    margin-top:15px;
+    position: relative;
+}
+
+.JB_ReadMore_BG {
+    top:0;
+    lef:0;
+    position: absolute;
+    background:#002060;
+    opacity:0.44;
+    width:100%;
+    height:100%;
+}
+
+.JB_ReadMore a {
+    padding:10px 30px 10px 20px;
+    position: relative;
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#FFF;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    background-image:url("../img_slide/button_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    font-size: 12px;
+}
+
+
+/* --- MEDIA QUERY --- */
+@media only screen and (max-width: 1280px) {
+    .JB_Slide_Content {
+        width:800px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .JB_Slide_Content {
+        width:600px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- DEMO SLIDES CONTENT BELOW (Not important demo styles) YOU CAN REMOVE THE STYLE BELOW --- */
+
+h2 {
+    width:100%;
+    
+}
+.big_text {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    height: 40px;
+    margin: 180px auto;
+    text-shadow: 0 2px 0 #A22626;
+    width: 760px;
+}
+
+.image { 
+    float:left;
+    margin-top:60px;
+}
+
+.image iframe {
+    border:5px solid #6e8c42;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size:26px;
+    color:#002060;
+    font-weight:bold;
+    float:left;
+}
+
+.text {
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    color:#333;
+    line-height:20px;
+    margin-top:10px;
+    
+}
+
+.list {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#fff;
+    float:left;
+    margin-top:12px;
+    line-height:20px;
+}
+
+.list li {
+    background-image:url(../img_slide/button_arrow.png);
+    background-repeat:no-repeat;
+    background-position:left;
+    text-indent:15px;
+    list-style-type:none;
+}
+
+.text_box {
+    float:left;
+    width:400px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .text_box {width:350px;}
+}
+@media only screen and (max-width: 1024px) {
+    .text_box {width:280px;}
+    .title {font-size: 13px;}
+    .text {font-size: 12px;}
+    .image {
+        width: 300px;
+        height:187px; 
+    }
+    
+    .image img {
+        width: 300px;
+        height:187px; 
+        margin-top:10px;
+    }
+    .image iframe {
+        width: 289px;
+        height:180px;
+        margin-top:15px;
+    }
+    
+    .big_text {
+        font-size: 26px;
+        width: 500px;
+    }
+}

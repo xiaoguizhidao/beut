@@ -1,0 +1,8 @@
+[10-Jul-2014 20:49:54 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 20:51:54 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:11:42 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:14:25 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:33:47 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:36:57 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:55:44 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
+[10-Jul-2014 21:59:24 Europe/London] PHP Fatal error:  Call to undefined method Extendware_EWAutoSwitcher_Helper_Data::isEnabledForUrl() in /home/zgkuophq/public_html/app/code/local/Varien/Autoload.php on line 66
