@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category    Trmmarketing
+ * @package     Trmmarketing_PopupWidgets
+ * @copyright   Copyright (c) 2013 TRM Marketing LLC
+ * @license     http://www.trm-marketing.com/solutions/license/TRM-Marketing-Standard-License-Agreement.html
+ */
+-->
+<config>
+    <tabs>
+        <trmpopup_tab module="popup" translate="label">
+            <label>TRM Marketing</label>
+            <sort_order>100</sort_order>
+        </trmpopup_tab>
+    </tabs>
+    <sections>
+        <trmpopupconfig module="popup" translate="label">
+            <label>TRM Promotional Pop-up</label>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>trmpopup_tab</tab>
+            <groups>
+                <trmpopup_group translate="label">
+                    <label>Pop-up Browser Configuration</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<excludebrowsers translate="label tooltip comment">
+                            <label>Browser Exceptions</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+       <comment>Excluse these browsers from seeing the pop-up</comment>
+                        </excludebrowsers>
+						
+						
+                    </fields>
+                </trmpopup_group>
+				
+				<trmpopuptracking_group translate="label">
+                    <label>Pop-up Tracking Configuration</label>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<trackingoptions translate="label tooltip comment">
+                            <label>Tracking Options</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>popup/tracking</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+       <comment>Select which external Analytics platforms will receive conversion information</comment>
+                        </trackingoptions>
+						
+						
+                    </fields>
+                </trmpopuptracking_group>
+				<trmpopupdesign_group translate="label">
+                    <label>Pop-up Modal Settings</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<popupmodalclickclose translate="label tooltip comment">
+                            <label>Modal Click Close</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Ability to click modal to close pop-up.</comment>
+                        </popupmodalclickclose>
+						<popupmodalcolor translate="label tooltip comment">
+                            <label>Modal Color</label>
+                            <frontend_type>text</frontend_type>
+							<validate>color {hash:true}</validate>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+       <comment>Color of the modal layer that will obscrube the webpage until pop-up is closed</comment>
+                        </popupmodalcolor>
+						<popupmodalopacity translate="label tooltip comment">
+                            <label>Modal Opacity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>popup/opacity</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+       <comment>Opacity 1 for opaque and 0 for transparent 0.5 for 50% opacity</comment>
+                        </popupmodalopacity>
+						
+						<popupmodalinduration translate="label tooltip comment">
+                            <label>Fade In Duration</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>popup/duration</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Speed at which the modal background fades in.</comment>
+                        </popupmodalinduration>
+						<popupmodaloutduration translate="label tooltip comment">
+                            <label>Fade Out Duration</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>popup/duration</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Speed at which the modal background fades out.</comment>
+                        </popupmodaloutduration>
+						
+						
+                    </fields>
+                </trmpopupdesign_group>
+            </groups>
+        </trmpopupconfig>
+    </sections>
+</config>

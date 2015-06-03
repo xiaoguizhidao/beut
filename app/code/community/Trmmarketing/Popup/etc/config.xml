@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Trmmarketing
+ * @package     Trmmarketing_PopupWidgets
+ * @copyright   Copyright (c) 2013 TRM Marketing LLC
+ * @license     http://www.trm-marketing.com/solutions/license/TRM-Marketing-Standard-License-Agreement.html
+ */
+-->
+<config>
+    <modules>
+        <Trmmarketing_Popup>
+            <version>2.7.3</version>
+        </Trmmarketing_Popup>
+    </modules>
+    <frontend>
+        <routers>
+            <popup>
+                <use>standard</use>
+                <args>
+                    <module>Trmmarketing_Popup</module>
+                    <frontName>popup</frontName>
+                </args>
+            </popup>
+        </routers>
+        <layout>
+            <updates>
+                <popup>
+                    <file>popup.xml</file>
+                </popup>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<popup>
+				<use>admin</use>
+				<args>
+					<module>Trmmarketing_Popup</module>
+					<frontName>popup</frontName>
+				</args>
+			</popup>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+					<popup module="popup"> 
+			<title>Promotional Pop-ups</title>
+				<sort_order>71</sort_order>            
+						<action>popup/adminhtml_popup</action>
+					
+			</popup>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<popup>
+							<title>TRM Marketing - Promotional Popups Module</title>
+							<sort_order>10</sort_order>
+						</popup>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<popup>
+					<file>popup.xml</file>
+				</popup>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <popup>
+                <class>Trmmarketing_Popup_Model</class>
+                <resourceModel>popup_mysql4</resourceModel>
+            </popup>
+            <popup_mysql4>
+                <class>Trmmarketing_Popup_Model_Mysql4</class>
+                <entities>
+                    <popup>
+                        <table>popup</table>
+                    </popup>
+                </entities>
+            </popup_mysql4>
+        </models>
+        <resources>
+            <popup_setup>
+                <setup>
+                    <module>Trmmarketing_Popup</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </popup_setup>
+            <popup_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </popup_write>
+            <popup_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </popup_read>
+        </resources>
+        <blocks>
+            <popup>
+                <class>Trmmarketing_Popup_Block</class>
+            </popup>
+        </blocks>
+        <helpers>
+            <popup>
+                <class>Trmmarketing_Popup_Helper</class>
+            </popup>
+        </helpers> 
+    </global>
+	<default>
+		<trmpopupconfig>
+			<trmpopuptracking_group>
+				<trackingoptions>None</trackingoptions>
+			</trmpopuptracking_group>
+			<trmpopupdesign_group>
+			<popupmodalclickclose>0</popupmodalclickclose>
+				<popupmodalcolor>#FFFFFF</popupmodalcolor>
+				<popupmodalopacity>0.5</popupmodalopacity>
+				<popupmodalinduration>.5</popupmodalinduration>
+				<popupmodaloutduration>.5</popupmodaloutduration>
+			</trmpopupdesign_group>
+		</trmpopupconfig>
+	</default>
+</config>
