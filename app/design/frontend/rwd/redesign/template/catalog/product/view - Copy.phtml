@@ -1,0 +1,386 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="product-view">
+    <div class="product-content">
+        <div class="product-essential">
+            <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+                <?php echo $this->getBlockHtml('formkey') ?>
+                <div class="no-display">
+                    <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                    <input type="hidden" name="related_product" id="related-products-field" value="" />
+                </div>
+
+                <div class="product-img-box">
+                    <!--<div class="product-name">
+                        <h1><?php /*echo $_helper->productAttribute($_product, $_product->getName(), 'name') */?></h1>
+                  </div>-->
+                    <?php echo $this->getChildHtml('media') ?>
+                </div>
+                <div class="product-shop">
+                    <div class="product-name">
+                        <?php if($_product->getAttributeText('brands') !=""):?><h2 class='product-brand'><?php echo $_product->getAttributeText('brands');?></h2><?php endif;?>
+                        <span class="h1"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="price-info">
+                        <?php echo $this->getPriceHtml($_product); ?>
+                        <?php echo $this->getChildHtml('bundle_prices') ?>
+                        <?php echo $this->getTierPriceHtml() ?>
+                    </div>
+                    <?php echo $this->getChildHtml('addto') ?>
+                    <div class="clearfix"></div>
+
+                    <div class="add-to-cart-wrapper">
+                        <?php echo $this->getChildHtml('product_type_data') ?>
+                        <?php echo $this->getChildHtml('extrahint') ?>
+
+                        <?php if (!$this->hasOptions()):?>
+                            <div class="add-to-box">
+                                <?php if($_product->isSaleable()): ?>
+                                    <?php echo $this->getChildHtml('addtocart') ?>
+                                    <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                        <span class="or"><?php echo $this->__('OR') ?></span>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+                            <?php echo $this->getChildHtml('extra_buttons') ?>
+                        <?php endif; ?>
+                    </div>
+
+
+                    <div class="extra-info">
+                        <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
+                        <?php echo $this->getChildHtml('product_type_availability'); ?>
+                    </div>
+
+                    <?php echo $this->getChildHtml('alert_urls') ?>
+                    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                        <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                    <?php endif;?>
+                    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                    <?php endif;?>
+
+                    <?php /*if ($_product->getShortDescription()):*/?><!--
+                        <div class="short-description">
+                            <div class="std"><?php /*echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') */?></div>
+                        </div>
+                    --><?php /*endif;*/?>
+                        <div id="accordion" class="product-accordion toggle-content">
+                            <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+                            <dl>
+                                <?php $i =0;?>
+                                <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                                    <?$i++;?>
+                                    <dt <?php if($i==1) echo 'class=" current"';?> ><?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?></dt>
+                                    <dd <?php if($i==1) echo 'class=" current"';?>>
+                                        <div class="scroll-wrapper scrollbar-inner">
+                                            <?php echo $html ?>
+                                        </div>
+                                    </dd>
+                                <?php endforeach;?>
+                                <?php
+                                if ($_product->getDeliveryReturn()) :
+                                    ?>
+                                    <dt class="delivery">Delivery / returns</dt>
+                                    <dd class="delivery">
+                                        <?php  echo $_product->getDeliveryReturn();?>
+                                    </dd>
+                                <?php endif;?>
+                                <?php
+                                if ( $_product->getGuarantee() ) :
+                                    ?>
+                                    <dt class="guarantee">guarantee</dt>
+                                    <dd class="guarantee">
+                                        <?php  echo $_product->getGuarantee();?>
+                                    </dd>
+                                <?php endif;?>
+                              <!--  <?php /*if($_product->getDescription()!=''):*/?>
+                                    <dt class="delivery">Description</dt>
+                                    <dd class="delivery">
+                                        <?php /* echo $_product->getDescription();*/?>
+                                    </dd>
+                                --><?php /*endif;*/?>
+                                <?php /* <?php
+                                if ( $this->getLayout()->createBlock('cms/block')->setBlockId('delivery')->toHtml() !== '' ) :
+                                ?>
+                                    <dt class="delivery">Delivery / returns</dt>
+                                    <dd class="delivery">
+                                     <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('delivery')->toHtml();?>
+                                    </dd>
+                                <?php endif;?>
+                                <?php
+                                if ( $this->getLayout()->createBlock('cms/block')->setBlockId('guarantee')->toHtml() !== '' ) :
+                                ?>
+                                    <dt class="guarantee">guarantee</dt>
+                                    <dd class="guarantee">
+                                     <?php  echo $this->getLayout()->createBlock('cms/block')->setBlockId('guarantee')->toHtml();?>
+                                    </dd>
+                                <?php endif;?> */
+                                ?>
+                            </dl>
+                            <?php endif; ?>
+                        </div>
+                    <div class="quickview-link"><a href="<?php echo $_product->getProductUrl();?>" target="_parent"><?php echo $this->__("view product full information")?></a> </div>
+                        <?php echo $this->getChildHtml('other');?>
+                        <div class="social">
+                            <div class="title">Tell a friend</div>
+                            <?php echo $this->getChildHtml('sharing') ?>
+                        </div>
+
+                    </div>
+
+                    <div class="clearer"></div>
+
+                </div>
+
+                <div class="clearer"></div>
+            </form>
+            <script type="text/javascript">
+            //<![CDATA[
+                var productAddToCartForm = new VarienForm('product_addtocart_form');
+                productAddToCartForm.submit = function(button, url) {
+                    if (this.validator.validate()) {
+                        var form = this.form;
+                        var oldUrl = form.action;
+
+                        if (url) {
+                           form.action = url;
+                        }
+                        var e = null;
+                        try {
+                            this.form.submit();
+                        } catch (e) {
+                        }
+                        this.form.action = oldUrl;
+                        if (e) {
+                            throw e;
+                        }
+
+                        if (button && button != 'undefined') {
+                            button.disabled = true;
+                        }
+                    }
+                }.bind(productAddToCartForm);
+
+                productAddToCartForm.submitLight = function(button, url){
+                    if(this.validator) {
+                        var nv = Validation.methods;
+                        delete Validation.methods['required-entry'];
+                        delete Validation.methods['validate-one-required'];
+                        delete Validation.methods['validate-one-required-by-name'];
+                        // Remove custom datetime validators
+                        for (var methodName in Validation.methods) {
+                            if (methodName.match(/^validate-datetime-.*/i)) {
+                                delete Validation.methods[methodName];
+                            }
+                        }
+
+                        if (this.validator.validate()) {
+                            if (url) {
+                                this.form.action = url;
+                            }
+                            this.form.submit();
+                        }
+                        Object.extend(Validation.methods, nv);
+                    }
+                }.bind(productAddToCartForm);
+            //]]>
+            </script>
+        </div>
+
+
+
+    </div>
+    <div class="clearfix"></div>
+    <?php if($_product->getDescription() || $_product->getImageUrl()):?>
+        <div class="description-image-block">
+            <?php if($_product->getDescription()):?>
+                <div class="product-description <?php if(!$_product->getImageUrl() || $_product->getBlockImageUrl() =='') echo "empty-img-url"?>">
+                    <?php echo $_product->getDescription();?>
+                </div>
+            <?php endif; ?>
+            <?php if($_product->getBlockImageUrl()): ?>
+                <div class="product-block-image">
+                    <a href="<?php echo $_product->getBrandLogoUrl(); ?>"> <img src="<?php echo $_product->getBlockImageUrl()?>" /></a>
+                </div>
+            <?php endif;?>
+        </div>
+    <?php endif;?>
+    <?php if($_product->getSliderBlock()):?>
+        <div class="slider-static-block">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($_product->getSliderBlock())->toHtml();?>
+        </div>
+    <?php endif;?>
+<div class="clear"></div>
+    <?php echo $this->getChildHtml('upsell_products') ?>
+     <?php echo $this->getChildHtml('related_products') ?>
+    <?php //echo $this->getChildHtml('product_additional_data') ?>
+</div>
+<div class="clear"></div>
+<div id="question-more-form" style="display: none">
+        <form target="webform_3_iframe" class="webforms-" enctype="application/x-www-form-urlencoded" id="webform_3" name="webform_3" method="post" action="<?php echo Mage::getModel('kjbsetup/index/sendmail')?>">
+            <input type="hidden" value="1" name="submitWebform_3">
+            <input type="hidden" value="3" name="webform_id">
+            <div class="fieldset fieldset-5" id="fieldset_5">
+                <h2 class="legend">General</h2>
+                <ul class="form-list">
+                    <li class="fields ">
+                        <div class="field webforms-fields-17" id="field_17">
+                            <label for="field_17">
+                                Name  </label>
+                            <div class="input-box">
+                                <input type="text" value="" style="" class="input-text " id="field[17]" name="field[17]">
+                            </div>
+                        </div>
+                        <div class="field webforms-fields-19" id="field_19">
+                            <label class="required" for="field_19">
+                                <em>*</em>
+                                Email address
+                            </label>
+                            <div class="input-box">
+                                <input type="text" onkeyup="this.value =&nbsp;this.value.replace(' ','');" value="" style="" class="input-text required-entry validate-email " id="field[19]" name="field[19]">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="fields ">
+                        <div class="field webforms-fields-18" id="field_18">
+                            <label for="field_18">
+                                Phone number
+                            </label>
+                            <div class="input-box">
+                                <input type="text" value="" style="" class="input-text validate-number" id="field[18]" name="field[18]">
+                            </div>
+                        </div>
+                        <div class="field webforms-fields-18" id="field_18">
+                            <label for="field_18">
+                                Address
+                            </label>
+                            <div class="input-box">
+                                <input type="text" value="" style="" class="input-text" id="field[21]" name="field[21]">
+                            </div>
+                        </div>
+                        <div class="field webforms-fields-20" id="field_20">
+                            <label class="required" for="field_20">
+                                <em>*</em>
+                                Postcode
+                            </label>
+                            <div class="input-box">
+                                <input type="text" value="" style="" class="input-text validate-number required-entry" id="field[22]" name="field[22]">
+                            </div>
+                        </div>
+                        <div class="field webforms-fields-20" id="field_20">
+                            <label class="required" for="field_20">
+                                <em>*</em>
+                                Question
+                            </label>
+                            <div class="input-box">
+                                <textarea style="" class="input-text required-entry" id="field[20]" name="field[20]" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <p class="required">* Required Fields</p>
+                <button title="submit"  id="webform_3_submit_button" class="button" type="button">
+                <span>
+                    <span>Send</span>
+                </span>
+                    </button>
+                <span style="display:none;" id="webform_3_sending_data" class="please-wait">
+                    <img class="v-middle" title="Sending..." alt="Sending..." src="http://www.krystlebrides.co.uk/skin/frontend/rwd/default/images/opc-ajax-loader.gif"><span id="webform_3_progress_text">Sending...</span>
+                </span>
+            </div>
+            <a href="javascript:;" class="fancybox-item fancybox-close" title="Close"></a>
+        </form>
+</div>
+<script type="text/javascript">
+    //< ![CDATA[
+    var customForm = new VarienForm('webform_3');
+    //]]>
+
+
+
+</script>
+<script type="text/javascript">
+    ;(function($) {
+
+        // DOM Ready
+        $(function() {
+
+            // Binding a click event
+            // From jQuery v.1.7.0 use .on() instead of .bind()
+            $('#question-more-link').bind('click', function(e) {
+
+                // Prevents the default action to be triggered.
+                e.preventDefault();
+
+                // Triggering bPopup when click event is fired
+                $('#question-more-form').bPopup();
+
+            });
+
+            $('#webform_3_submit_button').bind('click',function() {
+                customForm.submit();
+            });
+
+        });
+
+    })(jQuery);
+
+    if(jQuery(".amquickview-ajax-view").length){
+        jQuery(".description-image-block").hide();
+        jQuery(".slider-static-block").hide();
+        jQuery(".block-related").hide();
+        jQuery(".box-up-sell").hide();
+        jQuery(".social").hide();
+    }
+</script>
+<style type="text/css">
+    #question-more-form {
+        background: none repeat scroll 0 0 white;
+        padding: 15px 30px;
+        border-radius: 5px;
+    }
+</style>

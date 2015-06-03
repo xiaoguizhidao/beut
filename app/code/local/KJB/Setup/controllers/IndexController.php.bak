@@ -1,0 +1,59 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Catalog
+ * @copyright  Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+class KJB_Setup_IndexController extends Mage_Core_Controller_Front_Action
+{
+    /**
+     * Index action
+     */
+    public function indexAction()
+    {
+        $productList = Mage::getModel('catalog/product')->getCollection();
+        $arrayMap = array(248=>265,232=>266,246=>267,247=>268,234=>269,243=>270,245=>271,244=>272);
+		$arrayMap2 = array(251=>273,131=>274,132=>275,134=>276,138=>277,135=>278,222=>279,250=>280,136=>281,233=>282,123=>283,249=>283,143=>284,137=>285);
+        if ($productList->getSize()) {
+            $i =0;
+            foreach($productList as $product) {
+                $productDetail = Mage::getModel('catalog/product')->load($product->getId());
+				if ($productDetail->getBrand()) {
+					$i++;
+					$brands = $arrayMap[$productDetail->getBrand()];
+					$productDetail->setBrands($brands);
+					echo $productDetail->getId()."/".$productDetail->getBrand() . "/" . $arrayMap[$productDetail->getBrand()] . "<br>";                       
+				}
+				if ($productDetail->getMaterial()) {
+					 $meterials = $arrayMap2[$productDetail->getMaterial()];
+					 $productDetail->setMaterials($meterials);
+					 echo "meterial: ".$productDetail->getId()."/".$productDetail->getMaterial(). "/" . $arrayMap2[$productDetail->getMaterial()] . "<br>";
+				}
+				$productDetail->save();
+            }
+            echo $i;
+        }
+    }
+
+}
+

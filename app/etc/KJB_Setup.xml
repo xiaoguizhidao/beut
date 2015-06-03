@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <KJB_Setup>
+      <active>true</active>
+      <codePool>local</codePool>
+    </KJB_Setup>
+  </modules>
+</config>
