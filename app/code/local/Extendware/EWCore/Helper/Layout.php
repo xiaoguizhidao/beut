@@ -1,0 +1,37 @@
+<?php //0015d
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * Below are methods found in this class
+ *
+ * @method mixed public isAdminMenuHighlightingEnabled()
+ * @method mixed public isDemo()
+ * @method mixed public isNotDemo()
+ *
+ */
+?>
+HR+cPu4GTXo3vqfKBghZFuQYUI+TKhgJ9JDN1SKN/W4UIOdsdsguzpXZ5oBt9UigeAP/f4dm2ucr
+8mCggPbHm3ejZwYa7QztBVlGB5QBr94S5Kb2NEcRE81a0DJUWMbGKD4ktNchnzEeRbSKKFurOzpR
+exYUY19C4oXl2NHfwzC9QFtbokH4J3PD6Sq3GEqHfD9I+8UwbpgKr5ASwJLro7PRs9rAPw3pOxXq
+nTg41yNbfOyF7sBwrIUXya8zDcbBrzGTkQgU6bHxXNV4PcaGTgWEhkD5coFPYGkvFl8br52P/5WL
+QxyeDjRbVl2ESU8LoHUl272wOLFVISMj8Vzcpnj1yWU6ICjtAukS50ytpUmrK6NT6oP0rkyCf0vI
+yXypAvtNRyccKy7Jbif6Ma1Kn5Uv5VQVNnFa2euX43Qp0jWLCIcdjbaapB7rVm0lIy8Jf5tjcaR0
+fwaLpea40VpgVutv/ySuIayWniuxElV5SuBnVAS+zD2i5wDbYNq+/REwi5I9qpcxMjMTJmr9eFJ2
+Gv8YUxrYQWJnNFjO9S+oQEntgISeJnq3L4Mmj7I17qZixnRjYa1gyw/QHzCo7S7S2NEI2sIMDsCe
+P8qNL+2k6EDBuQDz1LJ/gweVqPTNwkz+/a05RLXNBZzAZB5kmtMCq54jMbGVabY98aIMIyOX/zWr
+90X78BYNQvBEV5vLewzbpjlREsJ6JarYzoNl9vhD/Vm+KX77Bs45JE5JoW4azW+jxlI33UsXp37G
+kuCUUXiLJoUlOq5x1XVvvqm9SWyZd2XFSp6kFcxJt7PwDm6tijFIjmAQR9kbSVBtsx0lW+HECfjW
+6F0mgH7AD22bnDOpU3y8qLU9jxti589N9japFG6mRi9PWlxPy0dyJEMYJkzJrPbze6Q7QJCQBdnC
+HwGgmXUjNe1qj5FLoNtL7y8paQ4JuQawGlEWaiF5V7VtNQgMRtJ8YkVs/NmbxcvKsnbwhUoSwLwD
+Z5cVYoOJfj8WhDYVoWBX8xTQZWx/cC+37mnh0Mm3zzZkeR7+vX+LY8xwdX9ihICMXOL+glLqXwmX
+y8Q0iOl8emWPQ91rkPYMTA2fSegDdYheeuuCLTmIeqKVTQeo3v693628sLl7MgqYqBKTchMBXuyu
+xEwg/0mequCh3O2+zutgxpwQsoICy16JXyhAy40zFbeLJPS/BcFmsG+A5R0B9K/2yPURW9ZHZM0t
+wmpGc6+iS3FZkC3XhtVN2/QD4Hh5BKCbkfmKfrBPTuNo94gQTpAukAVt+GhtN7VdhjS2fl9Gf3BR
+v11oIrLR0MKq9CH6/St97U8CwTaflCQFCUOP4Fgh7xK/7PWQdq+T1tX+qcM8QxLAoxyr0sHCm2a1
+bSvev9EyJEd+qEZnw1uDfvL+W46H64HZOUNNlxxy2hxknS+yUkgqKQIb38cFpveQIM1dLF2766od
+xumYTLEqvacSETv1bwAtJ3NkimJeJ7NbiSw1ftKWgombg7vSg9git4wCdzWT0CRLssH6HL4KiyTF
+HXPkQ0Fobb3Q8tZmoPEXW4dWWp3OYlTOw4msdfoTiR3QjA/PP5kzuVc6yRfUTFdpdhES/cQj5HDp
+vc7yJqOiLt9L179TinkXmSkWMCwuT4y07VnW0vGTgEPFiASlNk2vxicmQMnHMDGwBgtthD48nw/o
+lNKCXAZt/a9C

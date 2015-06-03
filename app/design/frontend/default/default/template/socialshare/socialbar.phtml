@@ -1,0 +1,89 @@
+<?php if (Mage::getStoreConfig('socialshare/general/enabled')) : ?>
+<style>
+	.social_buttons div { float:left; }
+</style>
+<div class="social_buttons" style="overflow:hidden;">
+
+	<?php if (Mage::getStoreConfig('socialshare/general/show_count')) : ?>
+    
+		<?php if (Mage::getStoreConfig('socialshare/general/twitter_btn')) : ?>
+		<!-- Facebook -->
+		<span class="facebook" style="vertical-align: text-bottom;">
+			<div class="fb-like" data-href="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+		</span>
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/twitter_btn')) : ?>
+		<!-- Twitter -->
+		<span class="twitter">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="<?php echo Mage::getStoreConfig('socialshare/general/twitter_acc'); ?>">Tweet</a>
+		</span>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>    
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/google_btn')) : ?>
+		<!-- Google +1 -->
+		<script type="text/javascript">
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+		<span class="google">
+			<g:plusone size="medium"></g:plusone>
+		</span>
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/pinter_btn')) : ?>
+		<!-- Pinterest -->
+		<span style="position:relative; margin:5px;">
+			<a href="http://pinterest.com/pin/create/button/?url=<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>" class="pin-it-button" count-layout="none">
+				<img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+			</a>
+		</span>
+		<?php endif; ?>	
+		
+	<?php else : ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/facebook_btn')) : ?>
+		<!-- Facebook -->
+		<div id="facebookConteiner" style="width:45px; overflow:hidden; margin:6px 4px; direction: ltr;">
+			<div class="fb-like" data-href="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+		</div>
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/twitter_btn')) : ?>
+		<!-- Twitter -->
+		<div id="twitterContainer" style="position:relative; margin:6px 5px; ">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="<?php echo Mage::getStoreConfig('socialshare/general/twitter_acc'); ?>">Tweet</a>
+			<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>  
+		</div>
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/google_btn')) : ?>
+		<!-- Google +1 -->
+		<div id="gPlusContainer" style="position:relative; margin:4px 5px;">
+			<script type="text/javascript">
+			  (function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+			<g:plusone size="Standard" class="g-plusone" annotation="none" ></g:plusone>
+		</div>
+		<?php endif; ?>
+		
+		<?php if (Mage::getStoreConfig('socialshare/general/pinter_btn')) : ?>
+		<!-- Pinterest -->
+		<div id="pinterestConteiner" style="position:relative; margin:5px;">
+			<a href="http://pinterest.com/pin/create/button/?url=<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>" class="pin-it-button" count-layout="none">
+				<img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+			</a>
+		</div>
+		<?php endif; ?>	
+			
+	<?php endif; ?>
+</div>
+<?php endif; ?>

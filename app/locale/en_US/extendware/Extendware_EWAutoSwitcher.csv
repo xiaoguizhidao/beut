@@ -1,0 +1,114 @@
+"%s Regions","%s Regions"
+"<b>Note: </b> If you are using a proxy to test the auto-switcher, then Requesting IP must be selected.","<b>Note: </b> If you are using a proxy to test the auto-switcher, then Requesting IP must be selected."
+"<b>Note:</b> If you change this parameter name you will have to change [Magento root]/app/code/local/Varien/Autoload.php and replace __currency with your custom parameter. As such, it is not recommended to change it.","<b>Note:</b> If you change this parameter name you will have to change [Magento root]/app/code/local/Varien/Autoload.php and replace __currency with your custom parameter. As such, it is not recommended to change it."
+"A rule with a lower sort will be processed first","A rule with a lower sort will be processed first"
+Action,Action
+Add,Add
+"Add after","Add after"
+"Add Rule","Add Rule"
+"Are you sure you want to download geo data? Unless there is a warning the data has already be downloaded.","Are you sure you want to download geo data? Unless there is a warning the data has already be downloaded."
+"Are you sure?","Are you sure?"
+"Auto Switcher","Auto Switcher"
+"Auto-switch for users from selected countries. Ctrl-C to select more than one country. Save to select regions if available","Auto-switch for users from selected countries. Ctrl-C to select more than one country. Save to select regions if available"
+"Auto-switch for users from selected countries. Ctrl-C to select more than one country. Select none to match all countries. Save to select regions if available","Auto-switch for users from selected countries. Ctrl-C to select more than one country. Select none to match all countries. Save to select regions if available"
+"Auto-switcher will be disabled for any urls matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes.","Auto-switcher will be disabled for any urls matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes."
+"Auto-switcher will be disabled for any useragents matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes.","Auto-switcher will be disabled for any useragents matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes."
+Autoswitcher,Autoswitcher
+"Change status","Change status"
+Configuration,Configuration
+"Configuration is incorrect","Configuration is incorrect"
+"Could not download file from %s","Could not download file from %s"
+"Could not download geo data: %s","Could not download geo data: %s"
+Countries,Countries
+Country,Country
+Created,Created
+Currency,Currency
+"Currency Param","Currency Param"
+"Currency Rule","Currency Rule"
+"Currency rule has been deleted","Currency rule has been deleted"
+"Currency Rules","Currency Rules"
+Delete,Delete
+"Determining website by hostname is only used if $_SERVER['MAGE_RUN_TYPE'] $_SERVER['MAGE_RUN_CODE'] is not properly defined (refer to user guide)","Determining website by hostname is only used if $_SERVER['MAGE_RUN_TYPE'] $_SERVER['MAGE_RUN_CODE'] is not properly defined (refer to user guide)"
+Disabled,Disabled
+"Disabled Urls","Disabled Urls"
+"Disabled User Agents","Disabled User Agents"
+"Download Geo Data","Download Geo Data"
+Edit,Edit
+"Enable or disable auto switching","Enable or disable auto switching"
+Enabled,Enabled
+"Error saving file: %s","Error saving file: %s"
+Extendware,Extendware
+"File appears to be corrupt","File appears to be corrupt"
+"For example, if your US site is http://wwww.example.com/ and your UK site is http://www.example.com/uk/ and the Australia site is http://www.example.com/au/ then you would want to replace ""/uk/"" with a ""/"" so that the path can be retrieved without the UK specific portion. If someone accessed http://www.example.com/uk/product.html they will then be switched to http://www.example.com/au/product.html as a result if they are from Asutralia.","For example, if your US site is http://wwww.example.com/ and your UK site is http://www.example.com/uk/ and the Australia site is http://www.example.com/au/ then you would want to replace ""/uk/"" with a ""/"" so that the path can be retrieved without the UK specific portion. If someone accessed http://www.example.com/uk/product.html they will then be switched to http://www.example.com/au/product.html as a result if they are from Asutralia."
+"Forwarded IP (HTTP_X_FORWARDED)","Forwarded IP (HTTP_X_FORWARDED)"
+General,General
+"General Information","General Information"
+"Geo data has been downloaded successfully.","Geo data has been downloaded successfully."
+Group,Group
+"HTTP Accept Language","HTTP Accept Language"
+ID,ID
+"In addition to geographic location, the browser must send an Accept-Language header with one of inputted languages. Enter one per line or leave empty to match any. <b>Note: </b> be careful with this setting. For advanced users only!","In addition to geographic location, the browser must send an Accept-Language header with one of inputted languages. Enter one per line or leave empty to match any. <b>Note: </b> be careful with this setting. For advanced users only!"
+"IP Address","IP Address"
+"IP Mode","IP Mode"
+Languages,Languages
+"Languages should not contain any spaces","Languages should not contain any spaces"
+Magento,Magento
+"Magento should be used for setups each website has a unique domain. You must use autoswitcher if more than one registered websites share the same domain.","Magento should be used for setups each website has a unique domain. You must use autoswitcher if more than one registered websites share the same domain."
+Main,Main
+"Missing data for item","Missing data for item"
+Name,Name
+"Optional name so you can remember the rule.","Optional name so you can remember the rule."
+"Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs.","Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs."
+"Please select an item(s) before submitting to the mass processor","Please select an item(s) before submitting to the mass processor"
+"Redirect URL","Redirect URL"
+Regexp,Regexp
+Region,Region
+Regions,Regions
+"Replace parts of the URL before switching. This is useful to replace directories that separate each url. <b>Note: </b> Only used if switcher mode is set to autoswitcher.","Replace parts of the URL before switching. This is useful to replace directories that separate each url. <b>Note: </b> Only used if switcher mode is set to autoswitcher."
+"Request Parameters","Request Parameters"
+"Requesting IP (REMOTE_ADDR)","Requesting IP (REMOTE_ADDR)"
+Results,Results
+"Rule already exists for this currency and store combination.","Rule already exists for this currency and store combination."
+"Rule Tester","Rule Tester"
+"Select a website to run the rule as a specific website","Select a website to run the rule as a specific website"
+"Selected currency will be assigned if this store and country match.","Selected currency will be assigned if this store and country match."
+"Selected item(s) (%d) have been mass processed by the %s processor","Selected item(s) (%d) have been mass processed by the %s processor"
+"Selected item(s) (%d) have failed to be mass processed by the %s processor","Selected item(s) (%d) have failed to be mass processed by the %s processor"
+Settings,Settings
+"Sort Order","Sort Order"
+Status,Status
+Store,Store
+"Store must belong to selected website","Store must belong to selected website"
+"Store must match for autoswitch to occur. If no store is selected, then it will match all stores of the selected website. You must select a website if you select a store. <b>Note: </b> Most websites will never need to select a store","Store must match for autoswitch to occur. If no store is selected, then it will match all stores of the selected website. You must select a website if you select a store. <b>Note: </b> Most websites will never need to select a store"
+"Store Rule","Store Rule"
+"Store rule has been deleted","Store rule has been deleted"
+"Store rule has been successfully saved","Store rule has been successfully saved"
+"Store Rules","Store Rules"
+"Store Url","Store Url"
+"Store View","Store View"
+String,String
+"Switcher Mode","Switcher Mode"
+"The browser provided HTTP accept language string used by the rules.","The browser provided HTTP accept language string used by the rules."
+"The currency that will be used for a request like this","The currency that will be used for a request like this"
+"The detected country of the IP address","The detected country of the IP address"
+"The detected region of the IP address","The detected region of the IP address"
+"The IP address is used to determine the country / region for the various rules.","The IP address is used to determine the country / region for the various rules."
+"The store that the auto-switcher will use for a request like this","The store that the auto-switcher will use for a request like this"
+"The store URL is used to determine the website for the various rules if it cannot be determined by other means. <b>Note:</b> only  used if you did not select a website","The store URL is used to determine the website for the various rules if it cannot be determined by other means. <b>Note:</b> only  used if you did not select a website"
+"The tester can be used to determine which store / currency would be auto-selected based on a given IP address","The tester can be used to determine which store / currency would be auto-selected based on a given IP address"
+"The URL where the visitor will be redirected to. If there is extra directory in the URl you should modify ""URL Replace RegExp"" in the config.","The URL where the visitor will be redirected to. If there is extra directory in the URl you should modify ""URL Replace RegExp"" in the config."
+"This is the determined by which website was selected or the URL","This is the determined by which website was selected or the URL"
+"This is the store that will be selected for people from the selected countries","This is the store that will be selected for people from the selected countries"
+"This must be a valid regular expression with the beginning and ending ""/"". For example, /checkout/. You can read the PHP preg documentation for more information","This must be a valid regular expression with the beginning and ending ""/"". For example, /checkout/. You can read the PHP preg documentation for more information"
+"This must be a valid regular expression with the beginning and ending ""/"". For example, /en/. You can read the PHP preg documentation for more information","This must be a valid regular expression with the beginning and ending ""/"". For example, /en/. You can read the PHP preg documentation for more information"
+"This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information","This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information"
+Updated,Updated
+"Url RegExp","Url RegExp"
+"URL Replace RegExp","URL Replace RegExp"
+"Use Ctrl-C to select more than one region. Selecting no region will match the entire country.","Use Ctrl-C to select more than one region. Selecting no region will match the entire country."
+"User Agent RegExp","User Agent RegExp"
+"Usually it follows the form or yy-ZZ where yy is the language and ZZ is the country. For example, US English would be ""en-US"". If you only wanted to match the language part (english), then you should put ""en-"". Some common ones are ""en-"" for english or ""es-"" for spanish. <b>Note:</b> Only advanced users should use this feature.","Usually it follows the form or yy-ZZ where yy is the language and ZZ is the country. For example, US English would be ""en-US"". If you only wanted to match the language part (english), then you should put ""en-"". Some common ones are ""en-"" for english or ""es-"" for spanish. <b>Note:</b> Only advanced users should use this feature."
+Website,Website
+"Website must match for autoswitch to occur. If no website is selected, then it will match all websites. <b>Leave this blank in almost all cases or it will not work</b>","Website must match for autoswitch to occur. If no website is selected, then it will match all websites. <b>Leave this blank in almost all cases or it will not work</b>"
+"You can use this parameter to override the auto-switcher. Useful if you need to force the use of a specific currency. You would apply ?[parameter]=[currency_code] to the url to override. Leave blank to disable.","You can use this parameter to override the auto-switcher. Useful if you need to force the use of a specific currency. You would apply ?[parameter]=[currency_code] to the url to override. Leave blank to disable."
+"You need to download the geo IP databases to use this extension. Please click the button to download.","You need to download the geo IP databases to use this extension. Please click the button to download."

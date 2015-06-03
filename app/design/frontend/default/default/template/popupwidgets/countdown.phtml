@@ -1,0 +1,76 @@
+<?php
+/**
+ * @category    Trmmarketing
+ * @package     Trmmarketing_PopupWidgets
+ * @copyright   Copyright (c) 2013 TRM Marketing LLC
+ * @license     http://www.trm-marketing.com/solutions/license/TRM-Marketing-Standard-License-Agreement.html
+ */
+ 
+//echo $countto;
+$coupon = Mage::getModel('salesrule/coupon')->load($couponcode, 'code');
+/*
+foreach($coupon as $value)
+{
+     print_r($value);
+     echo "<br />";
+}
+*/
+/*if ($countto == 'couponexp'):
+$newdate = new DateTime($coupon->getExpirationDate());
+elseif ($countto == 'popupexp'):
+$newdate = new DateTime($coupon->getFromDate());
+endif;
+*/
+$newdate = new DateTime($coupon->getExpirationDate());
+?>
+<script type="text/javascript">
+//var popupUntilDate = new Date(popupUntil).format("yyyy-MM-dd h:mm:ss")
+//alert(popupUntil);
+
+
+
+function DaysHMSCounter(initDate, id){
+    this.counterDate = new Date(initDate);
+    this.container = document.getElementById(id);
+    this.update();
+}
+ 
+DaysHMSCounter.prototype.calculateUnit=function(secDiff, unitSeconds){
+    var tmp = Math.abs((tmp = secDiff/unitSeconds)) < 1? 0 : tmp;
+    return Math.abs(tmp < 0 ? Math.ceil(tmp) : Math.floor(tmp));
+}
+ 
+DaysHMSCounter.prototype.calculate=function(){
+    var secDiff = Math.abs(Math.round(((new Date()) - this.counterDate)/1000));
+    this.days = this.calculateUnit(secDiff,86400);
+    this.hours = this.calculateUnit((secDiff-(this.days*86400)),3600);
+    this.mins = this.calculateUnit((secDiff-(this.days*86400)-(this.hours*3600)),60);
+    this.secs = this.calculateUnit((secDiff-(this.days*86400)-(this.hours*3600)-(this.mins*60)),1);
+}
+ 
+DaysHMSCounter.prototype.update=function(){
+    this.calculate();
+    this.container.innerHTML =
+		"<table class='countTable'><tr>" +
+        "<td class='countNumbers'>" + this.days + "</td>" +
+        "<td class='countNumbers'>" + this.hours + "</td>" +
+        "<td class='countNumbers'>" + this.mins + "</td>" +
+        "<td class='countNumbers'>" + this.secs + "</td>" +
+		"</tr><tr>" +
+		"<td class='countLabels'>" + (this.days == 1? "day" : "days") + "</td>" +
+        "<td class='countLabels'>" + (this.hours == 1? "hour" : "hours") + "</td>" +
+        "<td class='countLabels'>" + (this.mins == 1? "min" : "mins") +"</td>" +
+        "<td class='countLabels'>" + (this.secs == 1? "sec" : "secs") +"</td>" +
+		"</tr></table>";
+    var self = this;
+    setTimeout(function(){self.update();}, (1000));
+}
+ 
+window.onload=function(){ new DaysHMSCounter('<?php echo $newdate->format('M d Y H:i:s'); ?>', 'counter'); }
+ 
+</script>
+
+
+<div id="popup-countdown-container">
+<div id="counter" style="width:400px;"></div>
+</div>

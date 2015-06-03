@@ -1,0 +1,96 @@
+"%s Regions","%s Regions"
+"<b>Note: </b> If you are using a proxy to test the cookie message, then Requesting IP must be selected.","<b>Note: </b> If you are using a proxy to test the cookie message, then Requesting IP must be selected."
+"A rule with a lower sort order will be processed first","A rule with a lower sort order will be processed first"
+Action,Action
+Add,Add
+"Add after","Add after"
+"Add Rule","Add Rule"
+"Advanced Information","Advanced Information"
+After,After
+"Are you sure you want to download geo data? Unless there is a warning the data has already be downloaded.","Are you sure you want to download geo data? Unless there is a warning the data has already be downloaded."
+"Are you sure?","Are you sure?"
+Before,Before
+Bottom,Bottom
+"Change status","Change status"
+"Condition Information","Condition Information"
+Configuration,Configuration
+"Configuration is incorrect","Configuration is incorrect"
+"Cookie Message","Cookie Message"
+"Could not download file from %s","Could not download file from %s"
+"Could not download geo data: %s","Could not download geo data: %s"
+Countries,Countries
+Country,Country
+"Country could not be determined from IP address. Please input a different IP address.","Country could not be determined from IP address. Please input a different IP address."
+Created,Created
+Delete,Delete
+Disabled,Disabled
+"Download Geo Data","Download Geo Data"
+Edit,Edit
+"Element Selector","Element Selector"
+"Enable or disable auto switching","Enable or disable auto switching"
+Enabled,Enabled
+"Error saving file: %s","Error saving file: %s"
+Extendware,Extendware
+"File appears to be corrupt","File appears to be corrupt"
+"Forwarded IP (HTTP_X_FORWARDED)","Forwarded IP (HTTP_X_FORWARDED)"
+General,General
+"General Information","General Information"
+"Geo data has been downloaded successfully.","Geo data has been downloaded successfully."
+Group,Group
+ID,ID
+"If the message is executable, then this javascript will also execute. Useful for creation of popups and things to that nature. You can leave this field empty if you just need a simple message.","If the message is executable, then this javascript will also execute. Useful for creation of popups and things to that nature. You can leave this field empty if you just need a simple message."
+"Insertion Position","Insertion Position"
+"IP Address","IP Address"
+"IP Mode","IP Mode"
+Javascript,Javascript
+"Js Condition","Js Condition"
+"Library Javascript","Library Javascript"
+Main,Main
+"Manage Message Rules","Manage Message Rules"
+Message,Message
+"Message Rule","Message Rule"
+"Message rule has been deleted","Message rule has been deleted"
+"Message rule has been successfully saved","Message rule has been successfully saved"
+"Message Rules","Message Rules"
+"Missing data for item","Missing data for item"
+"Most often used to hide the message if a cookie is set. This will be directly outputted inside of a javascript if statement, so you must input valid javascript. ","Most often used to hide the message if a cookie is set. This will be directly outputted inside of a javascript if statement, so you must input valid javascript. "
+Name,Name
+"Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs.","Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs."
+"Please select an item(s) before submitting to the mass processor","Please select an item(s) before submitting to the mass processor"
+Regions,Regions
+"Request Parameters","Request Parameters"
+"Requesting IP (REMOTE_ADDR)","Requesting IP (REMOTE_ADDR)"
+Results,Results
+"Rule Tester","Rule Tester"
+Rules,Rules
+"Select a store to run the rule as a specific store","Select a store to run the rule as a specific store"
+"Selected item(s) (%d) have been mass processed by the %s processor","Selected item(s) (%d) have been mass processed by the %s processor"
+"Selected item(s) (%d) have failed to be mass processed by the %s processor","Selected item(s) (%d) have failed to be mass processed by the %s processor"
+Settings,Settings
+"Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available.","Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available."
+"Shown Messages","Shown Messages"
+"Sort Order","Sort Order"
+Status,Status
+Store,Store
+"Store must belong to selected website","Store must belong to selected website"
+"Store View","Store View"
+Test,Test
+"Test Rules","Test Rules"
+"The CSS selector used by $$([selector]).first() that is used to find the position where the message will be inserted in the page.","The CSS selector used by $$([selector]).first() that is used to find the position where the message will be inserted in the page."
+"The detected country of the IP address","The detected country of the IP address"
+"The IP address is used to determine the country / region for the various rules.","The IP address is used to determine the country / region for the various rules."
+"The name of this message.","The name of this message."
+"The names of messags that will be displayed.","The names of messags that will be displayed."
+"The tester can be used to determine which message would be displayed based on a given IP address","The tester can be used to determine which message would be displayed based on a given IP address"
+"This is the message that will be inserted into the web page.","This is the message that will be inserted into the web page."
+"This javascript is executed even if the message does not match. This is useful for including any helper functions you need. You can leave this field empty if you just need a simple message.","This javascript is executed even if the message does not match. This is useful for including any helper functions you need. You can leave this field empty if you just need a simple message."
+"This message will only be shown for this Web site","This message will only be shown for this Web site"
+"This message will only be used for this store view","This message will only be used for this store view"
+"This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information","This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information"
+Top,Top
+Updated,Updated
+"Use Ctrl-C to select more than one region. Selecting no region will match the entire country.","Use Ctrl-C to select more than one region. Selecting no region will match the entire country."
+"User Agent RegExp","User Agent RegExp"
+Website,Website
+"Where the position will be inserted in relation to the element.","Where the position will be inserted in relation to the element."
+"You need to download the geo IP databases to use this extension. Please click the button to download.","You need to download the geo IP databases to use this extension. Please click the button to download."

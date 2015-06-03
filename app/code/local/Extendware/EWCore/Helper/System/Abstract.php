@@ -1,0 +1,40 @@
+<?php //00177
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * Below are methods found in this class
+ *
+ * @method mixed final public log($message, $force = false, $level = null)
+ * @method mixed final public sendMessage($subject, $body, $category = null)
+ *
+ */
+?>
+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

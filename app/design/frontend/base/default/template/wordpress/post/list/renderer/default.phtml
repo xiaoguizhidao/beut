@@ -1,0 +1,35 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $post = $this->getPost() ?>
+<div class="post-list-item">
+	
+	
+	<?php echo $this->getBeforePostContentHtml() ?>
+	<div class="post-entry entry<?php if ($post->getFeaturedImage): ?> post-entry-with-image<?php endif; ?>">
+		<h2><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><?php echo $this->escapeHtml($post->getPostTitle()) ?></a></h2>
+			
+		<?php if ($post->isViewableForVisitor()): ?>
+			<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+				<div class="featured-image">
+					<a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"><img src="<?php echo $featuredImage->getLargeImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></a>
+				</div>
+			<?php endif; ?>
+			
+			<?php // if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
+				<p><?php echo $post->getPostExcerpt() ?></p>
+			<?php // else: ?>
+				<?php // echo $post->getPostContent() ?>
+			<?php // endif; ?>
+		<?php else: ?>
+			<?php echo $this->getPasswordProtectHtml($post) ?>
+		<?php endif; ?>
+		<a href="<?php echo $post->getPermalink() ?>" class="viewmore" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>">Continue Reading...</a>
+	</div>
+	<?php // echo $this->getAfterPostContentHtml() ?>
+</div>

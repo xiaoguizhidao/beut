@@ -1,0 +1,11 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+	<!-- Added by S2L Solutions <info@s2lsolutions.com>  Date added: Wed, Feb 19, 2014 --> 
+  
+  <catalog_product_view>
+    <reference name="head">
+        <block type="canonicalize/head" name="head_url" as="head_url" />
+    </reference>
+	</catalog_product_view> 
+</layout>   
+	

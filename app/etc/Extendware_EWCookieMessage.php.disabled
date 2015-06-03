@@ -1,0 +1,2 @@
+<?php /*@copyright Extendware*/
+return array('__system'=>array('status'=>1,'Extendware_EWCookieMessage'=>array('get_cache'=>array('spec'=>'c0566c70aa038809d692db721bdf08959911a7fc','data'=>array('get|is_enabled|0:stores'=>true,'get|ip_mode|0:stores'=>'remote_addr','get|has_regions|0:stores'=>false,'get|last_changed_time|0:stores'=>1406827289)))));

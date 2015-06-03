@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+	<default>
+		<update handle="ewcookiemessage_default_handle" ewifconfig="ewcookiemessage/general/enabled" ewminify_inherit="1"/>
+	</default>
+	<ewcookiemessage_default_handle>
+		<reference name="head">
+			<action method="addItem" ewminify_ignore_order="1"><type>ewgenerated_js</type><name>ewcookiemessage/js_general</name></action>
+		</reference>
+	</ewcookiemessage_default_handle>
+</layout>

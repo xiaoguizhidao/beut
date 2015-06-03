@@ -1,0 +1,34 @@
+<?php //001b6
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * This class overrides a core file. Class hierarchy is [magento rewrite if it exists] extends [this class] extends [core file]. Below is a list of methods found in this class.
+ *
+ * @method mixed public correctItemsQty($stock, $productQtys, $operator = '-')
+ *
+ */
+?>
+HR+cPoyhV7uY3KLoJv7fNJ/zjZETyFsqPs3agkOhLHiKEstRcczBCcMT2IxOg/HBVFXGT7nby5oJ
+5VXFrCELhsFAbfIvuO8bSzM2p5DrAP23DOwrKsYzOkN6k94WZ1NN88RFwTyPyjGBXo/lUWzUPWAA
+9ezKbMcX1r/VhG+D9pzycm+DPyJaoEa1Maq0GHP+IeSKTHEVXWJtjo2wxJv1uQ94guPpCvIimGpi
+rCjtCeQ3ixXmhwM64dDPRvES3vvDrr/KAPvPqZsczXYEuByTB9g21Q4LMSjczCuF5hjVb/FUoZE5
+nU1tDiCNLxkyShC2yD+dvu47cGVfPQMhFVyxJmNfV+vhczbqZt9u7Q+yK2moAepwrcg+5Sv3L4KX
+b96gFhF4AbxZ9Xd5DyfPC7wfjbLP7pq5JfklEq1l/X0WxyPqZ0ecLna23LJY42hOgCSAFOqE4u/b
+hlTnwj2oH7TCNBoB4jt1RHPVSpluCKFFmfeogIaOaqIGGfMZnFD9kE/bXIWdZQX+GENlPMHITaAu
+xa6pS4fmepW0J+zEysKw4wUS9EJhpHo+v7a4yrjsMsGT2wxH9JXQCB9B9KbAgFwGJ9z8Owp1dnQF
+tjKhJxYp2vMll2ZT0zXVZ3eggCoadoAx4pDAsqT18PiJiHpw8KqcXMmiM7Hd7NCAdSbaKma0/nM2
+607Ubz6w7oTd1DyW//fR/n27D/Jdg2xy6DDbq/2gVQt1hGuU52gCpcu3EksVAifhLx2+7kNEtUMp
+MU+hrCPbYIH28WC0nVY4YwZ/jT0ert4Osjq6nndxxrrX3g31Be90m61jbLqWTUg/9n8+JZIA3RVw
+zkCgrN80jr7RbcgGYLikdliG5j5BOgzqfIXX7fRInT3O5FF2XrlKEz0akdAfXR56/w3Dhv9chu3L
+AQ/+Gv8PTo7wpW9AGDXL6uEdnwltKnkHHeqr6f0YvZdWi+TYWcOz3qwwN0qI0nfT4ldYnUkgyybb
+mpO94oGF78IFfPv3Hp4qUNUIxQe3EWgp2mW5Iz51LOU8UKRvWAGImfcUgBDYqq+Z+l5FhrQepG5y
+6cfhjlSPDmT5USmwYLnmJF8httwvlBWfiWakaxtQAUIdTWZtzhl6wwHcUg0EMWOEzVLPLEY91gZl
+e1leB/31T+uzJNY+CcActN7AjtYzQwPgClzfuzZ14PXJs3go010rSH6QHx2pPM3pgkGUuQYve4g9
+6RFpfv3Acd86be2n5ES2pMinizWhmsoVLVCHXdBKhwhOf8cMsGVG7nYLnp+8uR4lvlbden5NzdmS
+yU6ayjPjSRp/z4+5gVBtV+k4OwL67zkJzn9MM70GGMM82gXkQSQMk50Qm5JBKVGckiA+cRQYPphQ
+9zgjtArM9ySHy2K+dHAaHoOloo2mJueEoWiJk27Tjb8i6tpKPQTRXHktP4qqTKM8iM75fZd6M0Ox
+dgqxp+b1gbz+75ypYjrOPuOqw3NNelQ5jq6fkHmKtLit0ZFWV3bxnw+QaCCZ2mHtnZTuQ+ug76WA
+hq1aeb0uZrjdk+aZNt9qmKKKLdwaWZiTV521n2bD/jU+MUyJDy6ycySojoz51yN84ITvH6upAl/N
+ptUJyEgU1OonvzbbGVWkOOQa/kXCDxy/2hfKlR2lBLM7+xSnouWbb+Zdf/paa84u5hOSwI3y

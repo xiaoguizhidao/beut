@@ -1,0 +1,19 @@
+<?php
+$subcategories = $this->getSortedSubcategories();
+$counter = 1;
+?>
+
+<?php foreach ($subcategories as $_category): ?>
+<?php if ($_category): ?>
+<?php 
+$_category = Mage::getModel('catalog/category')->load($_category->getEntityId());
+$isActive = $_category->getIsActive();
+$curl = $_category->getUrl();
+$cname = $_category->getName();
+?>
+<?php if ($isActive): ?>
+<li class="pronav-cat-li-sub<?php echo $sid . '-' . $counter ?>"><a class="pronav-cat-a-sub<?php echo $sid . '-' . $counter ?>" href="<?php echo $curl ?>"><?php echo $cname ?></a></li>
+<?php endif; ?>
+<?php endif; ?>
+<?php $counter++;?>
+<?php endforeach;?>

@@ -1,0 +1,136 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col2-right-layout">
+
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                
+	                <div id="fullbanner">
+	                  		<div class="JB_FWS">
+
+            <!-- Container holding the slides -->
+            <div class="JB_Container">
+            
+            	
+                 <a href="http://www.beut.co.uk/designers/urban-botanist.html"><div class="JB_Slide">
+                    <img src="http://www.beut.co.uk/skin/frontend/default/beut/images/terranium-banner.jpg" name="background" />
+                </div></a>
+                
+                <a href="http://www.beut.co.uk/clocks.html"><div class="JB_Slide">
+                    <img src="http://www.beut.co.uk/skin/frontend/default/beut/images/banner-leff.jpg" name="background" />
+                </div></a>
+                
+                 <a href="http://www.beut.co.uk/designer-wallpaper/shopby/bricks_effect.html"><div class="JB_Slide">
+                    <img src="http://www.beut.co.uk/skin/frontend/default/beut/images/banner-bricks.jpg" name="background" />
+                </div></a>
+                
+                 <a href="http://www.beut.co.uk/lighting.html"><div class="JB_Slide">
+                    <img src="http://www.beut.co.uk/skin/frontend/default/beut/images/banner-position.jpg" name="background" />
+                </div></a>
+                
+                <a href="http://www.beut.co.uk/homeware/cushions.html"><div class="JB_Slide">
+                    <img src="http://www.beut.co.uk/skin/frontend/default/beut/images/banner-cushions.jpg" name="background" />
+                </div></a>
+                
+            
+
+            </div>
+            <!-- /Container holding the slides -->
+
+            <!-- Left Button (PREV) -->
+            <div class="JB_Button_Left_BG"></div>
+            <div class="JB_Button_Left"></div>
+            <!-- /Left Button (PREV) -->
+
+            <!-- Right Button (NEXT) -->
+            <div class="JB_Button_Right_BG"></div>
+            <div class="JB_Button_Right"></div>
+            <!-- /Right Button (NEXT) -->
+
+            <!-- Pagination -->
+            <div class="JB_Pagination">
+                <div class="JB_Pages">
+                </div>
+            </div>
+            <!-- /Pagination -->
+
+        </div>      
+	                </div><!--end banner-->
+					
+					<div class="col-main" style="margin-top: 22px;">
+					
+					<?php echo $this->getChildHtml('global_messages') ?>
+                     <?php echo $this->getChildHtml('content') ?>
+                </div><div class="clear"></div>
+                
+                <div class="container">
+                	
+                	<div class="homebox"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homebox_1')->toHtml(); ?></div>
+                	
+                	<div class="homebox"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homebox_2')->toHtml(); ?></div>
+                	
+                	<div class="homebox last"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homebox_3')->toHtml(); ?></div>
+                	
+                </div>
+                
+                <div class="clear"></div>
+                
+                <?php /* ?><div class="container">
+                	<div>
+	                <h2>Featured Products</h2>
+	                 <ul id="featured">
+	                 	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('featured')->toHtml(); ?>
+	                 </ul>
+	                </div>
+                </div> 
+                <?php */ ?>
+
+        </div>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+        <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Jun 18, 2014*/  ?>
+    <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/remarketing.phtml')->toHtml()?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

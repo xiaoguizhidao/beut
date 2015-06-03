@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config>
+	<extendware>
+		<quickaccess>
+			<ewautoswitcher>
+                <resource>extendware/ewautoswitcher</resource>
+				<children>
+					<store_rules translate="title" module="ewautoswitcher">
+						<title>Store Rules</title>
+						<action>extendware_ewautoswitcher/adminhtml_store_rule</action>
+						<resource>extendware/ewautoswitcher/store/rule</resource>
+						<sort_order>1</sort_order>
+					</store_rules>
+					<currency_rules translate="title" module="ewautoswitcher">
+						<title>Currency Rules</title>
+						<action>extendware_ewautoswitcher/adminhtml_currency_rule</action>
+						<resource>extendware/ewautoswitcher/currency/rule</resource>
+						<sort_order>2</sort_order>
+					</currency_rules>
+					<tester translate="title" module="ewautoswitcher">
+						<title>Rule Tester</title>
+						<action>extendware_ewautoswitcher/adminhtml_tester</action>
+						<resource>extendware/ewautoswitcher/tester</resource>
+						<sort_order>3</sort_order>
+					</tester>
+				</children>
+				<title/>
+			</ewautoswitcher>
+		</quickaccess>
+	</extendware>
+	<menu></menu>
+	<acl>
+		<resources>
+            <admin>
+                <children>
+                    <extendware translate="title" module="ewautoswitcher">
+                    	<title>Extendware</title>
+                    	<sort_order>0</sort_order>
+                        <children>
+                        	<ewautoswitcher translate="title" module="ewautoswitcher">
+                        		<title>Auto Switcher</title>
+                        		<children>
+                        			<settings translate="title">
+                        				<title>Settings</title>
+                        				<children>
+				                            <main translate="title">
+				                                <title>Main</title>
+				                                <children>
+					                                <ewautoswitcher translate="title">
+						                                <title>General</title>
+						                            </ewautoswitcher>
+					                            </children>
+				                            </main>
+			                            </children>
+			            			</settings>
+			            		</children>
+			            	</ewautoswitcher>
+                        </children>
+                    </extendware>
+                </children>
+            </admin>
+        </resources>
+	</acl>
+</config>

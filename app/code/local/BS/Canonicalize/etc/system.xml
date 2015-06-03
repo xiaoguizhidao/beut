@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<bs_canonicalize translate="label" module="canonicalize">
+			<label>BS Canonicalize</label>
+			<sort_order>1</sort_order>
+		</bs_canonicalize>
+	</tabs>
+	<sections>
+		<canonicalize translate="label" module="canonicalize">
+			<label>Canonicalize</label>
+			<tab>bs_canonicalize</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+		                <hint>
+		                    <frontend_model>canonicalize/system_config_category</frontend_model>
+		                    <sort_order>0</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+		                </hint>
+		            </groups>	   
+			<groups>
+				<general translate="label">
+					<label>General Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Activate Canonicalize</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<primary_cat_id translate="label comment">
+							<label>Primary Category Ids</label>
+							<comment><![CDATA[List of main primary category ids. For example, we have Men and Women categories are the main ones. Comma "," separated. Canonical url prioirty set from left to right (put most important categories first)]]></comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</primary_cat_id>
+						<exclude_cat_id translate="label comment">
+							<label>Exclude Category Ids</label>
+							<comment><![CDATA[List of category ids that should be ignored. For example, "View all" category in some sub categories. Comma "," separated.]]></comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_cat_id>
+						
+					</fields>
+				</general>
+				
+				<sitemap translate="label">
+                    <label>Sitemap</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!-- <changefreq translate="label">
+                            <label>Change Freq</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amshopby/source_changefreq</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </changefreq>   -->
+                        <filename translate="label">
+                            <label>Sitemap file name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </filename>  
+                        <path translate="label">
+                            <label>Sitemap path</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[&#8226; Dir path to save the sitemap on disk.<br />&#8226; If empty the feed is saved in var/csitemap.xml<br />&#8226; Relative paths are calculated relative to Magento base dir. <br />&#8226; Please make sure the path set here has enough permission for both web server user and cron user.]]></comment>
+                        </path>                          
+                        <generate_sitemap translate="label">
+                            <label></label>
+                            <button_label>Generate Sitemap</button_label>
+                            <button_url><![CDATA[canonicalize/adminhtml_sitemap/generate]]></button_url>
+                            <frontend_model>canonicalize/adminhtml_updatebtn</frontend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </generate_sitemap>
+                        <product_changefreq translate="label">
+                            <label>Products Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_frequency</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_changefreq>
+                        <product_priority translate="label">
+                            <label>Products Priority</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_priority</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_priority>
+                        
+                        <category_changefreq translate="label">
+                            <label>Categories Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_frequency</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_changefreq>
+                        <category_priority translate="label">
+                            <label>Categories Priority</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_priority</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_priority>
+                        
+                        <cms_changefreq translate="label">
+                            <label>CMS Pages Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_frequency</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_changefreq>
+                        <cms_priority translate="label">
+                            <label>CMS Pages Priority</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>canonicalize/source_priority</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_priority>
+                    </fields>
+                </sitemap>  
+			</groups>
+		</canonicalize>
+	</sections>
+</config>

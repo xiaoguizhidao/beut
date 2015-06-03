@@ -1,0 +1,133 @@
+<?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Jun 18, 2014*/  ?>
+		<?php 
+		$productId = '\'\'';
+		$pageType = 'siteview';
+		$totalValue = '';
+		
+		$fullActionName = Mage::app()->getFrontController()->getAction()->getFullActionName();
+		
+		//category page
+		$category = Mage::registry('current_category');
+		$product = Mage::registry('current_product');
+		
+		if ($category && $category->getId() && $fullActionName == 'catalog_category_view'){
+			$pageType = 'category';
+		}
+		
+		//product page
+		
+		if($product && $product->getId() && $fullActionName == 'catalog_product_view'){
+			$productId = '\''.$product->getId().'\'';
+			$pageType = 'product';
+			$totalValue = number_format($product->getFinalPrice(), 2);
+		}
+		
+		
+		
+		
+		//home page
+		if($this->getUrl('') == $this->getUrl('*/*/*', array('_current'=>true, '_use_rewrite'=>true))){
+			$pageType = 'home';
+			$productId = '\'\'';
+			$totalValue = '';
+		}
+		
+		//cart page
+		$request = $this->getRequest();
+		$module = $request->getModuleName();
+		$controller = $request->getControllerName();
+		$action = $request->getActionName();
+		
+		
+		if ($fullActionName == 'checkout_cart_index'){
+			$pageType = 'cart';
+			$session= Mage::getSingleton('checkout/session');
+			$quote = $session->getQuote();
+			$ids = '';
+		
+			foreach($quote->getAllItems() as $item)
+			{
+				if($item->getParentItem()) continue;
+				
+				$ids .= '\''.$item->getProductId().'\',';
+				
+				
+			}
+			
+			$ids = substr($ids, 0, -1);
+			
+			$productId = '['.$ids.']';
+			
+			$totals = $quote->getTotals();
+			$subtotal = 0;
+			
+			$config = Mage::getSingleton('tax/config');
+			if (isset($totals['subtotal'])) {
+				if ($config->displayCartSubtotalBoth()) {
+					
+					$subtotal = $totals['subtotal']->getValueInclTax();
+					
+				} elseif($config->displayCartSubtotalInclTax()) {
+					$subtotal = $totals['subtotal']->getValueInclTax();
+				} else {
+					$subtotal = $totals['subtotal']->getValue();
+					if (isset($totals['tax'])) {
+						$subtotal+= $totals['tax']->getValue();
+					}
+				}
+			}
+			
+			$totalValue= number_format($subtotal, 2);
+			
+		}
+		
+		
+		//success page
+		if ($fullActionName == 'checkout_onepage_success' || $fullActionName == 'onestepcheckout_index_success'){
+			$pageType = 'purchase';
+			$lastOrderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+			$order = Mage::getSingleton('sales/order')->load($lastOrderId);
+			
+			$items = $order->getAllItems();
+			
+			$ids = '';
+			foreach ($items as $item){
+				if ($item->getParentItem()) {
+					continue;
+				}
+				$ids .= '\''.$item->getProductId().'\',';
+			}
+			$ids = substr($ids, 0, -1);
+			
+			$productId = '['.$ids.']';
+			
+			$totalValue = number_format($order->getBaseSubtotalInclTax(), 2);
+			
+		}
+		
+		
+		?>
+		
+		<script type="text/javascript">
+		var google_tag_params = {
+		ecomm_prodid: <?php echo $productId?>,
+		ecomm_pagetype: '<?php echo $pageType?>',
+		ecomm_totalvalue: '<?php echo $totalValue?>'
+		};
+		</script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 969585950;
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/969585950/?value=0&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+		
+	<?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Jun 18, 2014*/  ?>

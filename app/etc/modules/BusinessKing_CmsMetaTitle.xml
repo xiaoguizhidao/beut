@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<config>
+    <modules>
+        <BusinessKing_CmsMetaTitle>
+            <active>true</active>
+            <codePool>local</codePool>   
+            <depends>
+            	<Mage_Cms />
+            </depends>         		
+        </BusinessKing_CmsMetaTitle>
+    </modules>
+</config> 

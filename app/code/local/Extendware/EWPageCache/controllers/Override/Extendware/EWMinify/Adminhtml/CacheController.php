@@ -1,0 +1,41 @@
+<?php //001bd
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * This class overrides a core file. Class hierarchy is [magento rewrite if it exists] extends [this class] extends [core file]. Below is a list of methods found in this class.
+ *
+ * @method mixed public flushAction()
+ * @method mixed protected flushFullPageCache()
+ *
+ */
+?>
+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
+2x/1OlOUgcKPWs2souNl/0==

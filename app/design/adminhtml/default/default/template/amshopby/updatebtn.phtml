@@ -1,0 +1,23 @@
+<?php
+
+/* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Tue, Apr 1, 2014*/
+?>
+<table>
+    <tr>
+        <td>
+            <button type="button" id="<?php echo $this->getHtmlId() ?>">
+                <span><?php echo $this->escapeHtml($this->getButtonLabel()); ?></span>
+            </button>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+$('<?php echo $this->getHtmlId() ?>').observe('click', function (e) {
+	var url = "<?php echo $this->getButtonUrl()?>";
+	window.location = url;
+	//popWin(url, 'generategbasefeed','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, left=200, top=100, width=800, height=600');
+	Event.stop(e);
+})
+//]]>
+</script>

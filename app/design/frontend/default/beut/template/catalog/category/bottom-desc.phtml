@@ -1,0 +1,19 @@
+<?php
+/* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Sep 4, 2013*/	
+?>
+
+<?php
+    $_helper    = $this->helper('catalog/output');
+    $_category  = $this->getCurrentCategory();
+   
+?>
+<?php if (!Mage::registry('amshopby_current_params')){?>
+<div class="bottom-desc">
+
+<?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+    <div class="category-description std">
+        <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+    </div>
+<?php endif; ?>
+</div>
+<?php }?>

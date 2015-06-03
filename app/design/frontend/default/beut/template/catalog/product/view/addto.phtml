@@ -1,0 +1,82 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php $_product = $this->getProduct(); ?>
+<?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
+
+<?php 
+/* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Sat, Dec 7, 2013*/
+$sampleSku = $_product->getSampleSku();
+$sampleUrl = '';
+if($sampleSku != ''){
+	$sampleProduct = Mage::getModel('catalog/product')->loadByAttribute('sku', $sampleSku);
+	if($sampleProduct->getId()){
+		$sampleUrl = $this->getAddToCartUrl($sampleProduct);
+	}
+}
+
+$toolTipContent = $this->getLayout()->createBlock('cms/block')->setBlockId('free_sample_tooltip')->toHtml();
+
+?>
+
+<div class="add-to-wishlist">
+<?php if($sampleUrl != '') {?>
+	<a id="sample-tooltip" title="<?php echo $toolTipContent;?>" onmouseover="showToolTips();" onmouseout="hideToolTips();" href="<?php echo $sampleUrl ?>"  class="link-wishlist"><?php echo $this->__('Get Sample') ?></a>
+<?php }else {?>
+<?php if ($this->helper('wishlist')->isAllow()) : ?>
+    <a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
+<?php endif; ?>
+
+<?php }?>
+</div>
+<script>
+function showToolTips(){
+	var tool = $('sample-tooltip');
+	var bubleTooltip = $('bubble');
+    var bubleMiddle = $('buble_middle');
+    var parent  =  tool.parentNode;
+    parent.appendChild(bubleTooltip);
+    var text = tool.title; 
+           
+	bubleTooltip.style.opacity = 0;
+    new Effect.Opacity('bubble', { from: 0, to: 1, duration: 0.2 });
+	
+    bubleMiddle.innerHTML = text;
+    bubleTooltip.style.display = 'block'; 
+    
+    bubleTooltip.style.left =  10 - bubleTooltip.getWidth() + "px";
+    bubleTooltip.style.top =   - bubleTooltip.getHeight() + 5 + 'px';
+
+    
+	
+}
+function hideToolTips(){
+	 $('bubble').hide();
+	 $$('body')[0].appendChild($('bubble'));
+}
+
+</script>

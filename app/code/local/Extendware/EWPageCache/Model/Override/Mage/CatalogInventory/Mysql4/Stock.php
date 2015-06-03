@@ -1,0 +1,35 @@
+<?php //001b6
+// Copyright © 2014 Extendware
+// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+
+
+/**
+ * This class overrides a core file. Class hierarchy is [magento rewrite if it exists] extends [this class] extends [core file]. Below is a list of methods found in this class.
+ *
+ * @method mixed public correctItemsQty($stock, $productQtys, $operator = '-')
+ *
+ */
+?>
+HR+cPyGYJqoW2hHZoPZQRusCJK/axokV/RkaUzKx7jMMExDtqFaksLYvjKNhxOQqclZ2f1RVPsg0
+DSpm7qNEA+eq6KqKibzmKex5jPqnjEe9CiNrcF0rkplH9LteApDKpO23jqSrbNlGU+TOCioaOZsn
+S/siS4xOEUubRIcpAksVQWw7UrZXzH+vDjzFTExk+exFTtfwvXfW5UnUw9PsyiuSg6TArh84et1L
+KQ8xp1hnqjK8sjqj5jjN6H4GG71u4xWFPhU1rOahfgK6K9tNLFqfGsQcB69HriylBxjVb/FUoZE5
+nU1tDiCNLxkqUCSVov2lG36+pAJ9FG+nQ//VpLjNAimDtjnz734cEFE8g5fjs/gCMwMDtZ2wv9W/
+GSwZQOHhHAODHRB04yzDs2pVgieprDLkSS2Za4DCYe87UTbpwKFRTWxCA0NfMRUKo9crYavPKaW5
+y9QWzba84a2R1QUT5tVdERpAAeUZTsb8Pk6ntBBzXssAqd0o9n6q2w3OazGlPdZ88ipYtFyVighD
+eCqxKtn22zzCQWzDIaaUa3bh0xLwK0oVptzsxi8jTh1mLxflFPBRUclLcTckI9ikEIq+rzQR2nS1
+t3Ee2zA5ytq9D4sticQYtIe14U2tQHIWMrH2R5RUREz66XmijK5l0QwVYuVXPu3ZFIVky05sK1T/
+UwNN3Mc88JKtPYHMupzK1rnunvEMGTd4ac4bZzXRdTIDFwVmV+Hmj9ENlc26hVL6I1ZubSrAucbj
+fxBOxlfZdMPUU257QZ1/Dd35u5JebgnRHYKsDTt5x840LJZhgU9BGt9CmjyMWH80VQO8q/nnJkr4
+RWX/natIWKuizBRny8bfZIMf/+E2Zd3hBxvziOLjB62byuZ3P7ER1M4OIKkyhl9t3ExZhnM++Tk5
+heCVYwFZBpgHWGrIJY+AxP6Y87uQJE0/YSVHYfCZI7FPyxjRO/rF0CXXzy3g/7gAUuM8m4likn9S
+z1Il4LgcU/uhSxb0DbrMc/r+DGlnOSWfvwQ81aJg/Nj5Z1d5dAp/0LkplgAyIG3rshgJi9NdD11c
+NXKt1gElVJ5zZLau+wN/+tu/6T1yu1w9+qSFtkZJeEv+JaMWRgYI8nr9u/DZFpIwqZVgbZEiEhrJ
+9D7CEEOew9VRoZcI5Qr9iwtL0cKJ2X7auhaFfFh7XtZp8YWIO75fOP+1US+WbkbWNhYkDWdaUecr
+WMd9FVz+BY2oT5mgRANK7h3Bu9fZ9EOrWeHij/U5+RVuEoeeOWE1vZw7m2r/ZNF9XwYS3rJREJBS
+pXasSsYPOmyvNagJiKDQS7KY8SqD/6zkof+R/hAxwjCACaSw0nWK0cGD5DceBO7N57W/edmj890L
+ZN5SWEVzJTDMAUQLqWxIONslcJLcf65wMJ04A6mPGZ1nZ+rYklzGymnfIvujEZFPvNZ7+zfIKPPn
+FQ8tFsrBs5tZf31keWph7QOe1rLVoauO9fWFuvdeSmKFg0u8Lv0L5sV4EmM7HgDl139pkqGvPkhd
+nsmxgI/XmcSI98IUmJSSXY1t//Pq56qNt8La5DJ12Xwc/U1QTMhS4PeEPWrk+zV/T1hnFhVb1Ja6
+3+3AwkR7ArXIkiDhlz1RsZLC24hgZl9TMzbTIRQIy8XlRZBzmPD4WPPfUAjYiXZPoBYQgkK0oMRH
+4KBoNRToPwJBnA/u2hjhzuei

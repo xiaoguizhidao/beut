@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<layout version="0.1.0">
+	<cms_index_index>
+		<reference name="left">
+			<block type="twitterbox/box"  name="twitterbox.box.left" before="." template="twitterbox/box.phtml">
+				<block type="twitterbox/script"  name="twitterbox.script" as="script" template="twitterbox/script.phtml"/>
+			</block>
+		</reference>
+		<reference name="right">
+			<block type="twitterbox/box"  name="twitterbox.box.right" after="overview_random" template="twitterbox/box.phtml">
+				<block type="twitterbox/script"  name="twitterbox.script" as="script" template="twitterbox/script.phtml"/>
+			</block>
+		</reference>
+	</cms_index_index>
+</layout>

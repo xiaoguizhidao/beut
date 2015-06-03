@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+	<extendware>
+		<quickaccess>
+			<ewcookiemessage>
+                <resource>extendware/ewcookiemessage</resource>
+				<children>
+					<message_rules translate="title" module="ewcookiemessage">
+						<title>Message Rules</title>
+						<action>extendware_ewcookiemessage/adminhtml_message_rule</action>
+						<resource>extendware/ewcookiemessage/message/rule</resource>
+						<sort_order>1</sort_order>
+					</message_rules>
+					<tester translate="title" module="ewcookiemessage">
+						<title>Rule Tester</title>
+						<action>extendware_ewcookiemessage/adminhtml_tester</action>
+						<resource>extendware/ewcookiemessage/tester</resource>
+						<sort_order>3</sort_order>
+					</tester>
+				</children>
+				<title/>
+			</ewcookiemessage>
+		</quickaccess>
+	</extendware>
+	<menu></menu>
+	<acl>
+		<resources>
+            <admin>
+                <children>
+                    <extendware translate="title" module="ewcookiemessage">
+                    	<title>Extendware</title>
+                    	<sort_order>0</sort_order>
+                        <children>
+                        	<ewcookiemessage translate="title" module="ewcookiemessage">
+                        		<title>Cookie Message</title>
+                        		<children>
+                        			<settings translate="title">
+                        				<title>Settings</title>
+                        				<children>
+				                            <main translate="title">
+				                                <title>Main</title>
+				                                <children>
+					                                <ewcookiemessage translate="title">
+						                                <title>General</title>
+						                            </ewcookiemessage>
+					                            </children>
+				                            </main>
+			                            </children>
+			            			</settings>
+			            		</children>
+			            	</ewcookiemessage>
+                        </children>
+                    </extendware>
+                </children>
+            </admin>
+        </resources>
+	</acl>
+</config>

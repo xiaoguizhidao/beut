@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+        <Extendware_EWAutoSwitcher>
+        	<extendware>
+	        	<settings>
+	        		<scopes>
+		        		<main>
+							<tabs>
+						        <main translate="label comment ewhelp" module="ewautoswitcher">
+						            <label>Auto Switcher</label>
+						            <sort_order>100</sort_order>
+						        </main>
+						    </tabs>
+							<sections>
+								<ewautoswitcher translate="label comment ewhelp" module="ewautoswitcher">
+									<class>separator-top</class>
+									<label>General</label>
+									<tab>main</tab>
+									<frontend_type>text</frontend_type>
+									<sort_order>100</sort_order>
+									<show_in_default>1</show_in_default>
+									<show_in_website>0</show_in_website>
+									<show_in_store>0</show_in_store>
+									<groups>
+										<general translate="label comment ewhelp" module="ewautoswitcher">
+						                    <label>General</label>
+						                    <frontend_type>text</frontend_type>
+						                    <sort_order>100</sort_order>
+						                    <show_in_default>1</show_in_default>
+						                    <show_in_website>1</show_in_website>
+						                    <show_in_store>1</show_in_store>
+						                    <fields>
+						                    	<enabled translate="label comment ewhelp">
+						                            <label>Status</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewcore/adminhtml_config_data_option_enabledisable</source_model>
+						                            <sort_order>1</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[Enable or disable auto switching]]></comment>
+						                        </enabled>
+						                        <switching_mode translate="label comment ewhelp">
+						                            <label>Switcher Mode</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewautoswitcher/adminhtml_config_data_option_switchermode</source_model>
+						                            <sort_order>20</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[Magento should be used for setups each website has a unique domain. You must use autoswitcher if more than one registered websites share the same domain.]]></comment>
+						                        </switching_mode>
+						                        <blocked_user_agents translate="label comment ewhelp">
+						                            <label>Disabled User Agents</label>
+						                            <frontend_model>ewautoswitcher/adminhtml_config_form_field_useragents</frontend_model>
+                            						<backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+						                            <sort_order>30</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                   			<show_in_store>0</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_serialized_array</model>
+						                            		<options>
+						                            			<splittable_min_items>2</splittable_min_items>
+						                            			<splittable_max_items>2</splittable_max_items>
+						                            			<splittable_item_types>string|regexp</splittable_item_types>
+						                            			<splittable_item_min_length>1</splittable_item_min_length>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <comment><![CDATA[Auto-switcher will be disabled for any useragents matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes.]]></comment>
+						                        	<ewhelp><![CDATA[]]></ewhelp>
+						                        </blocked_user_agents>
+						                        <blocked_urls translate="label comment ewhelp">
+						                            <label>Disabled Urls</label>
+						                            <frontend_model>ewautoswitcher/adminhtml_config_form_field_urls</frontend_model>
+                            						<backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+						                            <sort_order>40</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                   			<show_in_store>0</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_serialized_array</model>
+						                            		<options>
+						                            			<splittable_min_items>2</splittable_min_items>
+						                            			<splittable_max_items>2</splittable_max_items>
+						                            			<splittable_item_types>string|regexp</splittable_item_types>
+						                            			<splittable_item_min_length>1</splittable_item_min_length>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <comment><![CDATA[Auto-switcher will be disabled for any urls matching an inputted regexp. The group can be whatever you want it to be and is for reference purposes.]]></comment>
+						                        	<ewhelp><![CDATA[]]></ewhelp>
+						                        </blocked_urls>
+						                         <url_replacements translate="label comment ewhelp">
+						                            <label>URL Replace RegExp</label>
+						                            <frontend_model>ewautoswitcher/adminhtml_config_form_field_urlreplacements</frontend_model>
+                            						<backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+						                            <sort_order>41</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                   			<show_in_store>0</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_serialized_array</model>
+						                            		<options>
+						                            			<splittable_min_items>2</splittable_min_items>
+						                            			<splittable_max_items>2</splittable_max_items>
+						                            			<splittable_item_types>regexp|string</splittable_item_types>
+						                            			<splittable_item_min_length>1</splittable_item_min_length>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <depends><switching_mode>autoswitcher</switching_mode></depends>
+						                            <comment><![CDATA[Replace parts of the URL before switching. This is useful to replace directories that separate each url. <b>Note: </b> Only used if switcher mode is set to autoswitcher.]]></comment>
+						                        	<ewhelp><![CDATA[For example, if your US site is http://wwww.example.com/ and your UK site is http://www.example.com/uk/ and the Australia site is http://www.example.com/au/ then you would want to replace "/uk/" with a "/" so that the path can be retrieved without the UK specific portion. If someone accessed http://www.example.com/uk/product.html they will then be switched to http://www.example.com/au/product.html as a result if they are from Asutralia.]]></ewhelp>
+						                        </url_replacements>
+						                        <ip_mode translate="label comment ewhelp">
+						                            <label>IP Mode</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewautoswitcher/adminhtml_config_data_option_ipmode</source_model>
+						                            <sort_order>50</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[<b>Note: </b> If you are using a proxy to test the auto-switcher, then Requesting IP must be selected.]]></comment>
+						                        </ip_mode>
+						                        <currency_param translate="label comment ewhelp">
+						                            <label>Currency Param</label>
+						                            <frontend_type>text</frontend_type>
+						                            <sort_order>60</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[You can use this parameter to override the auto-switcher. Useful if you need to force the use of a specific currency. You would apply ?[parameter]=[currency_code] to the url to override. Leave blank to disable.]]></comment>
+						                            <ewhelp><![CDATA[<b>Note:</b> If you change this parameter name you will have to change [Magento root]/app/code/local/Varien/Autoload.php and replace __currency with your custom parameter. As such, it is not recommended to change it.]]></ewhelp>
+						                        </currency_param>
+											</fields>
+										</general>
+									</groups>
+								</ewautoswitcher>
+							</sections>
+						</main>
+					</scopes>
+				</settings>
+			</extendware>
+		</Extendware_EWAutoSwitcher>
+	</modules>
+</config>
