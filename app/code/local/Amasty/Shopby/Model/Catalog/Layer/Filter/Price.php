@@ -11,18 +11,13 @@ class Amasty_Shopby_Model_Catalog_Layer_Filter_Price extends Amasty_Shopby_Model
     const DT_DROPDOWN   = 1;
     const DT_FROMTO     = 2;
     const DT_SLIDER     = 3;
-    
-    public function _construct()
-    {    
-        parent::_construct();
-    }
-    
+
     public function _srt($a, $b)
     {
         $res = ($a['pos'] < $b['pos']) ? -1 : 1;
         return $res;
-    } 
-    
+    }
+
     protected function _getCustomRanges()
     {
         $ranges = array();
@@ -44,7 +39,18 @@ class Amasty_Shopby_Model_Catalog_Layer_Filter_Price extends Amasty_Shopby_Model
         }
         
         return $ranges;
-    }  
+    }
+
+    public function apply(Zend_Controller_Request_Abstract $request, $filterBlock)
+    {
+        /** @var Amasty_Shopby_Helper_Attributes $attributeHelper */
+        $attributeHelper = Mage::helper('amshopby/attributes');
+        if (!$attributeHelper->lockApplyFilter('', 'price')) {
+            return $this;
+        }
+
+        parent::apply($request, $filterBlock);
+    }
     
     public function calculateRanges()
     {
@@ -61,5 +67,13 @@ class Amasty_Shopby_Model_Catalog_Layer_Filter_Price extends Amasty_Shopby_Model
             return false;
         }
         return true;
+    }
+
+    public function getItemsCount()
+    {
+        $cnt = parent::getItemsCount();
+        $checkForOne = $this->calculateRanges() && Mage::getStoreConfig('amshopby/general/hide_one_value');
+
+        return ($cnt == 1 && $checkForOne) ? 0 : $cnt;
     }
 }

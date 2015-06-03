@@ -7,47 +7,58 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
     // show grid
     public function indexAction()
     {
-        foreach (Mage::app()->getStores() as $store){
-            // check images, js and css
-            $path = rtrim(Mage::getBaseDir('skin') . '/frontend', ' /');
+        $this->_checkRootCategories();
+        $this->_checkOldTemplates();
+        $this->_checkConflicts();
 
-            $package = Mage::getStoreConfig('design/package/name', $store);
-            if (!$package)
-                $package = 'default';
-            $path .= '/' . trim($package, ' /');
-            
-            $theme = Mage::getStoreConfig('design/theme/skin', $store);
-            if (!$theme)
-                $theme = 'default';
-                
-            $defaultTheme = Mage::getStoreConfig('design/theme/default', $store);
-            if (!$defaultTheme)
-                $defaultTheme = 'default';
-                
-            $defaultPath = $path . '/' . trim($defaultTheme, ' /');
-            $path        .= '/' . trim($theme, ' /');
-            
-            $files = array('/images/amshopby-cb1.gif');
-            foreach ($files as $fileName){
-                $file        = $path . $fileName;
-                $defaultFile = $defaultPath . $fileName;
-                if (!file_exists($file) && !file_exists($defaultFile)){
-                    $msg = $this->__('Please make sure your custom skin %s contains %s file.', $package . '/' . $theme, $file);
-                    Mage::getSingleton('adminhtml/session')->addNotice($msg);    
-                    break;
-                }
-            }
-            
+        $this->loadLayout();
+        $this->_setActiveMenu('catalog/amshopby');
+        $this->_addBreadcrumb($this->__('Filters'), $this->__('Filters')); 
+        $this->_addContent($this->getLayout()->createBlock('amshopby/adminhtml_filter'));         
+        $this->renderLayout();
+    }
+
+    protected function _checkRootCategories()
+    {
+        foreach (Mage::app()->getStores() as $store){
             $category = Mage::getModel('catalog/category')
                 ->setStoreId($store->getId())
                 ->load($store->getRootCategoryId());
+
             if (!$category->getIsAnchor()){
                 $msg = $this->__('Please open Catalog > Manage Categories and set property "Is Anchor" to "Yes" for the store root category.');
-                Mage::getSingleton('adminhtml/session')->addNotice($msg);    
+                $this->_getSession()->addNotice($msg);
                 break;
             }
         }
-        
+    }
+
+    protected function _checkOldTemplates()
+    {
+        $frontendPath = rtrim(Mage::getBaseDir('design') . '/frontend', ' /');
+
+        foreach (Mage::app()->getStores() as $store){
+            $package = Mage::getStoreConfig('design/package/name', $store);
+            if (!$package)
+                $package = 'default';
+
+            $theme = Mage::getStoreConfig('design/theme/skin', $store);
+            if (!$theme)
+                $theme = 'default';
+
+            $themePath = $frontendPath . '/' . trim($package, ' /') . '/' . trim($theme, ' /');
+            $excessPath = $themePath . '/template/amshopby';
+
+            if (is_dir($excessPath)){
+                $msg = $this->__('In case you need to modify the module templates please copy files from app/design/frontend/base/default/templates/amasty/amshopby/  to your custom theme  app/design/frontend/PACKAGE/THEME/templates/amasty/amshopby/');
+                $this->_getSession()->addNotice($msg);
+                break;
+            }
+        }
+    }
+
+    protected function _checkConflicts()
+    {
         $classes = array(
             'model' => array(
                 'catalog/layer_filter_price',
@@ -56,7 +67,7 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
                 'catalog/layer_filter_category',
                 'catalog/layer_filter_item',
                 'catalogsearch/layer_filter_attribute',
-                            
+
             ),
             'block' => array(
                 'catalog/layer_filter_attribute',
@@ -64,23 +75,17 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
                 'catalogsearch/layer_filter_attribute',
             ),
         );
-        
+
         foreach ($classes as $type => $names){
             foreach ($names as $name){
                 $name = Mage::getConfig()->getGroupedClassName($type, $name);
                 if (substr($name, 0, 6) != 'Amasty'){
                     $msg = $this->__('There is a conflict(s) with some other extension: class %s. If the module works incorrect, consider our <a href="http://amasty.com/installation-service.html">Installation Service</a>.', $name);
-                    Mage::getSingleton('adminhtml/session')->addNotice($msg); 
-                    break(2);   
+                    $this->_getSession()->addNotice($msg);
+                    break(2);
                 }
             }
         }
-        
-        $this->loadLayout(); 
-        $this->_setActiveMenu('catalog/amshopby');
-        $this->_addBreadcrumb($this->__('Filters'), $this->__('Filters')); 
-        $this->_addContent($this->getLayout()->createBlock('amshopby/adminhtml_filter'));         
-        $this->renderLayout();
     }
 
     // load filters and their options
@@ -95,6 +100,7 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
         catch (Exception $e) {
             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());    
         }
+        $this->flushCache();
         $this->_redirect('*/*/');
     }
     
@@ -132,8 +138,13 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
         $model  = Mage::getModel('amshopby/filter');
         $data = $this->getRequest()->getPost();
         if ($data) {
-            $model->setData($data)->setId($id);
-            
+            $model->setData($data);
+            $model->setId($id);
+
+            if ($model->getData('display_type') == Amasty_Shopby_Model_Catalog_Layer_Filter_Price::DT_FROMTO) {
+                $model->setData('from_to_widget', true);
+            }
+
             try {
                 $model->save();
                 Mage::getSingleton('adminhtml/session')->setFormData(false);
@@ -148,7 +159,8 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
                 Mage::getSingleton('adminhtml/session')->setFormData($data);
                 $this->_redirect('*/*/edit', array('id' => $id));
             }
-                        
+
+            $this->flushCache();
             return;
         }
         Mage::getSingleton('adminhtml/session')->addError(Mage::helper('amshopby')->__('Unable to find a filter to save'));
@@ -176,8 +188,16 @@ class Amasty_Shopby_Adminhtml_FilterController extends Mage_Adminhtml_Controller
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
             }
+            $this->flushCache();
         }
         $this->_redirect('*/*/');
+    }
+
+    protected function flushCache()
+    {
+        /** @var Amasty_Shopby_Helper_Data $helper */
+        $helper = Mage::helper('amshopby');
+        $helper->flushCache();
     }
 
     //for ajax

@@ -22,13 +22,9 @@ class Amasty_Shopby_Block_Adminhtml_Filter_Grid extends Mage_Adminhtml_Block_Wid
     protected function _prepareColumns()
     {
         $yesno = array(Mage::helper('catalog')->__('No'), Mage::helper('catalog')->__('Yes'));
-        
-        $blockpos = array(
-            'left' => Mage::helper('catalog')->__('Sidebar'), 
-            'top'  => Mage::helper('catalog')->__('Top')
-        );
-        
-        
+        /** @var Amasty_Shopby_Helper_Data $helper */
+        $helper = Mage::helper('amshopby');
+
         $this->addColumn('filter_id', array(
             'header'    => Mage::helper('amshopby')->__('ID'),
             'align'     => 'right',
@@ -48,23 +44,24 @@ class Amasty_Shopby_Block_Adminhtml_Filter_Grid extends Mage_Adminhtml_Block_Wid
             'align'     => 'left',
             'index'     => 'frontend_label',
         ));
-        
+
+        /** @var Amasty_Shopby_Model_Source_Position $positionSource */
+        $positionSource = Mage::getSingleton('amshopby/source_position');
         $this->addColumn('block_pos', array(
             'header'    => Mage::helper('amshopby')->__('Show in the Block'),
             'align'     => 'left',
             'index'     => 'block_pos',
-            'type'        => 'options',
-            'options'   => $blockpos
+            'type'      => 'options',
+            'options'   => $positionSource->getHash(),
         ));
         
         $this->addColumn('display_type', array(
             'header'    => Mage::helper('amshopby')->__('Display Type'),
             'align'     => 'left',
             'index'     => 'display_type',
-            'getter'     => 'getDisplayTypeString',
-            'options'     => Mage::helper('amshopby')->getDisplayTypes(),
-            'filter'     => false,
-            'sortable'    => false,
+            'getter'    => 'getDisplayTypeString',
+            'filter'    => false,
+            'sortable'  => false,
         ));
         
         $this->addColumn('hide_counts', array(

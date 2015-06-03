@@ -13,8 +13,7 @@ class Amasty_Conf_Model_Catalog_Product_Type_Configurable_Price extends Mage_Cat
      */
     public function getFinalPrice($qty = null, $product)
     {
-        if (!Mage::helper('amconf')->getConfigUseSimplePrice() 
-            OR !$product->getData('amconf_simple_price'))
+        if (!(Mage::helper('amconf')->getConfigUseSimplePrice() == 2 ||(Mage::helper('amconf')->getConfigUseSimplePrice() == 1 AND $product->getData('amconf_simple_price'))))
         {
             return parent::getFinalPrice($qty, $product);
         }

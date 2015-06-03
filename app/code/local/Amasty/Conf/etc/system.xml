@@ -18,6 +18,44 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+						<use_zoom_lightbox translate="label">
+                            <label>Use Our Zoom and Lightbox</label>
+							 <comment><![CDATA[
+                                    <script type="text/javascript">
+                                        checkEnableAll = function() {
+                                            if ($('amconf_general_use_zoom_lightbox').getValue() == 0) {
+                                                $('amconf_size-state').parentNode.hide();
+                                                $('amconf_zoom-state').parentNode.hide();
+                                                $('amconf_zoom_settings-state').parentNode.hide();
+                                                $('amconf_lightbox-state').parentNode.hide();
+                                                $('amconf_carousel-state').parentNode.hide();
+												$('amconf_zoom_enable').setValue(0);
+												$('amconf_lightbox_enable').setValue(0);
+                                                $('amconf_lightbox_thumbnail_lignhtbox').setValue(0);
+
+                                            }
+                                            else{
+                                                $('amconf_size-state').parentNode.show();
+                                                $('amconf_zoom-state').parentNode.show();
+                                                $('amconf_zoom_settings-state').parentNode.show();
+                                                $('amconf_lightbox-state').parentNode.show();
+                                                $('amconf_carousel-state').parentNode.show();
+                                            }
+                                        } 
+                                        Event.observe(window, 'load', function() {
+                                            Event.observe('amconf_general_use_zoom_lightbox', 'change', checkEnableAll);
+                                            checkEnableAll();
+                                        })
+                                    </script>
+                                ]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_zoom_lightbox>
                         <hide_dropdowns translate="label">
                             <label>Hide Configuration Drop-Downs</label>
                             <frontend_type>select</frontend_type>
@@ -27,21 +65,28 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </hide_dropdowns>
-                        <reload_images translate="label comment">
-                            <label>Reload Product Images</label>
-                            <comment>If set to 'Yes', default product images will be replaced with images of the specific simple product, configured by customer</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        <reload_content translate="label comment">
+                            <label>Reload Product Information</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>amconf/source_reload</source_model>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </reload_images>
-			<use_simple_price translate="label comment">
+                        </reload_content>
+                        <image_container translate="label comment">
+                            <label>Product Image Block CSS Selector</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                           
+                        </image_container>
+			            <use_simple_price translate="label comment">
                             <label>Use Price of Simple Products</label>
                             <comment>When set to 'No', disables this feature for the whole site, regardless of what is selected for individual products.</comment>
                             <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <source_model>amconf/source_price</source_model>
                             <sort_order>25</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -59,16 +104,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </noimage_img>
-                        <reload_name translate="label comment">
-                            <label>Reload Product Name</label>
-                            <comment>If set to 'Yes', default configurable product name will be replaced with the name of the specific simple product</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>35</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </reload_name>
+                       
                         <show_clear translate="label comment">
                             <label>Show "Reset Configuration" option</label>
                             <frontend_type>select</frontend_type>
@@ -79,34 +115,15 @@
                             <show_in_store>1</show_in_store>
                         </show_clear>
                         <oneselect_reload translate="label comment">
-                            <label>Reload Product Information When The First Attribute Selected</label>
-                            <comment>If set to 'Yes', product images and descriptions will get reloaded after the first attribute is selected (first values of the other attributes will be used).</comment>
+                            <label>Reload Images When The First Attribute Selected</label>
+                            <comment>If set to 'Yes', product images will get reloaded after the first attribute is selected (first values of the other attributes will be used).</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </oneselect_reload>
-                        <show_title_view translate="label comment">
-                            <label>Display Attribute Value Tooltip On Product View Page</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>80</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                   		
-						</show_title_view>
-						<show_attribute_title translate="label comment">
-                            <label>Display Attribute Titles Under Swatch Images</label>
-							<comment>On the product view page</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>100</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                           
-                        </show_attribute_title>
+                        </oneselect_reload> 
                         <auto_select_attribute translate="label comment">
                             <label>Automatically Select Attributes That Have One Single Value</label>
                             <comment>On the product view page, automatically select configurable attributes that have only 1 value available in the drop-down.</comment>
@@ -117,6 +134,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </auto_select_attribute>
+                         <out_of_stock translate="label comment">
+                            <label>Display Out Of Stock Options as Crossed Out</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </out_of_stock>
  					</fields>
                 </general>
                 <list>
@@ -130,39 +156,38 @@
                         <enable_list translate="label">
                             <label>Display Color Swatches on Product List Pages</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <source_model>amconf/source_swatchesList</source_model>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enable_list>
-                         <!-- <list_ajax translate="label">
-                            <label>Use Ajax on product list pages</label>
+                        <list_index translate="label">
+                            <label>Use Indexes for Better Performance</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </list_ajax> -->
-                        <listimg_size translate="label comment">
-                            <label>Image Size for Product List, px</label>
-                            <comment>Images will be automatically resized to be displayed on the product list page</comment>
+                        </list_index>
+                       
+						<main_image_list_size_x translate="label comment">
+                            <label>Product Thumbnail Width (px)</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>30</sort_order>
+                            <sort_order>35</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                           
-                        </listimg_size>
-                        <show_title_list translate="label comment">
-                            <label>Display Attribute Value Tooltip on Product List Page</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>40</sort_order>
+                        </main_image_list_size_x>
+                        <main_image_list_size_y translate="label comment">
+                            <label>Product Thumbnail Height (px)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>36</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                           
-                        </show_title_list>
+                        </main_image_list_size_y>
                     </fields>
                 </list>
                 <size>
@@ -507,15 +532,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </swipe>
-                        <!--mousewheel translate="label">
-                            <label>Use Mousewheel Carousel</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>60</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </mousewheel-->
                         <auto translate="label">
                             <label>Use Automatic Scrolling</label>
                             <frontend_type>select</frontend_type>
@@ -534,15 +550,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </pagination>
-                        <!--carousel_direction>
-                            <label>Carousel Position</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>amconf/source_carouselDirection</source_model>
-                            <sort_order>60</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </carousel_direction-->
                     </fields>
                 </carousel>
                 <product_image_size>
@@ -554,25 +561,6 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <thumb translate="label comment">
-                            <label>Size of Attribute Image from Simple Product, px</label>
-                            <comment>56 pixels by default. Do not modify this value until you really need to.</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </thumb>
-                        <enable_jquery translate="label comment">
-                            <label>Enable jQuery</label>
-                            <comment>If you have javascript errors at your frontend page, try to disable our jQuery file.</comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </enable_jquery>
                         <have_button translate="label comment">
                             <label>Do you have button "Add to Cart" at category page?</label>
                             <comment>If swatches don't show at category page.</comment>
@@ -583,15 +571,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </have_button>
-                        <enable_all_zoom translate="label comment">
-                            <label>Enable Zoom For All Products</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>40</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </enable_all_zoom>
                     </fields>
                 </product_image_size>
             </groups>

@@ -37,6 +37,11 @@ class Amasty_Shopby_Block_Adminhtml_Filter_Edit_Tab_Values extends Mage_Adminhtm
             'index'     => 'title',
         ));
 
+        $this->addColumn('url_alias', array(
+            'header'    => $hlp->__('URL alias'),
+            'index'     => 'url_alias',
+        ));
+
         return parent::_prepareColumns();
     }
 

@@ -44,19 +44,6 @@ class Amasty_Shopby_Block_Adminhtml_Page_Grid extends Mage_Adminhtml_Block_Widge
         'header'    => $hlp->__('Meta Description'),
         'index'     => 'meta_descr',
     ));
-    
-    /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Tue, Apr 1, 2014*/
-    /*
-    $this->addColumn('sitemap', array(
-    		'header'    => $hlp->__('Show in sitemap'),
-    		'index'     => 'sitemap',
-    ));
-    $this->addColumn('priority', array(
-    		'header'    => $hlp->__('Sitemap Priority'),
-    		'index'     => 'priority',
-    ));
-    */
-    /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Tue, Apr 1, 2014*/
 
 
     return parent::_prepareColumns();

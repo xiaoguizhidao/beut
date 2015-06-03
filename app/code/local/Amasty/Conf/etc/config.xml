@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Amasty_Conf>
-            <version>3.8.2</version>
+            <version>3.9.8</version>
         </Amasty_Conf>
     </modules>
     
@@ -20,7 +20,7 @@
         <layout>
             <updates>
                 <amconf>
-                    <file>z_amconf.xml</file>
+                    <file>amasty/z_amconf.xml</file>
                 </amconf>
             </updates>
         </layout>
@@ -39,32 +39,11 @@
         <layout>
             <updates>
                 <amconf>
-                    <file>amconf.xml</file>
+                    <file>amasty/amconf.xml</file>
                 </amconf>
             </updates>
         </layout>
-        <acl>
-            <resources>
-                <all>
-                    <title>Allow Everything</title>
-                </all>
-                <admin>
-                    <children>
-                        <system>
-                            <children>
-                                <config>
-                                    <children>
-                                        <amconf translate="title" module="amconf">
-                                            <title>Color Swatches Pro</title>
-                                        </amconf>
-                                    </children>
-                                </config>
-                            </children>
-                        </system> 
-                     </children>
-                </admin> 
-            </resources>
-        </acl>
+       
         <translate>
             <modules>
                 <Amasty_Conf>
@@ -74,10 +53,26 @@
                 </Amasty_Conf>
             </modules>
         </translate>
+		<events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <amconf_core_block_abstract_to_html_before>
+                        <class>amconf/observer</class>
+                        <method>onCoreBlockAbstractToHtmlBefore</method>
+                    </amconf_core_block_abstract_to_html_before>
+                </observers>
+            </core_block_abstract_to_html_before>
+       </events>
     </adminhtml>
     
     <global>
-    
+        <index>
+            <indexer>
+                <super>
+                    <model>amconf/indexer_super</model>
+                </super>
+            </indexer>
+        </index>
         <models>
             <amconf>
                 <class>Amasty_Conf_Model</class>
@@ -101,6 +96,11 @@
                     <product_type_configurable_price>Amasty_Conf_Model_Catalog_Product_Type_Configurable_Price</product_type_configurable_price>
                 </rewrite>
             </catalog>
+            <catalog_resource>
+                <rewrite>
+                    <product_type_configurable_attribute_collection>Amasty_Conf_Model_Resource_Product_Type_Configurable_Attribute_Collection</product_type_configurable_attribute_collection>
+                </rewrite>
+            </catalog_resource>
         </models>
         
         <resources>
@@ -124,17 +124,12 @@
             <amconf>
                 <class>Amasty_Conf_Block</class>
             </amconf>
-            
-            <adminhtml>
-                <rewrite>
-                    <catalog_product_attribute_edit_tabs>Amasty_Conf_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tabs</catalog_product_attribute_edit_tabs>
-                </rewrite>
-            </adminhtml>
-            
+			
             <catalog>
                 <rewrite>
                     <product_view_type_configurable>Amasty_Conf_Block_Catalog_Product_View_Type_Configurable</product_view_type_configurable>
                     <product_view_media>Amasty_Conf_Block_Catalog_Product_View_Media</product_view_media>
+                    <!--product_price>Amasty_Conf_Block_Catalog_Product_Price</product_price-->
                 </rewrite>
             </catalog>
         </blocks>
@@ -146,6 +141,15 @@
         </helpers>
         
         <events>
+            <controller_action_postdispatch_adminhtml_catalog_product_attribute_save>
+                <observers>
+                    <catalogproductattributesave>
+                        <class>amconf/observer</class>
+                        <method>catalogProductAttributeSave</method>
+                    </catalogproductattributesave>                   
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_product_attribute_save>    
+            
             <core_block_abstract_to_html_after>
                 <observers>
                     <amconf>
@@ -182,20 +186,19 @@
     <default>
         <amconf>
            <general>
+				<use_zoom_lightbox>1</use_zoom_lightbox>
                 <hide_dropdowns>0</hide_dropdowns>
-                <reload_images>1</reload_images>
-                <reload_name>1</reload_name>
+                <reload_content>name,description,image,short_description</reload_content>
+                <image_container>.product-img-box, .img-box </image_container>
                 <show_clear>1</show_clear>
                 <oneselect_reload>0</oneselect_reload>
-		<show_title_view>1</show_title_view>
-                <show_attribute_title>1</show_attribute_title>
-		<use_simple_price>0</use_simple_price>
+                <use_simple_price>0</use_simple_price>
+		        <out_of_stock>0</out_of_stock>
            </general>
            <list>
                 <enable_list>0</enable_list>
-                <!--<list_ajax>0</list_ajax>-->
-                <listimg_size>18</listimg_size>
-                <show_title_list>1</show_title_list>
+                <main_image_list_size_x>175</main_image_list_size_x>
+		        <main_image_list_size_y>175</main_image_list_size_y>
            </list>
           <size>
                 <thumb>72</thumb>
@@ -243,7 +246,6 @@
                 <thumb>56</thumb>
                 <enable_jquery>1</enable_jquery>
                 <have_button>1</have_button>
-                <enable_all_zoom>0</enable_all_zoom>
            </product_image_size>
         </amconf>
     </default>

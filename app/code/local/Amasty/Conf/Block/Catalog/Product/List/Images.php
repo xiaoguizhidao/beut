@@ -14,7 +14,7 @@ class Amasty_Conf_Block_Catalog_Product_List_Images extends Mage_Core_Block_Temp
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('amconf/options.phtml');
+        $this->setTemplate('amasty/amconf/options.phtml');
         $this->block = Mage::app()->getLayout()->createBlock('amconf/catalog_product_view_type_configurable', 'amconf.catalog_product_view_type_configurable');
     }
 
@@ -38,7 +38,7 @@ class Amasty_Conf_Block_Catalog_Product_List_Images extends Mage_Core_Block_Temp
     public function show($productId) {
         $this->productId = $productId;
         $this->product = Mage::getModel('catalog/product')->load($productId); 
-        $blockOptions = Mage::app()->getLayout()->createBlock('catalog/product_view_type_configurable', 'catalog.product_view_type_configurable',array('template'=>"amconf/configurable.phtml"));
+        $blockOptions = Mage::app()->getLayout()->createBlock('catalog/product_view_type_configurable', 'catalog.product_view_type_configurable',array('template'=>"amasty/amconf/configurable.phtml"));
         $blockOptions->setProduct($this->product);
         $this->html = $blockOptions->toHtml(); 
         return $this->toHtml();

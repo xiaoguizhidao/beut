@@ -100,7 +100,16 @@ class Amasty_Shopby_Adminhtml_ValueController extends Mage_Adminhtml_Controller_
             Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
             Mage::getSingleton('adminhtml/session')->setFormData($data);
             $this->_redirect('*/*/edit', array('id' => $id));
-        }    
-    } 
+        }
+
+        $this->flushCache();
+    }
+
+    protected function flushCache()
+    {
+        /** @var Amasty_Shopby_Helper_Data $helper */
+        $helper = Mage::helper('amshopby');
+        $helper->flushCache();
+    }
 
 }

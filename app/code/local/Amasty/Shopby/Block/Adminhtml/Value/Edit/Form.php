@@ -34,13 +34,24 @@ class Amasty_Shopby_Block_Adminhtml_Value_Edit_Form extends Mage_Adminhtml_Block
                     'label' => Mage::helper('catalog')->__('Yes')
                 ),
             ),
+            'onchange'  => 'featured(this)', 
         ));         
+        
+        $fldSet->addField('featured_order', 'text', array(
+            'label'     => $hlp->__('Featured Order'),
+            'name'      => 'featured_order',
+        ));
 
         
         $fldMain = $form->addFieldset('main', array('legend'=> $hlp->__('Products List Page')));
         $fldMain->addField('title', 'text', array(
           'label'     => $hlp->__('Title'),
           'name'      => 'title',
+        ));
+        $fldMain->addField('url_alias', 'text', array(
+            'label'     => $hlp->__('URL Alias'),
+            'name'      => 'url_alias',
+            'required'  => false,
         ));
         $fldMain->addField('descr', 'textarea', array(
           'label'     => $hlp->__('Description'),
@@ -90,7 +101,7 @@ class Amasty_Shopby_Block_Adminhtml_Value_Edit_Form extends Mage_Adminhtml_Block
         )); 
         
 
-        $fldNav = $form->addFieldset('nav', array('legend'=> $hlp->__('Layered Navigation')));
+        $fldNav = $form->addFieldset('navigation', array('legend'=> $hlp->__('Layered Navigation')));
         $fldNav->addField('img_small', 'file', array(
             'label'     => $hlp->__('Image'),
             'name'      => 'img_small',

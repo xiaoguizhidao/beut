@@ -25,18 +25,28 @@ class Amasty_Shopby_Model_Mysql4_Value_Collection extends Mage_Core_Model_Mysql4
         );
             
         return $this;
-    } 
-    
+    }
+
     public function addValue()
     {
         $storeId = Mage::app()->getStore()->getId();
+
+        $valueExpr = $this->getConnection()->getCheckSql("ov2.value_id IS NULL",
+            "ov1.value",
+            "ov2.value");
+
         $this->getSelect()->joinLeft(
-            array('ov' => $this->getTable('eav/attribute_option_value')), 
-            'main_table.option_id = ov.option_id AND ov.store_id=' . $storeId, 
-            array('ov.value')
+            array('ov1' => $this->getTable('eav/attribute_option_value')),
+            'main_table.option_id = ov1.option_id AND ov1.store_id=0',
+            array()
         );
-            
+
+        $this->getSelect()->joinLeft(
+            array('ov2' => $this->getTable('eav/attribute_option_value')),
+            'main_table.option_id = ov2.option_id AND ov2.store_id=' . $storeId,
+            array('value', $valueExpr)
+        );
+
         return $this;
-    }    
-    
+    }
 }

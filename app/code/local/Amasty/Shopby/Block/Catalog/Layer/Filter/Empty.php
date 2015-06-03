@@ -49,4 +49,9 @@ class Amasty_Shopby_Block_Catalog_Layer_Filter_Empty extends Mage_Catalog_Block_
     {
         return 0;
     }
+
+    /**
+     * For Enterprise Solr compatibility
+     */
+    public function addFacetCondition() {}
 } 

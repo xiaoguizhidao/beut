@@ -40,11 +40,19 @@ class Amasty_Conf_MediaController extends Mage_Core_Controller_Front_Action
     {
         $this->_initProduct();
         Mage::register('amconf_product_load', true);
-        $parentBlock = $this->getLayout()->createBlock('catalog/product_view', 'product.info');
-        $template = 'amconf/media.phtml';
-        $this->loadLayout(array('catalog_product_view'));         
+        $this->loadLayout('catalog_product_view');         
         $block = Mage::app()->getLayout('catalog_product_view')->getBlock('product.info.media');
-        $this->getResponse()->setBody($block->setParentBlock($parentBlock)->toHtml());
+        $this->getResponse()->setBody($block->toHtml());
+        /*
+        the second way
+        
+        $parentBlock = $this->getLayout()->createBlock('catalog/product_view', 'product.info');
+        $template = 'amasty/amconf/media.phtml';         
+        
+        $this->getResponse()->setBody(
+            $this->getLayout()->createBlock('catalog/product_view_media', 'product.info.media', array('template' => $template))->setParentBlock($parentBlock)->toHtml()
+        ); 
+        */
     }
     
     public function galleryAction()
@@ -52,5 +60,33 @@ class Amasty_Conf_MediaController extends Mage_Core_Controller_Front_Action
         $this->_initProduct();
         $this->loadLayout();
         $this->renderLayout();
+    }
+
+    public function ajaxAction()
+    {
+        $ids  = $this->getRequest()->getParam('ids');
+
+        if (!$ids) {
+            return false;
+        }
+        $ids = explode(':', $ids);
+
+        $response = array();
+        foreach($ids as $id){
+            $_product = Mage::getModel('catalog/product')
+                ->setStoreId(Mage::app()->getStore()->getId())
+                ->load($id);
+            if($_product->isSaleable() && $_product->isConfigurable()){
+                $response[] = array(
+                    'id'    => $id,
+                    'onclick'    => Mage::helper('checkout/cart')->getAddUrl($_product),
+                    'html'  => str_replace('class="amconf-block"', 'class="amconf-block" style="display: none;"', Mage::helper('amconf')->getHtmlBlock($_product, ''))
+                );
+            }
+        }
+
+        $this->getResponse()->setBody(
+            Zend_Json::encode($response)
+        );
     }
 }

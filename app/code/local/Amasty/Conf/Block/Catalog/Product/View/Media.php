@@ -9,22 +9,16 @@ class Amasty_Conf_Block_Catalog_Product_View_Media extends Mage_Catalog_Block_Pr
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('amconf/media.phtml');
     }
-    
-    protected function _toHtml($status=false)
+
+    protected function _toHtml()
     {
-         if(!$status) {
-            $_product = $this->getProduct();
-            if(($_product->isConfigurable() || Mage::getModel('catalog/product_type_configurable')->getParentIdsByChild($_product->getId())) && (Mage::getStoreConfig('amconf/zoom/enable') || Mage::getStoreConfig('amconf/lightbox/enable'))) {
-                $this->setTemplate('amconf/media.phtml');    
-            }
-            return $this->_toHtml(true);
+        if(Mage::getStoreConfig('amconf/general/use_zoom_lightbox')) {
+                $this->setTemplate('amasty/amconf/media.phtml');    
         }
-        if (!$this->getTemplate()) {
-            return '';
-        }
+      
         $html = $this->renderView();
         return $html;
     }
+    
 }

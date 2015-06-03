@@ -14,7 +14,7 @@ class Amasty_Shopby_Model_Catalog_Layer_Filter_Item extends Mage_Catalog_Model_L
         $query = array(
             $this->getFilter()->getRequestVar()=>$this->getValue(),
             Mage::getBlockSingleton('page/html_pager')->getPageVarName() => null // exclude current page from urls
-        ); 
+        );
         $url = Mage::helper('amshopby/url')->getFullUrl($query);
         return $url;
     }

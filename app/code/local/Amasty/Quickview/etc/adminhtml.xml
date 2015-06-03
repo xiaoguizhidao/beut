@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <translate>
+        <modules>
+            <Amasty_Quickview>
+                <files>
+                    <default>Amasty_Quickview.csv</default>
+                </files>
+            </Amasty_Quickview>
+        </modules>
+    </translate>
+</config>

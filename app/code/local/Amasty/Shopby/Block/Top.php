@@ -7,41 +7,67 @@
 class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
 {
     private $options = array();
-    
+
     private function trim($str)
     {
         $str = strip_tags($str);
         $str = str_replace('"', '', $str);
         return trim($str, " -");
     }
-    
+
     public function getBlockId()
     {
         return 'amshopby-filters-wrapper';
-    }        
+    }
 
+    /**
+     * @param Amasty_Shopby_Model_Page|null $page
+     */
+    protected function _handleCanonical($page = null)
+    {
+        if (!Mage::getStoreConfig('catalog/seo/category_canonical_tag')) {
+            return;
+        }
+
+        if (is_object($page) && $page->getUrl()) {
+            $url = $page->getUrl();
+        } else {
+            /** @var Amasty_Shopby_Helper_Url $urlHelper */
+            $urlHelper = Mage::helper('amshopby/url');
+            $url = $urlHelper->getCanonicalUrl();
+        }
+
+        if ($url) {
+            $this->_replaceCanonical($url);
+        }
+    }
+
+    protected function _replaceCanonical($url)
+    {
+        /** @var Mage_Page_Block_Html_Head $head */
+        $head = Mage::app()->getLayout()->getBlock('head');
+
+        foreach ($head->getData('items') as $item) {
+            if (strpos($item['params'], 'canonical') !== false) {
+                $head->removeItem('link_rel', $item['name']);
+            };
+        }
+
+        $head->addLinkRel('canonical', $url);
+    }
 
     protected function _isPageHandled()
     {
-        $page = Mage::getModel('amshopby/page');
-        foreach ($page->getCollection() as $p){
-            if ($p->match() && $p->getNum() > $page->getNum()){
-                $page = $p;
-            }
-        }
-
-        if (!$page->getNum()){
+        /** @var Amasty_Shopby_Helper_Page $pageHelper */
+        $pageHelper = Mage::helper('amshopby/page');
+        $page = $pageHelper->getCurrentMatchedPage();
+        $this->_handleCanonical($page);
+        if (is_null($page)) {
             return false;
         }
-            
-        $head = $this->getLayout()->getBlock('head');
 
-        //canonical
-        if (!Mage::helper('amshopby')->isVersionLessThan(1, 4)){
-            $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
-            $head->removeItem('link_rel', $url);
-            $head->addLinkRel('canonical', $page->getUrl());
-        }
+        /** @var Mage_Page_Block_Html_Head $head */
+        $head = $this->getLayout()->getBlock('head');
 
         // metas
         $title = $head->getTitle();
@@ -88,35 +114,26 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
 
     protected function _prepareLayout()
     {
-        if ($this->_isPageHandled()){
-$this->handleExtraAttributes();
-             return parent::_prepareLayout();
+        /** @var Amasty_Shopby_Block_Catalog_Product_List_Toolbar $toolbar */
+        $toolbar = $this->getLayout()->getBlock('product_list_toolbar');
+        if ($toolbar instanceof Amasty_Shopby_Block_Catalog_Product_List_Toolbar) {
+            $toolbar->replacePager();
         }
 
-        $hasCanonical = !Mage::helper('amshopby')->isVersionLessThan(1, 4);
-        if ($hasCanonical){
-            $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
-
-            $head = $this->getLayout()->getBlock('head');
-            //remove canonical URL for the categories starting from CE 1.4.x
-            $head->removeItem('link_rel', $url);
-
-            $isShopby = in_array(Mage::app()->getRequest()->getModuleName(), array(Mage::getStoreConfig('amshopby/seo/key'), 'amshopby'));
-            if ($isShopby){
-                $url = '';
-            }
-            $head->addLinkRel('canonical', Mage::helper('amshopby/url')->getCanonicalUrl($url));
+        if ($this->_isPageHandled()){
+            $this->handleExtraAttributes();
+            return parent::_prepareLayout();
         }
 
         $robotsIndex  = 'index';
         $robotsFollow = 'follow';
-        
-       
+
+
         $filters = Mage::getResourceModel('amshopby/filter_collection')
                 ->addTitles()
                 ->setOrder('position');
         $hash = array();
-        
+
         foreach ($filters as $f){
             $code = $f->getAttributeCode();
             $vals = Mage::helper('amshopby')->getRequestValues($code);
@@ -133,28 +150,35 @@ $this->handleExtraAttributes();
             }
         }
 
-           
+        $priceVals = Mage::app()->getRequest()->getParam('price');
+        if ($priceVals) {
+            if (Mage::helper('amshopby')->getSeoPriceNofollow()){
+                $robotsFollow = 'nofollow';
+            }
+            if (Mage::helper('amshopby')->getSeoPriceNoindex()){
+                $robotsIndex = 'noindex';
+            }
+        }
+
         /*
          * Check Category Settings
          */
-        $catNoFollow = Mage::getStoreConfig('amshopby/seo/cat_nofollow');
-        if ($catNoFollow != '') {
-        	$categoriesIds = array_flip(explode(",", $catNoFollow));
-        	if (isset($categoriesIds[Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId()])) {
-        		$robotsFollow = 'nofollow';
-        	}	 
-        }
-
         $catNoIndex = Mage::getStoreConfig('amshopby/seo/cat_noindex');
         if ($catNoIndex != '') {
-        	$categoriesIds = array_flip(explode(",", $catNoIndex));
-        	if (isset($categoriesIds[Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId()])) {
-        		$robotsIndex  = 'noindex';
-        	}	 
+            $categoriesIds = array_flip(explode(",", $catNoIndex));
+            if (isset($categoriesIds[Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId()])) {
+                $robotsIndex = 'noindex';
+            }
         }
 
-        
-        
+        $catNoFollow = Mage::getStoreConfig('amshopby/seo/cat_nofollow');
+        if ($catNoFollow != '') {
+            $categoriesIds = array_flip(explode(",", $catNoFollow));
+            if (isset($categoriesIds[Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId()])) {
+                $robotsFollow = 'nofollow';
+            }
+        }
+        $this->handleExtraAttributes();
 
         $head = $this->getLayout()->getBlock('head');
         if ($head){
@@ -162,8 +186,6 @@ $this->handleExtraAttributes();
                 $head->setRobots($robotsIndex .', '. $robotsFollow);
             }
         }
-
-$this->handleExtraAttributes();
 
         if (!$hash){
             return parent::_prepareLayout();
@@ -187,7 +209,7 @@ $this->handleExtraAttributes();
         // sort options by attribute ids and add "show_on_list" property
         foreach ($options as $opt){
             $id = $opt->getOptionId();
-            
+
             $opt->setShowOnList($hash[$id]);
             $hash[$id] = clone $opt;
         }
@@ -217,14 +239,23 @@ $this->handleExtraAttributes();
             }
 
             $descr = $head->getDescription();
-          
+
             $titleSeparator = Mage::getStoreConfig('amshopby/general/title_separator');
             $descrSeparator = Mage::getStoreConfig('amshopby/general/descr_separator');
 
             $kwSeparator = ',';
             $kw = '';
 
+            $query = Mage::app()->getRequest()->getQuery();
             foreach ($hash as $opt){
+                if (isset($query[Mage::getStoreConfig('amshopby/brands/attr')])) {
+                    $isDefaultCategory = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId() == Mage::app()->getStore()->getRootCategoryId();
+                    if ($opt->getOptionId() == $query[Mage::getStoreConfig('amshopby/brands/attr')] && $isDefaultCategory) {
+                        $breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+                        $breadcrumbs->addCrumb('amshopby-brand', array('label' => $opt->getTitle(), 'title' => $opt->getTitle()));
+                    }
+                }
+
                 if ($opt->getMetaTitle())
                     $title .= $titleSeparator . $opt->getMetaTitle();
 
@@ -276,82 +307,36 @@ $this->handleExtraAttributes();
         return $res;
     }
 
-public function handleExtraAttributes()
+/**
+     * Handle price in urls.
+     * If it noindex or nofollow tag is enabled - modify head tag
+     */
+    public function handleExtraAttributes()
     {
-    	$head = $this->getLayout()->getBlock('head');
-        if ($head){
-        	
-        	$index = 'index';
-        	$follow = 'follow';
-        	
-        	/*
-        	 * Prev Next
-        	 */
-        	
-        	if (Mage::getStoreConfig('amshopby/seo/prev_next')) {
-        		
-    			/* @var $tool Mage_Page_Block_Html_Pager */
-				$tool = $this->getLayout()->createBlock('page/html_pager')->setLimit($this->getLayout()->createBlock('catalog/product_list_toolbar')->getLimit())->setCollection(Mage::getSingleton('catalog/layer')->getProductCollection());
-			    
-			    /*
-			     * Get Current Url without page
-			     */
-			    $currenUrl = Mage::helper('amshopby/url')->getFullUrl();
-			    
-			    if ($tool->getCollection()->getSelectCountSql()) {
-			        if ($tool->getLastPageNum() > 1) {
-			            if (!$tool->isFirstPage()) {
-			                $url = $tool->getPreviousPageUrl();
-							preg_match('/[?,&,;]p=(\d+)/', $url, $matches);
-			                    
-			                if ($tool->getCurrentPage() == 2) {
-			                    $prevUrl = preg_replace('/&p=(\d+)/', '', $currenUrl);
-			                    $prevUrl = preg_replace('/\?p=(\d+)/', '', $prevUrl);
-			                }
-			                else {
-			                	if (isset($matches[1])) {
-									$prevUrl = preg_replace('/p=(\d+)/', 'p=' . $matches[1], $currenUrl);
-			                    }
-			                }
-			                $head->addLinkRel('prev', $prevUrl);
-			            }
-			            
-			            if (!$tool->isLastPage()) {
-			            	$url = $tool->getNextPageUrl();
-							preg_match('/[?,&,;]p=(\d+)/', $url, $matches);								
-			            	if (isset($matches[1])) {
-                                preg_match('/p=(\d+)/', $currenUrl, $matches2);								
-                                if (count($matches2) > 0) {
-                                    $nextUrl = preg_replace('/p=(\d+)/', 'p=' . $matches[1], $currenUrl);
-			                   	} else {
-			                   		/* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Sat, Apr 12, 2014*/
-			                   		//change from $currentUrl to $currenUrl, mistyping
-                                    if (strpos($currenUrl, '?') === false) {
-                                        $nextUrl = $currenUrl . '?p=' . $matches[1];
-                                    } else {
-                                        $nextUrl = $currenUrl . '&p=' . $matches[1];
-                                    }
-                                    
-			                   	}
-			                }
-			            	$head->addLinkRel('next', $nextUrl);
-			            }
-			        }
-			    }
-        	}
-        	
-        	
-  $priceVals = Mage::app()->getRequest()->getParam('price');
-        if ($priceVals) {
-            if (Mage::helper('amshopby')->getSeoPriceNofollow()){
-                $follow= 'nofollow';
-            }
-            if (Mage::helper('amshopby')->getSeoPriceNoindex()){
-                $index= 'noindex';
-            }
-$head->setRobots($index .', '. $follow);
+        $head = $this->getLayout()->getBlock('head');
 
-        }
+        if ($head){
+
+            $index = 'index';
+            $follow = 'follow';
+
+            /*
+             * Set only if price is in request
+             */
+            if (Mage::app()->getRequest()->getParam('price')) {
+                $robotsIndex = Mage::getStoreConfig('amshopby/general/price_tag_noindex');
+                $robotsFollow = Mage::getStoreConfig('amshopby/general/price_tag_nofollow');
+
+                if ($robotsIndex) {
+                    $index = 'noindex';
+                }
+
+                if ($robotsFollow) {
+                    $follow = 'nofollow';
+                }
+
+                $head->setRobots($index .', '. $follow);
+            }
         }
     }
 

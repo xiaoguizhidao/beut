@@ -54,21 +54,12 @@ class Amasty_Shopby_Model_Mysql4_Filter extends Mage_Core_Model_Mysql4_Abstract
             ->where('f.filter_id IS NULL');
            
           
-        if (Mage::helper('amshopby')->isVersionLessThan(1, 4)){
-            $sql     
-                ->where('a.is_filterable = 1') 
-                ->where('a.entity_type_id = ?', Mage::getModel('eav/entity_type')->loadByCode('catalog_product')->getEntityTypeId())
-                ->where('a.frontend_input IN (?)', array('select', 'multiselect'))  
-                ;
-        }
-        else {
-            $sql           
-                ->joinInner(array('ca' => $this->getTable('catalog/eav_attribute')), 'a.attribute_id = ca.attribute_id', array())
-                ->where('ca.is_filterable > 0')
-                ->where('a.frontend_input IN (?)', array('select', 'multiselect', 'price'))  
-                ;
-        } 
-        
+        $sql
+            ->joinInner(array('ca' => $this->getTable('catalog/eav_attribute')), 'a.attribute_id = ca.attribute_id', array())
+            ->where('ca.is_filterable > 0')
+            ->where('a.frontend_input IN (?)', array('select', 'multiselect', 'price'))
+            ;
+
         
         $res = $db->fetchAll($sql);  
         

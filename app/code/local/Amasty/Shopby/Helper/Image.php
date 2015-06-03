@@ -4,44 +4,56 @@
 */ 
 class Amasty_Shopby_Helper_Image extends Mage_Catalog_Helper_Image
 {
+    protected $requestConfigurableMap;
+
     public function setProduct($product)
     {
-        $configurableCodes = Mage::getStoreConfig('amshopby/general/configurable_images');
-        if (!empty($configurableCodes) && $product->isConfigurable() && $product->isSaleable()) {
-            
-            $configurableCodes = explode(",", trim($configurableCodes));
-            
-            $productTypeIns = $product->getTypeInstance(true);
-            $childIds = $productTypeIns->getChildrenIds($product->getId());
-            
-            $requestParams = Mage::app()->getRequest()->getParams();
-            
-            foreach ($childIds[0] as $childId) {
-                
-                $hasInRequest = 0;
-                $hasMatch = 0;
-                
-                $childProduct = Mage::getModel('catalog/product')->setStoreId($product->getStoreId())->load($childId);
-                foreach ($configurableCodes as $filterCode) {
-                    if (in_array($filterCode, array_keys($requestParams))) {
-                        $hasInRequest++;
-                        $value = $requestParams[$filterCode];                        
-                        if (strpos($value, ",") !== false) {
-                            $value = explode(",", $value);
-                        } else {
-                            $value = array($value);
-                        }
-                        if (in_array($childProduct->getData($filterCode), array_values($value))) {
-                            $hasMatch++;
-                        }
-                    }
-                }
-                
-                if ($hasInRequest != 0 && $hasInRequest == $hasMatch) {
-                    $product = $childProduct;
-                }
+        if (!isset($this->requestConfigurableMap)) {
+            $this->computeRequestConfigurableMap();
+        }
+
+        if ($this->requestConfigurableMap && $product->isConfigurable() && $product->isSaleable()) {
+            $child = $this->getMatchingSimpleProduct($product);
+            if (is_object($child)) {
+                $product = $child;
             }
         }
         parent::setProduct($product);
+    }
+
+    /**
+     * @param Mage_Catalog_Model_Product $product
+     * @return Mage_Catalog_Model_Product|null
+     */
+    protected function getMatchingSimpleProduct($product)
+    {
+        /** @var Mage_Catalog_Model_Product_Type_Configurable $productTypeIns */
+        $productTypeIns = $product->getTypeInstance(true);
+        $children = $productTypeIns->getUsedProductCollection($product);
+        foreach ($this->requestConfigurableMap as $code => $values) {
+            $children->addAttributeToFilter($code, array('in' => $values));
+        }
+
+        $ids = $children->getAllIds(1);
+        return $ids ? Mage::getModel('catalog/product')->load($ids[0]) : null;
+    }
+
+    protected function computeRequestConfigurableMap()
+    {
+        $this->requestConfigurableMap = array();
+        $configurableCodes = explode(",", trim(Mage::getStoreConfig('amshopby/general/configurable_images')));
+        $requestParams = Mage::app()->getRequest()->getQuery();
+        $inRequestConfigurableCodes = array_intersect($configurableCodes, array_keys($requestParams));
+
+        foreach ($inRequestConfigurableCodes as $code) {
+            $value = $requestParams[$code];
+            if (strpos($value, ",") !== false) {
+                $values = explode(",", $value);
+            } else {
+                $values = array($value);
+            }
+
+            $this->requestConfigurableMap[$code] = $values;
+        }
     }
 }

@@ -8,42 +8,60 @@ class Amasty_Conf_Model_Observer
 {
     public function onListBlockHtmlBefore($observer)//core_block_abstract_to_html_after    
     {
-        if (($observer->getBlock() instanceof Mage_Catalog_Block_Product_List) && Mage::getStoreConfig('amconf/list/enable_list')) {
-            $html = $observer->getTransport()->getHtml();
-            preg_match_all("/product-price-([0-9]+)/", $html, $productsId) ;
-            if(!$productsId[0]){
-               preg_match_all("/price-including-tax-([0-9]+)/", $html, $productsId) ;
-            }
-            Mage::unregister('isList');
-            Mage::register('isList', 1);
-            foreach ($productsId[1] as $key => $productId){  
-                $_product = Mage::getModel('catalog/product')->load($productId);
-                // @see Mage_Catalog_Block_Product_Abstract::getProduct()
-                if (!is_null(Mage::registry('product')))
-                {
-                Mage::unregister('product');
-                }
-                Mage::register('product', $_product);
-                if($_product->isSaleable() && $_product->isConfigurable()){
-                    $addButton = (Mage::getStoreConfig('amconf/product_image_size/have_button'))?"(.*?)/button>":"";
-                    $template = '@(product-price-'.$productId.'">(.*?)div>)' . $addButton . '@s';
-                    preg_match_all($template, $html, $res);
-                    if(!$res[0]){
-                         $template = '@(price-including-tax-'.$productId.'">(.*?)div>)' . $addButton . '@s';
-                         preg_match_all($template, $html, $res);
-                         if(!$res[0]){
-                             $template = '@(price-excluding-tax-'.$productId.'">(.*?)div>)' . $addButton . '@s';
-                             preg_match_all($template, $html, $res);
+        if (!($observer->getBlock() instanceof Mage_Catalog_Block_Product_List && Mage::getStoreConfig('amconf/list/enable_list'))) {
+            return;
+        }
+
+        $html = $observer->getTransport()->getHtml();
+        $switch = Mage::getStoreConfig('amconf/list/enable_list');
+        
+        preg_match_all("/product-price-([0-9]+)/", $html, $productsId) ;
+        if(!$productsId[0]){
+            preg_match_all("/price-including-tax-([0-9]+)/", $html, $productsId) ;
+        }
+
+        $ids = array_unique($productsId[1]);
+
+        switch($switch){
+            case 1:
+               foreach ($ids as $productId){
+                    $_product = Mage::getModel('catalog/product')->load($productId);
+
+                    if($_product->isSaleable() && $_product->isConfigurable()){
+                        $template = '@(product-price-'.$productId.'"(.*?)div>)@s';
+                        preg_match_all($template, $html, $res);
+                        if(!$res[0]){
+                            $template = '@(price-including-tax-'.$productId.'"(.*?)div>)@s';
+                            preg_match_all($template, $html, $res);
+                            if(!$res[0]){
+                                $template = '@(price-excluding-tax-'.$productId.'"(.*?)div>)@s';
+                                preg_match_all($template, $html, $res);
+                            }
+                        }
+                        if($res[0]){
+                            $replace =  Mage::helper('amconf')->getHtmlBlock($_product, $res[1][0]);
+                            unset($_product);
+                            if(strpos($html, $replace) === false) {
+                                $html= str_replace($res[0][0], $replace, $html);
+                            }
+                            unset($replace);
                         }
                     }
-                    if($res[0]){
-                         $replace =  Mage::helper('amconf')->getHtmlBlock($_product, $res[1][0]);
-                         $html= str_replace($res[0][0], $replace, $html);
-                    }
                 }
-            }
-            $observer->getTransport()->setHtml($html);
+                break;
+            case 2:
+                $ajaxData = array(
+                    'ids'    => implode(':', $ids),
+                    'url'   => Mage::helper('amconf')->getAjaxUrl()
+                );
+
+                $html .= '<script type="text/javascript">
+                            var amconfAjaxObject =  new amconfAjax('. Zend_Json::encode($ajaxData) .')
+                         </script>';
+                break;
         }
+
+        $observer->getTransport()->setHtml($html);
     }
     
     protected function getSuperProductAttributesJS($product_id){
@@ -128,5 +146,116 @@ class Amasty_Conf_Model_Observer
             }
         }
         
-    }    
+    } 
+    
+    public function catalogProductAttributeSave($observer)
+    {   
+        if (Mage::app()->getRequest()->isPost())
+        {
+            // saving attribute 'use_image' property
+            $entityAttributeId = Mage::registry('entity_attribute')? Mage::registry('entity_attribute')->getId() : Mage::app()->getRequest()->getPost('entity_attribute');
+            if(!$entityAttributeId) return;
+            $confAttr = Mage::getModel('amconf/attribute')->load($entityAttributeId, 'attribute_id');
+            if (!$confAttr->getId())
+            {
+                $confAttr->setAttributeId($entityAttributeId);
+            }
+
+            $confAttr->setUseImage(intval(Mage::app()->getRequest()->getPost('amconf_useimages')));
+            
+            $confAttr->setSmallWidth(intval(Mage::app()->getRequest()->getPost('small_width')));
+            $confAttr->setSmallHeight(intval(Mage::app()->getRequest()->getPost('small_height')));
+            
+            $confAttr->setUseTooltip(intval(Mage::app()->getRequest()->getPost('amconf_usetooltip')));
+            
+            if(intval(Mage::app()->getRequest()->getPost('amconf_usetooltip'))) {
+                $confAttr->setBigWidth(intval(Mage::app()->getRequest()->getPost('big_width')));
+                $confAttr->setBigHeight(intval(Mage::app()->getRequest()->getPost('big_height')));
+            }
+            
+            
+            
+            
+            
+            $confAttr->setUseTitle(intval(Mage::app()->getRequest()->getPost('amconf_show_title')));
+            
+            $confAttr->setCatSmallWidth(intval(Mage::app()->getRequest()->getPost('cat_small_width')));
+            $confAttr->setCatSmallHeight(intval(Mage::app()->getRequest()->getPost('cat_small_height')));
+            
+            $confAttr->setCatUseTooltip(intval(Mage::app()->getRequest()->getPost('amconf_use_cat_tooltip')));
+            
+            if(intval(Mage::app()->getRequest()->getPost('amconf_use_cat_tooltip'))) {
+                $confAttr->setCatBigWidth(intval(Mage::app()->getRequest()->getPost('cat_big_width')));
+                $confAttr->setCatBigHeight(intval(Mage::app()->getRequest()->getPost('cat_big_height')));
+            }
+            
+            $confAttr->save();
+        }
+        
+        $uploadDir = Mage::getBaseDir('media') . DIRECTORY_SEPARATOR . 
+                                                    'amconf' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR;
+                                                    
+        /**
+        * Deleting
+        */
+        $toDelete = Mage::app()->getRequest()->getPost('amconf_icon_delete');
+        if ($toDelete)
+        {
+            foreach ($toDelete as $optionId => $del)
+            {
+                if ($del)
+                {
+                    @unlink($uploadDir . $optionId . '.jpg');
+                }
+            }
+        }
+        
+        /**
+        * Uploading files
+        */
+        if (isset($_FILES['amconf_icon']) && isset($_FILES['amconf_icon']['error']))
+        {
+            foreach ($_FILES['amconf_icon']['error'] as $optionId => $errorCode)
+            {
+                if (UPLOAD_ERR_OK == $errorCode)
+                {
+                    move_uploaded_file($_FILES['amconf_icon']['tmp_name'][$optionId], $uploadDir . $optionId . '.jpg');
+                    if (!file_exists($uploadDir . $optionId . '.jpg'))
+                    {
+                        Mage::getSingleton('catalog/session')->addSuccess('File was not uploaded. Please check permissions to folder media/amconf/images(need 0777 recursively)');
+                    }                    
+                }
+            }
+        }
+    }
+    
+    public function onCoreBlockAbstractToHtmlBefore($observer) 
+    {
+        
+        $block = $observer->getBlock();
+        $catalogProductEditTabsClass = Mage::getConfig()->getBlockClassName('adminhtml/catalog_product_attribute_edit_tabs');
+        if ($catalogProductEditTabsClass == get_class($block) && Mage::registry('entity_attribute')->getIsConfigurable() && Mage::registry('entity_attribute')->getIsGlobal() && 'custom_stock_status' != Mage::registry('entity_attribute')->getData('attribute_code')) {
+            
+            $imgBlock =  $block->getLayout()->createBlock('amconf/adminhtml_catalog_product_attribute_edit_tab_images');
+            if ($imgBlock)
+            {
+                if(method_exists ($block, 'addTabAfter' )){
+                    $block->addTabAfter('images', array(
+                        'label'     => Mage::helper('amconf')->__('Attribute Images'),
+                        'title'     => Mage::helper('amconf')->__('Attribute Images'),
+                        'content'   => $imgBlock->toHtml(),
+                    ), "main");
+                }
+                else{
+                    $block->addTab('images', array(
+                        'label'     => Mage::helper('amconf')->__('Attribute Images'),
+                        'title'     => Mage::helper('amconf')->__('Attribute Images'),
+                        'content'   => $imgBlock->toHtml(),
+                    ));
+                }
+            }
+        }
+        
+        return $this;
+    }
 }

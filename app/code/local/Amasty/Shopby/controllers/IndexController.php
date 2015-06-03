@@ -9,7 +9,7 @@ class Amasty_Shopby_IndexController extends Mage_Core_Controller_Front_Action
         // init category
         $categoryId = (int) Mage::app()->getStore()->getRootCategoryId();
         if (!$categoryId) {
-            $this->_forward('noRoute'); 
+            $this->_forward('noRoute', 'index', 'cms');
             return;
         }
 
@@ -30,15 +30,21 @@ class Amasty_Shopby_IndexController extends Mage_Core_Controller_Front_Action
         } 
         // observer can change value
         if (!$category->getId()){
-            $this->_forward('noRoute'); 
+            $this->_forward('noRoute', 'index', 'cms');
             return;
-        }     
+        }
+
+        /** @var Amasty_Shopby_Helper_Data $helper */
+        $helper = Mage::helper('amshopby');
+        if ($helper->useSolr()) {
+            Mage::register('_singleton/catalog/layer', Mage::getSingleton('enterprise_search/catalog_layer'));
+        }
             
         $this->loadLayout();
+
         $this->_initLayoutMessages('catalog/session');
-        $this->_initLayoutMessages('checkout/session');  
+        $this->_initLayoutMessages('checkout/session');
 
         $this->renderLayout();
     }
-
 }

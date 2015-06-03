@@ -6,17 +6,17 @@
 */
 class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Catalog_Block_Product_View_Type_Configurable
 {
-    protected $_optionProducts;
+    protected $_currentAttributes;
+    const SMALL_SIZE = 50;
+    const BIG_SIZE = 100;
     
     protected function _afterToHtml($html)
     {
-        $imageSizeAtCategoryPage = 135;
         $attributeIdsWithImages = Mage::registry('amconf_images_attrids');
-        $list = (Mage::registry('isList')) ? 1 : 0;
         $html = parent::_afterToHtml($html);
         if ('product.info.options.configurable' == $this->getNameInLayout())
         {
-            if (Mage::getStoreConfig('amconf/general/hide_dropdowns') || $list)
+            if (Mage::getStoreConfig('amconf/general/hide_dropdowns') )
             {
                 if (!empty($attributeIdsWithImages))
                 {
@@ -26,80 +26,90 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
                     }
                 }
             }
-            if (Mage::getStoreConfig('amconf/general/show_clear')&& !$list)
-            {
-               // $html = '<a href="#" onclick="javascript: spConfig.clearConfig(); return false;">' . $this->__('Reset Configuration') . '</a>' . $html;
-            }
-
-            // both config setting and product attribute should be set to "Yes"
-            $_useSimplePrice =  (Mage::helper('amconf')->getConfigUseSimplePrice() AND $this->getProduct()->getData('amconf_simple_price'))? true : false;
+            $_useSimplePrice =  (Mage::helper('amconf')->getConfigUseSimplePrice() == 2 ||(Mage::helper('amconf')->getConfigUseSimplePrice() == 1 AND $this->getProduct()->getData('amconf_simple_price')))? true : false;
             
-            if (!$list){
-                 $html = '<script type="text/javascript">var amconfUseSimplePrice = ' . intval($_useSimplePrice)  . '; 
-                                                         var showAttributeTitle =' . intval(Mage::getStoreConfig('amconf/general/show_attribute_title')) 
-                         . '; var amConfAutoSelectAttribute = ' . intval(Mage::getStoreConfig('amconf/general/auto_select_attribute')) . '</script>'
-                         . '<script type="text/javascript" src="' .  Mage::getDesign()->getSkinUrl('amasty/amconf/configurable.js',array('_area'=>'frontend')) . '"></script>'               
-                         . $html;
-
-            }
             $simpleProducts = $this->getProduct()->getTypeInstance(true)->getUsedProducts(null, $this->getProduct());
-            if ($this->_optionProducts)
+            if ($this->_currentAttributes)
             {
+                $this->_currentAttributes = array_unique($this->_currentAttributes);
                 $noimgUrl = Mage::helper('amconf')->getNoimgImgUrl();
-                $this->_optionProducts = array_values($this->_optionProducts);
+                $reloadValues = explode ( ',', Mage::getStoreConfig('amconf/general/reload_content'));
                 foreach ($simpleProducts as $simple)
                 {
+                    if (version_compare(Mage::getVersion(), '1.9.1.0', '>='))
+                    {
+                        $simple = Mage::getModel('catalog/product')->load($simple->getId());
+                    }
                     /* @var $simple Mage_Catalog_Model_Product */
                     $key = array();
-                    for ($i = 0; $i < count($this->_optionProducts); $i++)
+
+                    foreach ($this->_currentAttributes as $attributeCode)
                     {
-                        foreach ($this->_optionProducts[$i] as $optionId => $productIds)
-                        {
-                            if (in_array($simple->getId(), $productIds))
-                            {
-                                $key[] = $optionId;
-                            }
-                        }
+                        $key[] = $simple->getData($attributeCode);
                     }
+                    
                     if ($key)
                     {
                         $strKey = implode(',', $key);
                         // @todo check settings:
                         // array key here is a combination of choosen options
-                        $confData[$strKey] = array(
-                            'short_description' => $simple->getShortDescription(),
-                            'description'       => $simple->getDescription(),
-                        );
-                        if($list){
-                              $confData[$strKey]['parent_image'] =(string)($this->helper('catalog/image')->init($this->getProduct(), 'small_image')->resize($imageSizeAtCategoryPage)); 
-                              if(!('no_selection' == $simple->getSmallImage() || '' == $simple->getSmallImage())){
-                                   $confData[$strKey]['small_image'] = (string)($this->helper('catalog/image')->init($simple, 'small_image')->resize($imageSizeAtCategoryPage));
-                              }
-                              else{
-                                   $confData[$strKey]['small_image'] = (string)($this->helper('catalog/image')->init($this->getProduct(), 'small_image')->resize($imageSizeAtCategoryPage));
-                              }
-                        }     
-                        if (Mage::getStoreConfig('amconf/general/reload_name'))
-                        {
-                        	/* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Sat, Dec 21, 2013*/
-                        	$confData[$strKey]['name'] = $simple->getName();
-                        	$simpleName = str_replace($this->getProduct()->getName(), '', $simple->getName());
-                        	$simpleName = ltrim($simpleName, '-');
-                            $confData[$strKey]['pname'] = $simpleName;
-                            /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Sat, Dec 21, 2013*/
+                        $confData[$strKey] = array();
+
+                        if(in_array('name',$reloadValues)){
+                            $confData[$strKey]['name'] = $simple->getName();    
                         }
+                        if(in_array('short_description', $reloadValues)){
+                            $confData[$strKey]['short_description'] = $this->helper('catalog/output')->productAttribute($simple, nl2br($simple->getShortDescription()), 'short_description');   
+                        }
+                        if(in_array('description', $reloadValues)){
+                            $confData[$strKey]['description' ]  = $this->helper('catalog/output')->productAttribute($simple, $simple->getDescription(), 'description');   
+                        }
+                        if(in_array('attributes', $reloadValues)){
+                            $_currProduct = Mage::registry('product');
+                            if (!is_null(Mage::registry('product')))
+                            {
+                                Mage::unregister('product');
+                            }
+                            Mage::register('product', $simple);
+                            $confData[$strKey]['attributes']       = Mage::app()->getLayout()->createBlock('catalog/product_view_attributes', 'product.attributes.child', array('template' => "catalog/product/view/attributes.phtml"))->setProduct($simple)->toHtml() ;
+                            if (!is_null(Mage::registry('product')))
+                            {
+                                Mage::unregister('product');
+                            }
+                            Mage::register('product', $_currProduct);
+                        }                        
+
+                        $confData[$strKey]['not_is_in_stock' ]  = !$simple->isSaleable();
+                             //$confData[$strKey]['sku' ] = $simple->getSku();
+                        
+                        
                  
-                        // the html blocks are required for product view page
+                        
                         if ($_useSimplePrice)
                         {
                             $tierPriceHtml = $this->getTierPriceHtml($simple);
-                            $confData[$strKey]['price_html'] = $this->getPriceHtml($simple) . $tierPriceHtml;
-                            $confData[$strKey]['price_clone_html'] = $this->getPriceHtml($simple, false, '_clone') . $tierPriceHtml;
+                            $confData[$strKey]['price_html'] = str_replace('product-price-' . $simple->getId(), 'product-price-' . $this->getProduct()->getId(), $this->getPriceHtml($simple) . $tierPriceHtml);
+                            $confData[$strKey]['price_clone_html'] = str_replace('product-price-' . $simple->getId(), 'product-price-' . $this->getProduct()->getId(), $this->getPriceHtml($simple, false, '_clone') . $tierPriceHtml);
+
+                            // the price value is required for product list/grid
+                            $confData[$strKey]['price'] = $simple->getFinalPrice();
                         }
                         
-                        if ($simple->getImage() && Mage::getStoreConfig('amconf/general/reload_images'))
+                        if ($simple->getImage() && $simple->getImage() !="no_selection" && in_array('image', $reloadValues))
                         {
-                            $confData[$strKey]['media_url'] = $this->getUrl('amconf/media', array('id' => $simple->getId())); // media_url should only exist if we need to re-load images
+                            $confData[$strKey]['media_url'] = $this->getUrl('amconf/ajax', array('id' => $simple->getId()));
+                            if(Mage::getStoreConfig('amconf/general/oneselect_reload')) {
+                                $k = $strKey;
+                                if(strpos($strKey, ',')){
+                                    $k = substr($strKey, 0, strpos($strKey, ','));
+                                }
+                                if(!(array_key_exists($k, $confData) && array_key_exists('media_url', $confData[$k]))){
+                                    $confData[$k]['media_url'] = $confData[$strKey]['media_url']; 
+                                }
+                            }
+                            else{
+                                //for changing only after first select 
+                            }
                         } elseif ($noimgUrl) 
                         {
                             $confData[$strKey]['noimg_url'] = $noimgUrl;
@@ -119,33 +129,24 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
                         
                     }
                 }
-                if ($list){
-                    $html .= '<script type="text/javascript"> confData['.$this->getProduct()->getEntityId().'] = new AmConfigurableData(' . Zend_Json::encode($confData) . ');
-                                                              confData['.$this->getProduct()->getEntityId().'].textNotAvailable = "' . $this->__('Choose previous option please...') . '";
-                                                              confData['.$this->getProduct()->getEntityId().'].mediaUrlMain = "' . $this->getUrl('amconf/media', array('id' => $this->getProduct()->getId())) . '";
-                                                              confData['.$this->getProduct()->getEntityId().'].oneAttributeReload = "' . (boolean) Mage::getStoreConfig('amconf/general/oneselect_reload') . '";
-                                                              confData['.$this->getProduct()->getEntityId().'].useSimplePrice = "' . intval($_useSimplePrice)  . '";
-								                              amRequaredField = "' .  $this->__('&uarr;  This is a required field.') . '";
-                    </script>';
+                if (Mage::getStoreConfig('amconf/general/show_clear'))
+                {
+                    $html = '<a href="#" onclick="javascript: spConfig.clearConfig(); return false;">' . $this->__('Reset Configuration') . '</a>' . $html;
                 }
-                else {
-                    $html .= '<script type="text/javascript"> confData = new AmConfigurableData(' . Zend_Json::encode($confData) . ');
-                                                              confData.textNotAvailable = "' . $this->__('Choose previous option please...') . '";
-                                                              confData.mediaUrlMain = "' . $this->getUrl('amconf/media', array('id' => $this->getProduct()->getId())) . '";
-                                                              confData.oneAttributeReload = "' . (boolean) Mage::getStoreConfig('amconf/general/oneselect_reload') . '";
-                                                              confData.useSimplePrice = "' . intval($_useSimplePrice)  . '";
-                    </script>';
-                }
+                $html = '<script type="text/javascript">
+                            var amConfAutoSelectAttribute = ' . intval(Mage::getStoreConfig('amconf/general/auto_select_attribute')) . ';
+                            confData = new AmConfigurableData(' . Zend_Json::encode($confData) . ');
+                            confData.textNotAvailable = "' . $this->__('Choose previous option please...') . '";
+                            confData.mediaUrlMain = "' . $this->getUrl('amconf/ajax', array('id' => $this->getProduct()->getId())) . '";
+                            confData.oneAttributeReload = "' . (boolean) Mage::getStoreConfig('amconf/general/oneselect_reload') . '";
+                            confData.imageContainer = "' .  Mage::getStoreConfig('amconf/general/image_container') . '";
+                            confData.useSimplePrice = "' . intval($_useSimplePrice)  . '";
+                    </script>'. $html;
                 
                 if (Mage::getStoreConfig('amconf/general/hide_dropdowns'))
                 {
                     $html .= '<script type="text/javascript">Event.observe(window, \'load\', spConfig.processEmpty);</script>';
-                }
-                if ('true' == (string)Mage::getConfig()->getNode('modules/Amasty_Lbox/active'))
-                {
-                    $tmp = $list? '['.$this->getProduct()->getEntityId().']' : '';
-                    $html .= '<script type="text/javascript">confData'.$tmp.'.amlboxInstalled = true;</script>';
-                }                 
+                }              
             }
         }
         
@@ -154,6 +155,7 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
     
     protected function getImagesFromProductsAttributes(){
         $collection = Mage::getModel('amconf/product_attribute')->getCollection();
+        $collection->addFieldToFilter('use_image_from_product', 1);
         
         $collection->getSelect()->join( array(
             'prodcut_super_attr' => $collection->getTable('catalog/product_super_attribute')),
@@ -162,7 +164,7 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
             );
         
         $collection->addFieldToFilter('prodcut_super_attr.product_id', $this->getProduct()->getEntityId());
-        $collection->addFieldToFilter('use_image_from_product', 1);
+        
         
         $attributes = $collection->getItems();
         $ret = array();
@@ -181,38 +183,42 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
         $config = Zend_Json::decode($jsonConfig);
         $productImagesAttributes = $this->getImagesFromProductsAttributes();
       
-        if (Mage::helper('amconf')->getOptionsImageSize()){
-             $config['size'] = Mage::helper('amconf')->getOptionsImageSize();
-        }
         foreach ($config['attributes'] as $attributeId => $attribute)
         {
-            if (Mage::getModel('amconf/attribute')->load($attributeId, 'attribute_id')->getUseImage())
+            $this->_currentAttributes[] = $attribute['code'];
+            
+            $attr = Mage::getModel('amconf/attribute')->load($attributeId, 'attribute_id');
+            if ($attr->getUseImage())
             {
                 $attributeIdsWithImages[] = $attributeId;
                 $config['attributes'][$attributeId]['use_image'] = 1;
-            }
-            else{
-                 if(Mage::registry('isList')){
-                      $attributeIdsWithImages[] = $attributeId;
-                 }
-            }
-            foreach ($attribute['options'] as $i => $option)
-            {
-                $this->_optionProducts[$attributeId][$option['id']] = $option['products'];
-                if (in_array($attributeId, $productImagesAttributes)){
-                    
-                    foreach($option['products'] as $product_id){
-//                        
-                        $size = Mage::getStoreConfig('amconf/product_image_size/thumb');
-                        $product = Mage::getModel('catalog/product')->load($product_id);
-                        $config['attributes'][$attributeId]['options'][$i]['image'] = 
-                            (string)Mage::helper('catalog/image')->init($product, 'image')->resize($size);
-                        break;
-                    }
-                }
-                else if (Mage::getModel('amconf/attribute')->load($attributeId, 'attribute_id')->getUseImage())
+                $config['attributes'][$attributeId]['config'] = $attr->getData();
+                
+                $smWidth = $attr->getSmallWidth() != "0"? $attr->getSmallWidth(): self::SMALL_SIZE;
+                $smHeight = $attr->getSmallHeight()!= "0"? $attr->getSmallHeight(): self::SMALL_SIZE;
+                $bigWidth = $attr->getBigWidth()!= "0"? $attr->getBigWidth(): self::BIG_SIZE;
+                $bigHeight = $attr->getBigHeight()!= "0"? $attr->getBigHeight(): self::BIG_SIZE;
+            
+                foreach ($attribute['options'] as $i => $option)
                 {
-                    $config['attributes'][$attributeId]['options'][$i]['image'] = Mage::helper('amconf')->getImageUrl($option['id']);
+                    if (in_array($attributeId, $productImagesAttributes)){
+                        
+                        foreach($option['products'] as $product_id){
+                               
+                            $product = Mage::getModel('catalog/product')->load($product_id);
+                            $config['attributes'][$attributeId]['options'][$i]['image'] = 
+                                (string)Mage::helper('catalog/image')->init($product, 'image')->resize($smWidth, $smHeight);
+                            $config['attributes'][$attributeId]['options'][$i]['bigimage'] = 
+                                (string)Mage::helper('catalog/image')->init($product, 'image')->resize($bigWidth, $bigHeight);
+                            break;
+                        }
+                    }
+                    else {
+                        $config['attributes'][$attributeId]['options'][$i]['image'] = 
+                            Mage::helper('amconf')->getImageUrl($option['id'], $smWidth, $smHeight);
+                        $config['attributes'][$attributeId]['options'][$i]['bigimage'] = 
+                            Mage::helper('amconf')->getImageUrl($option['id'], $bigWidth, $bigHeight);
+                    }
                 }
             }
         }
@@ -236,71 +242,56 @@ class Amasty_Conf_Block_Catalog_Product_View_Type_Configurable extends Mage_Cata
         return $this->helper('checkout/cart')->getAddUrl($product, $additional);
     }
     
-     public function getAttributes() {
-        $data = Zend_Json::decode($this->getJsonConfig());
-        $attributes = $data['attributes'];
-        $keys = array();
-        foreach($attributes as $key=>$attribute){
-            $keys[] = $key;
-        }
-        return Zend_Json::encode($keys);
-    } 
-    
-    public function getPriceJsonConfig()
-    {
-        $config = array();
-        $_request = Mage::getSingleton('tax/calculation')->getRateRequest(false, false, false);
-        $product = $this->product; 
-        $_request->setProductClassId($product->getTaxClassId());
-        $defaultTax = Mage::getSingleton('tax/calculation')->getRate($_request);
-
-        $_request = Mage::getSingleton('tax/calculation')->getRateRequest();
-        $_request->setProductClassId($product->getTaxClassId());
-        $currentTax = Mage::getSingleton('tax/calculation')->getRate($_request);
-
-        $_regularPrice = $product->getPrice();
-        $_finalPrice = $product->getFinalPrice();
-        $_priceInclTax = Mage::helper('tax')->getPrice($product, $_finalPrice, true);
-        $_priceExclTax = Mage::helper('tax')->getPrice($product, $_finalPrice);
-        $_tierPrices = array();
-        $_tierPricesInclTax = array();
-        foreach ($product->getTierPrice() as $tierPrice) {
-            $_tierPrices[] = Mage::helper('core')->currency($tierPrice['website_price'], false, false);
-            $_tierPricesInclTax[] = Mage::helper('core')->currency(
-                Mage::helper('tax')->getPrice($product, (int)$tierPrice['website_price'], true),
-                false, false);
-        }
-        $config = array(
-            'productId'           => $product->getId(),
-            'priceFormat'         => Mage::app()->getLocale()->getJsPriceFormat(),
-            'includeTax'          => Mage::helper('tax')->priceIncludesTax() ? 'true' : 'false',
-            'showIncludeTax'      => Mage::helper('tax')->displayPriceIncludingTax(),
-            'showBothPrices'      => Mage::helper('tax')->displayBothPrices(),
-            'productPrice'        => Mage::helper('core')->currency($_finalPrice, false, false),
-            'productOldPrice'     => Mage::helper('core')->currency($_regularPrice, false, false),
-            'priceInclTax'        => Mage::helper('core')->currency($_priceInclTax, false, false),
-            'priceExclTax'        => Mage::helper('core')->currency($_priceExclTax, false, false),
-            'skipCalculate'       => ($_priceExclTax != $_priceInclTax ? 0 : 1),
-            'defaultTax'          => $defaultTax,
-            'currentTax'          => $currentTax,
-            'idSuffix'            => '_clone',
-            'oldPlusDisposition'  => 0,
-            'plusDisposition'     => 0,
-            'plusDispositionTax'  => 0,
-            'oldMinusDisposition' => 0,
-            'minusDisposition'    => 0,
-            'tierPrices'          => $_tierPrices,
-            'tierPricesInclTax'   => $_tierPricesInclTax,
-        );
-
-        $responseObject = new Varien_Object();
-        Mage::dispatchEvent('catalog_product_view_config', array('response_object'=>$responseObject));
-        if (is_array($responseObject->getAdditionalOptions())) {
-            foreach ($responseObject->getAdditionalOptions() as $option=>$value) {
-                $config[$option] = $value;
+    public function isSalable($product = null){
+         $salable = parent::isSalable($product);
+ 
+        if ($salable !== false) {
+            $salable = false;
+            if (!is_null($product)) {
+                $this->setStoreFilter($product->getStoreId(), $product);
+            }
+ 
+            if (!Mage::app()->getStore()->isAdmin() && $product) {
+                $collection = $this->getUsedProductCollection($product)
+                    ->addAttributeToFilter('status', Mage_Catalog_Model_Product_Status::STATUS_ENABLED)
+                    ->setPageSize(1)
+                    ;
+                if ($collection->getFirstItem()->getId()) {
+                    $salable = true;
+                }
+            } else {
+                foreach ($this->getUsedProducts(null, $product) as $child) {
+                    if ($child->isSalable()) {
+                        $salable = true;
+                        break;
+                    }
+                }
             }
         }
-
-        return Mage::helper('core')->jsonEncode($config);
+ 
+        return $salable;
     }
+    
+    public function getAllowProducts()
+    {
+        if (!$this->hasAllowProducts()) {
+            $products = array();
+            $allProducts = $this->getProduct()->getTypeInstance(true)
+                ->getUsedProducts(null, $this->getProduct());
+            foreach ($allProducts as $product) {
+                /**
+                * Should show all products (if setting set to Yes), but not allow "out of stock" to be added to cart
+                */
+                 if ($product->isSaleable() || Mage::getStoreConfig('amconf/general/out_of_stock') ) {
+                    if ($product->getStatus() != Mage_Catalog_Model_Product_Status::STATUS_DISABLED)
+                    {
+                        $products[] = $product;
+                    }
+                }
+            }
+            $this->setAllowProducts($products);
+        }
+        return $this->getData('allow_products');
+    }
+   
 }

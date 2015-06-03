@@ -10,7 +10,6 @@ class Amasty_Shopby_Block_Featured extends Mage_Core_Block_Template
         // get filter ID by attribute code 
         $id = Mage::getResourceModel('amshopby/filter')
             ->getIdByCode($this->getAttributeCode());
-         
         if ($id){
             $items = Mage::getResourceModel('amshopby/value_collection')
                 ->addFieldToFilter('is_featured', 1)
@@ -21,6 +20,7 @@ class Amasty_Shopby_Block_Featured extends Mage_Core_Block_Template
                 $items->setOrder('rand()');
             } 
             else {
+            	$items->setOrder('featured_order', 'asc');
                 $items->setOrder('value', 'asc');    
                 $items->setOrder('title', 'asc');    
             }  
@@ -28,20 +28,20 @@ class Amasty_Shopby_Block_Featured extends Mage_Core_Block_Template
             if ($this->getLimit()){
                 $items->setPageSize(intVal($this->getLimit()));
             }   
-                
+
+            /** @var Amasty_Shopby_Helper_Url $hlp */
             $hlp = Mage::helper('amshopby/url');
             $base = Mage::getBaseUrl('media') . 'amshopby/';
             foreach ($items as $item){
                 if ($item->getImgBig())
                     $item->setImgBig($base . $item->getImgBig());   
-                
-                $attrCode = $this->getAttributeCode();
-                $optLabel = $item->getValue() ? $item->getValue() : $item->getTitle();
-                $optId    = $item->getOptionId();
-                $item->setUrl($hlp->getOptionUrl($attrCode, $optLabel, $optId));   
+
+                $query = array(
+                    $this->getAttributeCode() => $item->getOptionId(),
+                );
+                $item->setUrl($hlp->getFullUrl($query, true));
             }
         }
         return $items;
     }
-
 }

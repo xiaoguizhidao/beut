@@ -6,15 +6,43 @@
 */
 class Amasty_Conf_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tab_Images extends Mage_Core_Block_Template
 {
+    private $_confAttr;
+    
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('amconf/icons.phtml');
+        $this->setTemplate('amasty/amconf/icons.phtml');
         $this->_doUpload();
+        $this->_confAttr = Mage::getModel('amconf/attribute')->load(Mage::registry('entity_attribute')->getId(), 'attribute_id');
     }
     
     protected function _doUpload()
     {
+        
+        if (Mage::app()->getRequest()->isPost())
+        {
+            // saving attribute 'use_image' property
+            $confAttr = Mage::getModel('amconf/attribute')->load(Mage::registry('entity_attribute')->getId(), 'attribute_id');
+            if (!$confAttr->getId())
+            {
+                $confAttr->setAttributeId(Mage::registry('entity_attribute')->getId());
+            }
+
+            $confAttr->setUseImage(intval(Mage::app()->getRequest()->getPost('amconf_useimages')));
+            
+            $confAttr->setSmallWidth(intval(Mage::app()->getRequest()->getPost('small_width')));
+            $confAttr->setSmallHeight(intval(Mage::app()->getRequest()->getPost('small_height')));
+            
+            $confAttr->setUseTooltip(intval(Mage::app()->getRequest()->getPost('amconf_usetooltip')));
+            
+            if(intval(Mage::app()->getRequest()->getPost('amconf_usetooltip'))) {
+                $confAttr->setBigWidth(intval(Mage::app()->getRequest()->getPost('big_width')));
+                $confAttr->setBigHeight(intval(Mage::app()->getRequest()->getPost('big_height')));
+            }
+            
+            $confAttr->save();
+        }
+        
         $uploadDir = Mage::getBaseDir('media') . DIRECTORY_SEPARATOR . 
                                                     'amconf' . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR;
                                                     
@@ -40,31 +68,35 @@ class Amasty_Conf_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tab_Images exte
         {
             foreach ($_FILES['amconf_icon']['error'] as $optionId => $errorCode)
             {
-                if (UPLOAD_ERR_OK == $errorCode)
+                if (UPLOAD_ERR_OK == $errorCode && $confAttr && $confAttr->getId())
                 {
                     move_uploaded_file($_FILES['amconf_icon']['tmp_name'][$optionId], $uploadDir . $optionId . '.jpg');
+                    if (!file_exists($uploadDir . $optionId . '.jpg'))
+                    {
+                        Mage::getSingleton('catalog/session')->addSuccess($this->__('File was not uploaded. Please check permissions to folder media/amconf/images(need 0777 recursively)'));
+                    }                    
                 }
             }
         }
 
-        if (Mage::app()->getRequest()->isPost())
-        {
-            // saving attribute 'use_image' property
-            $confAttr = Mage::getModel('amconf/attribute')->load(Mage::registry('entity_attribute')->getId(), 'attribute_id');
-            if (!$confAttr->getId())
-            {
-                $confAttr->setAttributeId(Mage::registry('entity_attribute')->getId());
-            }
-
-            $confAttr->setUseImage(intval(Mage::app()->getRequest()->getPost('amconf_useimages')));
-            $confAttr->save();
-        }
     }
     
-    public function getUseImage()
+    public function getConfAttr()
     {
-        $confAttr = Mage::getModel('amconf/attribute')->load(Mage::registry('entity_attribute')->getId(), 'attribute_id');
-        return (boolean) $confAttr->getUseImage();
+        return $this->_confAttr;
+    }
+    
+    private function _resizeImage($basePath, $newPath, $width, $height)
+    {
+        //$basePath - origin file location
+        $imageObj = new Varien_Image($basePath);
+        $imageObj->constrainOnly(TRUE);
+        $imageObj->keepAspectRatio(FALSE);
+        $imageObj->keepFrame(FALSE);
+        //$width, $height - sizes you need (Note: when keepAspectRatio(TRUE), height would be ignored)
+        $imageObj->resize($width, $height);
+        //$newPath - name of resized image
+        $imageObj->save($newPath);
     }
     
     public function getOptionsCollection()
@@ -78,7 +110,12 @@ class Amasty_Conf_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tab_Images exte
     
     public function getIcon($option)
     {
-        return Mage::helper('amconf')->getImageUrl($option->getId());
+        return Mage::helper('amconf')->getImageUrl($option->getId(), $this->_confAttr->getSmallWidth(), $this->_confAttr->getSmallHeight());
+    }
+    
+    public function getBigIcon($option)
+    {
+        return Mage::helper('amconf')->getImageUrl($option->getId(), $this->_confAttr->getBigWidth(), $this->_confAttr->getBigHeight());
     }
     
     public function getSubmitUrl()

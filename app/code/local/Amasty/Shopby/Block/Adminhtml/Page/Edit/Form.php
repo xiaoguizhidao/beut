@@ -55,33 +55,8 @@ class Amasty_Shopby_Block_Adminhtml_Page_Edit_Form extends Mage_Adminhtml_Block_
             $fldMeta->addField('url', 'text', array(
               'label'     => $hlp->__('Canonical Url'),
               'name'      => 'url',
+              'note'      => $hlp->__("It's not the page URL. It's HTML tag as per https://support.google.com/webmasters/answer/139394") 
             )); 
-            
-            /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Tue, Apr 1, 2014*/
-            $fldMeta = $form->addFieldset('sitemaps', array('legend'=> $hlp->__('Sitemap')));
-            $fldMeta->addField('sitemap', 'select', array(
-              'label'     => $hlp->__('Show in sitemap?'),
-              'name'      => 'sitemap',
-              'values'    => array(Mage::helper('catalog')->__('Yes'), Mage::helper('catalog')->__('No')),
-            )); 
-            $fldMeta->addField('priority', 'select', array(
-            		'label'     => $hlp->__('Priority'),
-            		'name'      => 'priority',
-            		'values'	=> array(
-							            array('value'=>'0.1', 'label'=>$hlp->__('0.1')),
-							            array('value'=>'0.2', 'label'=>$hlp->__('0.2')),
-							            array('value'=>'0.3', 'label'=>$hlp->__('0.3')),
-							            array('value'=>'0.4', 'label'=>$hlp->__('0.4')),
-							            array('value'=>'0.5', 'label'=>$hlp->__('0.5')),
-							            array('value'=>'0.6', 'label'=>$hlp->__('0.6')),
-							            array('value'=>'0.7', 'label'=>$hlp->__('0.7')),
-							        	array('value'=>'0.8', 'label'=>$hlp->__('0.8')),
-							        	array('value'=>'0.9', 'label'=>$hlp->__('0.9')),
-							        	array('value'=>'1.0', 'label'=>$hlp->__('1.0')),
-		        						)
-            ));
-            
-            /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Tue, Apr 1, 2014*/
             
             $cmsBlocks = Mage::getModel('cms/block')->getCollection();
             $values = array(array(

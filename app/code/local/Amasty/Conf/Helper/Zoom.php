@@ -16,11 +16,11 @@ class Amasty_Conf_Helper_Zoom extends Mage_Core_Helper_Abstract
            'thumbnail_lignhtbox' =>     Mage::getStoreConfig('amconf/lightbox/thumbnail_lignhtbox'),
        );       
        
-       
        /*Zoom configuration start*/
        $param['zoom']['zoomType'] = Mage::getStoreConfig('amconf/zoom/type');
+       $param['zoom']["responsive"] = true;
        $param['zoom']['preloading'] = Mage::getStoreConfig('amconf/zoom_settings/preloading');
-       $param['zoom']['preloading'] = Mage::getDesign()->getSkinUrl('amasty\amconf\images\preloader.gif');
+       $param['zoom']['loadingIcon'] = Mage::getDesign()->getSkinUrl('js/amasty/amconf/images/preloader.gif');
        switch(Mage::getStoreConfig('amconf/zoom/type')) {
            case "lens":
               $param['zoom']["lensShape"] = "round";
@@ -40,29 +40,29 @@ class Amasty_Conf_Helper_Zoom extends Mage_Core_Helper_Abstract
               if(Mage::getStoreConfig('amconf/zoom_settings/use_tint_effect')) {
                   $param['zoom']["tint"] = true;
                   $param['zoom']["tintOpacity"] = 0.5;
-                  $param['zoom']["tintColour"] = Mage::getStoreConfig('amconf/zoom_settings/tint_color');    
+                  $param['zoom']["tintColour"] = Mage::getStoreConfig('amconf/zoom_settings/tint_color');
               }  
        }
        
        if (Mage::getStoreConfig('amconf/zoom_settings/fadein')) {
             $param['zoom']["zoomWindowFadeIn"] = 500;
             $param['zoom']["zoomWindowFadeOut"] = 500;
-            $param['zoom']["lensFadeIn"] = 630;
+            $param['zoom']["lensFadeIn"] = 6330;
        }
        if (Mage::getStoreConfig('amconf/zoom_settings/easing')) {
             $param['zoom']["easing"] = true;
        }
        if (Mage::getStoreConfig('amconf/zoom_settings/scroll')) {
             $param['zoom']["scrollZoom"] = true;
-       }  
+       }
        
-       /*Lightbox configuration start*/
-       if(Mage::getStoreConfig('amconf/lightbox/enable')) {
-            $param['zoom']["gallery"] = 'amasty_gallery';
+       /*Lightbox configuration start*/  
+        if(Mage::getStoreConfig('amconf/lightbox/enable')) {  
+             $param['zoom']["gallery"] = 'amasty_gallery';
             $param['zoom']["cursor"] = 'pointer';
             $param['zoom']["galleryActiveClass"] = 'active';
             $param['zoom']["imageCrossfade"] = true;
-            
+              
              $param['lightbox']['loop'] = intval(Mage::getStoreConfig('amconf/lightbox/circular_lightbox'));
              $param['lightbox']['prevEffect'] = Mage::getStoreConfig('amconf/lightbox/effect');
              $param['lightbox']['nextEffect'] = Mage::getStoreConfig('amconf/lightbox/effect');
@@ -81,20 +81,26 @@ class Amasty_Conf_Helper_Zoom extends Mage_Core_Helper_Abstract
        
        
        /*Carusel configuration start*/
-       $param['carousel']['items'] = (int)Mage::getStoreConfig('amconf/carousel/visible_items');
+       //$param['carousel']['items'] = (int)Mage::getStoreConfig('amconf/carousel/visible_items');
+       $arrH = explode(',',Mage::getStoreConfig('amconf/size/thumb'));
+       $param['carousel']['items'] = array('height'=>$arrH[1],'width'=>'100%','visible'=>3);
        $param['carousel']['circular'] = Mage::getStoreConfig('amconf/carousel/circular')? true: false;
-       $param['carousel']['height'] = (int)Mage::getStoreConfig('amconf/size/thumb');
+      // $param['carousel']['height'] = '100%';
        $param['carousel']['prev'] = array("button" => "#prevGallery", "key" => "left");
        $param['carousel']['next'] = array("button" => "#nextGallery", "key" => "right");
+       $param['carousel']['direction'] = 'down';
+       $param['carousel']['onWindowResize'] = true;
+     //  $param['carousel']['responsive'] = true;
+
        $param['carousel']['auto'] = Mage::getStoreConfig('amconf/carousel/auto')? true: false;
        if(Mage::getStoreConfig('amconf/carousel/swipe')) {
             $param['carousel']['swipe'] = array("onTouch" => true, "onMouse" => true);   
        }    
-       //$param['carousel']['mousewheel'] = Mage::getStoreConfig('amconf/carousel/mousewheel')? true: false;    
+       //$param['carousel']['mousewheel'] = Mage::getStoreConfig('amconf/carousel/mousewheel')? true: false;
        if(Mage::getStoreConfig('amconf/carousel/pagination')) {
            $param['carousel']['pagination'] = "#ampagination";    
        }
-       $param['carousel']['responsive'] = false;
+       //$param['carousel']['responsive'] = true;
        $param['carousel']['infinite'] = false;
        /*Carusel configuration end*/
        
