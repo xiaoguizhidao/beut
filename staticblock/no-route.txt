@@ -1,0 +1,10 @@
+<div class="page-not-found">
+<div class="page-title">
+<h1>Error 404</h1>
+<h3> You have found an empty room...</h3>
+</div>
+<p> We are sorry! The page you are looking for may have been moved or deleted. <p>
+<p> To fill your room with beautiful homeware, furniture, lighting and accessories please navigate back to our <a href="{{store url}}">homepage.</a></p>
+<p>Or use the search below:</p>
+<input type="text" size="50" name="pnf-search" id="pnf-search" />
+</div>

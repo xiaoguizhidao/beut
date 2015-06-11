@@ -2151,3 +2151,38 @@ span.st_plusone_large > div{
     top: -10px;
     width: 28px;
 }
+/*Page not found*/
+.cms-index-noroute .main{
+    background: url("../images/404-bg.png");
+    width: 100%;
+    min-height: 500px;
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+.cms-index-noroute #newsletter-container{
+    display: none;
+}
+.page-not-found{
+    width: 50%;
+    margin-right: 10%;
+    padding-left: 10%;
+    text-align: center;
+    padding-top: 80px;
+}
+.page-not-found a{
+    color: #72a8e4;
+    text-decoration: underline;
+}
+.page-not-found #pnf-search {
+    border: 1px solid #cccccc;
+    height: 40px;
+    padding: 0 15px;
+    background: url("../images/pnf-search.png");
+    background-position: center right;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+.page-not-found .page-title h3{
+    font-size: 30px;
+    font-weight: bold;
+}
