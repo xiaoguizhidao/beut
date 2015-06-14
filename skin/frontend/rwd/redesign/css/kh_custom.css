@@ -2019,7 +2019,7 @@ body.category-products {
 .customer-account-create .page-title h1, .page-title h2{text-align: center}
 .customer-account-create .account-create{
     margin: auto;
-    width: 370px;
+    /*width: 370px;*/
     margin-top: 50px;
 }
 .customer-account-create .fieldset, .customer-account-create .buttons-set{
@@ -2151,11 +2151,13 @@ span.st_plusone_large > div{
     top: -10px;
     width: 28px;
 }
+
+
 /*Page not found*/
 .cms-index-noroute .main{
     background: url("../images/404-bg.png");
     width: 100%;
-    min-height: 500px;
+    min-height: 720px;
     background-repeat: none;
     background-size: 100% 100%;
 }
@@ -2167,7 +2169,7 @@ span.st_plusone_large > div{
     margin-right: 10%;
     padding-left: 10%;
     text-align: center;
-    padding-top: 80px;
+    padding-top:150px;
 }
 .page-not-found a{
     color: #72a8e4;
@@ -2177,12 +2179,159 @@ span.st_plusone_large > div{
     border: 1px solid #cccccc;
     height: 40px;
     padding: 0 15px;
-    background: url("../images/pnf-search.png");
-    background-position: center right;
     background-color: white;
     background-repeat: no-repeat;
 }
 .page-not-found .page-title h3{
     font-size: 30px;
     font-weight: bold;
+}
+.page-not-found .pnf-button {
+    background: url("../images/pnf-search.png");
+    background-position: center right;
+    background-color: white;
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 30px;
+    left: -45px;
+    width: 35px;
+    top:-3px;
+    position: relative;
+}
+
+/*Login page*/
+.customer-account-login .page, .customer-account-create .page{
+    background-image: url("../images/create-account.png");
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-size: 100% auto;
+}
+.customer-account-login .account-login{
+    background-color: white;
+    margin-top: 80px;
+}
+.customer-account-login .account-login{
+    padding:40px;
+}
+.button{
+    background-color: #4d91d5;
+}
+.account-title > span{
+    font-size: 20px;
+}
+.account-title {
+    background: #f7f8f9 none repeat scroll 0 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.account-create{
+    background-color: white;
+}
+.customer-account-create .account-create{
+    margin-top: 80px;
+    max-width: 760px;
+    padding: 25px 10px;
+    margin-bottom: 200px;
+}
+.form-list .fields .field:last-child{
+   float: right;
+
+}
+.form-list .fields .field, .form-list .fields .field:first-child{
+    float: left;
+    width: 48%;
+}
+.customer-account-create .form-list select{
+    height: 35px;
+    margin-top: 0px;
+}
+.customer-account-create .field label{
+    display: none;
+}
+.form-list .fields .field{
+    margin-bottom: 25px;
+}
+.form-list .fields .field input{
+    height: 35px;
+}
+.customer-account-create .buttons-set{
+    border:none;
+}
+.form-list .control label{
+    padding-left: 0px;
+}
+
+/*About us*/
+.cms-about-us .page-title{
+    display: none;
+}
+.cms-about-us .col1-layout{
+    margin: 0!important;
+    padding: 0!important;
+}
+.cms-page-view.cms-about-us .main{
+    margin: 0px;
+}
+.slider-top {
+    background-image: url("../images/about-us-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 150px 0;
+    text-align: center;
+}
+.cms-page-view .col1-layout .col-main .std{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.about-us-container .content{
+    padding: 35px 30px;
+}
+.cms-about-us .menu-left {
+    border: 1px solid red;
+    float: left;
+    width: 200px;
+}
+.cms-about-us .content-right {
+    float: left;
+    width: calc(100% - 200px);
+}
+.cms-about-us .content-right .maincontent .left{
+    float: left;
+    width: 46%;
+}
+.cms-about-us .content-right .maincontent .right{
+    float: left;
+    width: 50%;
+}
+.cms-about-us .services{
+    clear: both;
+    padding: 30px 100px;
+}
+.cms-about-us .services div{
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+.cms-about-us .services div:last-child{
+    margin-right: 0;
+}
+.cms-about-us .testimonial{
+    clear: both;
+    background: #bbbbbb;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.cms-about-us .founder{
+    padding: 30px 70px;
+}
+.founder-left, .founder-right {
+    float: left;
+    width: 50%;
+}
+.founder-left img, .fonder-right img{
+    float: left;
+    margin-right: 10px;
 }

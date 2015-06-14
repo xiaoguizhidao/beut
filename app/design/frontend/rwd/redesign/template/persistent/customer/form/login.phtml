@@ -32,6 +32,9 @@
  */
 /** @var $this Mage_Customer_Block_Form_Login */
 ?>
+<div class="account-title">
+    <span>Create Your beut account!</span>
+</div>
 <div class="account-login<?php if (!$this->helper('customer')->isRegistrationAllowed()) echo ' login-only' ?>">
 
     <?php echo $this->getMessagesBlock()->toHtml() ?>
