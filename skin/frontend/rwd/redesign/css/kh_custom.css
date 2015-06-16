@@ -2277,7 +2277,7 @@ span.st_plusone_large > div{
     background-image: url("../images/about-us-banner.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    padding: 150px 0;
+    padding: 100px 0;
     text-align: center;
 }
 .cms-page-view .col1-layout .col-main .std{
@@ -2289,13 +2289,13 @@ span.st_plusone_large > div{
     padding: 35px 30px;
 }
 .cms-about-us .menu-left {
-    border: 1px solid red;
     float: left;
-    width: 200px;
+    width: 180px;
 }
 .cms-about-us .content-right {
     float: left;
-    width: calc(100% - 200px);
+    width: calc(100% - 230px);
+    margin-left: 50px;
 }
 .cms-about-us .content-right .maincontent .left{
     float: left;
@@ -2334,4 +2334,46 @@ span.st_plusone_large > div{
 .founder-left img, .fonder-right img{
     float: left;
     margin-right: 10px;
+}
+.cms-about-us .std .slider-text p{
+    color:white;
+    font-size: 23px;
+    line-height: 25px;
+    margin: 0px;
+}
+.cms-about-us .std .slider-text p:last-child{
+    margin: 10px 0 0;
+    font-size: 22px;
+}
+.cms-about-us .std .slider-text p:first-child{
+    text-transform: uppercase;
+
+}
+.cms-about-us .std .slider-text p span{
+    font-size: 60px;
+    line-height: 70px;
+}
+.cms-about-us .menu-left ul{
+    list-style: none;
+}
+.cms-about-us .std .menu-left li{
+    color:black;
+    font-style: normal;
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.cms-about-us .std .menu-left li:last-child{
+    border-bottom: none;
+}
+.cms-about-us .std .menu-left li:first-child{
+    padding-top: 0px;
+}
+.cms-about-us .menu-left li a{
+    color:black;
+}
+.cms-about-us .menu-left li.active{
+    color:#458ddb;
+}
+.cms-page-view .std img, .cms-no-route .std img{
+    margin: auto auto 20px;
 }
