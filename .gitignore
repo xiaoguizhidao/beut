@@ -12,6 +12,9 @@ app/design/frontend/rwd/redesign/template/catalog/.DS_Store
 app/design/frontend/rwd/redesign/template/catalog/layer/.DS_Store
 app/design/frontend/rwd/redesign/template/page/html/.DS_Store
 app/design/frontend/rwd/redesign/template/page/template/.DS_Store
+skin/frontend/rwd/beut/scss/.sass-cache
+skin/frontend/rwd/beut/scss/bower_components
+skin/frontend/rwd/default/scss
 app/etc/.DS_Store
 app/etc/local.xml
 media/
@@ -1406,3 +1409,4 @@ var/session/sess_v148ljg3cnddi9infddlq8dt14
 var/
 media/
 .idea/
+
