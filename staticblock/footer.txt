@@ -1,0 +1,58 @@
+Footer links
+id: footer_links
+<h4 class="title">Customer services</h4>
+<ul>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Shipping information</a></li>
+    <li><a href="#">Returns policy</a></li>
+    <li><a href="#">Terms & conditions</a></li>
+    <li><a href="#">FAQ's</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+</ul>
+
+
+
+
+phone footer
+id: phone-footer-block
+
+<h4 class="title">Get in touch</h4>
+<p>
+    <a href="#"><img src="{{skin url=images/demo/facebook.png}}" alt="" /></a>
+    <a href="#"><img src="{{skin url=images/demo/twitter.png}}" alt="" /></a>
+    <a href="#"><img src="{{skin url=images/demo/pinterest.png}}" alt="" /></a>
+    <a href="#"><img src="{{skin url=images/demo/instagram.png}}" alt="" /></a>
+</p>
+<div class="clearfix"></div>
+<p>
+    <span> +44 1225 292 088 </span>
+    <span>customerservices@beut.co.uk</span>
+</p>
+<p>
+<table>
+    <tr>
+        <td class="a-left">Mon-Fri</td>
+        <td class="a-right">9am - 5pm</td>
+    </tr>
+    <tr>
+        <td class="a-left">Saturday</td>
+        <td class="a-right">10am - 4pm</td>
+    </tr>
+    <tr>
+        <td class="a-left">Sunday</td>
+        <td class="a-right">Closed</td>
+    </tr>
+</table>
+</p>
+
+
+
+
+
+
+
+Design by
+id: design-by
+Designed and built by LGM Creative
