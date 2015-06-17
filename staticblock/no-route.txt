@@ -8,3 +8,157 @@
 <p>Or use the search below:</p>
 <input type="text" size="50" name="pnf-search" id="pnf-search" />
 </div>
+
+
+
+
+
+
+HOMEPAGE:
+<div id="le_slideshow">
+    <div class="le-slideshow-wraper" >
+        <div id="leSlide" class="le-slideshow"  style="width: 1920px; height: 650px;">
+            <div data-u="loading" class="loading">
+                <div class="bg-loading"></div>
+                <div class="icon-loading"></div>
+            </div>
+            <div data-u="slides" class="uslides" style="width: 1920px; height: 650px;">
+                <div>
+                    <div class="img"><img alt="slide1" src="{{skin url =/images/demo/slide1.png}}" data-u="image" /></div>
+                    <div class="caption1">
+                        <div style="color: #fff; font-size: 23px; text-transform: uppercase;" data-u="caption" data-t="RTT|360" data-d="-200">Introducing our new</div>
+                        <div style="font-size: 60px; color: #fff;text-transform: uppercase;" data-u="caption" data-t="FADE" data-t2="B" data-d="-450">Wallpape collection</div>
+                        <div style="color: #fff; font-size: 22px; line-height: 1.5;" data-u="caption" data-t="MCLIP|R" data-d="-300">Curabitur diam felisaa, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend</div>
+                        <div class="tp-caption link_text" style="margin-top: 60px;font-size: 22px;transform: rotate(0deg) scale(1);border: 1px solid #fff;padding: 20px 40px;display: inline-block;"><a href="#" data-u="caption" data-t="T" data-t2="NO">Explore yourselft</a></div>
+                    </div>
+                </div>
+                <div>
+                    <img alt="slide2" src="{{skin url =/images/demo/slide1.png}}" data-u="image" />
+                    <div class="caption1">
+                        <div style="color: #fff; font-size: 23px; text-transform: uppercase;" data-u="caption" data-t="T|IE*IE" data-d="-1600" data-t2="B">Introducing our new</div>
+                        <div style="font-size: 60px; color: #fff;text-transform: uppercase;" data-u="caption" data-t="RTT|10" data-d="-450">Wallpape collection</div>
+                        <div style="color: #fff; font-size: 22px; line-height: 1.5;" data-u="caption" data-t="CLIP|LR" data-du="1500">Curabitur diam felisaa, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend</div>
+                        <div class="tp-caption link_text" style="margin-top: 60px;font-size: 22px;transform: rotate(0deg) scale(1);border: 1px solid #fff;padding: 20px 40px;display: inline-block;"><a href="#" data-u="caption" data-t="T" data-t2="NO">Explore yourselft</a></div>
+                    </div>
+                </div>
+                <div>
+                    <img alt="slide3" src="{{skin url =/images/demo/slide1.png}}" data-u="image" />
+                    <div class="caption1">
+                        <div style="color: #fff; font-size: 23px; text-transform: uppercase;" data-u="caption"  data-t="CLIP|LR" data-d="-200">Introducing our new</div>
+                        <div style="font-size: 60px; color: #fff;text-transform: uppercase;" data-u="caption" data-t="CLIP|LR" data-t2="B" data-du="2000">Wallpape collection</div>
+                        <div style="color: #fff; font-size: 22px; line-height: 1.5;" data-u="caption" data-t="L" data-d="-750">Curabitur diam felisaa, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend</div>
+                        <div class="tp-caption link_text" style="margin-top: 60px;font-size: 22px;transform: rotate(0deg) scale(1);border: 1px solid #fff;padding: 20px 40px;display: inline-block;"><a href="#" data-u="caption" data-t="T" data-t2="NO">Explore yourselft</a></div>
+                    </div>
+                </div>
+            </div>
+            <div data-u="navigator" class="jssorb13">
+                <div data-u="prototype"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="container-fluid row2">
+    <div class="row">
+        <div class="col-lg-8 block2 item">
+            <img src="{{skin url=images/demo/block2.png}}" alt="wallpaper" class="responsive-img" />
+        </div>
+        <div class="col-lg-4 block3 item"><img src="{{skin url=images/demo/block3.png}}" alt="wallpaper" class="responsive-img" /></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="slideshow-container">
+    <ul class="slideshow">
+        <li><a href="#"><img src="{{skin url=images/demo/slide2.png}}" alt="An eye for detail - Click to Shop Eye Wear" /></a></li>
+        <li><a href="#"><img src="{{skin url=images/demo/slide2.png}}" alt="Style solutions - covet-worthy styles in travel-friendly fabrics - Click to Shop Woman" /></a></li>
+        <li><a href="#"><img src="{{skin url=images/demo/slide2.png}}" alt="Wing man - hit the runway in stylish separates and casuals - Click to Shop Man" /></a></li>
+    </ul>
+    <div class="slideshow-pager">&nbsp;</div>
+    <span class="slideshow-prev">&nbsp;</span> 
+    <span class="slideshow-next">&nbsp;</span>
+</div>
+<div class="clearfix"></div>
+<div class="container-fluid hot-prod">
+    <div class="row">
+        <h2>What we find (beut.) iful this month</h2>
+<a href="#" class=shop-more">Shop more</a>
+        {{block type="catalog/product_list" name="home.catalog.product.list" category_id="8" template="catalog/product/homelist.phtml"}}
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="container-fluid row4">
+    <div class="row">
+        <div class="col-lg-6 item">
+            <div class="absolute-block">
+                <h3>A little bit about us</h3>
+                <div class="content">Based in rural Bath our sharp-eyed buyers like nothing more than sourcing the freshest and best products from the UK, Europe and beyond.  As a result we have created a striking range of classic and contemporary designer goods, all of which offer something that bit different and special. Beut’s “beautiful things” offer practicality, imagination and humour.</div>
+                <a href="#" class="find-out">Find out more</a>
+            </div>            
+        </div>
+        <div class="col-lg-6 item right-item">
+            <img src="{{skin url=images/demo/block4.png}}" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<div class="clearfix"></div>
+<div class="container-fluid row5">
+    <div class="row">
+        <div class="col-lg-8 block2 item">
+            <img src="{{skin url=images/demo/block5.png}}" alt="" class="responsive-img" />
+        </div>
+        <div class="col-lg-4 block3 item">
+            <img src="{{skin url=images/demo/block6.png}}" alt="" class="responsive-img" />
+        </div>
+    </div>
+</div>
+
+
+
+<div class="clearfix"></div>
+<div class="container-fluid hot-prod brand-block">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Featured in</h2>
+            <span class="desc">Beut is a lifestyle store created for “life’s beautiful things”</span>
+            <ul class="brand">
+                <li><a href="#"><img src="{{skin url=images/demo/brand1.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand2.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand3.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand4.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand5.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand6.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand7.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand8.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand9.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand10.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand1.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand2.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand3.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand4.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand5.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand6.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand7.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand8.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand9.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand10.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand1.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand2.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand3.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand4.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand5.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand6.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand7.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand8.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand9.png}}" alt="" /></a> </li>
+                <li><a href="#"><img src="{{skin url=images/demo/brand10.png}}" alt="" /></a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

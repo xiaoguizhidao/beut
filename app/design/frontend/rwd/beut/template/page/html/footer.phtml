@@ -26,21 +26,31 @@
 ?>
 <div class="footer-container">
     <div class="footer">
-        <div class="brand-footer-block">
-            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('brand-footer-block')->toHtml() ?>
+        <div class="footer-newsleter">
+            <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe_footer.phtml')->toHtml(); ?>
         </div>
-        <?php //echo $this->getChildHtml() ?>
-        <div class="footer-block-second">
-            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links_company')->toHtml() ?>
-        </div>
-        <address class="copyright">
-            <div class="phone-footer-block f-left">
-                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('phone-footer-block')->toHtml() ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 center-block">
+                    <div class="col-lg-6">
+                        <div class="phone-footer-block f-left a-right">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('phone-footer-block')->toHtml() ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 a-left footer-links">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
+                    </div>
+                </div>
             </div>
-            <div class="design-by"><?php echo $this->getCopyright() ?></div>
-            <div class="f-right payment-footer-block">
-                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment-footer-block')->toHtml() ?>
+        </div>
+        <div class="clearfix"></div>
+        <address class="copyright container-fluild">
+            <div class="row">
+                <div class="col-lg-4 a-left"><?php echo $this->getCopyright() ?></div>
+                <div class="col-lg-4 a-center"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('payment-footer-block')->toHtml() ?></div>
+                <div class="col-lg-4 design-by a-right"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('design-by')->toHtml() ?></div>
             </div>
         </address>
     </div>
 </div>
+

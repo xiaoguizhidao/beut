@@ -39,9 +39,35 @@
 .footer {
     clear: both;
     width: 100%;
-    border-top: 1px solid $c-module-border;
-    padding-top: $trim;
-
+    padding: 55px 40px 27px;
+    background: $c-footer;
+    color: $white;
+    table{
+        width: 100%;
+        color: $white;
+    }
+    a{
+        color: $white !important;
+        text-decoration: none;
+    }
+    .footer-newsleter{
+        label{
+            color: $white;
+            text-transform: none;
+            font-weight: normal;
+            font-size: $f-size-xl;
+            margin-bottom: 30px;
+        }
+        input{
+            width: 400px;
+            height: 40px;
+            background: $white;
+            border: none;
+        }
+    }
+    .footer-links{
+        padding-left: 30px;
+    }
     @include bp(max-width, $bp-xsmall) {
         padding-top: $trim-small;
     }
@@ -54,10 +80,23 @@
     .block-title strong {
         font-weight: normal;
     }
+    .title{
+        color: $white;
+        text-transform: none;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+    .phone-footer-block{
+        p{
+            display: block;
+            margin-bottom: 20px;
+            a{
+                display: inline-block;
+                margin-left: 35px;
+                float: right;
+            }
+        }
 
-    .block-title,
-    address {
-        color: $c-text-primary;
     }
 
     .links {
@@ -73,16 +112,16 @@
         }
 
         a {
-            color: $c-text;
+            color: $white;
             &:hover {
-                color: $c-action;
+                color: $white;
             }
         }
     }
 
     .block-subscribe {
         float: right;
-        width: 320px;
+        width: 420px;
         margin-bottom: $trim;
     }
 
@@ -90,10 +129,6 @@
     .block-subscribe {
         text-transform: uppercase;
         font-size: $f-size-xs;
-    }
-
-    .form-subscribe-header {
-        display: none;
     }
 
     /* -------------------------------------------- *
@@ -137,7 +172,7 @@
 
     .block-subscribe .input-box {
         float: left;
-        width: percentage(210px/320px);
+        @include calc(width, "100% - 78px");
         padding-top: 0;
     }
 
@@ -145,6 +180,13 @@
         width: 100%;
         border-right: 0;
         @include border-radius(0);
+        &:-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::-moz-placeholder,
+        &::-webkit-input-placeholder{
+            font-size: 10px;
+        }
+
     }
 
     .block-subscribe .block-content {
@@ -157,14 +199,18 @@
 
     .block-subscribe .actions {
         float: left;
-        width: percentage(110px/320px);
+        width: 78px;
         margin: 0;
     }
 
     .block-subscribe .actions .button {
-        height: 30px;
-        line-height: 17px;
+        height: 40px;
         float: left;
+        color: $c-black;
+        font-family: $f-neuton;
+        text-transform: none;
+        background: $white url(../images/border-subcribe.png) no-repeat left center;
+        width: 100%;
     }
 
     .bugs,
@@ -189,7 +235,6 @@
     }
 
     address {
-        border-top: 1px solid $c-module-border;
         text-align: center;
         width: 100%;
         font-size: $f-size-xxs;
