@@ -83,7 +83,7 @@
                 <action method="addItem"><type>skin_css</type><name>css/uniform.default.css</name></action>
                 <action method="addItem"><type>skin_css</type><name>css/font-awesome.min.css</name></action>
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/></action>
-
+                <action method="addCss"><stylesheet>css/kh_custom.css</stylesheet></action>
 
                <action method="addItem"><type>skin_css</type><name>css/styles-ie8.css</name><params/><if><![CDATA[ (lte IE 8) & (!IEMobile)]]></if></action>
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland-ie8.css</name><params/><if><![CDATA[ (lte IE 8) & (!IEMobile)]]></if></action> -->
