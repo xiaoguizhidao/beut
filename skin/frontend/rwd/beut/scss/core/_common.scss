@@ -132,6 +132,15 @@ div[class^='col-lg-']{
     margin-left: auto;
     margin-right: auto;
 }
+.a-left{
+    text-align: left;
+}
+.a-center{
+    text-align: center;
+}
+.a-right{
+    text-align: right;
+}
 // Creates a wrapper for a series of columns
 
 /* ============================================ *
@@ -216,11 +225,6 @@ div[class^='col-lg-']{
 body:not(.customer-account) .block:first-child .block-title {
     border-top: none;
     padding-top: 0;
-}
-
-.block-subtitle {
-    font-weight: bold;
-    margin-bottom: $element-spacing;
 }
 
 .block-content {

@@ -88,7 +88,6 @@ var FEelementControl = {
 			slideMove:2,
 			easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
 			speed:600,
-			controls: false,
 			responsive : [
 				{
 					breakpoint:800,
@@ -114,7 +113,6 @@ var FEelementControl = {
 				slideMove:10,
 				easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
 				speed:600,
-				controls: false,
 				responsive : [
 					{
 						breakpoint:800,

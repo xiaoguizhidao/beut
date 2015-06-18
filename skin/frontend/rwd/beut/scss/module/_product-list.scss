@@ -55,12 +55,10 @@ h3.product-name,
 h4.product-name,
 h5.product-name,
 p.product-name {
-    @include h2;
     font-size: $f-size-s;
     font-family: $f-stack-sans;
     font-weight: normal;
     line-height: 1.4;
-
     a {
         color: $c-text;
         &:hover {
@@ -72,7 +70,6 @@ p.product-name {
 
 .products-grid .product-name,
 .products-list .product-name {
-    text-transform: uppercase;
     margin-bottom: 5px;
     font-size: $f-size;
     font-family: $f-stack-special;
@@ -397,16 +394,22 @@ $productsGridActionHeight: 85px;
 
     .product-image {
         float: left;
-        min-width: 50px;
+        min-width: 40px;
+        margin-right: 5px;
+        vertical-align: top;
     }
     .product-details {
-        margin-left: 60px;
+        float: left;
+        vertical-align: top;
+        .product-name {
+            padding-top: 0;
+            line-height: $line-height;
+            font-size: $f-size-xxs;
+            max-width: 185px;
+        }
     }
 
     // Vertically center product name
-    .product-details .product-name {
-        padding-top: 10px;
-    }
 
     li {
         margin-bottom: $gap;
@@ -414,6 +417,24 @@ $productsGridActionHeight: 85px;
 
         &:after {
             @include clearfix();
+        }
+    }
+    .remove{
+        display: inline-block;
+        float: right;
+        border: 1px solid $c-black;
+        color: $c-black;
+        font-size: 16px;
+        line-height: $line-height;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        display: block;
+        margin-bottom: 5px;
+        @include letransition(all,0.25s,ease-out);
+        &:hover{
+            border: 1px solid $c-blue;
+            color: $c-blue;
         }
     }
 }

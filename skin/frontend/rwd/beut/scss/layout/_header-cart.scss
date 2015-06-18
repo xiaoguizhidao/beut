@@ -56,12 +56,13 @@
     color: $c-black;
     padding: 10px;
     min-width: 300px;
+    text-transform: none;
     .block-subtitle{
         position: absolute;
         right: 10px;
         top: 10px;
         width: 45px;
-        height: 45px;
+        height: 25px;
         text-align: right;
     }
     .skip-link-close{
@@ -69,6 +70,10 @@
     }
     .empty{
         text-transform: none;
+    }
+    .num-item{
+        margin-bottom: 10px;
+        font-size: $f-size;
     }
 
 }

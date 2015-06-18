@@ -31,13 +31,12 @@
 ?>
 <li class="item" xmlns="http://www.w3.org/1999/html">
     <?php if ($this->hasProductUrl()): ?>
-        <a href="<?php echo $this->getProductUrl()?>" title="<?php echo $this->escapeHtml($this->getProductName()) ?>" class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(80)->setWatermarkSize('30x10'); ?>" width="80" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /></a>
+        <a href="<?php echo $this->getProductUrl()?>" title="<?php echo $this->escapeHtml($this->getProductName()) ?>" class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(40)->setWatermarkSize('30x10'); ?>" width="40" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /></a>
     <?php else: ?>
-        <span class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(80)->setWatermarkSize('30x10'); ?>" width="80" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /></span>
+        <span class="product-image"><img src="<?php echo $this->getProductThumbnail()->resize(40)->setWatermarkSize('30x10'); ?>" width="40" alt="<?php echo $this->escapeHtml($this->getProductName()) ?>" /></span>
     <?php endif; ?>
     <div class="product-details">
         <?php $productId = $this->getProduct()->getId()?>
-        <h2 class="product-brand"><?php echo Mage::getModel('catalog/product')->load($productId)->getAttributeText('brands'); ?></h2>
         <p class="product-name"><?php if ($this->hasProductUrl()): ?><a href="<?php echo $this->getProductUrl() ?>"><?php endif; ?><?php echo $this->escapeHtml($this->getProductName()) ?><?php if ($this->hasProductUrl()): ?></a><?php endif; ?></p>
 
         <?php if ($_options = $this->getOptionList()):?>
@@ -62,6 +61,19 @@
     </div>
 
     <div class="f-right">
+        <?php if ($isVisibleProduct): ?>
+            <!--<a href="<?php /*echo $this->getConfigureUrl() */?>" title="<?php /*echo $this->__('Edit item') */?>" class="btn-edit">
+                <?php /*echo $this->__('Edit item')*/?>
+            </a>-->
+
+            <?php if (!$this->isOnCheckoutPage()): ?>
+                <a href="<?php echo $this->getAjaxDeleteUrl() ?>" title="<?php echo $this->__('Remove This Item') ?>"
+                   data-confirm="<?php echo $this->__('Are you sure you would like to remove this item from the shopping cart?') ?>"
+                   class="remove">x</a>
+            <?php else: ?>
+                <span class="remove">x</span>
+            <?php endif; ?>
+        <?php endif ?>
         <div class="info-wrapper">
 
             <?php if ($canApplyMsrp): ?>
@@ -142,19 +154,6 @@
         </div>
         <div class="clear"></div>
 
-        <?php if ($isVisibleProduct): ?>
-            <a href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo $this->__('Edit item') ?>" class="btn-edit">
-                <?php echo $this->__('Edit item')?>
-            </a>
-
-            <?php if (!$this->isOnCheckoutPage()): ?>
-                <a href="<?php echo $this->getAjaxDeleteUrl() ?>" title="<?php echo $this->__('Remove This Item') ?>"
-                   data-confirm="<?php echo $this->__('Are you sure you would like to remove this item from the shopping cart?') ?>"
-                   class="remove"><?php echo $this->__('Remove Item') ?></a>
-            <?php else: ?>
-                <span class="remove"><?php echo $this->__('Remove Item') ?></span>
-            <?php endif; ?>
-        <?php endif ?>
     </div>
 
 </li>
