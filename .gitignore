@@ -1,4 +1,10 @@
+_MACOSX
+.DS_Store
 .idea/
+*/.DS_Store
+.DS_Store
+.DS_Store?
+._*
 .idea/magicento/config.xml
 .idea/magicento/layout_frontend.xml
 app/.DS_Store
