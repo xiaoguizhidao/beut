@@ -39,23 +39,40 @@
     width: 22px;
     height: 22px;
     background: rgba($c-action, 0.9);
-    color: #FFFFFF;
     font-size: $f-size-xxs;
     line-height: 22px;
     text-align: center;
     font-family: $f-stack-sans;
 }
-.skip-link.skip-active .count {
-    color: white;
+.skip-cart.skip-active{
+    background: $white url(../images/icon5.png) no-repeat 10px -35px;
+    color: $c-black;
 }
+.minicart-wrapper{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: $white;
+    color: $c-black;
+    padding: 10px;
+    min-width: 300px;
+    .block-subtitle{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 45px;
+        height: 45px;
+        text-align: right;
+    }
+    .skip-link-close{
+        color: $c-black;
+    }
+    .empty{
+        text-transform: none;
+    }
 
+}
 // Using extra .skip-link selector to increase specificity
-.skip-link.skip-cart .count {
-}
-
-.skip-cart.no-count .count {
-    display: none;
-}
 
 @include bp(max-width, 499px) {
     .skip-cart .count {
@@ -71,13 +88,6 @@
             background: none;
             margin-left: 0px;
             width: auto;
-
-            &:before {
-                content: '(';
-            }
-            &:after {
-                content: ')';
-            }
         }
     }
 }

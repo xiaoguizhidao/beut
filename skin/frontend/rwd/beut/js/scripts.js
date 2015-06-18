@@ -296,51 +296,13 @@ function showArrow(){
     var headerHeight = jQuery('#header').height();
     var headerLanguageHeight = jQuery('.header-language-background').height();
 
-
      //menu for ie8
      if(jQuery('.ie8 .inner-toggle').length > 0){
         jQuery('.ie8 .inner-toggle').width(jQuery());
      }
 
-    jQuery('#slideshow-next').click(function(){
-        var currentScrollTop = jQuery(window).scrollTop();
-        var currentSession = 0;
-        if(jQuery(".cms-index-index.cms-home").length) {
-            if (currentScrollTop >= (headerHeight + headerLanguageHeight +10)) {
-                currentScrollTop = currentScrollTop-(headerHeight + headerLanguageHeight +10);
-                currentSession =  parseInt(currentScrollTop / realHeight)+1;
-                var needToScrool = currentSession * realHeight;
-                var footerHeight = jQuery('.footer-container').height();
-                jQuery("body, html").animate({scrollTop:needToScrool + headerHeight + headerLanguageHeight +10},500, function(){} );
-            }
-            else {
-                jQuery("body, html").animate({scrollTop:headerHeight + headerLanguageHeight +10},500, function(){} );
-            }
-        }
-    });
-    jQuery('#slideshow-prev').click(function(){
-        var currentScrollTop = jQuery(window).scrollTop();
-        var currentSession = 0;
-        if(jQuery(".cms-index-index.cms-home").length) {
-            if (currentScrollTop > (headerHeight + headerLanguageHeight +10)) {
-                currentScrollTop = (currentScrollTop-(headerHeight + headerLanguageHeight +10))
-                if ( currentScrollTop % realHeight <= 50) {
-                    currentSession =  parseInt(currentScrollTop / realHeight)- 1;
-                }
-                else {
-                    currentSession = parseInt(currentScrollTop / realHeight);
-                }
-                var needToScrool = currentSession * realHeight;
-                var footerHeight = jQuery('.footer-container').height();
-                jQuery("body, html").animate({scrollTop:needToScrool + headerHeight + headerLanguageHeight +10},500, function(){} );
-            }
-            else {
-                jQuery("body, html").animate({scrollTop:0},500, function(){} );
-            }
-        }
 
 
-    });
 });
 jQuery(window).bind('load resize orientationchange', function() {
     var e = window,
@@ -362,7 +324,6 @@ jQuery(window).bind('load resize orientationchange', function() {
 				$j(".sharethis").slideToggle("slow");
 			});
 		}
-
 
 		jQuery('.block20').height(jQuery('.col-lg-51').height());
 
@@ -401,12 +362,6 @@ jQuery(window).bind('load resize orientationchange', function() {
 			}
 		});
 
-        if(jQuery(".product-view .add-to-cart-wrapper").length) {
-
-           var wrapperContent = jQuery(".product-view .add-to-cart-wrapper").html();
-           jQuery(".product-view .add-to-cart-wrapper").css("margin-bottom", "0px");
-
-        }
 
 	})
 

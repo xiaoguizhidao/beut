@@ -38,19 +38,16 @@
         <!--<p class="welcome-msg"><?php /*echo $this->getChildHtml('welcome') */?> <?php /*echo $this->getAdditionalHtml() */?></p>-->
 
         <div class="account-cart-wrapper f-right">
-            <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+            <div data-target-element="#header-account" class="skip-link skip-account">
                 <?php echo $this->__('Account'); ?>
-            </a>
-            <!-- Account -->
-            <div id="header-account" class="skip-content">
-                <?php echo $this->getChildHtml('topLinks') ?>
+                <div id="header-account" class="skip-content">
+                    <?php echo $this->getChildHtml('topLinks') ?>
+                </div>
             </div>
-            <!-- Cart -->
-            <a href="<?php echo $this->getUrl('wishlist') ?>" class="wishlist-link">Wishlist</a>
 
-            <div class="header-minicart">
-                <?php echo $this->getChildHtml('minicart_head'); ?>
-            </div>
+            <!-- Cart -->
+            <a href="<?php echo $this->getUrl('wishlist') ?>" class="skip-wishlist wishlist-link">Wishlist</a>
+            <?php echo $this->getChildHtml('minicart_head'); ?>
         </div>
         <div class="clearfix"></div>
 

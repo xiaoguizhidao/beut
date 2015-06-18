@@ -32,45 +32,48 @@
  */
 
 .skip-account,.wishlist-link,.skip-cart {
-    background: url(../images/icon3.png) no-repeat 0 0;
-    padding-left: 30px;
+    background: url(../images/icon3.png) no-repeat 10px 14px;
+    padding-left: 35px;
     display: inline-block;
-    margin-left: 35px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+.skip-account{
+    &.skip-active{
+        background: $white url(../images/icon3.png) no-repeat 10px -25px;
+        color: $c-black;
+    }
 }
 .wishlist-link{
-    background: url(../images/icon4.png) no-repeat 0 0;
+    background: url(../images/icon4.png) no-repeat 10px 14px;
 }
 .skip-cart{
-    background: url(../images/icon5.png) no-repeat 0 0;
+    background: url(../images/icon5.png) no-repeat 10px 14px;
 }
 
 // ---------------------------------------------
 
-@include bp(min-width, $bp-medium) {
-
-
-    #header-account.skip-active {
-        @include menu;
-        display: block;
-        position: absolute;
-        z-index: 2000;
-        top: 50px;
-        right: 165px;
-        width: 10px;
-    }
-
-    #header-account a {
-        display: block;
-        padding: 5px 10px;
-        color: $c-text;
-        line-height: 2;
-    }
-
-    #header-account a:hover {
-        color: $c-action;
-    }
-
+#header-account.skip-active {
+    @include menu;
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    top: 50px;
+    left: 0;
+    min-width: 200px;
 }
+
+#header-account a {
+    display: block;
+    padding: 5px 10px;
+    color: $c-text;
+    line-height: 2;
+}
+
+#header-account a:hover {
+    color: $c-action;
+}
+
 
 /* -------------------------------------------- *
  * Account Links
@@ -85,7 +88,34 @@
     display: block;
     padding: 5px 10px;
     line-height:23px;
-    text-align: center;
+    text-align: left;
+    padding-left: 30px;
+    &:before{
+        font-size: 14px;
+        content: '\f105';
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin: -10px 0;
+        transition: all 0.25s ease 0s;
+    }
+    &:hover{
+        padding-left: 35px;
+        &:before{
+            padding-left: 15px;
+        }
+    }
 }
 
 #header-account a:hover {

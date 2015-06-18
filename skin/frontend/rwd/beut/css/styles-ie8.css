@@ -3285,7 +3285,7 @@ body {
   position: fixed;
   top: 50px;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   padding-bottom: 0;
   -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3349,14 +3349,15 @@ body {
 .currency {
   display: inline-block;
   margin-right: 30px;
+  line-height: 2;
 }
-/* line 98, ../scss/layout/_header.scss */
+/* line 99, ../scss/layout/_header.scss */
 .currency img {
   float: left;
   margin-right: 10px;
 }
 
-/* line 103, ../scss/layout/_header.scss */
+/* line 104, ../scss/layout/_header.scss */
 .mobile-nav {
   display: none;
 }
@@ -3364,9 +3365,9 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
-/* line 110, ../scss/layout/_header.scss */
+/* line 111, ../scss/layout/_header.scss */
 .header-language-background {
-  padding: 10px 0;
+  padding: 0;
   background-color: #498fd8;
   text-transform: uppercase;
   height: 50px;
@@ -3376,7 +3377,7 @@ body {
   width: 100%;
   top: 0;
 }
-/* line 120, ../scss/layout/_header.scss */
+/* line 122, ../scss/layout/_header.scss */
 .header-language-background .header-language-container {
   margin-left: auto;
   margin-right: auto;
@@ -3384,91 +3385,95 @@ body {
   width: -moz-calc(100% - 60px);
   width: -webkit-calc(100% - 60px);
   width: calc(100% - 60px);
+  height: 100%;
+  font-size: 12px;
 }
-/* line 125, ../scss/layout/_header.scss */
+/* line 129, ../scss/layout/_header.scss */
 .header-language-background .header-language-container .store-language-container {
   display: inline-block;
   float: left;
+  padding-top: 12px;
 }
-/* line 129, ../scss/layout/_header.scss */
+/* line 134, ../scss/layout/_header.scss */
 .header-language-background .header-language-container a {
   text-decoration: none;
 }
-/* line 134, ../scss/layout/_header.scss */
+/* line 139, ../scss/layout/_header.scss */
 .header-language-background:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 138, ../scss/layout/_header.scss */
+/* line 143, ../scss/layout/_header.scss */
 .header-language-background .form-language,
 .header-language-background .currency-switcher {
   float: left;
   margin-right: 10px;
 }
-/* line 144, ../scss/layout/_header.scss */
+/* line 149, ../scss/layout/_header.scss */
 .header-language-background .welcome-msg {
   float: right;
 }
 
-/* line 149, ../scss/layout/_header.scss */
+/* line 154, ../scss/layout/_header.scss */
 .page-header-container .store-language-container {
   float: right;
   max-width: 35%;
   padding: 13px 15px 10px 10px;
 }
-/* line 154, ../scss/layout/_header.scss */
+/* line 159, ../scss/layout/_header.scss */
 .page-header-container .store-language-container label {
   display: none;
 }
-/* line 157, ../scss/layout/_header.scss */
+/* line 162, ../scss/layout/_header.scss */
 .page-header-container .store-language-container select {
   max-width: 100%;
 }
 
-/* line 173, ../scss/layout/_header.scss */
+/* line 178, ../scss/layout/_header.scss */
 .header-language-background,
 .header-language-background a {
   color: white;
   z-index: 1000;
+  transition: all 0.25s ease 0s;
 }
 
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 191, ../scss/layout/_header.scss */
+/* line 197, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
   float: left;
   text-align: center;
 }
-/* line 195, ../scss/layout/_header.scss */
+/* line 201, ../scss/layout/_header.scss */
 .logo img {
   max-width: 100%;
 }
-/* line 199, ../scss/layout/_header.scss */
+/* line 205, ../scss/layout/_header.scss */
 .logo .small {
   display: block;
 }
-/* line 202, ../scss/layout/_header.scss */
+/* line 208, ../scss/layout/_header.scss */
 .logo .large {
   display: none;
 }
 
-/* line 207, ../scss/layout/_header.scss */
+/* line 213, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8;
 }
 
-/* line 214, ../scss/layout/_header.scss */
+/* line 220, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
 }
-/* line 216, ../scss/layout/_header.scss */
+/* line 222, ../scss/layout/_header.scss */
 .logo .small {
   display: none;
 }
-/* line 219, ../scss/layout/_header.scss */
+/* line 225, ../scss/layout/_header.scss */
 .logo .large {
   display: block;
   max-width: 75px;
@@ -3483,12 +3488,12 @@ body {
 /* ============================================ *
  * Skip Content
  * ============================================ */
-/* line 257, ../scss/layout/_header.scss */
+/* line 263, ../scss/layout/_header.scss */
 .skip-content {
   display: none;
 }
 
-/* line 261, ../scss/layout/_header.scss */
+/* line 267, ../scss/layout/_header.scss */
 .skip-content.skip-active {
   display: block;
 }
@@ -3496,15 +3501,25 @@ body {
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 296, ../scss/layout/_header.scss */
+/* line 302, ../scss/layout/_header.scss */
 .account-cart-wrapper {
-    /*position: absolute;
-    top:0px;
-    right:0px;
-*/
   float: right;
+  height: 100%;
 }
-/* line 303, ../scss/layout/_header.scss */
+/* line 305, ../scss/layout/_header.scss */
+.account-cart-wrapper > [class^="skip-"] {
+  padding-top: 16px;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+/* line 314, ../scss/layout/_header.scss */
 .account-cart-wrapper .wishlist-link .icon {
   background: url(../images/icon4.png) no-repeat;
   width: 19px;
@@ -3815,7 +3830,7 @@ body {
 /* line 46, ../scss/layout/_header-search.scss */
 #header-search {
   position: absolute;
-  top: 100px;
+  top: 88px;
   right: 0;
   width: 100%;
   padding: 50px;
@@ -3916,34 +3931,41 @@ body {
  */
 /* line 34, ../scss/layout/_header-account.scss */
 .skip-account, .wishlist-link, .skip-cart {
-  background: url(../images/icon3.png) no-repeat 0 0;
-  padding-left: 30px;
+  background: url(../images/icon3.png) no-repeat 10px 14px;
+  padding-left: 35px;
   display: inline-block;
-  margin-left: 35px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
 
-/* line 40, ../scss/layout/_header-account.scss */
+/* line 42, ../scss/layout/_header-account.scss */
+.skip-account.skip-active {
+  background: white url(../images/icon3.png) no-repeat 10px -25px;
+  color: black;
+}
+
+/* line 47, ../scss/layout/_header-account.scss */
 .wishlist-link {
-  background: url(../images/icon4.png) no-repeat 0 0;
+  background: url(../images/icon4.png) no-repeat 10px 14px;
 }
 
-/* line 43, ../scss/layout/_header-account.scss */
+/* line 50, ../scss/layout/_header-account.scss */
 .skip-cart {
-  background: url(../images/icon5.png) no-repeat 0 0;
+  background: url(../images/icon5.png) no-repeat 10px 14px;
 }
 
-/* line 52, ../scss/layout/_header-account.scss */
+/* line 56, ../scss/layout/_header-account.scss */
 #header-account.skip-active {
   background: #fff;
   display: block;
   position: absolute;
   z-index: 2000;
   top: 50px;
-  right: 165px;
-  width: 10px;
+  left: 0;
+  min-width: 200px;
 }
 
-/* line 62, ../scss/layout/_header-account.scss */
+/* line 66, ../scss/layout/_header-account.scss */
 #header-account a {
   display: block;
   padding: 5px 10px;
@@ -3951,7 +3973,7 @@ body {
   line-height: 2;
 }
 
-/* line 69, ../scss/layout/_header-account.scss */
+/* line 73, ../scss/layout/_header-account.scss */
 #header-account a:hover {
   color: #498fd8;
 }
@@ -3959,21 +3981,51 @@ body {
 /* -------------------------------------------- *
  * Account Links
  */
-/* line 79, ../scss/layout/_header-account.scss */
+/* line 82, ../scss/layout/_header-account.scss */
 #header-account {
   padding: 5px 0;
 }
 
-/* line 83, ../scss/layout/_header-account.scss */
+/* line 86, ../scss/layout/_header-account.scss */
 #header-account a {
   position: relative;
   display: block;
   padding: 5px 10px;
   line-height: 23px;
+  text-align: left;
+  padding-left: 30px;
+}
+/* line 93, ../scss/layout/_header-account.scss */
+#header-account a:before {
+  font-size: 14px;
+  content: '\f105';
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 20px;
+  height: 20px;
   text-align: center;
+  line-height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin: -10px 0;
+  transition: all 0.25s ease 0s;
+}
+/* line 113, ../scss/layout/_header-account.scss */
+#header-account a:hover {
+  padding-left: 35px;
+}
+/* line 115, ../scss/layout/_header-account.scss */
+#header-account a:hover:before {
+  padding-left: 15px;
 }
 
-/* line 91, ../scss/layout/_header-account.scss */
+/* line 121, ../scss/layout/_header-account.scss */
 #header-account a:hover {
   color: #498fd8;
 }
@@ -3998,24 +4050,47 @@ body {
   width: 22px;
   height: 22px;
   background: rgba(73, 143, 216, 0.9);
-  color: #FFFFFF;
   font-size: 11px;
   line-height: 22px;
   text-align: center;
   font-family: "Century Gothic", Verdana, Arial, sans-serif;
 }
 
-/* line 48, ../scss/layout/_header-cart.scss */
-.skip-link.skip-active .count {
-  color: white;
+/* line 47, ../scss/layout/_header-cart.scss */
+.skip-cart.skip-active {
+  background: white url(../images/icon5.png) no-repeat 10px -35px;
+  color: black;
 }
 
-/* line 56, ../scss/layout/_header-cart.scss */
-.skip-cart.no-count .count {
-  display: none;
+/* line 51, ../scss/layout/_header-cart.scss */
+.minicart-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: white;
+  color: black;
+  padding: 10px;
+  min-width: 300px;
+}
+/* line 59, ../scss/layout/_header-cart.scss */
+.minicart-wrapper .block-subtitle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 45px;
+  height: 45px;
+  text-align: right;
+}
+/* line 67, ../scss/layout/_header-cart.scss */
+.minicart-wrapper .skip-link-close {
+  color: black;
+}
+/* line 70, ../scss/layout/_header-cart.scss */
+.minicart-wrapper .empty {
+  text-transform: none;
 }
 
-/* line 68, ../scss/layout/_header-cart.scss */
+/* line 85, ../scss/layout/_header-cart.scss */
 .skip-cart .count {
   border-radius: 0px;
   -webkit-border-radius: 0px;
@@ -4027,19 +4102,11 @@ body {
   margin-left: 0px;
   width: auto;
 }
-/* line 75, ../scss/layout/_header-cart.scss */
-.skip-cart .count:before {
-  content: '(';
-}
-/* line 78, ../scss/layout/_header-cart.scss */
-.skip-cart .count:after {
-  content: ')';
-}
 
 /* -------------------------------------------- *
  * Mini Cart - Empty
  */
-/* line 89, ../scss/layout/_header-cart.scss */
+/* line 99, ../scss/layout/_header-cart.scss */
 .cart-menu .empty {
   padding: 20px;
   text-align: center;
@@ -4049,25 +4116,25 @@ body {
  * Mini Cart - Full
  */
 /* Actions */
-/* line 100, ../scss/layout/_header-cart.scss */
+/* line 110, ../scss/layout/_header-cart.scss */
 .cart-menu .actions {
   overflow: hidden;
   padding: 15px;
 }
 
-/* line 105, ../scss/layout/_header-cart.scss */
+/* line 115, ../scss/layout/_header-cart.scss */
 .cart-menu .actions .button {
   float: left;
   width: 48%;
 }
 
-/* line 110, ../scss/layout/_header-cart.scss */
+/* line 120, ../scss/layout/_header-cart.scss */
 .cart-menu .actions .button + .button {
   margin-left: 4%;
 }
 
 /* Subtotal */
-/* line 116, ../scss/layout/_header-cart.scss */
+/* line 126, ../scss/layout/_header-cart.scss */
 .cart-menu .subtotal {
   padding: 0 15px 15px;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -4076,12 +4143,12 @@ body {
 }
 
 /* List */
-/* line 125, ../scss/layout/_header-cart.scss */
+/* line 135, ../scss/layout/_header-cart.scss */
 .mini-cart-list {
   margin-bottom: 5px;
 }
 
-/* line 129, ../scss/layout/_header-cart.scss */
+/* line 139, ../scss/layout/_header-cart.scss */
 .mini-cart-list li {
   position: relative;
   min-height: 90px;
@@ -4091,25 +4158,25 @@ body {
   line-height: 1.35;
 }
 
-/* line 138, ../scss/layout/_header-cart.scss */
+/* line 148, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-name {
   display: inline-block;
 }
 
-/* line 142, ../scss/layout/_header-cart.scss */
+/* line 152, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-image {
   position: absolute;
   left: 15px;
   top: 15px;
 }
 
-/* line 148, ../scss/layout/_header-cart.scss */
+/* line 158, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-image img {
   width: 60px;
   height: 60px;
 }
 
-/* line 155, ../scss/layout/_header-cart.scss */
+/* line 165, ../scss/layout/_header-cart.scss */
 .mini-cart-list .has-options {
   margin-bottom: 0;
   color: #a0a0a0;
@@ -4117,7 +4184,7 @@ body {
 }
 
 /* Too full - additional items will be shown in cart */
-/* line 162, ../scss/layout/_header-cart.scss */
+/* line 172, ../scss/layout/_header-cart.scss */
 .cart-menu .last-added {
   padding: 10px 15px 15px;
   border-top: 1px solid #cccccc;
@@ -4300,12 +4367,16 @@ body {
 /* line 173, ../scss/layout/_footer.scss */
 .footer .block-subscribe .input-box {
   float: left;
-  width: -moz-calc(100% - );
-  width: -webkit-calc(100% - );
-  width: calc(100% - );
+  width: -moz-calc(100% - 78px);
+  width: -webkit-calc(100% - 78px);
+  width: calc(100% - 78px);
   padding-top: 0;
 }
-/* line 179, ../scss/layout/_footer.scss */
+/* line 178, ../scss/layout/_footer.scss */
+.footer .form-subscribe-header {
+  text-align: center;
+}
+/* line 182, ../scss/layout/_footer.scss */
 .footer .block-subscribe .input-text {
   width: 100%;
   border-right: 0;
@@ -4315,27 +4386,27 @@ body {
   -ms-border-radius: 0;
   -o-border-radius: 0;
 }
-/* line 183, ../scss/layout/_footer.scss */
+/* line 186, ../scss/layout/_footer.scss */
 .footer .block-subscribe .input-text:-moz-placeholder, .footer .block-subscribe .input-text:-ms-input-placeholder, .footer .block-subscribe .input-text::-moz-placeholder, .footer .block-subscribe .input-text::-webkit-input-placeholder {
   font-size: 10px;
 }
-/* line 192, ../scss/layout/_footer.scss */
+/* line 195, ../scss/layout/_footer.scss */
 .footer .block-subscribe .block-content {
   padding-top: 7px;
 }
-/* line 195, ../scss/layout/_footer.scss */
+/* line 198, ../scss/layout/_footer.scss */
 .footer .block-subscribe .block-content:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .block-subscribe .actions {
   float: left;
   width: 78px;
   margin: 0;
 }
-/* line 206, ../scss/layout/_footer.scss */
+/* line 209, ../scss/layout/_footer.scss */
 .footer .block-subscribe .actions .button {
   height: 40px;
   float: left;
@@ -4345,28 +4416,28 @@ body {
   background: white url(../images/border-subcribe.png) no-repeat left center;
   width: 100%;
 }
-/* line 216, ../scss/layout/_footer.scss */
+/* line 219, ../scss/layout/_footer.scss */
 .footer .bugs,
 .footer address {
   clear: both;
 }
-/* line 221, ../scss/layout/_footer.scss */
+/* line 224, ../scss/layout/_footer.scss */
 .footer .bugs {
   display: none;
 }
-/* line 225, ../scss/layout/_footer.scss */
+/* line 228, ../scss/layout/_footer.scss */
 .footer .form-language,
 .footer .currency-switcher,
 .footer .store-switcher {
   clear: both;
   margin-bottom: 10px;
 }
-/* line 232, ../scss/layout/_footer.scss */
+/* line 235, ../scss/layout/_footer.scss */
 .footer .form-language,
 .footer .currency-switcher {
   display: none;
 }
-/* line 237, ../scss/layout/_footer.scss */
+/* line 240, ../scss/layout/_footer.scss */
 .footer address {
   text-align: center;
   width: 100%;
@@ -4374,17 +4445,17 @@ body {
   margin-top: 30px;
   padding: 30px 0;
 }
-/* line 249, ../scss/layout/_footer.scss */
+/* line 252, ../scss/layout/_footer.scss */
 .footer .links {
   width: 22.65625%;
   padding-right: 0;
   margin-right: 3.125%;
 }
-/* line 255, ../scss/layout/_footer.scss */
+/* line 258, ../scss/layout/_footer.scss */
 .footer .links:nth-child(4) {
   margin-right: 0;
 }
-/* line 259, ../scss/layout/_footer.scss */
+/* line 262, ../scss/layout/_footer.scss */
 .footer .block-subscribe {
   clear: both;
   float: none;
@@ -9136,24 +9207,26 @@ div.paypal-logo span > img {
 /* ============================================ *
  * Checkout - Mini cart
  * ============================================ */
-/* line 30, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 30, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart {
   display: inline-block;
 }
-/* line 37, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 37, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-message {
   display: block;
   padding: 10px;
 }
-/* line 42, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 42, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .empty {
   padding: 10px;
   text-align: center;
 }
-/* line 47, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 47, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-wrapper {
   clear: both;
-  position: relative;
+  position: absolute;
+  top: 17px;
+  right: 0;
 }
 /* line 27, ../../default/scss/mixin/_loading-overlay.scss */
 .header-minicart .minicart-wrapper:before, .header-minicart .minicart-wrapper:after {
@@ -9186,11 +9259,11 @@ div.paypal-logo span > img {
 .header-minicart .minicart-wrapper.loading:before, .header-minicart .minicart-wrapper.loading:after {
   display: block;
 }
-/* line 53, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 55, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .block-cart {
   display: none;
 }
-/* line 56, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 58, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .block-subtitle {
   color: #50A4CF;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -9202,7 +9275,7 @@ div.paypal-logo span > img {
   text-transform: uppercase;
   margin-bottom: 0px;
 }
-/* line 67, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 69, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .block-subtitle .close {
   width: 40px;
   float: right;
@@ -9215,54 +9288,54 @@ div.paypal-logo span > img {
   top: -8px;
   right: -3px;
 }
-/* line 80, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 82, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .mini-products-list {
   padding: 10px;
   padding-top: 0px;
 }
-/* line 84, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 86, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .mini-products-list li {
   padding: 8px 5px 8px 11px;
   border-bottom: 1px solid #DDDDDD;
   position: relative;
 }
-/* line 89, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 91, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .mini-products-list li.last {
   border: none;
 }
-/* line 93, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 95, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .mini-products-list li .product-details {
   position: relative;
 }
-/* line 100, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 102, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .product-details .product-name {
   padding-top: 0px;
   font-weight: bold;
 }
-/* line 104, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 106, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .product-details .product-name a {
   color: #498fd8;
 }
-/* line 110, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 112, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper {
   margin-bottom: 0.5em;
 }
-/* line 113, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 115, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper th {
   text-transform: uppercase;
   padding-right: 10px;
 }
-/* line 117, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 119, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper td {
   color: #498fd8;
   clear: right;
 }
-/* line 123, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 125, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper .qty-wrapper td {
   height: 33px;
   line-height: 33px;
 }
-/* line 129, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 131, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper .qty {
   padding-left: 4px;
   padding-right: 4px;
@@ -9271,7 +9344,7 @@ div.paypal-logo span > img {
   text-align: center;
   height: 30px;
 }
-/* line 138, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 140, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper .quantity-button {
   opacity: 0;
   -webkit-transition-property: opacity;
@@ -9283,30 +9356,30 @@ div.paypal-logo span > img {
   -o-transition-duration: 100ms;
   transition-duration: 100ms;
 }
-/* line 144, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 146, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper .quantity-button[disabled] {
   cursor: default;
 }
-/* line 148, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 150, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .info-wrapper .quantity-button.visible {
   opacity: 1;
 }
-/* line 154, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 156, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .subtotal {
   background-color: #DDDDDD;
   text-align: center;
   line-height: 2em;
 }
-/* line 159, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 161, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .subtotal .label {
   color: white;
   text-transform: uppercase;
 }
-/* line 163, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 165, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .subtotal .price {
   color: #498fd8;
 }
-/* line 168, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 170, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-actions {
   padding: 10px;
   margin-top: 0px;
@@ -9314,46 +9387,47 @@ div.paypal-logo span > img {
   position: relative;
   text-align: center;
 }
-/* line 175, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 177, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-actions .checkout-button {
   min-width: 145px;
 }
-/* line 179, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 181, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-actions .cart-link {
   height: 33px;
   line-height: 39px;
   text-transform: uppercase;
   font-size: 13px;
 }
-/* line 187, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 189, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .minicart-actions .paypal-logo .paypal-or {
   line-height: 1.6;
 }
-/* line 193, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 195, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart #minicart-error-message {
   text-align: center;
   color: red;
   display: none;
 }
-/* line 199, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 201, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart #minicart-success-message {
   text-align: center;
   color: green;
   display: none;
 }
-/* line 206, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 208, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .jcarousel-control-prev,
 .header-minicart .jcarousel-control-next {
   display: none;
 }
 
-/* line 212, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 214, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart.skip-active .block-cart,
 .block-cart.skip-active {
   display: block;
+  position: relative;
 }
 
-/* line 218, ../../default/scss/module/_checkout-cart-minicart.scss */
+/* line 221, ../scss/module/_checkout-cart-minicart.scss */
 .checkout-types.minicart {
   float: none;
   text-align: center;

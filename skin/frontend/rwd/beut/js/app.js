@@ -717,16 +717,13 @@ $j(document).ready(function () {
         skipLinks.removeClass('skip-active');
         skipContents.removeClass('skip-active');
 		$j('.header-nav').removeClass('skip-active');
-        $j('.skip-active').parent().css('background','transparent');
         // Toggle stubs
         if (isSkipContentOpen) {
             self.removeClass('skip-active');
-            $j(this).parent().css('background','transparent');
 
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
-            $j('.skip-active.skip-cart').parent().css('background','#202020');
         }
     });
 	//Skip Nav Menu	

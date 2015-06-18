@@ -39,7 +39,7 @@
     position: fixed;
     top: 50px;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     padding-bottom: 0;
     @include letransition(all,0.45s,cubic-bezier(0.25, 0.46, 0.45, 0.94));
     &:hover{
@@ -95,6 +95,7 @@
 .currency{
     display: inline-block;
     margin-right: 30px;
+    line-height: 2;
     img{
         float: left;
         margin-right: 10px;
@@ -108,7 +109,7 @@
  * ============================================ */
 
 .header-language-background {
-    padding: $gap 0;
+    padding: 0;
     background-color: $c-action;
     text-transform: uppercase;
     height: 50px;
@@ -117,14 +118,18 @@
     position: fixed;
     width: 100%;
     top: 0;
+
     .header-language-container {
         margin-left: auto;
         margin-right: auto;
         text-align: left;
         @include calc(width,'100% - 60px');
+        height: 100%;
+        font-size: $f-size-xs;
         .store-language-container{
             display: inline-block;
             float: left;
+            padding-top: 12px;
         }
         a{
             text-decoration: none;
@@ -174,6 +179,7 @@
 .header-language-background a {
     color: $c-text-white;
     z-index: 1000;
+    transition: all 0.25s ease 0s;
 }
 
 @include bp(max-width, $bp-medium) {
@@ -294,11 +300,16 @@
 }
 
 .account-cart-wrapper {
-    /*position: absolute;
-    top:0px;
-    right:0px;
-*/
     float: right;
+    height: 100%;
+    > [class ^="skip-"]{
+        padding-top: 16px;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        float: left;
+        @include letransition(all,0.25s,ease 0s);
+    }
     .wishlist-link{
         .icon{
             background: url(../images/icon4.png) no-repeat;

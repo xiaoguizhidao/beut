@@ -175,6 +175,9 @@
         @include calc(width, "100% - 78px");
         padding-top: 0;
     }
+    .form-subscribe-header{
+        text-align: center;
+    }
 
     .block-subscribe .input-text {
         width: 100%;
