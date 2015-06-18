@@ -5002,29 +5002,29 @@ p.product-name a:hover {
   color: #498fd8;
 }
 
-/* line 444, ../scss/module/_product-list.scss */
+/* line 443, ../scss/module/_product-list.scss */
 .mini-products-images-list:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 448, ../scss/module/_product-list.scss */
+/* line 447, ../scss/module/_product-list.scss */
 .mini-products-images-list li.item {
   float: left;
   width: 50%;
   margin: 0;
   padding: 0 5px 10px 0;
 }
-/* line 454, ../scss/module/_product-list.scss */
+/* line 453, ../scss/module/_product-list.scss */
 .mini-products-images-list li.item:nth-child(even) {
   padding-right: 0;
   padding-left: 5px;
 }
-/* line 459, ../scss/module/_product-list.scss */
+/* line 458, ../scss/module/_product-list.scss */
 .mini-products-images-list li.item .product-image {
   display: block;
 }
-/* line 462, ../scss/module/_product-list.scss */
+/* line 461, ../scss/module/_product-list.scss */
 .mini-products-images-list li.item .product-image img {
   width: 100%;
   max-width: 100%;
@@ -5033,17 +5033,17 @@ p.product-name a:hover {
 /* ============================================ *
  * Catalog - List
  * ============================================ */
-/* line 477, ../scss/module/_product-list.scss */
+/* line 476, ../scss/module/_product-list.scss */
 .category-image {
   border: 1px solid #cccccc;
   padding: 10px;
 }
-/* line 481, ../scss/module/_product-list.scss */
+/* line 480, ../scss/module/_product-list.scss */
 .category-image img {
   width: 100%;
   max-width: 100%;
 }
-/* line 485, ../scss/module/_product-list.scss */
+/* line 484, ../scss/module/_product-list.scss */
 .category-image img:hidden {
   display: none;
 }
@@ -5051,7 +5051,7 @@ p.product-name a:hover {
 /* ============================================ *
  * Layered Navigation
  * ============================================ */
-/* line 495, ../scss/module/_product-list.scss */
+/* line 494, ../scss/module/_product-list.scss */
 .block-layered-nav .block-subtitle--filter {
   display: none;
   margin: 0;
@@ -5162,31 +5162,31 @@ p.product-name a:hover {
   border-width: 0 1px 1px 1px;
 }
 
-/* line 507, ../scss/module/_product-list.scss */
+/* line 506, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 511, ../scss/module/_product-list.scss */
+/* line 510, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd ol > li > span, .block-layered-nav dl dd ol > li > a {
   padding: 5px 15px;
   display: block;
 }
-/* line 515, ../scss/module/_product-list.scss */
+/* line 514, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd ol > li > a .count {
   color: #a0a0a0;
 }
 
-/* line 521, ../scss/module/_product-list.scss */
+/* line 520, ../scss/module/_product-list.scss */
 .block-layered-nav .block-content > dl > dt {
   padding-left: 10px;
 }
-/* line 524, ../scss/module/_product-list.scss */
+/* line 523, ../scss/module/_product-list.scss */
 .block-layered-nav .block-content > dl > dt:after {
   display: none;
 }
 
-/* line 598, ../scss/module/_product-list.scss */
+/* line 597, ../scss/module/_product-list.scss */
 .block-layered-nav .currently .block-subtitle {
   display: block;
   margin: 0;
@@ -5200,27 +5200,27 @@ p.product-name a:hover {
   text-rendering: optimizeSpeed;
   text-transform: uppercase;
 }
-/* line 603, ../scss/module/_product-list.scss */
+/* line 602, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol {
   padding-left: 10px;
   margin-bottom: 10px;
 }
-/* line 607, ../scss/module/_product-list.scss */
+/* line 606, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li {
   margin-bottom: 5px;
 }
-/* line 610, ../scss/module/_product-list.scss */
+/* line 609, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li .label {
   font-weight: bold;
 }
-/* line 614, ../scss/module/_product-list.scss */
+/* line 613, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li:after {
   content: '';
   display: table;
   clear: both;
 }
 
-/* line 620, ../scss/module/_product-list.scss */
+/* line 619, ../scss/module/_product-list.scss */
 .block-layered-nav .actions {
   text-align: right;
   margin-bottom: 7px;
