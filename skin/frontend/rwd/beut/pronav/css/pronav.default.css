@@ -1,0 +1,284 @@
+#pronav {
+    /* background: url("../images/bg-nav.gif") repeat-x scroll 0 1px transparent;*/
+    height: 36px;
+    list-style-type: none;
+    margin-left: 170px;
+    margin-top: -40px !important;
+    padding: 0 0 3px;
+    /*rhys 20/5/2014
+    position: relative;
+    */
+	
+}
+li.level0 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: auto;
+}
+/*
+li.level0 a.level0 {
+    background: none repeat scroll 0 0 transparent;
+    
+    color: #002C53;
+    display: block;
+    float: left;
+    font-weight: normal;
+    height: 22px;
+    padding: 10px 8px 8px;
+    text-decoration: none;
+}
+a.level0 .highlight {
+    padding: 0 2px;
+}
+a.level0:hover, a.level0:active, li.level0:hover a.level0 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+   
+    border-image: none;
+   
+    cursor: pointer;
+}
+*/
+
+li.level0 a.level0 {
+    
+    color: #002C53;
+    display: block;
+    float: left;
+    font-weight: normal;
+    height: 22px;
+    padding: 10px 8px 8px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 99999;
+}
+a.level0 .highlight {
+    padding: 0 2px;
+}
+a.level0:hover, a.level0:active, li.level0:hover a.level0 {
+    background: url("../images/menuarrow.png") no-repeat scroll center 40px rgba(0, 0, 0, 0);
+    color: #8eb317;
+}
+
+
+li.level0.nav-giftcards:hover a {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #002C53;
+    height: 21px;
+}
+li.level0.first:hover a.level0 {
+    border-left-color: #CCCCCC;
+}
+.sub {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    /*border-color: #002C53;
+    border-image: none;
+    
+    border-style: solid;
+    border-width: 3px;*/
+    display: none;
+    left: 0;
+    margin: 0;
+    min-height: 219px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 123px;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    background-color: #eee;
+}
+li.level0:hover .sub {
+    display: block;
+}
+li.sub-section {
+    border: medium none;
+    float: left;
+    margin-right:30px;
+    padding-top: 20px;
+    width: auto;
+}
+li.sub-section.last{
+	margin-right: 0;
+}
+h3.sub-cat-title, .madegiftcard-index-index h3.sub-cat-title {
+    border-bottom: medium none;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    text-transform: uppercase;
+    color: #002B54;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+.sub-cats-container {
+    /* border-top: 1px solid #B1AEAE; */
+    margin-top: 4px;
+    padding-top: 1px;
+    float: left;
+}
+ul.subcats {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    width: 144px;
+    margin-bottom: 40px;
+    padding-left: 15px;
+}
+
+ul.subcats.first{
+	/*border-left: 1px solid #fff;*/
+}
+
+ul.subcats.first.no-border{
+	border-left: 0;
+}
+ul.subcats.not-last {
+    margin-right: 31px;
+}
+ul.subcats.last{
+
+}
+.nav-preview-img {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+li.nav-list-item {
+    clear: both;
+    line-height: 25px;
+}
+a.nav-item {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    font-weight: normal;
+    padding: 0;
+}
+a.nav-item:hover {
+    text-decoration: none;
+}
+a.nav-item:hover span {
+    border-bottom: 1px solid #002C53;
+    color: #002C53;
+    padding-bottom: 0;
+}
+.active a.level0 span, .madegiftcard-index-index .level0.nav-giftcards .highlight, .product-print-voucher .nav-giftcards.level0 .highlight, .product-email-voucher .nav-giftcards.level0 .highlight, .category-labs .nav-vote.level0 .highlight {
+    background: none repeat scroll 0 0 #FDEC3F;
+}
+.category-labs .nav-sale.level0 .highlight {
+    background: none repeat scroll 0 0 #FDEC3F;
+}
+.ait-designer-index-index .nav-designers .highlight {
+    background: none repeat scroll 0 0 #FDEC3F;
+}
+li.va, a.view-all-sale {
+    bottom: 0;
+    clear: both;
+    display: block;
+    /*padding: 11px 14px 0 0;*/
+    /*position: absolute;*/
+    width: 100%;
+    padding-right: 20px !important;
+    background-color: #002C53;
+}
+a.view-all-cat-items {
+    display: block;
+    float: none;
+    font-size: 11px;
+    line-height: 12px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: right;
+    padding: 3px 0 6px 0;
+    width: 920px;
+}
+a.view-all-cat-items:hover span.go-all, a.view-all-cat-items:active span.go-all {
+    border-bottom: 1px solid #002C53;
+    color: #002C53;
+    padding-bottom: 0;
+}
+a.view-all-cat-items span.go {
+    font-size: 20px;
+    position: relative;
+    top: 1px;
+}
+li.nav-vote .sub {
+    padding-top: 0;
+}
+li.nav-vote h3 {
+    border-bottom: 1px solid #B1AEAE;
+    padding-bottom: 4px;
+}
+ul#pronav li a.level0 span {font-size: 15px;color: #002C53;}
+
+ul#pronav li a.level0:hover, ul#pronav li:hover a.level0{
+   /* background: url("../images/drop-down-pin.gif") no-repeat scroll center 31px transparent;*/
+   
+}
+ul#pronav li.selected a.level0{
+   
+	
+}
+ul#pronav li.selected a.level0 span {font-weight: bold;}
+
+/*#pronav .inner{
+	width: 920px;
+	margin:  0 auto;
+}*/
+
+#pronav .inner{
+	position: relative;
+	left: 50%;
+	margin-left: -460px;
+}
+
+li.furniture .inner{
+	background-position: 273px 0;
+}
+
+li.lighting .inner{
+	background-position: 413px 0;
+}
+
+li.wallpaper .inner{
+	background-position: 493px 0;
+}
+
+li.gifts .inner{
+	background-position: 565px 0;
+}
+
+li.homeware .inner{
+	background-position: 635px 0;
+}
+
+li.designers .inner{
+	background-position: 728px 0;
+}
+
+
+
+#pronav .inner:after, li.sub-section:after{
+	content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.main-container {
+	
+}
