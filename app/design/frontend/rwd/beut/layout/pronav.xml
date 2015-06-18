@@ -4,10 +4,10 @@
 		<reference name="head">
 			<!-- Remove this, by commenting it out, if jQuery library has already been included BEFORE ProNav inclusion-->
 			<!-- Otherwise comment out jQuery inclusions in extensions that load it AFTER  -->
-			<action method="addJs">
+			<!--<action method="addJs">
 				<js>pronav/jquery.1.6.4.min.js</js>
 			</action>
-			
+			-->
 			<action method="addJs">
 				<js>pronav/jquery.hover.intent.js</js>
 			</action>
