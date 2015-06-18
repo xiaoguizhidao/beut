@@ -1,0 +1,375 @@
+<?php
+/**
+ * @category    Trmmarketing
+ * @package     Trmmarketing_PopupWidgets
+ * @copyright   Copyright (c) 2013 TRM Marketing LLC
+ * @license     http://www.trm-marketing.com/solutions/license/TRM-Marketing-Standard-License-Agreement.html
+ */  
+			$popupModalClickClose = Mage::getStoreConfig('trmpopupconfig/trmpopupdesign_group/popupmodalclickclose',Mage::app()->getStore());
+			$popupModalColor = Mage::getStoreConfig('trmpopupconfig/trmpopupdesign_group/popupmodalcolor',Mage::app()->getStore());
+			$popupModalOpacity = Mage::getStoreConfig('trmpopupconfig/trmpopupdesign_group/popupmodalopacity',Mage::app()->getStore());
+			$popupModalInDuration = Mage::getStoreConfig('trmpopupconfig/trmpopupdesign_group/popupmodalinduration',Mage::app()->getStore());
+			$popupModalOutDuration = Mage::getStoreConfig('trmpopupconfig/trmpopupdesign_group/popupmodaloutduration',Mage::app()->getStore());
+			
+			
+			$currentStoreId = Mage::app()->getStore()->getId();
+			//echo $currentStoreId;
+			$cookieConfig = Mage::getSingleton('core/cookie');
+			
+			// excluse any of the specified user agents
+			$blockPopup = false;
+			if (Mage::getStoreConfig('trmpopupconfig/trmpopup_group/excludebrowsers',Mage::app()->getStore()) != ""):
+			$exclude = explode("|", Mage::getStoreConfig('trmpopupconfig/trmpopup_group/excludebrowsers',Mage::app()->getStore()));
+			foreach ($exclude as $exludedBroswer):
+			if(preg_match('/('.$exludedBroswer.')[ \/]([\w.]+)/', $_SERVER['HTTP_USER_AGENT'])) $blockPopup = true;
+			endforeach;
+            endif;
+			if($blockPopup == false):
+       
+            $storeBaseUrl = Mage::getBaseDir();
+			$resource = Mage::getSingleton('core/resource');
+			$read= $resource->getConnection('core_read');
+			$popupTable = $resource->getTableName('popup');
+			$store_id = $this->helper('core')->getStoreId();
+			$select = $read->select()
+			   ->from($popupTable,array('popup_id','title','stores_id','template','filename','background_color','modal_background','modal_color','modal_video_mp4','modal_video_ogv','modal_opacity','modal_video_loop','cookie_value','cookie_expiry','width','height','popup_content','styles','delay','status', 'timestatus','coupon_id','begin_time','end_time','sort_order'))
+			   ->where('status=1')
+			   ->order('sort_order ASC') ;
+			   
+			$popups = $read->fetchAll($select);
+			
+			//echo count($popups);
+			foreach ($popups as $item) :
+			
+			  
+			$helper = Mage::helper('cms');
+			$processor = $helper->getBlockTemplateProcessor();
+			  
+			
+			$enabledPopup = false;
+			
+			//makesure pop-up time frame is within range
+			//if($item['begin_time'] == "" && $item['end_time'] == "" )  $enabledPopup = true;
+			if(time() > strtotime($item['begin_time']) && $item['end_time'] == "" )  $enabledPopup = true;
+			//if($item['begin_time'] == "" && time() <= strtotime($item['end_time']) )  $enabledPopup = true;
+			if(time() > strtotime($item['begin_time']) && time() <= strtotime($item['end_time']) )  $enabledPopup = true;
+			if ($enabledPopup == true):
+			$stores = explode(',', $item['stores_id']);
+			if(in_array($currentStoreId, $stores) || in_array(0, $stores)) :
+		
+			if ($item['status'] == '1') :
+			
+			//// Beginning check cookie and set cookie
+			if (1 or !isset($_COOKIE[$item['cookie_value']])) :
+			//setcookie($item['cookie_value'], time(), time()+ $item['cookie_expiry'], $cookieConfig->getPath());
+ 			//// End of check cookie and set cookie
+			 //echo $item['title'];
+			?>
+			<style>
+			
+			<?php
+			//modal appearance and overrides
+			 
+			if (!$popupModalColor == ""): 
+			$modalColor = $popupModalColor; 
+			else: 
+			$modalColor = '#FFFFFF'; 
+			endif;
+			
+			//modal color override
+			if ($item['modal_color'] != "") $modalColor =  $item['modal_color'];
+			
+			//modal background image
+			$modalBackground = "";
+			if ($item['modal_background'] != ""):
+			$modalBackground .= 'background-size:100% auto; background-image:url("'. Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) .$item['modal_background'].'");'; 
+			
+			endif;
+			
+			$modalOpacity = "";
+			if (!$popupModalOpacity == ""): 
+			$modalOpacity = $popupModalOpacity; 
+			else: 
+			$modalOpacity =  '0.5'; 
+			endif;
+			if ($item['modal_opacity'] != "") $modalOpacity = $item['modal_opacity'];
+			
+			?>
+			
+			 
+			
+			
+			#backgroundFade { background-color:<?php echo $modalColor; ?>; <?php echo $modalBackground; ?> height:140%; left:0px; margin:0px; padding:0px; position:fixed; top:0px; visibility:hidden; width:100%; z-index:160000; opacity:<?php echo $modalOpacity; ?>; }
+			#videoBackground { overflow: hidden; position: absolute; top: 0; width: 100%; z-index: 160001; }
+			#closeLink { font-size:16px; color:#fff; position:absolute; right:10px; bottom:10px; }
+			
+			
+			
+		</style>
+        <script>
+        function getCookieExt(c_name) {
+		    if (document.cookie.length > 0) {
+		        c_start = document.cookie.indexOf(c_name + "=");
+		        if (c_start != -1) {
+		            c_start = c_start + c_name.length + 1;
+		            c_end = document.cookie.indexOf(";", c_start);
+		            if (c_end == -1) c_end = document.cookie.length;
+		            return unescape(document.cookie.substring(c_start, c_end));
+		        }
+		    }
+		    return "";
+		}
+		<?php $popupDateUntil = $item['end_time']; ?>
+		var popupUntil = "<?php echo $popupDateUntil; ?>";
+		
+		var magentoPopupBox = Class.create({
+		open : function () {
+			//this._centerWindow(this.container);
+			this._fade('open', this.container);
+		},
+		
+		close : function () {
+			this._fade('close', this.container);
+		},
+		
+		_fade : function fadeBg(userAction,whichDiv){
+			if(userAction=='close'){
+				new Effect.Opacity('backgroundFade',
+						   {duration:<?php if (!$popupModalOutDuration == ""): echo $popupModalOutDuration; else: echo '.5'; endif; ?>,
+							from:<?php echo $modalOpacity; ?>,
+							to:0,
+							afterFinish:this._makeInvisible,
+							afterUpdate:this._hideLayer(whichDiv)});
+			}else{
+				new Effect.Opacity('backgroundFade',
+						   {duration:<?php if (!$popupModalInDuration == ""): echo $popupModalInDuration; else: echo '.5'; endif; ?>,
+							from:0,
+							to:<?php echo $modalOpacity; ?>,
+							beforeUpdate:this._makeVisible,
+							afterFinish:this._showLayer(whichDiv)});
+			}
+		},
+		
+		_makeVisible : function makeVisible(){
+			$("backgroundFade").style.visibility="visible";
+			$("magentoPopupContainer").style.visibility="visible";
+			<?php if($popupModalClickClose == '1'): ?>
+			
+			$('backgroundFade').observe('click', function(event) { autoClosePopup();checkForVideo();
+			 });
+			<?php  endif; ?>
+		},
+	
+		_makeInvisible : function makeInvisible(){
+			$("backgroundFade").style.visibility="hidden";
+		},
+	
+		_showLayer : function showLayer(userAction){
+			$(userAction).style.display="block";
+		},
+		
+		_hideLayer : function hideLayer(userAction){
+			$(userAction).style.display="none";
+		},
+		
+		_centerWindow : function centerWindow(element) {
+			var windowHeight = parseFloat($(element).getHeight())/2; 
+			var windowWidth = parseFloat($(element).getWidth())/2;
+	
+			if(typeof window.innerHeight != 'undefined') {
+				$(element).style.top = Math.round(document.body.offsetTop + ((window.innerHeight - $(element).getHeight()))/2)+'px';
+				$(element).style.left = Math.round(document.body.offsetLeft + ((window.innerWidth - $(element).getWidth()))/2)+'px';
+			} else {
+				$(element).style.top = Math.round(document.body.offsetTop + ((document.documentElement.offsetHeight - $(element).getHeight()))/2)+'px';
+				$(element).style.left = Math.round(document.body.offsetLeft + ((document.documentElement.offsetWidth - $(element).getWidth()))/2)+'px';
+			}
+		},
+		
+		initialize : function(containerDiv) {
+			this.container = containerDiv;
+			if($('backgroundFade') == null) {
+				var screen = new Element('div', {'id': 'backgroundFade'});
+				document.body.appendChild(screen);
+			}
+			this._hideLayer(this.container);
+		}
+	});
+
+
+		</script>
+        <?php if($item['filename'] != "" || $item['background_color'] != ""):
+		$backgroundSetup = 'background:';
+		  
+		if($item['filename'] != "") $backgroundSetup .= 'url(' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $item['filename'] .') no-repeat';
+		if($item['background_color'] != "") $backgroundSetup .= ' '.$item['background_color'];
+		$backgroundSetup .= ';';
+		
+		
+		endif; ?>
+        
+        <?php 
+		if (($item['width'] != '')&&($item['height'] != '')):
+		$ml = round($item['width'] / 2);
+        $mt = round($item['height'] / 2);
+		endif;
+		 ?>
+        
+        <style>
+		#magentoPopupContainer  { position: fixed; <?php echo $backgroundSetup; ?> width: <?php echo $item['width']; ?>px; height: <?php echo $item['height']; ?>px; z-index: 160010; top:50%; left:50%; margin-left:-<?php echo $ml.'px'; ?>;  margin-top:-<?php echo $mt.'px'; ?>; visibility:hidden; }
+			
+			<?php echo $item['styles']; ?>
+		</style>
+				<div id="magentoPopupContainer"><!-- TRM Marketing Promotional Pop-ups ver 2.7.9 -->
+			    	<?php echo $processor->filter($item['popup_content']); ?>
+                    
+                    <?php 
+					if ($item['template'] != 'blank_no_close'): ?>
+					<a id="closeLink" href="javascript:void(0);">Close [x]</a>
+                    <?php endif; ?>
+                    
+                    
+				</div>
+              
+            <script>
+            function popupLoad() {
+            	magentoPopup = new magentoPopupBox('magentoPopupContainer');
+				openPopupDelay.delay(<?php echo $item['timestatus'] ?>);
+				new Ajax.Updater('popupviewed', '<?php echo $this->getUrl('popup/index/view') ?>', {
+     			parameters: { id: <?php echo $item['popup_id']; ?> }
+   				});
+				
+				<?php
+				if(($item['modal_video_mp4'] != "") || ($item['modal_video_ogv'] != "")):
+				?>
+				var video = new Videoplayer('<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $item['modal_video_mp4']; ?>','<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $item['modal_video_ogv']; ?>','<?php echo $item['modal_video_loop']; ?>');
+				<?php
+				endif;
+				?>
+            }
+            Event.observe(window, 'load', function () { 
+            	if (!getCookieExt('<?php echo $item['cookie_value']; ?>')) {
+            		popupLoad();
+            	}
+            });
+			
+			
+			if(document.getElementById("closeLink")) {
+			$('closeLink').observe('click', function(event) { autoClosePopup();checkForVideo();
+			 });
+			}
+			
+			 if(document.getElementById("closeLinkCustom")) {
+			$('closeLinkCustom').observe('click', function(event) { autoClosePopup();checkForVideo();
+			 });
+			 }
+			 
+			 // make links in pop-up set cookie before following
+			 if(document.getElementById("popupLink")) {
+			$('popupLink').observe('click', function(event) { cookieSetTRM('<?php echo $item['cookie_value']; ?>', '<?php echo time(); ?>', '<?php echo $item['cookie_expiry']; ?>', '<?php echo $cookieConfig->getPath(); ?>');
+			//alert('clicked');
+			 forwardTo($('popupLink').readAttribute('rel')).delay(500);
+			
+			 });
+			 
+			 }
+			 
+			 function forwardTo(url){
+				 window.location = url
+			 }
+			 
+			 function openPopupDelay(){
+				 magentoPopup.open();
+			 }
+			
+			var popupCloseType = 'standard';
+			function autoClosePopup() {
+				if(popupCloseType == 'standard') { setStandardCookie(); }
+				magentoPopup.close(); 
+				}
+			<?php if ($item['delay'] != '0'):  ?>
+			
+			autoClosePopup.delay(<?php echo $item['delay'] ?>);
+			checkForVideo.delay(<?php echo $item['delay'] ?>);
+			<?php endif; ?>
+			function checkForVideo() {
+			if(typeof stopVideo == 'function') { stopVideo(); }	
+			}
+			
+			function setStandardCookie() {
+				//setcookie($item['cookie_value'], time(), time()+ $item['cookie_expiry'], $cookieConfig->getPath());
+				cookieSetTRM('<?php echo $item['cookie_value']; ?>', '<?php echo time(); ?>', '<?php echo $item['cookie_expiry']; ?>', '<?php echo $cookieConfig->getPath(); ?>');
+				//alert("Standard Cookie Set");
+				
+			}
+			
+			function promotionalPopupConversion(autocloseValue, trackconversion, conversionexpiry, conversionsuccessurl) {
+				// check if new expiry should be used
+				if(conversionexpiry != 'nochange') {
+				popupCloseType = 'conversionUpdate';
+				//ajaz updated call goes here
+				cookieSetTRM('<?php echo $item['cookie_value']; ?>', '<?php echo time(); ?>', conversionexpiry, '<?php echo $cookieConfig->getPath(); ?>')
+				//alert("Expire in: " + conversionexpiry);
+				}
+				
+				// check if conversion should be tracked
+				if(trackconversion == 'yes') {
+				//ajax updated call goes here
+				new Ajax.Updater('popupconversion', '<?php echo $this->getUrl('popup/index/conversion') ?>', {
+     			parameters: { id: <?php echo $item['popup_id']; ?> }
+   				});
+				
+				if(conversionsuccessurl != '') {
+					//alert(conversionsuccessurl);
+					// Universal Analytics tracking
+					<?php $popupSendToGAUniversal = Mage::getStoreConfig('trmpopupconfig/trmpopuptracking_group/trackingoptions',Mage::app()->getStore()); 
+					if ($popupSendToGAUniversal == 'GAUniversal' || $popupSendToGAUniversal == 'GAAll'):?>
+					ga('send', 'pageview', { 'page': conversionsuccessurl});
+					<?php endif; ?>
+					// Classic Analytics Tracking
+					<?php $popupSendToGAUniversal = Mage::getStoreConfig('trmpopupconfig/trmpopuptracking_group/trackingoptions',Mage::app()->getStore()); 
+					if ($popupSendToGAUniversal == 'GAClassic' || $popupSendToGAUniversal == 'GAAll'):?>
+					
+					try {
+        			// Google Analytics non-asynch code
+        			// pageTracker._trackPageview('/checkout/onepage/'+section+'/');
+
+        			// Google Analytics asynchronus code
+        			_gaq.push(['_trackPageview', conversionsuccessurl]);
+
+    				} catch(err) { }
+					
+					<?php endif; ?>
+					
+
+					
+				}
+				
+				}
+				
+				//setup autoclose on success
+				if(autocloseValue != 'no') {
+					if(autocloseValue == 'instant') { autoClosePopup(); }
+				autoClosePopup.delay(autocloseValue);
+			    checkForVideo.delay(autocloseValue);
+				}
+				
+				
+				
+				
+			}
+ 			</script>
+            
+				<?php
+				
+				break;
+				
+			endif;
+				
+			endif;
+			endif;
+			endif;
+			endforeach;
+			
+			endif;
+			
+			?> 
