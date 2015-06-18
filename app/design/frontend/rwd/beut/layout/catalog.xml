@@ -79,7 +79,10 @@ Category default layout
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="content">
-            <block type="catalog/navigation" name="catalog.special.leftnav" after="currency" template="catalog/navigation/left.phtml">
+            <!--<block type="catalog/navigation" name="catalog.special.leftnav" after="currency" template="catalog/navigation/left.phtml">
+                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+            </block>-->
+            <block type="amshopby/catalog_layer_view" name="amshopby.navleft" before="-" template="catalog/layer/view.phtml">
                 <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
             </block>
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
@@ -120,7 +123,10 @@ Category layered navigation layout
         <label>Catalog Category (Anchor)</label>
 
         <reference name="content">
-            <block type="catalog/layer_view" name="catalog.special.leftnav" template="catalog/layer/view.phtml">
+            <!--<block type="catalog/layer_view" name="catalog.special.leftnav" template="catalog/layer/view.phtml">
+                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+            </block>-->
+            <block type="amshopby/catalog_layer_view" name="amshopby.navleft" before="-" template="catalog/layer/view.phtml">
                 <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
             </block>
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
