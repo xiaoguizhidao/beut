@@ -1,4 +1,0 @@
-Options +ExecCGI
-
-order deny,allow 
-allow from all
