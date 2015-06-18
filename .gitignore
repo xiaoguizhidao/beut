@@ -5,6 +5,8 @@ app/.DS_Store
 app/design/.DS_Store
 app/design/frontend/.DS_Store
 app/design/frontend/rwd/.DS_Store
+skin/frontend/rwd/beut/css/.DS_Store
+skin/frontend/rwd/beut/js/.DS_Store
 app/design/frontend/rwd/default/template/catalog/.DS_Store
 app/design/frontend/rwd/default/template/catalog/product/.DS_Store
 app/design/frontend/rwd/redesign/.DS_Store
