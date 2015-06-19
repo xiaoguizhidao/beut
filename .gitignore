@@ -5,6 +5,8 @@ _MACOSX
 .DS_Store
 .DS_Store?
 ._*
+.idea/beutugrade.iml
+.idea/workspace.xml
 .idea/magicento/config.xml
 .idea/magicento/layout_frontend.xml
 app/.DS_Store

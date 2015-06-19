@@ -1,0 +1,102 @@
+<?php
+$currentUrl = Mage::helper('core/url')->getCurrentUrl();
+$selectedStateSegment = Mage::helper('pronav')->getSelectedStateSegment($currentUrl,  $this->getBaseUrl());
+$selectedStateSegment = $selectedStateSegment ? $selectedStateSegment : 'index';
+
+
+
+
+if ($this->getNavConfig('pronav_status'))
+{
+   $output = '<ul id="pronav">';
+   $navData = $this->getNavData();
+   foreach ($navData as $data)
+   {
+      $urlKey = strlen($data['url_key']) > 0 && $data['url_key'] ? $data['url_key'] : '#';
+      $selected = '';
+      if(strpos('--'.$urlKey, $selectedStateSegment)){
+      	$selected = 'selected';
+      }
+      
+      if ($data['static_block'] == 0 || ! $data['static_block'])
+      {
+         $output .= '<li id="' . $data['li_css_id'] . '" class="'.$selected.' ' . $data['li_css_class'] . '"><a href="' . $this->getBaseUrl()  . $urlKey . '" id="' . $data['css_id'] . '" class="' . $data['css_class'] . '"><span class="pronav-top-level-span">' . Mage::helper('pronav')->__($data['name']) . '</span></a></li>';
+      } else {
+         // item has static block
+         $output .= '<li id="' . $data['li_css_id'] . '" class="'.$selected.' ' . $data['li_css_class'] . '"><a href="' . $this->getBaseUrl()  . $urlKey . '" id="' . $data['css_id'] . '" class="' . $data['css_class'] . '"><span class="pronav-top-level-span">' . Mage::helper('pronav')->__($data['name']) . '</span></a>';
+         //$output .= '<div class="sub">';
+         $blockIdentifier = $this->getStaticBlockIdentifier($data['static_block']);
+         $output .= $this->getLayout()->createBlock('cms/block')->setBlockId($blockIdentifier)->toHtml();
+        // $output .= '</div>';
+         $output .= '</li>';
+      }
+   }
+   ?>
+
+<?php
+   $output .= '<div style="clear:both;"></div>';
+   echo $output;
+}
+?><?php echo $this->getChildHtml('topSearch') ?>
+<div style="clear:both;"></div></ul>
+
+<script>
+//jQuery.noConflict();
+$j(function() {
+	$j('ul#pronav').addClass('pronav-selected-<?php echo $selectedStateSegment ?>');
+	$j.fn.calcSubWidth = function() {
+            rowWidth = 0;
+            $j(this).find("ul").each(function() { 
+                rowWidth += $j(this).width(); 
+            });
+        };
+var paddingFix = 0;
+function megaHoverOver(){
+	$j(this).find(".sub").stop().fadeTo(<?php echo $this->getNavConfig('fadein')?>, 1, function(){
+		$j(this).css('filter','');
+        }).show();
+     subPaddingLeft = $j(this).find('.sub').css('padding-right');
+	 subPaddingRight = $j(this).find('.sub').css('padding-left');
+	 if (subPaddingLeft && subPaddingRight)
+	 {
+		 subPaddingLeft = parseInt(subPaddingRight.replace('px', ''));
+		 subPaddingRight = parseInt(subPaddingRight.replace('px', ''));
+		 paddingFix = subPaddingLeft + subPaddingRight;
+	 }
+    if ( $j(this).find(".row").length > 0 ) { 
+
+        var biggestRow = 0;	
+        $j(this).find(".row").each(function() {
+        	$j(this).calcSubWidth(); 
+            if(rowWidth > biggestRow) {
+                biggestRow = rowWidth;
+            }
+        });
+        //jQuery(this).find(".sub").css({width : biggestRow + paddingFix}); 
+        $j(this).find(".row:last").css({'margin':'0'});  
+
+    } else { 
+    	$j(this).calcSubWidth(); 
+        //jQuery(this).find(".sub").css({'width' : rowWidth + paddingFix});
+
+    }
+}
+
+function megaHoverOut(){
+	$j(this).find(".sub").fadeTo(<?php echo $this->getNavConfig('fadeout')?>, 0, function() { 
+		$j(this).hide();
+  });
+}
+
+
+var config = {
+     sensitivity: <?php echo $this->getNavConfig('sensitivity')?>, 
+     interval: <?php echo $this->getNavConfig('interval')?>, 
+     over: megaHoverOver, 
+     timeout: <?php echo $this->getNavConfig('timeout')?>, 
+     out: megaHoverOut 
+};
+$j("ul#pronav li .sub").css({'opacity':'0'}); 
+$j("ul#pronav li").hoverIntent(config);
+});
+</script>

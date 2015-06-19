@@ -31,12 +31,86 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
-<?php $_menu = $this->renderCategoriesMenuHtml(0,'level-top') ?>
-<?php if($_menu): ?>
-    <nav id="nav">
-        <ul class="nav-primary">
-            <?php echo $_menu ?>
-        </ul>
-    </nav>
-<?php endif ?>
+<?php $_menu = $this->getHtml('level-top') ?>
+
+<nav class="nav">
+	<?php
+	$_main_categories = Mage::helper('catalog/category')->getStoreCategories();
+	$_i = 0;
+	$_helper    = $this->helper('catalog/output');
+	foreach ($_main_categories as $_main_category):	
+	?>
+	<div class="nav-bar <?php echo 'cate-'.strtolower($_main_category->getName());?>">
+		<div class="btn-toggle">
+			<strong><?php echo $_main_category->getName();?></strong>
+			<span></span>
+		</div>
+		<?php 
+		if (Mage::helper('catalog/category_flat')->isEnabled()) {
+			$_sub_categories = $_main_category->getChildrenNodes(); 	
+		} else {
+			$_sub_categories = $_main_category->getChildren(); 	
+		}
+		?>
+		<div class="inner-toggle">
+			<ul class="menu-top">
+				<?php foreach ($_sub_categories as $_sub_category):?>
+				<?php $_sub_category = Mage::getModel('catalog/category')->load($_sub_category->getID());?>
+				<li>
+					<div class="sub-cate">
+						<?php
+						$isDesigner = 0;
+						$className = '';
+						if(strtolower($_main_category->getName())=='designers' || strtolower($_main_category->getName())=='brands'){
+							$isDesigner=1;
+							$className = 'designers';
+						}
+						$_imgHtml   = '';
+						if ($_imgUrl = $_sub_category->getThumbnail()) {
+							$_imgHtml =  Mage::getBaseUrl('media').'catalog/category/'.$_sub_category->getThumbnail();
+						}
+						?>
+						<a class="category-name <?php echo 'cate-'.strtolower($_sub_category->getName());?>" href="<?php echo $_sub_category->getUrl();?>">
+							<span class="icon <?php echo $className?>" <?php echo 'style="background-image:url('.$_imgHtml.')'; ?>"></span>
+							<?php if($isDesigner==0): ?><span><?php echo $_sub_category->getName()?></span><?php endif?>
+						</a>
+					</div>
+				</li>
+				<?php endforeach;?>
+			</ul>
+		</div>
+	</div>
+	<?php if ($_i == 0) { ?>
+		<a class="logo logo-large" href="<?php echo $this->getUrl('') ?>">
+    	<img src="<?php echo $this->getSkinUrl('images/logo.png') ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />         
+		</a>
+	<?php
+	}
+	$_i++;
+	endforeach;?>
+</nav>
+
+
+
+<script type="text/javascript">
+//&lt;![CDATA[
+
+(function ($) {
+	var inner_toggle = $(".nav-bar");
+	inner_toggle.click(function () {
+	if (!$(this).children(".inner-toggle").hasClass("active")) {
+		inner_toggle.children().removeClass("active");
+		inner_toggle.removeClass("active");
+		$(this).children().addClass("active");
+		$(this).addClass("active");
+	} else {
+		inner_toggle.children().removeClass("active");
+		inner_toggle.removeClass("active");
+	}
+	});
+})(jQuery);
+//]]&gt;
+</script>
+
+
 
