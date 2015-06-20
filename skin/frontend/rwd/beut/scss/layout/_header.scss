@@ -49,6 +49,11 @@
                 color: #3f3f3f;
             }
         }
+        .menu{
+            a.level0{
+                color: $c-black;
+            }
+        }
         #header-nav{
             .skip-search{
                 border: 1px solid #3f3f3f;
@@ -66,6 +71,14 @@
                 content: '';
                 clear: both;
             }
+        }
+        .menu{
+            a.level0{
+                color: $c-black;
+            }
+        }
+        .wp-custom-menu-popup{
+            top: 60px !important;
         }
         .nav-primary{
             li.level0 > a{

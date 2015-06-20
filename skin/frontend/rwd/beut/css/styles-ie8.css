@@ -3311,31 +3311,43 @@ body {
   color: #3f3f3f;
 }
 /* line 53, ../scss/layout/_header.scss */
+.page-header:hover .menu a.level0 {
+  color: black;
+}
+/* line 58, ../scss/layout/_header.scss */
 .page-header:hover #header-nav .skip-search {
   border: 1px solid #3f3f3f;
   background-position: 10px -38px;
 }
-/* line 59, ../scss/layout/_header.scss */
+/* line 64, ../scss/layout/_header.scss */
 .page-header.sticky {
   background: white;
   padding-bottom: 5px;
 }
-/* line 62, ../scss/layout/_header.scss */
+/* line 67, ../scss/layout/_header.scss */
 .page-header.sticky .page-header-container {
   padding-top: 14px;
   padding-bottom: 11px;
 }
-/* line 65, ../scss/layout/_header.scss */
+/* line 70, ../scss/layout/_header.scss */
 .page-header.sticky .page-header-container:after {
   content: '';
   clear: both;
 }
-/* line 71, ../scss/layout/_header.scss */
+/* line 76, ../scss/layout/_header.scss */
+.page-header.sticky .menu a.level0 {
+  color: black;
+}
+/* line 80, ../scss/layout/_header.scss */
+.page-header.sticky .wp-custom-menu-popup {
+  top: 60px !important;
+}
+/* line 84, ../scss/layout/_header.scss */
 .page-header.sticky .nav-primary li.level0 > a {
   color: #3f3f3f;
   padding-top: 4px;
 }
-/* line 77, ../scss/layout/_header.scss */
+/* line 90, ../scss/layout/_header.scss */
 .page-header.sticky #header-nav .skip-search {
   width: 30px;
   height: 30px;
@@ -3343,30 +3355,30 @@ body {
   background-position: 6px -28px;
   background-size: 55%;
 }
-/* line 85, ../scss/layout/_header.scss */
+/* line 98, ../scss/layout/_header.scss */
 .page-header.sticky #header-search {
   top: 68px;
 }
-/* line 89, ../scss/layout/_header.scss */
+/* line 102, ../scss/layout/_header.scss */
 .page-header .page-header-container {
   padding: 20px 100px;
   width: 100%;
   position: relative;
 }
 
-/* line 95, ../scss/layout/_header.scss */
+/* line 108, ../scss/layout/_header.scss */
 .currency {
   display: inline-block;
   margin-right: 30px;
   line-height: 2;
 }
-/* line 99, ../scss/layout/_header.scss */
+/* line 112, ../scss/layout/_header.scss */
 .currency img {
   float: left;
   margin-right: 10px;
 }
 
-/* line 104, ../scss/layout/_header.scss */
+/* line 117, ../scss/layout/_header.scss */
 .mobile-nav {
   display: none;
 }
@@ -3374,7 +3386,7 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
-/* line 111, ../scss/layout/_header.scss */
+/* line 124, ../scss/layout/_header.scss */
 .header-language-background {
   padding: 0;
   background-color: #498fd8;
@@ -3386,7 +3398,7 @@ body {
   width: 100%;
   top: 0;
 }
-/* line 122, ../scss/layout/_header.scss */
+/* line 135, ../scss/layout/_header.scss */
 .header-language-background .header-language-container {
   margin-left: auto;
   margin-right: auto;
@@ -3397,49 +3409,49 @@ body {
   height: 100%;
   font-size: 12px;
 }
-/* line 129, ../scss/layout/_header.scss */
+/* line 142, ../scss/layout/_header.scss */
 .header-language-background .header-language-container .store-language-container {
   display: inline-block;
   float: left;
   padding-top: 12px;
 }
-/* line 134, ../scss/layout/_header.scss */
+/* line 147, ../scss/layout/_header.scss */
 .header-language-background .header-language-container a {
   text-decoration: none;
 }
-/* line 139, ../scss/layout/_header.scss */
+/* line 152, ../scss/layout/_header.scss */
 .header-language-background:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 143, ../scss/layout/_header.scss */
+/* line 156, ../scss/layout/_header.scss */
 .header-language-background .form-language,
 .header-language-background .currency-switcher {
   float: left;
   margin-right: 10px;
 }
-/* line 149, ../scss/layout/_header.scss */
+/* line 162, ../scss/layout/_header.scss */
 .header-language-background .welcome-msg {
   float: right;
 }
 
-/* line 154, ../scss/layout/_header.scss */
+/* line 167, ../scss/layout/_header.scss */
 .page-header-container .store-language-container {
   float: right;
   max-width: 35%;
   padding: 13px 15px 10px 10px;
 }
-/* line 159, ../scss/layout/_header.scss */
+/* line 172, ../scss/layout/_header.scss */
 .page-header-container .store-language-container label {
   display: none;
 }
-/* line 162, ../scss/layout/_header.scss */
+/* line 175, ../scss/layout/_header.scss */
 .page-header-container .store-language-container select {
   max-width: 100%;
 }
 
-/* line 177, ../scss/layout/_header.scss */
+/* line 190, ../scss/layout/_header.scss */
 .header-language-background,
 .header-language-background a {
   color: white;
@@ -3450,39 +3462,39 @@ body {
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 196, ../scss/layout/_header.scss */
+/* line 209, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
   float: left;
   text-align: center;
 }
-/* line 200, ../scss/layout/_header.scss */
+/* line 213, ../scss/layout/_header.scss */
 .logo img {
   max-width: 100%;
 }
-/* line 204, ../scss/layout/_header.scss */
+/* line 217, ../scss/layout/_header.scss */
 .logo .small {
   display: block;
 }
-/* line 207, ../scss/layout/_header.scss */
+/* line 220, ../scss/layout/_header.scss */
 .logo .large {
   display: none;
 }
 
-/* line 212, ../scss/layout/_header.scss */
+/* line 225, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8;
 }
 
-/* line 219, ../scss/layout/_header.scss */
+/* line 232, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
 }
-/* line 221, ../scss/layout/_header.scss */
+/* line 234, ../scss/layout/_header.scss */
 .logo .small {
   display: none;
 }
-/* line 224, ../scss/layout/_header.scss */
+/* line 237, ../scss/layout/_header.scss */
 .logo .large {
   display: block;
   max-width: 75px;
@@ -3497,12 +3509,12 @@ body {
 /* ============================================ *
  * Skip Content
  * ============================================ */
-/* line 247, ../scss/layout/_header.scss */
+/* line 260, ../scss/layout/_header.scss */
 .skip-content {
   display: none;
 }
 
-/* line 251, ../scss/layout/_header.scss */
+/* line 264, ../scss/layout/_header.scss */
 .skip-content.skip-active {
   display: block;
 }
@@ -3510,12 +3522,12 @@ body {
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 286, ../scss/layout/_header.scss */
+/* line 299, ../scss/layout/_header.scss */
 .account-cart-wrapper {
   float: right;
   height: 100%;
 }
-/* line 289, ../scss/layout/_header.scss */
+/* line 302, ../scss/layout/_header.scss */
 .account-cart-wrapper > [class^="skip-"] {
   padding-top: 16px;
   height: 100%;
@@ -3528,7 +3540,7 @@ body {
   -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
-/* line 298, ../scss/layout/_header.scss */
+/* line 311, ../scss/layout/_header.scss */
 .account-cart-wrapper .wishlist-link .icon {
   background: url(../images/icon4.png) no-repeat;
   width: 19px;

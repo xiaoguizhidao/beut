@@ -37,14 +37,15 @@ div.menu a span:hover {
     cursor: pointer;
 }
 div.wp-custom-menu-popup {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     display: none;
     text-align: left;
     padding: 0px 0px 10px 0px;
     border-top: 0;
     width: 100%;
-    margin-top: -1px;
+    top: 130px !important;
+    background: #fff;
 }
 div.menu a, div.wp-custom-menu-popup a {
     text-decoration: none;
@@ -186,13 +187,13 @@ a.level2:link, a.level2:visited {
 div.menu a:hover,
 div.menu.act a,
 div.menu.active a {
-    color: #3399cc;
+    color: #000;
 }
 a.level1:hover, a.level1.act, a.level1.actParent {
-    color: #3399cc;
+    color: #000;
 }
 a.level2:hover, a.level2.act, a.level2.actParent {
-    color: #3399cc;
+    color: #000;
 }
 .block2 table.brand {
     float: left;
