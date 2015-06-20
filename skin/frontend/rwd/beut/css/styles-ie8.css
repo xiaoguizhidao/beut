@@ -2532,18 +2532,19 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
   text-align: right;
 }
 
-/* line 1927, ../scss/core/_common.scss */
-.no-display {
-  display: none !important;
-}
+/*
 
-/* line 1931, ../scss/core/_common.scss */
+.no-display {
+    display: none !important;
+}
+*/
+/* line 1933, ../scss/core/_common.scss */
 .nobr,
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 1936, ../scss/core/_common.scss */
+/* line 1938, ../scss/core/_common.scss */
 .width-full {
   width: 100%;
 }
@@ -2551,7 +2552,7 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Custom Helpers
  * ============================================ */
-/* line 1944, ../scss/core/_common.scss */
+/* line 1946, ../scss/core/_common.scss */
 .hidden {
   display: none;
 }
@@ -2559,12 +2560,12 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Print Styles
  * ============================================ */
-/* line 1952, ../scss/core/_common.scss */
+/* line 1954, ../scss/core/_common.scss */
 .page-print .print-head {
   margin: 0 0 15px;
 }
 
-/* line 1956, ../scss/core/_common.scss */
+/* line 1958, ../scss/core/_common.scss */
 .page-print .print-head .logo {
   float: none;
   max-height: 50px;
@@ -3365,20 +3366,33 @@ body {
   width: 100%;
   position: relative;
 }
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  /* line 102, ../scss/layout/_header.scss */
+  .page-header .page-header-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 
-/* line 108, ../scss/layout/_header.scss */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  /* line 113, ../scss/layout/_header.scss */
+  #header-nav .skip-search {
+    margin-left: 20px;
+  }
+}
+/* line 118, ../scss/layout/_header.scss */
 .currency {
   display: inline-block;
   margin-right: 30px;
   line-height: 2;
 }
-/* line 112, ../scss/layout/_header.scss */
+/* line 122, ../scss/layout/_header.scss */
 .currency img {
   float: left;
   margin-right: 10px;
 }
 
-/* line 117, ../scss/layout/_header.scss */
+/* line 127, ../scss/layout/_header.scss */
 .mobile-nav {
   display: none;
 }
@@ -3386,7 +3400,7 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
-/* line 124, ../scss/layout/_header.scss */
+/* line 134, ../scss/layout/_header.scss */
 .header-language-background {
   padding: 0;
   background-color: #498fd8;
@@ -3398,7 +3412,7 @@ body {
   width: 100%;
   top: 0;
 }
-/* line 135, ../scss/layout/_header.scss */
+/* line 145, ../scss/layout/_header.scss */
 .header-language-background .header-language-container {
   margin-left: auto;
   margin-right: auto;
@@ -3409,49 +3423,49 @@ body {
   height: 100%;
   font-size: 12px;
 }
-/* line 142, ../scss/layout/_header.scss */
+/* line 152, ../scss/layout/_header.scss */
 .header-language-background .header-language-container .store-language-container {
   display: inline-block;
   float: left;
   padding-top: 12px;
 }
-/* line 147, ../scss/layout/_header.scss */
+/* line 157, ../scss/layout/_header.scss */
 .header-language-background .header-language-container a {
   text-decoration: none;
 }
-/* line 152, ../scss/layout/_header.scss */
+/* line 162, ../scss/layout/_header.scss */
 .header-language-background:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 156, ../scss/layout/_header.scss */
+/* line 166, ../scss/layout/_header.scss */
 .header-language-background .form-language,
 .header-language-background .currency-switcher {
   float: left;
   margin-right: 10px;
 }
-/* line 162, ../scss/layout/_header.scss */
+/* line 172, ../scss/layout/_header.scss */
 .header-language-background .welcome-msg {
   float: right;
 }
 
-/* line 167, ../scss/layout/_header.scss */
+/* line 177, ../scss/layout/_header.scss */
 .page-header-container .store-language-container {
   float: right;
   max-width: 35%;
   padding: 13px 15px 10px 10px;
 }
-/* line 172, ../scss/layout/_header.scss */
+/* line 182, ../scss/layout/_header.scss */
 .page-header-container .store-language-container label {
   display: none;
 }
-/* line 175, ../scss/layout/_header.scss */
+/* line 185, ../scss/layout/_header.scss */
 .page-header-container .store-language-container select {
   max-width: 100%;
 }
 
-/* line 190, ../scss/layout/_header.scss */
+/* line 200, ../scss/layout/_header.scss */
 .header-language-background,
 .header-language-background a {
   color: white;
@@ -3462,39 +3476,39 @@ body {
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 209, ../scss/layout/_header.scss */
+/* line 219, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
   float: left;
   text-align: center;
 }
-/* line 213, ../scss/layout/_header.scss */
+/* line 223, ../scss/layout/_header.scss */
 .logo img {
   max-width: 100%;
 }
-/* line 217, ../scss/layout/_header.scss */
+/* line 227, ../scss/layout/_header.scss */
 .logo .small {
   display: block;
 }
-/* line 220, ../scss/layout/_header.scss */
+/* line 230, ../scss/layout/_header.scss */
 .logo .large {
   display: none;
 }
 
-/* line 225, ../scss/layout/_header.scss */
+/* line 235, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8;
 }
 
-/* line 232, ../scss/layout/_header.scss */
+/* line 242, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
 }
-/* line 234, ../scss/layout/_header.scss */
+/* line 244, ../scss/layout/_header.scss */
 .logo .small {
   display: none;
 }
-/* line 237, ../scss/layout/_header.scss */
+/* line 247, ../scss/layout/_header.scss */
 .logo .large {
   display: block;
   max-width: 75px;
@@ -3509,12 +3523,12 @@ body {
 /* ============================================ *
  * Skip Content
  * ============================================ */
-/* line 260, ../scss/layout/_header.scss */
+/* line 270, ../scss/layout/_header.scss */
 .skip-content {
   display: none;
 }
 
-/* line 264, ../scss/layout/_header.scss */
+/* line 274, ../scss/layout/_header.scss */
 .skip-content.skip-active {
   display: block;
 }
@@ -3522,12 +3536,12 @@ body {
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 299, ../scss/layout/_header.scss */
+/* line 309, ../scss/layout/_header.scss */
 .account-cart-wrapper {
   float: right;
   height: 100%;
 }
-/* line 302, ../scss/layout/_header.scss */
+/* line 312, ../scss/layout/_header.scss */
 .account-cart-wrapper > [class^="skip-"] {
   padding-top: 16px;
   height: 100%;
@@ -3540,7 +3554,7 @@ body {
   -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
-/* line 311, ../scss/layout/_header.scss */
+/* line 321, ../scss/layout/_header.scss */
 .account-cart-wrapper .wishlist-link .icon {
   background: url(../images/icon4.png) no-repeat;
   width: 19px;
@@ -3851,10 +3865,10 @@ body {
 /* line 46, ../scss/layout/_header-search.scss */
 #header-search {
   position: absolute;
-  top: 88px;
+  top: 84px;
   right: 0;
   width: 100%;
-  padding: 50px;
+  padding: 0 50px;
   background: #eeeeee;
   display: none;
   opacity: 0;

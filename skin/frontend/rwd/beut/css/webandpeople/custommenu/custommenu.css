@@ -16,8 +16,8 @@
 }
 div.menu {
     float: left;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    padding: 0;
+    margin: 0;
 }
 div.menu a:link, div.menu a:visited {
     display: block;
@@ -41,11 +41,13 @@ div.wp-custom-menu-popup {
     z-index: 1000;
     display: none;
     text-align: left;
-    padding: 0px 0px 10px 0px;
+    padding: 50px 0px 90px 0px;
     border-top: 0;
     width: 100%;
-    top: 130px !important;
-    background: #fff;
+    top: 134px !important;
+    background: #eeeeee;
+    max-height: 100%;
+    overflow-y: scroll;
 }
 div.menu a, div.wp-custom-menu-popup a {
     text-decoration: none;
@@ -125,9 +127,9 @@ div.wp-custom-menu-popup hr {
 /******************************************* COLUMN WIDTH ***************************** */
 div.column {
     float: left;
-    width: 31%; /* for 3 columns*/
+    width: 20%; /* for 3 columns*/
     padding: 0px 1%;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 /*end COLUMN WIDTH  */
 
@@ -160,8 +162,27 @@ div.menu {
     font-weight: normal;
     font-size: 14px;
     text-transform: uppercase;
-    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
     line-height: 0;
+    position: relative;
+}
+.menu.active:before{
+    content: ' ';
+    position: absolute;
+    z-index: 10000;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16.5px 0 16.5px;
+    border-color: #ffffff transparent transparent transparent;
+    transition: all 0.25s ease-out 0s;
+}
+.sticky .menu.active:before{
+    bottom: -22px;
 }
 a.level1:link, a.level1:visited {
     text-transform: none;
@@ -327,6 +348,9 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 }
 .parentMenu {
     position: relative;
+}
+.parentMenu.menu0{
+    display: none;
 }
 .parentMenu a {
     display: block;

@@ -82,10 +82,11 @@ Category default layout
             <!--<block type="catalog/navigation" name="catalog.special.leftnav" after="currency" template="catalog/navigation/left.phtml">
                 <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
             </block>-->
-            <block type="amshopby/catalog_layer_view" name="amshopby.navleft" before="-" template="catalog/layer/view.phtml">
-                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
-            </block>
+
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
+                <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="-" template="catalog/layer/view.phtml">
+                    <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+                </block>
                 <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
                     <block type="core/text_list" name="product_list.name.after" as="name.after" />
                     <block type="core/text_list" name="product_list.after" as="after" />
