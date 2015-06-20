@@ -2940,18 +2940,19 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
   text-align: right;
 }
 
-/* line 1927, ../scss/core/_common.scss */
-.no-display {
-  display: none !important;
-}
+/*
 
-/* line 1931, ../scss/core/_common.scss */
+.no-display {
+    display: none !important;
+}
+*/
+/* line 1933, ../scss/core/_common.scss */
 .nobr,
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 1936, ../scss/core/_common.scss */
+/* line 1938, ../scss/core/_common.scss */
 .width-full {
   width: 100%;
 }
@@ -2959,7 +2960,7 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Custom Helpers
  * ============================================ */
-/* line 1944, ../scss/core/_common.scss */
+/* line 1946, ../scss/core/_common.scss */
 .hidden {
   display: none;
 }
@@ -2967,12 +2968,12 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Print Styles
  * ============================================ */
-/* line 1952, ../scss/core/_common.scss */
+/* line 1954, ../scss/core/_common.scss */
 .page-print .print-head {
   margin: 0 0 15px;
 }
 
-/* line 1956, ../scss/core/_common.scss */
+/* line 1958, ../scss/core/_common.scss */
 .page-print .print-head .logo {
   float: none;
   max-height: 50px;

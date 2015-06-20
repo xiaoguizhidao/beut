@@ -39,8 +39,11 @@
            <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="currency" template="catalog/layer/view.phtml"/> 
         </reference>
         <reference name="content">
-                <block type="amshopby/catalog_layer_view_top" name="amshopby.navtop" before="-" template="amshopby/view_top.phtml"/>
-                <block type="amshopby/top" name="amshopby.top" before="category.products" template="amshopby/top.phtml"/>
+            <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
+                <block type="amshopby/catalog_layer_view" name="amshopby.navleft" after="currency" template="catalog/layer/view.phtml"/>
+            </block>
+            <block type="amshopby/catalog_layer_view_top" name="amshopby.navtop" before="-" template="amshopby/view_top.phtml"/>
+            <block type="amshopby/top" name="amshopby.top" before="category.products" template="amshopby/top.phtml"/>
         </reference>
     </catalog_category_layered> 
 

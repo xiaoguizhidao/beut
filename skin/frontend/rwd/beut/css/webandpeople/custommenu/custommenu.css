@@ -182,7 +182,7 @@ div.menu {
     transition: all 0.25s ease-out 0s;
 }
 .sticky .menu.active:before{
-    bottom: -26px;
+    bottom: -22px;
 }
 a.level1:link, a.level1:visited {
     text-transform: none;

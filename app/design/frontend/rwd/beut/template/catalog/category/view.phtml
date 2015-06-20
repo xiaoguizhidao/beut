@@ -43,7 +43,9 @@
 
 
 
-
+<?php if($_imgUrl): ?>
+    <?php echo $_imgHtml ?>
+<?php endif; ?>
 
 
 <?php echo $this->getMessagesBlock()->toHtml() ?>
