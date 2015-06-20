@@ -45,8 +45,9 @@
     <?php echo $_imgHtml ?>
 <?php endif; ?>
 
-
 <?php echo $this->getMessagesBlock()->toHtml() ?>
+
+<?php echo $this->getChildHtml("amshopby-navleft"); ?>
 
 <?php if($this->isContentMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>

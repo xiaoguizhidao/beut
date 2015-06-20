@@ -3,6 +3,179 @@
   content: "";
   overflow: hidden;
 }
+
+/*Page not found*/
+.cms-index-noroute .main{
+    background: url("../images/404-bg.png");
+    width: 100%;
+    min-height: 720px;
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+.cms-index-noroute #newsletter-container{
+    display: none;
+}
+.page-not-found{
+    width: 50%;
+    margin-right: 10%;
+    padding-left: 10%;
+    text-align: center;
+    padding-top:150px;
+}
+.page-not-found a{
+    color: #72a8e4;
+    text-decoration: underline;
+}
+.page-not-found #pnf-search {
+    border: 1px solid #cccccc;
+    height: 40px;
+    padding: 0 15px;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+.page-not-found .page-title h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.page-not-found .pnf-button {
+    background: url("../images/pnf-search.png");
+    background-position: center right;
+    background-color: white;
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 30px;
+    left: -45px;
+    width: 35px;
+    top:-3px;
+    position: relative;
+}
+
+/*Login page*/
+.customer-account-login .account-login{
+    margin: auto;
+    padding: 40px 0;
+    width: 850px;
+}
+.customer-account-login .col2-set .col-1 .buttons-set{
+    width:  100%;
+    padding-right: 65px;
+}
+.customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-1 .buttons-set .button{
+    padding: 10px 0;
+    width: 100%;
+}
+.customer-account-login .col2-set .col-2 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button {
+    float: none;
+    margin: 0;
+    min-width: 85%;
+    padding: 10px 30px;
+}
+.customer-account-login .col2-set .col-2 {
+    margin-top: 40px;
+    padding-top: 0;
+}
+.customer-account-login .col-1 .content {
+    margin-top: 35px;
+}
+.customer-account-login .col-main{
+    min-height: 620px;
+}
+.customer-account-login p.required{
+    clear: both;
+    color: #df280a;
+    float: right;
+    font-size: 13px;
+    margin-top: 15px;
+    padding-left: 65px;
+    width: 50%;
+}
+.customer-account-login .col2-set .col-2{
+    padding-bottom: 0px;
+}
+.customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.customer-account-create .page-title h1, .page-title h2{text-align: center}
+.customer-account-create .account-create{
+    margin: auto;
+    /*width: 370px;*/
+    margin-top: 50px;
+}
+.customer-account-create .fieldset, .customer-account-create .buttons-set{
+    margin-left: 0px;
+}
+.customer-account-create .col-main{
+    min-height: 620px;
+}
+.customer-account-create .input-text:focus{
+    -moz-box-shadow: 0 0 6px #a3a3a6;
+    -webkit-box-shadow: 0 0 6px#a3a3a6;
+    box-shadow: 0 0 6px #a3a3a6;
+}
+
+.customer-account-login .page, .customer-account-create .page{
+    background-image: url("../images/create-account.png");
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-size: 100% auto;
+}
+.customer-account-login .account-login{
+    background-color: white;
+    margin-top: 80px;
+}
+.customer-account-login .account-login{
+    padding:40px;
+}
+.button{
+    background-color: #4d91d5;
+}
+.account-title > span{
+    font-size: 20px;
+}
+.account-title {
+    background: #f7f8f9 none repeat scroll 0 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.account-create{
+    background-color: white;
+}
+.customer-account-create .account-create{
+    margin-top: 80px;
+    max-width: 760px;
+    padding: 25px 10px;
+    margin-bottom: 200px;
+}
+.form-list .fields .field:last-child{
+    float: right;
+
+}
+.form-list .fields .field, .form-list .fields .field:first-child{
+    float: left;
+    width: 48%;
+}
+.customer-account-create .form-list select{
+    height: 35px;
+    margin-top: 0px;
+}
+.customer-account-create .field label{
+    display: none;
+}
+.form-list .fields .field{
+    margin-bottom: 25px;
+}
+.form-list .fields .field input{
+    height: 35px;
+}
+.customer-account-create .buttons-set{
+    border:none;
+}
+.form-list .control label{
+    padding-left: 0px;
+}
+
 /*About us*/
 .cms-about-us .page-title{
     display: none;
@@ -94,74 +267,158 @@
     font-size: 60px;
     line-height: 70px;
 }
-.cms-about-us .menu-left ul{
+.cms-about-us .menu-left, .cms-faqs .menu-left{
+    width: 196px;
+    float:left;
+}
+.cms-about-us .menu-left ul, .cms-faqs .menu-left ul{
     list-style: none;
 }
-.cms-about-us .std .menu-left li{
+.cms-about-us .std .menu-left li, .cms-faqs .menu-left li{
     color:black;
     font-style: normal;
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-.cms-about-us .std .menu-left li:last-child{
+.cms-about-us .std .menu-left li:last-child,  .cms-faqs .menu-left li:last-child{
     border-bottom: none;
 }
-.cms-about-us .std .menu-left li:first-child{
+.cms-about-us .std .menu-left li:first-child, .cms-faqs .menu-left li:first-child{
     padding-top: 0px;
 }
-.cms-about-us .menu-left li a{
+.cms-about-us .menu-left li a, .cms-faqs .menu-left li a{
     color:black;
 }
-.cms-about-us .menu-left li.active{
+.cms-about-us .menu-left li.active, .cms-faqs .menu-left li.active{
     color:#458ddb;
 }
 .cms-page-view .std img, .cms-no-route .std img{
     margin: auto auto 20px;
 }
-.services span{
-    text-transform: uppercase;
-    font-size:20px;
+.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout{
+    margin-top: 150px;
 }
-.services p{
+.cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
+    display: none;
+}
+.faqs-top {
+    background: #f7f8f9 none repeat scroll 0 0;
+    height: 62px;
+    line-height: 62px;
     text-align: center;
 }
-.testimonial p.title{
-    font-size: 33px;
-    text-transform: uppercase;
-    color: white;
+.std .faqs-top p {
+    font-size: 18px;
     font-style: normal;
+    line-height: 62px;
 }
-.testimonial p, .testimonial p{
-    margin: 0;
-    padding:20px 0;
-    color: white!important;
+.faqs-top p{
+    font-size: 18px;
+    font-style: normal;
+    line-height: 62px;
 }
-.testimonial p:last-child{
-    padding: 0 0 10px;
+.faq-q-a {
+    width: calc(100% - 265px);
+    float: right;
 }
-.testimonial p.open-quote{
-    padding-bottom:0px;
+.faq.faq-left {
+    clear: both;
+    float: left;
+    margin-right: 2%;
+    width: 48%;
 }
-.testimonial p.open-quote, .testimonial p.close-quote{
-    font-size: 67px;
-    color:white;
+.faq.faq-right{
+    float: left;
+    width: 50%;
 }
-.about-us-container h1{
-   color:black!important;
-}
-.founder .div-img{
-    margin: 5px 10px 10px;
+.faqs-content {
+    padding: 50px 70px;
     float: left;
 }
-.founder .name{
-    font-weight: bold;
-    font-size: 22px;
-    text-transform: capitalize;
+.faq::before {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    content: "Q";
+    display: inline-block;
+    height: 30px;
+    line-height: 31px;
+    margin-right: 10px;
+    text-align: center;
+    width: 30px;
 }
-.founder .detail div{
-    margin:5px 0;
+/*Contact us*/
+#contactForm {
+    padding: 40px;
 }
-.cms-page-view.cms-about-us p{
-    color: #000000;
-    font-style: normal;
+@media screen and (min-width: 450px) and (max-width: 849px){
+    .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
+        clear: both;
+        width: 100%;
+        margin: auto;
+        border-left: none;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .customer-account-login .account-login{
+        width: 80%;
+        margin: auto;
+    }
+    .customer-account-login .col2-set .col-2{
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        padding-right: 0px;
+    }
+    .customer-account-login input[type="email"],  .customer-account-login input[type="password"]{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 449px){
+    .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
+        clear: both;
+        width: 100%;
+        margin: auto;
+        border-left: none;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .customer-account-login .account-login{
+        width: 90%;
+        margin: auto;
+    }
+    .customer-account-login .account-login{
+        padding-top: 20px;
+    }
+    .customer-account-login .col-1 .content{
+        margin-top: 20px;
+    }
+
+    .customer-account-login .col2-set .col-2{
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        padding-right: 0px;
+    }
+    .customer-account-login input[type="email"], .customer-account-login input[type="password"] {
+        width: 100%;
+    }
 }
