@@ -5123,7 +5123,7 @@ p.product-name a:hover {
   background-color: #f4f4f4;
   cursor: pointer;
 }
-/* line 110, ../../default/scss/mixin/_toggle-content.scss */
+/* line 110, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-subtitle--filter:after {
   content: '';
   position: absolute;
@@ -5138,99 +5138,60 @@ p.product-name a:hover {
   top: 50%;
   margin-top: -3px;
 }
-/* line 117, ../../default/scss/mixin/_toggle-content.scss */
+/* line 117, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-subtitle--filter:hover {
   background-color: #ececec;
 }
 
-/* line 123, ../../default/scss/mixin/_toggle-content.scss */
+/* line 123, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content .toggle-tabs {
   display: none;
 }
-/* line 128, ../../default/scss/mixin/_toggle-content.scss */
+/* line 127, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dt {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.4;
-  text-rendering: optimizeSpeed;
-  text-transform: uppercase;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  font-weight: normal;
-  margin-bottom: 0px;
-  padding: 7px 10px 7px 24px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  position: relative;
-  background-color: #f4f4f4;
   display: block;
 }
-/* line 110, ../../default/scss/mixin/_toggle-content.scss */
-.block-layered-nav .block-content > dl > dt:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  display: block;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-top: 4px solid #498fd8;
-  border-bottom: none;
-  left: 10px;
-  top: 50%;
-  margin-top: -3px;
-}
-/* line 117, ../../default/scss/mixin/_toggle-content.scss */
-.block-layered-nav .block-content > dl > dt:hover {
-  background-color: #ececec;
-}
-/* line 133, ../../default/scss/mixin/_toggle-content.scss */
+/* line 130, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dd {
   padding: 10px;
   margin: 0;
-  border-width: 0 1px;
-  border-style: solid;
-  border-color: #cccccc;
+  display: none;
 }
-/* line 140, ../../default/scss/mixin/_toggle-content.scss */
+/* line 135, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dd:last-child {
   border-width: 0 1px 1px 1px;
 }
+/* line 505, ../scss/module/_product-list.scss */
+.block-layered-nav .block-content.accordion-open > dl > dd.current {
+  display: block;
+}
 
-/* line 506, ../scss/module/_product-list.scss */
+/* line 511, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 510, ../scss/module/_product-list.scss */
+/* line 515, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd ol > li > span, .block-layered-nav dl dd ol > li > a {
   padding: 5px 15px;
   display: block;
 }
-/* line 514, ../scss/module/_product-list.scss */
+/* line 519, ../scss/module/_product-list.scss */
 .block-layered-nav dl dd ol > li > a .count {
   color: #a0a0a0;
 }
 
-/* line 520, ../scss/module/_product-list.scss */
+/* line 525, ../scss/module/_product-list.scss */
 .block-layered-nav .block-content > dl > dt {
   padding-left: 10px;
+  display: inline-block;
 }
-/* line 523, ../scss/module/_product-list.scss */
+/* line 528, ../scss/module/_product-list.scss */
 .block-layered-nav .block-content > dl > dt:after {
   display: none;
 }
 
-/* line 597, ../scss/module/_product-list.scss */
+/* line 602, ../scss/module/_product-list.scss */
 .block-layered-nav .currently .block-subtitle {
   display: block;
   margin: 0;
@@ -5244,27 +5205,27 @@ p.product-name a:hover {
   text-rendering: optimizeSpeed;
   text-transform: uppercase;
 }
-/* line 602, ../scss/module/_product-list.scss */
+/* line 607, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol {
   padding-left: 10px;
   margin-bottom: 10px;
 }
-/* line 606, ../scss/module/_product-list.scss */
+/* line 611, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li {
   margin-bottom: 5px;
 }
-/* line 609, ../scss/module/_product-list.scss */
+/* line 614, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li .label {
   font-weight: bold;
 }
-/* line 613, ../scss/module/_product-list.scss */
+/* line 618, ../scss/module/_product-list.scss */
 .block-layered-nav .currently ol li:after {
   content: '';
   display: table;
   clear: both;
 }
 
-/* line 619, ../scss/module/_product-list.scss */
+/* line 624, ../scss/module/_product-list.scss */
 .block-layered-nav .actions {
   text-align: right;
   margin-bottom: 7px;
@@ -5720,7 +5681,7 @@ p.product-name a:hover {
   clear: both;
 }
 
-/* line 27, ../../default/scss/mixin/_toggle-content.scss */
+/* line 27, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs {
   display: block;
   width: 100%;
@@ -5728,13 +5689,13 @@ p.product-name a:hover {
   border: 1px solid #cccccc;
   background-color: #f4f4f4;
 }
-/* line 34, ../../default/scss/mixin/_toggle-content.scss */
+/* line 34, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li {
   float: left;
   border-right: 1px solid transparent;
   border-left: 1px solid transparent;
 }
-/* line 39, ../../default/scss/mixin/_toggle-content.scss */
+/* line 39, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li > span {
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5751,40 +5712,40 @@ p.product-name a:hover {
   position: relative;
   bottom: -1px;
 }
-/* line 53, ../../default/scss/mixin/_toggle-content.scss */
+/* line 53, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li.current {
   border-right: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
 }
-/* line 57, ../../default/scss/mixin/_toggle-content.scss */
+/* line 57, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li.current > span {
   background-color: #FFFFFF;
   z-index: 5;
 }
-/* line 63, ../../default/scss/mixin/_toggle-content.scss */
+/* line 63, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li.current span,
 .product-collateral .toggle-tabs li:hover span {
   color: #498fd8;
 }
-/* line 68, ../../default/scss/mixin/_toggle-content.scss */
+/* line 68, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li:first-child {
   border-left: none;
 }
-/* line 72, ../../default/scss/mixin/_toggle-content.scss */
+/* line 72, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 77, ../../default/scss/mixin/_toggle-content.scss */
+/* line 77, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl {
   width: 100%;
 }
-/* line 80, ../../default/scss/mixin/_toggle-content.scss */
+/* line 80, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dt {
   display: none;
 }
-/* line 84, ../../default/scss/mixin/_toggle-content.scss */
+/* line 84, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dd {
   width: 100%;
   display: none;
@@ -5792,7 +5753,7 @@ p.product-name a:hover {
   border: 1px solid #cccccc;
   border-top: 0;
 }
-/* line 92, ../../default/scss/mixin/_toggle-content.scss */
+/* line 92, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dd.current {
   display: block;
 }
@@ -9740,65 +9701,21 @@ div.paypal-logo span > img {
   font-family: "Century Gothic", Verdana, Arial, sans-serif;
 }
 
-/* line 123, ../../default/scss/mixin/_toggle-content.scss */
+/* line 123, ../scss/mixin/_toggle-content.scss */
 #accordion .toggle-tabs {
   display: none;
 }
-/* line 128, ../../default/scss/mixin/_toggle-content.scss */
+/* line 127, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dt {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.4;
-  text-rendering: optimizeSpeed;
-  text-transform: uppercase;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  font-weight: normal;
-  margin-bottom: 0px;
-  padding: 7px 10px 7px 24px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  position: relative;
-  background-color: #f4f4f4;
   display: block;
 }
-/* line 110, ../../default/scss/mixin/_toggle-content.scss */
-#accordion > dl > dt:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  display: block;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  border-top: 4px solid #498fd8;
-  border-bottom: none;
-  left: 10px;
-  top: 50%;
-  margin-top: -3px;
-}
-/* line 117, ../../default/scss/mixin/_toggle-content.scss */
-#accordion > dl > dt:hover {
-  background-color: #ececec;
-}
-/* line 133, ../../default/scss/mixin/_toggle-content.scss */
+/* line 130, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dd {
   padding: 10px;
   margin: 0;
-  border-width: 0 1px;
-  border-style: solid;
-  border-color: #cccccc;
+  display: none;
 }
-/* line 140, ../../default/scss/mixin/_toggle-content.scss */
+/* line 135, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dd:last-child {
   border-width: 0 1px 1px 1px;
 }

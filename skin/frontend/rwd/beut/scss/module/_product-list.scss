@@ -501,6 +501,11 @@ $productsGridActionHeight: 85px;
 .block-layered-nav .block-content {
     // Accordions are fully expanded until a smaller resolution.
     @include accordion;
+    &.accordion-open{
+        > dl > dd.current{
+            display: block;
+        }
+    }
 }
 
 .block-layered-nav dl dd {
@@ -519,7 +524,7 @@ $productsGridActionHeight: 85px;
 @include bp(min-width, $bp-medium+1) {
     .block-layered-nav .block-content > dl > dt {
         padding-left: 10px;
-
+        display: inline-block;
         &:after {
             display: none;
         }
