@@ -351,6 +351,77 @@
 #contactForm {
     padding: 40px;
 }
+.contact-left {
+    float: left;
+    width: 50%;
+}
+.contact-right{
+    width: 50%;
+    float: right;
+}
+.contact-block {
+    padding: 50px 70px;
+}
+.contact-block .left-block img{
+    float: left;
+    margin-right: 30px;
+}
+.contact-block .left-block{
+    clear:both;
+    margin-bottom: 50px;
+}
+.contact-block .left-block span{
+    line-height: 50px;
+}
+.left-block p span{
+    margin-right: 15px;
+}
+.open-right {
+    float: left;
+}
+.open p span{
+    line-height: 35px!important;
+}
+.open img{
+    margin-top: 30px;
+}
+.contacts-index-index .fieldset, #contactForm {
+    clear: both;
+    margin: auto;
+    max-width: 580px;
+    padding-top: 50px;
+}
+.contacts-index-index #contactForm input[type="email"],  .contacts-index-index #contactForm input[type="text"]{
+    width: 100%;
+}
+.contacts-index-index  textarea {
+    width: 100%;
+    max-width: 100%;
+}
+.contacts-index-index input:focus, .contacts-index-index  textarea:focus{
+    border: 1px solid silver!important;
+}
+.contacts-index-index .form-list .fields .field{
+    margin-bottom: 0px;
+}
+.contacts-index-index #contactForm .input-box{
+    margin-bottom: 25px;
+}
+.contacts-index-index #contactForm .buttons-set{
+    border:none;
+    max-width: 100%;
+}
+.contacts-index-index  #contactForm input[type="email"] {
+    height: 35px;
+}
+.contacts-index-index .buttons-set button.button {
+    float: right;
+    font-size: 1.3em;
+    margin-left: 5px;
+    min-width: 140px;
+    padding: 15px 30px;
+}
+
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
