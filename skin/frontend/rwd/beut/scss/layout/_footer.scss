@@ -42,13 +42,28 @@
     padding: 55px 40px 27px;
     background: $c-footer;
     color: $white;
+    @include bp(max-width, $bp-medium) {
+        font-size: 10px;
+    }
     table{
         width: 100%;
         color: $white;
+        max-width: 175px;
+        float: right;
+        @include bp(max-width, $bp-medium) {
+            font-size: $f-size-xxs - 1;
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
     a{
         color: $white !important;
         text-decoration: none;
+        @include bp(max-width,$bp-medium){
+            text-align: center;
+            display: block;
+        }
     }
     .footer-newsleter{
         label{
@@ -67,9 +82,13 @@
     }
     .footer-links{
         padding-left: 30px;
+
     }
     @include bp(max-width, $bp-xsmall) {
         padding-top: $trim-small;
+        .footer-links{
+            margin-top: 10px;
+        }
     }
 
     .block-title {
@@ -85,15 +104,30 @@
         text-transform: none;
         margin-bottom: 20px;
         font-weight: normal;
+        @include bp(max-width, $bp-medium){
+            text-align: center;
+        }
     }
     .phone-footer-block{
         p{
             display: block;
             margin-bottom: 20px;
+            @include bp(max-width, $bp-medium) {
+                text-align: center;
+            }
             a{
                 display: inline-block;
-                margin-left: 35px;
-                float: right;
+                margin-left: 17px;
+                margin-right: 17px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            span{
+                display: block;
             }
         }
 
@@ -243,27 +277,38 @@
         font-size: $f-size-xxs;
         margin-top: $trim;
         padding: $trim 0;
+        .payment-method-mobile{
+            display: none;
+        }
+        @include bp(max-width,$bp-medium){
+            .payment-method-desktop{
+                display: none;
+            }
+            .payment-method-mobile{
+                display: block;
+                @include calc(width,"100% - 40px");
+                margin-bottom: 20px;
+            }
+        }
     }
 
-    @include bp(max-width, $bp-xlarge) {
-        $links-trim: percentage(30px / 960px);
-        $links-width: (100 - ($links-trim * 3)) / 4;
+    $links-trim: percentage(30px / 960px);
+    $links-width: (100 - ($links-trim * 3)) / 4;
 
-        .links {
-            width: $links-width;
-            padding-right: 0;
-            margin-right: $links-trim;
-        }
+    .links {
+        width: $links-width;
+        padding-right: 0;
+        margin-right: $links-trim;
+    }
 
-        .links:nth-child(4) {
-            margin-right: 0;
-        }
+    .links:nth-child(4) {
+        margin-right: 0;
+    }
 
-        .block-subscribe {
-            clear: both;
-            float: none;
-            margin: 0 auto $trim auto;
-        }
+    .block-subscribe {
+        clear: both;
+        float: none;
+        margin: 0 auto $trim auto;
     }
 
     @include bp(max-width, $bp-medium) {

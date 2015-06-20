@@ -78,6 +78,13 @@ body.cms-home {
     padding-left: 100px;
     padding-right: 100px;
     margin-top: 35px;
+    &.brand-block{
+        text-align: center;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
     h2{
         text-transform: uppercase;
         color: $c-black;
@@ -137,7 +144,6 @@ body.cms-home {
     li{
         margin-bottom: 30px;
     }
-
 }
 .lSSlideOuter .lSPager.lSpg{
      display: none;
@@ -152,18 +158,25 @@ body.cms-home {
     .item{
         &:first-child{
             background: $c-footer;
+            margin-bottom: 10px;
+            padding: 0 30px;
+            overflow: hidden;
         }
         position: relative;
         overflow: hidden;
         padding-left: 10px;
         color: $white;
-        .absolute-block{
-            @include absolute-block;
-            @include calc(width,"100% - 200px");
+        @include bp(min-width, $bp-medium - 1) {
+            .absolute-block{
+                @include absolute-block;
+                @include calc(width,"100% - 200px");
+                overflow: hidden;
+            }
         }
         .content{
             margin-bottom: 30px;
             font-size: $f-size-xl;
+            overflow: hidden;
         }
         a{
             font-size: $f-30;
@@ -176,7 +189,33 @@ body.cms-home {
             font-size: $f-30;
             text-transform: none;
         }
+    //    @include bp(max-width, $bp-large) and (min-width: $bp-medium)
+        @media only screen and (max-width: 1024px) and (min-width: $bp-medium){
+            .absolute-block{
+                @include calc(width,"100% - 100px");
+            }
+            .content{
+                font-size: $f-size-xs;
+                margin-bottom: 10px;
+            }
+            a,h3{
+                font-size: $f-20;
+            }
+        }
+        @include bp(max-width, $bp-medium) {
+            .content{
+                font-size: $f-size-xxs - 1;
+                margin-bottom: 10px;
+            }
+            a,h3{
+                font-size: $f-size-xl;
+            }
+        }
+        &.right-item{
+            padding-right: 0;
+        }
     }
+
 }
 .row5{
     margin-top: 10px;
@@ -205,6 +244,38 @@ body.cms-home {
         }
     }
 }
+#slide3{
+    .caption1{
+        right: 130px;
+        left: initial;
+        color: $white;
+        .subcaption1{
+            font-size: 23px;
+            text-transform: uppercase;
+        }
+        .subcaption2{
+            font-size: 60px;
+            text-transform: uppercase;
+        }
+        .subcaption3{
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        .link-text{
+            margin-top: 60px;
+            font-size: 22px;
+            color: $white;
+            border: 1px solid $white;
+            height: 60px;
+            padding-top:8px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: inline-block;
+        }
+    }
+
+}
+
 /*
 .slideshow .banner-msg {
     position: absolute;

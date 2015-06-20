@@ -127,6 +127,20 @@ div[class^='col-lg-']{
         width: percentage(($i / 12));
     }
 }
+@include bp(max-width, $bp-medium - 1) {
+    @for $i from 1 through 12{
+        .col-xs-#{$i}{
+            width: percentage(($i / 12));
+        }
+    }
+    .padding-xs-0{
+        padding: 0 !important;
+    }
+    .margin-xs-10{
+        margin-bottom: 10px !important;
+    }
+}
+
 .center-block{
     float: none !important;
     margin-left: auto;

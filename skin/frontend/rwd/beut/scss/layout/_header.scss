@@ -167,7 +167,6 @@
 @include bp(max-width, $bp-xsmall) {
     .page-header-container .store-language-container {
         padding-top: 8px;
-
         select {
             // Setting this font-size will causing zooming on iOs devices, but it keeps header more tidy
             font-size: $f-size-xs;
@@ -232,21 +231,6 @@
 /* -------------------------------------------- *
  * Skip - Link
  */
-
-
-// ---------------------------------------------
-
-@include bp(max-width, $bp-medium) {
-
-    .skip-link {
-        border-right: 1px solid #EDEDED;
-    }
-
-    .skip-link:last-child {
-        border-right: 0;
-    }
-
-}
 
 
 /* -------------------------------------------- *
