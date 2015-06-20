@@ -103,7 +103,17 @@
         padding: 20px 100px;
         width: 100%;
         position: relative;
+        @media only screen and (min-width: 768px) and (max-width: 1400px){
+            padding-left: 50px;
+            padding-right: 50px;
+        }
     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1400px){
+    #header-nav .skip-search{
+        margin-left: 20px;
+    }
+
 }
 .currency{
     display: inline-block;
