@@ -203,22 +203,12 @@ div[class^='col-lg-']{
 /* -------------------------------------------- *
  * Block Module
  */
-
-.block,
-.col-left-first {
-    margin-bottom: 20px;
-}
-
 .col-left-first .block:last-of-type {
     margin-bottom: 0;
 }
 
 .block-title {
     position: relative;
-    padding: 10px 0 0;
-    margin-bottom: 5px;
-    border-top: 1px solid $c-module-border;
-
     h2,
     h3,
     strong {
@@ -236,13 +226,26 @@ div[class^='col-lg-']{
 }
 
 // On account pages, don't remove the top border in order to create separation between block and .block-account
+.block-filter{
+    width: 100%;
+    background: #f7f8f9;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:$gray2;
+    padding-left: 100px;
+    padding-right: 100px;
+}
 body:not(.customer-account) .block:first-child .block-title {
     border-top: none;
     padding-top: 0;
-}
-
-.block-content {
-    margin-top: 5px;
+    display: inline-block;
+    float: left;
+    font-family: $f-neuton;
+    font-size: $f-20 + 2;
+    text-transform: none;
+    line-height: 0.7;
+    margin-right: 20px;
 }
 
 .block-content.unpad {

@@ -36,11 +36,11 @@ $_helper    = $this->helper('catalog/output');
 $_category  = Mage::registry('current_category');
 ?>
 <?php if($_category && $_category->getName()):?>
-<div class="category-top mobile-category-title">
+<!--<div class="category-top mobile-category-title">
     <div class="category-title">
-        <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
+        <h1><?php /*echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') */?></h1>
     </div>
-</div>
+</div>-->
 <?php endif;?>
 <?php if($this->canShowBlock()): ?>
     <div class="filter-show">
@@ -51,13 +51,13 @@ $_category  = Mage::registry('current_category');
     </div>
 <?php endif;?>
 
-<?php if($_category && $_category->getName()):?>
+<?php /*if($_category && $_category->getName()):*/?><!--
     <div class="category-top">
         <div class="category-title">
-            <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
+            <h1><?php /*echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') */?></h1>
         </div>
     </div>
-<?php endif;?>
+--><?php /*endif;*/?>
 <?php if($this->canShowBlock()): ?>
     <div class="block-filter">
 <div class="block block-layered-nav<?php if (!$this->getLayer()->getState()->getFilters()): ?> block-layered-nav--no-filters<?php endif; ?>">
@@ -82,8 +82,8 @@ $_category  = Mage::registry('current_category');
         <?php endif; ?>
     </div>
 </div>
-    <dl class="desktop-filter">
-        <?php echo $options;?>
-    </dl>
+    <!--<dl class="desktop-filter">
+        <?php /*echo $options;*/?>
+    </dl>-->
     </div>
 <?php endif; ?>

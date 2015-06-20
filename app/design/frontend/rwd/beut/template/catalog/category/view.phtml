@@ -40,7 +40,6 @@
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>
-
 <?php if($_imgUrl): ?>
     <?php echo $_imgHtml ?>
 <?php endif; ?>
@@ -55,7 +54,6 @@
 <?php elseif($this->isMixedMode()): ?>
     <?php echo $this->getCmsBlockHtml() ?>
     <?php echo $this->getProductListHtml() ?>
-
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
 <?php endif; ?>

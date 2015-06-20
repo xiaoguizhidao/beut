@@ -36,9 +36,6 @@ body.catalogsearch-result-index .page-title h1 {
     border-bottom: none;
 }
 
-.category-image {
-    margin-bottom: $b-margin-bottom;
-}
 
 // Prevent button overlapping when buttons have long text, such as non-English translations
 .products-list .action .button,
@@ -474,13 +471,9 @@ $productsGridActionHeight: 85px;
  * ============================================ */
 
 .category-image {
-    border: 1px solid $c-module-border;
-    padding: 10px;
-
     img {
         width: 100%;
         max-width: 100%;
-
         &:hidden {
             display: none;
         }
@@ -504,6 +497,16 @@ $productsGridActionHeight: 85px;
     &.accordion-open{
         > dl > dd.current{
             display: block;
+            position: absolute;
+            @include calc(width, "100% + 200px");
+            background-color: #fff;
+            left: -100px;
+            top: 41px;
+            padding: 30px 84px;
+            z-index: 10;
+            ol{
+                display: block !important;
+            }
         }
     }
 }
@@ -512,9 +515,17 @@ $productsGridActionHeight: 85px;
     margin-bottom: $box-spacing;
     margin-top: $box-spacing;
 
-    ol > li > span, ol > li > a {
+    ol > li > span, ol > li{
+        float: left;
         padding: 5px 15px;
-        display: block;
+        text-transform: none;
+        width: 20%;
+        > a {
+            display: block;
+            float: left;
+            color: $gray2;
+            text-transform: none;
+        }
     }
     ol > li > a .count {
         color: $c-text-gray;
@@ -523,10 +534,31 @@ $productsGridActionHeight: 85px;
 
 @include bp(min-width, $bp-medium+1) {
     .block-layered-nav .block-content > dl > dt {
-        padding-left: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
         display: inline-block;
-        &:after {
-            display: none;
+        position: relative;
+        cursor: pointer;
+        &:after,&:before {
+            content: ' ';
+            font-size: 27px;
+            line-height: 1.2;
+            content: '\f105';
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            right: -2px;
+            font-size: 20px;
+            top: 0;
+            @include letransition(all, 0.25s, ease-out 0s);
+            transform: rotate(90deg);
+        }
+        &:before{
+            color: #f7f8f9;
+            top: -1px;
         }
     }
 }
