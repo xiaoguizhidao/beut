@@ -1296,16 +1296,10 @@ a.button:hover {
 .price-notice {
     color: $c-text-gray;
 }
-
-.price-box .price {
-    color: $c-black;
-    font-size: $f-size-xs;
-    font-family: $f-neuton;
-}
-
 .price-box .price,
 .price {
-    font-family: $f-stack-sans;
+    font-family: $f-neuton;
+    color: $c-black;
 }
 
 .price-box .price-label {
@@ -1754,10 +1748,6 @@ $toolbar-icon-padding-offset: 8px;
         color: #555;
     }
 }
-
-.pages
-
-
 .pages .current,
 .pages .current:hover {
     color: $c-text;
@@ -1804,6 +1794,40 @@ $toolbar-icon-padding-offset: 8px;
     }
     &:hover:before {
         @include triangle(left, 4px, $c-stimulus);
+    }
+}
+.container-footer-toolbar{
+    display: inline-block;
+    .toolbar-bottom{
+        padding-top: 15px;
+        .custom-current,.last{
+            display: none;
+        }
+    }
+    .toolbar-left{
+        text-align: left;
+        padding-top: 15px;
+        .view-all,.count-container,.sorter{
+            display: none;
+        }
+        .pager{
+            float: left;
+        }
+    }
+}
+.load-more{
+    display: inline-block;
+    width: 240px;
+    height: 60px;
+    text-align: center;
+    background: $c-blue;
+    padding-top: 10px;
+    a{
+        color: $white;
+        font-size: $f-20;
+        &:hover{
+            text-decoration: none;
+        }
     }
 }
 

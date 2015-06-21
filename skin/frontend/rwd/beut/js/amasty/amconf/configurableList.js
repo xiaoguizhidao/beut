@@ -287,7 +287,7 @@ Product.Config.prototype.fillSelect = function(element){
         if(this.config.attributes[attributeId].use_image) {
             var lastContainer = document.createElement('div');
             lastContainer = $(lastContainer); // fix for IE
-            lastContainer.setStyle({clear : 'both'});
+            //lastContainer.setStyle({clear : 'both'});
             holderDiv.appendChild(lastContainer);    
         }
     }

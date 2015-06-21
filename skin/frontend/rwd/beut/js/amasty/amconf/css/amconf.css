@@ -1,11 +1,43 @@
 .amconf-image{
     margin: 3px;
+    border: 1px solid #eee;
 }
 
  em{
      color:red;
  }
-
+ .amconf-block .lSAction > a{
+     width: 15px;
+ }
+.amconf-block .lSAction > .lSPrev{
+    left: 0;
+    background: #fff;
+    opacity: 1;
+}
+.amconf-block .lSAction > .lSNext{
+    right: 0;
+    background: #fff;
+    opacity: 1;
+}
+.amconf-block .lSAction > .lSPrev:before{
+    content: "\f104";
+    font-family: FontAwesome;
+    color: #000;
+    line-height: 2.2;
+}
+.amconf-block .lSAction > .lSNext:before{
+    content: "\f105";
+    font-family: FontAwesome;
+    color: #000;
+    line-height: 2.2;
+    float: right;
+}
+.amconf-block .lSSlideWrapper{
+    width: 60%;
+}
+.amconf-block .required{
+    display: none;
+}
 .product-image img#amasty_zoom:nth-child(2){
     display: none;
 } 
@@ -74,8 +106,7 @@ hr.amconf-hr{
 
 .amconf-image-selected
 {
-    margin: 0px;
-    border: 3px solid #eaff00;
+    border: 1px solid #636363;
 }
 
 .amconf-image-outofstock

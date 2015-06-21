@@ -193,16 +193,26 @@
     </ul>
     <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
     <?php endif; ?>
-    <div style="clear: both">&nbsp;</div>
-    <div class="container-footer-toolbar">
-       <div class="div-load-more">
-           <span class="load-more" id="load-previous"><a href="#"> <?php echo $this->__('Previous')?></a></span>
-           <span class="load-more" id="load-more"><a href="#"> <?php echo $this->__('View more')?></a></span>
-       </div>
-        <div class="toolbar-bottom">
-            <?php echo $this->getToolbarHtml() ?>
+    <div class="clearfix"></div>
+    <div class="container-footer-toolbar container-fluid">
+        <div class="row">
+            <div class="col-lg-4 a-left toolbar-left">
+                <?php echo $this->getToolbarHtml() ?>
+            </div>
+            <div class="col-lg-4 a-center">
+                <div class="div-load-more">
+                    <span class="load-more" id="load-previous"><a href="#"> <?php echo $this->__('Previous')?></a></span>
+                    <span class="load-more" id="load-more"><a href="#"> <?php echo $this->__('View more')?></a></span>
+                </div>
+            </div>
+            <div class="col-lg-4 a-right">
+                <div class="toolbar-bottom">
+                    <?php echo $this->getToolbarHtml() ?>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <?php endif; ?>

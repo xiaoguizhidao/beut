@@ -75,10 +75,17 @@ p.product-name {
 /* ============================================ *
  * Product Grid
  * ============================================ */
+.div-load-more{
+    display: inline-block;
+
+}
 .category-footer{
     background: $gray-light;
     .category-description{
-        padding: 50px 100px;
+        float: left;
+        .description{
+            padding: 50px 100px;
+        }
     }
     .thumb{
         overflow: hidden;
@@ -87,6 +94,11 @@ p.product-name {
             height: 100%;
             width: auto;
             float: right;
+        }
+        &.thumb-full{
+            img{}
+            width: 100%;
+            height: auto;
         }
     }
 }
@@ -165,8 +177,6 @@ $productsGridActionHeight: 50px;
 }
 
 .products-grid .price-box {
-    color: $c-text-gray;
-    font-size: $f-size-s;
     margin: 0 0 5px;
 }
 

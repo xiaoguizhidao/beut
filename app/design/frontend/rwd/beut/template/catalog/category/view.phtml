@@ -66,16 +66,17 @@
 <div class="category-footer container-fluid">
     <div class="row">
         <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-            <div class="category-description std col-lg-<?php echo ($imgThumb != '' )? '8':'12';?>">
+            <div class="item category-description std col-lg-<?php echo ($imgThumb != '' )? '8':'12';?>">
                 <div class="description">
                     <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
                 </div>
             </div>
         <?php endif; ?>
         <?php if($imgThumb): ?>
-            <div class="col-lg-4 thumb">
+            <div class="item thumb <?php echo ($_description == '' )? ' thumb-full col-lg-12':' col-lg-4';?>">
                 <img src="<?php echo $imgThumb ?>" alt="<?php echo $this->escapeHtml($_category->getName()) ?>" class="f-right" />
             </div>
         <?php endif; ?>
+        <div class="clearfix"></div>
     </div>
 </div>
