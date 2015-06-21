@@ -57,7 +57,8 @@ p.product-name {
     font-weight: normal;
     line-height: 1.4;
     a {
-        color: $c-text;
+        color: $c-black;
+        text-transform: none;
         &:hover {
             color: $c-action;
             text-decoration: none;
@@ -69,18 +70,32 @@ p.product-name {
 .products-list .product-name {
     margin-bottom: 5px;
     font-size: $f-size;
-    font-family: $f-stack-special;
-
-    a {
-        font-weight: 500;
-    }
 }
 
 /* ============================================ *
  * Product Grid
  * ============================================ */
-
-$product-column-spacing: 20px;
+.category-footer{
+    background: $gray-light;
+    .category-description{
+        padding: 50px 100px;
+    }
+    .thumb{
+        overflow: hidden;
+        padding-right: 0;
+        img{
+            height: 100%;
+            width: auto;
+            float: right;
+        }
+    }
+}
+.category-products{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+}
+$product-column-spacing: 30px;
 
 .products-grid {
     position: relative;
@@ -92,11 +107,14 @@ $product-column-spacing: 20px;
 
 .products-grid > li {
     position: relative;
-    margin-bottom: $product-column-spacing;
-    text-align: center;
-
+    margin-bottom: 10px;
+    text-align: left;
     &:after {
         @include clearfix;
+    }
+    .product-brand{
+        font-size: $f-size-xl;
+        color: $c-black;
     }
 }
 
@@ -123,11 +141,11 @@ $product-column-spacing: 20px;
 }
 
 // If the height of the .product-info element changes, this value should be adjusted
-$productsGridActionHeight: 85px;
+$productsGridActionHeight: 50px;
 
 .products-grid .product-info {
     position: relative;
-    padding-bottom: $productsGridActionHeight + 10px;
+    padding-bottom: $productsGridActionHeight ;
 }
 
 .products-grid .actions {
@@ -167,6 +185,7 @@ $productsGridActionHeight: 85px;
     float: left;
     width: percentage(210 / 440);
     margin-right: percentage(20 / 440);
+    text-align: left;
 }
 
 .products-grid > li:nth-child(odd) {
@@ -498,12 +517,24 @@ $productsGridActionHeight: 85px;
         > dl > dd.current{
             display: block;
             position: absolute;
-            @include calc(width, "100% + 200px");
             background-color: #fff;
             left: -100px;
             top: 41px;
             padding: 30px 84px;
             z-index: 10;
+            &.price {
+                li:nth-child(3){
+                    width: 45%;
+                    input[type=text]{
+                        width: 20%;
+                    }
+                    button{
+                        height: 30px;
+                        vertical-align: top;
+                        text-align: center;
+                    }
+                }
+            }
             ol{
                 display: block !important;
             }
@@ -514,8 +545,8 @@ $productsGridActionHeight: 85px;
 .block-layered-nav dl dd {
     margin-bottom: $box-spacing;
     margin-top: $box-spacing;
-
-    ol > li > span, ol > li{
+    display: none;
+    ol  li  span, ol  li{
         float: left;
         padding: 5px 15px;
         text-transform: none;
@@ -527,7 +558,7 @@ $productsGridActionHeight: 85px;
             text-transform: none;
         }
     }
-    ol > li > a .count {
+    ol li  a .count {
         color: $c-text-gray;
     }
 }
@@ -536,6 +567,7 @@ $productsGridActionHeight: 85px;
     .block-layered-nav .block-content > dl > dt {
         padding-left: 15px;
         padding-right: 15px;
+        margin-right: 10px;
         display: inline-block;
         position: relative;
         cursor: pointer;
