@@ -295,9 +295,10 @@
 .cms-page-view .std img, .cms-no-route .std img{
     margin: auto auto 20px;
 }
-.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout{
+.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.cms-brand .main-container.col1-layout{
     margin-top: 150px;
 }
+
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
     display: none;
 }
@@ -421,7 +422,81 @@
     min-width: 140px;
     padding: 15px 30px;
 }
+/*cms brand*/
+.cms-brand .main{
+    padding:0 50px;
+}
 
+ul.brands {
+    margin-bottom: 35px;
+    padding: 7px 11px;
+}
+ul.brands li a {
+    font-size: 16px;
+}
+ul.brands li {
+    display: inline;
+    margin: 0 10px;
+}
+ul.brands li:first-child{
+    margin-left: 0px;
+}
+.cms-brand .main {
+   /* background: url("../images/brand.png");*/
+
+}
+.cms-brand .breadcrumbs{
+    display: none;
+}
+.cms-brand .page-title{
+    text-align: center;
+}
+.cms-brand ul.brands{
+    text-align: left;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.cms-brand .page-title h1 {
+    color: black;
+    font-weight: normal;
+    text-transform: none;
+}
+ul.brands li a {
+    color: black;
+    font-size: 16px;
+    font-style: normal;
+}
+.brand-col-1 {
+    clear: both;
+    float: left;
+    margin-bottom: 25px;
+    margin-right: 3%;
+    margin-top: 10px;
+    width: 22%;
+}
+
+.brand-col-2 {
+    float: left;
+    margin-right: 3%;
+    margin-top: 10px;
+    width: 22%;
+}
+.brand-col-3 {
+    float: left;
+    margin-right: 3%;
+    margin-top: 10px;
+    width: 22%;
+}
+.brand-col-4 {
+    float: left;
+    margin-right: 0;
+    margin-top: 10px;
+    width: 25%;
+}
+
+.cms-brand p.letter {
+    font-size: 24px;
+}
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
