@@ -155,7 +155,6 @@ textarea {
 
 .input-text {
     @include appearance(none);
-    @include border-radius(2px);
     border: 1px solid $c-input-border;
     background: #FFFFFF;
     font-size: $f-size-l;
@@ -191,8 +190,10 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
-    width: (230px + 135px);
     max-width: 100%;
+    &:focus{
+        border: 1px solid $gray-light;
+    }
 }
 
 /* Only show on iPhones (not iPads or any other device) */

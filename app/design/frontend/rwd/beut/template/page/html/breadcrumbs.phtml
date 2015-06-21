@@ -31,14 +31,14 @@
         $i =0;
         foreach($crumbs as $_crumbName=>$_crumbInfo):
             $i++;
-            if($i==count($crumbs)) {
+            /*if($i==count($crumbs)) {
                 break;
-            }
+            }*/
             ?>
             <li class="<?php if($i == count($crumbs)-1) {echo 'last ';} ?> <?php echo $_crumbName;?>">
-            <?php if($_crumbInfo['link']): ?>
+            <?php if($_crumbInfo['link'] !== ''): ?>
                 <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->escapeHtml($_crumbInfo['title']) ?>"><?php echo $this->escapeHtml($_crumbInfo['label']) ?></a>
-            <?php elseif($_crumbInfo['last']): ?>
+            <?php elseif($_crumbInfo['last'] === true): ?>
                 <strong><?php echo $this->escapeHtml($_crumbInfo['label']) ?></strong>
             <?php else: ?>
                 <?php echo $this->escapeHtml($_crumbInfo['label']) ?>

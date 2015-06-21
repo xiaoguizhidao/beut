@@ -224,18 +224,76 @@ div[class^='col-lg-']{
         color: $c-text-gray;
     }
 }
+select {
+    padding:0;
+    margin: 0;
+    font-family: "Myriad Pro", Arial, "Century Gothic", Verdana, Arial, sans-serif;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+label.select-label {
+    position:relative;
+    height: 34px;
+    padding: 7px 10px;
+    border: 1px solid #d7d5cb;
+    background: #f6f6f6;
+    width: 200px;
+    &:before ,&:after{
+        content:'\f107';
+        font-family: 'FontAwesome';
+        right:6px;
+        top:0px;
+        width:20px;
+        height:100%;
+        color:#aaa;
+        position:absolute;
+        pointer-events:none;
+        display:block;
+        line-height: 1.5;
+        font-size: 20px;
 
+    }
+}
 // On account pages, don't remove the top border in order to create separation between block and .block-account
 .block-filter{
     width: 100%;
     background: #f7f8f9;
     text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color:$gray2;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 20px 100px;
+    margin-bottom: 25px;
+    .block-layered-nav{
+        float: left;
+        @include calc(max-width, "100% - 220px");
+        .block-content{
+            float: left;
+            overflow: hidden;
+        }
+    }
+    .sorter{
+        float: right;
+        label{
+            &:after{
+                color: #f6f6f6;
+                top: -1px;
+                content: '\f107';
+            }
+        }
+    }
+    select{
+        color:#a7a39b;
+        text-transform: uppercase;
+        font-size: $f-size;
+    }
+
 }
+
+
 body:not(.customer-account) .block:first-child .block-title {
     border-top: none;
     padding-top: 0;
@@ -406,12 +464,11 @@ body:not(.customer-account) .block:first-child .block-title {
     color: #FFFFFF;
     font-size: $f-size-s;
     font-weight: normal;
-    font-family: $f-stack-special;
-    line-height: 19px;
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
+    line-height: $line-height;
 
     &:hover {
         background: $c-button-hover;
@@ -630,40 +687,47 @@ a.button:hover {
  */
 
 .breadcrumbs {
-    overflow: hidden;
-    margin: -15px 0 15px;
-}
-
-.breadcrumbs li {
-    float: left;
-    font-size: $f-size-xs;
-    font-family: $f-stack-special;
-    text-transform: uppercase;
-}
-
-.breadcrumbs a {
-    float: left;
-    color: $c-text;
-}
-
-.breadcrumbs a:hover {
-    color: $c-action;
-}
-
-.breadcrumbs strong {
-    color: $c-text;
-    font-weight: normal;
-}
-
-.breadcrumbs span {
-    float: left;
-    padding: 0 7px;
+    display: none;
+    .catalog-breadcrumbs &{
+        float: left;
+        margin-left: 100px;
+        display: block;
+    }
+    li {
+        float: left;
+        font-size: $f-size-l;
+        text-transform: uppercase;
+        margin: 0 10px;
+        &:before{
+            content: '/';
+        }
+        &:first-child{
+            margin-left: 0;
+            &:before{
+                content: '';
+            }
+        }
+    }
+    a {
+        float: left;
+        color: $c-bread;
+        &:hover {
+            color: $c-action;
+        }
+    }
+    strong {
+        color: $c-bread;
+        font-weight: normal;
+    }
+    span {
+        float: left;
+        padding: 0 7px;
+    }
 }
 
 @include bp(max-width, $bp-medium) {
-
     .breadcrumbs {
-        display: none;
+        text-align: center;
     }
 
 }
@@ -797,7 +861,9 @@ a.button:hover {
 /* -------------------------------------------- *
  * Column Layouts
  */
-
+.main{
+    margin-top: 50px;
+}
 .main:after,
 .col-wrapper:after {
     @include clearfix;
@@ -1232,8 +1298,9 @@ a.button:hover {
 }
 
 .price-box .price {
-    color: $c-text-primary;
-    font-size: $f-size-xl;
+    color: $c-black;
+    font-size: $f-size-xs;
+    font-family: $f-neuton;
 }
 
 .price-box .price,
@@ -1566,20 +1633,6 @@ span.weee {
 /* -------------------------------------------- *
  * Toolbar
  */
-
-.toolbar {
-    margin-top: $box-spacing;
-    margin-bottom: 15px;
-    border-bottom: 1px solid $c-module-border;
-    border-top: 1px solid $c-module-border;
-    background: $c-module-background;
-    padding: 5px 10px 0px 10px;
-
-    &:after {
-        @include clearfix;
-    }
-}
-
 .pager-no-toolbar {
     margin-bottom: $box-spacing;
 }
@@ -1588,13 +1641,18 @@ span.weee {
 .pager-no-toolbar ~ .pager-no-toolbar {
     margin-top: $box-spacing;
 }
+.toolbar_top{
+    float: right;
+    margin-right: 100px;
+    .custom-current,.last{
+        display: none;
+    }
 
-.toolbar,
+}
+
 .pager {
-    font-family: $f-stack-special;
-    color: $c-text;
-    line-height: 30px;
-    font-size: $f-size-xs;
+    color: #555;
+    font-size: $f-size-l;
 }
 
 .toolbar label,
@@ -1607,24 +1665,10 @@ $toolbar-icon-padding-offset: 8px;
 
 .sorter {
     float: left;
-    margin-bottom: 5px;
-
-    label {
-        float: left;
-        margin-right: 5px;
-
-        &:after {
-            content: ':';
-        }
-    }
 }
 
 .sorter > .sort-by {
-    float: left;
-    margin-right: 5px;
-    height: 30px;
-
-    .sort-by-switcher {
+  .sort-by-switcher {
         width: 30px;
         height: 30px;
         display: inline-block;
@@ -1674,71 +1718,45 @@ $toolbar-icon-padding-offset: 8px;
 
 .pager {
     float: right;
-    overflow: hidden;
-
     & > .count-container {
         float: left;
+        &:after{
+            content: '/';
+            padding-left: 5px;
+            padding-right: 5px;
+        }
     }
 
     .amount {
         float: left;
-        font-family: $f-stack-sans;
         white-space: nowrap;
-        margin: 0 15px 0 0;
+        margin: 0;
+        color: #545454;
     }
 
     .limiter {
         float: left;
         height: 30px;
         line-height: 30px;
-
-        & > label {
-            padding-right: 5px;
-
-            &:after {
-                content: ':';
-            }
-        }
-    }
-
-    .amount,
-    .limiter,
-    .pages {
-        margin-bottom: 5px;
     }
 
 }
 
 .pages {
     float: right;
-    overflow: hidden;
-    margin-left: 15px;
-
     strong {
         display: none;
     }
+    li {
+        float: left;
+    }
+    a{
+        color: #555;
+    }
 }
 
-.pages li {
-    float: left;
-}
+.pages
 
-.pages a,
-.pages .current {
-    display: inline-block;
-    border: 0;
-    font-size: $f-size-s;
-    text-align: center;
-    text-transform: uppercase;
-    vertical-align: middle;
-    white-space: nowrap;
-    line-height: 30px;
-    width: 25px;
-    height: 30px;
-    padding: 0;
-    color: $c-action;
-    font-family: $f-stack-sans;
-}
 
 .pages .current,
 .pages .current:hover {

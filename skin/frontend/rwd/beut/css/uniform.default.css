@@ -223,12 +223,6 @@ div.checker.disabled.active span.checked {
     border: 1px dotted blue;
 }
 
-/* hover style just for information */
-label:hover:before {
-    border: 1px solid #4778d9!important;
-}
-
-
 /* Radio */
 input[type="radio"] {
     display:none;

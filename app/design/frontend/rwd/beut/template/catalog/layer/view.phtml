@@ -60,30 +60,55 @@ $_category  = Mage::registry('current_category');
 --><?php /*endif;*/?>
 <?php if($this->canShowBlock()): ?>
     <div class="block-filter">
-<div class="block block-layered-nav<?php if (!$this->getLayer()->getState()->getFilters()): ?> block-layered-nav--no-filters<?php endif; ?>">
-    <div class="block-title">
-        <span><?php echo $this->__('Filter:') ?></span>
-    </div>
-    <div class="block-content toggle-content">
-        <?php if($this->canShowOptions()): ?>
-            <p class="block-subtitle block-subtitle--filter"><?php echo $this->__('Filter') ?></p>
-            <dl id="narrow-by-list" class="no-display">
-                <?php $options = "";?>
-                <?php $_filters = $this->getFilters() ?>
-                <?php foreach ($_filters as $_filter): ?>
-                <?php if($_filter->getItemsCount()): ?>
-                    <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                    <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?></dd>
+        <div class="block block-layered-nav<?php if (!$this->getLayer()->getState()->getFilters()): ?> block-layered-nav--no-filters<?php endif; ?>">
+            <div class="block-title">
+                <span><?php echo $this->__('Filter:') ?></span>
+            </div>
+            <div class="block-content toggle-content">
+                <?php if($this->canShowOptions()): ?>
+                    <p class="block-subtitle block-subtitle--filter"><?php echo $this->__('Filter') ?></p>
+                    <dl id="narrow-by-list" class="no-display">
+                        <?php $options = "";?>
+                        <?php $_filters = $this->getFilters() ?>
+                        <?php foreach ($_filters as $_filter): ?>
+                            <?php if($_filter->getItemsCount()): ?>
+                                <dt><?php echo $this->__($_filter->getName()) ?></dt>
+                                <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?></dd>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </dl>
+                    <script type="text/javascript">decorateDataList('narrow-by-list')</script>
                 <?php endif; ?>
-                <?php endforeach; ?>
-            </dl>
-
-            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
-        <?php endif; ?>
-    </div>
-</div>
-    <!--<dl class="desktop-filter">
-        <?php /*echo $options;*/?>
-    </dl>-->
+            </div>
+        </div>
+        <?php
+        $productList_block  = Mage::app()->getLayout()->createBlock('catalog/product_list');
+        $collection = $productList_block->getLoadedProductCollection();
+        $productList_toolbar  = Mage::app()->getLayout()->createBlock('catalog/product_list_toolbar');
+        ?>
+        <?php if($collection->count()): ?>
+            <?php if( $productList_toolbar->isExpanded() ): ?>
+                <div class="sorter">
+                    <label class="select-label">
+                        <select onchange="setLocation(this.value)" title="<?php echo $this->__('Sort By') ?>">
+                            <?php foreach($productList_toolbar->getAvailableOrders() as $_key=>$_order): ?>
+                                <option value="<?php echo $productList_toolbar->getOrderUrl($_key, 'asc') ?>"<?php if($productList_toolbar->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
+                                    <?php echo $this->__('Sort By: ')?> <?php echo $this->__($_order) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </label>
+                   <!-- <?php /*if($productList_toolbar->getCurrentDirection() == 'desc'): */?>
+                        <a href="<?php /*echo $productList_toolbar->getOrderUrl(null, 'asc') */?>" class="sort-by-switcher sort-by-switcher--desc" title="<?php /*echo $this->__('Set Ascending Direction') */?>"><i class="fa fa-long-arrow-down"></i></a>
+                    <?php /*else: */?>
+                        <a href="<?php /*echo $productList_toolbar->getOrderUrl(null, 'desc') */?>" class="sort-by-switcher sort-by-switcher--asc" title="<?php /*echo $this->__('Set Descending Direction') */?>"><i class="fa fa-long-arrow-up"></i></a>
+                    --><?php /*endif; */?>
+                </div>
+            <?php endif; ?>
+        <?php endif;?>
+        <div class="clearfix"></div>
     </div>
 <?php endif; ?>
+<div class="catalog-breadcrumbs">
+    <?php  echo $this->getLayout()->getBlock("breadcrumbs")->toHtml()?>
+</div>
