@@ -295,7 +295,7 @@
 .cms-page-view .std img, .cms-no-route .std img{
     margin: auto auto 20px;
 }
-.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.cms-brand .main-container.col1-layout{
+.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.cms-brand .main-container.col1-layout, .checkout-cart-index{
     margin-top: 150px;
 }
 
@@ -493,6 +493,11 @@ ul.brands li a {
 .cms-brand .std p strong{
     line-height: 1.2em;
     font-size: 1.2em;
+}
+.cart {
+    background-image: url("../images/status1.png");
+    background-repeat: no-repeat;
+    padding-top: 50px;
 }
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
