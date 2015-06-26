@@ -44,6 +44,7 @@
     color: $white;
     @include bp(max-width, $bp-medium) {
         font-size: 10px;
+        padding: 30px 12px 20px;
     }
     table{
         width: 100%;
@@ -55,6 +56,10 @@
             float: none;
             margin-right: auto;
             margin-left: auto;
+            margin-top: 20px;
+        }
+        td{
+            padding-bottom: 5px;
         }
     }
     a{
@@ -86,9 +91,6 @@
     }
     @include bp(max-width, $bp-xsmall) {
         padding-top: $trim-small;
-        .footer-links{
-            margin-top: 10px;
-        }
     }
 
     .block-title {
@@ -106,6 +108,7 @@
         font-weight: normal;
         @include bp(max-width, $bp-medium){
             text-align: center;
+            margin-bottom: 10px;
         }
     }
     .phone-footer-block{
@@ -114,6 +117,14 @@
             margin-bottom: 20px;
             @include bp(max-width, $bp-medium) {
                 text-align: center;
+                margin-bottom: 8px;
+                a{
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                span{
+                    line-height: 2;
+                }
             }
             a{
                 display: inline-block;
@@ -217,12 +228,7 @@
         width: 100%;
         border-right: 0;
         @include border-radius(0);
-        &:-moz-placeholder,
-        &:-ms-input-placeholder,
-        &::-moz-placeholder,
-        &::-webkit-input-placeholder{
-            font-size: 10px;
-        }
+        @include placeholder($f-size-xxs - 1);
 
     }
 
@@ -280,15 +286,8 @@
         .payment-method-mobile{
             display: none;
         }
-        @include bp(max-width,$bp-medium){
-            .payment-method-desktop{
-                display: none;
-            }
-            .payment-method-mobile{
-                display: block;
-                @include calc(width,"100% - 40px");
-                margin-bottom: 20px;
-            }
+        .payment1{
+            display: none;
         }
     }
 
@@ -312,30 +311,92 @@
     }
 
     @include bp(max-width, $bp-medium) {
+        $links-trim: percentage(15px / 480px);
+        $links-width: (100 - $links-trim) / 2;
         .form-language,
         .currency-switcher {
             display: block;
         }
-    }
-
-    @include bp(max-width, $bp-small) {
-        $links-trim: percentage(15px / 480px);
-        $links-width: (100 - $links-trim) / 2;
-
         .links {
             width: $links-width;
             margin-right: 0;
-        }
+            &:nth-child(odd) {
+                margin-right: $links-trim;
+                clear: both;
+            }
 
-        .links:nth-child(odd) {
-            margin-right: $links-trim;
-            clear: both;
         }
-
         .block-subscribe {
             clear: both;
             float: left;
             width: 100%;
+            margin-bottom: 5px;
+            .block-content{
+                padding: 16px 18px;
+            }
+            .input-box{
+                @include calc(width, "100% - 59px");
+            }
+            .actions{
+                width: 59px;
+                .button{
+                    height: 30px;
+                }
+            }
         }
+        .footer-links{
+            padding-left: 15px;
+            margin-top: 10px;
+            ul{
+                margin-top: 14px;
+                li{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .phone-footer-block{
+            float: none;
+        }
+        .footer-newsleter{
+            label{
+                font-size: $f-size;
+                margin-bottom: 14px;
+            }
+            input{
+                height: 30px;
+                padding-top: 2px;
+                font-size: $f-size-xxs;
+            }
+        }
+        address{
+            margin-top: 3px;
+            font-size: 8px;
+            .design-by{
+                padding-left: 0;
+            }
+            .payment-method-desktop{
+                display: none;
+            }
+            .payment-method-mobile{
+                display: block;
+                @include calc(width,"100% - 40px");
+                margin-bottom: 20px;
+            }
+            .payment1{
+                display: block;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-bottom: 15px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .payment2{
+                display: none;
+            }
+        }
+
+
     }
 }

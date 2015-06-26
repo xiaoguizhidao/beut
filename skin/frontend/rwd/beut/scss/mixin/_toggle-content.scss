@@ -143,7 +143,9 @@
         > dt {
             cursor: pointer;
             border-bottom-width: 0;
-
+            display: none;
+            float: none;
+            width: 100%;
             &:hover {
                 color: $c-action;
             }

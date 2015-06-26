@@ -695,11 +695,13 @@ a.button:hover {
     }
     li {
         float: left;
-        font-size: $f-size-l;
+        font-size: $f-size;
         text-transform: uppercase;
         margin: 0 10px;
         &:before{
             content: '/';
+            margin-right: 15px;
+            float: left;
         }
         &:first-child{
             margin-left: 0;
@@ -1861,10 +1863,8 @@ $toolbar-icon-padding-offset: 8px;
             clear: both;
 
             .pages {
-                float: left;
-                margin-left: 0;
+                float: none;
             }
-
             .count-container {
                 float: right;
             }
