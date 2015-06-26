@@ -8827,7 +8827,8 @@ p.product-name a:hover {
 @media only screen and (min-width: 1025px) {
   /* line 42, ../../default/scss/module/_checkout-onepage.scss */
   .checkout-onepage-index .col-main {
-    float: left;
+    margin:150px auto 50px;
+    margin-top:150px;
     width: 68.75%;
     padding-right: 20px;
   }
