@@ -148,17 +148,12 @@ body.cms-home {
 .lSSlideOuter .lSPager.lSpg{
      display: none;
  }
-@include bp(max-width, $bp-medium) {
-    .lSSlideOuter .lSPager.lSpg{
-        display: block;
-        margin-bottom: 10px;
-    }
-}
+
 .row4{
     .item{
         &:first-child{
             background: $c-footer;
-            margin-bottom: 10px;
+            /*margin-bottom: 10px;*/
             padding: 0 30px;
             overflow: hidden;
         }
@@ -254,7 +249,7 @@ body.cms-home {
             text-transform: uppercase;
         }
         .subcaption2{
-            font-size: 60px;
+            font-size: 45px;
             text-transform: uppercase;
         }
         .subcaption3{
@@ -275,40 +270,199 @@ body.cms-home {
     }
 
 }
-
-/*
-.slideshow .banner-msg {
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    top: 30%;
-    @include not-selectable;
+.lSSlideOuter {
+    .lSAction {
+        .lSNext {
+            &:before,&:after {
+                content: "\f105";
+                font-family: 'FontAwesome';
+                font-size: 80px;
+                position: absolute;
+            }
+            &:after{
+                color: $white;
+                right: -10px;
+            }
+        }
+        .lSPrev {
+            &:before,&:after {
+                content: "\f104";
+                font-family: 'FontAwesome';
+                font-size: 80px;
+                position: absolute;
+            }
+            &:after{
+                color: $white;
+                left: 18px;
+            }
+        }
+    }
 }
 
-.slideshow .banner-msg h2 {
-    color: #FFFFFF;
-    font-size: 24px;
-    @include single-text-shadow(1px, 1px, 3px, false, #555555);
-}
 
-.slideshow .banner-msg h2 strong {
-    font-weight: bold;
+    /* -------------------------------------------- *
+     * Promotion Banner Section
+     */
+
+    .promos {
+        margin: 0 0 $gap 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .promos:after {
+        @include clearfix;
+    }
+
+    /* Specifying the body only in order to override the .std ul li styling */
+
+    body .promos > li {
+        margin: 0 0 10px 0;
+        list-style: none;
+        text-align: center;
+        position: relative;
+        border: 1px solid $c-module-border;
+        @include not-selectable;
+    }
+
+    .promos > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .promos img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .promos a:hover {
+        @include opacity(0.8);
+        display: block;
+    }
+
+    .promos span {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 10%;
+        font-weight: 500;
+        font-size: 20px;
+        font-family: $f-stack-special;
+        @include single-text-shadow(1px, 1px, 3px, false, #555555);
+    }
+
+    .promos strong {
+        font-weight: 600;
+        font-size: 26px;
+        display: block;
+    }
+
+    @include bp(min-width, $bp-medium + 1) {
+
+        .promos span {
+            font-size: 16px;
+        }
+
+        .promos strong {
+            font-size: 17px;
+        }
+
+        /* Config: Three columns + flexible gutter */
+        // Container: 480 - (2 * 30 trim wide) = 420
+        // Math: (420 - (2 * 10 gutter)) / 3 items = 133.333333333
+        body .promos > li {
+            float: left;
+            width: percentage(133.333333333 / 420);
+            margin-right: percentage(10 / 420);
+        }
+
+        .promos > li:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+
+    /* -------------------------------------------- *
+     * New Products Section
+     */
+
+    /* Hiding the reviews content via CSS because we can't modify the template, */
+    /* since it may be used in other places where those elements are needed */
+    .cms-index-index .products-grid .ratings,
+    .cms-index-index .products-grid .actions,
+    .cms-index-noroute .products-grid .ratings,
+    .cms-index-noroute .products-grid .actions {
+        display: none;
+    }
+
+    .cms-index-index h2.subtitle {
+        padding: 6px 0;
+        text-align: center;
+        color: $c-text-primary;
+        font-weight: 600;
+        border-bottom: 1px solid $c-module-border;
+        border-top: 1px solid $c-module-border;
+    }
+
+    .cms-index-noroute h2.subtitle {
+        display: none;
+    }
+.payment1{
+    display: none;
+}
+.payment2{
     display: block;
-    font-size: 36px;
-}*/
+}
 
 @include bp(max-width, $bp-medium) {
-
+    h2{
+        font-size: $f-size-l;
+    }
     .slideshow .banner-msg h2 {
         font-size: 20px;
     }
-
     .slideshow .banner-msg h2 strong {
         font-size: 24px;
     }
-}
+    .caption1{
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        top: 50% !important;
+        max-width: 70% !important;
+    }
+    #slide3{
+        .caption1 {
+            .subcaption1,.subcaption3{
+                font-size: 10px;
+            }
+            .subcaption2{
+                font-size: 22px;
+            }
+        }
+    }
+    .hot-prod a{
+        font-size: $f-size-xxs - 1;
+    }
 
+    .row4 .item:first-child{
+        padding: 40px 30px;
+    }
+}
+@include bp(max-width, $bp-medium) {
+    .lSSlideOuter .lSPager.lSpg{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .payment1{
+        display: block;
+    }
+    .payment2{
+        display: none;
+    }
+}
 @include bp(max-width, $bp-xsmall) {
 
     .slideshow .banner-msg {
@@ -322,90 +476,8 @@ body.cms-home {
     .slideshow .banner-msg h2 strong {
         font-size: 16px;
     }
+
 }
-
-/* -------------------------------------------- *
- * Promotion Banner Section
- */
-
-.promos {
-    margin: 0 0 $gap 0;
-    padding: 0;
-    width: 100%;
-}
-
-.promos:after {
-    @include clearfix;
-}
-
-/* Specifying the body only in order to override the .std ul li styling */
-
-body .promos > li {
-    margin: 0 0 10px 0;
-    list-style: none;
-    text-align: center;
-    position: relative;
-    border: 1px solid $c-module-border;
-    @include not-selectable;
-}
-
-.promos > li:last-child {
-    margin-bottom: 0;
-}
-
-.promos img {
-    max-width: 100%;
-    width: 100%;
-}
-
-.promos a:hover {
-    @include opacity(0.8);
-    display: block;
-}
-
-.promos span {
-    color: #FFFFFF;
-    text-transform: uppercase;
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 10%;
-    font-weight: 500;
-    font-size: 20px;
-    font-family: $f-stack-special;
-    @include single-text-shadow(1px, 1px, 3px, false, #555555);
-}
-
-.promos strong {
-    font-weight: 600;
-    font-size: 26px;
-    display: block;
-}
-
-@include bp(min-width, $bp-medium + 1) {
-
-    .promos span {
-        font-size: 16px;
-    }
-
-    .promos strong {
-        font-size: 17px;
-    }
-
-    /* Config: Three columns + flexible gutter */
-    // Container: 480 - (2 * 30 trim wide) = 420
-    // Math: (420 - (2 * 10 gutter)) / 3 items = 133.333333333
-    body .promos > li {
-        float: left;
-        width: percentage(133.333333333 / 420);
-        margin-right: percentage(10 / 420);
-    }
-
-    .promos > li:nth-child(3n) {
-        margin-right: 0;
-    }
-}
-
 @include bp(min-width, 880px) {
     .promos span {
         font-size: 18px;
@@ -414,30 +486,4 @@ body .promos > li {
     .promos strong {
         font-size: 24px;
     }
-}
-
-/* -------------------------------------------- *
- * New Products Section
- */
-
-/* Hiding the reviews content via CSS because we can't modify the template, */
-/* since it may be used in other places where those elements are needed */
-.cms-index-index .products-grid .ratings,
-.cms-index-index .products-grid .actions,
-.cms-index-noroute .products-grid .ratings,
-.cms-index-noroute .products-grid .actions {
-    display: none;
-}
-
-.cms-index-index h2.subtitle {
-    padding: 6px 0;
-    text-align: center;
-    color: $c-text-primary;
-    font-weight: 600;
-    border-bottom: 1px solid $c-module-border;
-    border-top: 1px solid $c-module-border;
-}
-
-.cms-index-noroute h2.subtitle {
-    display: none;
 }

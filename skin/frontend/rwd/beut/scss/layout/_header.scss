@@ -66,7 +66,7 @@
         padding-bottom: 5px;
         .page-header-container{
             padding-top: 14px;
-            padding-bottom: 11px;
+            padding-bottom: 1px;
             &:after{
                 content: '';
                 clear: both;
@@ -231,13 +231,6 @@
     transition: all 0.25s ease 0s;
 }
 
-@include bp(max-width, $bp-medium) {
-
-    .header-language-background {
-        display: none;
-    }
-
-}
 
 /* ============================================ *
  * Logo
@@ -306,33 +299,6 @@
  * Global Header Navigation
  * ============================================ */
 
-@include bp(max-width, $bp-medium) {
-    // ---------------------------------------------
-    // Link
-
-    #header-account li a,
-    .nav-primary a.level0 {
-        padding: 0 15px 0 25px;
-        border-bottom: 1px solid $c-module-border;
-        text-align: left;
-        color: $c-text;
-        text-transform: uppercase;
-        line-height: 30px;
-    }
-
-    #header-account li:last-child a,
-    .nav-primary li.level0:last-child a.level0 {
-        border-bottom: 0;
-    }
-
-    .no-touch #header-account a:hover,
-    .no-touch .nav-primary a:hover {
-        background-color: $c-module-background;
-        text-decoration: none;
-    }
-
-}
-
 .account-cart-wrapper {
     float: right;
     height: 100%;
@@ -350,8 +316,5 @@
             width: 19px;
             height: 18px;
         }
-    }
-    @include bp(max-width, $bp-medium) {
-        position: static;
     }
 }

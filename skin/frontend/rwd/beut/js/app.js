@@ -703,8 +703,11 @@ $j(document).ready(function () {
     skipLinks.on('click', function (e) {
         e.preventDefault();
 
-        var self = $j(this);
-        // Use the data-target-element attribute, if it exists. Fall back to href.
+        skipLinks.find('a').click(function(e) {
+            e.stopPropagation();
+        });
+
+        var self = $j(this);        // Use the data-target-element attribute, if it exists. Fall back to href.
         var target = self.attr('data-target-element') ? self.attr('data-target-element') : self.attr('href');
 
         // Get target element
