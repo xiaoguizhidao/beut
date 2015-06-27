@@ -103,17 +103,44 @@
         padding: 20px 100px;
         width: 100%;
         position: relative;
-        @media only screen and (min-width: 768px) and (max-width: 1400px){
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1400px){
-    #header-nav .skip-search{
-        margin-left: 20px;
     }
 
+}
+.catalog-product-view {
+    .page-header{
+        background: $white;
+    }
+    div.menu a:link, div.menu a:visited{
+        color: $c-black;
+    }
+    #header-nav .skip-search{
+        background-position: 10px -38px;
+        border: 1px solid $c-black;
+    }
+    .main-container{
+        margin-top: 134px;
+    }
+    .main{
+        margin: 0;
+    }
+    .breadcrumbs{
+        display: block;
+        width: 100%;
+        background: #f7f8f9;
+        text-transform: uppercase;
+        text-align: center;
+        color: $c-bread;
+        padding: 25px;
+        &:after{
+            clear: both;
+            content: '';
+        }
+        li {
+            float: none;
+            display: inline-block;
+        }
+        margin-top: 30px;
+    }
 }
 .currency{
     display: inline-block;

@@ -141,13 +141,15 @@
 }
 
 .slideshow-prev {
-    left: 8px;
-
+    left: 0;
+    display: none;
+    @include letransition(all,0.25ms,ease-out);
     &:before {
         border-width: 15px 15px 15px 0;
         border-color: transparent #FFFFFF transparent transparent;
         top: 50%;
         left: 10px;
+        opacity: 0;
     }
 
     &:hover:before {
@@ -156,9 +158,11 @@
 }
 
 .slideshow-next {
-    right: 8px;
-
+    right: 0;
+    display: none;
+    @include letransition(all,0.25ms,ease-out);
     &:before {
+        opacity: 0;
         border-width: 15px 0 15px 15px;
         border-color: transparent transparent transparent #FFFFFF;
         top: 50%;
@@ -167,6 +171,13 @@
 
     &:hover:before {
         border-color: transparent transparent transparent $c-button-hover;
+    }
+}
+.slideshow-container:hover .slideshow-next,
+.slideshow-container:hover .slideshow-prev{
+    display: block;
+    &:before{
+        opacity: 1;
     }
 }
 
@@ -179,7 +190,6 @@
 }
 
 .cycle-overlay {
-    font-family: tahoma, arial;
     position: absolute;
     bottom: 0;
     width: 100%;

@@ -62,3 +62,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+@mixin placeholder($font-size){
+    &:-moz-placeholder{
+        font-size: $font-size;
+    }
+    &:-ms-input-placeholder{
+        font-size: $font-size;
+    }
+    &::-moz-placeholder{
+        font-size: $font-size;
+    }
+    &::-webkit-input-placeholder{
+        font-size: $font-size;
+    }
+}

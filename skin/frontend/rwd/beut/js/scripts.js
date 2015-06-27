@@ -210,6 +210,11 @@ var FEelementControl = {
 			}
 
 		}
+	},
+	calcMenu: function(){
+		if($j(window).width() > 767 && $j(window).width() < 1025){
+
+		}
 	}
 
 };

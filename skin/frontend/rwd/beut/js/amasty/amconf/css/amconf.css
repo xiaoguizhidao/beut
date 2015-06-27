@@ -199,3 +199,21 @@ hr.amconf-hr{
 }
 */
 
+@media only screen and (max-width: 768px){
+   .amconf-block .lSSlideOuter .lSPager.lSpg,
+   .container-footer-toolbar .toolbar-left,
+   .view-all,
+   .pager .amount,
+   .pager > .count-container:after{
+        display: none;
+    }
+    .amconf-block .lSSlideWrapper{
+        width: 100%;
+    }
+    .container-footer-toolbar .toolbar-bottom .custom-current{
+        display: block;
+        text-align: center;
+        float: none;
+    }
+
+}
