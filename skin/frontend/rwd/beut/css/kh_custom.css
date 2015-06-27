@@ -51,6 +51,13 @@
 }
 
 /*Login page*/
+.customer-account-login .main{
+    margin-top: 130px;
+}
+.customer-account-login {
+
+}
+
 .customer-account-login .account-login{
     margin: auto;
     padding: 40px 0;
