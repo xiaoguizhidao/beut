@@ -697,14 +697,18 @@ a.button:hover {
         float: left;
         font-size: $f-size;
         text-transform: uppercase;
-        margin: 0 10px;
+        margin: 0;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
         &:before{
             content: '/';
-            margin-right: 15px;
             float: left;
+            position: absolute;
+            left: -3px;
         }
         &:first-child{
-            margin-left: 0;
+            padding-left: 0;
             &:before{
                 content: '';
             }
@@ -727,12 +731,6 @@ a.button:hover {
     }
 }
 
-@include bp(max-width, $bp-medium) {
-    .breadcrumbs {
-        text-align: center;
-    }
-
-}
 
 /* -------------------------------------------- *
  * Button - Remove / Previous
@@ -864,7 +862,11 @@ a.button:hover {
  * Column Layouts
  */
 .main{
-    margin-top: 50px;
+    margin-top: 130px;
+    padding-top: 2px;
+}
+.cms-home .main,.catalog-category-view .main{
+    margin-top: 0px;
 }
 .main:after,
 .col-wrapper:after {
@@ -1643,7 +1645,9 @@ span.weee {
     .custom-current,.last{
         display: none;
     }
-
+    .pages li.first{
+        display: none;
+    }
 }
 
 .pager {
@@ -1816,19 +1820,41 @@ $toolbar-icon-padding-offset: 8px;
             float: left;
         }
     }
+    .first,.last{
+        display: none;
+    }
+    div[class^='col-']{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.div-load-more{
+    white-space: nowrap;
 }
 .load-more{
     display: inline-block;
-    width: 240px;
+    width: 190px;
     height: 60px;
     text-align: center;
     background: $c-blue;
     padding-top: 10px;
+    border: 2px solid $c-blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    @include letransition(all, 0.45s, cubic-bezier(0.25, 0.46, 0.45, 0.94));
     a{
         color: $white;
         font-size: $f-20;
+        @include letransition(all, 0.45s, cubic-bezier(0.25, 0.46, 0.45, 0.94));
         &:hover{
             text-decoration: none;
+        }
+    }
+    &:hover{
+        background: $white;
+        border: 2px solid $c-blue;
+        a{
+            color: $c-blue;
         }
     }
 }
@@ -1850,27 +1876,6 @@ $toolbar-icon-padding-offset: 8px;
     }
 }
 
-@include bp(max-width, $bp-medium) {
-    // One one column layouts, the toolbar doesn't have to break until a smaller viewport
-    .col1-layout {
-        .sorter,
-        .pager {
-            width: 100%;
-        }
-
-        .pager {
-            float: left;
-            clear: both;
-
-            .pages {
-                float: none;
-            }
-            .count-container {
-                float: right;
-            }
-        }
-    }
-}
 
 @include bp(max-width, $bp-large) {
 

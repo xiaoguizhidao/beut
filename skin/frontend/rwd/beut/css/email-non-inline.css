@@ -1,4 +1,40 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+@-webkit-keyframes menuOpen {
+  /* line 87, ../scss/mixin/_menu.scss */
+  0% {
+    width: 0;
+  }
+
+  /* line 88, ../scss/mixin/_menu.scss */
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes cartOpen {
+  /* line 91, ../scss/mixin/_menu.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 92, ../scss/mixin/_menu.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes searchOpen {
+  /* line 95, ../scss/mixin/_menu.scss */
+  0% {
+    height: 0;
+  }
+
+  /* line 96, ../scss/mixin/_menu.scss */
+  100% {
+    height: 100%;
+  }
+}
+
 /* Font Styles */
 /* Media Queries */
 /* Setting the Web Font inside a media query so that Outlook doesn't try to render the web font */

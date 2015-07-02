@@ -81,15 +81,17 @@
             <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
         </a>
         <div id="header-nav" class="header-nav f-right skip-content">
+            <div class="close close-nav"></div>
             <?php echo $this->getChildHtml('topMenu') ?>
             <a href="#header-search" class="f-right skip-link skip-search"></a>
         </div>
 
         <!-- Search -->
-
+        <a href="#header-search" class="f-right skip-link skip-search mobile-search"></a>
         <div id="header-search" class="skip-content">
             <?php echo $this->getChildHtml('topSearch') ?>
         </div>
+
         <div class="clearfix"></div>
     </div>
 </header>

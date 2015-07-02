@@ -62,14 +62,6 @@
  * Nav - Skip Content
  * ============================================ */
 
-@include bp(max-width, $bp-medium) {
-
-    #header-nav {
-        padding: 5px 0;
-    }
-
-}
-
 // ---------------------------------------------
 
 #header-nav {
@@ -77,15 +69,18 @@
     nav{
         display: inline-block;
     }
-    .skip-search{
-        width: 44px;
-        height: 44px;
-        border: 1px solid $white;
-        background: url(../images/search.png) no-repeat 10px 10px;
-        display: inline-block;
-        float: right;
-        margin-left: 50px;
-    }
+}
+.skip-search{
+    width: 44px;
+    height: 44px;
+    border: 1px solid $white;
+    background: url(../images/search.png) no-repeat 10px 10px;
+    display: inline-block;
+    float: right;
+    margin-left: 50px;
+}
+.mobile-search{
+    display: none;
 }
 
 

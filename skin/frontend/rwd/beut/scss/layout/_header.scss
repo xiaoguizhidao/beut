@@ -103,9 +103,15 @@
         padding: 20px 100px;
         width: 100%;
         position: relative;
+        background-color: #fff;
     }
 
 }
+.cms-home .page-header .page-header-container,
+.catalog-category-view .page-header .page-header-container{
+    background: transparent;
+}
+
 .catalog-product-view {
     .page-header{
         background: $white;

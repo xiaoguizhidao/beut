@@ -503,7 +503,7 @@ $productsGridActionHeight: 50px;
 .category-image {
     img {
         width: 100%;
-        max-width: 100%;
+        height: auto;
         &:hidden {
             display: none;
         }
@@ -517,7 +517,6 @@ $productsGridActionHeight: 50px;
 .block-layered-nav .block-subtitle--filter {
     // Will be shown at smaller viewports
     display: none;
-    @include accordionDtBase;
     cursor: pointer;
 }
 
@@ -541,6 +540,9 @@ $productsGridActionHeight: 50px;
                     }
                     button{
                         height: 30px;
+                        padding: 0;
+                        line-height: 1;
+                        margin-left: 5px;
                         vertical-align: top;
                         text-align: center;
                     }
@@ -606,72 +608,6 @@ $productsGridActionHeight: 50px;
     }
 }
 
-@include bp(max-width, $bp-medium) {
-    .sidebar .block.block-layered-nav {
-        border-bottom: none;
-    }
-
-    // We don't want "Shop By" to show when there are no filters applied, as the "Filter" link will suffice
-    .block-layered-nav--no-filters .block-title {
-        display: none;
-    }
-
-    // Remove the top padding and re-add it as margin-top so that the margin will collapse with elements above it
-    .block-layered-nav .block-content {
-        padding-top: 0;
-        margin-top: 15px;
-        @include accordionCollapse;
-    }
-
-    .block-layered-nav .block-subtitle--filter {
-        background-color: $c-action;
-        border: 0;
-        margin-bottom: 0;
-        display: block;
-        color: #FFFFFF;
-
-        &:after {
-            @include triangle(right, 4px, #FFFFFF);
-            right: 10px;
-            top: 50%;
-            margin-top: -5px;
-        }
-
-        &:hover {
-            background-color: $c-button-hover;
-            color: #FFFFFF;
-        }
-
-        &.active:after {
-            @include triangle(down, 4px, #FFFFFF);
-            right: 10px;
-            top: 50%;
-            margin-top: -3px;
-        }
-    }
-
-    #narrow-by-list,
-    #narrow-by-list2 {
-        padding: $box-spacing;
-        border: 1px solid $c-module-border;
-        border-top: 0;
-    }
-
-    .block-layered-nav dl ol > li > a,
-    .block-layered-nav dl ol > li > span {
-        padding: 7px;
-        margin: 5px;
-    }
-
-    .block-layered-nav dl ol > li > a {
-        @include touch-button;
-
-        &:hover {
-            text-decoration: none;
-            background: $c-module-background-hover;
-        }
-    }
-}
 
 .block-layered-nav .currently {
     .block-subtitle {
@@ -699,4 +635,225 @@ $productsGridActionHeight: 50px;
 .block-layered-nav .actions {
     text-align: right;
     margin-bottom: $element-spacing;
+}
+@media only screen and (max-width: 1024px) and (min-width: $bp-medium){
+    .block-filter,
+    .category-footer .category-description .description{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .catalog-breadcrumbs .breadcrumbs{
+        margin-left: 50px;
+    }
+    .toolbar_top{
+        margin-right: 50px;
+    }
+    .category-products{
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    .pages a,
+    .pager{
+        font-size: $f-size-xs;
+    }
+    .load-more{
+        width: 135px;
+        height: 45px;
+        padding-top: 8px;
+        a{
+            font-size: 15px;
+        }
+        .container-footer-toolbar .toolbar-bottom{
+            padding-top: 10px;
+        }
+    }
+    .category-footer {
+        .category-description{
+            width: 100%;
+        }
+        .thumb{
+            display: none;
+        }
+    }
+}
+@include bp(max-width, $bp-medium) {
+    label,
+    .load-more a,
+    .pages a{
+        font-size: $f-10;
+    }
+    .block-filter{
+        margin-bottom: 13px;
+        padding: 0;
+        text-align: center;
+        border-bottom: 1px solid $gray-light;
+        .block-layered-nav{
+            width: 50%;
+            &:hover{
+                background: #f9f9f9;
+            }
+        }
+        label.select-label{
+            border: none;
+            background: transparent;
+            width: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .sorter label{
+            &:before{
+                top: 5px;
+                font-size: 16px;
+            }
+            &:after{
+                top: 3px;
+                font-size: 16px;
+            }
+        }
+        select{
+            font-size: $f-10;
+            line-height: 2.3;
+        }
+    }
+    .sidebar .block.block-layered-nav {
+        border-bottom: none;
+    }
+
+    // We don't want "Shop By" to show when there are no filters applied, as the "Filter" link will suffice
+    .block-layered-nav--no-filters .block-title {
+        display: none;
+    }
+
+    // Remove the top padding and re-add it as margin-top so that the margin will collapse with elements above it
+    .block-filter{
+        .block-layered-nav{
+            .block-content {
+                padding-top: 0;
+                margin: 0;
+                @include accordionCollapse;
+                float: none;
+                text-align: center;
+            }
+            .block-subtitle--filter {
+                margin-bottom: 0;
+                padding-top: 10px;
+                display: block ;
+                color: #bbb8b2;
+            }
+        }
+    }
+    .no-display{
+        display: none !important;
+    }
+
+    #narrow-by-list,
+    #narrow-by-list2 {
+        padding: $box-spacing;
+        border-top: 0;
+        position: absolute;
+        width: 200%;
+        display: block;
+        z-index: 100;
+        text-align: left;
+        top: 35px;
+        background: $white;
+    }
+
+    .block-layered-nav dl ol > li > a,
+    .block-layered-nav dl ol > li > span {
+        padding: 7px;
+        margin: 5px;
+    }
+
+    .block-layered-nav dl ol > li > a {
+        @include touch-button;
+
+        &:hover {
+            text-decoration: none;
+            background: $c-module-background-hover;
+        }
+    }
+    .category-products{
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        .item{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    body:not(.customer-account) .block:first-child .block-title{
+        display: none;
+    }
+    .catalog-breadcrumbs{
+        .breadcrumbs {
+            text-align: center;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            li{
+                display: inline-block;
+                float: none;
+                vertical-align: top;
+                font-size: $f-10;
+            }
+        }
+    }
+    // One one column layouts, the toolbar doesn't have to break until a smaller viewport
+    .col1-layout {
+        .sorter{
+            width: 50%;
+            border-left: 1px solid $gray-light;
+            &:hover{
+                background: #f9f9f9;
+            }
+        }
+        .pager {
+            width: 100%;
+        }
+
+        .pager {
+            float: left;
+            clear: both;
+
+            .pages {
+                float: none;
+            }
+            .count-container {
+                float: right;
+            }
+        }
+    }
+    .products-grid {
+        &> li{
+            .product-brand{
+                font-size: $f-size-xs;
+            }
+        }
+        .product-name{
+            font-size: $f-10;
+        }
+    }
+    .category-footer .thumb{
+        display: none;
+    }
+    .category-footer{
+        margin-top: 30px;
+    }
+    .load-more{
+        max-width: 130px;
+        height: 33px;
+        padding-top: 7px;
+    }
+    .category-footer .category-description .description{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .block-filter{
+        .block-layered-nav .block-content > dl > dt{
+            width: 100%;
+            padding: 10px 0;
+        }
+    }
 }

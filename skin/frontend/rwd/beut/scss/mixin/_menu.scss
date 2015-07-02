@@ -76,3 +76,22 @@
         font-size: $font-size;
     }
 }
+@mixin transform($transforms){
+    transform: $transforms;
+    -moz-transform: $transforms;
+    -webkit-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+}
+@-webkit-keyframes menuOpen {
+    0%{  width:0; }
+    100%{ width:80%; }
+}
+@-webkit-keyframes cartOpen {
+    0%{  opacity:0; }
+    100%{ opacity:1; }
+}
+@-webkit-keyframes searchOpen {
+    0%{  height:0; }
+    100%{ height:100%; }
+}

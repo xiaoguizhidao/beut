@@ -143,7 +143,6 @@
         > dt {
             cursor: pointer;
             border-bottom-width: 0;
-            display: none;
             float: none;
             width: 100%;
             &:hover {
@@ -151,6 +150,7 @@
             }
             &:after {
                 @include triangle(right, 4px, $c-action);
+                right: 10px;
             }
             &.last {
                 border-bottom-width: 1px;
@@ -179,6 +179,18 @@
 
             > dd.current {
                 display: block;
+                width: 100%;
+                left: 0;
+                padding: 0;
+            }
+            li{
+                width: 100% !important;
+                a{
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                }
             }
         }
     }

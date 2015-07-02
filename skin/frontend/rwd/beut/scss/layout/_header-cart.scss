@@ -59,11 +59,17 @@
     text-transform: none;
     .block-subtitle{
         position: absolute;
-        right: 10px;
+        right: 15px;
+        width: 20px;
+        height: 45px;
         top: 10px;
-        width: 45px;
-        height: 25px;
-        text-align: right;
+        background: url(../images/close.png) no-repeat 0 0;
+        background-size: 20px;
+        .skip-link-close{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
     }
     .skip-link-close{
         color: $c-black;

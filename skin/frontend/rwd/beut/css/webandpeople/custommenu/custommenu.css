@@ -195,9 +195,14 @@ a.level2:link, a.level2:visited {
     margin-left: 20px;
 }
 /*COLOR*/
+.cms-home div.menu a:link, .cms-home div.menu a:visited,
+.catalog-category-view div.menu a:link,
+.catalog-category-view div.menu a:visited{
+    color: #fff;
+}
 div.menu a:link, div.menu a:visited {
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 a.level1:link, a.level1:visited {
     color: #636363;
@@ -417,11 +422,11 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
     background-color: #fff;
 }
 #custommenu-mobile .level0 {
-    background-color: #ededed;
+    background-color: #fff;
 }
 #custommenu-mobile .level1 {
-    background-color: #e4e4e4;
+    background-color: #fff;
 }
 #custommenu-mobile .level2 {
-    background-color: #f1f1f1;
+    background-color: #fff;
 }

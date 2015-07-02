@@ -78,12 +78,17 @@
     padding: 10px 30px;
 }
 .customer-account-login .col2-set .col-2 {
-    margin-top: 40px;
+    margin-top: 20px;
     padding-top: 0;
 }
-.customer-account-login .col-1 .content {
-    margin-top: 35px;
+.customer-account-login .col2-set .col-2 h2,
+.customer-account-login .col-1 .content h2{
+    text-transform: none;
 }
+.customer-account-login .col-1 .content {
+    margin-top: 27px;
+}
+
 .customer-account-login .col-main{
     min-height: 620px;
 }
@@ -125,7 +130,7 @@
     background-image: url("../images/create-account.png");
     background-repeat: no-repeat;
     background-color: inherit;
-    background-size: 100% auto;
+    background-size: cover;
 }
 .customer-account-login .account-login{
     background-color: white;

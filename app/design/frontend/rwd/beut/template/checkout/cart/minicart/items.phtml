@@ -43,8 +43,7 @@ if(empty($_cartQty)) {
 <div class="minicart-wrapper">
 
     <p class="block-subtitle">
-
-        <a class="close skip-link-close" href="#" title="<?php echo $this->__('Close'); ?>">&times;</a>
+        <a class="close skip-link-close" href="#" title="<?php echo $this->__('Close'); ?>"></a>
     </p>
 
     <?php $_items = $this->getRecentItems() ?>
@@ -91,8 +90,10 @@ if(empty($_cartQty)) {
         </div>
 
     <?php else: ?>
+        <header>
+            <h6>YOUR SHOPPING BAG</h6>
+        </header>
         <p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
-
     <?php endif ?>
 </div>
 

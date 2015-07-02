@@ -720,13 +720,19 @@ $j(document).ready(function () {
         skipLinks.removeClass('skip-active');
         skipContents.removeClass('skip-active');
 		$j('.header-nav').removeClass('skip-active');
+        if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
+            $j('body').addClass('overflow');
+        }
         // Toggle stubs
         if (isSkipContentOpen) {
             self.removeClass('skip-active');
-
+            $j('body').removeClass('overflow');
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
+            if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
+                $j('body').addClass('overflow');
+            }
         }
     });
 	//Skip Nav Menu	
@@ -734,8 +740,17 @@ $j(document).ready(function () {
 	skipNav.on('click', function (e) {  
 		skipLinks.removeClass('skip-active');
         skipContents.removeClass('skip-active');
-        $j(this).toggleClass('nav-exposed',1000,'easeOutSine');
-		$j('.header-nav').toggleClass('skip-active',1000, "easeOutSine");
+        $j('body').removeClass('overflow');
+        if($j(this).hasClass('nav-exposed')){
+            $j(this).removeClass('nav-exposed');
+            $j('#header-nav').removeClass('skip-active',1000, "easeOutSine");
+        }else{
+            $j(this).addClass('nav-exposed');
+            $j('#header-nav').addClass('skip-active',1000, "easeOutSine");
+        }
+
+
+        $j('body').toggleClass('overflow',1000,'easeOutSine');
     });
 	
     $j('#header-cart').on('click', '.skip-link-close', function(e) {
@@ -746,6 +761,17 @@ $j(document).ready(function () {
 
         link.removeClass('skip-active');
         link.parent().removeAttr('style');
+        $j('body').removeClass('overflow');
+        e.preventDefault();
+    });
+    $j('#header-nav').on('click', '.close-nav', function(e) {
+        var parent = $j(this).parents('.skip-content');
+        var link = parent.siblings('.mobile-nav').find('.skip-nav');
+        parent.removeClass('skip-active');
+        link.removeClass('nav-exposed');
+        link.parent().removeAttr('style');
+        $j(this).next('#wp-nav-container').find('.menu-content').removeAttr('style');
+        $j('body').removeClass('overflow');
         e.preventDefault();
     });
 

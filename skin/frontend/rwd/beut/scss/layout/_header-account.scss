@@ -127,6 +127,7 @@
     .header-language-background{
         position: relative;
         height: 20px;
+        z-index: 1;
         .header-language-container{
             @include calc(width,"100% - 20px");
             .store-language-container{
@@ -174,7 +175,7 @@
         min-width: 30px;
     }
     #header-account.skip-active{
-        top: 20px;
+        top: 75px;
         position: fixed;
         width: 100%;
         background: $white;
@@ -205,8 +206,9 @@
         .skip-nav{
             width: 45px;
             position: absolute;
-            left: 0;
-            top: 14px;
+            left: 15px;
+            top: 0;
+            height: 100%;
         }
         .skip-search{
             display: block;
@@ -219,9 +221,8 @@
     }
     .hamburger{
         width: 44px;
-        height: 30px;
-        margin-bottom: 19px;
-        margin-top: 4px;
+        height: 100%;
+        margin-top: 18px;
         .line + .line{
             margin-top: 6px;
         }
@@ -239,6 +240,9 @@
             height: 2px;
         }
     }
+    #menu-content{
+        display: block !important;
+    }
     .logo-small{
         display: inline-block;
         float:none;
@@ -255,23 +259,65 @@
             max-width: 60px;
         }
     }
-    #header-nav{
+    .mobile-search{
+        display: block;
+    }
+    .skip-search{
+        width: 20px;
+        height: 20px;
+        border: 1px solid $c-black;
+        background-size: 10px;
+        background-position: 4px -19px;
+        top: 20px;
+        right: 55px;
         position: absolute;
-        right: 10px;
-        .skip-search{
-            width: 20px;
-            height: 20px;
-            border: 1px solid $c-black;
-            background-size: 10px;
+        .page-header:hover &{
             background-position: 4px -19px;
         }
     }
-    .skip-cart{
-        background-position: 10px -19px;
-        background-size: 10px;
-    }
 
-    body.cms-home .main-container{
-        margin-top: 0;
+    .skip-cart{
+        background-position: 0 -47px;
+        background-size: 20px;
+        position: absolute;
+        right: 15px;
+        top: 13px;
+        height: 35px;
+        width: 20px;
+        padding: 0;
+        .count,.label{
+            display: none !important;
+        }
+        &.skip-active{
+            background-position: 0 -47px !important;
+            background-size: 20px !important;
+        }
+    }
+    #header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background: $white;
+        overflow-y: scroll;
+        display: none;
+        &.skip-active{
+            display: block;
+        }
+    }
+    .nav-container{
+        width: 100%;
+    }
+    .close-nav{
+        background: url(../images/close.png) no-repeat top right;
+        background-size: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        z-index: 1000;
     }
 }
