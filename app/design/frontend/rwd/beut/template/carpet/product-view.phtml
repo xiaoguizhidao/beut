@@ -46,18 +46,32 @@
         </div>
 
         <div class="product-shop">
+            <?php
+            $productManufacture = $_product->getAttributeText('manufacturer');
+            if ($productManufacture !="") :
+            ?>
+            <div class="product-brand"><?php echo $productManufacture; ?></div>
+            <?php endif; ?>
             <div class="product-name">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
             </div>
             
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             <div class="clear"></div>
             <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
+            <?php echo $this->getTierPriceHtml(); ?>
+            <?php
+            if ($_product->getDescription()) {
+               $pdest = $_product->getDescription();
+                $pdest = substr($pdest,0,strpos($pdest,"."));
+                $pdest = str_replace("<p>","",$pdest);
+                $pdest = str_replace("</p>","",$pdest);
+            ?>
+                <p class="product-short-dest"><?php echo $pdest ?></p>
 
-            
-
-            
+            <?php
+            }
+            ?>
             <?php echo $this->getChildHtml('alert_urls') ?>
             
             <?php echo $this->getChildHtml('extrahint') ?>
@@ -89,49 +103,65 @@
 			 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
 	            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 	        <?php endif;?>
-	        
-	         <div class="product-collateral">
-             	<?php //echo $this->getChildHtml('info_tabs') ?>
-             	<?php echo $_product->getdelivery(); ?>
-             	<?php echo $this->getChildHtml('product_additional_data') ?>
-             	
-             	<hr/>
-             	
-             	<?php echo $_product->gettext_box(); ?>
-             	
-             
-             	<?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Thu, Nov 27, 2014*/  ?>
-             	<?php /*if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><img src="http://lullabuy.co.uk/skin/frontend/default/lullabuy/images/mail.jpg"><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif; */ ?>
 
-            <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
-                <div class="view-more">
-			    	<h3>View More</h3>
-			    	<div class="more-links">
-				    <?php $categories = $_product->getCategoryIds(); ?>
-		            <?php foreach($categories as $k => $_category_id): ?>
-		               <?php $_category = Mage::getModel('catalog/category')->load($_category_id) ?>
-		               
-		               <span><a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a></span>
-		            <?php endforeach; ?>
-			    	</div>
-		            
-				</div>
-				
-				<br/>
-				<?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Thu, Nov 27, 2014*/  ?>
-				<?php //echo $this->getLayout()->createBlock('catalog/product')->setProduct($_product)->setTemplate('socialshare/socialbar.phtml')->toHtml(); ?>
-				<?php // echo $this->getLayout()->createBlock('core/template')->setTemplate('interactone/pinit.phtml')->toHtml(); ?>    
+            <div class="">
+                   <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
+                    <div class="view-more">
+                        <h3>View More</h3>
+                        <div class="more-links">
+                            <?php $categories = $_product->getCategoryIds(); ?>
+                            <?php foreach($categories as $k => $_category_id): ?>
+                                <?php $_category = Mage::getModel('catalog/category')->load($_category_id) ?>
 
-    </div>
+                                <span><a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a></span>
+                            <?php endforeach; ?>
+                        </div>
 
-        </div>
+                    </div>
+            </div>
+            </div>
+
 
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
             <?php echo $this->getLayout()->createBlock('catalog/product')->setProduct($_product)->setTemplate('socialshare/socialbar.phtml')->toHtml(); ?>
          </div>
+
+        <div class="product-feature-descirption" style="clear:both;">
+            <div class="left-info">
+                <div class="info-block attributes">
+                    <p class="title">features</p>
+                    <?php echo $this->getChildHtml('attributes') ?>
+                </div>
+                <div class="info-block dimension">
+                    <p class="title">dimensions</p>
+                    <?php echo $_product->getSpecifications() ?>
+                </div>
+               <!-- <div class="info-block delivery-return">
+                    <p class="title">delivery & return</p>
+                    <?php /*echo $this->getChildHtml('attributes') */?>
+                </div>-->
+            </div>
+            <div class="right-info">
+                <div class="description">
+                    <p class="title">description</p>
+                    <?php echo $this->getChildHtml('description') ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <?php echo $this->getChildHtml('upsell_products') ?>
+        <?php if($_product->getSliderBlock()):?>
+            <div class="slider-static-block">
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($_product->getSliderBlock())->toHtml();?>
+            </div>
+        <?php endif;?>
+        <?php //echo $this->getChildHtml('related_products') ?>
+
+
+
+   </div>
          
          
 

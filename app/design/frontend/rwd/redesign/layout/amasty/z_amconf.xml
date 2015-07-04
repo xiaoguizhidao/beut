@@ -9,7 +9,7 @@
             <!-- include jQuery plugins -->
             <action method="addItem" ifconfig="amconf/product_image_size/enable_jquery"><type>skin_js</type><name>js/z_amasty/plugins/jquery-1.9.1.min.js</name><params/></action>
 			<action method="addItem"><type>skin_js</type><name>js/z_amasty/plugins/jquery.tooltipster.min.js</name><params/></action>
-            <action method="addItem" ><type>skin_js</type><name>js/z_amasty/plugins/jquery.elevatezoom.js</name><params/></action>
+            <action method="addItem" ifconfig="amconf/zoom/enable"><type>skin_js</type><name>z_amasty/plugins/jquery.elevatezoom.js</name><params/></action>
             <action method="addItem" ifconfig="amconf/carousel/swipe"><type>skin_js</type><name>js/z_amasty/plugins/jquery.touchSwipe.min.js</name><params/></action>
             <!--action method="addItem" ifconfig="amconf/carousel/mousewheel"><type>skin_js</type><name>z_amasty/plugins/jquery.mousewheel.js</name><params/></action-->
             <action method="addItem" ifconfig="amconf/carousel/enable"><type>skin_js</type><name>js/z_amasty/plugins/jquery.carouFredSel-6.2.1.js</name><params/></action>         
