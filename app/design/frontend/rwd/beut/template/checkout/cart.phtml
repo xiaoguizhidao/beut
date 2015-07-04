@@ -35,6 +35,9 @@
 <?php $_priceDisplay = ($this->helper('tax')->displayCartBothPrices()) ? 'display-both-prices' : 'display-single-price'; ?>
 <div class="cart <?php echo $_priceDisplay; ?>">
     <div class="cart-content">
+        <div class="cart-progress">
+            <img src="<?php echo $this->getSkinUrl('images/status1.png')?>" />
+        </div>
         <div class="page-title title-buttons">
             <h1><?php echo $this->__('Your basket contains...') ?></h1>
             <?php if(!$this->hasError()): ?>
