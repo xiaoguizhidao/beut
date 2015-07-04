@@ -486,12 +486,17 @@ body .promos > li {
   display: block;
 }
 
-/* line 579, ../scss/content/_home.scss */
+/* line 420, ../scss/content/_home.scss */
+.product-shop .product-brand {
+  font-size: 32px;
+}
+
+/* line 588, ../scss/content/_home.scss */
 .promos span {
   font-size: 18px;
 }
 
-/* line 583, ../scss/content/_home.scss */
+/* line 592, ../scss/content/_home.scss */
 .promos strong {
   font-size: 24px;
 }

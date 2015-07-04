@@ -44,89 +44,89 @@
             <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
             <input type="hidden" name="related_product" id="related-products-field" value="" />
         </div>
-
-        <div class="product-shop">
-            <?php
-            $productManufacture = $_product->getAttributeText('manufacturer');
-            if ($productManufacture !="") :
-            ?>
-            <div class="product-brand"><?php echo $productManufacture; ?></div>
-            <?php endif; ?>
-            <div class="product-name">
-                <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
-            </div>
-            
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <div class="clear"></div>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml(); ?>
-            <?php
-            if ($_product->getDescription()) {
-               $pdest = $_product->getDescription();
-                $pdest = substr($pdest,0,strpos($pdest,"."));
-                $pdest = str_replace("<p>","",$pdest);
-                $pdest = str_replace("</p>","",$pdest);
-            ?>
-                <p class="product-short-dest"><?php echo $pdest ?></p>
-
-            <?php
-            }
-            ?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            
-            <?php echo $this->getChildHtml('extrahint') ?>
-
-            <?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
-                    <?php if($_product->isSaleable()): ?>
-                        <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <span class="or"><?php echo $this->__('OR') ?></span>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
+        <div class="prod-top">
+            <div class="product-shop">
+                <?php
+                $productManufacture = $_product->getAttributeText('manufacturer');
+                if ($productManufacture !="") :
+                    ?>
+                    <div class="product-brand"><?php echo $productManufacture; ?></div>
+                <?php endif; ?>
+                <div class="product-name">
+                    <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
                 </div>
-            <?php endif; ?>
 
-            <?php echo $this->getChildHtml('other');?>
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif;?>
+                <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                <div class="clear"></div>
+                <?php echo $this->getChildHtml('product_type_data') ?>
+                <?php echo $this->getTierPriceHtml(); ?>
+                <?php
+                if ($_product->getDescription()) {
+                    $pdest = $_product->getDescription();
+                    $pdest = substr($pdest,0,strpos($pdest,"."));
+                    $pdest = str_replace("<p>","",$pdest);
+                    $pdest = str_replace("</p>","",$pdest);
+                    ?>
+                    <p class="product-short-dest"><?php echo $pdest ?></p>
 
-            <?php $_product = $this->getProduct(); ?>
-            <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
+                <?php
+                }
+                ?>
+                <?php echo $this->getChildHtml('alert_urls') ?>
 
-			 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-	            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-	        <?php endif;?>
-            <div class="product-spec-attributes">
-                <table >
-                    <tr>
-                        <td><?php echo $this->__('Product Code:') ?></td>
-                        <td><?php echo $_product->getSku(); ?></td>
-                    </tr>
-                    <?php if ($_product->getProductAvaiability()): ?>
-                    <tr>
-                        <td><?php echo $this->__('Avaiability:') ?></td>
-                        <td><?php echo $_product->getProductAvaiability(); ?></td>
-                    </tr>
-                    <?php endif; ?>
-                    <?php if ($_product->getDelivery()): ?>
+                <?php echo $this->getChildHtml('extrahint') ?>
+
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box">
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                            <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                <span class="or"><?php echo $this->__('OR') ?></span>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <?php echo $this->getChildHtml('addto') ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php echo $this->getChildHtml('other');?>
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
+
+                <?php $_product = $this->getProduct(); ?>
+                <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                <?php endif;?>
+                <div class="product-spec-attributes">
+                    <table >
                         <tr>
-                            <td><?php echo $this->__('Delivery:'); ?></td>
-                            <td><?php echo $_product->getDelivery(); ?></td>
+                            <td><?php echo $this->__('Product Code:') ?></td>
+                            <td><?php echo $_product->getSku(); ?></td>
                         </tr>
-                    <?php endif; ?>
-                    <?php if ($_product->getShipping()): ?>
-                    <tr>
-                        <td><?php echo $this->__('Shipping:') ?></td>
-                        <td><?php echo $_product->getShipping(); ?></td>
-                    </tr>
-                    <?php endif; ?>
-                </table>
-            </div>
-            <div class="">
-                   <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
+                        <?php if ($_product->getProductAvaiability()): ?>
+                            <tr>
+                                <td><?php echo $this->__('Avaiability:') ?></td>
+                                <td><?php echo $_product->getProductAvaiability(); ?></td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php if ($_product->getDelivery()): ?>
+                            <tr>
+                                <td><?php echo $this->__('Delivery:'); ?></td>
+                                <td><?php echo $_product->getDelivery(); ?></td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php if ($_product->getShipping()): ?>
+                            <tr>
+                                <td><?php echo $this->__('Shipping:') ?></td>
+                                <td><?php echo $_product->getShipping(); ?></td>
+                            </tr>
+                        <?php endif; ?>
+                    </table>
+                </div>
+                <div class="">
+                    <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
                     <div class="view-more">
                         <h3>View More</h3>
                         <div class="more-links">
@@ -139,13 +139,15 @@
                         </div>
 
                     </div>
-            </div>
+                </div>
             </div>
 
 
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-         </div>
+            <div class="product-img-box">
+                <?php echo $this->getChildHtml('media') ?>
+            </div>
+        </div>
+        <div class="clearfix"></div>
 
         <div class="product-feature-descirption" style="clear:both;">
             <div class="left-info">

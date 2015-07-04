@@ -104,9 +104,13 @@ p.product-name {
     }
 }
 .category-products{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-top: 25px;
+    div[class^='col-lg-']{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 $product-column-spacing: 30px;
 

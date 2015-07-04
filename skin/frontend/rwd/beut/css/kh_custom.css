@@ -515,6 +515,11 @@ ul.brands li a {
 .product-view{
     padding-top:30px;
 }
+.product-view:after{
+    content: '';
+    clear: both;
+    display: block;
+}
 .product-brand {
     font-size: 20px;
     font-family: "Century Gothic",Verdana,Arial,sans-serif;
@@ -526,10 +531,11 @@ ul.brands li a {
 .catalog-product-view .price-box {
     clear: both;
 }
-.catalog-product-view .product-view .product-shop .price-box .regular-price .price, .catalog-product-view .product-view .product-shop .price-box .special-price .price, .catalog-product-view .product-view .product-shop .price-box .full-product-price .price{
+.catalog-product-view .product-view .product-shop .price-box .regular-price .price,
+.catalog-product-view .product-view .product-shop .price-box .full-product-price .price{
     color: black;
-    font-family: neuton-regular;
-    font-size: 24px;
+    font-family: 'Neuton-Regular';
+    font-size: 32px;
 }
 .product-short-dest {
     margin-bottom:20px;

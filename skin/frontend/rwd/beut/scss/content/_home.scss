@@ -416,6 +416,12 @@ body.cms-home {
 .payment2{
     display: block;
 }
+.product-shop{
+    .product-brand {
+        font-size: $f-30 + 2;
+
+    }
+}
 
 @include bp(max-width, $bp-medium) {
     body{
@@ -558,6 +564,9 @@ body.cms-home {
     .hot-prod{
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .block-layered-nav .block-content.accordion-open > dl > dd.current{
+        position: relative;
     }
 }
 @include bp(max-width, $bp-xsmall) {
