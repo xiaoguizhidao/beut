@@ -127,8 +127,7 @@
     <?php // Grid Mode ?>
 
     <?php $_collectionSize = $_productCollection->count() ?>
-    <?php $_columnCount = $this->getColumnCount();
-            $col = 12/$_columnCount;
+    <?php $_columnCount = $this->getColumnCount();            $col = 12/$_columnCount;
     ?>
     <div class="container">
         <div class="row products-grid">
@@ -137,10 +136,10 @@
                 <?php endif*/ ?>
                 <div class="col-lg-<?php echo $col; ?> col-xs-6 item">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
-                        <?php $_imgSize = 315;  ?>
+                        <?php $_imgSize = 420;  ?>
                         <img id="product-collection-image-<?php echo $_product->getId(); ?>"
 
-                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(314,394); ?>"
+                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize,$_imgSize); ?>"
                              alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" width="314px" height="395px" />
                             <!--<button class="quickview"><?php /*echo $this->__('quickview')*/?></button>-->
 
