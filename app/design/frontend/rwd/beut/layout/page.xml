@@ -148,7 +148,7 @@
             </block>
 
             <block type="page/html_wrapper" name="footer.before" as="footer_before" translate="label">
-                <label>Page Footer</label>
+                <label>Page Footer Before</label>
                 <action method="setElementClass"><value>footer-before-container</value></action>
             </block>
 

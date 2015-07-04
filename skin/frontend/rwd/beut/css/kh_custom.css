@@ -511,6 +511,60 @@ ul.brands li a {
     background-repeat: no-repeat;
     padding-top: 50px;
 }
+/*Product page*/
+.product-view{
+    padding-top:30px;
+}
+.product-brand {
+    font-size: 20px;
+    font-family: "Century Gothic",Verdana,Arial,sans-serif;
+    color:black;
+}
+.catalog-product-view .availability {
+    clear:both;
+}
+.catalog-product-view .price-box {
+    clear: both;
+}
+.catalog-product-view .product-view .product-shop .price-box .regular-price .price, .catalog-product-view .product-view .product-shop .price-box .special-price .price, .catalog-product-view .product-view .product-shop .price-box .full-product-price .price{
+    color: black;
+    font-family: neuton-regular;
+    font-size: 24px;
+}
+.product-short-dest {
+    margin-bottom:20px;
+}
+.product-feature-descirption {
+    background:#f7f8f9;
+    padding:30px 50px;
+    float:left;
+}
+.catalog-product-view  .left-info {
+    float: left;
+    width: 47%;
+}
+.catalog-product-view  .right-info {
+    float: right;
+    width: 50%;
+    margin-bottom:15px;
+}
+.product-feature-descirption .title{
+    text-transform:uppercase;
+    font-size: 1.2em;
+    margin-bottom:15px;
+}
+.catalog-product-view .info-block{
+    margin-bottom:30px;
+}
+.catalog-product-view .info-block #product-attribute-specs-table, .info-block #product-attribute-specs-table th, .info-block .data-table thead th, .data-table tbody td{
+    border:none!important;
+}
+.info-block .data-table th{
+    border:none!important;
+    text-transform: capitalize;
+    padding: 10px 0;
+    background:none;
+}
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
