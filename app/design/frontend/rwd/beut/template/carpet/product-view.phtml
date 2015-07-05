@@ -102,24 +102,24 @@
             <div class="product-spec-attributes">
                 <table >
                     <tr>
-                        <td><?php echo $this->__('Product Code') ?></td>
+                        <td><?php echo $this->__('Product Code:') ?></td>
                         <td><?php echo $_product->getSku(); ?></td>
                     </tr>
-                    <?php if ($_product->getAvaiability()): ?>
+                    <?php if ($_product->getProductAvaiability()): ?>
                     <tr>
-                        <td><?php echo $this->__('Avaiability') ?></td>
-                        <td><?php echo $_product->getAvaiability(); ?></td>
+                        <td><?php echo $this->__('Avaiability:') ?></td>
+                        <td><?php echo $_product->getProductAvaiability(); ?></td>
                     </tr>
                     <?php endif; ?>
                     <?php if ($_product->getDelivery()): ?>
                         <tr>
-                            <td><?php echo $this->__('Delivery'); ?></td>
+                            <td><?php echo $this->__('Delivery:'); ?></td>
                             <td><?php echo $_product->getDelivery(); ?></td>
                         </tr>
                     <?php endif; ?>
                     <?php if ($_product->getShipping()): ?>
                     <tr>
-                        <td><?php echo $this->__('Shipping') ?></td>
+                        <td><?php echo $this->__('Shipping:') ?></td>
                         <td><?php echo $_product->getShipping(); ?></td>
                     </tr>
                     <?php endif; ?>
