@@ -507,9 +507,13 @@ ul.brands li a {
     font-size: 1.2em;
 }
 .cart {
-    background-image: url("../images/status1.png");
-    background-repeat: no-repeat;
     padding-top: 50px;
+}
+.cart .cart-progress {
+    margin-bottom: 40px;
+}
+.cart .cart-progress img{
+    width: 100%;
 }
 /*Product page*/
 .product-view{
@@ -565,6 +569,373 @@ ul.brands li a {
     padding: 10px 0;
     background:none;
 }
+
+
+
+/*Checkout cart page*/
+.cart-content,.cart-crossel, .cart-full-security{
+    padding:25px 50px;
+}
+.cart-crossel{
+    background: #eeeeee;
+    width: 100%;
+    overflow: hidden;
+}
+.cart-content .page-title h1{
+    font-size: 32px;
+    font-family: futura-medium;
+    color: #000000;
+}
+.cart .page-title{
+    border: none!important;
+}
+.cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th  {
+    color:black;
+    font-size: 19px;
+    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
+    text-transform: capitalize;
+}
+.cart-content td.product-cart-image{
+    border-left:1px solid #cdcdcd;
+    pading-left:15px;
+}
+.cart-content td.product-cart-remove{
+    border-right: 1px solid #cdcdcd;
+    pading-rigt:15px;
+}
+#shopping-cart-table td{
+    padding:15px 0;
+}
+.cart-table h2{
+    font-weight: normal !important;
+}
+h2.product-brand{
+    font-family: "futura_lightregular";
+    color:#000;
+    font-size: 19px;
+    font-weight: bold;
+}
+h2.product-name a{
+    font-family: "futura_lightregular";
+    font-size: 16px;
+}
+.cart-crossel .crosssell {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.crossell-title{
+    font-size: 32px;
+    font-family: futura-medium;
+    color: #000000;
+    width: 100px;
+    float: left;
+}
+.crossell-products{
+    float:left;
+}
+.category-title h1{
+    margin-bottom: 0;
+}
+/* By MsLe */
+.cart-table tr{
+    border-top: 1px solid #ccc;
+}
+.cart-table thead tr.first{
+    border: none;
+}
+.cart-table thead tr th{
+    padding: 0 17px 12px 17px;
+}
+#shopping-cart-table td{
+    padding: 15px 0;
+    background: #fff;
+    vertical-align: middle;
+}
+.cart-content td.product-cart-image{
+    border-left: 1px solid #ccc;
+}
+.cart-content td.product-cart-remove{
+    border-right: 1px solid #ccc;
+}
+.cart-content .cart-right{
+    float: left;
+    width: -moz-calc(40% - 20px);
+    width: -webkit-calc(40% - 20px);
+    width: -o-calc(40% - 20px);
+    width: calc(40% - 20px);
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-top: 37px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 30px;
+}
+.cart-forms, .cart-totals-wrapper, .crosssell{
+    width: 100%;
+    padding-left: 0;
+}
+#shopping-cart-table td a.product-image{
+    margin: 0 15px;
+}
+.cart-content{
+    padding-top: 15px;
+}
+.cart .page-title{
+    margin-bottom: 0;
+}
+.cart-table .product-cart-actions .button{
+    background: transparent;
+    font-size: 14px;
+    color: #000;
+    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
+    text-transform: none;
+    text-align: center;
+    margin: auto;
+}
+.cart-table .product-cart-actions .qty{
+    margin-bottom: 0;
+}
+.cart-totals-wrapper{
+    margin-top: 0;
+}
+.cart-totals{
+    background: transparent;
+    border: none;
+}
+.a-left{
+    text-align: left;
+}
+.cart-totals{
+    text-transform: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.cart-totals tr.subtotal td,
+.cart-totals tr.subtotal td .price,
+.cart .cart-totals table tfoot td,
+.cart .cart-totals table tfoot strong span,
+.cart .cart-totals table tfoot span.price{
+    font-family: 'futura-medium';
+    font-size: 32px;
+    text-transform: none;
+}
+.cart .cart-totals table tfoot td{
+    padding: 0;
+}
+.cart-content .checkout-types{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.cart-content .checkout-types .btn-checkout,
+.shipping #co-shipping-method-form .buttons-set .button,
+.order-review-button .amscheckout-submit{
+    font-family: 'futura_lightregular';
+    font-size: 20px;
+    padding: 25px 0;
+    width: 100%;
+    text-align: center;
+}
+.cart-content .checkout-types .btn-checkout:hover {
+    color: #fff;
+    background: #000;
+}
+.cart .cart-totals table tfoot{
+    border: none;
+}
+.cart .cart-totals table td{
+    text-transform: none;
+    font-size: 18px;
+    font-family: 'futura_lightregular';
+}
+.btn-remove2{
+    position: relative;
+    /* border: 1px solid #ccc;*/
+    background-position: 4px -650px;
+}
+.clear{
+    clear: both;
+}
+.cart-forms .discount,#checkout-coupon{
+    border: none;
+    background: #f7f7f7;
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    padding: 0;
+}
+#checkout-coupon{
+    height: 44px;
+}
+
+.shipping-amount i{
+    display: none;
+}
+.cart .cart-totals table td.shipping-amount{
+    text-transform: capitalize;
+}
+.cart .cart-totals table td:first-child{
+    min-width: auto;
+    width: 50%;
+}
+.cart .discount-form{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+#discount-coupon-form h2, .cart .giftcard h2{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    text-transform: none;
+    font-family: 'futura_lightregular';
+    margin: 0;
+    line-height: 49px;
+    border: 1px solid #ccc;
+}
+#checkout-coupon label.coupon-code{
+    display: none;
+}
+#discount-coupon-form .input-text, .cart .giftcard .input-text,
+.amscheckout .discount-form input.input-text{
+    width: -moz-calc(100% - 100px);
+    width: -webkit-calc(100% - 100px);
+    width: -o-calc(100% - 100px);
+    width: calc(100% - 100px);
+    float: left;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ff7f00;
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'futura_lightregular';
+}
+.amscheckout .discount-form input.input-text:focus{
+    outline: 0;
+    box-shadow: none;
+    border: none;
+}
+#discount-coupon-form .field-wrapper, .cart .giftcard .field-wrapper{
+    height: 100%;
+    width: 100%;
+}
+#discount-coupon-form .button-wrapper, .cart .giftcard .button-wrapper,
+.coupon-buttons{
+    width: 100px;
+    float: left;
+    background: #ff7f00;
+    color: #fff;
+    height: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+.coupon-buttons{
+    padding-top: 0;
+    text-align: center;
+}
+#discount-coupon-form .button-wrapper > button, .cart .giftcard .button-wrapper > button,
+.coupon-buttons button{
+    float: none;
+    margin: auto;
+}
+#discount-coupon-form .button-wrapper > button span, .cart .giftcard .button-wrapper > button span,
+.coupon-buttons button span{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.address-result{
+    display: none;
+    border-top: 1px solid #ccc;
+}
+.cart-totals, .cart-forms .giftcard, .cart-forms .shipping{
+    background: transparent;
+    border: none;
+}
+.cart-full-security{
+    font-family: 'Arial', sans-serif;
+}
+.cart-full-security [class^="col-"]{
+    float: left;
+    padding: 25px 0 60px 0;
+    width: 18%;
+    margin-left: 2%;
+
+}
+.cart-full-security .col-3{
+    width: 34%;
+}
+.cart-full-security [class^="col-"] .title{
+    font-size: 14px;
+    color: #000;
+}
+.cart-full-security [class^="col-"] i{
+    font-size: 12px;
+    font-style: normal;
+}
+.cart-full-security [class^="col-"] .phone{
+    font-size: 20px;
+    color: #25698d;
+    margin-top: 10px;
+}
+.cart-full-security .col-1 .title,
+.cart-full-security .col-2 .title{
+    margin-bottom: 10px;
+}
+.shipping .form-list .shipping-country,
+.shipping .form-list .shipping-region,
+.shipping .form-list .shipping-postcode{
+    width: 100%;
+}
+.shipping .form-list label,
+.sp-method-label{
+    width: 50%;
+    float: left;
+    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 30px;
+}
+dl.sp-methods.f-right dd{
+    margin-top: 10px;
+}
+.shipping .form-list .input-box{
+    width: 50%;
+    float: left;
+}
+.shipping .form-list input{
+    width: 100%;
+}
+.shipping .form-list .input-box div.selector span:before{
+    content: "\f107";
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+}
+.shipping .form-list .input-box div.selector span:after {
+    border: none;
+}
+.shipping .form-list .input-box div.selector{
+    width: 100%;
+}
+.shipping .form-list .input-box div.selector span{
+    font-size: 12px;
+    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
+    text-transform: uppercase;
+    background: #ededed;
+    color: #878787;
+    border: none;
+    padding: 6px 10px;
+    height: 30px;
+}
+.nicescroll-rails{
+    background: transparent;
+}
+/*End by MsLe*/
+/*End checkout cart page*/
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
