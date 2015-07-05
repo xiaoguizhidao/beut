@@ -283,25 +283,25 @@
     width: 196px;
     float:left;
 }
-.cms-about-us .menu-left ul, .cms-faqs .menu-left ul{
+.cms-about-us .menu-left ul, .cms-faqs .menu-left ul, .delivery-contents ul{
     list-style: none;
 }
-.cms-about-us .std .menu-left li, .cms-faqs .menu-left li{
+.cms-about-us .std .menu-left li, .cms-faqs .menu-left li, .delivery-contents .menu-left li{
     color:black;
     font-style: normal;
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
 }
-.cms-about-us .std .menu-left li:last-child,  .cms-faqs .menu-left li:last-child{
+.cms-about-us .std .menu-left li:last-child,  .cms-faqs .menu-left li:last-child, .delivery-contents li:last-child{
     border-bottom: none;
 }
-.cms-about-us .std .menu-left li:first-child, .cms-faqs .menu-left li:first-child{
+.cms-about-us .std .menu-left li:first-child, .cms-faqs .menu-left li:first-child, .delivery-contents .menu-left li:first-child{
     padding-top: 0px;
 }
-.cms-about-us .menu-left li a, .cms-faqs .menu-left li a{
+.cms-about-us .menu-left li a, .cms-faqs .menu-left li a, .delivery-contents .menu-left li a{
     color:black;
 }
-.cms-about-us .menu-left li.active, .cms-faqs .menu-left li.active{
+.cms-about-us .menu-left li.active, .cms-faqs .menu-left li.active, .delivery-contents .menu-left li .active{
     color:#458ddb;
 }
 .cms-page-view .std img, .cms-no-route .std img{
@@ -988,6 +988,133 @@ dl.sp-methods.f-right dd{
 }
 /*End by MsLe*/
 /*End checkout cart page*/
+/* Delivery page*/
+.cms-delivery .main-image {
+        background-image: url("../images/delivery-big-img.png");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        padding:50px;
+        min-height: 400px;
+}
+.cms-delivery .main-image p{
+    text-align: center;
+    vertical-align: middle;
+}
+.cms-delivery .main-image p .title{
+    font-size:32px;
+    text-transform: capitalize;
+
+}
+.cms-delivery .delivery-message {
+    background: #f7f8f9 none repeat scroll 0 0;
+    padding: 15px 50px;
+}
+.cms-delivery .delivery-message ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+.cms-delivery .delivery-message li {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    margin: 0!important;
+    padding:0!important;
+    font-style: normal;
+}
+.cms-delivery .left-block{
+    width: 75%;
+    padding-right: 1%;
+    float:left;
+}
+.cms-delivery .left-block p{
+    font-style: normal;
+    color: #000000;
+}
+.cms-delivery .left-block .description{
+    margin-top:25px;
+}
+.cms-delivery .right-block{
+    width: 24%;
+    float:right;
+    margin-top: -30px;
+}
+.delivery-contents {
+    padding: 30px 50px;
+}
+.cms-delivery .delivery-contents h1.title{
+    text-transform: capitalize;
+    color:black;
+}
+.can-we-help {
+    border-left: 1px solid #eeeeee;
+    padding-left: 20px;
+}
+.can-we-help img{
+    margin: 5px 0!important;
+}
+.can-we-help .phone {
+   line-height: 60px;
+}
+ul.delivery-tabs {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+ul.delivery-tabs li {
+   display: inline-block;
+    margin-left:0px;
+    width: 18%;
+    margin-right: 2%;
+}
+ul.delivery-tabs li:last-child{
+    margin-right: 0%;
+}
+ul.delivery-tabs li a{
+    background: #f7f8f9 none repeat scroll 0 0;
+    color: black;
+    display: block;
+    font-style: normal;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+}
+.delivery-content-block {
+    float: left;
+    margin-top: 25px;
+    width: 100%;
+}
+.delivery-content-block .left{
+    width: 30%;
+    margin-right:2%;
+    float:left;
+    font-size:22px;
+    text-transform: capitalize;
+    color: #000000;
+}
+.delivery-content-block .right{
+    width: 68%;
+    float: left;
+}
+/*cms*/
+.delivery-content-block  .menu-left{
+   width: 100%;
+   margin-left: 15px;
+}
+.delivery-contents .menu-left li{
+    border-bottom: 0px;
+    font-style: normal;
+    padding-top:0px;
+}
+/*cms*/
+.can-we-help .title{
+    font-size: 22px!important;
+    text-transform: capitalize;
+    font-style: normal!important;
+    margin-bottom: 10px;
+}
+/*End delivery page*/
+
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
