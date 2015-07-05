@@ -662,13 +662,11 @@ ul.brands li a {
     font-weight: normal !important;
 }
 h2.product-brand{
-    font-family: "futura_lightregular";
     color:#000;
     font-size: 19px;
     font-weight: bold;
 }
 h2.product-name a{
-    font-family: "futura_lightregular";
     font-size: 16px;
 }
 .cart-crossel .crosssell {

@@ -51,7 +51,6 @@ body,
 button,
 input,
 select,
-table,
 textarea {
     font-family: $f-stack-sans;
     color: $c-text;
@@ -1517,14 +1516,6 @@ span.weee {
  * Add to links
  */
 
-.add-to-links {
-    margin: $element-spacing 0;
-
-    a {
-        display: inline-block;
-        padding: 0px 3px 3px;
-    }
-}
 
 .add-to-links .separator {
     display: none;

@@ -275,6 +275,11 @@ var FEelementControl = {
 			$j('.skip-cart').appendTo('.header-language-container .account-cart-wrapper');
 			$j('#header-cart').appendTo('.header-language-container .account-cart-wrapper');
 		}
+	},
+	prodSelectBox: function(){
+		if($j('.product-options dd select').length > 0){
+			$j('.product-options dd select').uniform();
+		}
 	}
 
 };
@@ -290,6 +295,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.swipeFilter();
 	FEelementControl.confProdImage();
 	FEelementControl.miniCartPos();
+	FEelementControl.prodSelectBox();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{

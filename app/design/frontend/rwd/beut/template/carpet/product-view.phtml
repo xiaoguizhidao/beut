@@ -84,7 +84,7 @@
                                 <span class="or"><?php echo $this->__('OR') ?></span>
                             <?php endif; ?>
                         <?php endif; ?>
-                        <?php echo $this->getChildHtml('addto') ?>
+
                     </div>
                 <?php endif; ?>
 
@@ -125,20 +125,17 @@
                         <?php endif; ?>
                     </table>
                 </div>
-                <div class="">
-                    <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
-                    <div class="view-more">
-                        <h3>View More</h3>
-                        <div class="more-links">
-                            <?php $categories = $_product->getCategoryIds(); ?>
-                            <?php foreach($categories as $k => $_category_id): ?>
-                                <?php $_category = Mage::getModel('catalog/category')->load($_category_id) ?>
-
-                                <span><a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a></span>
-                            <?php endforeach; ?>
-                        </div>
-
+                <?php echo $this->getChildHtml('addto') ?>
+                <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
+                <div class="view-more">
+                    <div class="more-links">
+                        <?php $categories = $_product->getCategoryIds(); ?>
+                        <?php foreach($categories as $k => $_category_id): ?>
+                            <?php $_category = Mage::getModel('catalog/category')->load($_category_id) ?>
+                            <span><a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a></span>
+                        <?php endforeach; ?>
                     </div>
+
                 </div>
             </div>
 
@@ -249,27 +246,3 @@
     <?php echo $this->getChildHtml('related'); ?>
   
 </div>
-
-
-<style>
-<!--
-.view-more {
-    text-align: center;
-}
-.view-more h3 {
-    margin-bottom: 0;
-    text-transform: none;
-}
-.view-more .more-links span:after {
-    content: " / ";
-}
-.view-more .more-links span:last-child:after {
-    content: "";
-}
-.view-more .more-links a {
-    color: #636363;
-}
-
-//-->
-
-</style>

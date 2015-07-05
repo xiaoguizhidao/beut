@@ -29,7 +29,6 @@
 
 .product-view {
     .product-essential {
-
         .extra-info {
             .ratings {
                 .rating-box,
@@ -63,7 +62,6 @@
     .product-shop {
         width: 50%;
         float: right;
-
         .product-name {
             display: none;
             float: left;
@@ -155,6 +153,17 @@
                 }
             }
 
+        }
+        .product-spec-attributes{
+            margin-bottom: 20px;
+            td{
+                padding: 0 0 7px;
+                vertical-align: top;
+                &:first-child{
+                    width: 35%;
+                    font-weight: 600;
+                }
+            }
         }
     }
 
@@ -332,11 +341,8 @@
     .add-to-cart:after {
         @include clearfix;
     }
-
     .add-to-cart {
-        padding-bottom: 3px;
-        margin-bottom: 10px;
-        border-bottom: 1px solid $c-module-border;
+        width: 100%;
     }
 
     /* Set a min-height so that the floated elements break appropriately */
@@ -347,15 +353,13 @@
     }
 
     .product-options-bottom .price-box,
-    .add-to-cart .qty-wrapper,
-    .add-to-cart-buttons .button,
     .add-to-cart-buttons .paypal-logo {
         margin-bottom: 10px;
     }
 
     .add-to-cart .qty-wrapper,
     .add-to-cart .qty-wrapper label {
-        margin-right: 7px;
+        margin-right: 20px;
         float: left;
     }
 
@@ -365,14 +369,14 @@
 
     .add-to-cart .qty-wrapper .qty {
         float: left;
-        height: 40px;
+        height: 80px;
+        width: 80px;
+        font-size: $f-20;
     }
 
     .add-to-cart-buttons {
         float: left;
-        margin-right: 10px;
-        max-width: 100%; // Constrain width in Firefox
-
+        @include calc(width,"100% - 100px");
         .paypal-logo {
             clear: left;
             text-align: center;
@@ -405,14 +409,12 @@
     }
 
     .add-to-cart-buttons .button {
-        min-height: 40px;
+        height: 80px;
         line-height: 40px;
-        font-size: $f-size-xl;
+        font-size: $f-20;
         padding: 0px 30px;
         float: left;
-        min-width: 160px;
         width: 100%;
-        white-space: normal;
     }
 
     .alert-price,
@@ -449,21 +451,28 @@
 .product-view .add-to-links {
     clear: both;
     margin-top: 0px;
-    margin-right: 15px;
     float: left;
-
     &:after {
         @include clearfix;
     }
-
     li {
-        float: left;
+        display: block;
+        margin-bottom: 4px;
     }
-
     a {
-        padding: 2px 7px 2px 0px;
-        margin-left: 7px;
-        border-right: 1px solid $c-module-border;
+        color: $c-black;
+        font-family: $f-stack-sans;
+        text-decoration: none;
+        &:before{
+            font-family: 'FontAwesome';
+            padding-right: 10px;
+            @include letransition(all,0.25s,ease 0s);
+        }
+        &:hover{
+            &:before{
+                color: $c-blue;
+            }
+        }
     }
 
     li:first-child a {
@@ -474,7 +483,51 @@
         border-right: 0px;
     }
 }
+.social_buttons{
+    white-space: nowrap;
+    > div{
+        display: inline-block;
+        vertical-align: top;
+        &#facebookConteiner{
+            margin-top: -5px;
+        }
+    }
+    img{
+        float: left;
+    }
+    .google{
+        max-width: 57px !important;
+        display: inline-block;
+        margin-left: 5px !important;
+    }
+}
 
+.view-more{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    h3 {
+        margin-bottom: 0;
+        text-transform: none;
+    }
+    .more-links span:after {
+        content: " / ";
+    }
+    .more-links span:last-child:after {
+        content: "";
+    }
+    .more-links a {
+        color: #636363;
+    }
+
+}
+.share-label{
+    margin-bottom: 10px;
+    display: block;
+}
+.product-share{
+    text-align: right;
+}
 .product-view .sharing-links {
     float: left;
 
@@ -573,6 +626,8 @@
     display: block;
     font-size: $f-size-xl;
 }
+
+
 .product-img-box .product-name {
     display: none;
 }
@@ -658,9 +713,6 @@
 
 .product-options {
     width: 100%;
-    margin: 10px 0 0;
-    padding: 10px 15px 15px;
-    border: 1px solid $c-fieldset-border;
     clear: both;
     position: relative;
 }
@@ -777,13 +829,9 @@
     margin: 0;
     font-size: $f-size-xxs;
 }
-
 .product-options-bottom {
-    background-color: $c-module-background;
-    padding: 15px 20px;
-    border: 1px solid $c-fieldset-border;
-    border-top: 0;
-    margin-bottom: $box-spacing;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .product-options-bottom:after {
