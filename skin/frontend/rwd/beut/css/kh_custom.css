@@ -515,6 +515,52 @@ ul.brands li a {
 .cart .cart-progress img{
     width: 100%;
 }
+/*End checkout-cart page*/
+
+/*onestepcheckout*/
+.checkout-onepage-index .main{
+    margin: 26px 50px 70px;
+}
+.checkout-onepage-index .col-main{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.checkout-onepage-index .amscheckout-main{
+    width: 100%;
+    font-size: 12px;
+}
+.checkout-onepage-index .three-columns{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.checkout-onepage-index .col-lg-4{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33.3333%;
+    float: left;
+    border: none;
+}
+.checkout-onepage-index .first-column > div,
+.checkout-onepage-index .second-column .step-2,
+.checkout-onepage-index .second-column .step-3,
+.checkout-onepage-index .third-column > div{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.amscheckout-login input.input-text, .amscheckout input.input-text{
+    border-radius: 0;
+}
+.amscheckout-img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 27px;
+    height: 27px;
+}
+/*End onestepchekcout*/
+
 /*Product page*/
 .product-view{
     padding-top:30px;
