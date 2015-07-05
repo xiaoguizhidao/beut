@@ -27,11 +27,16 @@
 
 <?php $_product = $this->getProduct(); ?>
 <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
-
+<div class="add-to-links-left">
 <ul class="add-to-links">
-<?php if ($this->helper('wishlist')->isAllow()) : ?>
-    <li><a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist fa fa-heart"><?php echo $this->__('Add to Wishlist') ?></a></li>
-<?php endif; ?>
-
-    <li><span class='st_sharethis' id="st_sharethis_custom" displayText='Share'> share</span></li>
+    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+        <li><a href="<?php echo $_wishlistSubmitUrl ?>" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist fa fa-heart"><?php echo $this->__('Add to Wishlist') ?></a></li>
+    <?php endif; ?>
+    <?php if ($this->canEmailToFriend()): ?>
+        <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
+    <?php endif; ?>
 </ul>
+</div>
+<div class=""product-share>
+<?php echo $this->getLayout()->createBlock('catalog/product')->setProduct($_product)->setTemplate('socialshare/socialbar.phtml')->toHtml(); ?>
+</div>

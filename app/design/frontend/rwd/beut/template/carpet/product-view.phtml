@@ -88,22 +88,43 @@
                 </div>
             <?php endif; ?>
 
-         
-
             <?php echo $this->getChildHtml('other');?>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
             <?php endif;?>
 
-             
-            
             <?php $_product = $this->getProduct(); ?>
             <?php $_wishlistSubmitUrl = $this->helper('wishlist')->getAddUrl($_product); ?>
 
 			 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
 	            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 	        <?php endif;?>
-
+            <div class="product-spec-attributes">
+                <table >
+                    <tr>
+                        <td><?php echo $this->__('Product Code') ?></td>
+                        <td><?php echo $_product->getSku(); ?></td>
+                    </tr>
+                    <?php if ($_product->getAvaiability()): ?>
+                    <tr>
+                        <td><?php echo $this->__('Avaiability') ?></td>
+                        <td><?php echo $_product->getAvaiability(); ?></td>
+                    </tr>
+                    <?php endif; ?>
+                    <?php if ($_product->getDelivery()): ?>
+                        <tr>
+                            <td><?php echo $this->__('Delivery'); ?></td>
+                            <td><?php echo $_product->getDelivery(); ?></td>
+                        </tr>
+                    <?php endif; ?>
+                    <?php if ($_product->getShipping()): ?>
+                    <tr>
+                        <td><?php echo $this->__('Shipping') ?></td>
+                        <td><?php echo $_product->getShipping(); ?></td>
+                    </tr>
+                    <?php endif; ?>
+                </table>
+            </div>
             <div class="">
                    <?php /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Mon, Sep 1, 2014*/  ?>
                     <div class="view-more">
@@ -124,7 +145,6 @@
 
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
-            <?php echo $this->getLayout()->createBlock('catalog/product')->setProduct($_product)->setTemplate('socialshare/socialbar.phtml')->toHtml(); ?>
          </div>
 
         <div class="product-feature-descirption" style="clear:both;">

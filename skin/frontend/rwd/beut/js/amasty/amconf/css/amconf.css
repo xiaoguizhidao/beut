@@ -145,7 +145,7 @@ hr.amconf-hr{
 
 .MagicScrollArrows {
     cursor: pointer;
-    position: absolute;
+  /*  position: absolute;*/
     display: block;
 }
 
