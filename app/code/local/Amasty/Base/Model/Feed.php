@@ -11,12 +11,12 @@ class Amasty_Base_Model_Feed extends Mage_AdminNotification_Model_Feed
     const URL_EXTENSIONS  = 'http://amasty.com/feed-extensions.xml';
     const URL_NEWS        = 'http://amasty.com/feed-news.xml';
 
-	
-	public static function check()
-	{
-		return Mage::getModel('ambase/feed')->checkUpdate();
-	}
-	
+
+    public static function check()
+    {
+        return Mage::getModel('ambase/feed')->checkUpdate();
+    }
+
     public function checkUpdate()
     {
         if (($this->getFrequency() + $this->getLastUpdate()) > time()) {
@@ -55,7 +55,10 @@ class Amasty_Base_Model_Feed extends Mage_AdminNotification_Model_Feed
                 );
             }
             if ($feedData) {
-                Mage::getModel('adminnotification/inbox')->parse($feedData);
+                $inbox = Mage::getModel('adminnotification/inbox');
+                
+                if ($inbox)
+                    $inbox->parse($feedData);   
             }
         }
         
@@ -105,43 +108,43 @@ class Amasty_Base_Model_Feed extends Mage_AdminNotification_Model_Feed
     }
     
     protected function getInterests()
-	{
-		return Mage::getStoreConfig(self::XML_ITERESTS);
-	}
+    {
+        return Mage::getStoreConfig(self::XML_ITERESTS);
+    }
 
-	protected function isInteresting($item)
-	{
-		$interests = @explode(',', $this->getInterests());
-		$types     = @explode(':', (string)$item->type);
-		$extenion  = (string)$item->extension;
-		
-		$selfUpgrades = array_search(Amasty_Base_Model_Source_Updates_Type::TYPE_INSTALLED_UPDATE, $types);
-		
-		foreach ($types as $type){
-			if (array_search($type, $interests) !== false){
-				return true;
-			}
-			
-			if ($extenion && ($type == Amasty_Base_Model_Source_Updates_Type::TYPE_UPDATE_RELEASE) && $selfUpgrades){
+    protected function isInteresting($item)
+    {
+        $interests = @explode(',', $this->getInterests());
+        $types     = @explode(':', (string)$item->type);
+        $extenion  = (string)$item->extension;
+
+        $selfUpgrades = array_search(Amasty_Base_Model_Source_Updates_Type::TYPE_INSTALLED_UPDATE, $types);
+
+        foreach ($types as $type){
+            if (array_search($type, $interests) !== false){
+                return true;
+            }
+
+            if ($extenion && ($type == Amasty_Base_Model_Source_Updates_Type::TYPE_UPDATE_RELEASE) && $selfUpgrades){
                 if ($this->isExtensionInstalled($extenion)){
-                	return true;
+                    return true;
                 }
-			}
-		}
-		
-		return false;
-	}
+            }
+        }
 
-	protected function isExtensionInstalled($code)
-	{
-		$modules = array_keys((array)Mage::getConfig()->getNode('modules')->children());
+        return false;
+    }
+
+    protected function isExtensionInstalled($code)
+    {
+        $modules = array_keys((array)Mage::getConfig()->getNode('modules')->children());
         foreach ($modules as $moduleName) {
-        	if ($moduleName == $code){
-        		return true;
-        	}
+            if ($moduleName == $code){
+                return true;
+            }
         }
         
-		return false;
-	}
+        return false;
+    }
     
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Amasty Team
+* @copyright Copyright (c)  2014 Amasty (http://www.amasty.com)
+* @package Amasty_Quickview
+*/
+-->
+<config>
+    <modules>
+        <Amasty_Quickview>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Amasty_Quickview>
+    </modules>
+</config>

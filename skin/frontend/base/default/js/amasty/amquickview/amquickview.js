@@ -48,7 +48,7 @@ AmQuickview.prototype =
             var maxWidth  = image[0].getWidth();
             if(maxWidth > 100){
                 hover.setStyle({
-                    maxWidth : 60 + '%'
+                    maxWidth : maxWidth + 'px'
                 });
             }
             if(image[0].parentNode){
@@ -69,20 +69,13 @@ AmQuickview.prototype =
             var hoverHeight = hover.getHeight();
             var px = (imageHeight - hoverHeight + itemPadding);
             hover.setStyle({
-                top: px + 'px',
-                marginLeft: "auto",
-                marginRight:"auto",
-                left:"0",
-                right:"0"
+                top: px + 'px'
             });
 
             var imageMargin = parseInt(image[0].getStyle('marginLeft'));
             if(imageMargin){
                 hover.setStyle({
-                    marginLeft: "auto",
-                    marginRight:"auto",
-                    left:"0",
-                    right:"0"
+                    marginLeft: imageMargin + 'px'
                 });
             }
         }
@@ -103,10 +96,6 @@ AmQuickview.prototype =
         jQuery.fancybox.open({
             padding :0,
             href    : url,
-            autoDimensions: false,
-            'autoSize':false,
-            'width'         :   900,
-            'height'        :   600,
             type    : 'iframe'
         });
         AmQuickviewObject.hideLen(element.parentNode.parentNode);
@@ -122,7 +111,7 @@ AmQuickview.prototype =
             hover.show();
             this.color = element.getStyle('background-color');
             element.setStyle({
-                backgroundColor: 'white'
+                backgroundColor: '#eee'
             });
         }
     },
@@ -174,7 +163,7 @@ AmQuickview.prototype =
 function AmQuickviewLoad(){
     if(typeof(AmQuickviewObject) != 'undefined') {
         $$('.amquickview-hover').each(function (hover) {
-            $$('.amquickview-hover')[hover].remove();
+            hover.remove();
         });
         AmQuickviewObject.initHover();
     }

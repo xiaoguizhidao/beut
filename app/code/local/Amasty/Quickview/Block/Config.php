@@ -36,9 +36,10 @@ class Amasty_Quickview_Block_Config extends Mage_Core_Block_Template
     }
 
     private function _getViewText(){
-        //<img class="am-quickview-icon" src="' . Mage::getDesign()->getSkinUrl('images/amasty/amquickview/len.png',array('_area'=>'frontend')) . '"/> '
-
-        return $this->__('QUICK VIEW');
+        //<img class="am-quickview-icon" src="' .
+        //Mage::getDesign()->getSkinUrl('images/amasty/amquickview/len.png',array('_area'=>'frontend')) .
+        //'"/>
+        return                     $this->__('QUICK VIEW');
     }
 
 }

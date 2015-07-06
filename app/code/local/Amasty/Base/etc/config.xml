@@ -2,48 +2,48 @@
 <config>
   <modules>
     <Amasty_Base>
-      <version>1.1.0</version>
+      <version>2.1.1</version>
     </Amasty_Base>
   </modules>
   
-	<global>
-		<blocks>
-		  <ambase>
-			<class>Amasty_Base_Block</class>
-		  </ambase>
-		</blocks>
-		<resources>
-		  <ambase_setup>
-			  <setup>
-				  <module>Amasty_Base</module>
-			  </setup>
-			  <connection>
-				  <use>core_setup</use>
-			  </connection>
-		  </ambase_setup>
-		  <ambase_write>
-			  <connection>
-				  <use>core_write</use>
-			  </connection>
-		  </ambase_write>
-		  <ambase_read>
-			  <connection>
-				  <use>core_read</use>
-			  </connection>
-		  </ambase_read>
-		</resources>
-		<models>
-			<ambase>
-				<class>Amasty_Base_Model</class>
-			</ambase>
-		</models>
-	  <helpers>
-		  <ambase>
-			  <class>Amasty_Base_Helper</class>
-		  </ambase>
-	  </helpers>
-	</global>
-	
+    <global>
+        <blocks>
+          <ambase>
+            <class>Amasty_Base_Block</class>
+          </ambase>
+        </blocks>
+        <resources>
+          <ambase_setup>
+              <setup>
+                  <module>Amasty_Base</module>
+              </setup>
+              <connection>
+                  <use>core_setup</use>
+              </connection>
+          </ambase_setup>
+          <ambase_write>
+              <connection>
+                  <use>core_write</use>
+              </connection>
+          </ambase_write>
+          <ambase_read>
+              <connection>
+                  <use>core_read</use>
+              </connection>
+          </ambase_read>
+        </resources>
+        <models>
+            <ambase>
+                <class>Amasty_Base_Model</class>
+            </ambase>
+        </models>
+      <helpers>
+          <ambase>
+              <class>Amasty_Base_Helper</class>
+          </ambase>
+      </helpers>
+    </global>
+
 <admin>
             <routers>
                 <ambase>
@@ -55,7 +55,7 @@
                 </ambase>
             </routers>
         </admin>
-	<adminhtml>
+    <adminhtml>
         <layout>
             <updates>
                 <ambase module="Amasty_Base">
@@ -100,13 +100,13 @@
             </observers>
         </controller_action_predispatch>
     </events> 
-	</adminhtml>
-	<default>
-		<ambase>
-			<feed>
-				<check_frequency>86400</check_frequency>
-				<interests>INFO,PROMO,UPDATE_RELEASE,NEW_RELEASE,INSTALLED_UPDATE</interests>
-			</feed>
-		</ambase>
-	</default>			
+    </adminhtml>
+    <default>
+        <ambase>
+            <feed>
+                <check_frequency>86400</check_frequency>
+                <interests>INFO,PROMO,UPDATE_RELEASE,NEW_RELEASE,INSTALLED_UPDATE</interests>
+            </feed>
+        </ambase>
+    </default>
 </config>
