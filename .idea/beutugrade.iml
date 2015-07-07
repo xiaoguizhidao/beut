@@ -6,11 +6,8 @@
     <option name="compassSupportEnabled" value="true" />
     <option name="importPaths">
       <list>
-        <option value="$MODULE_DIR$/skin/frontend/rwd/beut/scss/bower_components/jssor-slider/stylesheets" />
-        <option value="$MODULE_DIR$/skin/frontend/rwd/beut/scss/bower_components/jquery/stylesheets" />
+        <option value="/Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets" />
         <option value="$MODULE_DIR$/skin/frontend/rwd/default/scss" />
-        <option value="/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/frameworks/compass/stylesheets" />
-        <option value="/Library/Ruby/Gems/2.0.0/gems/compass-sourcemaps-0.12.4.sourcemaps.a4836f1/frameworks/blueprint/stylesheets" />
       </list>
     </option>
   </component>

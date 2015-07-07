@@ -1,40 +1,61 @@
 @charset "UTF-8";
+/*
+// ----------------------------------------------
+// Usage example:
+// For IE set $mq-support to false.
+// Set the fixed value.
+// Then use mixins to test whether styles should be applied.
+// ----------------------------------------------
+
+$mq-support: false;
+$mq-fixed-value: 1024;
+
+// Renders at fixed value
+@include bp (min-width, 300px) { 
+    div { color:#000; }
+}
+
+// Doesn't render without MQ support
+@include bp (min-width, 1200px) { 
+    div { color:#FFF; }
+}
+
+// Doesn't render without MQ support
+@include bp (max-width, 300px) { 
+    div { color:#444; }
+}
+
+// Renders at fixed value
+@include bp (max-width, 1200px) { 
+    div { color:#888; }
+}
+
+// ----------------------------------------------
+*/
 @-webkit-keyframes menuOpen {
-  /* line 87, ../scss/mixin/_menu.scss */
   0% {
     width: 0;
   }
-
-  /* line 88, ../scss/mixin/_menu.scss */
   100% {
     width: 80%;
   }
 }
-
 @-webkit-keyframes cartOpen {
-  /* line 91, ../scss/mixin/_menu.scss */
   0% {
     opacity: 0;
   }
-
-  /* line 92, ../scss/mixin/_menu.scss */
   100% {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes searchOpen {
-  /* line 95, ../scss/mixin/_menu.scss */
   0% {
     height: 0;
   }
-
-  /* line 96, ../scss/mixin/_menu.scss */
   100% {
     height: 100%;
   }
 }
-
 /* ============================================ *
  * Homepage
  * ============================================ */
@@ -48,7 +69,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot");
@@ -56,7 +76,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 49, ../scss/content/_home.scss */
 body.cms-home .main-container {
   margin-top: 50px;
@@ -110,7 +129,7 @@ body.cms-home .slideshow-container {
 /* line 88, ../scss/content/_home.scss */
 .hot-prod h2 {
   text-transform: uppercase;
-  color: black;
+  color: #000;
   font-size: 24px;
   margin-bottom: 0;
 }
@@ -124,7 +143,7 @@ body.cms-home .slideshow-container {
 .hot-prod a {
   font-size: 20px;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
-  color: black;
+  color: #000;
   text-decoration: none;
   display: block;
   margin-bottom: 30px;
@@ -142,7 +161,7 @@ body.cms-home .slideshow-container {
 #lightSlider h2.product-name a {
   font-size: 10px;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
-  color: black;
+  color: #000;
   margin-bottom: 0;
 }
 /* line 119, ../scss/content/_home.scss */
@@ -152,7 +171,7 @@ body.cms-home .slideshow-container {
 }
 /* line 122, ../scss/content/_home.scss */
 #lightSlider .price-box .price {
-  color: black;
+  color: #000;
   font-size: 14px;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
 }
@@ -193,7 +212,7 @@ body.cms-home .slideshow-container {
   position: relative;
   overflow: hidden;
   padding-left: 10px;
-  color: white;
+  color: #fff;
 }
 /* line 156, ../scss/content/_home.scss */
 .row4 .item:first-child {
@@ -230,12 +249,12 @@ body.cms-home .slideshow-container {
 .row4 .item a {
   font-size: 30px;
   display: inline-block;
-  color: white;
+  color: #fff;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
 }
 /* line 184, ../scss/content/_home.scss */
 .row4 .item h3 {
-  color: white;
+  color: #fff;
   font-size: 30px;
   text-transform: none;
 }
@@ -299,7 +318,7 @@ body.cms-home .slideshow-container {
 #slide3 .caption1 {
   right: 130px;
   left: initial;
-  color: white;
+  color: #fff;
 }
 /* line 249, ../scss/content/_home.scss */
 #slide3 .caption1 .subcaption1 {
@@ -320,8 +339,8 @@ body.cms-home .slideshow-container {
 #slide3 .caption1 .link-text {
   margin-top: 60px;
   font-size: 22px;
-  color: white;
-  border: 1px solid white;
+  color: #fff;
+  border: 1px solid #fff;
   height: 60px;
   padding-top: 8px;
   padding-left: 15px;
@@ -338,7 +357,7 @@ body.cms-home .slideshow-container {
 }
 /* line 284, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSNext:after {
-  color: white;
+  color: #fff;
   right: -10px;
 }
 /* line 290, ../scss/content/_home.scss */
@@ -350,7 +369,7 @@ body.cms-home .slideshow-container {
 }
 /* line 296, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSPrev:after {
-  color: white;
+  color: #fff;
   left: 18px;
 }
 
@@ -378,7 +397,7 @@ body .promos > li {
   list-style: none;
   text-align: center;
   position: relative;
-  border: 1px solid #cccccc;
+  border: 1px solid #CCCCCC;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -467,8 +486,8 @@ body .promos > li {
   text-align: center;
   color: #498fd8;
   font-weight: 600;
-  border-bottom: 1px solid #cccccc;
-  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
 }
 
 /* line 410, ../scss/content/_home.scss */
@@ -496,15 +515,33 @@ body .promos > li {
   padding-left: 100px;
   padding-right: 100px;
   font-size: 16px;
-  color: black;
+  color: #000;
 }
 
-/* line 594, ../scss/content/_home.scss */
+/* line 431, ../scss/content/_home.scss */
+.widget {
+  clear: both;
+}
+/* line 433, ../scss/content/_home.scss */
+.widget:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+/* line 438, ../scss/content/_home.scss */
+.widget .pager {
+  float: none;
+  width: 100%;
+}
+
+/* line 605, ../scss/content/_home.scss */
 .promos span {
   font-size: 18px;
 }
 
-/* line 598, ../scss/content/_home.scss */
+/* line 609, ../scss/content/_home.scss */
 .promos strong {
   font-size: 24px;
 }
+
+/*# sourceMappingURL=madisonisland-ie8.css.map */

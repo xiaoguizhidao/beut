@@ -166,6 +166,8 @@ var FEelementControl = {
 				speed: 300,
 				slidesToShow: 10,
 				slidesToScroll: 10,
+				swipe: true,
+				touchMove: true,
 				responsive: [
 					{
 						breakpoint: 1024,
@@ -199,6 +201,7 @@ var FEelementControl = {
 			var s = skrollr.init();
 		}
 	},*/
+
 	cmsMenu: function(){
 		var url = jQuery(location).attr('href').slice(-1)=='/' ? jQuery(location).attr('href') : jQuery(location).attr('href')+'/';
 		jQuery('.block-cms-menu li').each(function(){
@@ -280,6 +283,16 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
+	},
+	prodSlide: function(){
+		$j('.prod-slide').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true
+		});
+
 	}
 
 };
@@ -296,6 +309,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.confProdImage();
 	FEelementControl.miniCartPos();
 	FEelementControl.prodSelectBox();
+	FEelementControl.prodSlide();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{

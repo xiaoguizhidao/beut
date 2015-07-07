@@ -428,7 +428,18 @@ body.cms-home {
     font-size: $f-size-xl;
     color: $c-black;
 }
-
+.widget {
+    clear: both;
+    &:after{
+        clear: both;
+        content: '';
+        display: block;
+    }
+    .pager {
+        float: none;
+        width: 100%;
+    }
+}
 @include bp(max-width, $bp-medium) {
     body{
         font-size: 10px;

@@ -15,7 +15,7 @@ class Amasty_Conf_Helper_Zoom extends Mage_Core_Helper_Abstract
            'change_image' =>     Mage::getStoreConfig('amconf/zoom/change_main_img_with'),
            'thumbnail_lignhtbox' =>     Mage::getStoreConfig('amconf/lightbox/thumbnail_lignhtbox'),
        );       
-       
+
        /*Zoom configuration start*/
        $param['zoom']['zoomType'] = Mage::getStoreConfig('amconf/zoom/type');
        $param['zoom']["responsive"] = true;
@@ -83,7 +83,7 @@ class Amasty_Conf_Helper_Zoom extends Mage_Core_Helper_Abstract
        /*Carusel configuration start*/
        //$param['carousel']['items'] = (int)Mage::getStoreConfig('amconf/carousel/visible_items');
        $arrH = explode(',',Mage::getStoreConfig('amconf/size/thumb'));
-       $param['carousel']['items'] = array('height'=>$arrH[1],'width'=>'100%','visible'=>3);
+       $param['carousel']['items'] = array('height'=>$arrH[1],'width'=>'100%','visible'=>5);
        $param['carousel']['circular'] = Mage::getStoreConfig('amconf/carousel/circular')? true: false;
       // $param['carousel']['height'] = '100%';
        $param['carousel']['prev'] = array("button" => "#prevGallery", "key" => "left");

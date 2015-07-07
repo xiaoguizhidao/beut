@@ -1,41 +1,26 @@
 /*
-Error: File to import not found or unreadable: compass.
-        on line 33 of _framework.scss
-        from line 26 of scaffold-forms.scss
+Error: File to import not found or unreadable: framework.
+        on line 26 of scaffold-forms.scss
 
+21: // @package     rwd_default
+22: // @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+23: // @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+24: //
+25: 
+26: @import "framework";
+27: 
 28: /* ============================================ *
 29:  * SCAFFOLD FORM
 30:  * ============================================ *\/
 31: 
-32: /* Scaffolding can not be applied globally to all forms, since some forms are best displayed in a stacked layout *\/
-33: 
-34: .scaffold-form {
-35:     .form-list > li {
-36:         display: block;
-37: 
-38:         &:after {
 
 Backtrace:
-_framework.scss:33
 scaffold-forms.scss:26
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:45:in `import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:37:in `css_import?'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
@@ -73,4 +58,4 @@ scaffold-forms.scss:26
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass.\A         on line 33 of _framework.scss\A         from line 26 of scaffold-forms.scss\A \A 28: /* ============================================ *\A 29:  * SCAFFOLD FORM\A 30:  * ============================================ */\A 31: \A 32: /* Scaffolding can not be applied globally to all forms, since some forms are best displayed in a stacked layout */\A 33: \A 34: .scaffold-form {\A 35:     .form-list > li {\A 36:         display: block;\A 37: \A 38:         &:after {"; }
+  content: "Error: File to import not found or unreadable: framework.\A         on line 26 of scaffold-forms.scss\A \A 21: // @package     rwd_default\A 22: // @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)\A 23: // @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)\A 24: //\A 25: \A 26: @import \"framework\";\A 27: \A 28: /* ============================================ *\A 29:  * SCAFFOLD FORM\A 30:  * ============================================ */\A 31: "; }

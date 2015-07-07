@@ -23,6 +23,7 @@ if ( typeof Object.create !== 'function' ) {
 (function( $, window, document, undefined ) {
     var ElevateZoom = {
             init: function( options, elem ) {
+                //console.log(elem);
                 var self = this;
 
                 self.elem = elem;
@@ -94,6 +95,7 @@ if ( typeof Object.create !== 'function' ) {
                     //let caller know image has been loaded
                     self.options.onZoomedImageLoaded(self.$elem);
                 }
+
                 newImg.src = imgsrc; // this must be done AFTER setting onload
 
                 return;
@@ -103,6 +105,7 @@ if ( typeof Object.create !== 'function' ) {
             startZoom: function( ) {
                 var self = this;
                 //get dimensions of the non zoomed image
+                var vpWidth = $('window').width();
                 self.nzWidth = self.$elem.width();
                 self.nzHeight = self.$elem.height();
 
@@ -114,8 +117,10 @@ if ( typeof Object.create !== 'function' ) {
 
                 //CrossFade Wrappe
                 if(self.options.imageCrossfade){
-                    self.zoomWrap = self.$elem.wrap('<div style="height:'+self.nzHeight+'px;width:'+self.nzWidth+'px;" class="zoomWrapper" />');        
-                    self.$elem.css('position', 'absolute'); 
+                    if($('.zoomWrapper').length == 0){
+                        self.zoomWrap = self.$elem.wrap('<div style="height:'+self.nzHeight+'px;width:'+self.nzWidth+'px;" class="zoomWrapper" />');
+                        self.$elem.css('position', 'absolute');
+                    }
                 }
 
                 self.zoomLock = 1;
