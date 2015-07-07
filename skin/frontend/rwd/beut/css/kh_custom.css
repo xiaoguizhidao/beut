@@ -592,8 +592,13 @@ ul.brands li a {
 }
 .product-feature-descirption {
     background:#f7f8f9;
-    padding:30px 50px;
-    float:left;
+    padding:70px 200px 90px 200px;
+    margin-top: 30px;
+}
+.product-feature-descirption:after{
+    display: block;
+    content: '';
+    clear: both;
 }
 .catalog-product-view  .left-info {
     float: left;
@@ -618,10 +623,12 @@ ul.brands li a {
 .info-block .data-table th{
     border:none!important;
     text-transform: capitalize;
-    padding: 10px 0;
+    padding:0;
     background:none;
 }
-
+.info-block .data-table td{
+    padding: 0;
+}
 
 
 /*Checkout cart page*/
@@ -1182,5 +1189,33 @@ ul.delivery-tabs li a{
     }
     .customer-account-login input[type="email"], .customer-account-login input[type="password"] {
         width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    .prod-top{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .product-feature-descirption{
+        padding: 35px 100px 50px 100px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .product-feature-descirption{
+        padding: 25px 20px;
+    }
+    .slick-prev{
+        left: -25px;
+    }
+    .slick-next{
+        right: -25px;
+    }
+    .box-up-sell .view-more{
+        font-size: 12px;
+        margin-bottom: 15px;
+        margin-top: 5px;
     }
 }

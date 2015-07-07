@@ -515,6 +515,7 @@
     }
     .more-links span:after {
         content: " / ";
+        padding: 0 10px;
     }
     .more-links span:last-child:after {
         content: "";
@@ -965,9 +966,42 @@
  */
 
 .box-up-sell {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
     margin-top: $box-spacing-large;
-
+    text-align: center;
     .ratings {
         display: none;
     }
+    .view-more{
+        font-family: $f-neuton;
+        text-transform: none;
+        color: $c-black;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
+
+@media only screen and (max-width: 1024px) and (min-width: $bp-medium) {
+    .box-up-sell {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .slick-next{
+        right: -25px;
+    }
+    .slick-prev{
+        left: -25px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .box-up-sell {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+

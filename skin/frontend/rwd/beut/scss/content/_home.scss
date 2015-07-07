@@ -94,7 +94,8 @@ body.cms-home {
     .desc{
         font-family: $f-neuton;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        display: block;
     }
     a{
         font-size: 20px;
@@ -144,7 +145,7 @@ body.cms-home {
     }
     li{
         margin-bottom: 30px;
-        width: 144px;
+        /*width: 144px;*/
     }
 }
 .lSSlideOuter .lSPager.lSpg{
@@ -198,6 +199,7 @@ body.cms-home {
             a,h3{
                 font-size: $f-20;
             }
+
         }
         @include bp(max-width, $bp-medium) {
             .content{
@@ -440,8 +442,19 @@ body.cms-home {
         width: 100%;
     }
 }
+.square-container{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 @include bp(max-width, $bp-medium) {
-    body{
+    body,
+    h2.product-name,
+    h3.product-name,
+    h4.product-name,
+    h5.product-name,
+    p.product-name,
+    #lightSlider .price-box .price,
+    .catalog-product-view .breadcrumbs{
         font-size: 10px;
     }
 
@@ -464,6 +477,9 @@ body.cms-home {
         margin-right: auto !important;
         top: 50% !important;
         max-width: 70% !important;
+    }
+    .catalog-product-view .breadcrumbs{
+        padding: 10px;
     }
     #slide3{
         .caption1 {
@@ -584,6 +600,9 @@ body.cms-home {
     }
     .block-layered-nav .block-content.accordion-open > dl > dd.current{
         position: relative;
+    }
+    .catalog-product-view .main-container{
+        margin-top: 0;
     }
 }
 @include bp(max-width, $bp-xsmall) {

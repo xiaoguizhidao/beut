@@ -31,8 +31,18 @@
   padding: 0;
   border: none;
   outline: none;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
 }
-/* line 74, ../scss/slick-theme.scss */
+/* line 84, ../scss/slick-theme.scss */
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
@@ -40,19 +50,20 @@
   background: transparent;
   color: transparent;
 }
-/* line 78, ../scss/slick-theme.scss */
+/* line 88, ../scss/slick-theme.scss */
 .slick-prev:hover:before, .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
-  opacity: 1;
+  opacity: 0.5;
 }
-/* line 82, ../scss/slick-theme.scss */
+/* line 92, ../scss/slick-theme.scss */
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-  opacity: 0.25;
+  opacity: 0;
+  top: 0;
 }
 
-/* line 87, ../scss/slick-theme.scss */
+/* line 98, ../scss/slick-theme.scss */
 .slick-prev:before, .slick-next:before {
   font-family: 'FontAwesome';
   font-size: 40px;
@@ -61,56 +72,57 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 0;
+  top: 0;
 }
 
-/* line 97, ../scss/slick-theme.scss */
+/* line 108, ../scss/slick-theme.scss */
 .slick-prev {
-  left: -25px;
+  left: -45px;
 }
-/* line 99, ../scss/slick-theme.scss */
+/* line 110, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-prev {
   left: auto;
   right: -25px;
 }
-/* line 103, ../scss/slick-theme.scss */
+/* line 114, ../scss/slick-theme.scss */
 .slick-prev:before {
   content: "";
 }
-/* line 105, ../scss/slick-theme.scss */
+/* line 116, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-prev:before {
   content: "";
 }
 
-/* line 111, ../scss/slick-theme.scss */
+/* line 122, ../scss/slick-theme.scss */
 .slick-next {
-  right: -25px;
+  right: -45px;
 }
-/* line 113, ../scss/slick-theme.scss */
+/* line 124, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-next {
   left: -25px;
   right: auto;
 }
-/* line 117, ../scss/slick-theme.scss */
+/* line 128, ../scss/slick-theme.scss */
 .slick-next:before {
   content: "";
 }
-/* line 119, ../scss/slick-theme.scss */
+/* line 130, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-next:before {
   content: "";
 }
 
-/* line 125, ../scss/slick-theme.scss */
+/* line 136, ../scss/slick-theme.scss */
 .slick-slider:hover .slick-prev:before, .slick-slider:hover .slick-next:before {
   opacity: 1;
 }
 
 /* Dots */
-/* line 132, ../scss/slick-theme.scss */
+/* line 143, ../scss/slick-theme.scss */
 .slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 136, ../scss/slick-theme.scss */
+/* line 147, ../scss/slick-theme.scss */
 .slick-dots {
   position: absolute;
   bottom: -45px;
@@ -120,59 +132,56 @@
   padding: 0;
   width: 100%;
 }
-/* line 144, ../scss/slick-theme.scss */
+/* line 155, ../scss/slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
   height: 20px;
-  width: 20px;
+  width: 5px;
   margin: 0 5px;
   padding: 0;
   cursor: pointer;
 }
-/* line 152, ../scss/slick-theme.scss */
+/* line 163, ../scss/slick-theme.scss */
 .slick-dots li button {
   border: 0;
-  background: transparent;
+  background: #ddd;
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 5px;
+  width: 5px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
   color: transparent;
-  padding: 5px;
+  padding: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   cursor: pointer;
+  /*&:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: $slick-dot-character;
+      width: 20px;
+      height: 20px;
+      font-family: $slick-font-family;
+      font-size: $slick-dot-size;
+      line-height: 20px;
+      text-align: center;
+      color: $slick-dot-color;
+      opacity: $slick-opacity-not-active;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }*/
 }
-/* line 164, ../scss/slick-theme.scss */
+/* line 178, ../scss/slick-theme.scss */
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
 }
-/* line 166, ../scss/slick-theme.scss */
-.slick-dots li button:hover:before, .slick-dots li button:focus:before {
-  opacity: 1;
-}
-/* line 170, ../scss/slick-theme.scss */
-.slick-dots li button:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "•";
-  width: 20px;
-  height: 20px;
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-  text-align: center;
-  color: black;
-  opacity: 0.25;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/* line 187, ../scss/slick-theme.scss */
-.slick-dots li.slick-active button:before {
-  color: black;
-  opacity: 0.75;
+/* line 198, ../scss/slick-theme.scss */
+.slick-dots li.slick-active button {
+  background: #498fd8;
 }
 
 /*# sourceMappingURL=slick-theme.css.map */

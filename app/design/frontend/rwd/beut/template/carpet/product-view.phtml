@@ -146,30 +146,32 @@
         </div>
         <div class="clearfix"></div>
 
-        <div class="product-feature-descirption" style="clear:both;">
-            <div class="left-info">
-                <div class="info-block attributes">
-                    <p class="title">features</p>
-                    <?php echo $this->getChildHtml('attributes') ?>
-                </div>
-                <div class="info-block dimension">
+        <div class="product-feature-descirption container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="info-block attributes">
+                        <p class="title">features</p>
+                        <?php echo $this->getChildHtml('attributes') ?>
+                    </div>
                     <p class="title">dimensions</p>
                     <?php echo $_product->getSpecifications() ?>
-                </div>
-               <!-- <div class="info-block delivery-return">
+
+                    <!-- <div class="info-block delivery-return">
                     <p class="title">delivery & return</p>
                     <?php /*echo $this->getChildHtml('attributes') */?>
                 </div>-->
-            </div>
-            <div class="right-info">
-                <div class="description">
-                    <p class="title">description</p>
-                    <?php echo $this->getChildHtml('description') ?>
+                </div>
+                <div class="col-lg-8 col-xs-12">
+                    <div class="description">
+                        <p class="title">description</p>
+                        <?php echo $this->getChildHtml('description') ?>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="clear"></div>
+        <div class="clearfix"></div>
+
         <?php echo $this->getChildHtml('upsell_products') ?>
         <?php if($_product->getSliderBlock()):?>
             <div class="slider-static-block">

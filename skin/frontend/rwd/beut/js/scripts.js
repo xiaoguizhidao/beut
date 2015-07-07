@@ -129,7 +129,7 @@ var FEelementControl = {
 	homeProdSlide: function(){
 		$j('#lightSlider').slick({
 			dots: false,
-			infinite: false,
+			infinite: true,
 			speed: 300,
 			slidesToShow: 7,
 			slidesToScroll: 7,
@@ -147,14 +147,16 @@ var FEelementControl = {
 					breakpoint: 600,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 3
+						slidesToScroll: 3,
+						dots: true
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 2
+						slidesToScroll: 2,
+						dots: true
 					}
 				}
 			]
@@ -162,7 +164,7 @@ var FEelementControl = {
 		if($j('.brand').length > 0) {
 			$j('.brand').slick({
 				dots: false,
-				infinite: false,
+				infinite: true,
 				speed: 300,
 				slidesToShow: 10,
 				slidesToScroll: 10,
@@ -189,7 +191,8 @@ var FEelementControl = {
 						breakpoint: 480,
 						settings: {
 							slidesToShow: 2,
-							slidesToScroll: 2
+							slidesToScroll: 2,
+							dots: true
 						}
 					}
 				]
