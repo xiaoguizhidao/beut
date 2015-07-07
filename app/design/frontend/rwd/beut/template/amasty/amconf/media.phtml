@@ -22,13 +22,12 @@
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <div class="product-image">
     <?php if (count($this->getGalleryImages()) > 0): ?>
-        <script>
+        <script type="text/javascript">
             var larImg = [];
-            <?php foreach ($this->getGalleryImages() as $_image): ?>
-                larImg.push({zoomImage: '<?php echo $this->helper('catalog/image')->init($_image, 'image');?>',
-                            src: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($imageWidth,$imageHeight); ?>'});
+            <?php $media_gallery = $_product->getMediaGallery(); ?>
+            <?php foreach ($media_gallery['images'] as $_image):?>
+                larImg.push({zoomimg: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file']);?>',src: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file'])->resize($imageWidth, $imageHeight); ?>'});
             <?php endforeach; ?>
-            console.table(larImg);
         </script>
         <?php endif;?>
 
@@ -39,7 +38,8 @@
 				/>';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
-
+    <div id="prevGalleryImg" class="fa fa-angle-left"></div>
+    <div id="nextGalleryImg" class="fa fa-angle-right"></div>
 </div>
 
 <?php else: ?>
@@ -49,10 +49,7 @@
         $_img = '<img id="amasty_zoom" data-zoom-image="'.$this->helper('catalog/image')->init($_product, 'image').'" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($imageWidth, $imageHeight).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
-    <div id="prevGalleryImg" class="fa fa-angle-left"></div>
-    <div id="nextGalleryImg" class="fa fa-angle-right"></div>
 </div>
-
 <?php endif; ?>
 <?php if ('true' == (string)Mage::getConfig()->getNode('modules/Amasty_Label/active')): ?>
                 </div>
@@ -88,11 +85,6 @@
             jQuery('.caroufredsel_wrapper').css({'width':'180px'});
             jQuery('#amasty_gallery').css({'width':'180px'});
         }
-
-        
-
-
     })
 </script>
-
 

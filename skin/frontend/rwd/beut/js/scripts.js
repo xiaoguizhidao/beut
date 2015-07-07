@@ -292,9 +292,49 @@ var FEelementControl = {
 			slidesToShow: 1,
 			adaptiveHeight: true
 		});
+	},
+	mediaSlide: function(){
+		if($j('#prevGalleryImg').length > 0){
+			var len = larImg.length;
+			var prev,prevZoom;
+			var next,nextZoom;
+			$j('body').on('click','#prevGalleryImg',function(){
+				for(var i=0;i < len; i++){
+					if($j('#amasty_zoom').attr('src')===larImg[i].src){
+						if((i-1) == 0 ){
+							prev = larImg[len].src;
+							prevZoom = larImg[len].zoomimg;
+						}else{
+							prev = larImg[i-1].src;
+							prevZoom = larImg[i-1].zoomimg;
+						}
+					}
+				}
+				$j('#amasty_zoom').attr('src',prev);
+				$j('#amasty_zoom').attr('data-zoom-image','url('+prevZoom+')');
+				$j('.zoomWindow').css('background-image',prevZoom);
 
+			});
+			$j('body').on('click','#nextGalleryImg',function(){
+				for(var i=0;i < len; i++){
+					//console.log(larImg[i].src+'\n');
+					if($j('#amasty_zoom').attr('src')===larImg[i].src){
+						if((i+1) == len){
+							next = larImg[0].src;
+							nextZoom = larImg[0].zoomimg;
+						}else{
+							next = larImg[i+1].src;
+							nextZoom = larImg[i+1].zoomimg;
+						}
+					}
+				}
+				$j('#amasty_zoom').attr('src',next);
+				$j('#amasty_zoom').attr('data-zoom-image',nextZoom);
+				$j('.zoomWindow').css('background-image','url('+nextZoom+')');
+
+			});
+		}
 	}
-
 };
 
 
@@ -310,6 +350,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.miniCartPos();
 	FEelementControl.prodSelectBox();
 	FEelementControl.prodSlide();
+	FEelementControl.mediaSlide();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{
