@@ -136,7 +136,7 @@ if ( typeof Object.create !== 'function' ) {
 
 				//CrossFade Wrappe
 				if(self.options.imageCrossfade){
-					if($("zoomWrapper") == undefined){
+					if($("zoomWrapper") == undefined && $('.zoomWrapper').length == 0){
 						self.zoomWrap = self.$elem.wrap('<div style="height:'+self.nzHeight+'px;width:'+self.nzWidth+'px;" class="zoomWrapper" id="zoomWrapper" />');
 					}
 					self.$elem.css('position', 'absolute');

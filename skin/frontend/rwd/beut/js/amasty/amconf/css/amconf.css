@@ -76,6 +76,32 @@
     text-align: center;
     position: relative;
 }
+.product-view .product-img-box .product-image .fa{
+    position: absolute;
+    top: 50%;
+    font-size: 28px;
+    color: #8b867c;
+    cursor: pointer;
+}
+.product-view .product-img-box .product-image .fa:before,
+.product-view .product-img-box .product-image .fa:after{
+    position: absolute;
+
+}
+.product-view .product-img-box .product-image #prevGalleryImg:after{
+    color: #fff;
+    left: -1px;
+}
+.product-view .product-img-box .product-image #nextGalleryImg:after{
+    color: #fff;
+    right:-1px;
+}
+.product-view .product-img-box .product-image #nextGalleryImg{
+    right: 0;
+}
+.product-view .product-img-box .product-image #prevGalleryImg{
+    left: 0;
+}
 
 hr.amconf-hr{
      -moz-transform: rotate(135deg);  
@@ -147,19 +173,41 @@ hr.amconf-hr{
   /*  position: absolute;*/
     display: block;
 }
-
-.MagicScrollArrowPrev { 
+.MagicScrollArrowPrev,.MagicScrollArrowNext{
     width: 35px;
-    height: 35px;
-   /* background: url(../images/miscellaneous_sprite_sm.png) 0 -35px no-repeat transparent;*/
-    left:50%;
+    height: 100%;
+    left:0;
+    top: 0;
+    position: absolute;
+    padding-top: 40px;
+    background: transparent;
+    font-size: 20px;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+}
+.MagicScrollArrowNext {
+    left: inherit;
+    right:0;
+}
+.MagicScrollArrowPrev:before,.MagicScrollArrowNext:before{
+    opacity: 0;
 }
 
-.MagicScrollArrowNext {
-    width: 35px;
-    height: 35px; 
-   /* background: url(../images/miscellaneous_sprite_sm.png) -35px -35px no-repeat transparent;*/
-    right:0;
+.more-views:hover .MagicScrollArrowNext,
+.more-views:hover .MagicScrollArrowPrev{
+    background: rgba(255,255,255,0.8);
+}
+.more-views:hover .MagicScrollArrowNext:before,
+.more-views:hover .MagicScrollArrowPrev:before{
+    opacity: 1;
+}
+
+.product-img-box .more-views{
+    position: relative;
+    overflow: hidden;
 }
 
 #nextGallery.disabled, #prevGallery.disabled {
@@ -169,7 +217,8 @@ hr.amconf-hr{
 }
 
 .caroufredsel_wrapper {
-    margin:0 auto !important;    
+    margin:0 auto !important;
+    height: 100px !important;
 }
 
 #amasty_gallery a{

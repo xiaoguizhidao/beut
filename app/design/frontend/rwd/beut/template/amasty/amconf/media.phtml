@@ -11,7 +11,7 @@
     $smallImageSize = Mage::getStoreConfig('amconf/size/thumb');
     $small = explode(',',$smallImageSize);
     $smallW = (int)Mage::getStoreConfig('amconf/size/thumb');
-    $smallH = 145;
+    $smallH = 100;
     $itemCount = (int)Mage::getStoreConfig('amconf/carousel/visible_items');
 ?>
 <?php if ('true' == (string) Mage::getConfig()->getNode('modules/Amasty_Label/active')): ?>
@@ -21,6 +21,16 @@
 
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <div class="product-image">
+    <?php if (count($this->getGalleryImages()) > 0): ?>
+        <script type="text/javascript">
+            var larImg = [];
+            <?php $media_gallery = $_product->getMediaGallery(); ?>
+            <?php foreach ($media_gallery['images'] as $_image):?>
+                larImg.push({zoomimg: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file']);?>',src: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file'])->resize($imageWidth, $imageHeight); ?>'});
+            <?php endforeach; ?>
+        </script>
+        <?php endif;?>
+
     <?php
         $_img = '<img id="amasty_zoom"
 					data-zoom-image="'.$this->helper('catalog/image')->init($_product, 'image').'" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($imageWidth, $imageHeight).'" 
@@ -28,6 +38,8 @@
 				/>';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
+    <div id="prevGalleryImg" class="fa fa-angle-left"></div>
+    <div id="nextGalleryImg" class="fa fa-angle-right"></div>
 </div>
 
 <?php else: ?>
@@ -38,7 +50,6 @@
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
 </div>
-
 <?php endif; ?>
 <?php if ('true' == (string)Mage::getConfig()->getNode('modules/Amasty_Label/active')): ?>
                 </div>
@@ -56,8 +67,8 @@
          
     </div> 
 
-    <div id="prevGallery" class="MagicScrollArrows MagicScrollArrowPrev fa fa-angle-down"></div>
-    <div id="nextGallery" class="MagicScrollArrows MagicScrollArrowNext fa fa-angle-up"></div>
+    <div id="prevGallery" class="MagicScrollArrows MagicScrollArrowPrev fa fa-angle-left"></div>
+    <div id="nextGallery" class="MagicScrollArrows MagicScrollArrowNext fa fa-angle-right"></div>
      <?php if (Mage::getStoreConfig('amconf/carousel/pagination')): ?>
         <div id="ampagination"></div>
      <?php endif; ?>
@@ -74,6 +85,6 @@
             jQuery('.caroufredsel_wrapper').css({'width':'180px'});
             jQuery('#amasty_gallery').css({'width':'180px'});
         }
-
     })
 </script>
+

@@ -166,6 +166,8 @@ var FEelementControl = {
 				speed: 300,
 				slidesToShow: 10,
 				slidesToScroll: 10,
+				swipe: true,
+				touchMove: true,
 				responsive: [
 					{
 						breakpoint: 1024,
@@ -199,6 +201,7 @@ var FEelementControl = {
 			var s = skrollr.init();
 		}
 	},*/
+
 	cmsMenu: function(){
 		var url = jQuery(location).attr('href').slice(-1)=='/' ? jQuery(location).attr('href') : jQuery(location).attr('href')+'/';
 		jQuery('.block-cms-menu li').each(function(){
@@ -280,8 +283,58 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
-	}
+	},
+	prodSlide: function(){
+		$j('.prod-slide').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true
+		});
+	},
+	mediaSlide: function(){
+		if($j('#prevGalleryImg').length > 0){
+			var len = larImg.length;
+			var prev,prevZoom;
+			var next,nextZoom;
+			$j('body').on('click','#prevGalleryImg',function(){
+				for(var i=0;i < len; i++){
+					if($j('#amasty_zoom').attr('src')===larImg[i].src){
+						if((i-1) == 0 ){
+							prev = larImg[len].src;
+							prevZoom = larImg[len].zoomimg;
+						}else{
+							prev = larImg[i-1].src;
+							prevZoom = larImg[i-1].zoomimg;
+						}
+					}
+				}
+				$j('#amasty_zoom').attr('src',prev);
+				$j('#amasty_zoom').attr('data-zoom-image','url('+prevZoom+')');
+				$j('.zoomWindow').css('background-image',prevZoom);
 
+			});
+			$j('body').on('click','#nextGalleryImg',function(){
+				for(var i=0;i < len; i++){
+					//console.log(larImg[i].src+'\n');
+					if($j('#amasty_zoom').attr('src')===larImg[i].src){
+						if((i+1) == len){
+							next = larImg[0].src;
+							nextZoom = larImg[0].zoomimg;
+						}else{
+							next = larImg[i+1].src;
+							nextZoom = larImg[i+1].zoomimg;
+						}
+					}
+				}
+				$j('#amasty_zoom').attr('src',next);
+				$j('#amasty_zoom').attr('data-zoom-image',nextZoom);
+				$j('.zoomWindow').css('background-image','url('+nextZoom+')');
+
+			});
+		}
+	}
 };
 
 
@@ -296,6 +349,8 @@ jQuery(document).ready(function ($) {
 	FEelementControl.confProdImage();
 	FEelementControl.miniCartPos();
 	FEelementControl.prodSelectBox();
+	FEelementControl.prodSlide();
+	FEelementControl.mediaSlide();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{

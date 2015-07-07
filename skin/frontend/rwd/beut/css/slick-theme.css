@@ -2,18 +2,17 @@
 /* Slider */
 /* line 40, ../scss/slick-theme.scss */
 .slick-loading .slick-list {
-  background: white url('../images/ajax-loader.gif') center center no-repeat;
+  background: #fff url('../images/ajax-loader.gif?1436028815') center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url('fonts/slick.eot');
-  src: url('fonts/slick.eot?#iefix') format("embedded-opentype"), url('fonts/slick.woff') format("woff"), url('fonts/slick.ttf') format("truetype"), url('fonts/slick.svg#slick') format("svg");
+  src: url('../scss/fonts/slick.eot');
+  src: url('../scss/fonts/slick.eot?#iefix') format("embedded-opentype"), url('../scss/fonts/slick.woff') format("woff"), url('../scss/fonts/slick.ttf') format("truetype"), url('../scss/fonts/slick.svg#slick') format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 /* Arrows */
 /* line 58, ../scss/slick-theme.scss */
 .slick-prev,
@@ -75,11 +74,11 @@
 }
 /* line 103, ../scss/slick-theme.scss */
 .slick-prev:before {
-  content: "\f104";
+  content: "";
 }
 /* line 105, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-prev:before {
-  content: "\f105";
+  content: "";
 }
 
 /* line 111, ../scss/slick-theme.scss */
@@ -93,11 +92,11 @@
 }
 /* line 117, ../scss/slick-theme.scss */
 .slick-next:before {
-  content: "\f105";
+  content: "";
 }
 /* line 119, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-next:before {
-  content: "\f104";
+  content: "";
 }
 
 /* line 125, ../scss/slick-theme.scss */
@@ -175,3 +174,5 @@
   color: black;
   opacity: 0.75;
 }
+
+/*# sourceMappingURL=slick-theme.css.map */
