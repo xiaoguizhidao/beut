@@ -3,7 +3,18 @@
   content: "";
   overflow: hidden;
 }
-
+/*common class*/
+.cms-page-view .std p, .cms-no-route .std p {
+    font-style: normal;
+}
+.customer-account-login .main{
+    padding-top: 0;
+}
+.footer-before-container {
+    background: white none repeat scroll 0 0;
+    padding-top: 20px;
+}
+/* End common class*/
 /*Page not found*/
 .cms-index-noroute .main{
    /* background: url("../images/404-bg.png");*/
@@ -69,9 +80,11 @@
 }
 .pnf-right {
     width: 50%;
+    float:left;
 }
 .pnf-right img {
     padding-top: 150px;
+    width: 94%!important;
 }
 /*Login page*/
 .customer-account-login .main{
@@ -84,7 +97,7 @@
 .customer-account-login .account-login{
     margin: auto;
     padding: 40px 0;
-    width: 850px;
+    width: 900px;
 }
 .customer-account-login .col2-set .col-1 .buttons-set{
     width:  100%;
@@ -157,10 +170,20 @@
 }
 .customer-account-login .account-login{
     background-color: white;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 .customer-account-login .account-login{
     padding:40px;
+}
+.customer-account-login .main-container.col1-layout {
+    margin-bottom: 200px;
+}
+.col-1.new-users{
+    width: 50%;
+}
+.col-2.registered-users{
+    width: 50%;
+    padding-left:4%!important;
 }
 .button{
     background-color: #4d91d5;
@@ -210,8 +233,21 @@
 .form-list .control label{
     padding-left: 0px;
 }
-
+#login-form .button{
+    font-size: 1.2em;
+    line-height: 25px;
+}
+.new-users .page-title h1{
+    font-weight: bold;
+}
+.col-2.registered-users a{
+    color: black;
+}
 /*About us*/
+
+.about-us-container {
+    margin-top: 120px;
+}
 .cms-about-us .page-title{
     display: none;
 }
@@ -243,7 +279,7 @@
 }
 .cms-about-us .content-right {
     float: left;
-    width: calc(100% - 230px);
+    width: calc(100% - 250px);
     margin-left: 50px;
 }
 .cms-about-us .content-right .maincontent .left{
@@ -272,6 +308,10 @@
     text-align: center;
     padding: 50px 0;
     margin-top: 50px;
+    color:white;
+}
+.cms-about-us .testimonial p {
+    color:white;
 }
 .cms-about-us .founder{
     padding: 30px 70px;
@@ -280,9 +320,16 @@
     float: left;
     width: 50%;
 }
-.founder-left img, .fonder-right img{
+.founder-left img, .founder-right img{
     float: left;
-    margin-right: 10px;
+    margin-right: 10px!important;
+}
+.founder .name {
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+.founder .position {
+    margin-bottom: 5px;
 }
 .cms-about-us .std .slider-text p{
     color:white;
@@ -296,7 +343,9 @@
 }
 .cms-about-us .std .slider-text p:first-child{
     text-transform: uppercase;
-
+}
+.cms-page-view .std h1, .cms-no-route .std h1 {
+    color: black;
 }
 .cms-about-us .std .slider-text p span{
     font-size: 60px;
@@ -336,6 +385,18 @@
 
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
     display: none;
+}
+.cms-about-us .services p {
+    text-align: center;
+}
+.cms-about-us .services .title{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.cms-about-us  .menu-left li.menu-about-us a{
+    color:#498fd8;
 }
 .faqs-top {
     background: #f7f8f9 none repeat scroll 0 0;
@@ -1171,10 +1232,16 @@ ul.delivery-tabs li a{
     .customer-account-login .account-login{
         width: 80%;
         margin: auto;
+        margin-top: 50px;
     }
     .customer-account-login .col2-set .col-2{
-        margin-top: 40px;
-        padding-top: 20px;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid #000000;
+    }
+    #login-form .button {
+        font-size: 1.5em;
+        line-height: 30px;
     }
     .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
         width: 100%;
@@ -1188,8 +1255,14 @@ ul.delivery-tabs li a{
     .customer-account-login input[type="email"],  .customer-account-login input[type="password"]{
         width: 100%;
     }
+    .customer-account-login .main{
+        margin-top: 0px;
+    }
 }
 @media screen and (max-width: 449px){
+    .customer-account-login .main{
+        margin-top: 0px;
+    }
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
         width: 100%;
@@ -1210,7 +1283,6 @@ ul.delivery-tabs li a{
     .customer-account-login .col-1 .content{
         margin-top: 20px;
     }
-
     .customer-account-login .col2-set .col-2{
         margin-top: 40px;
         padding-top: 20px;
@@ -1229,8 +1301,6 @@ ul.delivery-tabs li a{
     }
 }
 
-
-
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .prod-top{
         padding-left: 50px;
@@ -1239,7 +1309,15 @@ ul.delivery-tabs li a{
     .product-feature-descirption{
         padding: 35px 100px 50px 100px;
     }
+    .prod-top{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .product-feature-descirption{
+        padding: 35px 100px 50px 100px;
+    }
 }
+
 @media only screen and (max-width: 767px) {
     .product-feature-descirption{
         padding: 25px 20px;
@@ -1254,5 +1332,77 @@ ul.delivery-tabs li a{
         font-size: 12px;
         margin-bottom: 15px;
         margin-top: 5px;
+    }
+    .founder-left, .founder-right{
+        width: 100%;
+    }
+    .customer-account-login .main{
+        margin-top: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+   .cms-index-noroute .pnf-left {
+        width: 100%;
+       float: none;
+   }
+   .cms-index-noroute .pnf-right {
+       width: 100%;
+       float: none;
+       clear: both;
+   }
+   .pnf-right img {
+        padding-top: 20px;
+   }
+    .cms-about-us .menu-left{
+        display: none;
+    }
+    .cms-about-us .content-right {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+    }
+    .cms-about-us .content-right .maincontent .left, .cms-about-us .content-right .maincontent .right {
+        width: 100%;
+    }
+    .cms-about-us .services div {
+        width: 100%;
+        clear: both;
+    }
+    .cms-about-us .services {
+        padding: 30px 15px;
+    }
+    .cms-about-us .founder{
+        padding: 30px 15px;
+    }
+    .founder{
+        font-size: 14px;
+    }
+    .founder-left .detail, .founder-right .detail{
+        clear: both;
+        margin-top: 10px;
+    }
+    .founder-right {
+        margin-top:20px;
+    }
+    .founder-left img, .founder-right img{
+        float: left;
+        margin: 0 10px 10px 0!important;
+    }
+    .customer-account-login .main{
+        margin-top: 0px;
+    }
+    .new-users .page-title h1{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .slider-top {
+        background-image: url("../images/about-us-banner.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        padding: 100px 0;
+        text-align: center;
     }
 }
