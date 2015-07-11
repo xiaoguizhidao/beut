@@ -286,6 +286,7 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
+		$j('.shipping-country select').uniform();
 	},
 	prodSlide: function(){
 		$j('.prod-slide').slick({
@@ -337,6 +338,12 @@ var FEelementControl = {
 
 			});
 		}
+	},
+	voucherToogle: function(){
+		$j('body').on('click','.discount h2',function(){
+			$j(this).hide();
+			$j('.discount-form').show();
+		})
 	}
 };
 
@@ -354,6 +361,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.prodSelectBox();
 	FEelementControl.prodSlide();
 	FEelementControl.mediaSlide();
+	FEelementControl.voucherToogle();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{

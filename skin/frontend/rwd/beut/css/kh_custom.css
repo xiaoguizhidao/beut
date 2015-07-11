@@ -331,7 +331,7 @@
     margin: auto auto 20px;
 }
 .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.cms-brand .main-container.col1-layout, .checkout-cart-index{
-    margin-top: 150px;
+    margin-top: 135px;
 }
 
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
@@ -530,7 +530,7 @@ ul.brands li a {
     font-size: 1.2em;
 }
 .cart {
-    padding-top: 50px;
+    padding-top: 0;
 }
 .cart .cart-progress {
     margin-bottom: 40px;
@@ -641,7 +641,7 @@ ul.brands li a {
     margin-bottom:30px;
 }
 .catalog-product-view .info-block #product-attribute-specs-table, .info-block #product-attribute-specs-table th, .info-block .data-table thead th, .data-table tbody td{
-    border:none!important;
+    border:none;
 }
 .info-block .data-table th{
     border:none!important;
@@ -674,7 +674,6 @@ ul.brands li a {
 .cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th  {
     color:black;
     font-size: 19px;
-    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
     text-transform: capitalize;
 }
 .cart-content td.product-cart-image{
@@ -747,9 +746,13 @@ h2.product-name a{
     border: 1px solid #ccc;
     margin-left: 20px;
     margin-top: 37px;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 30px;
+    padding-top: 10px;
+}
+.tr-break{
+    height: 20px;
 }
 .cart-forms, .cart-totals-wrapper, .crosssell{
     width: 100%;
@@ -766,9 +769,7 @@ h2.product-name a{
 }
 .cart-table .product-cart-actions .button{
     background: transparent;
-    font-size: 14px;
     color: #000;
-    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
     text-transform: none;
     text-align: center;
     margin: auto;
@@ -794,14 +795,18 @@ h2.product-name a{
 .cart-totals tr.subtotal td,
 .cart-totals tr.subtotal td .price,
 .cart .cart-totals table tfoot td,
-.cart .cart-totals table tfoot strong span,
-.cart .cart-totals table tfoot span.price{
-    font-family: 'futura-medium';
-    font-size: 32px;
+.cart .cart-totals table tfoot strong span{
+    font-size: 18px;
     text-transform: none;
 }
+
 .cart .cart-totals table tfoot td{
     padding: 0;
+}
+.cart .cart-totals table tfoot tr:last-child td,
+.cart .cart-totals table tfoot tr:last-child span.price{
+    font-size: 32px;
+    font-family: 'futura-medium';
 }
 .cart-content .checkout-types{
     width: 100%;
@@ -810,7 +815,6 @@ h2.product-name a{
 .cart-content .checkout-types .btn-checkout,
 .shipping #co-shipping-method-form .buttons-set .button,
 .order-review-button .amscheckout-submit{
-    font-family: 'futura_lightregular';
     font-size: 20px;
     padding: 25px 0;
     width: 100%;
@@ -826,7 +830,6 @@ h2.product-name a{
 .cart .cart-totals table td{
     text-transform: none;
     font-size: 18px;
-    font-family: 'futura_lightregular';
 }
 .btn-remove2{
     position: relative;
@@ -855,7 +858,6 @@ h2.product-name a{
     text-transform: capitalize;
 }
 .cart .cart-totals table td:first-child{
-    min-width: auto;
     width: 50%;
 }
 .cart .discount-form{
@@ -869,7 +871,6 @@ h2.product-name a{
     font-size: 14px;
     color: #333;
     text-transform: none;
-    font-family: 'futura_lightregular';
     margin: 0;
     line-height: 49px;
     border: 1px solid #ccc;
@@ -886,10 +887,10 @@ h2.product-name a{
     float: left;
     height: 100%;
     background: #fff;
-    border: 1px solid #ff7f00;
     padding: 10px;
     margin: 0;
     font-size: 14px;
+    border: 1px solid #4d91d5;
     font-family: 'futura_lightregular';
 }
 .amscheckout .discount-form input.input-text:focus{
@@ -905,7 +906,7 @@ h2.product-name a{
 .coupon-buttons{
     width: 100px;
     float: left;
-    background: #ff7f00;
+    background: #4d91d5;
     color: #fff;
     height: 100%;
     padding-top: 10px;
@@ -934,9 +935,7 @@ h2.product-name a{
     background: transparent;
     border: none;
 }
-.cart-full-security{
-    font-family: 'Arial', sans-serif;
-}
+
 .cart-full-security [class^="col-"]{
     float: left;
     padding: 25px 0 60px 0;
@@ -973,10 +972,7 @@ h2.product-name a{
 .sp-method-label{
     width: 50%;
     float: left;
-    font-family: "futura_lightregular", Verdana, Arial, sans-serif;
-    font-size: 14px;
-    color: #555;
-    line-height: 30px;
+    line-height: 1;
 }
 dl.sp-methods.f-right dd{
     margin-top: 10px;
@@ -994,6 +990,7 @@ dl.sp-methods.f-right dd{
     font-size: 14px;
     position: absolute;
     right: 10px;
+    top: 7px;
 }
 .shipping .form-list .input-box div.selector span:after {
     border: none;
@@ -1008,7 +1005,7 @@ dl.sp-methods.f-right dd{
     background: #ededed;
     color: #878787;
     border: none;
-    padding: 6px 10px;
+    padding: 9px 10px;
     height: 30px;
 }
 .nicescroll-rails{
@@ -1156,7 +1153,10 @@ ul.delivery-tabs li a{
     width: 300px;
     margin:auto;
 }
-
+.cart-table .product-cart-actions .button:hover{
+    background: transparent;
+    color: #3482d3;
+}
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
@@ -1228,7 +1228,14 @@ ul.delivery-tabs li a{
         width: 100%;
     }
 }
-
+@media only screen and (max-width: 1024px){
+    .cart-content .cart-right{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+}
 
 
 @media only screen and (max-width: 1024px) and (min-width: 768px){
@@ -1241,8 +1248,41 @@ ul.delivery-tabs li a{
     }
 }
 @media only screen and (max-width: 767px) {
+    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
+        margin-top: 0;
+    }
+    .cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th,
+    .cart .cart-totals table td,
+    .cart-totals tr.subtotal td,
+    .cart-totals tr.subtotal td .price,
+    .cart .cart-totals table tfoot td,
+    .cart .cart-totals table tfoot strong span{
+        font-size: 13px;
+    }
+    .cart .cart-totals table tfoot tr:last-child td, .cart .cart-totals table tfoot tr:last-child span.price,
+    .cart-content .page-title h1{
+        font-size: 16px;
+    }
+    h2.product-name a,
+    .cart-content .checkout-types .btn-checkout, .shipping #co-shipping-method-form .buttons-set .button, .order-review-button .amscheckout-submit{
+        font-size: 12px;
+    }
+    .item-options,
+    .shipping .form-list label, .sp-method-label,
+    .shipping .form-list .input-box div.selector span,
+    .input-text,
+    .button, .cart-table .product-cart-actions .button,
+    #co-shipping-method-form .buttons-set .button{
+        font-size: 10px;
+    }
+    .shipping .form-list .input-box div.selector span{
+        padding-top: 10px;
+    }
     .product-feature-descirption{
         padding: 25px 20px;
+    }
+    .cart .cart-progress{
+        margin-bottom: 20px;
     }
     .slick-prev{
         left: -25px;

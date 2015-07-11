@@ -73,11 +73,16 @@
 .skip-search{
     width: 44px;
     height: 44px;
-    border: 1px solid $white;
-    background: url(../images/search.png) no-repeat 10px 10px;
+    border: 1px solid $c-black;
+    background: url(../images/search.png) no-repeat 10px -37px;
     display: inline-block;
     float: right;
     margin-left: 50px;
+}
+.cms-home .skip-search,
+.catalog-category-view .skip-search{
+    border: 1px solid $white;
+    background-position: 10px 10px;
 }
 .mobile-search{
     display: none;
