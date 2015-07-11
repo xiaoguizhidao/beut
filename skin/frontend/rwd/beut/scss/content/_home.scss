@@ -457,6 +457,7 @@ body.cms-home {
     margin-left: 10px;
     margin-right: 10px;
 }
+
 @include bp(max-width, $bp-medium) {
     body,
     h2.product-name,

@@ -10,10 +10,7 @@
 .customer-account-login .main{
     padding-top: 0;
 }
-.footer-before-container {
-    background: white none repeat scroll 0 0;
-    padding-top: 20px;
-}
+
 /* End common class*/
 /*Page not found*/
 .cms-index-noroute .main{
@@ -87,7 +84,8 @@
     width: 94%!important;
 }
 /*Login page*/
-.customer-account-login .main{
+.customer-account-login .main,
+.checkout-onepage-index .main-container{
     margin-top: 130px;
 }
 .customer-account-login {
@@ -716,8 +714,8 @@ ul.brands li a {
 
 
 /*Checkout cart page*/
-.cart-content,.cart-crossel, .cart-full-security{
-    padding:25px 50px;
+.cart-content,.cart-crossel{
+    padding:25px 50px 0;
 }
 .cart-crossel{
     width: 100%;
@@ -951,7 +949,6 @@ h2.product-brand{
     margin: 0;
     font-size: 14px;
     border: 1px solid #4d91d5;
-    font-family: 'futura_lightregular';
 }
 .amscheckout .discount-form input.input-text:focus{
     outline: 0;
@@ -961,6 +958,7 @@ h2.product-brand{
 #discount-coupon-form .field-wrapper, .cart .giftcard .field-wrapper{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 #discount-coupon-form .button-wrapper, .cart .giftcard .button-wrapper,
 .coupon-buttons{
@@ -980,6 +978,10 @@ h2.product-brand{
 .coupon-buttons button{
     float: none;
     margin: auto;
+}
+.coupon-buttons button:focus{
+    outline: none;
+    border: none;
 }
 #discount-coupon-form .button-wrapper > button span, .cart .giftcard .button-wrapper > button span,
 .coupon-buttons button span{
@@ -1310,7 +1312,9 @@ ul.delivery-tabs li a{
         margin-top: 0;
     }
 }
-
+.footer-before-container .hot-prod{
+    margin-top: 0;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .prod-top{
         padding-left: 50px;
@@ -1329,7 +1333,12 @@ ul.delivery-tabs li a{
 }
 
 @media only screen and (max-width: 767px) {
-    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
+    .cms-faqs .main-container.col1-layout,
+    .cms-about-us .main-container.col1-layout,
+    .contacts-index-index .main-container.col1-layout,
+    .cms-brand .main-container.col1-layout, .checkout-cart-index,
+    .customer-account-login .main,
+    .checkout-onepage-index .main-container{
         margin-top: 0;
     }
     .cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th,
@@ -1341,11 +1350,15 @@ ul.delivery-tabs li a{
         font-size: 13px;
     }
     .cart .cart-totals table tfoot tr:last-child td, .cart .cart-totals table tfoot tr:last-child span.price,
-    .cart-content .page-title h1{
+    .cart-content .page-title h1,
+    h1, .h1{
         font-size: 16px;
     }
     h2.product-name a,
-    .cart-content .checkout-types .btn-checkout, .shipping #co-shipping-method-form .buttons-set .button, .order-review-button .amscheckout-submit{
+    .cart-content .checkout-types .btn-checkout,
+    .shipping #co-shipping-method-form .buttons-set .button,
+    .order-review-button .amscheckout-submit,
+    .amscheckout .area-header{
         font-size: 12px;
     }
     .item-options,
@@ -1353,7 +1366,10 @@ ul.delivery-tabs li a{
     .shipping .form-list .input-box div.selector span,
     .input-text,
     .button, .cart-table .product-cart-actions .button,
-    #co-shipping-method-form .buttons-set .button{
+    #co-shipping-method-form .buttons-set .button,
+    .messages li li,
+    #discount-coupon-form .validation-advice,
+    .cart .giftcard .validation-advice{
         font-size: 10px;
     }
     .shipping .form-list .input-box div.selector span{
@@ -1382,7 +1398,6 @@ ul.delivery-tabs li a{
     .customer-account-login .main{
         margin-top: 0px;
     }
-
 }
 
 @media only screen and (max-width: 480px) {

@@ -414,7 +414,12 @@
 }
 
 @include bp(max-width, 599px) {
-
+    .cart-content td.product-cart-image{
+        border: none !important;
+    }
+    #shopping-cart-table td{
+        padding: 15px 15px 0 0 !important;
+    }
     .cart-table {
         colgroup, thead {
             display: none;
@@ -426,7 +431,8 @@
             padding-bottom: 10px;
             position: relative;
             width: 100%;
-
+            border-left: 1px solid $c-module-border;
+            border-right: 1px solid $c-module-border;
             &:after {
                 @include clearfix;
             }
@@ -581,6 +587,9 @@
                 display: none;
             }
 
+        }
+        .tr-break{
+            display: none !important;
         }
     }
 
@@ -821,6 +830,9 @@
 
     .validation-advice {
         display: inline;
+        position: absolute;
+        left: 0;
+        bottom: -19px;
     }
 
     .button-wrapper {
