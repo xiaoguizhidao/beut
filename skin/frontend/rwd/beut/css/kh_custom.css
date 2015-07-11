@@ -1513,10 +1513,73 @@ ul.delivery-tabs li a{
         max-width: 90%;
         padding: 10% 5%;
     }
-
+    .delivery-message li:nth-child(2){
+        display: none;
+    }
+    .delivery-contents{
+        padding:30px 15px;
+    }
+    .delivery-contents .right-block{
+        display: none;
+    }
+    .cms-delivery .left-block{
+        width: 100%;
+    }
+    ul.delivery-tabs li {
+        margin-right: 4%;
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .cms-delivery .delivery-message li {
+        width: 48%;
+    }
+    .delivery-content-block .left{
+        width: 100%;
+    }
+    .delivery-content-block .right {
+        float: none;
+        width: 100%;
+    }
+    .delivery-content-block, .cms-delivery .left-block .description {
+        margin-bottom: 5px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
+    .delivery-message li:nth-child(2){
+        display: none;
+    }
+    .delivery-contents{
+        padding:30px 15px;
+    }
+    .delivery-contents .right-block{
+        display: none;
+    }
+    .cms-delivery .left-block{
+        width: 100%;
+    }
+    ul.delivery-tabs li {
+        margin-right: 4%;
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .cms-delivery .delivery-message li {
+        width: 48%;
+    }
+    .delivery-content-block .left{
+        width: 100%;
+    }
+    .delivery-content-block .right {
+        float: none;
+        width: 100%;
+    }
+    .cms-delivery .delivery-message {
+        padding: 15px;
+    }
+    .account-create .page-title h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
    .cms-index-noroute .pnf-left {
         width: 100%;
        float: none;
