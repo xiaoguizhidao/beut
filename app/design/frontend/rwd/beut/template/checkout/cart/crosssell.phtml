@@ -33,11 +33,9 @@
 ?>
 <?php if($this->getItemCount()): ?>
     <div class="box-collateral box-up-sell">
-        <h2><?php echo $this->__('You may also like')?>
-            <p><?php echo $this->__('Here is a selection of products we think you will love!') ?></p>
-        </h2>
-        <div id="upsell-product-table">
-            <div class="row">
+        <h2><?php echo $this->__('You may also like')?></h2>
+        <div id="upsell-product-table" class="container">
+            <div class="row" id="lightSlider">
                 <?php foreach ($this->getItems() as $_item): ?>
                     <div class="square-container">
                         <a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>" class="product-image">

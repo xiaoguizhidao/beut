@@ -160,7 +160,7 @@ div.menu .brand a, div.wp-custom-menu-popup .brand a {
 /*FONTS*/
 div.menu {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     line-height: 0;
     position: relative;
@@ -429,4 +429,11 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 }
 #custommenu-mobile .level2 {
     background-color: #fff;
+}
+@media only screen and (max-width: 1024px) and (min-width: $bp-medium){
+    div.menu a:link, div.menu a:visited{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 13px;
+    }
 }

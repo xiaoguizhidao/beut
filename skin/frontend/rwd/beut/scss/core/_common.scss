@@ -536,8 +536,6 @@ a.button:hover {
     text-transform: uppercase;
     display: inline-block;
     color: $c-action;
-    font-family: $f-stack-special;
-
     &:hover {
         text-decoration: none;
         color: $c-stimulus;
@@ -761,9 +759,6 @@ a.button:hover {
         height: 20px;
         line-height: 20px;
         width: 100%;
-        font-size: 10px;
-        font-family: Arial, $f-stack-sans;
-        font-weight: bold;
     }
     &:hover:after {
         color: #FFFFFF;
