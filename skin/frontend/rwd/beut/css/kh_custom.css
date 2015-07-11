@@ -3,6 +3,9 @@
   content: "";
   overflow: hidden;
 }
+.faqs-title-mobile {
+    display: none;
+}
 /*common class*/
 .cms-page-view .std p, .cms-no-route .std p {
     font-style: normal;
@@ -201,13 +204,15 @@
     background-color: white;
 }
 .customer-account-create .account-create{
-    margin-top: 80px;
-    max-width: 760px;
-    padding: 25px 10px;
     margin-bottom: 200px;
+    margin-top: 100px;
+    max-width: 665px;
+    padding: 80px;
 }
 .form-list .fields .field:last-child{
     float: right;
+}
+.account-create {
 
 }
 .form-list .fields .field, .form-list .fields .field:first-child{
@@ -218,8 +223,43 @@
     height: 35px;
     margin-top: 0px;
 }
-.customer-account-create .field label{
-    display: none;
+.account-create .form-list .fields .field, .form-list .fields .field:first-child{
+    width: 100% !important;
+}
+.account-create .form-list .control label{
+    border-bottom: 1px solid black;
+    display: inline-block;
+    min-width: 250px;
+    width: 100%;
+    background: none;
+}
+.customer-account-create .back-link a {
+    color: #000000;
+}
+.customer-account-create .buttons-set{
+    width: 100%;
+    max-width: 100%;
+}
+.main{
+    padding-top: 0px!important;
+}
+.customer-account-create .buttons-set span span{
+    font-size: 1.5em;
+    float: right;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+.account-create input[type="email"], .account-create input[type="password"]{
+    height: 35px!important;
+}
+.form-list .control label, .sp-methods dt label, #checkout-shipping-method-load .sp-methods dd label, #co-shipping-method-form .sp-methods dd label, .product-options ul.options-list label {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid black;
+    color: #636363;
+    display: inline-block;
+    max-width: none;
+    min-width: 250px;
+    width: 100%;
 }
 .form-list .fields .field{
     margin-bottom: 25px;
@@ -1218,6 +1258,9 @@ ul.delivery-tabs li a{
     margin:auto;
 }
 
+.cms-faqs .menu-left li.faqs a{
+    color: #498fd8;
+}
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
@@ -1316,9 +1359,25 @@ ul.delivery-tabs li a{
     .product-feature-descirption{
         padding: 35px 100px 50px 100px;
     }
+    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index {
+        margin-top:0px;
+    }
+    .contact-block{
+        padding: 50px 20px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+    .faqs-title-mobile {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .faqs-content {
+        float: left;
+        padding: 50px 15px;
+    }
     .product-feature-descirption{
         padding: 25px 20px;
     }
@@ -1339,6 +1398,74 @@ ul.delivery-tabs li a{
     .customer-account-login .main{
         margin-top: 0px;
     }
+    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
+        margin-top: 0px;
+    }
+    .cms-brand .main {
+        padding: 20px 15px 40px;
+    }
+    ul.brands {
+        text-align: center;
+    }
+    ul.brands li {
+       margin: 0 5px;
+        font-weight: bold;
+    }
+
+    .brand-col-1, .brand-col-2, .brand-col-3, .brand-col-4, .brand-col-5{
+        width: 30%;
+        margin-left: 2%;
+    }
+    .brand-col-3 {
+        margin-right: 0%;
+    }
+    .contact-block{
+        padding: 50px 20px;
+    }
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+    .contacts-index-index .fieldset, #contactForm{
+        padding-top: 10px;
+    }
+    .contact-block .left-block {
+        margin-bottom: 5px;
+    }
+    .contact-block {
+        padding: 10px 0;
+    }
+    .contact-left {
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    .left-block.window img{
+        float:left;
+    }
+    .left-block.window span{
+        display:inline-block; float:left;width:70%; line-height:15px;
+    }
+    .left-block.window {
+        margin-bottom: 65px;
+    }
+    .left-block.window span {
+        line-height: 65px;
+    }
+    .faq-q-a {
+        width: 100%;
+    }
+    .faqs-content .menu-left {
+        display: none;
+    }
+    .faq.faq-left, .faq.faq-right{
+        width: 100%;
+    }
+    .customer-account-create .account-create {
+        margin-bottom: 200px;
+        margin-top: 100px;
+        max-width: 90%;
+        padding: 10% 5%;
+    }
+
 
 }
 
@@ -1395,6 +1522,27 @@ ul.delivery-tabs li a{
     }
     .new-users .page-title h1{
         font-size: 13px;
+    }
+    .brand-col-1, .brand-col-2, .brand-col-3, .brand-col-4 {
+        width: 40%;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .brand-col-5 {
+        width: 100%;
+    }
+    .brand-col-5 p{
+        width: 40%;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .contact-block {
+        padding: 10px 0px;
+    }
+    .faqs-top p {
+        font-size: 13px;
+        font-style: normal;
+        line-height: 62px;
     }
 }
 @media only screen and (max-width: 1200px) {
