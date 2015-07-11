@@ -720,9 +720,7 @@ ul.brands li a {
     padding:25px 50px;
 }
 .cart-crossel{
-    background: #eeeeee;
     width: 100%;
-    overflow: hidden;
 }
 .cart-content .page-title h1{
     font-size: 32px;
@@ -755,9 +753,6 @@ h2.product-brand{
     color:#000;
     font-size: 19px;
     font-weight: bold;
-}
-h2.product-name a{
-    font-size: 16px;
 }
 .cart-crossel .crosssell {
     clear: both;
@@ -857,7 +852,6 @@ h2.product-name a{
 .cart-totals tr.subtotal td .price,
 .cart .cart-totals table tfoot td,
 .cart .cart-totals table tfoot strong span{
-    font-size: 18px;
     text-transform: none;
 }
 
@@ -890,12 +884,17 @@ h2.product-name a{
 }
 .cart .cart-totals table td{
     text-transform: none;
-    font-size: 18px;
 }
 .btn-remove2{
-    position: relative;
-    /* border: 1px solid #ccc;*/
-    background-position: 4px -650px;
+    background-position: 0 -650px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.btn-remove2:hover{
+    background-position: -46px -650px;
 }
 .clear{
     clear: both;
@@ -1218,6 +1217,9 @@ ul.delivery-tabs li a{
     background: transparent;
     color: #3482d3;
 }
+.no-item{
+    text-align: center;
+}
 @media screen and (min-width: 450px) and (max-width: 849px){
     .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
         clear: both;
@@ -1300,7 +1302,6 @@ ul.delivery-tabs li a{
         width: 100%;
     }
 }
-<<<<<<< HEAD
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1309,9 +1310,6 @@ ul.delivery-tabs li a{
         margin-top: 0;
     }
 }
-
-=======
->>>>>>> 34f27a7eceed39c7984fd308839093245623cd02
 
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .prod-top{
