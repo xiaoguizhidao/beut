@@ -50,14 +50,6 @@ $_category  = Mage::registry('current_category');
         <?php echo $this->getStateHtml() ?>
     </div>
 <?php endif;?>
-
-<?php /*if($_category && $_category->getName()):*/?><!--
-    <div class="category-top">
-        <div class="category-title">
-            <h1><?php /*echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') */?></h1>
-        </div>
-    </div>
---><?php /*endif;*/?>
 <?php if($this->canShowBlock()): ?>
     <div class="block-filter">
         <div class="block block-layered-nav<?php if (!$this->getLayer()->getState()->getFilters()): ?> block-layered-nav--no-filters<?php endif; ?>">
@@ -73,7 +65,9 @@ $_category  = Mage::registry('current_category');
                         <?php foreach ($_filters as $_filter): ?>
                             <?php if($_filter->getItemsCount()): ?>
                                 <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                                <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?></dd>
+                                <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?>
+                                    <a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
+                                </dd>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </dl>

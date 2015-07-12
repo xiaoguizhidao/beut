@@ -200,12 +200,6 @@ var FEelementControl = {
 			});
 		}
 	},
-	/*setScrollr: function() {
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {} else {
-			var s = skrollr.init();
-		}
-	},*/
-
 	cmsMenu: function(){
 		var url = jQuery(location).attr('href').slice(-1)=='/' ? jQuery(location).attr('href') : jQuery(location).attr('href')+'/';
 		jQuery('.block-cms-menu li').each(function(){
