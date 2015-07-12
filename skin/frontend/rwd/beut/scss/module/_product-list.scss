@@ -445,7 +445,11 @@ $productsGridActionHeight: 50px;
     li {
         margin-bottom: $gap;
         clear: both;
-
+        border-top: 1px solid #d6d6d6;
+        padding-top: 10px;
+        &:first-child{
+            border: none;
+        }
         &:after {
             @include clearfix();
         }

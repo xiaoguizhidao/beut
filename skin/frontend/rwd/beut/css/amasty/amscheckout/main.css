@@ -6,11 +6,7 @@
 }
 
 .amscheckout table{
-    width: 95%;
-    /*background-color: greenyellow;*/
-    /*table-layout: fixed;*/
-    
-    
+    width: 100%;
 }
 .amscheckout table table{
     width: 95%;
@@ -768,4 +764,31 @@ spiner
         width: 25px;
         height: 25px;
     }
+    .amscheckout-login input.input-text, .amscheckout input.input-text, .amscheckout select,
+    .amscheckout .amscheckout-label-radio,
+    .checkbox + label, .radio + label,
+    .checkout-onepage-index .amscheckout-main{
+        font-size: 10px;
+    }
+    .amscheckout-data-table tfoot td,
+    .amscheckout-submit-button,
+    .amscheckout .area-header{
+        font-size: 12px;
+    }
+    .amscheckout-data-table tr td,
+    .amscheckout-data-table tr th{
+        padding: 3px 0;
+    }
+    p.required, .validation-advice{
+        font-size: 9px;
+    }
+    .coupon-buttons button,
+    .amscheckout-data-table tr.subtotal td,
+    .amscheckout-data-table tr.subtotal td .price{
+        font-size: 16px;
+    }
+    .amscheckout-review{
+        background-position: 1px -1px;
+    }
+
 }

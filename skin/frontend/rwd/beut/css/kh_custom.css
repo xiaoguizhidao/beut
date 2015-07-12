@@ -986,7 +986,6 @@ h2.product-brand{
     margin: 0;
     font-size: 14px;
     border: 1px solid #4d91d5;
-    font-family: 'futura_lightregular';
 }
 .amscheckout .discount-form input.input-text:focus{
     outline: 0;
@@ -1381,9 +1380,12 @@ ul.delivery-tabs li a{
     .cms-faqs .main-container.col1-layout,
     .cms-about-us .main-container.col1-layout,
     .contacts-index-index .main-container.col1-layout,
-    .cms-brand .main-container.col1-layout, .checkout-cart-index,
+    .cms-brand .main-container.col1-layout,
+    .checkout-cart-index,
     .customer-account-login .main,
     .checkout-onepage-index .main-container{
+        margin-top: 0;
+    }
 
     .faqs-title-mobile {
         display: block;
@@ -1415,6 +1417,8 @@ ul.delivery-tabs li a{
     .cart-content .checkout-types .btn-checkout,
     .shipping #co-shipping-method-form .buttons-set .button,
     .order-review-button .amscheckout-submit,
+    .amscheckout .area-header,
+    .amscheckout-img,
     .amscheckout .area-header{
         font-size: 12px;
     }
@@ -1426,7 +1430,8 @@ ul.delivery-tabs li a{
     #co-shipping-method-form .buttons-set .button,
     .messages li li,
     #discount-coupon-form .validation-advice,
-    .cart .giftcard .validation-advice{
+    .cart .giftcard .validation-advice,
+    .header-language-container, .page-header{
         font-size: 10px;
     }
     .shipping .form-list .input-box div.selector span{
@@ -1552,6 +1557,16 @@ ul.delivery-tabs li a{
     }
     .delivery-content-block, .cms-delivery .left-block .description {
         margin-bottom: 5px;
+    }
+    .slick-dots{
+        bottom: -16px;
+    }
+    .checkout-onepage-index .main{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .cart-content .checkout-types .btn-checkout, .shipping #co-shipping-method-form .buttons-set .button, .order-review-button .amscheckout-submit{
+        padding: 15px 0;
     }
 }
 

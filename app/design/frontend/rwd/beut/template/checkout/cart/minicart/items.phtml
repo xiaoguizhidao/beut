@@ -81,12 +81,13 @@ if(empty($_cartQty)) {
                         <a title="<?php echo $this->__('Checkout') ?>" class="button checkout-button" href="<?php echo $this->getBaseUrl().'checkout/cart' ?>">
                             <?php echo $this->__('Go to bag') ?>
                         </a>
+                        <a class="cart-link" href="<?php echo $this->getUrl('checkout/cart'); ?>">
+                            <?php echo $this->__('Checkout'); ?>
+                        </a>
                     </li>
                 </ul>
             <?php endif ?>
-            <a class="cart-link" href="<?php echo $this->getUrl('checkout/cart'); ?>">
-                <?php echo $this->__('Checkout'); ?>
-            </a>
+
         </div>
 
     <?php else: ?>
