@@ -26,6 +26,18 @@
 ?>
 <?php if($_heading = $this->getContentHeading()): ?>
     <div class="page-title">
-        <h1><?php echo $_heading; ?></h1>
+        <h1 class="f-left"><?php echo $_heading; ?></h1>
+        <a href="javascript:void(0)" class="skip-cms f-right skip-link" data-target-element="skip-cms-menu">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </a>
+    </div>
+    <div class="skip-content" id="skip-cms-menu">
+        <div class="title"><?php echo $this->__('Menu')?></div>
+        <a class="close skip-link-close" href="#" title="Close"></a>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cms-menu')->toHtml() ?>
     </div>
 <?php endif; ?>

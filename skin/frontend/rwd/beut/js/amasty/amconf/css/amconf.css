@@ -22,13 +22,11 @@
     content: "\f104";
     font-family: FontAwesome;
     color: #000;
-    line-height: 2.2;
 }
 .amconf-block .lSAction > .lSNext:before{
     content: "\f105";
     font-family: FontAwesome;
     color: #000;
-    line-height: 1.5;
     float: right;
 }
 .amconf-block .lSSlideWrapper{

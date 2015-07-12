@@ -20,7 +20,7 @@
    /* background: url("../images/404-bg.png");*/
     width: 100%;
     min-height: 720px;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     background: #fafcff
 }
@@ -281,10 +281,29 @@
 /*About us*/
 
 .about-us-container {
-    margin-top: 120px;
+    margin-top: 0;
+    color: #000;
 }
-.cms-about-us .page-title{
-    display: none;
+.about-us-container:after,
+.about-us-container .content:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.about-us-container .top-content h2{
+    font-size: 34px;
+    text-transform: none;
+    margin-bottom: 0;
+}
+.about-us-container .top-content p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.about-us-container .our-history{
+    margin-top: 10px;
+}
+.about-us-container p{
+    color: #000;
 }
 .cms-about-us .col1-layout{
     margin: 0!important;
@@ -306,7 +325,7 @@
 }
 
 .about-us-container .content{
-    padding: 35px 30px;
+    padding: 53px 100px;
 }
 .cms-about-us .menu-left {
     float: left;
@@ -327,12 +346,8 @@
 }
 .cms-about-us .services{
     clear: both;
-    padding: 30px 100px;
-}
-.cms-about-us .services div{
-    width: 30%;
-    float: left;
-    margin-right: 3%;
+    padding: 0 100px;
+    margin-top: 70px;
 }
 .cms-about-us .services div:last-child{
     margin-right: 0;
@@ -341,15 +356,61 @@
     clear: both;
     background: #bbbbbb;
     text-align: center;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-top: 50px;
     color:white;
+}
+.cms-about-us .testimonial .content:before,
+.cms-about-us .testimonial .content:after{
+    content: open-quote;
+    font-size: 67px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: none;
+    left: 0;
+    right: 0;
+    top: -6px;
+}
+.cms-about-us .testimonial .content:after{
+    content: close-quote;
+    bottom: -98px;
+    top: inherit;
+}
+.cms-about-us .testimonial h2{
+    font-size: 34px;
+}
+.cms-about-us .testimonial p.content {
+    position: relative;
+    padding-top: 52px;
 }
 .cms-about-us .testimonial p {
     color:white;
 }
+.cms-about-us .testimonial p.autho{
+    font-family: 'Neuton-Regular', Verdana, Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 88px;
+}
+.cms-page-view .std .founder img{
+    margin-right: 20px;
+}
+.founder figure{
+    margin-top: 12px;
+}
+.founder h2{
+    font-size: 34px;
+    text-transform: none;
+}
+
 .cms-about-us .founder{
-    padding: 30px 70px;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .founder-left, .founder-right {
     float: left;
@@ -359,8 +420,11 @@
     float: left;
     margin-right: 10px!important;
 }
+.founder{
+    font-size: 16px;
+}
 .founder .name {
-    font-size: 1.2em;
+    font-size: 22px;
     text-transform: capitalize;
 }
 .founder .position {
@@ -387,8 +451,9 @@
     line-height: 70px;
 }
 .cms-about-us .menu-left, .cms-faqs .menu-left{
-    width: 196px;
+    width: 200px;
     float:left;
+    margin-top: 10px;
 }
 .cms-about-us .menu-left ul, .cms-faqs .menu-left ul, .delivery-contents ul{
     list-style: none;
@@ -398,6 +463,7 @@
     font-style: normal;
     padding: 15px 0;
     border-bottom: 1px solid #cccccc;
+    margin: 0;
 }
 .cms-about-us .std .menu-left li:last-child,  .cms-faqs .menu-left li:last-child, .delivery-contents li:last-child{
     border-bottom: none;
@@ -407,6 +473,11 @@
 }
 .cms-about-us .menu-left li a, .cms-faqs .menu-left li a, .delivery-contents .menu-left li a{
     color:black;
+    padding-left: 10px;
+}
+.cms-about-us .menu-left li a:hover{
+    text-decoration: none;
+    color:#458ddb;
 }
 .cms-about-us .menu-left li.active, .cms-faqs .menu-left li.active, .delivery-contents .menu-left li .active{
     color:#458ddb;
@@ -1260,88 +1331,84 @@ ul.delivery-tabs li a{
     text-align: center;
 
 }
-@media screen and (min-width: 450px) and (max-width: 849px){
-    .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
-        clear: both;
-        width: 100%;
-        margin: auto;
-        border-left: none;
-        padding-right: 0;
-        padding-left: 0;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .customer-account-login .account-login{
-        width: 80%;
-        margin: auto;
-        margin-top: 50px;
-    }
-    .customer-account-login .col2-set .col-2{
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid #000000;
-    }
-    #login-form .button {
-        font-size: 1.5em;
-        line-height: 30px;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
-        width: 100%;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button{
-        width: 100%;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
-        padding-right: 0px;
-    }
-    .customer-account-login input[type="email"],  .customer-account-login input[type="password"]{
-        width: 100%;
-    }
-    .customer-account-login .main{
-        margin-top: 0px;
-    }
+.filter-show{
+    display: none;
 }
-@media screen and (max-width: 449px){
-    .customer-account-login .main{
-        margin-top: 0px;
-    }
-    .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
-        clear: both;
-        width: 100%;
-        margin: auto;
-        border-left: none;
-        padding-right: 0;
-        padding-left: 0;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .customer-account-login .account-login{
-        width: 90%;
-        margin: auto;
-    }
-    .customer-account-login .account-login{
-        padding-top: 20px;
-    }
-    .customer-account-login .col-1 .content{
-        margin-top: 20px;
-    }
-    .customer-account-login .col2-set .col-2{
-        margin-top: 40px;
-        padding-top: 20px;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
-        width: 100%;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button{
-        width: 100%;
-    }
-    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
-        padding-right: 0px;
-    }
-    .customer-account-login input[type="email"], .customer-account-login input[type="password"] {
-        width: 100%;
-    }
+
+/*collapse*/
+.about-us-container h3{
+    font-size: 15px;
 }
+.collapse h3 {
+    margin: 0;
+    position: relative;
+    color: #000;
+}
+.collapse h3:before{
+    content: '+';
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    top: 7px;
+}
+.collapse h3.open:before  {
+    content: '-';
+    top: 5px;
+}
+.collapse h3 a {
+    display: block;
+    padding: 10px;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.collapse h3 + div { padding: 10px; }
+.collapse h2 + div,
+.collapse .example {
+    background: #fff;
+    overflow: hidden;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+/* Pre hide sections with JavaScript on
+--- */
+.collapse h3+div {
+    display: none;
+}
+
+/* CSS3 Animation example
+--- */
+.collapse h3 + div {
+    height: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: block!important;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.3s ease;
+    moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.collapse .content {
+    padding: 0;
+    margin-left: 30px;
+}
+.collapse .content li{
+    text-indent: -4px;
+}
+.collapse h3.open + div {
+    height: auto;
+}
+.footer-before-container .hot-prod{
+     margin-top: 0;
+ }
+
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1350,29 +1417,31 @@ ul.delivery-tabs li a{
         margin-top: 0;
     }
 }
-.footer-before-container .hot-prod{
-    margin-top: 0;
-}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
-    .prod-top{
+    .product-feature-descirption{
+        padding: 12px 50px 25px 50px;
+    }
+    .prod-top,
+    .about-us-container > .content{
         padding-left: 50px;
         padding-right: 50px;
     }
-    .product-feature-descirption{
-        padding: 35px 100px 50px 100px;
-    }
-    .prod-top{
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .product-feature-descirption{
-        padding: 35px 100px 50px 100px;
-    }
-    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index {
+    .cms-faqs .main-container.col1-layout,
+    .cms-about-us .main-container.col1-layout,
+    .contacts-index-index .main-container.col1-layout,
+    .cms-brand .main-container.col1-layout,
+    .customer-account-login .main,
+    .checkout-cart-index {
         margin-top:0px;
     }
     .contact-block{
         padding: 50px 20px;
+    }
+    /*about us*/
+    .about-us-container .content-right .item{
+        width: 100%;
+        display: block;
     }
 }
 
@@ -1383,10 +1452,11 @@ ul.delivery-tabs li a{
     .cms-brand .main-container.col1-layout,
     .checkout-cart-index,
     .customer-account-login .main,
-    .checkout-onepage-index .main-container{
+    .checkout-onepage-index .main-container,
+    .cms-about-us .services,
+    .cms-about-us .testimonial{
         margin-top: 0;
     }
-
     .faqs-title-mobile {
         display: block;
         margin-bottom: 20px;
@@ -1397,29 +1467,35 @@ ul.delivery-tabs li a{
         float: left;
         padding: 50px 15px;
     }
-    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
-        margin-top: 0;
-    }
     .cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th,
     .cart .cart-totals table td,
     .cart-totals tr.subtotal td,
     .cart-totals tr.subtotal td .price,
     .cart .cart-totals table tfoot td,
-    .cart .cart-totals table tfoot strong span{
+    .cart .cart-totals table tfoot strong span,
+    .about-us-container .top-content p,
+    .founder .name{
         font-size: 13px;
     }
     .cart .cart-totals table tfoot tr:last-child td, .cart .cart-totals table tfoot tr:last-child span.price,
     .cart-content .page-title h1,
-    h1, .h1{
+    h1, .h1,
+    .page-title h1,
+    .about-us-container .top-content h2,
+    .cms-about-us .testimonial h2{
         font-size: 16px;
     }
+
     h2.product-name a,
     .cart-content .checkout-types .btn-checkout,
     .shipping #co-shipping-method-form .buttons-set .button,
     .order-review-button .amscheckout-submit,
     .amscheckout .area-header,
     .amscheckout-img,
-    .amscheckout .area-header{
+    .amscheckout .area-header,
+    .collapse h3 a,
+    .about-us-container h3,
+    .founder{
         font-size: 12px;
     }
     .item-options,
@@ -1445,10 +1521,10 @@ ul.delivery-tabs li a{
         margin-bottom: 20px;
     }
     .slick-prev{
-        left: -25px;
+        left: 0;
     }
     .slick-next{
-        right: -25px;
+        right: 0;
     }
     .box-up-sell .view-more{
         font-size: 12px;
@@ -1458,12 +1534,7 @@ ul.delivery-tabs li a{
     .founder-left, .founder-right{
         width: 100%;
     }
-    .customer-account-login .main{
-        margin-top: 0px;
-    }
-    .cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
-        margin-top: 0px;
-    }
+
     .cms-brand .main {
         padding: 20px 15px 40px;
     }
@@ -1568,9 +1639,156 @@ ul.delivery-tabs li a{
     .cart-content .checkout-types .btn-checkout, .shipping #co-shipping-method-form .buttons-set .button, .order-review-button .amscheckout-submit{
         padding: 15px 0;
     }
+    .page-title h1{
+        margin-bottom: 9px;
+    }
+    body[class*='cms-page-'] .page-title{
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    body[class*='cms-page-'] .page-title:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .about-us-container > .content{
+        padding: 25px 20px;
+    }
+    .skip-cms .hamburger{
+        margin-top: 2px;
+    }
+    .skip-cms{
+        display: block;
+        height: 25px;
+    }
+    #skip-cms-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        height: 100%;
+        width: 80%;
+        background-color: #fff;
+        color: #000;
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -webkit-animation: menuOpen .35s ease-out forwards;
+        -moz-animation: menuOpen .35s ease-out forwards;
+        -o-animation: menuOpen .35s ease-out forwards;
+        animation: menuOpen .35s ease-out forwards;
+    }
+    #skip-cms-menu .title{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+    }
+    .cms-about-us #skip-cms-menu .menu-left, .cms-faqs #skip-cms-menu .menu-left{
+        width: 100%;
+    }
+    #skip-cms-menu .menu-left a{
+        text-transform: uppercase;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        display: block;
+        width: 100%;
+    }
+    #skip-cms-menu a.skip-link-close {
+        width: 40px;
+        display: block;
+        height: 40px;
+        right: 0;
+        top: 12px;
+        position: absolute;
+        background: url(../images/close.png) 0 0 no-repeat;
+        background-size: 20px;
+    }
+    .about-us-container .menu-left{
+        display: none;
+    }
+    .cms-about-us .content-right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .collapse h3:before{
+        font-size: 16px;
+    }
+    .collapse h3 a{
+        padding-left: 19px;
+    }
+
+    .cms-about-us .services{
+        padding: 0 20px;
+    }
+    .cms-about-us .founder{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .cms-page-view .std .founder img{
+        width: 100%;
+        margin: 0;
+    }
+    .slick-prev:before, .slick-next:before{
+        opacity: 1;
+    }
 }
 
+@media only screen and (max-width: 1200px) {
+    .slider-top {
+        background-image: url("../images/about-us-banner.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        padding: 100px 0;
+        text-align: center;
+    }
+}
+/*
 @media only screen and (max-width: 480px) {
+    .customer-account-login .main{
+        margin-top: 0px;
+    }
+    .customer-account-login .col2-set .col-1, .customer-account-login .col2-set .col-2{
+        clear: both;
+        width: 100%;
+        margin: auto;
+        border-left: none;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .customer-account-login .account-login{
+        width: 90%;
+        margin: auto;
+    }
+    .customer-account-login .account-login{
+        padding-top: 20px;
+    }
+    .customer-account-login .col-1 .content{
+        margin-top: 20px;
+    }
+    .customer-account-login .col2-set .col-2{
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set button, .customer-account-login .col2-set .col-2 .buttons-set .button{
+        width: 100%;
+    }
+    .customer-account-login .col2-set .col-1 .buttons-set, .customer-account-login .col2-set .col-2 .buttons-set{
+        padding-right: 0px;
+    }
+    .customer-account-login input[type="email"], .customer-account-login input[type="password"] {
+        width: 100%;
+    }
     .delivery-message li:nth-child(2){
         display: none;
     }
@@ -1617,9 +1835,6 @@ ul.delivery-tabs li a{
    .pnf-right img {
         padding-top: 20px;
    }
-    .cms-about-us .menu-left{
-        display: none;
-    }
     .cms-about-us .content-right {
         float: left;
         margin-left: 0;
@@ -1679,13 +1894,4 @@ ul.delivery-tabs li a{
         font-style: normal;
         line-height: 62px;
     }
-}
-@media only screen and (max-width: 1200px) {
-    .slider-top {
-        background-image: url("../images/about-us-banner.jpg");
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        padding: 100px 0;
-        text-align: center;
-    }
-}
+}*/

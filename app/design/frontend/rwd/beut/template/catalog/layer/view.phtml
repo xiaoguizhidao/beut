@@ -66,7 +66,7 @@ $_category  = Mage::registry('current_category');
                             <?php if($_filter->getItemsCount()): ?>
                                 <dt><?php echo $this->__($_filter->getName()) ?></dt>
                                 <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?>
-                                    <a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
+                                    <a class="clear-all f-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
                                 </dd>
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -105,4 +105,143 @@ $_category  = Mage::registry('current_category');
 <?php endif; ?>
 <div class="catalog-breadcrumbs">
     <?php  echo $this->getLayout()->getBlock("breadcrumbs")->toHtml()?>
+</div>
+
+
+
+
+
+
+<div class="about-us-container">
+    <div class="slider-top">
+        <div class="slider-text">
+            <p>We like making our<br>
+                <span>Customer Happy</span></p><p>
+                Curabitur diam felis, tristique et nisi, vulputate ipsum. <br>Maecenas nec diam eleifend </p>
+        </div>
+    </div>
+    <div class="content">
+
+        {{block type="cms/block" block_id="cms-menu"}}
+
+        <div class="content-right">
+            <div class="top-content">
+                <h2>Who we are?</h2>
+                <p>Granada is modern and clean theme and built upon the 1170px Twitter <br>Bootstrap framework.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-xs-12 item">
+                        <div class="collapse">
+                            <h3>What we do</h3>
+                            <div>
+                                <div class="content">
+                                    <ul>
+                                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Company history</h3>
+                            <div>
+                                <div class="content">
+                                    <p>This example simply sets a class attribute to the details and let's an
+                                        external stylesheet toggle the collapsed state.</p>
+                                    <p>Hello Sir.</p>
+                                </div>
+                            </div>
+                            <h3>What is our priorities</h3>
+                            <div>
+                                <div class="content">
+                                    <p>This example simply sets a class attribute to the details and let's an
+                                        external stylesheet toggle the collapsed state.</p>
+                                </div>
+                            </div>
+                            <h3>Main benefits</h3>
+                            <div>
+                                <div class="content">
+                                    <p>This example simply sets a class attribute to the details and let's an
+                                        external stylesheet toggle the collapsed state.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-xs-12 our-history item">
+                        <h3>Our History</h3>
+                        <p>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </p
+                        <p>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="services container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12 free-delivery">
+                <img src="{{skin url='images/delivery.jpg'}}" alt="" />
+                <p class="title"><span>Free Delivery</span></p>
+                <p>Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+                    vel, aliquam iaculis turpis.</p>
+            </div>
+            <div class="col-lg-4 col-xs-12 customer-service">
+                <img src="{{skin url='images/call_us.jpg'}}" alt="" />
+                <p class="title"><span>24/H Customer Service</span></p>
+                <p>Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+                    vel, aliquam iaculis turpis.</p>
+            </div>
+            <div class="col-lg-4 col-xs-12 payment-secure">
+                <img src="{{skin url='images/payment.jpg'}}" alt="" />
+                <p class="title"><span>Payment Secured</span></p>
+                <p>Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+                    vel, aliquam iaculis turpis.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="testimonial container">
+    <div class="row">
+        <div class="col-lg-6 col-xs-12 center-block">
+            <h2 class="title">Testimonials</h2>
+            <p class="content">
+                Cras pellentesque, nisi ac tempus pellentesque,semcommodo urna,amet egestas ipsum orc sit amNullam dolor nisi, sempea mauris
+                vel, aliquam iaculis turpis.</p>
+            <p class="autho">khoai dinh</p>
+        </div>
+    </div>
+
+</div>
+<div class="founder container about-us-container">
+    <div class="row">
+        <div class="col-lg-12 top-content">
+            <h2>Meet the Founders</h2>
+            <p>Granada is modern and clean theme and built upon the 1170px Twitter<br>Bootstrap framework.</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-lg-6 col-xs-12">
+            <img src="{{skin url='images/founder-about-us.png'}}" alt="" class="f-left" />
+            <figure>
+                <div class="detail">
+                    <div class="name">name</div>
+                    <div class="position">founder</div>
+                    <p>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </p>
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+            <img src="{{skin url='images/founder-about-us.png'}}" alt="" class="f-left" />
+            <figure>
+                <div class="detail">
+                    <div class="name">name</div>
+                    <div class="position">founder</div>
+                    <p>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </p>
+                </div>
+            </figure>
+        </div>
+    </div>
 </div>

@@ -75,7 +75,7 @@
                 <action method="addItem"><type>skin_js</type><name>js/lib/lightslider.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/slick.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/jquery.dotdotdot.min.js</name></action>
-                <action method="addItem"><type>skin_js</type><name>js/lib/skrollr.min.js</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/lib/jquery.collapse.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/scripts.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/grids.js</name></action>
                 <!--<action method="addItem"><type>skin_js</type><name>js/jquery.nicescroll.min.js</name></action>-->

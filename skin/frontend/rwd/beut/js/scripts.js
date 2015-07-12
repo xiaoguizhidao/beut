@@ -247,7 +247,6 @@ var FEelementControl = {
 		}else{
 			$j('.category-footer .item').removeAttr('style');
 		}
-
 	},
 	confProdImage: function(){
 		if($j('.amconf-images-container').length > 0){
@@ -339,10 +338,54 @@ var FEelementControl = {
 			$j(this).hide();
 			$j('.discount-form').show();
 		})
+	},
+	cmsCollapse: function(){
+		$j('.collapse').collapse({
+			accordion: true,
+			open: function() {
+				this.addClass("open");
+				this.css({ height: this.children().outerHeight() });
+			},
+			close: function() {
+				this.css({ height: "0px" });
+				this.removeClass("open");
+			}
+		});
+	},
+	aboutSlide: function(){
+		if($j('.services .row').length > 0 && $j(window).width() <768 ){
+			$j('.services .row').slick({
+				dots: false,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				swipe: true,
+				touchMove: true
+			});
+		}
+	},
+	toogleCmsMenu: function(){
+		$j('.skip-cms').on('click',function(){
+			var isSkipContentOpen = $j('#skip-cms-menu').hasClass('skip-active') ? true : false;
+			if (isSkipContentOpen) {
+				$j(this).removeClass('skip-active');
+				$j('#skip-cms-menu').removeClass('skip-active');
+				$j('body').removeClass('overflow');
+			} else {
+				$j(this).addClass('skip-active');
+				$j('#skip-cms-menu').addClass('skip-active');
+				$j('body').addClass('overflow');
+			}
+		});
+		$j('#skip-cms-menu .close').on('click',function(){
+			$j(this).parent('.skip-active').removeClass('skip-active');
+			$j('body').removeClass('overflow');
+			var link = $j(this).parent('.skip-content').siblings('.page-title');
+			link.find('.skip-cms').removeClass('skip-active');
+		})
 	}
 };
-
-
 
 jQuery(document).ready(function ($) {
 	FEelementControl.calcRowHeight();
@@ -357,6 +400,9 @@ jQuery(document).ready(function ($) {
 	FEelementControl.prodSlide();
 	FEelementControl.mediaSlide();
 	FEelementControl.voucherToogle();
+	FEelementControl.cmsCollapse();
+	FEelementControl.aboutSlide();
+	FEelementControl.toogleCmsMenu();
 	FEelementControl.equalHeight('.category-products .item');
 	if($('#leSlide').length > 0){
 		var _SlideshowTransitions = [{

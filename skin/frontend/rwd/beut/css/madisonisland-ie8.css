@@ -291,28 +291,29 @@ body.cms-home .slideshow-container {
 /* line 229, ../scss/content/_home.scss */
 .row5 {
   margin-top: 10px;
+  margin-bottom: 30px;
 }
-/* line 231, ../scss/content/_home.scss */
+/* line 232, ../scss/content/_home.scss */
 .row5 .row {
   height: 100%;
 }
-/* line 233, ../scss/content/_home.scss */
+/* line 234, ../scss/content/_home.scss */
 .row5 .row .block2 {
   padding-left: 0;
   padding-right: 5px;
 }
-/* line 237, ../scss/content/_home.scss */
+/* line 238, ../scss/content/_home.scss */
 .row5 .row .block3 {
   padding-right: 0;
   padding-left: 5px;
 }
-/* line 242, ../scss/content/_home.scss */
+/* line 243, ../scss/content/_home.scss */
 .row5 .item {
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 246, ../scss/content/_home.scss */
+/* line 247, ../scss/content/_home.scss */
 .row5 .item:before {
   content: '';
   position: absolute;
@@ -322,28 +323,28 @@ body.cms-home .slideshow-container {
   height: 100%;
 }
 
-/* line 257, ../scss/content/_home.scss */
+/* line 258, ../scss/content/_home.scss */
 #slide3 .caption1 {
   right: 130px;
   left: initial;
   color: #fff;
 }
-/* line 261, ../scss/content/_home.scss */
+/* line 262, ../scss/content/_home.scss */
 #slide3 .caption1 .subcaption1 {
   font-size: 23px;
   text-transform: uppercase;
 }
-/* line 265, ../scss/content/_home.scss */
+/* line 266, ../scss/content/_home.scss */
 #slide3 .caption1 .subcaption2 {
   font-size: 45px;
   text-transform: uppercase;
 }
-/* line 269, ../scss/content/_home.scss */
+/* line 270, ../scss/content/_home.scss */
 #slide3 .caption1 .subcaption3 {
   font-size: 22px;
   line-height: 1.5;
 }
-/* line 273, ../scss/content/_home.scss */
+/* line 274, ../scss/content/_home.scss */
 #slide3 .caption1 .link-text {
   margin-top: 60px;
   font-size: 22px;
@@ -356,7 +357,7 @@ body.cms-home .slideshow-container {
   display: inline-block;
 }
 
-/* line 290, ../scss/content/_home.scss */
+/* line 291, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSNext:before, .lSSlideOuter .lSAction .lSNext:after {
   content: "\f105";
   font-family: 'FontAwesome';
@@ -364,35 +365,35 @@ body.cms-home .slideshow-container {
   position: absolute;
   right: 0;
 }
-/* line 297, ../scss/content/_home.scss */
+/* line 298, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSNext:after {
   color: #fff;
   right: 1px;
 }
-/* line 303, ../scss/content/_home.scss */
+/* line 304, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSPrev:before, .lSSlideOuter .lSAction .lSPrev:after {
   content: "\f104";
   font-family: 'FontAwesome';
   font-size: 20px;
   position: absolute;
 }
-/* line 309, ../scss/content/_home.scss */
+/* line 310, ../scss/content/_home.scss */
 .lSSlideOuter .lSAction .lSPrev:after {
   color: #fff;
-  left: 2px;
+  left: 1px;
 }
 
 /* -------------------------------------------- *
  * Promotion Banner Section
  */
-/* line 322, ../scss/content/_home.scss */
+/* line 323, ../scss/content/_home.scss */
 .promos {
   margin: 0 0 10px 0;
   padding: 0;
   width: 100%;
 }
 
-/* line 328, ../scss/content/_home.scss */
+/* line 329, ../scss/content/_home.scss */
 .promos:after {
   content: '';
   display: table;
@@ -400,7 +401,7 @@ body.cms-home .slideshow-container {
 }
 
 /* Specifying the body only in order to override the .std ul li styling */
-/* line 334, ../scss/content/_home.scss */
+/* line 335, ../scss/content/_home.scss */
 body .promos > li {
   margin: 0 0 10px 0;
   list-style: none;
@@ -414,25 +415,25 @@ body .promos > li {
   user-select: none;
 }
 
-/* line 343, ../scss/content/_home.scss */
+/* line 344, ../scss/content/_home.scss */
 .promos > li:last-child {
   margin-bottom: 0;
 }
 
-/* line 347, ../scss/content/_home.scss */
+/* line 348, ../scss/content/_home.scss */
 .promos img {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 352, ../scss/content/_home.scss */
+/* line 353, ../scss/content/_home.scss */
 .promos a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: block;
 }
 
-/* line 357, ../scss/content/_home.scss */
+/* line 358, ../scss/content/_home.scss */
 .promos span {
   color: #FFFFFF;
   text-transform: uppercase;
@@ -446,32 +447,32 @@ body .promos > li {
   text-shadow: 1px 1px 3px #555555;
 }
 
-/* line 370, ../scss/content/_home.scss */
+/* line 371, ../scss/content/_home.scss */
 .promos strong {
   font-weight: 600;
   font-size: 26px;
   display: block;
 }
 
-/* line 378, ../scss/content/_home.scss */
+/* line 379, ../scss/content/_home.scss */
 .promos span {
   font-size: 16px;
 }
 
-/* line 382, ../scss/content/_home.scss */
+/* line 383, ../scss/content/_home.scss */
 .promos strong {
   font-size: 17px;
 }
 
 /* Config: Three columns + flexible gutter */
-/* line 389, ../scss/content/_home.scss */
+/* line 390, ../scss/content/_home.scss */
 body .promos > li {
   float: left;
   width: 31.74603%;
   margin-right: 2.38095%;
 }
 
-/* line 395, ../scss/content/_home.scss */
+/* line 396, ../scss/content/_home.scss */
 .promos > li:nth-child(3n) {
   margin-right: 0;
 }
@@ -481,7 +482,7 @@ body .promos > li {
  */
 /* Hiding the reviews content via CSS because we can't modify the template, */
 /* since it may be used in other places where those elements are needed */
-/* line 407, ../scss/content/_home.scss */
+/* line 408, ../scss/content/_home.scss */
 .cms-index-index .products-grid .ratings,
 .cms-index-index .products-grid .actions,
 .cms-index-noroute .products-grid .ratings,
@@ -489,7 +490,7 @@ body .promos > li {
   display: none;
 }
 
-/* line 414, ../scss/content/_home.scss */
+/* line 415, ../scss/content/_home.scss */
 .cms-index-index h2.subtitle {
   padding: 6px 0;
   text-align: center;
@@ -499,27 +500,27 @@ body .promos > li {
   border-top: 1px solid #CCCCCC;
 }
 
-/* line 423, ../scss/content/_home.scss */
+/* line 424, ../scss/content/_home.scss */
 .cms-index-noroute h2.subtitle {
   display: none;
 }
 
-/* line 426, ../scss/content/_home.scss */
+/* line 427, ../scss/content/_home.scss */
 .payment1 {
   display: none;
 }
 
-/* line 429, ../scss/content/_home.scss */
+/* line 430, ../scss/content/_home.scss */
 .payment2 {
   display: block;
 }
 
-/* line 433, ../scss/content/_home.scss */
+/* line 434, ../scss/content/_home.scss */
 .product-shop .product-brand {
   font-size: 32px;
 }
 
-/* line 438, ../scss/content/_home.scss */
+/* line 439, ../scss/content/_home.scss */
 .prod-top {
   padding-left: 100px;
   padding-right: 100px;
@@ -527,34 +528,36 @@ body .promos > li {
   color: #000;
 }
 
-/* line 444, ../scss/content/_home.scss */
+/* line 445, ../scss/content/_home.scss */
 .widget {
   clear: both;
 }
-/* line 446, ../scss/content/_home.scss */
+/* line 447, ../scss/content/_home.scss */
 .widget:after {
   clear: both;
   content: '';
   display: block;
 }
-/* line 451, ../scss/content/_home.scss */
+/* line 452, ../scss/content/_home.scss */
 .widget .pager {
   float: none;
   width: 100%;
 }
 
-/* line 456, ../scss/content/_home.scss */
+/* line 457, ../scss/content/_home.scss */
 .square-container {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 654, ../scss/content/_home.scss */
+/* line 655, ../scss/content/_home.scss */
 .promos span {
   font-size: 18px;
 }
 
-/* line 658, ../scss/content/_home.scss */
+/* line 659, ../scss/content/_home.scss */
 .promos strong {
   font-size: 24px;
 }
+
+/*# sourceMappingURL=madisonisland-ie8.css.map */
