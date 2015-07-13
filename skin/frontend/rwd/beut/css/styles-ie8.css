@@ -569,7 +569,7 @@ input,
 select,
 textarea {
   font-family: "Century Gothic", Verdana, Arial, sans-serif;
-  color: #636363;
+  color: #000;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -979,7 +979,7 @@ label.select-label:before, label.select-label:after {
 body:not(.customer-account) .block:first-child .block-title {
   border-top: none;
   padding-top: 0;
-  display: inline-block;
+  display: block;
   float: left;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 22px;
@@ -2921,11 +2921,12 @@ input[type=password]:focus,
 input[type=tel]:focus,
 input[type=text]:focus {
   border: 1px solid #eee;
+  outline: none;
 }
 
 /* Only show on iPhones (not iPads or any other device) */
 @media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 201, ../scss/core/_form.scss */
+  /* line 202, ../scss/core/_form.scss */
   input[type=email],
   input[type=search],
   input[type=number],
@@ -2937,7 +2938,7 @@ input[type=text]:focus {
     /* Prevent from zooming on focus */
   }
 }
-/* line 212, ../scss/core/_form.scss */
+/* line 213, ../scss/core/_form.scss */
 .ie8 .input-text {
   max-width: none;
 }
@@ -2945,7 +2946,7 @@ input[type=text]:focus {
 /* -------------------------------------------- *
  * Inputs - Quantity
  */
-/* line 220, ../scss/core/_form.scss */
+/* line 221, ../scss/core/_form.scss */
 input[type=number].qty,
 input[type=text].qty {
   width: 3em;
@@ -2956,12 +2957,12 @@ input[type=text].qty {
 /* -------------------------------------------- *
  * Placeholder
  */
-/* line 231, ../scss/core/_form.scss */
+/* line 232, ../scss/core/_form.scss */
 ::-webkit-input-placeholder {
   color: #A0A0A0;
 }
 
-/* line 235, ../scss/core/_form.scss */
+/* line 236, ../scss/core/_form.scss */
 input:-moz-placeholder {
   color: #A0A0A0;
 }
@@ -2969,7 +2970,7 @@ input:-moz-placeholder {
 /* -------------------------------------------- *
  * Checkbox And Radio
  */
-/* line 243, ../scss/core/_form.scss */
+/* line 244, ../scss/core/_form.scss */
 .checkbox,
 .radio {
   position: relative;
@@ -2977,7 +2978,7 @@ input:-moz-placeholder {
   display: inline-block;
 }
 
-/* line 250, ../scss/core/_form.scss */
+/* line 251, ../scss/core/_form.scss */
 .checkbox + label,
 .radio + label {
   width: auto;
@@ -2991,7 +2992,7 @@ input:-moz-placeholder {
 /* -------------------------------------------- *
  * Validation
  */
-/* line 264, ../scss/core/_form.scss */
+/* line 265, ../scss/core/_form.scss */
 p.required,
 .validation-advice {
   margin: 5px 0 0;
@@ -3002,25 +3003,25 @@ p.required,
 /* ============================================ *
  * Form List
  * ============================================ */
-/* line 277, ../scss/core/_form.scss */
+/* line 278, ../scss/core/_form.scss */
 .form-list > li {
   margin-bottom: 10px;
 }
-/* line 280, ../scss/core/_form.scss */
+/* line 281, ../scss/core/_form.scss */
 .form-list select {
   margin-top: 4px;
   width: 365px;
   max-width: 100%;
 }
-/* line 286, ../scss/core/_form.scss */
+/* line 287, ../scss/core/_form.scss */
 .form-list .input-range .input-text {
   width: 74px;
 }
-/* line 289, ../scss/core/_form.scss */
+/* line 290, ../scss/core/_form.scss */
 .form-list .input-text {
   width: 100%;
 }
-/* line 293, ../scss/core/_form.scss */
+/* line 294, ../scss/core/_form.scss */
 .form-list .field,
 .form-list .wide,
 .form-list .control {
@@ -3028,7 +3029,7 @@ p.required,
 }
 
 /* Turn the label of controls (radio/checkbox) into a button style that wraps the input */
-/* line 301, ../scss/core/_form.scss */
+/* line 302, ../scss/core/_form.scss */
 .form-list .control,
 .sp-methods dt,
 #checkout-shipping-method-load .sp-methods dd,
@@ -3036,7 +3037,7 @@ p.required,
 .product-options ul.options-list {
   /* When a label is next to an input that is set to not display, we should style the label in a non-clickable state */
 }
-/* line 307, ../scss/core/_form.scss */
+/* line 308, ../scss/core/_form.scss */
 .form-list .control div.input-box,
 .sp-methods dt div.input-box,
 #checkout-shipping-method-load .sp-methods dd div.input-box,
@@ -3045,7 +3046,7 @@ p.required,
   display: inline;
   float: left;
 }
-/* line 311, ../scss/core/_form.scss */
+/* line 312, ../scss/core/_form.scss */
 .form-list .control div.input-box:after,
 .sp-methods dt div.input-box:after,
 #checkout-shipping-method-load .sp-methods dd div.input-box:after,
@@ -3053,7 +3054,7 @@ p.required,
 .product-options ul.options-list div.input-box:after {
   display: none;
 }
-/* line 316, ../scss/core/_form.scss */
+/* line 317, ../scss/core/_form.scss */
 .form-list .control input.radio,
 .form-list .control input.checkbox,
 .sp-methods dt input.radio,
@@ -3069,7 +3070,7 @@ p.required,
   margin-top: 10px;
   margin-left: 15px;
 }
-/* line 324, ../scss/core/_form.scss */
+/* line 325, ../scss/core/_form.scss */
 .form-list .control label,
 .sp-methods dt label,
 #checkout-shipping-method-load .sp-methods dd label,
@@ -3085,7 +3086,7 @@ p.required,
   float: none;
   padding: 6px 10px 6px 40px;
 }
-/* line 333, ../scss/core/_form.scss */
+/* line 334, ../scss/core/_form.scss */
 .form-list .control label:hover,
 .sp-methods dt label:hover,
 #checkout-shipping-method-load .sp-methods dd label:hover,
@@ -3093,7 +3094,7 @@ p.required,
 .product-options ul.options-list label:hover {
   background-color: #ededed;
 }
-/* line 339, ../scss/core/_form.scss */
+/* line 340, ../scss/core/_form.scss */
 .form-list .control .no-display + label,
 .sp-methods dt .no-display + label,
 #checkout-shipping-method-load .sp-methods dd .no-display + label,
@@ -3102,7 +3103,7 @@ p.required,
   padding-left: 10px;
   background-color: transparent;
 }
-/* line 343, ../scss/core/_form.scss */
+/* line 344, ../scss/core/_form.scss */
 .form-list .control .no-display + label:hover,
 .sp-methods dt .no-display + label:hover,
 #checkout-shipping-method-load .sp-methods dd .no-display + label:hover,
@@ -3111,7 +3112,7 @@ p.required,
   background-color: transparent;
 }
 
-/* line 350, ../scss/core/_form.scss */
+/* line 351, ../scss/core/_form.scss */
 .product-options ul.options-list label,
 .col2-set .form-list .control label {
   min-width: inherit;
@@ -3119,27 +3120,27 @@ p.required,
   max-width: 100%;
 }
 
-/* line 358, ../scss/core/_form.scss */
+/* line 359, ../scss/core/_form.scss */
 .form-list .control.remember-me-box label {
   width: auto;
   max-width: none;
   min-width: inherit;
 }
 
-/* line 365, ../scss/core/_form.scss */
+/* line 366, ../scss/core/_form.scss */
 .form-list .control {
   margin-top: 10px;
 }
-/* line 368, ../scss/core/_form.scss */
+/* line 369, ../scss/core/_form.scss */
 .form-list .control label {
   float: none;
 }
-/* line 371, ../scss/core/_form.scss */
+/* line 372, ../scss/core/_form.scss */
 .form-list .control .radio,
 .form-list .control .checkbox {
   margin-right: 6px;
 }
-/* line 375, ../scss/core/_form.scss */
+/* line 376, ../scss/core/_form.scss */
 .form-list .control .input-box {
   clear: none;
   display: inline-block;
@@ -3147,7 +3148,7 @@ p.required,
   padding: 0;
 }
 
-/* line 384, ../scss/core/_form.scss */
+/* line 385, ../scss/core/_form.scss */
 form .form-instructions {
   font-style: italic;
   font-family: "Century Gothic", "Times New Roman", serif;

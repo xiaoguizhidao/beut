@@ -290,13 +290,26 @@
     display: table;
     clear: both;
 }
-.about-us-container .top-content h2{
+.cms-brand .page-title h1,
+.about-us-container .top-content h2,
+.cms-about-us .testimonial h2,
+.founder h2{
     font-size: 34px;
+}
+ul.brands li a,
+.about-us-container .top-content p,
+.founder .name,
+.cms-about-us .std .slider-text p:last-child,
+.can-we-help .title,
+.cms-brand .std p strong{
+    font-size: 22px;
+}
+
+.about-us-container .top-content h2{
     text-transform: none;
     margin-bottom: 0;
 }
 .about-us-container .top-content p{
-    font-size: 22px;
     margin-bottom: 20px;
 }
 .about-us-container .our-history{
@@ -305,12 +318,8 @@
 .about-us-container p{
     color: #000;
 }
-.cms-about-us .col1-layout{
-    margin: 0!important;
-    padding: 0!important;
-}
-.cms-page-view.cms-about-us .main{
-    margin: 0px;
+.cms-about-us .page-title{
+    display: none;
 }
 .slider-top {
     background-image: url("../images/about-us-banner.jpg");
@@ -381,9 +390,6 @@
     bottom: -98px;
     top: inherit;
 }
-.cms-about-us .testimonial h2{
-    font-size: 34px;
-}
 .cms-about-us .testimonial p.content {
     position: relative;
     padding-top: 52px;
@@ -403,7 +409,6 @@
     margin-top: 12px;
 }
 .founder h2{
-    font-size: 34px;
     text-transform: none;
 }
 
@@ -424,7 +429,6 @@
     font-size: 16px;
 }
 .founder .name {
-    font-size: 22px;
     text-transform: capitalize;
 }
 .founder .position {
@@ -438,7 +442,6 @@
 }
 .cms-about-us .std .slider-text p:last-child{
     margin: 10px 0 0;
-    font-size: 22px;
 }
 .cms-about-us .std .slider-text p:first-child{
     text-transform: uppercase;
@@ -636,36 +639,30 @@
     float: left;
     margin-bottom: 25px;
     margin-right: 2%;
-    margin-top: 10px;
     width: 18%;
 }
 
 .brand-col-2 {
     float: left;
     margin-right: 2%;
-    margin-top: 10px;
     width: 18%;
 }
 .brand-col-3 {
     float: left;
     margin-right: 2%;
-    margin-top: 10px;
     width: 18%;
 }
 .brand-col-4 {
     float: left;
     margin-right: 2%;
-    margin-top: 10px;
     width: 18%;
 }
 .brand-col-5 {
     float: left;
     margin-right: 0;
-    margin-top: 10px;
     width: 20%;
 }
 ul.brands {
-    margin-bottom: 35px;
     padding: 7px 11px 7px 0;
 }
 ul.brands li {
@@ -676,7 +673,6 @@ ul.brands li:first-child{
     margin-left: 0px;
 }
 ul.brands li a {
-    font-size: 16px;
     color: #000000;
     font-style: normal;
 }
@@ -688,13 +684,18 @@ ul.brands li a {
     font-weight: normal;
     text-align: center;
     text-transform: none;
+    float: none;
+    padding-top: 35px;
+    padding-bottom: 14px;
 }
 .cms-brand .std p {
     line-height: 12px;
 }
 .cms-brand .std p strong{
-    line-height: 1.2em;
-    font-size: 1.2em;
+    font-weight: normal;
+    padding-bottom: 7px;
+    padding-top: 27px;
+    display: block;
 }
 .cart {
     padding-top: 0;
@@ -776,6 +777,7 @@ ul.brands li a {
     color: black;
     font-family: 'Neuton-Regular';
     font-size: 32px;
+    font-style: italic;
 }
 .product-short-dest {
     margin-bottom:20px;
@@ -1298,7 +1300,6 @@ ul.delivery-tabs li a{
 }
 /*cms*/
 .can-we-help .title{
-    font-size: 22px!important;
     text-transform: capitalize;
     font-style: normal!important;
     margin-bottom: 10px;
@@ -1408,6 +1409,13 @@ ul.delivery-tabs li a{
 .footer-before-container .hot-prod{
      margin-top: 0;
  }
+#magentoPopupContainer{
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
@@ -1456,6 +1464,9 @@ ul.delivery-tabs li a{
     .cms-about-us .services,
     .cms-about-us .testimonial{
         margin-top: 0;
+    }
+    .cms-about-us .page-title{
+        display: block;
     }
     .faqs-title-mobile {
         display: block;

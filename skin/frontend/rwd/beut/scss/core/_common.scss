@@ -53,7 +53,7 @@ input,
 select,
 textarea {
     font-family: $f-stack-sans;
-    color: $c-text;
+    color: $c-black;
     font-size: $f-size;
     line-height: $b-line-height;
 }
@@ -301,7 +301,7 @@ label.select-label {
 body:not(.customer-account) .block:first-child .block-title {
     border-top: none;
     padding-top: 0;
-    display: inline-block;
+    display: block;
     float: left;
     font-family: $f-neuton;
     font-size: $f-20 + 2;
