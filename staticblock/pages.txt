@@ -1,0 +1,262 @@
+<!-- About us -->
+<div class="about-us-container">
+    <div class="slider-top">
+         <div class="slider-text">
+      <p>We like making our<br>
+          <span>Customer Happy</span></p><p>
+Curabitur diam felis, tristique et nisi, vulputate ipsum. <br>Maecenas nec diam eleifend </p>
+        </div>
+    </div>
+    <div class="content">
+      
+{{block type="cms/block" block_id="cms-menu"}} 
+       <div class="content-right">
+             <div class="top-content">
+<h1>Who we are?</h1>
+           <p>Granada is modern and clean theme and built upon the 1170px Twitter <br>Bootstrap framework.</p>  
+           </div>
+             <div class="maincontent">
+                      <div class="left">
+<p>
+   - <span class="f-toupper">what we do</span>
+<ul>
+  <li>what we do</li>
+  <li>what we do</li>
+  <li>what we do</li>
+  <li>what we do</li>
+</ul>
+</p>
+<p></p>
+</div>
+                     <div class="right">
+
+    <p><span class="f-toupper">Our History</span></p>
+<p>
+Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </p
+<p>
+Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi,  </p>
+</div>
+            </div>
+     
+      </div>
+     
+    </div>
+    <div class="services">
+            <div class="free-delivery"><img src="{{skin url='images/delivery.jpg'}}"><p class="title"><span>Free Delivery</span></p><p>
+Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+vel, aliquam iaculis turpis.</p></div>
+            <div class="customer-service"><img src="{{skin url='images/call_us.jpg'}}"><p class="title"><span>24/H Customer Service</span></p><p>
+Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+vel, aliquam iaculis turpis.</p></div>
+            <div class="payment-secure"><img src="{{skin url='images/payment.jpg'}}"><p class="title"><span>Payment Secured</span></p><p>
+Cras pellentesque, nisi ac tempus pellentesque,<br>semcommodo urna,amet egestas ipsum orc<br>sit amNullam dolor nisi, sempea mauris<br>
+vel, aliquam iaculis turpis.</p></div>
+      </div>
+ <div class="testimonial">
+       <p class="title">Testimonials</p>
+<p class="open-quote">&#8220;</p>
+<p>
+Cras pellentesque, nisi ac tempus pellentesque,semcommodo urna,amet egestas ipsum orc sit amNullam dolor nisi, sempea mauris
+vel, aliquam iaculis turpis.</p>
+<p class="close-quote">&#8221;</p>
+<p>khoai dinh</p>
+   </div>
+   <div class="founder">
+       <div class="top">
+             <h1>Meet the Founders</h1>
+             <p>Granada is modern and clean theme and built upon the 1170px Twitter<br>Bootstrap framework.</p>
+       </div>
+    <div class="founder-left">
+        <div class="div-img"><img src="{{skin url='images/founder-about-us.png'}}"></div>
+      <div class="detail">
+<div class="name">name</div>
+<div class="position">founder</div>
+<div>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </div>
+ </div>
+   </div>
+<div class="founder-right">
+  <div class="div-img"><img src="{{skin url='images/founder-about-us.png'}}"></div>
+      <div class="detail">
+<div class="name">name</div>
+<div class="position">founder</div>
+<div>Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, vulputate ipsum. Maecenas nec diam eleifend. Curabitur diam felis, tristique et nisi, </div>
+</div>
+  </div>
+</div>
+
+<!-- About us -->
+
+
+<!-- brand -->
+	<div class="list-brands">
+<ul class="brands">
+      					<li><a href="#a">A</a></li>
+      					<li><a href="#b">B</a></li>	
+      					<li><a href="#c">C</a></li>
+      					<li><a href="#d">D</a></li>
+                                        <li><a href="#e">E</a></li>
+      					<li><a href="#f">F</a></li>	
+      					<li><a href="#g">G</a></li>
+      					<li><a href="#h">H</a></li>
+      					<li><a href="#i">I</a></li>
+      					<li><a href="#j">J</a></li>	
+      					<li><a href="#k">K</a></li>	
+      					<li><a href="#l">L</a></li>	
+      					<li><a href="#m">M</a></li>	
+      					<li><a href="#n">N</a></li>	
+      					<li><a href="#o">O</a></li>	
+      					<li><a href="#p">P</a></li>	
+      					<li><a href="#q">Q</a></li>	
+      					<li><a href="#r">R</a></li>	
+      					<li><a href="#s">S</a></li>	
+      					<li><a href="#t">T</a></li>	
+      					<li><a href="#u">U</a></li>	
+      					<li><a href="#v">V</a></li>	
+      					<li><a href="#w">W</a></li>	
+      					<li><a href="#x">X</a></li>	
+      					<li><a href="#y">Y</a></li>	
+      					<li><a href="#z">Z</a></li>		
+</ul>
+</div>
+<div class="brand-col-1">
+   {{block type="cms/block" block_id="brand_col_1"}}
+</div>
+
+<div class="brand-col-2">
+    {{block type="cms/block" block_id="brand_col_2"}}
+</div>
+
+<div class="brand-col-3">
+    {{block type="cms/block" block_id="brand_col_3"}}
+</div>
+
+<div class="brand-col-4">
+    {{block type="cms/block" block_id="brand_col_4"}}
+</div>
+
+<div class="brand-col-5">
+    {{block type="cms/block" block_id="brand_col_5"}}
+</div>
+<!-- End brand -->
+
+<!-- Delivery -->
+<div class="main-image">
+      <p><span class="title">Delivery</span></p>
+</div>
+{{block type="cms/block" block_id="delivery-message"}} 
+<div class="delivery-contents">
+    <h1 class="title">Shipping Infomation</h1>
+    <div class="left-block">
+       {{block type="cms/block" block_id="delivery-tabs"}}
+   </div>
+   <div class="right-block">          
+                {{block type="cms/block" block_id="can-we-help"}}        
+                {{block type="cms/block" block_id="cms-menu"}}
+       
+  </div>
+</div>
+<!-- End Delivery -->
+
+
+<!-- Faqs -->
+	<div class="faqs-top">
+   <p>Got questions? We have Answers!</p>
+</div>
+<div class="faqs-content">
+{{block type="cms/block" block_id="cms-menu"}} 
+
+<div class="faq-q-a">
+<div class="faqs-title-mobile">FREQUENTLY ASKED QUESTIONS</div>
+<div class="faq faq-left">
+<strong>Can I also place my order by telephone?</strong>
+<p>We regret that telephone orders are not possible. Should you have any questions regarding the ordering process, we will be pleased to provide telephone assistance on the following number: 0207 093 1459</p>
+</div>
+
+<div class="faq faq-right"><strong>How long will it take until I receive the goods?</strong>
+<p>All orders placed by 5pm will be delivered on a next working day service as standard. Scottish Highlands 48hrs, Scottish Offshore 2-5 days, Northern Ireland 3 days, Isle of Man 48hrs, Jersey &amp; Guernsey (Inc. Alderney, Herm &amp; Sark) 48hrs</p>
+</div>
+<div class="faq faq-left"><strong>What is the procedure for returns?</strong>
+<p>If you want to return an ordered item, please contact us. Please send an e-mail to contact@designwharf.com or contact us by telephone: 0207 093 1459</p>
+</div>
+<div class="faq faq-right"><strong>How can I found out more about new products and special offers?</strong>
+<p>Our current highlights will always be listed on the homepage of our website. All of our special offers can be found at a glance under the category “Specials”. To ensure you are always up to date about new products and special offers from Designwharf, simply sign up for our newsletter. We will then send you a regular overview of our current highlights and offers. Sign up now!</p>
+</div>
+<div class="faq faq-left"><strong>What should I do if I am having a problem with the website?</strong>
+<p>Our customer services staff will be glad to help you with any queries or problems you might have regarding our site. Please do not hesitate to contact us on: 0207 093 1459 or contact@Designwharf.co.uk</p>
+</div>
+<div class="faq faq-right"><strong>I would like to add to my order, how do I do this?</strong>
+<p>Please give our friendly customer services team a call on 0207 093 1459 and they will be happy to help. When you place an order on our website you will get an order number and an email confirmation, please have this ready to quote when phoning.</p>
+</div>
+<div class="faq faq-left"><strong>Have you received my returned items? </strong>
+<p>As soon as your return has been processed by our warehouse, we'll email you to let you know. In the unlikely event that you don't receive an email within 5 working days of posting your parcel to us, please get in touch with our Customer Services team and we'll get back to you as soon as possible. Please give us the recorded delivery reference number when you contact us.</p>
+</div>
+<div class="faq faq-right"><strong>How do I order? </strong>
+<p>As you browse the site simply add items you wish to purchase by clicking "Add to Bag" button, found next to every product on the site. Adding to your bag does not mean you are obliged to buy. When you are finished browsing, click on the "Checkout" button in the top right corner of the website. You can then review your order and if you choose, proceed to pay for the items using our secure checkout process.</p>
+</div>
+<div class="faq faq-left"><strong>How much will delivery cost? </strong>
+<p>Delivery is £5 per order within the United Kingdom and FREE of charge for all orders over £50. Delivery to the Scottish Highlands and some Islands can be more. For more information regarding delivery please click here.</p>
+</div>
+<div class="faq faq-right"><strong>How long does delivery take? </strong>
+<p>We work with the APC, using their express services in order to offer next day delivery, although during busy periods it can take longer. APC are one of the UK's leading courier companies offering an unbeatable service both in delivering your package and customer service. We are therefore able to offer delivery on the next working day providing your order is placed prior to 5pm</p>
+</div>
+<div class="faq faq-left"><strong>Will I be kept updated on my order's progress? </strong>
+<p>Yes!!! After you have placed your order, we will send you an order confirmation email stating 'Thank you for your order....'. This will be sent within a maximum of 24 hours after you place your order, but will most likely be sent on the same day or even immediately afterwards. We will then send you an email when your order has been despatched (usually same or next working day), stating 'Your order has been dispatched'.</p>
+</div>
+<div class="faq faq-right"><strong>What do your prices include? </strong>
+<p>The primary prices on this site are UK pounds sterling (£GBP) and are inclusive of any taxes (such as VAT).</p>
+</div>
+<div class="faq faq-left"><strong>How do I pay?</strong>
+<p>We accept all major credit and debit cards (as well as PayPal) through our secure transaction process found at the end of our checkout pages.</p>
+</div>
+<div class="faq faq-right"><strong>Can I send my item to a different delivery address or as a gift?</strong>
+<p>Yes, sending a gift or to another address is easy and free-of-charge! During checkout, you can enter the address for the invoice and a different delivery address for the gift to be sent to.</p>
+</div>
+
+<div class="faq faq-left"><strong>How do I know it is safe to order from this site?</strong>
+<p>Designwharf are focused on providing a secure and trust worthy service to ensure our customers feel happy making a purchase from our online store.</p>
+
+<p>All personal information that you enter into this site is fully encrypted during transmission so that your details are unreadable if intercepted. We use one of the most secure online ordering systems on the market, and are constantly researching and improving our software to make sure we offer the highest possible security at all times! Furthermore, Designwharf does not retain your credit or debit card details on our systems.</p>
+
+<p>Standard Secure Sockets Layer (SSL) technology is used to allow for the encryption of potentially sensitive information such as your name, address and other critically sensitive information like your credit card details. Information passed between your computer and our website cannot be read in the event someone else intercepts it. This technology includes the following features: </p>
+
+- Authentication: This assures your browser that your data is being sent to the correct computer server, and that the server is secure. <br>
+
+-Encryption: This encodes the data, so that it cannot be read by anyone other than the secure server. <br>
+
+- Data Integrity: This checks the data being transferred to ensure it has not been altered.<br>
+</div>
+</div>
+</div>
+<!-- End faqs -->
+
+
+<!-- no router-->
+	 <div class="pnf-left">
+  <div class="page-not-found">
+<div class="page-title">
+<h1>Error 404</h1>
+<h3> You have found an empty room...</h3>
+</div>
+<p> We are sorry! The page you are looking for may have been moved or deleted. </p><p>
+</p><p> To fill your room with beautiful homeware, furniture, lighting and accessories please navigate back to our <a href="http://beutstandard.localhost/">homepage.</a></p>
+<p>Or use the search below:</p>
+<form id="search_pnf_form" action="http://beutstandard.localhost/catalogsearch/result/" method="get">   
+       <div>
+       <input type="text" name="q" placeholder="Enter your search query here" class="input-text required-entry" id="pnf-search" size="50">
+        <button type="submit" title="Search" class="pnf-button" id="no-router-btn-search">
+      </button></div>
+ <script type="text/javascript">
+    //<![CDATA[
+        var searchFormPnf = new VarienForm('search_pnf_form');        
+     //]]>
+    </script>   
+
+</form>    
+    
+</div>
+  </div>
+  <div class="pnf-right"> <img src="{{skin_url}}/images/pnf-404.png">  </div>
+
+   
+
+<!-- End no router -->

@@ -3,6 +3,19 @@
   content: "";
   overflow: hidden;
 }
+.currency.custom-service img {
+    margin-top: -3px;
+}
+.currency img {
+    margin-top: -1px;
+}
+.currency.custom-service {
+    margin-left: -5px;
+}
+.currency {
+    font-size: 15px;
+    line-height: 25px;
+}
 .faqs-title-mobile {
     display: none;
 }

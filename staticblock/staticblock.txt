@@ -1,0 +1,14 @@
+<!-- footer_links -->
+<h4 class="title">Customer services</h4>
+<ul>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Shipping information</a></li>
+    <li><a href="#">Returns policy</a></li>
+    <li><a href="#">Terms & conditions</a></li>
+    <li><a href="#">FAQ's</a></li>
+    <li><a href="#">Press</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+</ul>
+
+<!-- end footer_links -->
