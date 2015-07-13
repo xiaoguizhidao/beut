@@ -193,6 +193,7 @@ input[type=text] {
     max-width: 100%;
     &:focus{
         border: 1px solid $gray-light;
+        outline: none;
     }
 }
 

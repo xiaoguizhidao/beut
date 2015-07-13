@@ -1,13 +1,13 @@
 <?php if(Mage::getStoreConfig('bs_carpet/general/active')==1 && $this->getProduct()->getIsCarpetProduct()==1): ?>	
 <div class="calculator-wrapper">
 <div class="block block-calculator top">
-    <div class="block-title calc" onclick="$('calculator-content').toggle();">
+    <div class="block-title calc">
         <strong><span><?php echo $this->__('Calculator')?></span></strong>
     </div>
     <div id="calculator-content" class="block-content" style="display: none;">
         <p><?php echo $this->__('Enter your room measurements to calculate the required quantity of this product:')?></p>
         
-	       <div class="inneri">
+	       <div class="inneri first">
 	       		<div class="inputi">
 		        	<p class="inputi-f"><?php echo $this->__('Width (m)')?></p>
 		        	<p class="inputi-f-s">&nbsp;</p>
@@ -25,18 +25,18 @@
 		        <?php  ?>
 	       </div> 
 	       
-	        <div class="inneri" style="margin-top: -5px;">
+	        <div class="inneri">
 	        	<p><b><?php echo $this->__('Floor area:')?></b> <span id="room_area">0.00</span> m<sup><font size="2">2</font></sup></p>
 				<p><b><?php echo $this->__('Wall length:')?></b> <span id="room_circum">0.00</span> m</p>
 				
 	        </div> 
 	        
-	        <div class="inneri" style="text-align: left;">      	
+	        <div class="inneri">
 				
 					
 					<div id="large_result" style="display: block;">
 						<p><b><?php echo $this->__('Current product:')?></b> <font color="#FF0066"><span id="carpet_width">0</span>m</font> x <font color="#FF0066"><span id="carpet_length">0</span>m</font></p>
-						<p style="margin-top: -5px;"><b><?php echo $this->__('Actual product area:')?></b> <span id="actual_area">0.00</span> m<sup><font size="2">2</font></sup></p>
+						<p><b><?php echo $this->__('Actual product area:')?></b> <span id="actual_area">0.00</span> m<sup><font size="2">2</font></sup></p>
 						<p><b><?php echo $this->__('Total price:')?></b> <span id="total_price"></span></p>
 					</div>
 					
@@ -52,7 +52,7 @@
 </div>
 
 <div class="block block-calculator">
-    <div class="block-title conv" onclick="$('conversion-content').toggle();">
+    <div class="block-title conv">
         <strong><span><?php echo $this->__('Conversion')?></span></strong>
     </div>
     <div id="conversion-content" class="block-content" style="display: none;">
@@ -86,11 +86,13 @@
 
 <script type="text/javascript">
 $j(document).ready(function() {
-    $j('.block-calculator .block-title.calc').click(function(){
+    $j('.calc').click(function(){
          $j(this).toggleClass('open');
+		$j('#calculator-content').toggle();
     });
-    $j('.block-calculator .block-title.conv').click(function(){
+    $j('.conv').click(function(){
          $j(this).toggleClass('open');
+		$j('#conversion-content').toggle();
     });
 });
 </script>

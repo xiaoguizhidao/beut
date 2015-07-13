@@ -363,6 +363,8 @@ var FEelementControl = {
 				swipe: true,
 				touchMove: true
 			});
+		}else{
+			$j('.services .row').slick('unslick');
 		}
 	},
 	toogleCmsMenu: function(){
@@ -816,7 +818,14 @@ jQuery(window).resize(function ($) {
 			FEelementControl.categoryFooter();
 			FEelementControl.stickyTop(skinUrl);
 			FEelementControl.miniCartPos();
+			FEelementControl.aboutSlide();
 			FEelementControl.equalHeight('.category-products .item');
+			if($j(window).width > 767){
+				$j('.services .row').unslick();
+				if($j('.services .row').hasClass('slick-initialized')) {
+					$j('.services .row').unslick();
+				}
+			}
 		}
 	}, 200);
 });

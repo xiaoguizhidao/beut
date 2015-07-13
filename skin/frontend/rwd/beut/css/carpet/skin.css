@@ -1,23 +1,27 @@
-.carpet-product .block-calculator {border: 1px solid #C4C1BC; height: auto; margin-bottom: 0; cursor: pointer;}
+.carpet-product .block-calculator {border: 1px solid #ccc; height: auto; margin-bottom: 0; cursor: pointer;}
 .carpet-product .block-calculator.top{border-bottom: 0;}
-.carpet-product .block-calculator .block-content {padding: 10px;}
-.carpet-product .calculator-wrapper {clear: both; padding-bottom: 40px;}
+.carpet-product .block-calculator.top{border-bottom: 0;}
+.carpet-product .block-calculator.top:after,
+.carpet-product .block-calculator .block-content:after,
+.carpet-product .inneri:after{content: '';display: block;clear: both;}
+.carpet-product .block-calculator .block-content {padding: 10px;padding-bottom: 20px;}
+.carpet-product .calculator-wrapper {clear: both; padding-bottom: 40px;margin-top: 5px;}
 .carpet-product .inputi {clear: both;}
 .carpet-product .inputi .inputi-f {float: left; width: 33%; text-align: center;}
 .carpet-product .inputi .inputi-f-s {float: left; width: 33%; text-align: center;}
 .carpet-product .buttoni {clear: both; text-align: center; padding-top: 10px;}
 .carpet-product .texti {clear: both; padding-top: 10px;}
-.carpet-product .inneri {float: left; width: 185px;text-align: center;}
+.carpet-product .inneri p b{display: inline-block;float: left; width: 49%;}
+.carpet-product .inneri {float: left;width: calc(100% - 225px);width: -moz-calc(100% - 225px);width: -webkit-calc(100% - 225px);width: -ms-calc(100% - 225px);width: -o-calc(100% - 225px);text-align: left;}
+.carpet-product .inneri.first {width: 205px;text-align: center;margin-right: 20px;}
 .carpet-product .tierRow {background-color: #FDFCDC !important; border-color: #F4F4F4;font-weight: bold;}
 .carpet-product .total-pricei {text-align: center;}
 .carpet-product .product-shop .product-options-bottom .add-to-cart{float: left;}
 .carpet-product .add-to-wishlist{float: left; position: relative; left: 15px; padding-top: 0;}
-.carpet-product .block .block-title{padding: 5px 0 5px 10px; border-bottom: 0; background-image: url(http://www.beut.co.uk/skin/frontend/default/beut/images/arrow-down.png); background-repeat: no-repeat; background-position: 98% center;}
+.carpet-product .block .block-title{padding: 8px 0 9px 10px; border-bottom: 0; background-image: url(http://www.beut.co.uk/skin/frontend/default/beut/images/arrow-down.png); background-repeat: no-repeat; background-position: 98% center;width: 100%;}
+.carpet-product .block:first-child .block-title{padding-top: 7px!important;}
 .carpet-product .block .block-title.open{background-image: url(http://www.beut.co.uk/skin/frontend/default/beut/images/arrow-up.png);}
 .carpet-product .calculator-wrapper .block-title span{cursor: pointer;}
 .carpet-product .product-options dl.last dd.last{width: 100%;}
 .carpet-product .product-options dd input.input-text{width: 28%;}
-.carpet-product {}
-.carpet-product {}
-.carpet-product {}
-.carpet-product {}
+
