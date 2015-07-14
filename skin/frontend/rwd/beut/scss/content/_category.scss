@@ -29,6 +29,11 @@
 
 .category-image {
     position: relative;
+    h2{
+        @include absolute-block();
+        font-size: 35px;
+        color: $white;
+    }
 }
 
 .categorylandingMainblock {

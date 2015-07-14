@@ -952,30 +952,31 @@ label.select-label:before, label.select-label:after {
   max-width: -moz-calc(100% - 220px);
   max-width: -webkit-calc(100% - 220px);
   max-width: calc(100% - 220px);
+  margin-top: 8px;
 }
-/* line 277, ../scss/core/_common.scss */
+/* line 278, ../scss/core/_common.scss */
 .block-filter .block-layered-nav .block-content {
   float: left;
   overflow: hidden;
 }
-/* line 282, ../scss/core/_common.scss */
+/* line 283, ../scss/core/_common.scss */
 .block-filter .sorter {
   float: right;
 }
-/* line 285, ../scss/core/_common.scss */
+/* line 286, ../scss/core/_common.scss */
 .block-filter .sorter label:after {
   color: #f6f6f6;
   top: -1px;
   content: '\f107';
 }
-/* line 292, ../scss/core/_common.scss */
+/* line 293, ../scss/core/_common.scss */
 .block-filter select {
   color: #a7a39b;
   text-transform: uppercase;
   font-size: 14px;
 }
 
-/* line 301, ../scss/core/_common.scss */
+/* line 302, ../scss/core/_common.scss */
 body:not(.customer-account) .block:first-child .block-title {
   border-top: none;
   padding-top: 0;
@@ -988,41 +989,41 @@ body:not(.customer-account) .block:first-child .block-title {
   margin-right: 20px;
 }
 
-/* line 313, ../scss/core/_common.scss */
+/* line 314, ../scss/core/_common.scss */
 .block-content.unpad {
   padding: 0;
 }
 
-/* line 317, ../scss/core/_common.scss */
+/* line 318, ../scss/core/_common.scss */
 .block-content li.item {
   margin: 0 0 10px 9px;
 }
 
-/* line 321, ../scss/core/_common.scss */
+/* line 322, ../scss/core/_common.scss */
 .block-content li.item:last-child {
   margin-bottom: 0;
 }
 
-/* line 325, ../scss/core/_common.scss */
+/* line 326, ../scss/core/_common.scss */
 .block .actions {
   margin: 10px 0 0;
 }
-/* line 328, ../scss/core/_common.scss */
+/* line 329, ../scss/core/_common.scss */
 .block .actions:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 332, ../scss/core/_common.scss */
+/* line 333, ../scss/core/_common.scss */
 .block .actions a {
   float: left;
 }
-/* line 335, ../scss/core/_common.scss */
+/* line 336, ../scss/core/_common.scss */
 .block .actions .button {
   float: right;
 }
 
-/* line 343, ../scss/core/_common.scss */
+/* line 344, ../scss/core/_common.scss */
 .col-left .block .actions .button ~ a,
 .col-right .block .actions .button ~ a {
   line-height: 33px;
@@ -1032,31 +1033,31 @@ body:not(.customer-account) .block:first-child .block-title {
 /* -------------------------------------------- *
  * Secondary Navigation
  */
-/* line 400, ../scss/core/_common.scss */
+/* line 401, ../scss/core/_common.scss */
 .block-account .block-title,
 .block-cms-menu .block-title {
   padding-top: 0;
   border-top: none;
 }
-/* line 405, ../scss/core/_common.scss */
+/* line 406, ../scss/core/_common.scss */
 .block-account li,
 .block-cms-menu li {
   text-transform: uppercase;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin: 7px 0;
 }
-/* line 410, ../scss/core/_common.scss */
+/* line 411, ../scss/core/_common.scss */
 .block-account li strong,
 .block-cms-menu li strong {
   font-weight: 400;
   color: #498fd8;
 }
-/* line 415, ../scss/core/_common.scss */
+/* line 416, ../scss/core/_common.scss */
 .block-account li a,
 .block-cms-menu li a {
   color: #636363;
 }
-/* line 418, ../scss/core/_common.scss */
+/* line 419, ../scss/core/_common.scss */
 .block-account li a:hover,
 .block-cms-menu li a:hover {
   color: #498fd8;
@@ -1066,7 +1067,7 @@ body:not(.customer-account) .block:first-child .block-title {
  * Buttons
  * ============================================ */
 /* Secondary Buttons */
-/* line 430, ../scss/core/_common.scss */
+/* line 431, ../scss/core/_common.scss */
 .cart .buttons-set .button,
 .cart-table .button,
 .sidebar .actions .button,
@@ -1075,7 +1076,7 @@ body:not(.customer-account) .block:first-child .block-title {
   color: #636363;
   padding: 7px 15px;
 }
-/* line 438, ../scss/core/_common.scss */
+/* line 439, ../scss/core/_common.scss */
 .cart .buttons-set .button:hover,
 .cart-table .button:hover,
 .sidebar .actions .button:hover,
@@ -1083,7 +1084,7 @@ body:not(.customer-account) .block:first-child .block-title {
   background: #d0d0d0;
   cursor: pointer;
 }
-/* line 443, ../scss/core/_common.scss */
+/* line 444, ../scss/core/_common.scss */
 .cart .buttons-set .button:active,
 .cart-table .button:active,
 .sidebar .actions .button:active,
@@ -1091,7 +1092,7 @@ body:not(.customer-account) .block:first-child .block-title {
   background: #c4c4c4;
   color: #636363;
 }
-/* line 448, ../scss/core/_common.scss */
+/* line 449, ../scss/core/_common.scss */
 .cart .buttons-set .button:focus,
 .cart-table .button:focus,
 .sidebar .actions .button:focus,
@@ -1101,13 +1102,13 @@ body:not(.customer-account) .block:first-child .block-title {
   outline: none;
 }
 
-/* line 455, ../scss/core/_common.scss */
+/* line 456, ../scss/core/_common.scss */
 .sidebar .actions button.button {
   white-space: normal;
 }
 
 /* Primary Buttons */
-/* line 461, ../scss/core/_common.scss */
+/* line 462, ../scss/core/_common.scss */
 .button,
 .cart-table .product-cart-actions .button,
 #co-shipping-method-form .buttons-set .button {
@@ -1124,21 +1125,21 @@ body:not(.customer-account) .block:first-child .block-title {
   white-space: nowrap;
   line-height: 1;
 }
-/* line 477, ../scss/core/_common.scss */
+/* line 478, ../scss/core/_common.scss */
 .button:hover,
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover {
   background: #3482d3;
   cursor: pointer;
 }
-/* line 481, ../scss/core/_common.scss */
+/* line 482, ../scss/core/_common.scss */
 .button:active,
 .cart-table .product-cart-actions .button:active,
 #co-shipping-method-form .buttons-set .button:active {
   background: #2a75c4;
   color: #FFFFFF;
 }
-/* line 485, ../scss/core/_common.scss */
+/* line 486, ../scss/core/_common.scss */
 .button:focus,
 .cart-table .product-cart-actions .button:focus,
 #co-shipping-method-form .buttons-set .button:focus {
@@ -1147,18 +1148,18 @@ body:not(.customer-account) .block:first-child .block-title {
   color: #FFFFFF;
 }
 
-/* line 492, ../scss/core/_common.scss */
+/* line 493, ../scss/core/_common.scss */
 a.button {
   text-decoration: none;
 }
 
-/* line 496, ../scss/core/_common.scss */
+/* line 497, ../scss/core/_common.scss */
 a.button:hover {
   color: #FFFFFF;
 }
 
 /* Disabled - class for anchor, state for form elements */
-/* line 501, ../scss/core/_common.scss */
+/* line 502, ../scss/core/_common.scss */
 .button.disabled,
 .button:disabled {
   background: #C8C8C8;
@@ -1167,12 +1168,12 @@ a.button:hover {
 }
 
 /* Adjacent buttons */
-/* line 509, ../scss/core/_common.scss */
+/* line 510, ../scss/core/_common.scss */
 .button + .button {
   margin-left: 5px;
 }
 
-/* line 523, ../scss/core/_common.scss */
+/* line 524, ../scss/core/_common.scss */
 .button2 {
   border: 0;
   padding: 0 5px;
@@ -1182,12 +1183,12 @@ a.button:hover {
   vertical-align: middle;
 }
 
-/* line 532, ../scss/core/_common.scss */
+/* line 533, ../scss/core/_common.scss */
 .button2:focus {
   outline: none;
 }
 
-/* line 536, ../scss/core/_common.scss */
+/* line 537, ../scss/core/_common.scss */
 .button2 span,
 .button2 span span {
   line-height: 30px;
@@ -1197,7 +1198,7 @@ a.button:hover {
   display: inline-block;
   color: #498fd8;
 }
-/* line 544, ../scss/core/_common.scss */
+/* line 545, ../scss/core/_common.scss */
 .button2 span:hover,
 .button2 span span:hover {
   text-decoration: none;
@@ -1207,33 +1208,33 @@ a.button:hover {
 /* -------------------------------------------- *
  * Paypal Button
  */
-/* line 590, ../scss/core/_common.scss */
+/* line 591, ../scss/core/_common.scss */
 .paypal-logo.paypal-after {
   float: left;
 }
 
-/* line 594, ../scss/core/_common.scss */
+/* line 595, ../scss/core/_common.scss */
 .paypal-after .paypal-or {
   float: left;
 }
 
-/* line 598, ../scss/core/_common.scss */
+/* line 599, ../scss/core/_common.scss */
 .paypal-or {
   line-height: 34px;
   margin: 0px 10px 5px;
 }
 
-/* line 603, ../scss/core/_common.scss */
+/* line 604, ../scss/core/_common.scss */
 .paypal-after .paypal-button {
   float: left;
 }
 
-/* line 607, ../scss/core/_common.scss */
+/* line 608, ../scss/core/_common.scss */
 .paypal-button {
   line-height: 0px;
 }
 
-/* line 611, ../scss/core/_common.scss */
+/* line 612, ../scss/core/_common.scss */
 .paypal-button img {
   display: inline;
 }
@@ -1241,7 +1242,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Button Sets
  */
-/* line 636, ../scss/core/_common.scss */
+/* line 637, ../scss/core/_common.scss */
 .buttons-set {
   clear: both;
   margin: 10px 0 0;
@@ -1249,32 +1250,32 @@ a.button:hover {
   border-top: 1px solid #EDEDED;
   text-align: right;
 }
-/* line 643, ../scss/core/_common.scss */
+/* line 644, ../scss/core/_common.scss */
 .buttons-set p.required {
   margin: 0;
   margin-left: 10px;
   line-height: 33px;
   float: right;
 }
-/* line 649, ../scss/core/_common.scss */
+/* line 650, ../scss/core/_common.scss */
 .buttons-set .back-link {
   float: left;
   margin: 0;
   line-height: 33px;
 }
-/* line 654, ../scss/core/_common.scss */
+/* line 655, ../scss/core/_common.scss */
 .buttons-set a:not(.button) {
   line-height: 20px;
   display: inline-block;
   padding: 5px;
 }
-/* line 659, ../scss/core/_common.scss */
+/* line 660, ../scss/core/_common.scss */
 .buttons-set button.button {
   float: right;
   margin-left: 5px;
   min-width: 140px;
 }
-/* line 665, ../scss/core/_common.scss */
+/* line 666, ../scss/core/_common.scss */
 .buttons-set:after {
   content: '';
   display: table;
@@ -1284,7 +1285,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Icons
  */
-/* line 674, ../scss/core/_common.scss */
+/* line 675, ../scss/core/_common.scss */
 .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
 .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
   background-image: url(../images/icon_sprite.png);
@@ -1293,7 +1294,7 @@ a.button:hover {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  /* line 681, ../scss/core/_common.scss */
+  /* line 682, ../scss/core/_common.scss */
   .icon-sprite, .btn-remove2, .ratings .rating-box, .ratings .rating-box .rating, .sorter > .sort-by .sort-by-switcher, .sorter > .view-mode .grid,
   .sorter > .view-mode .list, .skip-nav .icon, .skip-search .icon, .product-view .sharing-links a, .review-summary-table .rating-box .rating-number:after, .ratings-table .rating-box, .ratings-table .rating-box .rating {
     background-image: url(../images/icon_sprite@2x.png);
@@ -1303,17 +1304,17 @@ a.button:hover {
 /* -------------------------------------------- *
  * Breadcrumbs
  */
-/* line 691, ../scss/core/_common.scss */
+/* line 692, ../scss/core/_common.scss */
 .breadcrumbs {
   display: none;
 }
-/* line 693, ../scss/core/_common.scss */
+/* line 694, ../scss/core/_common.scss */
 .catalog-breadcrumbs .breadcrumbs {
   float: left;
   margin-left: 100px;
   display: block;
 }
-/* line 698, ../scss/core/_common.scss */
+/* line 699, ../scss/core/_common.scss */
 .breadcrumbs li {
   float: left;
   font-size: 14px;
@@ -1323,36 +1324,36 @@ a.button:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 706, ../scss/core/_common.scss */
+/* line 707, ../scss/core/_common.scss */
 .breadcrumbs li:before {
   content: '/';
   float: left;
   position: absolute;
   left: -3px;
 }
-/* line 712, ../scss/core/_common.scss */
+/* line 713, ../scss/core/_common.scss */
 .breadcrumbs li:first-child {
   padding-left: 0;
 }
-/* line 714, ../scss/core/_common.scss */
+/* line 715, ../scss/core/_common.scss */
 .breadcrumbs li:first-child:before {
   content: '';
 }
-/* line 719, ../scss/core/_common.scss */
+/* line 720, ../scss/core/_common.scss */
 .breadcrumbs a {
   float: left;
   color: #444;
 }
-/* line 722, ../scss/core/_common.scss */
+/* line 723, ../scss/core/_common.scss */
 .breadcrumbs a:hover {
   color: #498fd8;
 }
-/* line 726, ../scss/core/_common.scss */
+/* line 727, ../scss/core/_common.scss */
 .breadcrumbs strong {
   color: #444;
   font-weight: normal;
 }
-/* line 730, ../scss/core/_common.scss */
+/* line 731, ../scss/core/_common.scss */
 .breadcrumbs span {
   float: left;
   padding: 0 7px;
@@ -1361,7 +1362,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Button - Remove / Previous
  */
-/* line 741, ../scss/core/_common.scss */
+/* line 742, ../scss/core/_common.scss */
 .btn-remove,
 .btn-previous {
   display: inline-block;
@@ -1375,14 +1376,14 @@ a.button:hover {
   color: transparent;
   position: relative;
 }
-/* line 754, ../scss/core/_common.scss */
+/* line 755, ../scss/core/_common.scss */
 .btn-remove:hover,
 .btn-previous:hover {
   background-color: #498fd8;
   border-color: #498fd8;
 }
 
-/* line 761, ../scss/core/_common.scss */
+/* line 762, ../scss/core/_common.scss */
 .btn-remove:after {
   content: 'X';
   color: #498fd8;
@@ -1390,30 +1391,30 @@ a.button:hover {
   line-height: 20px;
   width: 100%;
 }
-/* line 768, ../scss/core/_common.scss */
+/* line 769, ../scss/core/_common.scss */
 .btn-remove:hover:after {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-/* line 774, ../scss/core/_common.scss */
+/* line 775, ../scss/core/_common.scss */
 .btn-remove2 {
   background-position: 4px -648px;
   border: none;
   vertical-align: top;
 }
-/* line 781, ../scss/core/_common.scss */
+/* line 782, ../scss/core/_common.scss */
 .btn-remove2:after {
   display: none;
 }
-/* line 784, ../scss/core/_common.scss */
+/* line 785, ../scss/core/_common.scss */
 .btn-remove2:hover {
   background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 791, ../scss/core/_common.scss */
+/* line 792, ../scss/core/_common.scss */
 .btn-previous:after {
   content: '';
   position: absolute;
@@ -1430,7 +1431,7 @@ a.button:hover {
   margin-left: -2px;
   margin-top: -4px;
 }
-/* line 799, ../scss/core/_common.scss */
+/* line 800, ../scss/core/_common.scss */
 .btn-previous:hover:after {
   content: '';
   position: absolute;
@@ -1443,7 +1444,7 @@ a.button:hover {
   border-left: none;
 }
 
-/* line 808, ../scss/core/_common.scss */
+/* line 809, ../scss/core/_common.scss */
 .block-layered-nav .currently .btn-remove,
 .block-layered-nav .currently .btn-previous,
 .mini-products-list .btn-remove,
@@ -1457,12 +1458,12 @@ a.button:hover {
 /* -------------------------------------------- *
  * Checkout Agreements
  */
-/* line 819, ../scss/core/_common.scss */
+/* line 820, ../scss/core/_common.scss */
 .checkout-agreements li {
   margin-bottom: 20px;
 }
 
-/* line 823, ../scss/core/_common.scss */
+/* line 824, ../scss/core/_common.scss */
 .checkout-agreements .agreement-content {
   overflow-y: auto;
   max-width: 670px;
@@ -1476,7 +1477,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * CVV Security Code
  */
-/* line 837, ../scss/core/_common.scss */
+/* line 838, ../scss/core/_common.scss */
 .cvv-what-is-this {
   margin-left: 10px;
   font-size: 13px;
@@ -1486,13 +1487,13 @@ a.button:hover {
 /* -------------------------------------------- *
  * Container
  */
-/* line 847, ../scss/core/_common.scss */
+/* line 848, ../scss/core/_common.scss */
 .main-container,
 .footer-container {
   position: relative;
   margin: 0 auto;
 }
-/* line 851, ../scss/core/_common.scss */
+/* line 852, ../scss/core/_common.scss */
 .main-container:after,
 .footer-container:after {
   content: '';
@@ -1500,7 +1501,7 @@ a.button:hover {
   clear: both;
 }
 
-/* line 856, ../scss/core/_common.scss */
+/* line 857, ../scss/core/_common.scss */
 .footer-container {
   padding-top: 0px;
 }
@@ -1508,19 +1509,19 @@ a.button:hover {
 /* -------------------------------------------- *
  * Column Layouts
  */
-/* line 863, ../scss/core/_common.scss */
+/* line 864, ../scss/core/_common.scss */
 .main {
   margin-top: 130px;
   padding-top: 2px;
 }
 
-/* line 867, ../scss/core/_common.scss */
+/* line 868, ../scss/core/_common.scss */
 .cms-home .main, .catalog-category-view .main {
   margin-top: 0px;
   padding-top: 0;
 }
 
-/* line 871, ../scss/core/_common.scss */
+/* line 872, ../scss/core/_common.scss */
 .main:after,
 .col-wrapper:after {
   content: '';
@@ -1528,14 +1529,14 @@ a.button:hover {
   clear: both;
 }
 
-/* line 876, ../scss/core/_common.scss */
+/* line 877, ../scss/core/_common.scss */
 .col-left,
 .col-right,
 .col-main {
   padding: 0 10px;
 }
 
-/* line 882, ../scss/core/_common.scss */
+/* line 883, ../scss/core/_common.scss */
 .col-left {
   float: left;
   width: 25%;
@@ -1543,30 +1544,30 @@ a.button:hover {
   /* Remove the 15px padding */
   clear: left;
 }
-/* line 888, ../scss/core/_common.scss */
+/* line 889, ../scss/core/_common.scss */
 .col-left img {
   max-width: 100%;
 }
 
-/* line 893, ../scss/core/_common.scss */
+/* line 894, ../scss/core/_common.scss */
 .col-right {
   float: right;
   width: 25%;
   padding-right: 0;
   /* Remove the 15px padding */
 }
-/* line 898, ../scss/core/_common.scss */
+/* line 899, ../scss/core/_common.scss */
 .col-right img {
   max-width: 100%;
 }
 
-/* line 903, ../scss/core/_common.scss */
+/* line 904, ../scss/core/_common.scss */
 .col-main {
   float: left;
   width: 75%;
 }
 
-/* line 909, ../scss/core/_common.scss */
+/* line 910, ../scss/core/_common.scss */
 .col1-layout .col-main {
   float: none;
   width: 100%;
@@ -1574,68 +1575,68 @@ a.button:hover {
   /* Remove the 15px padding */
 }
 
-/* line 917, ../scss/core/_common.scss */
+/* line 918, ../scss/core/_common.scss */
 .col2-left-layout .col-main {
   float: right;
   padding-right: 0;
   /* Remove the 15px padding */
 }
 
-/* line 924, ../scss/core/_common.scss */
+/* line 925, ../scss/core/_common.scss */
 .col2-right-layout .col-main {
   padding-left: 0;
   /* Remove the 15px padding */
 }
 
-/* line 930, ../scss/core/_common.scss */
+/* line 931, ../scss/core/_common.scss */
 .col3-layout .col-right {
   width: 20.83333%;
 }
-/* line 934, ../scss/core/_common.scss */
+/* line 935, ../scss/core/_common.scss */
 .col3-layout .col-wrapper {
   float: left;
   width: 79.16667%;
 }
-/* line 938, ../scss/core/_common.scss */
+/* line 939, ../scss/core/_common.scss */
 .col3-layout .col-wrapper .col-main {
   float: right;
   width: 73.68421%;
 }
-/* line 943, ../scss/core/_common.scss */
+/* line 944, ../scss/core/_common.scss */
 .col3-layout .col-wrapper .col-left {
   width: 26.31579%;
 }
 
 /* Content Columns */
-/* line 1014, ../scss/core/_common.scss */
+/* line 1015, ../scss/core/_common.scss */
 .col2-set {
   width: 100%;
 }
-/* line 1017, ../scss/core/_common.scss */
+/* line 1018, ../scss/core/_common.scss */
 .col2-set .col-1,
 .col2-set .col-2 {
   width: 50%;
   padding: 20px;
 }
-/* line 1027, ../scss/core/_common.scss */
+/* line 1028, ../scss/core/_common.scss */
 .col2-set .col-1 {
   float: left;
   padding-left: 0;
 }
-/* line 1032, ../scss/core/_common.scss */
+/* line 1033, ../scss/core/_common.scss */
 .col2-set .col-2 {
   float: right;
   padding-right: 0;
 }
-/* line 1048, ../scss/core/_common.scss */
+/* line 1049, ../scss/core/_common.scss */
 .col2-set .narrow {
   width: 33%;
 }
-/* line 1052, ../scss/core/_common.scss */
+/* line 1053, ../scss/core/_common.scss */
 .col2-set .wide {
   width: 65%;
 }
-/* line 1056, ../scss/core/_common.scss */
+/* line 1057, ../scss/core/_common.scss */
 .col2-set:after {
   content: '';
   display: table;
@@ -1645,7 +1646,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Top Container
  */
-/* line 1065, ../scss/core/_common.scss */
+/* line 1066, ../scss/core/_common.scss */
 .top-container {
   max-width: 1260px;
   margin: 0 auto;
@@ -1655,13 +1656,13 @@ a.button:hover {
 /* -------------------------------------------- *
  * Global Site Notice
  */
-/* line 1076, ../scss/core/_common.scss */
+/* line 1077, ../scss/core/_common.scss */
 .global-site-notice {
   background: #676157;
   color: #fff;
   font-size: 11px;
 }
-/* line 1081, ../scss/core/_common.scss */
+/* line 1082, ../scss/core/_common.scss */
 .global-site-notice .notice-inner {
   padding-left: 120px;
   width: 100%;
@@ -1676,7 +1677,7 @@ a.button:hover {
   background-position: left;
   background-repeat: no-repeat;
 }
-/* line 1096, ../scss/core/_common.scss */
+/* line 1097, ../scss/core/_common.scss */
 .global-site-notice p {
   margin-bottom: 0;
 }
@@ -1684,7 +1685,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Promotional Message Banner
  */
-/* line 1105, ../scss/core/_common.scss */
+/* line 1106, ../scss/core/_common.scss */
 .promo-msg {
   color: #498fd8;
   text-align: center;
@@ -1696,7 +1697,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Grid
  */
-/* line 1117, ../scss/core/_common.scss */
+/* line 1118, ../scss/core/_common.scss */
 .grid:after {
   content: '';
   display: table;
@@ -1706,18 +1707,18 @@ a.button:hover {
 /* -------------------------------------------- *
  * Messages
  */
-/* line 1124, ../scss/core/_common.scss */
+/* line 1125, ../scss/core/_common.scss */
 .success {
   color: #11B400;
 }
 
-/* line 1128, ../scss/core/_common.scss */
+/* line 1129, ../scss/core/_common.scss */
 .error {
   color: #DF280A;
   font-weight: bold;
 }
 
-/* line 1133, ../scss/core/_common.scss */
+/* line 1134, ../scss/core/_common.scss */
 .notice {
   color: #E26703;
   font-weight: bold;
@@ -1726,12 +1727,12 @@ a.button:hover {
 /* -------------------------------------------- *
  * Messages
  */
-/* line 1142, ../scss/core/_common.scss */
+/* line 1143, ../scss/core/_common.scss */
 .messages {
   margin-bottom: 10px;
 }
 
-/* line 1146, ../scss/core/_common.scss */
+/* line 1147, ../scss/core/_common.scss */
 .messages li li {
   position: relative;
   margin-bottom: 5px;
@@ -1740,21 +1741,21 @@ a.button:hover {
   font-size: 15px;
 }
 
-/* line 1154, ../scss/core/_common.scss */
+/* line 1155, ../scss/core/_common.scss */
 .messages li li:before {
   top: 50%;
   left: 0;
   margin-top: -6px;
 }
 
-/* line 1160, ../scss/core/_common.scss */
+/* line 1161, ../scss/core/_common.scss */
 .messages .error-msg li {
   color: #000;
   border-left: 5px solid #DF280A;
   background-color: #FAEBE7;
 }
 
-/* line 1166, ../scss/core/_common.scss */
+/* line 1167, ../scss/core/_common.scss */
 .messages .error-msg li:before {
   content: '';
   position: absolute;
@@ -1767,14 +1768,14 @@ a.button:hover {
   border-right: none;
 }
 
-/* line 1170, ../scss/core/_common.scss */
+/* line 1171, ../scss/core/_common.scss */
 .messages .notice-msg li {
   color: #000;
   border-left: 5px solid #E26703;
   background-color: #F9EBE6;
 }
 
-/* line 1176, ../scss/core/_common.scss */
+/* line 1177, ../scss/core/_common.scss */
 .messages .notice-msg li:before {
   content: '';
   position: absolute;
@@ -1787,14 +1788,14 @@ a.button:hover {
   border-right: none;
 }
 
-/* line 1180, ../scss/core/_common.scss */
+/* line 1181, ../scss/core/_common.scss */
 .messages .success-msg li {
   color: #000;
   border-left: 5px solid #11B400;
   background-color: #EFF5EA;
 }
 
-/* line 1186, ../scss/core/_common.scss */
+/* line 1187, ../scss/core/_common.scss */
 .messages .success-msg li:before {
   content: '';
   position: absolute;
@@ -1807,18 +1808,18 @@ a.button:hover {
   border-right: none;
 }
 
-/* line 1194, ../scss/core/_common.scss */
+/* line 1195, ../scss/core/_common.scss */
 .order-list-grid .col-1 {
   width: 30%;
 }
 
-/* line 1198, ../scss/core/_common.scss */
+/* line 1199, ../scss/core/_common.scss */
 .order-list-grid .col-2 {
   width: 50%;
   padding-right: 20px;
 }
 
-/* line 1203, ../scss/core/_common.scss */
+/* line 1204, ../scss/core/_common.scss */
 .order-list-grid .col-3 {
   clear: none;
   width: 20%;
@@ -1828,14 +1829,14 @@ a.button:hover {
 /* -------------------------------------------- *
  * Page Popup
  */
-/* line 1215, ../scss/core/_common.scss */
+/* line 1216, ../scss/core/_common.scss */
 .page-popup {
   padding: 20px;
   background: #FFFFFF;
   height: auto;
 }
 
-/* line 1221, ../scss/core/_common.scss */
+/* line 1222, ../scss/core/_common.scss */
 .page-popup h1 {
   margin: 0 0 0.5em;
   font-size: 36px;
@@ -1844,22 +1845,22 @@ a.button:hover {
 /* -------------------------------------------- *
  * Payment Methods
  */
-/* line 1230, ../scss/core/_common.scss */
+/* line 1231, ../scss/core/_common.scss */
 .payment-methods {
   margin-bottom: 20px;
 }
 
-/* line 1234, ../scss/core/_common.scss */
+/* line 1235, ../scss/core/_common.scss */
 .payment-methods dt {
   padding: 5px 0;
 }
 
-/* line 1238, ../scss/core/_common.scss */
+/* line 1239, ../scss/core/_common.scss */
 .payment-methods dd {
   padding-top: 10px;
 }
 
-/* line 1242, ../scss/core/_common.scss */
+/* line 1243, ../scss/core/_common.scss */
 .payment-methods .form-list {
   position: relative;
   display: inline-block;
@@ -1870,7 +1871,7 @@ a.button:hover {
   background: #F4F4F4;
 }
 
-/* line 1252, ../scss/core/_common.scss */
+/* line 1253, ../scss/core/_common.scss */
 .payment-methods .form-list:before {
   content: '';
   position: absolute;
@@ -1885,7 +1886,7 @@ a.button:hover {
   left: 30px;
 }
 
-/* line 1258, ../scss/core/_common.scss */
+/* line 1259, ../scss/core/_common.scss */
 .payment-methods .form-list:after {
   content: '';
   position: absolute;
@@ -1900,7 +1901,7 @@ a.button:hover {
   left: 30px;
 }
 
-/* line 1264, ../scss/core/_common.scss */
+/* line 1265, ../scss/core/_common.scss */
 .payment-methods .form-list li:last-child {
   margin-bottom: 0;
 }
@@ -1908,7 +1909,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Please Wait (Loading Indicator)
  */
-/* line 1272, ../scss/core/_common.scss */
+/* line 1273, ../scss/core/_common.scss */
 .please-wait {
   display: inline-block;
   margin-left: 10px;
@@ -1918,7 +1919,7 @@ a.button:hover {
   white-space: nowrap;
   /* Prevent the linebreak in the HTML from causing layout issues */
 }
-/* line 1280, ../scss/core/_common.scss */
+/* line 1281, ../scss/core/_common.scss */
 .please-wait img {
   float: left;
   margin-right: 5px;
@@ -1928,44 +1929,45 @@ a.button:hover {
 /* -------------------------------------------- *
  * Price Box - Standard
  */
-/* line 1291, ../scss/core/_common.scss */
+/* line 1292, ../scss/core/_common.scss */
 .price-box {
   margin: 7px 0;
   font-family: "Century Gothic", Verdana, Arial, sans-serif;
 }
 
-/* line 1296, ../scss/core/_common.scss */
+/* line 1297, ../scss/core/_common.scss */
 .price-box p {
   margin-bottom: 0;
 }
 
-/* line 1300, ../scss/core/_common.scss */
+/* line 1301, ../scss/core/_common.scss */
 .price-notice {
   color: #A0A0A0;
 }
 
-/* line 1303, ../scss/core/_common.scss */
+/* line 1304, ../scss/core/_common.scss */
 .price-box .price,
 .price {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   color: #000;
+  font-style: italic;
 }
 
-/* line 1309, ../scss/core/_common.scss */
+/* line 1311, ../scss/core/_common.scss */
 .price-box .price-label {
   color: #A0A0A0;
   white-space: nowrap;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
-/* line 1315, ../scss/core/_common.scss */
+/* line 1317, ../scss/core/_common.scss */
 .price-box .minimal-price-link {
   padding-left: 1em;
   color: #498fd8;
   display: block;
   /* We want this to show on its own line, otherwise the layout looks funky */
 }
-/* line 1320, ../scss/core/_common.scss */
+/* line 1322, ../scss/core/_common.scss */
 .price-box .minimal-price-link .label {
   color: #A0A0A0;
 }
@@ -1973,34 +1975,34 @@ a.button:hover {
 /* -------------------------------------------- *
  * Price Box - Special
  */
-/* line 1329, ../scss/core/_common.scss */
+/* line 1331, ../scss/core/_common.scss */
 .price-box .old-price,
 .price-box .special-price {
   display: inline-block;
 }
-/* line 1333, ../scss/core/_common.scss */
+/* line 1335, ../scss/core/_common.scss */
 .price-box .old-price .price-label,
 .price-box .special-price .price-label {
   display: none;
 }
-/* line 1337, ../scss/core/_common.scss */
+/* line 1339, ../scss/core/_common.scss */
 .price-box .old-price .price,
 .price-box .special-price .price {
   display: inline-block;
 }
 
-/* line 1343, ../scss/core/_common.scss */
+/* line 1345, ../scss/core/_common.scss */
 .price-box .old-price .price {
   color: #A0A0A0;
   text-decoration: line-through;
 }
 
-/* line 1349, ../scss/core/_common.scss */
+/* line 1351, ../scss/core/_common.scss */
 .price-box .special-price {
   color: #498fd8;
   padding-left: 1em;
 }
-/* line 1353, ../scss/core/_common.scss */
+/* line 1355, ../scss/core/_common.scss */
 .price-box .special-price .price-label {
   color: #D84D3C;
 }
@@ -2008,13 +2010,13 @@ a.button:hover {
 /* -------------------------------------------- *
  * Price Box - Taxes
  */
-/* line 1362, ../scss/core/_common.scss */
+/* line 1364, ../scss/core/_common.scss */
 .price-box .price-excluding-tax,
 .price-box .price-including-tax {
   display: block;
 }
 
-/* line 1367, ../scss/core/_common.scss */
+/* line 1369, ../scss/core/_common.scss */
 span.weee {
   display: block;
 }
@@ -2022,7 +2024,7 @@ span.weee {
 /* -------------------------------------------- *
  * Tier Prices
  */
-/* line 1375, ../scss/core/_common.scss */
+/* line 1377, ../scss/core/_common.scss */
 .product-pricing,
 .tier-prices,
 .tier-prices-grouped {
@@ -2032,19 +2034,19 @@ span.weee {
   border: 1px solid #E2D4C7;
   margin-top: 7px;
 }
-/* line 1384, ../scss/core/_common.scss */
+/* line 1386, ../scss/core/_common.scss */
 .product-pricing li,
 .tier-prices li,
 .tier-prices-grouped li {
   font-size: 12px;
 }
-/* line 1387, ../scss/core/_common.scss */
+/* line 1389, ../scss/core/_common.scss */
 .product-pricing .benefit,
 .tier-prices .benefit,
 .tier-prices-grouped .benefit {
   font-style: italic;
 }
-/* line 1390, ../scss/core/_common.scss */
+/* line 1392, ../scss/core/_common.scss */
 .product-pricing .price,
 .tier-prices .price,
 .tier-prices-grouped .price {
@@ -2054,18 +2056,18 @@ span.weee {
 /* ============================================ *
  * Item Options
  * ============================================ */
-/* line 1399, ../scss/core/_common.scss */
+/* line 1401, ../scss/core/_common.scss */
 .item-options {
   font-size: 14px;
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
-/* line 1403, ../scss/core/_common.scss */
+/* line 1405, ../scss/core/_common.scss */
 .item-options:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 1407, ../scss/core/_common.scss */
+/* line 1409, ../scss/core/_common.scss */
 .item-options dt {
   float: left;
   clear: left;
@@ -2073,41 +2075,41 @@ span.weee {
   padding-right: 5px;
   font-style: italic;
 }
-/* line 1414, ../scss/core/_common.scss */
+/* line 1416, ../scss/core/_common.scss */
 .item-options dt:after {
   content: ': ';
 }
-/* line 1419, ../scss/core/_common.scss */
+/* line 1421, ../scss/core/_common.scss */
 .item-options dd {
   float: left;
   padding-left: 10px;
   margin: 0 0 6px;
 }
 
-/* line 1426, ../scss/core/_common.scss */
+/* line 1428, ../scss/core/_common.scss */
 .truncated,
 .truncated a.dots {
   cursor: help;
 }
 
-/* line 1431, ../scss/core/_common.scss */
+/* line 1433, ../scss/core/_common.scss */
 .truncated a.details {
   cursor: help;
   height: 16px;
   line-height: 16px;
 }
-/* line 1436, ../scss/core/_common.scss */
+/* line 1438, ../scss/core/_common.scss */
 .truncated a.details:hover {
   text-decoration: none;
 }
 
-/* line 1441, ../scss/core/_common.scss */
+/* line 1443, ../scss/core/_common.scss */
 .truncated .truncated_full_value {
   position: relative;
   z-index: 300;
 }
 
-/* line 1446, ../scss/core/_common.scss */
+/* line 1448, ../scss/core/_common.scss */
 .truncated .truncated_full_value .item-options {
   display: none;
   position: absolute;
@@ -2119,7 +2121,7 @@ span.weee {
   top: 21px;
   left: -100px;
 }
-/* line 1457, ../scss/core/_common.scss */
+/* line 1459, ../scss/core/_common.scss */
 .truncated .truncated_full_value .item-options:after {
   content: '';
   position: absolute;
@@ -2134,14 +2136,14 @@ span.weee {
   top: -7px;
 }
 
-/* line 1464, ../scss/core/_common.scss */
+/* line 1466, ../scss/core/_common.scss */
 .truncated .truncated_full_value .item-options > p {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-/* line 1470, ../scss/core/_common.scss */
+/* line 1472, ../scss/core/_common.scss */
 .truncated .show .item-options {
   display: block;
 }
@@ -2149,7 +2151,7 @@ span.weee {
 /* -------------------------------------------- *
  * Printer Friendly Page
  */
-/* line 1509, ../scss/core/_common.scss */
+/* line 1511, ../scss/core/_common.scss */
 .page-print {
   width: 6.5in;
   margin: 20px;
@@ -2159,7 +2161,7 @@ span.weee {
 /* -------------------------------------------- *
  * Add to links
  */
-/* line 1520, ../scss/core/_common.scss */
+/* line 1522, ../scss/core/_common.scss */
 .add-to-links .separator {
   display: none;
 }
@@ -2167,14 +2169,14 @@ span.weee {
 /* -------------------------------------------- *
  * Product Image
  */
-/* line 1528, ../scss/core/_common.scss */
+/* line 1530, ../scss/core/_common.scss */
 .product-image,
 .no-touch .product-img-box .product-image:not(.zoom-available):hover {
   position: relative;
   display: block;
 }
 
-/* line 1540, ../scss/core/_common.scss */
+/* line 1542, ../scss/core/_common.scss */
 .no-touch .product-image:hover {
   border-color: #498fd8;
 }
@@ -2182,16 +2184,16 @@ span.weee {
 /* -------------------------------------------- *
  * Ratings
  */
-/* line 1548, ../scss/core/_common.scss */
+/* line 1550, ../scss/core/_common.scss */
 .ratings {
   margin: 7px 0;
 }
-/* line 1551, ../scss/core/_common.scss */
+/* line 1553, ../scss/core/_common.scss */
 .ratings .rating-box,
 .ratings .rating-links {
   margin: 5px 0;
 }
-/* line 1556, ../scss/core/_common.scss */
+/* line 1558, ../scss/core/_common.scss */
 .ratings .rating-box {
   width: 65px;
   height: 13px;
@@ -2199,19 +2201,19 @@ span.weee {
   background-position: 0 -615px;
   overflow: hidden;
 }
-/* line 1564, ../scss/core/_common.scss */
+/* line 1566, ../scss/core/_common.scss */
 .ratings .rating-box .rating {
   float: left;
   height: 13px;
   background-repeat: repeat-x;
   background-position: 0 -600px;
 }
-/* line 1571, ../scss/core/_common.scss */
+/* line 1573, ../scss/core/_common.scss */
 .ratings .amount {
   display: block;
   margin: 5px auto;
 }
-/* line 1577, ../scss/core/_common.scss */
+/* line 1579, ../scss/core/_common.scss */
 .ratings .rating-links .separator {
   margin: 0 3px;
 }
@@ -2219,29 +2221,28 @@ span.weee {
 /* -------------------------------------------- *
  * Standard Formatted Text Block
  */
-/* line 1587, ../scss/core/_common.scss */
+/* line 1589, ../scss/core/_common.scss */
 .std p {
   margin: 0 0 1.5em;
 }
 
-/* line 1591, ../scss/core/_common.scss */
+/* line 1593, ../scss/core/_common.scss */
 .std ol {
   list-style: decimal outside;
   margin-bottom: 1.5em;
 }
 
-/* line 1596, ../scss/core/_common.scss */
+/* line 1598, ../scss/core/_common.scss */
 .std ol li {
   margin-left: 2em;
 }
 
-/* line 1600, ../scss/core/_common.scss */
+/* line 1602, ../scss/core/_common.scss */
 .std ul {
   list-style: disc outside;
-  margin-bottom: 1.5em;
 }
 
-/* line 1604, ../scss/core/_common.scss */
+/* line 1605, ../scss/core/_common.scss */
 .std .note {
   color: #A0A0A0;
   font-size: 13px;
@@ -2250,7 +2251,7 @@ span.weee {
 /* -------------------------------------------- *
  * Tabs
  */
-/* line 1613, ../scss/core/_common.scss */
+/* line 1614, ../scss/core/_common.scss */
 .tabs {
   margin-bottom: 10px;
   background: #FFFFFF;
@@ -2259,148 +2260,148 @@ span.weee {
 /* -------------------------------------------- *
  * Toolbar
  */
-/* line 1621, ../scss/core/_common.scss */
+/* line 1622, ../scss/core/_common.scss */
 .pager-no-toolbar {
   margin-bottom: 10px;
 }
 
-/* line 1626, ../scss/core/_common.scss */
+/* line 1627, ../scss/core/_common.scss */
 .pager-no-toolbar ~ .pager-no-toolbar {
   margin-top: 10px;
 }
 
-/* line 1629, ../scss/core/_common.scss */
+/* line 1630, ../scss/core/_common.scss */
 .toolbar_top {
   float: right;
   margin-right: 100px;
 }
-/* line 1632, ../scss/core/_common.scss */
+/* line 1633, ../scss/core/_common.scss */
 .toolbar_top .custom-current, .toolbar_top .last {
   display: none;
 }
-/* line 1635, ../scss/core/_common.scss */
+/* line 1636, ../scss/core/_common.scss */
 .toolbar_top .pages li.first {
   display: none;
 }
 
-/* line 1640, ../scss/core/_common.scss */
+/* line 1641, ../scss/core/_common.scss */
 .pager {
   color: #555;
   font-size: 15px;
 }
 
-/* line 1645, ../scss/core/_common.scss */
+/* line 1646, ../scss/core/_common.scss */
 .toolbar label,
 .pager-no-toolbar label {
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 1653, ../scss/core/_common.scss */
+/* line 1654, ../scss/core/_common.scss */
 .sorter {
   float: left;
 }
 
-/* line 1658, ../scss/core/_common.scss */
+/* line 1659, ../scss/core/_common.scss */
 .sorter > .sort-by .sort-by-switcher {
   width: 30px;
   height: 30px;
   display: inline-block;
 }
-/* line 1664, ../scss/core/_common.scss */
+/* line 1665, ../scss/core/_common.scss */
 .sorter > .sort-by .sort-by-switcher--asc {
   background-position: 4px -542px;
 }
-/* line 1666, ../scss/core/_common.scss */
+/* line 1667, ../scss/core/_common.scss */
 .sorter > .sort-by .sort-by-switcher--asc:hover {
   background-position: -46px -542px;
 }
-/* line 1670, ../scss/core/_common.scss */
+/* line 1671, ../scss/core/_common.scss */
 .sorter > .sort-by .sort-by-switcher--desc {
   background-position: 4px -567px;
 }
-/* line 1672, ../scss/core/_common.scss */
+/* line 1673, ../scss/core/_common.scss */
 .sorter > .sort-by .sort-by-switcher--desc:hover {
   background-position: -46px -567px;
 }
 
-/* line 1678, ../scss/core/_common.scss */
+/* line 1679, ../scss/core/_common.scss */
 .sorter > .view-mode {
   float: right;
 }
-/* line 1681, ../scss/core/_common.scss */
+/* line 1682, ../scss/core/_common.scss */
 .sorter > .view-mode .grid,
 .sorter > .view-mode .list {
   float: left;
   width: 30px;
   height: 30px;
 }
-/* line 1688, ../scss/core/_common.scss */
+/* line 1689, ../scss/core/_common.scss */
 .sorter > .view-mode .grid {
   margin-right: 5px;
   background-position: 8px -492px;
 }
-/* line 1692, ../scss/core/_common.scss */
+/* line 1693, ../scss/core/_common.scss */
 .sorter > .view-mode strong.grid,
 .sorter > .view-mode a.grid:hover {
   background-position: -42px -492px;
 }
-/* line 1696, ../scss/core/_common.scss */
+/* line 1697, ../scss/core/_common.scss */
 .sorter > .view-mode .list {
   background-position: 11px -517px;
 }
-/* line 1700, ../scss/core/_common.scss */
+/* line 1701, ../scss/core/_common.scss */
 .sorter > .view-mode strong.list,
 .sorter > .view-mode a.list:hover {
   background-position: -39px -517px;
 }
 
-/* line 1706, ../scss/core/_common.scss */
+/* line 1707, ../scss/core/_common.scss */
 .pager {
   float: right;
 }
-/* line 1708, ../scss/core/_common.scss */
+/* line 1709, ../scss/core/_common.scss */
 .pager > .count-container {
   float: left;
 }
-/* line 1710, ../scss/core/_common.scss */
+/* line 1711, ../scss/core/_common.scss */
 .pager > .count-container:after {
   content: '/';
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 1717, ../scss/core/_common.scss */
+/* line 1718, ../scss/core/_common.scss */
 .pager .amount {
   float: left;
   white-space: nowrap;
   margin: 0;
   color: #545454;
 }
-/* line 1724, ../scss/core/_common.scss */
+/* line 1725, ../scss/core/_common.scss */
 .pager .limiter {
   float: left;
   height: 30px;
   line-height: 30px;
 }
 
-/* line 1732, ../scss/core/_common.scss */
+/* line 1733, ../scss/core/_common.scss */
 .pages {
   float: right;
 }
-/* line 1734, ../scss/core/_common.scss */
+/* line 1735, ../scss/core/_common.scss */
 .pages strong {
   display: none;
 }
-/* line 1737, ../scss/core/_common.scss */
+/* line 1738, ../scss/core/_common.scss */
 .pages li {
   float: left;
 }
-/* line 1740, ../scss/core/_common.scss */
+/* line 1741, ../scss/core/_common.scss */
 .pages a {
   color: #555;
 }
 
-/* line 1744, ../scss/core/_common.scss */
+/* line 1745, ../scss/core/_common.scss */
 .pages .current,
 .pages .current:hover {
   color: #636363;
@@ -2410,7 +2411,7 @@ span.weee {
   cursor: default;
 }
 
-/* line 1753, ../scss/core/_common.scss */
+/* line 1754, ../scss/core/_common.scss */
 .pages .next,
 .pages .previous {
   font: 0/0 a;
@@ -2419,13 +2420,13 @@ span.weee {
   background-color: transparent;
   position: relative;
 }
-/* line 1762, ../scss/core/_common.scss */
+/* line 1763, ../scss/core/_common.scss */
 .pages .next:hover,
 .pages .previous:hover {
   border: 1px solid #498fd8;
 }
 
-/* line 1768, ../scss/core/_common.scss */
+/* line 1769, ../scss/core/_common.scss */
 .pages .next:before {
   content: '';
   position: absolute;
@@ -2441,7 +2442,7 @@ span.weee {
   left: 50%;
   margin-left: -2px;
 }
-/* line 1775, ../scss/core/_common.scss */
+/* line 1776, ../scss/core/_common.scss */
 .pages .next:hover:before {
   content: '';
   position: absolute;
@@ -2454,7 +2455,7 @@ span.weee {
   border-right: none;
 }
 
-/* line 1781, ../scss/core/_common.scss */
+/* line 1782, ../scss/core/_common.scss */
 .pages .previous:before {
   content: '';
   position: absolute;
@@ -2470,7 +2471,7 @@ span.weee {
   left: 50%;
   margin-left: -2px;
 }
-/* line 1788, ../scss/core/_common.scss */
+/* line 1789, ../scss/core/_common.scss */
 .pages .previous:hover:before {
   content: '';
   position: absolute;
@@ -2483,46 +2484,46 @@ span.weee {
   border-left: none;
 }
 
-/* line 1792, ../scss/core/_common.scss */
+/* line 1793, ../scss/core/_common.scss */
 .container-footer-toolbar {
   display: inline-block;
 }
-/* line 1794, ../scss/core/_common.scss */
+/* line 1795, ../scss/core/_common.scss */
 .container-footer-toolbar .toolbar-bottom {
   padding-top: 15px;
 }
-/* line 1796, ../scss/core/_common.scss */
+/* line 1797, ../scss/core/_common.scss */
 .container-footer-toolbar .toolbar-bottom .custom-current, .container-footer-toolbar .toolbar-bottom .last {
   display: none;
 }
-/* line 1800, ../scss/core/_common.scss */
+/* line 1801, ../scss/core/_common.scss */
 .container-footer-toolbar .toolbar-left {
   text-align: left;
   padding-top: 15px;
 }
-/* line 1803, ../scss/core/_common.scss */
+/* line 1804, ../scss/core/_common.scss */
 .container-footer-toolbar .toolbar-left .view-all, .container-footer-toolbar .toolbar-left .count-container, .container-footer-toolbar .toolbar-left .sorter {
   display: none;
 }
-/* line 1806, ../scss/core/_common.scss */
+/* line 1807, ../scss/core/_common.scss */
 .container-footer-toolbar .toolbar-left .pager {
   float: left;
 }
-/* line 1810, ../scss/core/_common.scss */
+/* line 1811, ../scss/core/_common.scss */
 .container-footer-toolbar .first, .container-footer-toolbar .last {
   display: none;
 }
 
-/* line 1814, ../scss/core/_common.scss */
+/* line 1815, ../scss/core/_common.scss */
 .div-load-more {
   white-space: nowrap;
 }
 
-/* line 1817, ../scss/core/_common.scss */
+/* line 1818, ../scss/core/_common.scss */
 .load-more {
   display: inline-block;
 }
-/* line 1819, ../scss/core/_common.scss */
+/* line 1820, ../scss/core/_common.scss */
 .load-more a {
   color: #fff;
   display: block;
@@ -2541,7 +2542,7 @@ span.weee {
   -o-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-/* line 1832, ../scss/core/_common.scss */
+/* line 1833, ../scss/core/_common.scss */
 .load-more a:hover {
   text-decoration: none;
   background: #fff;
@@ -2549,7 +2550,7 @@ span.weee {
   color: #498fd8;
 }
 
-/* line 1865, ../scss/core/_common.scss */
+/* line 1866, ../scss/core/_common.scss */
 .col2-left-layout .sorter,
 .col2-left-layout .pager,
 .col2-right-layout .sorter,
@@ -2558,28 +2559,28 @@ span.weee {
 .col3-layout .pager {
   width: 100%;
 }
-/* line 1870, ../scss/core/_common.scss */
+/* line 1871, ../scss/core/_common.scss */
 .col2-left-layout .pager,
 .col2-right-layout .pager,
 .col3-layout .pager {
   float: left;
   clear: both;
 }
-/* line 1874, ../scss/core/_common.scss */
+/* line 1875, ../scss/core/_common.scss */
 .col2-left-layout .pager .pages,
 .col2-right-layout .pager .pages,
 .col3-layout .pager .pages {
   float: left;
   margin-left: 0;
 }
-/* line 1879, ../scss/core/_common.scss */
+/* line 1880, ../scss/core/_common.scss */
 .col2-left-layout .pager .count-container,
 .col2-right-layout .pager .count-container,
 .col3-layout .pager .count-container {
   float: right;
 }
 
-/* line 1888, ../scss/core/_common.scss */
+/* line 1889, ../scss/core/_common.scss */
 .toolbar .view-mode > label {
   display: none;
 }
@@ -2587,14 +2588,14 @@ span.weee {
 /* ============================================ *
  * Tax - Full Tax Summary
  * ============================================ */
-/* line 1900, ../scss/core/_common.scss */
+/* line 1901, ../scss/core/_common.scss */
 #checkout-review-table .summary-collapse,
 #shopping-cart-totals-table .summary-collapse,
 body.customer-account .data-table .summary-collapse {
   position: relative;
   cursor: pointer;
 }
-/* line 1904, ../scss/core/_common.scss */
+/* line 1905, ../scss/core/_common.scss */
 #checkout-review-table .summary-collapse:before,
 #shopping-cart-totals-table .summary-collapse:before,
 body.customer-account .data-table .summary-collapse:before {
@@ -2611,7 +2612,7 @@ body.customer-account .data-table .summary-collapse:before {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 1910, ../scss/core/_common.scss */
+/* line 1911, ../scss/core/_common.scss */
 #checkout-review-table .summary-collapse:hover:before,
 #shopping-cart-totals-table .summary-collapse:hover:before,
 body.customer-account .data-table .summary-collapse:hover:before {
@@ -2628,7 +2629,7 @@ body.customer-account .data-table .summary-collapse:hover:before {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 1920, ../scss/core/_common.scss */
+/* line 1921, ../scss/core/_common.scss */
 #checkout-review-table .show-details .summary-collapse:before,
 #shopping-cart-totals-table .show-details .summary-collapse:before,
 body.customer-account .data-table .show-details .summary-collapse:before {
@@ -2645,7 +2646,7 @@ body.customer-account .data-table .show-details .summary-collapse:before {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 1926, ../scss/core/_common.scss */
+/* line 1927, ../scss/core/_common.scss */
 #checkout-review-table .show-details .summary-collapse:hover:before,
 #shopping-cart-totals-table .show-details .summary-collapse:hover:before,
 body.customer-account .data-table .show-details .summary-collapse:hover:before {
@@ -2663,7 +2664,7 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
   margin-right: 5px;
 }
 
-/* line 1938, ../scss/core/_common.scss */
+/* line 1939, ../scss/core/_common.scss */
 #shopping-cart-totals-table tfoot td .summary-collapse:before, #shopping-cart-totals-table tfoot td .summary-collapse:hover:before {
   margin-bottom: 5px;
 }
@@ -2671,12 +2672,12 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Magento Helpers
  * ============================================ */
-/* line 1948, ../scss/core/_common.scss */
+/* line 1949, ../scss/core/_common.scss */
 .a-center {
   text-align: center;
 }
 
-/* line 1952, ../scss/core/_common.scss */
+/* line 1953, ../scss/core/_common.scss */
 .a-right,
 .align-right {
   text-align: right;
@@ -2688,13 +2689,13 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
     display: none !important;
 }
 */
-/* line 1963, ../scss/core/_common.scss */
+/* line 1964, ../scss/core/_common.scss */
 .nobr,
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 1968, ../scss/core/_common.scss */
+/* line 1969, ../scss/core/_common.scss */
 .width-full {
   width: 100%;
 }
@@ -2702,7 +2703,7 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Custom Helpers
  * ============================================ */
-/* line 1976, ../scss/core/_common.scss */
+/* line 1977, ../scss/core/_common.scss */
 .hidden {
   display: none;
 }
@@ -2710,12 +2711,12 @@ body.customer-account .data-table .show-details .summary-collapse:hover:before {
 /* ============================================ *
  * Print Styles
  * ============================================ */
-/* line 1984, ../scss/core/_common.scss */
+/* line 1985, ../scss/core/_common.scss */
 .page-print .print-head {
   margin: 0 0 15px;
 }
 
-/* line 1988, ../scss/core/_common.scss */
+/* line 1989, ../scss/core/_common.scss */
 .page-print .print-head .logo {
   float: none;
   max-height: 50px;
@@ -3397,7 +3398,7 @@ body {
   -ms-transform: translateY(-50%) !important;
   -o-transform: translateY(-50%) !important;
   text-align: center;
-  max-width: 740px;
+  max-width: 500px;
   z-index: 2;
 }
 /* line 129, ../scss/layout/_global.scss */
@@ -3409,14 +3410,20 @@ body {
   color: #fff;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   text-decoration: none;
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 10px 30px 19px;
+  margin-top: 50px;
+  font-size: 18px;
+  font-style: italic;
 }
 
-/* line 140, ../scss/layout/_global.scss */
+/* line 146, ../scss/layout/_global.scss */
 .jssorb13 {
   position: absolute;
   bottom: 30px;
 }
-/* line 143, ../scss/layout/_global.scss */
+/* line 149, ../scss/layout/_global.scss */
 .jssorb13 div {
   bottom: 10px;
   overflow: hidden;
@@ -3426,7 +3433,7 @@ body {
   border-radius: 50%;
   background: #fff;
 }
-/* line 151, ../scss/layout/_global.scss */
+/* line 157, ../scss/layout/_global.scss */
 .jssorb13 div.av {
   background: #458ddb;
 }

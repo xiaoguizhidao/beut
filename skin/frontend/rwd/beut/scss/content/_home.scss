@@ -118,6 +118,7 @@ body.cms-home {
 }
 #lightSlider{
     text-align: center;
+    margin-bottom: 20px;
     h2.product-name{
         text-transform: none;
         a{
@@ -130,11 +131,6 @@ body.cms-home {
     .price-box{
         font-family: $f-neuton;
         font-size: $f-size;
-        .price{
-            color: $c-black;
-            font-size: $f-size;
-            font-family: $f-neuton;
-        }
     }
     .product-image{
         margin-bottom: 45px;
@@ -154,8 +150,8 @@ body.cms-home {
         margin-bottom: 3px;
     }
     li{
-        margin-bottom: 30px;
-        /*width: 144px;*/
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 .lSSlideOuter .lSPager.lSpg{
@@ -183,18 +179,18 @@ body.cms-home {
         }
         .content{
             margin-bottom: 30px;
-            font-size: $f-size-xl;
             overflow: hidden;
         }
         a{
-            font-size: $f-30;
+            font-size: $f-20;
             display: inline-block;
             color: $white;
             font-family: $f-neuton;
+            font-style: italic;
         }
         h3{
             color: $white;
-            font-size: $f-30;
+            font-size: $f-24;
             text-transform: none;
         }
     //    @include bp(max-width, $bp-large) and (min-width: $bp-medium)
@@ -228,7 +224,7 @@ body.cms-home {
 }
 .row5{
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     .row{
         height: 100%;
         .block2{
@@ -254,13 +250,17 @@ body.cms-home {
         }
     }
 }
-#slide3{
+
+.slideshow{
     .caption1{
         right: 130px;
         left: initial;
         color: $white;
+        #slide1 &{
+            left: 100px;
+        }
         .subcaption1{
-            font-size: 23px;
+            font-size: $f-size-xxl;
             text-transform: uppercase;
         }
         .subcaption2{
@@ -268,8 +268,11 @@ body.cms-home {
             text-transform: uppercase;
         }
         .subcaption3{
-            font-size: 22px;
+            font-size: $f-size-xxl;
             line-height: 1.5;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .link-text{
             margin-top: 60px;
@@ -584,7 +587,7 @@ body.cms-home {
     #header-search{
         padding-left: 15px;
         padding-right: 15px;
-        top: 56px;
+        top: 54px;
         padding: 0 10px;
         &.skip-active{
             height: 130px;

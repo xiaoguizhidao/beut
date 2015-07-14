@@ -86,9 +86,6 @@
   opacity: 1; }
 
 /* Dots */
-.slick-slider {
-  margin-bottom: 30px; }
-
 .slick-dots {
   position: absolute;
   bottom: -45px;
