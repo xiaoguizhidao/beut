@@ -27,6 +27,19 @@
     padding-top: 0;
 }
 
+#slide4 #lightSlider li{
+    margin-right: 30px;
+}
+#slide4 #lightSlider li:last-child{
+    margin-right: 0px;
+}
+#slide4 #lightSlider .slick-track {
+    margin:auto;
+}
+#slide4 .shop-more {
+    font-style: italic;
+}
+
 /* End common class*/
 /*Page not found*/
 .cms-index-noroute .main{
