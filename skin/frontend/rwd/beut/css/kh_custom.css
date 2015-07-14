@@ -1416,7 +1416,9 @@ ul.delivery-tabs li a{
     margin-left: auto;
     margin-right: auto;
 }
-
+.catalog-category-view .main-container{
+    margin-top: 50px;
+}
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1478,6 +1480,10 @@ ul.delivery-tabs li a{
         float: left;
         padding: 50px 15px;
     }
+    .slideshow .caption1 .subcaption2,
+    .category-image h2{
+        font-size: 20px;
+    }
     .cart-content #shopping-cart-table th .nobr, .cart-content #shopping-cart-table th,
     .cart .cart-totals table td,
     .cart-totals tr.subtotal td,
@@ -1506,7 +1512,10 @@ ul.delivery-tabs li a{
     .amscheckout .area-header,
     .collapse h3 a,
     .about-us-container h3,
-    .founder{
+    .founder,
+    .slideshow .caption1 .subcaption1,
+    .slideshow .caption1 .subcaption3,
+    .caption1 .link_text a{
         font-size: 12px;
     }
     .item-options,
@@ -1523,7 +1532,20 @@ ul.delivery-tabs li a{
     }
     .shipping .form-list .input-box div.selector span{
         padding-top: 10px;
-
+    }
+    .caption1 .link_text a{
+        margin-top: 10px;
+        padding: 5px 19px 8px;
+    }
+    .slideshow-pager span:before{
+        width: 5px;
+        height: 5px;
+        margin-top: 10px;
+    }
+    .row2,
+    .row5{
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
     .product-feature-descirption{
         padding: 25px 20px;

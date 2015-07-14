@@ -124,7 +124,7 @@ body {
     -ms-transform: translateY(-50%) !important;
     -o-transform: translateY(-50%) !important;
     text-align: center;
-    max-width: 740px;
+    max-width: 500px;
     z-index: 2;
     .link_text{
         cursor: pointer;
@@ -132,6 +132,12 @@ body {
             color: $white;
             font-family: $f-neuton;
             text-decoration: none;
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 10px 30px 19px;
+            margin-top: 50px;
+            font-size: $f-size-xxl;
+            font-style: italic;
         }
     }
 

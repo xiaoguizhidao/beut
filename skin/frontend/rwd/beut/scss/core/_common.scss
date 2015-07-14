@@ -141,7 +141,7 @@ div[class^='col-lg-']{
         padding: 0 !important;
     }
     .margin-xs-10{
-        margin-bottom: 10px !important;
+        margin-bottom: 2px !important;
     }
 }
 
@@ -274,6 +274,7 @@ label.select-label {
     .block-layered-nav{
         float: left;
         @include calc(max-width, "100% - 220px");
+        margin-top: 8px;
         .block-content{
             float: left;
             overflow: hidden;
@@ -1304,6 +1305,7 @@ a.button:hover {
 .price {
     font-family: $f-neuton;
     color: $c-black;
+    font-style: italic;
 }
 
 .price-box .price-label {
@@ -1599,7 +1601,6 @@ span.weee {
 
 .std ul {
     list-style: disc outside;
-    margin-bottom: $b-margin-bottom;
 }
 .std .note {
     color: $c-text-gray;
