@@ -117,17 +117,17 @@
 }
 
 /* Dots */
-/* line 144, ../scss/slick-theme.scss */
+/* line 143, ../scss/slick-theme.scss */
 .slick-dots {
   position: absolute;
-  bottom: -45px;
+  bottom: -29px;
   list-style: none;
   display: block;
   text-align: center;
   padding: 0;
   width: 100%;
 }
-/* line 152, ../scss/slick-theme.scss */
+/* line 151, ../scss/slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -137,13 +137,13 @@
   padding: 0;
   cursor: pointer;
 }
-/* line 160, ../scss/slick-theme.scss */
+/* line 159, ../scss/slick-theme.scss */
 .slick-dots li button {
   border: 0;
   background: #ddd;
   display: block;
-  height: 5px;
-  width: 5px;
+  height: 10px;
+  width: 10px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
@@ -170,11 +170,11 @@
       -moz-osx-font-smoothing: grayscale;
   }*/
 }
-/* line 175, ../scss/slick-theme.scss */
+/* line 174, ../scss/slick-theme.scss */
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
 }
-/* line 195, ../scss/slick-theme.scss */
+/* line 194, ../scss/slick-theme.scss */
 .slick-dots li.slick-active button {
   background: #498fd8;
 }
