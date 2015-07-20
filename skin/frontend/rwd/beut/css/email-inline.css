@@ -801,7 +801,7 @@ h2.products {
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* line 588, ../scss/email-inline.scss */

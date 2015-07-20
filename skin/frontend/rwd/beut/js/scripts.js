@@ -165,19 +165,18 @@ var FEelementControl = {
 
 		if($j('.brand').length > 0) {
 			$j('.brand').slick({
-				dots: true,
+				dots:true,
 				infinite: true,
 				speed: 300,
 				slidesToShow: 10,
 				slidesToScroll: 10,
-				swipe: true,
-				touchMove: true,
+				variableWidth: true,
 				responsive: [
 					{
 						breakpoint: 1024,
 						settings: {
-							slidesToShow: 6,
-							slidesToScroll: 6,
+							slidesToShow: 8,
+							slidesToScroll: 8,
 							infinite: true,
 							dots: true
 						}
@@ -185,8 +184,8 @@ var FEelementControl = {
 					{
 						breakpoint: 600,
 						settings: {
-							slidesToShow: 5,
-							slidesToScroll: 5,
+							slidesToShow: 7,
+							slidesToScroll: 7,
 							dots: true
 						}
 					},
@@ -275,14 +274,15 @@ var FEelementControl = {
 	confProdImage: function(){
 		if($j('.amconf-images-container').length > 0){
 			if($j('.amconf-image-container').length > 6){
-				$j('.amconf-images-container').slick({
-					dots: false,
-					infinite: true,
-					speed: 300,
-					slidesToShow: 6,
-					centerMode: true,
-					variableWidth: true
+				$j('.amconf-images-container').lightSlider({
+					item:6,
+					loop:true,
+					slideMove:1,
+					autoWidth: true,
+					speed:600
 				});
+
+
 			}
 		}
 	},

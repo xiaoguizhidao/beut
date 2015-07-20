@@ -27,7 +27,8 @@ padding: 0pt 10px 10px 0pt; float: left;
 	overflow: hidden;
 }
 div.block-layered-nav dd a {padding:0px 5px 0px 0px; display:block; float: left;}
-div.block-layered-nav dd a.clear-all {float: right;}
+div.block-layered-nav dd a.clear-all {float: right;border: 1px solid;padding: 4px 15px;}
+div.block-layered-nav dd a.clear-all:hover {text-decoration: none;}
 div.block-layered-nav dd a.amshopby-attr {padding-left:20px; position: relative;}
 div.block-layered-nav dd a.amshopby-attr-selected {font-weight: bold; padding-left:20px;position: relative;}
 div.block-layered-nav dd a img {padding: 0px 4px 5px; float:left;}

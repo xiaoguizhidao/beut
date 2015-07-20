@@ -28,7 +28,7 @@
 }
 
 #slide4 #lightSlider li{
-    margin-right: 30px;
+    margin-right: 5px;
 }
 #slide4 #lightSlider li:last-child{
     margin-right: 0px;
@@ -311,7 +311,8 @@
     color: #000;
 }
 .about-us-container:after,
-.about-us-container .content:after{
+.about-us-container .content:after,
+.footer-before-container .hot-prod{
     content: '';
     display: table;
     clear: both;
@@ -1432,9 +1433,35 @@ ul.delivery-tabs li a{
 .collapse h3.open + div {
     height: auto;
 }
-.footer-before-container .hot-prod{
+.footer-before-container{
      margin-top: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow: hidden;
+    width: 100%;
  }
+.brand-block {
+    text-align: center;
+    margin-top: 10px;
+}
+.brand-block h2{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.brand-block .desc{
+    font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
+    font-style: italic;
+    font-size: 14px;
+}
+.brand{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+.brand .slick-slide{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 #magentoPopupContainer{
     max-width: 80%;
     left: 0;
@@ -1481,13 +1508,57 @@ ul.delivery-tabs li a{
 .amconf-block select{
     display: none;
 }
-.products-grid .product-name,
-.products-list .product-name{
-    text-align: left;
-    position: relative;
-    font-family: "Century Gothic", Verdana, Arial, sans-serif;
-    margin-top: 10px;
+.a-right .toolbar-bottom .page-item{
+    display: none;
 }
+.pages .view-all{
+    font-weight: 400;
+}
+.pages .page-item a{
+    padding: 3px 10px;
+    display: inline-block;
+}
+.pages .custom-current a{
+    color: #fff;
+    background: #498fd8;
+    display: inline-block;
+    padding: 3px 10px;
+}
+.pages a:hover{
+    text-decoration: none;
+}
+.container-footer-toolbar .toolbar-left .first,
+.container-footer-toolbar .toolbar-left .last{
+    display: block;
+    position: relative;
+    height: 28px;
+    width: 15px;
+}
+.container-footer-toolbar .toolbar-left .first a:before,
+.container-footer-toolbar .toolbar-left .last a:before,
+.container-footer-toolbar .toolbar-left .first a:after,
+.container-footer-toolbar .toolbar-left .last a:after{
+    content: '\f104';
+    text-indent: inherit;
+    font-family: FontAwesome;
+    font-size: 20px;
+    line-height: 1.1;
+    position: absolute;
+}
+.container-footer-toolbar .toolbar-left .last a:before,
+.container-footer-toolbar .toolbar-left .last a:after{
+    content: '\f105';
+    right: 0;
+}
+.container-footer-toolbar .toolbar-left .first a:after{
+    color: #fff;
+    left: 2px;
+}
+.container-footer-toolbar .toolbar-left .last a:after{
+    color: #fff;
+    right: 2px;
+}
+
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1790,7 +1861,8 @@ ul.delivery-tabs li a{
         padding-top: 10px;
         padding-left: 15px;
     }
-    body[class*='cms-page-'] .page-title:after{
+    body[class*='cms-page-'] .page-title:after,
+    .footer-before-container .hot-prod:after{
         content: '';
         display: table;
         clear: both;

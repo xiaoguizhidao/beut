@@ -139,9 +139,6 @@ hr.amconf-hr{
     width: 100%;
     clear: both;
 }
-.category-products .amconf-images-container{
-     width: 210px;
-}
 
 .amconf-image-container
 {
@@ -151,8 +148,7 @@ hr.amconf-hr{
     margin-right: 5px;  
 }
 
-.amconf-image-title
-{
+.amconf-image-title{
     margin-bottom:5px;
 }
 
