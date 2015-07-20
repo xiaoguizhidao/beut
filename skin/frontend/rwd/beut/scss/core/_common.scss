@@ -277,7 +277,7 @@ label.select-label {
     .block-layered-nav{
         float: left;
         @include calc(max-width, "100% - 220px");
-        margin-top: 6px;
+        padding-top: 8px;
         .block-content{
             float: left;
             overflow: hidden;
