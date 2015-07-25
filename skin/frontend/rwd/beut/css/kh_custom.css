@@ -1578,7 +1578,20 @@ ul.delivery-tabs li a{
     color: #fff;
     right: 2px;
 }
-
+#ewcm_container{
+    background: #000 !important;
+    color: #fff !important;
+    text-align: center;
+}
+#ewcm_container a{
+    color: #fff !important;
+}
+.exten-show{
+    top: 32px;
+}
+.page-header.exten-show{
+    top: 82px;
+}
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;

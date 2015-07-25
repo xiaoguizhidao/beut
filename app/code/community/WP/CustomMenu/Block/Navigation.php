@@ -29,15 +29,19 @@ class WP_CustomMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         }
         $html[] = '<span>' . $name . '</span>';
         $html[] = '</a>';
-        if ($hasSubMenu) {
+        $blockHtml = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId("submenu-mobile-".$id )->toHtml();
+        //if ($hasSubMenu) {
+        if ($blockHtml) {
             $html[] = '<span class="button" rel="submenu-mobile-' . $id . '" onclick="wpSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
         }
         $html[] = '</div>';
         // --- Add Popup block (hidden) ---
-        if ($hasSubMenu) {
+       // if ($hasSubMenu) {
+        if ($blockHtml) {
             // --- draw Sub Categories ---
             $html[] = '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="wp-custom-menu-submenu" style="display: none;">';
-            $html[] = $this->drawMobileMenuItem($activeChildren);
+            $html[] = $blockHtml;
+            //$html[] = $this->drawMobileMenuItem($activeChildren);
             $html[] = '<div class="clearBoth"></div>';
             $html[] = '</div>';
         }
@@ -103,13 +107,13 @@ class WP_CustomMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
             // --- Popup function for hide ---
             $htmlPopup[] = '<div id="popup' . $id . '" class="wp-custom-menu-popup" onmouseout="wpHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')" onmouseover="wpPopupOver(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
             // --- draw Sub Categories ---
-            if (count($activeChildren)) {
+           /* if (count($activeChildren)) {
                 $columns = (int)Mage::getStoreConfig('custom_menu/columns/count');
                 $htmlPopup[] = '<div class="block1">';
                 $htmlPopup[] = $this->drawColumns($activeChildren, $columns);
                 $htmlPopup[] = '<div class="clearBoth"></div>';
                 $htmlPopup[] = '</div>';
-            }
+            }*/
             // --- draw Custom User Block ---
             if ($blockHtml) {
                 $htmlPopup[] = '<div id="' . $blockId . '" class="block2">';
