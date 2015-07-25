@@ -121,7 +121,7 @@ body.cms-home {
     h2{
         text-transform: uppercase;
         color: $c-black;
-        font-size: $f-24;
+        font-size: $f-24 + 2;
         margin-bottom: 0;
     }
     .desc{
@@ -156,7 +156,7 @@ body.cms-home {
     }
     .price-box{
         font-family: $f-neuton;
-        font-size: $f-size;
+        font-size: $f-size-s + 1;
     }
     .product-image{
         margin-bottom: 45px;
@@ -171,13 +171,13 @@ body.cms-home {
         display: none;
     }
     .product-brand{
-        font-size: $f-size;
+        font-size: $f-size-s + 1;
         line-height: 1.2;
         margin-bottom: 3px;
     }
     li{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 .lSSlideOuter .lSPager.lSpg{
@@ -206,6 +206,7 @@ body.cms-home {
         .content{
             margin-bottom: 30px;
             overflow: hidden;
+            font-size: 16px;
         }
         a{
             font-size: $f-20;
@@ -213,11 +214,17 @@ body.cms-home {
             color: $white;
             font-family: $f-neuton;
             font-style: italic;
+            &.find-out{
+                font-size: 26px;
+                letter-spacing: 3px;
+            }
         }
         h3{
             color: $white;
-            font-size: $f-24;
+            font-size: $f-24 + 2;
+            letter-spacing: 3px;
             text-transform: none;
+            margin-bottom: 14px;
         }
     //    @include bp(max-width, $bp-large) and (min-width: $bp-medium)
         @media only screen and (max-width: 1024px) and (min-width: $bp-medium){

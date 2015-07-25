@@ -3418,6 +3418,16 @@ body {
   margin-top: 50px;
   font-size: 18px;
   font-style: italic;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 142, ../scss/layout/_global.scss */
+.caption1 .link_text a:hover {
+  background: #498fd8;
+  border: 1px solid #498fd8;
 }
 
 /* ============================================ *
@@ -4105,38 +4115,36 @@ body {
   border: none;
   float: none;
   padding: 0;
+  font-size: 26px;
 }
-/* line 80, ../scss/layout/_header-search.scss */
+/* line 81, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {
   outline: 0;
   border: none;
 }
-/* line 84, ../scss/layout/_header-search.scss */
+/* line 85, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-moz-placeholder {
   text-transform: uppercase;
   font-size: 26px;
-  line-height: 0.8;
 }
 /* line 89, ../scss/layout/_header-search.scss */
 #search_mini_form #search::-webkit-input-placeholder {
   text-transform: uppercase;
   font-size: 26px;
-  line-height: 0.8;
 }
-/* line 94, ../scss/layout/_header-search.scss */
+/* line 93, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-ms-input-placeholder {
   text-transform: uppercase;
   font-size: 26px;
-  line-height: 0.8;
 }
-/* line 101, ../scss/layout/_header-search.scss */
+/* line 99, ../scss/layout/_header-search.scss */
 #search_mini_form label {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
 }
-/* line 107, ../scss/layout/_header-search.scss */
+/* line 105, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button {
   display: block;
   padding: 0;
@@ -4152,13 +4160,13 @@ body {
   float: right;
   margin-top: 10px;
 }
-/* line 117, ../scss/layout/_header-search.scss */
+/* line 115, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover {
   border: none;
   background-position: 97% -37px;
 }
 
-/* line 124, ../scss/layout/_header-search.scss */
+/* line 122, ../scss/layout/_header-search.scss */
 #search {
   width: 100%;
   height: 40px;
@@ -4166,24 +4174,24 @@ body {
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   border: none;
 }
-/* line 130, ../scss/layout/_header-search.scss */
+/* line 128, ../scss/layout/_header-search.scss */
 #search ::-moz-focus-inner, #search :focus {
   border: 0;
   outline: 0;
 }
 
-/* line 136, ../scss/layout/_header-search.scss */
+/* line 134, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover:before {
   opacity: 0.8;
 }
 
-/* line 140, ../scss/layout/_header-search.scss */
+/* line 138, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:active:before {
   margin-top: -13px;
   margin-left: -13px;
 }
 
-/* line 144, ../scss/layout/_header-search.scss */
+/* line 142, ../scss/layout/_header-search.scss */
 #search_mini_form .input-box {
   -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -4511,8 +4519,10 @@ body {
 .footer a {
   color: #fff !important;
   text-decoration: none;
+  font-size: 13px;
+  line-height: 1.7;
 }
-/* line 74, ../scss/layout/_footer.scss */
+/* line 76, ../scss/layout/_footer.scss */
 .footer .footer-newsleter label {
   color: #fff;
   text-transform: none;
@@ -4520,90 +4530,91 @@ body {
   font-size: 16px;
   margin-bottom: 30px;
 }
-/* line 81, ../scss/layout/_footer.scss */
+/* line 83, ../scss/layout/_footer.scss */
 .footer .footer-newsleter input {
   width: 400px;
   height: 40px;
   background: #fff;
   border: none;
 }
-/* line 88, ../scss/layout/_footer.scss */
+/* line 90, ../scss/layout/_footer.scss */
 .footer .footer-links {
   padding-left: 30px;
 }
-/* line 96, ../scss/layout/_footer.scss */
+/* line 98, ../scss/layout/_footer.scss */
 .footer .block-title {
   border-bottom: 0;
   padding: 3px 0;
 }
-/* line 101, ../scss/layout/_footer.scss */
+/* line 103, ../scss/layout/_footer.scss */
 .footer .block-title strong {
   font-weight: normal;
 }
-/* line 104, ../scss/layout/_footer.scss */
+/* line 106, ../scss/layout/_footer.scss */
 .footer .title {
   color: #fff;
   text-transform: none;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: normal;
+  font-size: 16px;
 }
-/* line 115, ../scss/layout/_footer.scss */
+/* line 118, ../scss/layout/_footer.scss */
 .footer .phone-footer-block p {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 }
-/* line 129, ../scss/layout/_footer.scss */
+/* line 132, ../scss/layout/_footer.scss */
 .footer .phone-footer-block p a {
   display: inline-block;
   margin-left: 17px;
   margin-right: 17px;
 }
-/* line 133, ../scss/layout/_footer.scss */
+/* line 136, ../scss/layout/_footer.scss */
 .footer .phone-footer-block p a:last-child {
   margin-right: 0;
 }
-/* line 136, ../scss/layout/_footer.scss */
+/* line 139, ../scss/layout/_footer.scss */
 .footer .phone-footer-block p a:first-child {
   margin-left: 0;
 }
-/* line 140, ../scss/layout/_footer.scss */
+/* line 143, ../scss/layout/_footer.scss */
 .footer .phone-footer-block p span {
   display: block;
 }
-/* line 147, ../scss/layout/_footer.scss */
+/* line 150, ../scss/layout/_footer.scss */
 .footer .links {
   float: left;
   width: 17%;
   padding: 0 30px 0 0;
   margin-bottom: 30px;
 }
-/* line 153, ../scss/layout/_footer.scss */
+/* line 156, ../scss/layout/_footer.scss */
 .footer .links li {
   word-break: break-all;
   line-height: 1.4;
   padding: 4px 0;
 }
-/* line 159, ../scss/layout/_footer.scss */
+/* line 162, ../scss/layout/_footer.scss */
 .footer .links a {
   color: #fff;
 }
-/* line 161, ../scss/layout/_footer.scss */
+/* line 164, ../scss/layout/_footer.scss */
 .footer .links a:hover {
   color: #fff;
 }
-/* line 167, ../scss/layout/_footer.scss */
+/* line 170, ../scss/layout/_footer.scss */
 .footer .block-subscribe {
   float: right;
   width: 420px;
   margin-bottom: 30px;
 }
-/* line 173, ../scss/layout/_footer.scss */
+/* line 176, ../scss/layout/_footer.scss */
 .footer .links,
 .footer .block-subscribe {
   text-transform: uppercase;
   font-size: 12px;
 }
-/* line 183, ../scss/layout/_footer.scss */
+/* line 186, ../scss/layout/_footer.scss */
 .footer .links.social-media em {
   background-image: url(../images/social_icons.png);
   background-repeat: no-repeat;
@@ -4613,58 +4624,58 @@ body {
   margin-right: 7px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 4 / 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  /* line 193, ../scss/layout/_footer.scss */
+  /* line 196, ../scss/layout/_footer.scss */
   .footer .links.social-media em {
     background-image: url(../images/social_icons@2x.png);
     background-size: 50px 125px;
   }
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .links.social-media em.facebook {
   background-position: 0 -0px;
   height: 13px;
 }
-/* line 205, ../scss/layout/_footer.scss */
+/* line 208, ../scss/layout/_footer.scss */
 .footer .links.social-media a:hover em.facebook {
   background-position: -25px -0px;
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .links.social-media em.twitter {
   background-position: 0 -24px;
   height: 13px;
 }
-/* line 205, ../scss/layout/_footer.scss */
+/* line 208, ../scss/layout/_footer.scss */
 .footer .links.social-media a:hover em.twitter {
   background-position: -25px -24px;
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .links.social-media em.youtube {
   background-position: 0 -49px;
   height: 13px;
 }
-/* line 205, ../scss/layout/_footer.scss */
+/* line 208, ../scss/layout/_footer.scss */
 .footer .links.social-media a:hover em.youtube {
   background-position: -25px -49px;
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .links.social-media em.pinterest {
   background-position: 0 -74px;
   height: 15px;
 }
-/* line 205, ../scss/layout/_footer.scss */
+/* line 208, ../scss/layout/_footer.scss */
 .footer .links.social-media a:hover em.pinterest {
   background-position: -25px -74px;
 }
-/* line 200, ../scss/layout/_footer.scss */
+/* line 203, ../scss/layout/_footer.scss */
 .footer .links.social-media em.rss {
   background-position: 0 -99px;
   height: 13px;
 }
-/* line 205, ../scss/layout/_footer.scss */
+/* line 208, ../scss/layout/_footer.scss */
 .footer .links.social-media a:hover em.rss {
   background-position: -25px -99px;
 }
-/* line 218, ../scss/layout/_footer.scss */
+/* line 221, ../scss/layout/_footer.scss */
 .footer .block-subscribe .input-box {
   float: left;
   width: -moz-calc(100% - 78px);
@@ -4672,36 +4683,14 @@ body {
   width: calc(100% - 78px);
   padding-top: 0;
 }
-/* line 223, ../scss/layout/_footer.scss */
+/* line 226, ../scss/layout/_footer.scss */
 .footer .form-subscribe-header {
   text-align: center;
 }
-/* line 227, ../scss/layout/_footer.scss */
+/* line 230, ../scss/layout/_footer.scss */
 .footer .block-subscribe .input-text {
   width: 100%;
   border-right: 0;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  padding-top: 7px;
-}
-/* line 66, ../scss/mixin/_menu.scss */
-.footer .block-subscribe .input-text:-moz-placeholder {
-  font-size: 10px;
-}
-/* line 69, ../scss/mixin/_menu.scss */
-.footer .block-subscribe .input-text:-ms-input-placeholder {
-  font-size: 10px;
-}
-/* line 72, ../scss/mixin/_menu.scss */
-.footer .block-subscribe .input-text::-moz-placeholder {
-  font-size: 10px;
-}
-/* line 75, ../scss/mixin/_menu.scss */
-.footer .block-subscribe .input-text::-webkit-input-placeholder {
-  font-size: 10px;
 }
 /* line 235, ../scss/layout/_footer.scss */
 .footer .block-subscribe .block-content {
@@ -4756,26 +4745,31 @@ body {
   width: 100%;
   font-size: 11px;
   padding: 30px 15px 0;
+  margin-top: 30px;
 }
-/* line 285, ../scss/layout/_footer.scss */
+/* line 286, ../scss/layout/_footer.scss */
 .footer address .payment-method-mobile {
   display: none;
 }
-/* line 288, ../scss/layout/_footer.scss */
+/* line 289, ../scss/layout/_footer.scss */
 .footer address .payment1 {
   display: none;
 }
-/* line 296, ../scss/layout/_footer.scss */
+/* line 293, ../scss/layout/_footer.scss */
+.footer .phone-footer-block {
+  font-size: 13px;
+}
+/* line 300, ../scss/layout/_footer.scss */
 .footer .links {
   width: 22.65625%;
   padding-right: 0;
   margin-right: 3.125%;
 }
-/* line 302, ../scss/layout/_footer.scss */
+/* line 306, ../scss/layout/_footer.scss */
 .footer .links:nth-child(4) {
   margin-right: 0;
 }
-/* line 306, ../scss/layout/_footer.scss */
+/* line 310, ../scss/layout/_footer.scss */
 .footer .block-subscribe {
   clear: both;
   float: none;

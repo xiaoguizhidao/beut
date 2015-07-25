@@ -65,6 +65,8 @@
     a{
         color: $white !important;
         text-decoration: none;
+        font-size: $f-size-s;
+        line-height: 1.7;
         @include bp(max-width,$bp-medium){
             text-align: center;
             display: block;
@@ -104,8 +106,9 @@
     .title{
         color: $white;
         text-transform: none;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         font-weight: normal;
+        font-size: $f-size-xl;
         @include bp(max-width, $bp-medium){
             text-align: center;
             margin-bottom: 10px;
@@ -114,7 +117,7 @@
     .phone-footer-block{
         p{
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 22px;
             @include bp(max-width, $bp-medium) {
                 text-align: center;
                 margin-bottom: 8px;
@@ -227,9 +230,6 @@
     .block-subscribe .input-text {
         width: 100%;
         border-right: 0;
-        @include border-radius(0);
-        @include placeholder($f-size-xxs - 1);
-        padding-top: 7px;
     }
 
     .block-subscribe .block-content {
@@ -282,12 +282,16 @@
         width: 100%;
         font-size: $f-size-xxs;
         padding: $trim 15px 0;
+        margin-top: 30px;
         .payment-method-mobile{
             display: none;
         }
         .payment1{
             display: none;
         }
+    }
+    .phone-footer-block{
+        font-size: $f-size-s;
     }
 
     $links-trim: percentage(30px / 960px);

@@ -6,13 +6,6 @@
 }
 
 /* Icons */
-@font-face {
-  font-family: "slick";
-  src: url('../scss/fonts/slick.eot');
-  src: url('../scss/fonts/slick.eot?#iefix') format("embedded-opentype"), url('../scss/fonts/slick.woff') format("woff"), url('../scss/fonts/slick.ttf') format("truetype"), url('../scss/fonts/slick.svg#slick') format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 /* Arrows */
 /* line 58, ../scss/slick-theme.scss */
 .slick-prev,
@@ -86,11 +79,11 @@
 }
 /* line 114, ../scss/slick-theme.scss */
 .slick-prev:before {
-  content: "";
+  content: "";
 }
 /* line 116, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-prev:before {
-  content: "";
+  content: "";
 }
 
 /* line 122, ../scss/slick-theme.scss */
@@ -104,11 +97,11 @@
 }
 /* line 128, ../scss/slick-theme.scss */
 .slick-next:before {
-  content: "";
+  content: "";
 }
 /* line 130, ../scss/slick-theme.scss */
 [dir="rtl"] .slick-next:before {
-  content: "";
+  content: "";
 }
 
 /* line 136, ../scss/slick-theme.scss */
@@ -120,7 +113,7 @@
 /* line 143, ../scss/slick-theme.scss */
 .slick-dots {
   position: absolute;
-  bottom: -29px;
+  bottom: -35px;
   list-style: none;
   display: block;
   text-align: center;

@@ -138,6 +138,11 @@ body {
             margin-top: 50px;
             font-size: $f-size-xxl;
             font-style: italic;
+            @include letransition(all,0.3s,ease-in-out);
+            &:hover{
+                background: $c-blue;
+                border: 1px solid $c-blue;
+            }
         }
     }
 
