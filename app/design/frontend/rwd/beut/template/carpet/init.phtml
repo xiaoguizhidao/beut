@@ -45,7 +45,9 @@
 				});	
 			lengthInput.observe('keyup',this.getFromFields.bind(this));
 			$('qty').setStyle({display: "none"});
-			$$('.qty-wrapper').setStyle({display: "none"});
+            $$('.qty-wrapper').each(function(j) {
+                j.setStyle({display: "none"});
+            });
 			$$(".add-to-cart label").each(function(j){
 				j.setStyle({display: "none"});
 				});

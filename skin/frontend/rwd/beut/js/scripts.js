@@ -415,7 +415,16 @@ var FEelementControl = {
 			var link = $j(this).parent('.skip-content').siblings('.page-title');
 			link.find('.skip-cms').removeClass('skip-active');
 		})
-	}
+	},
+    ewToggle: function(){
+        if($j('#ewcm_container').is(':visible')){
+            $j('.header-language-background,.page-header').addClass('exten-show');
+
+        }
+        $j('#ewcm_container').on('click',function(){
+            $j('.header-language-background,.page-header').removeClass('exten-show');
+        });
+    }
 };
 
 jQuery(document).ready(function ($) {
@@ -434,6 +443,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.cmsCollapse();
 	FEelementControl.aboutSlide();
 	FEelementControl.toggleCmsMenu();
+	FEelementControl.ewToggle();
 	FEelementControl.equalHeight('.category-products .item');
 });
 jQuery(window).load(function($){
