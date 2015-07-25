@@ -55,7 +55,7 @@
 }
 .page-not-found{
     margin: auto;
-    padding-top: 150px;
+    padding-top: 125px;
     text-align: center;
     width: 90%;
 }
@@ -65,26 +65,34 @@
 }
 .page-not-found #pnf-search {
     border: 1px solid #cccccc;
-    height: 40px;
-    padding: 0 15px;
+    height: 60px;
+    padding: 0 25px;
     background-color: white;
     background-repeat: no-repeat;
+    margin-top: 15px;
+}
+.cms-no-route .footer-before-container{
+    display: none;
 }
 .page-not-found p {
     color: black !important;
     font-style: normal !important;
     margin-top: 20px;
+    font-size: 16px;
+    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .page-not-found .page-title h3{
-    font-size: 30px;
+    font-size: 40px;
     text-transform: none;
     color: black !important;
+    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .page-not-found  .page-title  h1 {
     color: black !important;
-    font-size: 40px;
+    font-size: 67px;
     font-weight: bold;
     margin-bottom: 0;
+    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .page-not-found .pnf-button {
     background: url("../images/pnf-search.png");
@@ -102,15 +110,18 @@
     float: left;
     margin: auto;
     text-align: center;
-    width: 50%;
+    width: 60%;
+    padding-left: 5%;
 }
 .pnf-right {
-    width: 50%;
+    width: 40%;
     float:left;
 }
 .pnf-right img {
     padding-top: 150px;
     width: 94%!important;
+    text-align: left;
+    float: left;
 }
 /*Login page*/
 .customer-account-login .main,
@@ -317,7 +328,7 @@
     display: table;
     clear: both;
 }
-.cms-brand .page-title h1,
+.category-designers .page-title h1, .cms-brand .page-title h1,
 .about-us-container .top-content h2,
 .cms-about-us .testimonial h2,
 .founder h2{
@@ -328,7 +339,7 @@ ul.brands li a,
 .founder .name,
 .cms-about-us .std .slider-text p:last-child,
 .can-we-help .title,
-.cms-brand .std p strong{
+.category-designers  p strong, .cms-brand .std p strong{
     font-size: 22px;
 }
 
@@ -337,7 +348,8 @@ ul.brands li a,
     margin-bottom: 0;
 }
 .about-us-container .top-content p{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 .about-us-container .our-history{
     margin-top: 10px;
@@ -361,16 +373,15 @@ ul.brands li a,
 }
 
 .about-us-container .content{
-    padding: 53px 100px;
+    padding: 53px 100px 0;
 }
 .cms-about-us .menu-left {
     float: left;
     width: 180px;
 }
 .cms-about-us .content-right {
-    float: left;
-    width: calc(100% - 250px);
-    margin-left: 50px;
+    float: right;
+    width: calc(100% - 300px);
 }
 .cms-about-us .content-right .maincontent .left{
     float: left;
@@ -383,7 +394,7 @@ ul.brands li a,
 .cms-about-us .services{
     clear: both;
     padding: 0 100px;
-    margin-top: 70px;
+    margin-top: 85px;
 }
 .cms-about-us .services div:last-child{
     margin-right: 0;
@@ -392,8 +403,8 @@ ul.brands li a,
     clear: both;
     background: #bbbbbb;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin-top: 50px;
     color:white;
 }
@@ -428,6 +439,8 @@ ul.brands li a,
     font-family: 'Neuton-Regular', Verdana, Arial, sans-serif;
     font-size: 15px;
     margin-top: 88px;
+    font-style:italic;
+    text-transform:capitalize;
 }
 .cms-page-view .std .founder img{
     margin-right: 20px;
@@ -438,11 +451,10 @@ ul.brands li a,
 .founder h2{
     text-transform: none;
 }
-
 .cms-about-us .founder{
-    padding-top: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding:65px 100px 45px;
+    border-bottom: 1px solid #eeeeee;
+
 }
 .founder-left, .founder-right {
     float: left;
@@ -491,7 +503,7 @@ ul.brands li a,
 .cms-about-us .std .menu-left li, .cms-faqs .menu-left li, .delivery-contents .menu-left li{
     color:black;
     font-style: normal;
-    padding: 15px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #cccccc;
     margin: 0;
 }
@@ -504,6 +516,8 @@ ul.brands li a,
 .cms-about-us .menu-left li a, .cms-faqs .menu-left li a, .delivery-contents .menu-left li a{
     color:black;
     padding-left: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
 }
 .cms-about-us .menu-left li a:hover{
     text-decoration: none;
@@ -515,7 +529,7 @@ ul.brands li a,
 .cms-page-view .std img, .cms-no-route .std img{
     margin: auto auto 20px;
 }
-.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.cms-brand .main-container.col1-layout, .checkout-cart-index{
+.cms-faqs .main-container.col1-layout, .cms-about-us .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.category-designers .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
     margin-top: 135px;
 }
 
@@ -526,13 +540,15 @@ ul.brands li a,
     text-align: center;
 }
 .cms-about-us .services .title{
-    font-size: 1.5em;
+    font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 15px;
 }
 .cms-about-us  .menu-left li.menu-about-us a{
     color:#498fd8;
+    font-size: 14px;
+    text-transform: capitalize;
 }
 .faqs-top {
     background: #f7f8f9 none repeat scroll 0 0;
@@ -656,7 +672,7 @@ ul.brands li a,
 }
 /*cms brand*/
 
-.cms-brand .main {
+.category-designers .main, .cms-brand .main {
     background: url("../images/brand.png");
     background-size: auto 100%;
     padding:20px 50px 40px;
@@ -690,7 +706,7 @@ ul.brands li a,
     width: 20%;
 }
 ul.brands {
-    padding: 7px 11px 7px 0;
+    padding: 0px;
 }
 ul.brands li {
     display: inline;
@@ -707,18 +723,18 @@ ul.brands li a {
     color: #000000;
     font-style: normal;
 }
-.cms-brand .page-title h1 {
+.category-designers .page-title h1, .cms-brand .page-title h1 {
     font-weight: normal;
     text-align: center;
     text-transform: none;
     float: none;
-    padding-top: 35px;
-    padding-bottom: 14px;
+    padding-top: 50px;
+    padding-bottom: 35px;
 }
-.cms-brand .std p {
+.category-designers p, .cms-brand .std p {
     line-height: 12px;
 }
-.cms-brand .std p strong{
+.category-designers p strong, .cms-brand .std p strong{
     font-weight: normal;
     padding-bottom: 7px;
     padding-top: 27px;
@@ -1343,10 +1359,9 @@ ul.delivery-tabs li a{
     width: 35px;
 }
 #search_pnf_form div{
-    width: 300px;
+    width: 395px;
     margin:auto;
 }
-
 
 .cms-faqs .menu-left li.faqs a {
     color: #498fd8;
@@ -1366,6 +1381,7 @@ ul.delivery-tabs li a{
 /*collapse*/
 .about-us-container h3{
     font-size: 15px;
+    color: #000000;
 }
 .collapse h3 {
     margin: 0;
@@ -1430,6 +1446,10 @@ ul.delivery-tabs li a{
 .collapse .content li{
     text-indent: -4px;
 }
+.cms-about-us .collapse .content li{
+    text-indent: 2px;
+}
+
 .collapse h3.open + div {
     height: auto;
 }
@@ -1580,7 +1600,7 @@ ul.delivery-tabs li a{
     .cms-faqs .main-container.col1-layout,
     .cms-about-us .main-container.col1-layout,
     .contacts-index-index .main-container.col1-layout,
-    .cms-brand .main-container.col1-layout,
+    .cms-brand .main-container.col1-layout, .category-designers .main-container.col1-layout,
     .customer-account-login .main,
     .checkout-cart-index {
         margin-top:0px;
@@ -1613,7 +1633,7 @@ ul.delivery-tabs li a{
     .cms-faqs .main-container.col1-layout,
     .cms-about-us .main-container.col1-layout,
     .contacts-index-index .main-container.col1-layout,
-    .cms-brand .main-container.col1-layout,
+    .cms-brand .main-container.col1-layout,  .category-designers .main-container.col1-layout
     .checkout-cart-index,
     .customer-account-login .main,
     .checkout-onepage-index .main-container,
@@ -1746,7 +1766,7 @@ ul.delivery-tabs li a{
         padding: 30px;
         background: transparent;
     }
-    .cms-brand .main {
+    .cms-brand .main, .category-designers  .main {
         padding: 20px 15px 40px;
     }
     ul.brands {
@@ -2110,3 +2130,44 @@ ul.delivery-tabs li a{
         line-height: 62px;
     }
 }*/
+.cms-about-us p {
+    font-size: 14px;
+}
+.cms-about-us .col-lg-4 {
+    padding-left: 0!important;
+}
+.cms-about-us .col-lg-8 {
+    padding-left: 50px;
+}
+.cms-about-us .testimonial .title h2{
+    color:black;
+}
+.testimonial h2{
+    color:white;
+}
+.category-designers .category-image{
+    display: none;
+}
+.category-designers p {
+    margin: 0;
+}
+.category-designers .page-title h1 {
+    font-size: 35px;
+}
+.category-designers p a{
+    font-size: 14px;
+    line-height: 30px;
+}
+ul.brands li:last-child{
+    padding: 0px;
+    float: right;
+    margin: 0;
+}
+.faq strong {
+     color: #444444;
+     font-size: 14px;
+ }
+.faq p {
+    color: #444444;
+    font-size: 13px;
+}

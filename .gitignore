@@ -1420,4 +1420,8 @@ var/session/sess_v148ljg3cnddi9infddlq8dt14
 var/
 media/
 .idea/
+app/etc/local.xml
+.idea/.name
+.idea/.beutugrade
+
 
