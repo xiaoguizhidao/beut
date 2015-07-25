@@ -70,33 +70,36 @@
   float: left;
   height: 100%;
   min-height: 1px;
+  position: relative;
   display: none;
 }
-/* line 67, ../scss/slick.scss */
+/* line 68, ../scss/slick.scss */
 [dir="rtl"] .slick-slide {
   float: right;
 }
-/* line 70, ../scss/slick.scss */
+/* line 71, ../scss/slick.scss */
 .slick-slide img {
   display: block;
+  width: 100%;
+  height: auto;
 }
-/* line 73, ../scss/slick.scss */
+/* line 76, ../scss/slick.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
-/* line 79, ../scss/slick.scss */
+/* line 82, ../scss/slick.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
-/* line 83, ../scss/slick.scss */
+/* line 86, ../scss/slick.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
-/* line 87, ../scss/slick.scss */
+/* line 90, ../scss/slick.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
-/* line 91, ../scss/slick.scss */
+/* line 94, ../scss/slick.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;

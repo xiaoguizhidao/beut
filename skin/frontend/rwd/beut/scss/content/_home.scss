@@ -66,7 +66,16 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: "CatFont";
+    src: url("../fonts/flaticon.eot");
+    src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+    url("../fonts/flaticon.woff") format("woff"),
+    url("../fonts/flaticon.ttf") format("truetype"),
+    url("../fonts/flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 body.cms-home {
     .main-container {
         margin-top: 50px;
@@ -268,73 +277,44 @@ body.cms-home {
     }
 }
 
-.slideshow{
-    .caption1{
-        right: 130px;
-        left: initial;
+.caption1{
+    right: 130px;
+    left: initial;
+    color: $white;
+    #slide1 &{
+        left: 100px;
+    }
+    .subcaption1{
+        font-size: $f-size-xxl;
+        text-transform: uppercase;
+    }
+    .subcaption2{
+        font-size: 45px;
+        text-transform: uppercase;
+    }
+    .subcaption3{
+        font-size: $f-size-xxl;
+        line-height: 1.5;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .link-text{
+        margin-top: 60px;
+        font-size: 22px;
         color: $white;
-        #slide1 &{
-            left: 100px;
-        }
-        .subcaption1{
-            font-size: $f-size-xxl;
-            text-transform: uppercase;
-        }
-        .subcaption2{
-            font-size: 45px;
-            text-transform: uppercase;
-        }
-        .subcaption3{
-            font-size: $f-size-xxl;
-            line-height: 1.5;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .link-text{
-            margin-top: 60px;
-            font-size: 22px;
-            color: $white;
-            border: 1px solid $white;
-            height: 60px;
-            padding-top:8px;
-            padding-left: 15px;
-            padding-right: 15px;
-            display: inline-block;
-        }
-    }
-
-}
-.lSSlideOuter {
-    .lSAction {
-        .lSNext {
-            &:before,&:after {
-                content: "\f105";
-                font-family: 'FontAwesome';
-                font-size: 20px;
-                position: absolute;
-                right: 0;
-            }
-            &:after{
-                color: $white;
-                right: 1px;
-            }
-        }
-        .lSPrev {
-            &:before,&:after {
-                content: "\f104";
-                font-family: 'FontAwesome';
-                font-size: 20px;
-                position: absolute;
-            }
-            &:after{
-                color: $white;
-                left: 1px;
-            }
-        }
+        border: 1px solid $white;
+        height: 60px;
+        padding-top:8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: inline-block;
     }
 }
 
+body.cms-home .slideshow-container{
+    overflow: hidden;
+}
 
     /* -------------------------------------------- *
      * Promotion Banner Section
