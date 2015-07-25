@@ -138,4 +138,8 @@
     .slick-dots li.slick-active button {
       background: #498fd8; }
 
+#slide1 .slick-dots,
+#slide3 .slick-dots {
+  bottom: 0; }
+
 /*# sourceMappingURL=slick-theme.css.map */

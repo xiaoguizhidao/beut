@@ -156,7 +156,6 @@
     z-index: 9999;
     -webkit-transition: opacity 0.35s linear 0s;
     transition: opacity 0.35s linear 0s;
-    opacity: 0;
     margin-bottom: 0;
 }
 .lSAction > .lSPrev {
@@ -164,10 +163,6 @@
 }
 .lSAction > .lSNext {
     right: 0;
-}
-.lSSlideOuter:hover .lSAction > .lSPrev,
-.lSSlideOuter:hover .lSAction > .lSNext{
-    opacity: 1;
 }
 
 .lSAction > a.disabled {

@@ -122,7 +122,9 @@ hr.amconf-hr{
 	position: absolute;
 	padding-left: 3px;
 }
-
+ .amconf-image{
+     border: 1px solid #fff;
+ }
 .amconf-image-selected
 {
     border: 1px solid #636363;

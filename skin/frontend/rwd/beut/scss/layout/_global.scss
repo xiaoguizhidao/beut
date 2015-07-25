@@ -134,28 +134,10 @@ body {
             text-decoration: none;
             display: inline-block;
             border: 1px solid #fff;
-            padding: 10px 30px 19px;
+            padding: 10px 45px 19px;
             margin-top: 50px;
             font-size: $f-size-xxl;
             font-style: italic;
-        }
-    }
-
-}
-
-.jssorb13{
-    position: absolute;
-    bottom: 30px;
-    div{
-        bottom: 10px;
-        overflow:hidden;
-        cursor: pointer;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #fff;
-        &.av{
-            background: #458ddb;
         }
     }
 

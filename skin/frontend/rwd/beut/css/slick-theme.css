@@ -179,4 +179,10 @@
   background: #498fd8;
 }
 
+/* line 199, ../scss/slick-theme.scss */
+#slide1 .slick-dots,
+#slide3 .slick-dots {
+  bottom: 0;
+}
+
 /*# sourceMappingURL=slick-theme.css.map */
