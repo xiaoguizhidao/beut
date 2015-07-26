@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <default>
+    <catalog_product_view>
         <reference name="head">
             <action method="addJs"><script>aw_ajaxcartpro/ajaxcartpro.js</script></action>
             <action method="addJs"><script>aw_ajaxcartpro/updaters/cart.js</script></action>
@@ -31,7 +31,7 @@
             <block type="ajaxcartpro/confirmation_removeproduct" template="ajaxcartpro/confirm/removeproduct.phtml" name="aw.ajaxcartpro.confirm.removeproduct" />
             <block type="core/template" template="ajaxcartpro/options-container.phtml" name="aw.ajaxcartpro.container" />
         </reference>
-    </default>
+    </catalog_product_view>
     <remove_ajaxcartpro>
         <remove name="aw.ajaxcartpro.init"/>
         <remove name="aw.ajaxcartpro.overlay"/>

@@ -13,7 +13,7 @@
     margin-left: -5px;
 }
 .currency {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 25px;
 }
 .faqs-title-mobile {
@@ -1577,12 +1577,14 @@ ul.delivery-tabs li a{
     background: #000 !important;
     color: #fff !important;
     text-align: center;
+    min-height: 40px;
+    line-height: 40px;
 }
 #ewcm_container a{
     color: #fff !important;
 }
 .exten-show{
-    top: 32px;
+    top: 40px;
 }
 .page-header.exten-show{
     top: 82px;
@@ -2199,4 +2201,103 @@ ul.brands li:last-child{
 .faq p {
     color: #444444;
     font-size: 13px;
+}
+/*Khoai style */
+.footer .footer-newsleter label{
+    font-size: 14px;
+}
+.footer-newsleter .input-text {
+    font-size:12px;
+    padding-left: 15px;
+}
+.footer .title{
+    font-size: 14px;
+}
+.footer .phone-footer-block, .footer a{
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.footer address{
+    margin-top: 60px;
+    padding: 30px 15px;
+}
+.footer table td {
+    line-height: 1.5;
+    padding-bottom: 3px;
+}
+.footer .phone-footer-block p {
+    display: block;
+    margin-bottom: 20px;
+}
+.category-image h2{
+    font-size: 50px;
+}
+.block-filter span{
+    font-style: italic;
+}
+.block-filter .block-title{
+    margin-top: -2px;
+}
+.block-filter select {
+    width: 100%;
+    background: transparent;
+    padding: 0 9px;
+    font-size: 13px;
+}
+.block-filter label.select-label{
+    padding: 6px 0;
+}
+.block-layered-nav .block-content.accordion-open > dl > dd.current {
+    background: #f7f8f9;
+    padding: 30px 100px 50px 175px;
+}
+.block-layered-nav .block-content > dl > dt.current{
+    border-bottom: 4px solid #4a8fd8;
+    padding: 0 15px 7px 0;
+}
+.block-layered-nav .block-content > dl > dt{
+    margin-left: 15px;
+    padding-left:0px;
+}
+.confirm-product-info img {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.confirm-right {
+    float: left;
+    margin-top: 30px;
+    text-align: left;
+    width: 190px;
+}
+.confirm-left {
+    float: left;
+}
+.confirm-control{
+    clear: both;
+}
+.aw-acp-continue {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: black!important;
+    float: left;
+    height: auto!important;
+    margin-right: 25px!important;
+    padding: 5px 15px!important;
+    width: auto;
+    border:1px solid #cccccc;
+}
+.aw-acp-checkout {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: black!important;
+    float: left;
+    height: auto!important;
+    padding: 5px 15px!important;
+    width: auto;
+    border:1px solid #cccccc;
+}
+.aw-acp-continue:hover, .aw-acp-checkout:hover{
+    background: #777;
+}
+.control-confirm{
+    clear: both;
+    padding-bottom: 10px;
 }
