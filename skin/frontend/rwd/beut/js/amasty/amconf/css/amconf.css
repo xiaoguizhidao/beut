@@ -1,30 +1,60 @@
  em{
      color:red;
  }
- .amconf-block .lSAction > a{
+ .lSAction > a{
      width: 15px;
  }
-.amconf-block .lSAction > .lSPrev{
+ .lSAction > a:hover{
+     text-decoration: none;
+ }
+.lSAction > .lSPrev{
     left: 0;
     background: #fff;
     opacity: 1;
 }
-.amconf-block .lSAction > .lSNext{
+.lSAction > .lSNext{
     right: 0;
     background: #fff;
     opacity: 1;
 }
-.amconf-block .lSAction > .lSPrev:before{
+.lSAction > .lSPrev:before,
+.lSAction > .lSPrev:after{
     content: "\f104";
     font-family: FontAwesome;
     color: #000;
+    line-height: 2.4;
 }
-.amconf-block .lSAction > .lSNext:before{
+.lSAction > .lSNext:before,
+.lSAction > .lSNext:after{
     content: "\f105";
     font-family: FontAwesome;
     color: #000;
     float: right;
+    line-height: 2.4;
 }
+.category-products .lSAction > .lSNext:after,
+.category-products .lSAction > .lSPrev:after{
+     content: none;
+ }
+.product-view .lSAction > .lSPrev:after,
+.product-view .lSAction > .lSNext:after,
+.product-view .lSAction > .lSPrev:before,
+.product-view .lSAction > .lSNext:before{
+    font-size: 22px;
+    position: absolute;
+}
+.product-view .lSAction > .lSPrev:after{
+    left: 1px;
+    color: #fff;
+}
+.product-view .lSAction > .lSNext:after{
+    right: 1px;
+    color: #fff;
+}
+.product-view .lSAction > .lSNext:before{
+     right: 0;
+}
+
 .amconf-block .lSSlideWrapper{
     width: 60%;
 }

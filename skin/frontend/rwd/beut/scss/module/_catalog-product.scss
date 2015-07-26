@@ -657,11 +657,13 @@
 
 #product-attribute-specs-table {
     max-width: $max-std-formatted-width;
-    border: 1px solid $c-table-border;
-
-    th {
-        border-right: 1px solid $c-table-border;
-        border-bottom: 1px solid $c-table-border;
+    th,td{
+        padding: 6px;
+    }
+    th{
+        background: transparent;
+        text-transform: none;
+        padding-left: 0;
     }
 }
 
