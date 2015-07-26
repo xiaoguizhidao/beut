@@ -667,7 +667,7 @@ var AW_AjaxCartProUIBlocks = [
             }
             cntBtn.stopObserving('click', this._cntBtnOnClick.bind(this));
             cntBtn.observe('click', this._cntBtnOnClick.bind(this));
-
+            $("top-minicart-beut").click();
             if (AW_AjaxCartPro.config.data.addProductCounterBeginFrom > 0) {
                 this._initCounterForBtn(cntBtn, AW_AjaxCartPro.config.data.addProductCounterBeginFrom);
             }
@@ -679,7 +679,7 @@ var AW_AjaxCartProUIBlocks = [
             event.stop();
         },
 
-        _initCounterForBtn: function(cntBtn, counter) {
+        /*_initCounterForBtn: function(cntBtn, counter) {
             var originalTxt = cntBtn.innerHTML;
             cntBtn.innerHTML = originalTxt + ' (' + counter + ')';
             var intId = setInterval(function(){
@@ -707,7 +707,7 @@ var AW_AjaxCartProUIBlocks = [
                 cntBtn.stopObserving('click', this.bind(this));
             };
             cntBtn.observe('click', clearIntervalFn.bind(clearIntervalFn));
-        }
+        }*/
     },
     {
         name: 'remove_confirmation',

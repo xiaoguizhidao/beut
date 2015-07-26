@@ -2243,3 +2243,45 @@ ul.brands li:last-child{
     margin-left: 15px;
     padding-left:0px;
 }
+.confirm-product-info img {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.confirm-right {
+    float: left;
+    margin-top: 30px;
+    text-align: left;
+    width: 190px;
+}
+.confirm-left {
+    float: left;
+}
+.confirm-control{
+    clear: both;
+}
+.aw-acp-continue {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: black!important;
+    float: left;
+    height: auto!important;
+    margin-right: 25px!important;
+    padding: 5px 15px!important;
+    width: auto;
+    border:1px solid #cccccc;
+}
+.aw-acp-checkout {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: black!important;
+    float: left;
+    height: auto!important;
+    padding: 5px 15px!important;
+    width: auto;
+    border:1px solid #cccccc;
+}
+.aw-acp-continue:hover, .aw-acp-checkout:hover{
+    background: #777;
+}
+.control-confirm{
+    clear: both;
+    padding-bottom: 10px;
+}
