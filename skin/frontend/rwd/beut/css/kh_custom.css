@@ -1602,6 +1602,9 @@ ul.delivery-tabs li a{
 .respone-img{
     max-width: 100%;
 }
+.brand-img{
+    padding-top: 150px;
+}
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1995,7 +1998,9 @@ ul.delivery-tabs li a{
     .slick-prev:before, .slick-next:before{
         opacity: 1;
     }
-
+    .brand-img{
+        padding-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
