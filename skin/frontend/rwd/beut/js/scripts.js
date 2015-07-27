@@ -279,17 +279,18 @@ var FEelementControl = {
 		}
 	},
 	confProdImage: function(){
+		var options;
+		if($j('.category-products').length > 0){
+			options = {loop:false,autoWidth: true}
+		}else{
+			options = {loop:false,slideMargin: 0,autoWidth: true}
+		}
 		if($j('.amconf-images-container').length > 0){
 			if($j('.amconf-image-container').length > 6){
-				$j('.amconf-images-container').lightSlider({
-					item:6,
-					loop:true,
-					slideMove:1,
-					autoWidth: true,
-					speed:600
-				});
+				$j('.amconf-images-container').lightSlider(options);
 			}
 		}
+
 	},
 	calcMenu: function(){
 		if($j(window).width() > 767 && $j(window).width() < 1025){

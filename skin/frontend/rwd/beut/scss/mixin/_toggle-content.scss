@@ -28,47 +28,30 @@
         display: block;
         width: 100%;
         position: relative;
-        border: 1px solid $c-module-border;
-        background-color: $c-module-background;
-
         li {
             float: left;
-            border-right: 1px solid transparent;
-            border-left: 1px solid transparent;
-
+            background: $c-blue;
+            border: 1px solid $c-blue;
+            color: $white;
+            width: 50%;
+            max-width: 230px;
+            text-align: center;
             > span {
                 @include not-selectable;
-                display: inline-block;
-                padding: 0 $trim;
-                height: 40px;
-                line-height: 40px;
+                display: block;
+                height: 47px;
+                line-height: 45px;
                 cursor: pointer;
-                text-transform: uppercase;
-                font-size: $f-size-xs;
+                font-size: $f-size-xl;
                 position: relative;
-                bottom: -1px;
             }
         }
 
         li.current {
-            border-right: 1px solid $c-module-border;
-            border-left: 1px solid $c-module-border;
-
-            > span {
-                background-color: #FFFFFF;
-                z-index: 5;
-            }
+            background: transparent;
+            border: 1px solid $c-blue;
+            color: $c-black;
         }
-
-        li.current span,
-        li:hover span {
-            color: $c-action;
-        }
-
-        li:first-child {
-            border-left: none;
-        }
-
         &:after {
             @include clearfix;
         }
@@ -76,19 +59,14 @@
 
     > dl {
         width: 100%;
-
         > dt {
             display: none;
         }
-
         > dd {
             width: 100%;
             display: none;
-            padding: 15px;
-            border: 1px solid $c-module-border;
             border-top: 0;
         }
-
         > dd.current {
             display: block;
         }
@@ -142,15 +120,20 @@
     > dl {
         > dt {
             cursor: pointer;
-            border-bottom-width: 0;
+            border-bottom: 1px solid $c-divider-border;
             float: none;
             width: 100%;
+            position: relative;
+            .title{
+                text-transform: uppercase;
+            }
             &:hover {
                 color: $c-action;
             }
             &:after {
                 @include triangle(right, 4px, $c-action);
                 right: 10px;
+                top: 12px;
             }
             &.last {
                 border-bottom-width: 1px;

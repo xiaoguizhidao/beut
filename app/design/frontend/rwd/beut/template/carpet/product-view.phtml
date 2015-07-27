@@ -148,25 +148,43 @@
 
         <div class="product-feature-descirption container">
             <div class="row">
-                <div class="col-lg-4 col-xs-12">
-                    <div class="info-block attributes">
-                        <p class="title">features</p>
-                        <?php echo $this->getChildHtml('attributes') ?>
-                    </div>
-                    <p class="title">dimensions</p>
-                    <?php echo $_product->getSpecifications() ?>
+                <div class="col-lg-<?php echo ($_product->getBrandLogoUrl() !=='')?'8':'12'?> col-xs-12">
 
-                    <!-- <div class="info-block delivery-return">
-                    <p class="title">delivery & return</p>
-                    <?php /*echo $this->getChildHtml('attributes') */?>
-                </div>-->
-                </div>
-                <div class="col-lg-8 col-xs-12">
-                    <div class="description">
-                        <p class="title">description</p>
-                        <?php echo $this->getChildHtml('description') ?>
+                    <div class="product-collateral toggle-content tabs">
+                        <dl id="collateral-tabs" class="collateral-tabs">
+                            <dt class="tab"><span class="title"><?php echo $this->__('Description & details')?></span></dt>
+                            <dd class="tab-container">
+                                <div class="tab-content">
+                                    <div class="std">
+                                        <?php echo $this->getChildHtml('description') ?>
+                                        <p class="title">dimensions</p>
+                                        <?php echo $_product->getSpecifications() ?>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dt class="tab"><span class="title">features</span></dt>
+                            <dd class="tab-container">
+                                <div class="tab-content">
+                                    <div class="std">
+                                        <p class="title"><?php echo $this->__('Features')?></p>
+                                        <?php echo $this->getChildHtml('attributes') ?>
+                                        <div class="info-block delivery-return">
+                                            <p class="title">delivery & return</p>
+                                            <?php echo $this->getChildHtml('attributes') ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
                     </div>
+
                 </div>
+                <?php if($_product->getBrandLogoUrl() !==''):?>
+                    <div class="col-lg-4 col-xs-12 brand-img">
+                        <img src="<?php echo $_product->getBrandLogoUrl()?>" title="<?php echo $_product->getName()?>" alt="" class="respone-img"/>
+                    </div>
+                <?endif;?>
+
             </div>
         </div>
 
@@ -255,3 +273,4 @@
     <?php echo $this->getChildHtml('related'); ?>
   
 </div>
+
