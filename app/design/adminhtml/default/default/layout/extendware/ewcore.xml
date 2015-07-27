@@ -7,13 +7,14 @@
         </reference>
         
         <reference name="js">
-            <block type="ewcore/adminhtml_page_footer_guide" name="ewcore_footer" template="extendware/ewcore/page/footer/guide.phtml" after="-" />
+            <block type="ewcore/adminhtml_page_footer_guide" name="ewcore_guide" template="extendware/ewcore/page/footer/guide.phtml" after="-" />
+        	<block type="core/template" name="ewcore_demo" template="extendware/ewcore/page/footer/demo.phtml" after="-" />
         </reference>
     </default>
     <default>
     	<reference name="head">
         	<action method="addItem"><type>skin_css</type><name>extendware/ewcore/css/general.css</name></action>
-        	<!--<action method="addItem"><type>skin_js</type><name>extendware/ewcore/js/general.js</name></action>-->
+        	<action method="addJs"><script>extendware/ewcore/adminhtml/general.js</script></action>
         	
         	<action method="addJs"><script>extendware/ewcore/opentip/opentip-native-excanvas.min.js</script></action>
         	<action method="addItem"><type>skin_css</type><name>extendware/ewcore/css/opentip.css</name></action>
@@ -28,12 +29,6 @@
             <block type="ewcore/adminhtml_page_footer_tasks" name="ewcore_page_footer_tasks" after="-"/>
         </reference>
     </default>
-    <default>
-		<reference name="head">
-			<action method="addJs" ewifhelper="ewcore/layout/isDemo"><script>extendware/ewcore/demo.js</script></action>
-		</reference>
-	</default>
-    
     <admin_menu_highlight_handle>
     	<reference name="head">
         	<action method="addItem"><type>skin_css</type><name>extendware/ewcore/css/menu-highlight.css</name></action>
@@ -54,9 +49,9 @@
         </reference>
     </ewcore_chooser>
     
-    <adminhtml_cache_index>
+    <!-- <adminhtml_cache_index>
 		<reference name="cache.additional">
 			<block type="ewcore/adminhtml_cache_additional_cache" name="cache.additional.ewcore" template="extendware/ewcore/cache/additional/cache.phtml" />
 		</reference>
-	</adminhtml_cache_index>
+	</adminhtml_cache_index> -->
 </layout>

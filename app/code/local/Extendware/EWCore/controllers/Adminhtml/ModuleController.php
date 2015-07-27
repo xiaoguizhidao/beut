@@ -159,6 +159,9 @@ class Extendware_EWCore_Adminhtml_ModuleController extends Extendware_EWCore_Con
         Mage::app()->reinitStores();
             
 		$this->_getSession()->addSuccess($this->__('There were %s config items deleted', $count));
+		if ($moduleSummary->getIdentifier() == 'Extendware_EWPageCache') {
+			return $this->_redirect('extendware_ewpagecache/adminhtml_config/autoConfigureCallback');
+		}
 		$configureUrl = $moduleSummary->getModule()->getConfigureUrl();
 		if ($configureUrl) {
 			$this->_redirect($configureUrl);
@@ -192,7 +195,7 @@ class Extendware_EWCore_Adminhtml_ModuleController extends Extendware_EWCore_Con
 			if ($status === true) {
 				$configTools->enableModule($moduleSummary->getIdentifier());
 			} else $configTools->disableModule($moduleSummary->getIdentifier());
-			
+			Mage::app()->cleanCache();
 			$didUpdate = true;
 		} catch (Exception $e) {
 			$errors['update_error'] = 'Could not update module status. Please ensure config files are writeable and look in Extendware -> System -> Logs -> Logs in <u>ewcore.log</u> for more detailed information.';
@@ -246,8 +249,18 @@ class Extendware_EWCore_Adminhtml_ModuleController extends Extendware_EWCore_Con
 		}
 		
 		try {
+			$lastLogMessage = $this->__('[none]');
+			$collection = Mage::getModel('ewcore/system_log')->getFileCollection(true);
+			foreach ($collection as $log) {
+				if (strpos($log->getRelativePath(), 'ewcore.log') === false) continue;
+				if (filesize($log->getPath()) > 1024*1024) continue;
+				$lineCollection = $log->getLineCollection();
+				$line = $lineCollection->getFirstItem();
+				$lastLogMessage = $line->getMessage();
+			}
+			
 			if ($moduleSummary->getModule()->updateLicensesAndSerial(true) === false) {
-				Mage::throwException($this->__('Failed to update all licenses and serial for module. Please check <u>ewcore.log</u> in <a href="%s">Extendware -> System -> Logs -> Logs</a> for more information [<a href="%s">click here</a>]', $this->getUrl('extendware_ewcore/adminhtml_system_log/index'), $this->getUrl('extendware_ewcore/adminhtml_system_log/index')));
+				Mage::throwException($this->__('Failed to update extension license. Please check <u>ewcore.log</u> in <a href="%s">Extendware -> System -> Logs -> Logs</a> for more information [<a href="%s">click here</a>]. The last log message is: %s', $this->getUrl('extendware_ewcore/adminhtml_system_log/index'), $this->getUrl('extendware_ewcore/adminhtml_system_log/index'), $lastLogMessage));
 			}
 			$this->_getModuleSession()->addSuccess($this->__('Module serial and licenses have been updated'));
 		} catch (Exception $e) {

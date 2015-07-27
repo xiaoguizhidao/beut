@@ -1,92 +1,29 @@
-<?php //00153
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
-
-
-/**
- * Below are methods found in this class
- *
- * @method mixed public __construct()
- * @method mixed public addMessage(Mage_Core_Model_Message_Abstract $message)
- *
- */
-?>
-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
-51gJCziGvgT/ukgO
+<?php
+class Extendware_EWCore_Model_Mage_Customer_Session extends Mage_Customer_Model_Session
+{
+	public function __construct()
+    {
+        $namespace = 'customer';
+        if ($this->getCustomerConfigShare()->isWebsiteScope()) {
+            $namespace .= '_' . (Mage::app()->getStore()->getWebsite()->getCode());
+        }
+		$namespace .= '_' . get_class($this);
+		
+        $this->init($namespace);
+    }
+    
+	public function addMessage(Mage_Core_Model_Message_Abstract $message)
+    {
+    	// ensure duplicate messages are not added
+    	$identifier = md5($message->getType() . '-' . $message->getText() . '-' . $message->getCode() . '-' . $message->getIdentifier() . '-' . (int)$message->getIsSticky());
+    	$messages = $this->getMessages()->getItems();
+    	foreach ($messages as $m) {
+    		$identifier2 = md5($m->getType() . '-' . $m->getText() . '-' . $m->getCode() . '-' . $m->getIdentifier() . '-' . (int)$m->getIsSticky());
+    		if ($identifier == $identifier2) {
+    			return $this;
+    		}
+    	}
+       
+		return parent::addMessage($message);;
+    }
+}

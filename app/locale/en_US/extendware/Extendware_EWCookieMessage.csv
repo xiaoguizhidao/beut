@@ -1,5 +1,6 @@
 "%s Regions","%s Regions"
 "<b>Note: </b> If you are using a proxy to test the cookie message, then Requesting IP must be selected.","<b>Note: </b> If you are using a proxy to test the cookie message, then Requesting IP must be selected."
+[None],[None]
 "A rule with a lower sort order will be processed first","A rule with a lower sort order will be processed first"
 Action,Action
 Add,Add
@@ -38,6 +39,7 @@ General,General
 "Geo data has been downloaded successfully.","Geo data has been downloaded successfully."
 Group,Group
 ID,ID
+"If enabled the same URL will be used for the javascript used by the extension. Disabling is good to ensure browser caches do not interfere with changes.","If enabled the same URL will be used for the javascript used by the extension. Disabling is good to ensure browser caches do not interfere with changes."
 "If the message is executable, then this javascript will also execute. Useful for creation of popups and things to that nature. You can leave this field empty if you just need a simple message.","If the message is executable, then this javascript will also execute. Useful for creation of popups and things to that nature. You can leave this field empty if you just need a simple message."
 "Insertion Position","Insertion Position"
 "IP Address","IP Address"
@@ -55,9 +57,12 @@ Message,Message
 "Missing data for item","Missing data for item"
 "Most often used to hide the message if a cookie is set. This will be directly outputted inside of a javascript if statement, so you must input valid javascript. ","Most often used to hide the message if a cookie is set. This will be directly outputted inside of a javascript if statement, so you must input valid javascript. "
 Name,Name
+"Persistent Url","Persistent Url"
 "Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs.","Please <u>read the help descriptions, field descriptions, fieldset descriptions, and user guides</u> so you may configure this extension to suit your needs."
 "Please select an item(s) before submitting to the mass processor","Please select an item(s) before submitting to the mass processor"
+Region,Region
 Regions,Regions
+Replace,Replace
 "Request Parameters","Request Parameters"
 "Requesting IP (REMOTE_ADDR)","Requesting IP (REMOTE_ADDR)"
 Results,Results
@@ -67,7 +72,7 @@ Rules,Rules
 "Selected item(s) (%d) have been mass processed by the %s processor","Selected item(s) (%d) have been mass processed by the %s processor"
 "Selected item(s) (%d) have failed to be mass processed by the %s processor","Selected item(s) (%d) have failed to be mass processed by the %s processor"
 Settings,Settings
-"Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available.","Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available."
+"Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available (a regions tabe will appear in the tab list to the left).","Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available (a regions tabe will appear in the tab list to the left)."
 "Shown Messages","Shown Messages"
 "Sort Order","Sort Order"
 Status,Status
@@ -78,6 +83,7 @@ Test,Test
 "Test Rules","Test Rules"
 "The CSS selector used by $$([selector]).first() that is used to find the position where the message will be inserted in the page.","The CSS selector used by $$([selector]).first() that is used to find the position where the message will be inserted in the page."
 "The detected country of the IP address","The detected country of the IP address"
+"The detected region of the IP address","The detected region of the IP address"
 "The IP address is used to determine the country / region for the various rules.","The IP address is used to determine the country / region for the various rules."
 "The name of this message.","The name of this message."
 "The names of messags that will be displayed.","The names of messags that will be displayed."
@@ -88,9 +94,11 @@ Test,Test
 "This message will only be used for this store view","This message will only be used for this store view"
 "This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information","This must be a valid regular expression with the beginning and ending ""/"". For example, /mobile/. You can read the PHP preg documentation for more information"
 Top,Top
+Update,Update
 Updated,Updated
 "Use Ctrl-C to select more than one region. Selecting no region will match the entire country.","Use Ctrl-C to select more than one region. Selecting no region will match the entire country."
 "User Agent RegExp","User Agent RegExp"
 Website,Website
 "Where the position will be inserted in relation to the element.","Where the position will be inserted in relation to the element."
 "You need to download the geo IP databases to use this extension. Please click the button to download.","You need to download the geo IP databases to use this extension. Please click the button to download."
+"You need to download the geo IP databases to use this extension. Please go to Extendware -> Manage Extensions -> Cookie Message to download.","You need to download the geo IP databases to use this extension. Please go to Extendware -> Manage Extensions -> Cookie Message to download."

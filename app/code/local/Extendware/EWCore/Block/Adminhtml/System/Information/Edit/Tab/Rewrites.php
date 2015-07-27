@@ -1,125 +1,97 @@
-<?php //00153
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
 
+class Extendware_EWCore_Block_Adminhtml_System_Information_Edit_Tab_Rewrites extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Grid
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setUseAjax(true);
+        $this->setFilterVisibility(false);
+        $this->setPagerVisibility(false);
+    }
 
-/**
- * Below are methods found in this class
- *
- * @method mixed public __construct()
- * @method mixed public getGridUrl()
- * @method mixed public getRowUrl($item)
- *
- */
-?>
-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
+	protected function _beforeToHtmlHtml() {
+		$html = null;
+		if ($this->canDisplayContainer()) {
+			$html = '<div id="messages"><ul class="messages"><li class="notice-msg"><ul><li><span>';
+			$html .= $this->__('You can view what classes are being rewritten by the system. This is useful when debugging extension conflicts.');
+			$html .= '</span></li></ul></li></ul></div>';
+		}
+    	return $html;
+    }
+    
+    protected function _prepareCollection()
+    {
+    	$sortableData = array();
+		$config = Mage::app()->getConfig();
+		foreach ($config->getNode('global')->asArray() as $type => $data) {
+			if (in_array($type, array('models', 'blocks', 'helpers')) === false) continue;
+			foreach ($data as $module => $item) {
+				if (isset($item['rewrite']) === false) continue;
+				if (is_array($item['rewrite']) === false) continue;
+				foreach ($item['rewrite'] as $source => $rewriteClass) {
+					$classKey = $module . '/' . $source;
+					$resultingClass = null;
+					if ($type == 'models') $resultingClass = Mage::app()->getConfig()->getModelClassName($classKey);
+					elseif ($type == 'blocks') $resultingClass = Mage::app()->getConfig()->getBlockClassName($classKey);
+					elseif ($type == 'helpers') $resultingClass = Mage::app()->getConfig()->getHelperClassName($classKey);
+					$sortableData[$classKey] = array(
+						'type' => $type,
+						'class_key' => $classKey,
+						'rewrite_class' => $rewriteClass,	
+						'resulting_class' => $resultingClass,
+					);
+				}
+			}
+		}
+		
+		ksort($sortableData);
+		$collection = new Varien_Data_Collection();
+		foreach ($sortableData as $data) {
+			$collection->addItem(new Varien_Object($data));
+		}
+
+        $this->setCollection($collection);
+        return parent::_prepareCollection();
+    }
+    
+    protected function _prepareColumns()
+    {
+        $this->addColumn('type', array(
+            'header'    => $this->__('Type'),
+            'sortable'  => true,
+            'width'     => '70px',
+            'index'     => 'type'
+        ));
+
+        $this->addColumn('class_key', array(
+            'header'    => $this->__('Class Key'),
+            'sortable'  => true,
+            'index'     => 'class_key'
+        ));
+        
+        $this->addColumn('rewrite_class', array(
+            'header'    => $this->__('Rewrite Class'),
+            'sortable'  => true,
+            'index'     => 'rewrite_class'
+        ));
+        
+        $this->addColumn('resulting_class', array(
+            'header'    => $this->__('Resulting Class'),
+            'sortable'  => true,
+            'index'     => 'resulting_class'
+        ));
+        
+        return parent::_prepareColumns();
+    }
+
+    public function getGridUrl()
+    {
+        return $this->getUrl('*/*/rewritesGrid', array('_current'=>true));
+    }
+    
+	public function getRowUrl($item)
+    {
+        return null;
+    }
+}

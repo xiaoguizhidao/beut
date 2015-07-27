@@ -1,91 +1,39 @@
-<?php //00152
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
-
-
-/**
- * Below are methods found in this class
- *
- * @method mixed public __construct()
- * @method mixed public getHeaderText()
- * @method mixed public getLogFile()
- *
- */
-?>
-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
+<?php
+class Extendware_EWCore_Block_Adminhtml_System_Log_Edit extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Grid_Container
+{
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->_removeButton('add');
+		$this->_removeButton('delete');
+		$this->_removeButton('saveandreload');
+		
+		$this->_addButton('back', array(
+            'label'     => $this->__('Back'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/') .'\')',
+            'class'     => 'back',
+        ), -1);
+        
+		$this->_addButton('delete', array(
+            'label'     => $this->__('Delete'),
+            'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/delete', array('_current' => true)) .'\')',
+            'class'     => 'delete',
+        ), -1);
+        
+        $this->_addButton('download', array(
+			'label' => $this->__('Download'), 
+			'onclick'   => 'setLocation(\'' . $this->getUrl('*/*/download', array('_current' => true)) .'\')',
+		));
+	}
+	
+	public function getLogFile()
+    {
+    	return Mage::registry('ew:current_log_file');
+    }
+    
+	public function getHeaderText()
+    {
+        return $this->__('Log: %s', $this->getLogFile()->getName());
+    }
+}

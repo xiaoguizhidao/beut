@@ -294,6 +294,25 @@
 						                            <comment><![CDATA[After a config section has been shown this number of times, the notice will disappear]]></comment>
 						                        	<ewhelp><![CDATA[After a configuration screen has been saved this number of times, then the notice that appears above the configuration screen that tells you that some fields may have helpful hints (such as this tooltip) will be hidden.]]></ewhelp>
 						                        </config_help_notice_threshold>
+						                        <message_upating_enabled translate="label comment ewhelp">
+						                            <label>General Messages</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewcore/adminhtml_config_data_option_enabledisable</source_model>
+						                            <sort_order>30</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <validators>
+						                            	<validator>
+						                            		<model>ewcore/data_validator_integer</model>
+						                            		<options>
+						                            			<min_value>0</min_value>
+						                            		</options>
+						                            	</validator>
+						                            </validators>
+						                            <validate>required-entry validate-zero-or-greater</validate>
+						                            <comment><![CDATA[These are the messages that we send and appear in Extendware -> Message Inbox. <b>Warning: </b>If this is disabled, then you will not receive discounts or security notices regarding your extensions.]]></comment>
+						                        </message_upating_enabled>
 						                    </fields>
 						                </misc>
 						            </groups>
@@ -317,6 +336,15 @@
 												<show_in_store>0</show_in_store>
 			                        		</field_option>
 			                        	</licensing>
+			                        	<licensing2>
+			                        		<ifhelper>ewcore/layout/isLicensed</ifhelper>
+			                        		<ifvalue>0</ifvalue>
+			                        		<field_option>
+			                        			<show_in_default>0</show_in_default>
+												<show_in_website>0</show_in_website>
+												<show_in_store>0</show_in_store>
+			                        		</field_option>
+			                        	</licensing2>
 		                        	</ewoverrides>
 						            <groups>
 						            	<serial translate="label comment ewhelp" module="ewcore">
@@ -433,6 +461,16 @@
 						                            <comment><![CDATA[Enable or disable updating licenses on admin login]]></comment>
 						                        	<ewhelp><![CDATA[If you do not have cron enabled (such as this is your development server), then enabling this option will ensure licenses still update without manually having to update licenses.]]></ewhelp>
 						                        </admin_login_enabled>
+						                        <database_fallback_enabled translate="label comment ewhelp">
+						                            <label>Database Fallback</label>
+						                            <frontend_type>select</frontend_type>
+						                            <source_model>ewcore/adminhtml_config_data_option_enabledisable</source_model>
+						                            <sort_order>20</sort_order>
+						                            <show_in_default>1</show_in_default>
+						                            <show_in_website>0</show_in_website>
+						                            <show_in_store>0</show_in_store>
+						                            <comment><![CDATA[If enabled the database will be used as a fallback if the license files cannot be found. Recommended especially in multi-server environments. <b>Note: </b>Disabling this is NOT recommended.]]></comment>
+						                        </database_fallback_enabled>
 						                    </fields>
 						                </automatic_license_updating>
 						            	<violation_disabling translate="label comment ewhelp" module="ewcore">
@@ -456,7 +494,7 @@
 						                        </enabled>
 						                    </fields>
 						                </violation_disabling>
-						                <preemptive_expiration_disabling translate="label comment ewhelp" module="ewcore">
+						                <!-- <preemptive_expiration_disabling translate="label comment ewhelp" module="ewcore">
 						                    <label>Preemptively Disable Expiring Extensions</label>
 						                    <frontend_type>text</frontend_type>
 						                    <sort_order>400</sort_order>
@@ -493,7 +531,7 @@
 						                            <comment><![CDATA[Number of hours before expiration that extension is preemptively disabled. Please account for how often cronjobs are run.]]></comment>
 						                        </num_hours>
 						                    </fields>
-						                </preemptive_expiration_disabling>
+						                </preemptive_expiration_disabling> -->
 						            </groups>
 						        </ewcore_licensing>
 						        <ewcore_developer translate="label comment ewhelp" module="ewcore">
@@ -553,7 +591,7 @@
 						                            <show_in_website>0</show_in_website>
 						                            <show_in_store>0</show_in_store>
 						                            <comment><![CDATA[System -> Configuration -> Developer -> Logging must be enabled. This will slow down your store. Use only when needed.]]></comment>
-						                        	<ewhelp><![CDATA[This log will viewable in Extendware -> System -> Logs. Please note, this log file can become very large, so you must ensure it does not become too large and disable this option when not needed.]]></ewhelp>
+						                        	<ewhelp><![CDATA[This log will viewable in Extendware -> System -> Logs. Please note, this log file can become very large, so you must ensure it does not become too large and disable this option when not needed. <b>Note</b>: You MUST uncomment the function <i>__extendwareErrorHandler</i> in <i>app/code/local/Varien/Autoload.php</a> in order for this to work.]]></ewhelp>
 						                        </enabled>
 						                    </fields>
 						                </system_exception_log>

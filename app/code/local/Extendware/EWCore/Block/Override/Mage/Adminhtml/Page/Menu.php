@@ -52,9 +52,7 @@ class Extendware_EWCore_Block_Override_Mage_Adminhtml_Page_Menu extends Extendwa
             if ($child->children) {
             	$fullPath = $path.$childName.'/';
                 $menuArr['children'] = $this->_buildMenuArray($child->children, $fullPath, $level+1);
-            	if (empty($menuArr['children']) === false or $fullPath == 'ewcore/quickaccess/mainsite/') {
-					$parentArr[$childName] = $menuArr;
-				}
+				$parentArr[$childName] = $menuArr;
             } else $parentArr[$childName] = $menuArr;
             
 
@@ -93,10 +91,15 @@ class Extendware_EWCore_Block_Override_Mage_Adminhtml_Page_Menu extends Extendwa
 		foreach ($collection as $module) {
 			if ($module->isActive() === false) continue;
 			if ($module->isExtendware() === false) continue;
-			$modules[$module->getFriendlyName()] = $module;
+			$key = $module->getFriendlyName();
+			if (isset($modules[$key])) {
+				$key .= $module->getId();
+			}
+			$modules[$key] = $module;
 		}
 		
 		ksort($modules);
+		
 		foreach ($modules as $module) {
 			$moduleKey = strtolower($module->getName());
 			

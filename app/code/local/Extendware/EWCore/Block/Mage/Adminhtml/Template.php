@@ -1,87 +1,40 @@
-<?php //000df
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
-
-
-/**
- * Below are methods found in this class
- *
- *
- */
-?>
-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
+<?php
+class Extendware_EWCore_Block_Mage_Adminhtml_Template extends Mage_Adminhtml_Block_Template
+{
+	private $_helperBase;
+	private $_moduleName;
+	
+	protected function mHelper($scope = null) 
+    {
+    	if ($this->_helperBase === null) {
+	    	$nameParts = explode('_', get_class($this));
+	    	$this->_helperBase = strtolower($nameParts[1]);
+    	}
+    	
+    	return Mage::helper($this->_helperBase . '/' . ($scope ? $scope : 'data'));
+    }
+    
+	protected function _getModuleName()
+    {
+        if ($this->_moduleName === null and preg_match('/^([^_]+?\_[^_]+?)\_/', get_class($this), $match)) {
+        	$this->_moduleName = $match[1];
+        }
+        	
+        return $this->_moduleName;
+    }
+    
+	protected function _beforeToHtmlHtml() {
+    	return null;
+    }
+    
+	protected function _afterToHtmlHtml() {
+    	return null;
+    }
+    
+	protected function _toHtml() {
+    	$html = $this->_beforeToHtmlHtml();
+    	$html .= parent::_toHtml();
+    	$html .= $this->_afterToHtmlHtml();
+    	return $html;
+    }
+}

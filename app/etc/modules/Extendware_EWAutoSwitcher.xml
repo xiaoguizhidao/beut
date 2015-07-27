@@ -2,7 +2,7 @@
 <config>
    <modules>
       <Extendware_EWAutoSwitcher>
-         <active>true</active>
+         <active>false</active>
          <codePool>local</codePool>
          <depends>
             <Extendware_EWCore/>

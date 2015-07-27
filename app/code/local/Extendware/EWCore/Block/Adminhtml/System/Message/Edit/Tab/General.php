@@ -1,100 +1,59 @@
-<?php //0010a
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
+class Extendware_EWCore_Block_Adminhtml_System_Message_Edit_Tab_General extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Form
+{
+    protected function _prepareForm()
+    {
+        $form = new Extendware_EWCore_Block_Varien_Data_Form();
+		
 
+        $fieldset = $form->addFieldset('main', array(
+        	'legend' => $this->__('General Information'),
+        ));
+      	
+		$fieldset->addField('extension', 'label', array(
+        	'name'      => 'extension',
+            'label'     => $this->__('Extension'),
+        	'value' 	=> $this->getSystemMessage()->getExtension(),
+        	'bold' 		=> true,
+        ));
+        
+        $fieldset->addField('category', 'label', array(
+        	'name'      => 'category',
+            'label'     => $this->__('Category'),
+        	'value' 	=> $this->getSystemMessage()->getCategory(),
+        	'bold' 		=> true,
+        ));
+        
+        
+        $fieldset = $form->addFieldset('message_body', array(
+        	'legend' => $this->__('Message'),
+        	'class'     => 'fieldset-wide'
+        ));
 
-/**
- * Below are methods found in this class
- *
- * @method mixed public getSystemMessage()
- *
- */
-?>
-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
-6GKGY0==
+        $fieldset->addField('subject', 'label', array(
+        	'name'      => 'subject',
+            'label'     => $this->__('Subject'),
+        	'value' 	=> $this->getSystemMessage()->getSubject(),
+        	'bold' 		=> true,
+        ));
+        
+		$fieldset->addField('body', 'textarea', array(
+			'name'      => 'body',
+			'value'     => $this->getSystemMessage()->getBody(),
+		    'label'     => $this->__('Body'),
+			'readonly'  => true,
+		    'style'     => 'height:200px; width: 100%',
+		));
+        
+        $form->addValues($this->getAction()->getPersistentData('form_data', true));
+        $form->addFieldNameSuffix('general');
+		$form->setUseContainer(false);
+        $this->setForm($form);
+        
+		return parent::_prepareForm();
+	}
+    
+	public function getSystemMessage() {
+        return Mage::registry('ew:current_system_message');
+    }
+}

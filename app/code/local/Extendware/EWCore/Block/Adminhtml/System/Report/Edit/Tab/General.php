@@ -1,106 +1,77 @@
-<?php //00107
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
+class Extendware_EWCore_Block_Adminhtml_System_Report_Edit_Tab_General extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Form
+{
+    protected function _prepareForm()
+    {    	
+    	$data = $this->getReportFile()->getParsedData();
+    	
+    		
+        $form = new Extendware_EWCore_Block_Varien_Data_Form();
+		
+        $fieldset = $form->addFieldset('main', array(
+        	'legend' => $this->__('General Information'),
+        ));
+      	
+        
+        $fieldset->addField('file_path', 'label', array(
+        	'name'      => 'file_path',
+        	'value'		=> $this->getReportFile()->getRelativePath(),
+            'label'     => $this->__('File Path'),
+        ));
+        
+        if (isset($data['message'])) {
+	        $fieldset->addField('message', 'label', array(
+	        	'name'      => 'message',
+	        	'value'		=> $data['message'],
+	            'label'     => $this->__('Message'),
+	        ));
+        }
+        
+        $fieldset->addField('updated_at', 'date_label', array(
+        	'name'      => 'updated_at',
+        	'value'		=> $this->getReportFile()->getUpdatedAt(),
+            'label'     => $this->__('Updated'),
+        ));
+		
+        
+    	$fieldset = $form->addFieldset('context', array(
+        	'legend' => $this->__('Context Information'),
+        ));
 
+        $data = $this->getReportFile()->getParsedData();
+    	if (isset($data['skin'])) {
+	        $fieldset->addField('skin', 'label', array(
+	        	'name'      => 'skin',
+	        	'value'		=> $data['skin'],
+	            'label'     => $this->__('Skin'),
+	        ));
+        }
+        
+    	if (isset($data['script_name'])) {
+	        $fieldset->addField('script_name', 'label', array(
+	        	'name'      => 'script_name',
+	        	'value'		=> $data['script_name'],
+	            'label'     => $this->__('Script Name'),
+	        ));
+        }
+        
+    	if (isset($data['url'])) {
+	        $fieldset->addField('url', 'label', array(
+	        	'name'      => 'url',
+	        	'value'		=> $data['url'],
+	            'label'     => $this->__('Url'),
+	        ));
+        }
 
-/**
- * Below are methods found in this class
- *
- * @method mixed public getReportFile()
- *
- */
-?>
-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
-cWzHdZxCx7eOJ0AG9MxTPPRuSrBFFckqANz+aW==
+        $form->addValues($this->getAction()->getPersistentData('form_data', true));
+        $form->addFieldNameSuffix('general');
+		$form->setUseContainer(false);
+        $this->setForm($form);
+        
+		return parent::_prepareForm();
+	}
+    
+	public function getReportFile() {
+        return Mage::registry('ew:current_report_file');
+    }
+}

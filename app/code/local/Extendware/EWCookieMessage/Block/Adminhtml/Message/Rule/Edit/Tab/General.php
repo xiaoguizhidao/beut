@@ -107,7 +107,7 @@ class Extendware_EWCookieMessage_Block_Adminhtml_Message_Rule_Edit_Tab_General e
             'values'   	=> Mage::getSingleton('ewcookiemessage/adminhtml_data_option_countries')->toFormSelectOptionArray(),
             'label'     => $this->__('Countries'),
         	'value'		=> $this->getMessageRule()->getCountries(),
-        	'note' 		=> $this->__('Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available.'),
+        	'note' 		=> $this->__('Show message for users from selected countries. Ctrl-C to select more than one country. Selecting no countries will match all countries. <b>Note: </b> after saving you may select regions if available (a regions tabe will appear in the tab list to the left).'),
         ));
         
         $fieldset = $form->addFieldset('advanced', array(

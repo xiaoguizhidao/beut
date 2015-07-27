@@ -12,6 +12,9 @@ class Extendware_EWCore_Block_Varien_Data_Form_Element_Fieldset extends Varien_D
 	public function toHtml()
     {
     	$html = parent::toHtml();
+    	if (!@class_exists('Extendware_EWCore_Model_Autoload')) {
+    	    return $html;
+    	}
     	
     	$tips = $this->_getExtendwareTips($this, 'hover', array('opentip' => array('tipJoint' => 'top right')));
     	if (empty($tips) === false) {

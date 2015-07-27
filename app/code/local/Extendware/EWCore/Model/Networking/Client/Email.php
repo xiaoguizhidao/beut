@@ -39,7 +39,7 @@ class Extendware_EWCore_Model_Networking_Client_Email extends Extendware_EWCore_
     	return (bool)($this->getType() and $this->getToName() and $this->getToEmail() and $this->getFromName() and $this->getFromEmail() and $this->getSubject() and $this->getBody());
     }
     
-    protected function setForwardExceptions($bool) {
+    public function setForwardExceptions($bool) {
     	return $this->setData('forward_exceptions', (bool)$bool);
     }
     
@@ -68,7 +68,8 @@ class Extendware_EWCore_Model_Networking_Client_Email extends Extendware_EWCore_
     {
     	$mail = $this->getMail();
     	if ($this->getReplyTo()) $mail->setReplyTo($this->getReplyTo());
-    	if ($this->getReturnPath()) $mail->setReturnPath($this->getReturnPath());
+    	// this can trigger issues on 3rd party emails such as amazon
+    	//if ($this->getReturnPath()) $mail->setReturnPath($this->getReturnPath());
         
     	$emails = $this->getToEmails();
     	$names = $this->getToNames();

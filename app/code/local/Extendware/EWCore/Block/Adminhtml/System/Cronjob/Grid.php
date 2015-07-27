@@ -1,118 +1,110 @@
-<?php //00142
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
 
+class Extendware_EWCore_Block_Adminhtml_System_Cronjob_Grid extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Grid
+{
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+        $this->setDefaultSort('scheduled_at');
+        $this->setDefaultDir('DESC');
+    }
 
-/**
- * Below are methods found in this class
- *
- * @method mixed public __construct($attributes = array())
- * @method mixed public getRowUrl($row)
- *
- */
-?>
-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
-vh7zY4owLDoIyW==
+    protected function _prepareCollection()
+    {
+        $this->setCollection($this->_getCollection());
+        return parent::_prepareCollection();
+    }
+
+    protected function _prepareColumns()
+    {
+        $this->addColumn('schedule_id', array(
+			'header' => $this->__('ID'),
+			'width' => '50px',
+			'type' => 'text',
+			'index' => 'schedule_id',
+        	'align' => 'right'
+		));
+		
+		$this->addColumn('status', array(
+			'header' => $this->__('Status'),
+			'width' => '50px',
+			'type' => 'options',
+			'index' => 'status',
+			'options' => Mage::getSingleton('ewcore/adminhtml_data_option_cron_status')->toGridOptionArray()
+		));
+		
+		$this->addColumn('job_code', array(
+			'header' => $this->__('Code'),
+			'width' => '200px',
+			'type' => 'options',
+			'index' => 'job_code',
+			'options' => Mage::getSingleton('ewcore/adminhtml_data_option_cron_code')->reorder('value', 'asc')->toGridOptionArray()
+		));
+
+		$this->addColumn('scheduled_at', array(
+			'header' => $this->__('Scheduled For'),
+			'index' => 'scheduled_at',
+			'type' => 'datetime',
+			'width' => '155px',
+			'default' => ' ---- ',
+			'renderer' => 'ewcore/adminhtml_widget_grid_column_renderer_datetime',
+		));
+
+		$this->addColumn('executed_at', array(
+			'header' => $this->__('Executed'),
+			'index' => 'executed_at',
+			'type' => 'datetime',
+			'width' => '155px',
+			'default' => ' ---- ',
+			'renderer' => 'ewcore/adminhtml_widget_grid_column_renderer_datetime',
+		));
+
+		$this->addColumn('finished_at', array(
+			'header' => $this->__('Finished'),
+			'index' => 'finished_at',
+			'type' => 'datetime',
+			'width' => '155px',
+			'default' => ' ---- ',
+			'default' => ' ---- ',
+			'renderer' => 'ewcore/adminhtml_widget_grid_column_renderer_datetime',
+		));
+		
+		
+		$this->addColumn('messages', array(
+			'header' => $this->__('Messages'),
+			'type' => 'text',
+			'index' => 'messages',
+		));
+		
+		
+        return parent::_prepareColumns();
+    }
+
+    public function getRowUrl($row)
+    {
+        return false;
+    }
+
+    protected function _prepareMassaction(){
+        $this->setMassactionIdField('system_message_id');
+        $this->getMassactionBlock()->setFormFieldName('ids');
+
+        $this->getMassactionBlock()->addItem('delete', array(
+             'label'=> $this->__('Delete'),
+             'url'  => $this->getUrl('*/*/massDelete'),
+             'confirm' => $this->__('Are you sure?')
+        ));
+        
+        return $this;
+    }
+    
+	protected function _getCollection()
+	{
+		if ($this->_collection === null) {
+			$collection = Mage::getModel('cron/schedule')->getCollection();
+	        $this->setCollection($collection);
+		}
+
+		return $this->_collection;
+	}
+}

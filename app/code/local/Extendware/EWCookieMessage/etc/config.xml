@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Extendware_EWCookieMessage>
-			<version>1.0.7</version>
+			<version>1.1.8</version>
 			<extendware>
 	            <copyright_holder>extendware</copyright_holder>
 	            <configure_url>extendware_ewcookiemessage/adminhtml_config/index</configure_url>
@@ -130,5 +130,23 @@
 			</general>
 		</ewcookiemessage>
 	</default>
-	<extendware></extendware>
+	<extendware>
+		<override>
+			<block>
+				<mage_page_head_ewcore_override>
+           			<mode>extendware</mode>
+					<search><class>Mage_Page_Block_Html_Head</class></search>
+					<replace>
+						<class>Extendware_EWCore_Block_Override_Mage_Page_Html_Head</class>
+						<order>0</order>
+					</replace>
+					<conditions>
+           				<extension_exists>
+	           				<ignore>1</ignore>
+           				</extension_exists>
+           			</conditions>
+				</mage_page_head_ewcore_override>
+			</block>
+	   </override>
+	</extendware>
 </config>

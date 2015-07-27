@@ -25,6 +25,6 @@ abstract class Extendware_EWCore_Block_Frontend_Widget_Form_Container extends Ex
 	protected function _toHtml()
     {
     	// do this so adminhtml specific callback is not called in the frontend
-        return Mage_Core_Block_Template::_toHtml();
+        return '<div class="ewfwidget ewfformcontainer">' . Mage_Core_Block_Template::_toHtml() . '</div>';
     }
 }

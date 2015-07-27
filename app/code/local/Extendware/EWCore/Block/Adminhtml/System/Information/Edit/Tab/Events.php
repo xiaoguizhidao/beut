@@ -1,113 +1,82 @@
-<?php //00153
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
 
+class Extendware_EWCore_Block_Adminhtml_System_Information_Edit_Tab_Events extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Grid
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setUseAjax(true);
+        $this->setFilterVisibility(false);
+        $this->setPagerVisibility(false);
+    }
 
-/**
- * Below are methods found in this class
- *
- * @method mixed public __construct()
- * @method mixed public getGridUrl()
- * @method mixed public getRowUrl($item)
- *
- */
-?>
-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
+    protected function _prepareCollection()
+    {
+		$sortableData = array();
+		$config = Mage::app()->getConfig();
+		foreach ($config->getNode()->asArray() as $scope => $data) {
+			if (in_array($scope, array('global', 'frontend', 'adminhtml')) === false) continue;
+			if (isset($data['events']) === false) continue;
+			if (is_array($data['events']) === false) continue;
+		
+			foreach ($data['events'] as $trigger => $event) {
+				if (isset($event['observers']) === false) continue;
+				if (is_array($event['observers']) === false) continue;
+				$sortableData[$trigger] = array();
+				foreach ($event['observers'] as $observer) {
+					if (!isset($observer['class']) or !isset($observer['method'])) continue;
+					$sortableData[$trigger][] = array(
+						'trigger' => $trigger,
+						'class' => $observer['class'],
+						'method' => $observer['method'],
+					);
+				}
+				if (empty($sortableData[$trigger])) unset($sortableData[$trigger]);
+			}
+		}
+
+    	ksort($sortableData);
+		$collection = new Varien_Data_Collection();
+		foreach ($sortableData as $items) {
+			foreach ($items as $data) {
+				$collection->addItem(new Varien_Object($data));
+			}
+		}
+		
+        $this->setCollection($collection);
+        return parent::_prepareCollection();
+    }
+    
+    protected function _prepareColumns()
+    {
+        $this->addColumn('trigger', array(
+            'header'    => $this->__('Trigger'),
+            'sortable'  => true,
+            'index'     => 'trigger'
+        ));
+
+        $this->addColumn('class', array(
+            'header'    => $this->__('Class'),
+            'sortable'  => true,
+            'index'     => 'class'
+        ));
+        
+        $this->addColumn('method', array(
+            'header'    => $this->__('Method'),
+            'sortable'  => true,
+            'index'     => 'method'
+        ));
+        
+        return parent::_prepareColumns();
+    }
+
+    public function getGridUrl()
+    {
+        return $this->getUrl('*/*/eventsGrid', array('_current'=>true));
+    }
+    
+	public function getRowUrl($item)
+    {
+        return null;
+    }
+}

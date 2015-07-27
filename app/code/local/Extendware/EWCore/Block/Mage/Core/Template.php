@@ -1,81 +1,25 @@
-<?php //000df
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
-
-
-/**
- * Below are methods found in this class
- *
- *
- */
-?>
-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
+<?php
+class Extendware_EWCore_Block_Mage_Core_Template extends Mage_Core_Block_Template
+{
+	private $_helperBase;
+	private $_moduleName;
+	
+	protected function mHelper($scope = null) 
+    {
+    	if ($this->_helperBase === null) {
+	    	$nameParts = explode('_', get_class($this));
+	    	$this->_helperBase = strtolower($nameParts[1]);
+    	}
+    	
+    	return Mage::helper($this->_helperBase . '/' . ($scope ? $scope : 'data'));
+    }
+    
+	protected function _getModuleName()
+    {
+        if ($this->_moduleName === null and preg_match('/^([^_]+?\_[^_]+?)\_/', get_class($this), $match)) {
+        	$this->_moduleName = $match[1];
+        }
+        	
+        return $this->_moduleName;
+    }
+}
