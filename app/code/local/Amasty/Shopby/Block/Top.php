@@ -69,6 +69,13 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
         /** @var Mage_Page_Block_Html_Head $head */
         $head = $this->getLayout()->getBlock('head');
 
+        //canonical
+        if (!Mage::helper('amshopby')->isVersionLessThan(1, 4)){
+            $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
+            $head->removeItem('link_rel', $url);
+            $head->addLinkRel('canonical', $page->getUrl());
+        }
+
         // metas
         $title = $head->getTitle();
         // trim prefix if any

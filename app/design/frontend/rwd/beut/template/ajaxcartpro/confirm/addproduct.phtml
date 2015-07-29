@@ -25,6 +25,17 @@
  * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
  * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
  */
-?><div id="ajaxcartpro-add-confirm" class="ajaxcartpro-box-hide">
+?>
+<div id="ajaxcartpro-add-confirm" class="ajaxcartpro-box-hide">
     <?php echo $this->getContent(); ?>
+    <div id="minicart-after-add" style="display: none;">
+        <?php  echo $this->getLayout()->getBlock('minicart_content')->toHtml();?>
+        <?php $countItems = Mage::helper('checkout/cart')->getSummaryCount(); ?>
+        <input type="hidden" id="count-items-after-add" value="<?php echo $countItems; ?>" />
+    </div>
+
+
+
+
+
 </div>
