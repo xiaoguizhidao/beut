@@ -1,9 +1,7 @@
-@charset "UTF-8";
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
 
-/* Icons */
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -47,7 +45,7 @@
     top: 0; }
 
 .slick-prev:before, .slick-next:before {
-  font-family: 'FontAwesome';
+  font-family: 'CatFont';
   font-size: 40px;
   line-height: 1;
   color: #000;
@@ -55,26 +53,6 @@
   -moz-osx-font-smoothing: grayscale;
   opacity: 0;
   top: 0; }
-
-.slick-prev {
-  left: -45px; }
-  [dir="rtl"] .slick-prev {
-    left: auto;
-    right: -25px; }
-  .slick-prev:before {
-    content: ""; }
-    [dir="rtl"] .slick-prev:before {
-      content: ""; }
-
-.slick-next {
-  right: -45px; }
-  [dir="rtl"] .slick-next {
-    left: -25px;
-    right: auto; }
-  .slick-next:before {
-    content: ""; }
-    [dir="rtl"] .slick-next:before {
-      content: ""; }
 
 .slick-slider:hover .slick-prev:before, .slick-slider:hover .slick-next:before {
   opacity: 1; }

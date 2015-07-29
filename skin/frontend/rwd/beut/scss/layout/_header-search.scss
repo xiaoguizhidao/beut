@@ -71,6 +71,18 @@
         width: 100%;
         position: relative;
     }
+    [placeholder]:focus::-webkit-input-placeholder {
+        transition: opacity 0.5ms 0.5ms ease;
+        opacity: 0;
+    }
+    [placeholder]:focus::-moz-placeholder {
+        transition: opacity 0.5ms 0.5ms ease;
+        opacity: 0;
+    }
+    [placeholder]:focus:-ms-input-placeholder {
+        transition: opacity 0.5ms 0.5ms ease;
+        opacity: 0;
+    }
     #search{
         width: 100%;
         text-align: left;

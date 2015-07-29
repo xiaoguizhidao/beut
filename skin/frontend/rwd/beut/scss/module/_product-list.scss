@@ -686,11 +686,6 @@ $productsGridActionHeight: 50px;
     }
 }
 @include bp(max-width, $bp-medium) {
-    label,
-    .load-more a,
-    .pages a{
-        font-size: $f-10;
-    }
     .block-filter{
         margin-bottom: 13px;
         padding: 0;
@@ -745,7 +740,7 @@ $productsGridActionHeight: 50px;
             }
             .block-subtitle--filter {
                 margin-bottom: 0;
-                padding-top: 10px;
+                padding-top: 3px;
                 display: block ;
                 color: #bbb8b2;
             }
@@ -786,10 +781,6 @@ $productsGridActionHeight: 50px;
         margin-top: 10px;
         margin-left: 5px;
         margin-right: 5px;
-        .item{
-            padding-left: 5px;
-            padding-right: 5px;
-        }
     }
     body:not(.customer-account) .block:first-child .block-title{
         display: none;
@@ -826,7 +817,7 @@ $productsGridActionHeight: 50px;
             clear: both;
 
             .pages {
-                float: none;
+                display: none;
             }
             .count-container {
                 float: right;

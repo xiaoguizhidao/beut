@@ -3399,7 +3399,7 @@ body {
   -ms-transform: translateY(-50%) !important;
   -o-transform: translateY(-50%) !important;
   text-align: center;
-  max-width: 500px;
+  max-width: 535px;
   z-index: 2;
 }
 /* line 129, ../scss/layout/_global.scss */
@@ -3413,7 +3413,7 @@ body {
   text-decoration: none;
   display: inline-block;
   border: 1px solid #fff;
-  padding: 10px 45px 19px;
+  padding: 11px 45px 18px;
   margin-top: 50px;
   font-size: 18px;
   font-style: italic;
@@ -4108,6 +4108,21 @@ body {
   position: relative;
 }
 /* line 74, ../scss/layout/_header-search.scss */
+#search_mini_form [placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5ms 0.5ms ease;
+  opacity: 0;
+}
+/* line 78, ../scss/layout/_header-search.scss */
+#search_mini_form [placeholder]:focus::-moz-placeholder {
+  transition: opacity 0.5ms 0.5ms ease;
+  opacity: 0;
+}
+/* line 82, ../scss/layout/_header-search.scss */
+#search_mini_form [placeholder]:focus:-ms-input-placeholder {
+  transition: opacity 0.5ms 0.5ms ease;
+  opacity: 0;
+}
+/* line 86, ../scss/layout/_header-search.scss */
 #search_mini_form #search {
   width: 100%;
   text-align: left;
@@ -4116,34 +4131,34 @@ body {
   padding: 0;
   font-size: 26px;
 }
-/* line 81, ../scss/layout/_header-search.scss */
+/* line 93, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {
   outline: 0;
   border: none;
 }
-/* line 85, ../scss/layout/_header-search.scss */
+/* line 97, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-moz-placeholder {
   text-transform: uppercase;
   font-size: 26px;
 }
-/* line 89, ../scss/layout/_header-search.scss */
+/* line 101, ../scss/layout/_header-search.scss */
 #search_mini_form #search::-webkit-input-placeholder {
   text-transform: uppercase;
   font-size: 26px;
 }
-/* line 93, ../scss/layout/_header-search.scss */
+/* line 105, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-ms-input-placeholder {
   text-transform: uppercase;
   font-size: 26px;
 }
-/* line 99, ../scss/layout/_header-search.scss */
+/* line 111, ../scss/layout/_header-search.scss */
 #search_mini_form label {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
 }
-/* line 105, ../scss/layout/_header-search.scss */
+/* line 117, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button {
   display: block;
   padding: 0;
@@ -4159,13 +4174,13 @@ body {
   float: right;
   margin-top: 10px;
 }
-/* line 115, ../scss/layout/_header-search.scss */
+/* line 127, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover {
   border: none;
   background-position: 97% -37px;
 }
 
-/* line 122, ../scss/layout/_header-search.scss */
+/* line 134, ../scss/layout/_header-search.scss */
 #search {
   width: 100%;
   height: 40px;
@@ -4173,24 +4188,24 @@ body {
   font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   border: none;
 }
-/* line 128, ../scss/layout/_header-search.scss */
+/* line 140, ../scss/layout/_header-search.scss */
 #search ::-moz-focus-inner, #search :focus {
   border: 0;
   outline: 0;
 }
 
-/* line 134, ../scss/layout/_header-search.scss */
+/* line 146, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover:before {
   opacity: 0.8;
 }
 
-/* line 138, ../scss/layout/_header-search.scss */
+/* line 150, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:active:before {
   margin-top: -13px;
   margin-left: -13px;
 }
 
-/* line 142, ../scss/layout/_header-search.scss */
+/* line 154, ../scss/layout/_header-search.scss */
 #search_mini_form .input-box {
   -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -10112,8 +10127,9 @@ div.paypal-logo span > img {
 .cms-page-view .std img,
 .cms-no-route .std img {
   max-width: 100%;
+  width: auto;
 }
-/* line 49, ../scss/module/_cms.scss */
+/* line 50, ../scss/module/_cms.scss */
 .cms-page-view .col-left:after,
 .cms-no-route .col-left:after {
   content: '';
@@ -10121,24 +10137,24 @@ div.paypal-logo span > img {
   clear: both;
 }
 
-/* line 58, ../scss/module/_cms.scss */
+/* line 59, ../scss/module/_cms.scss */
 .cms-no-route .std img {
   width: 100%;
 }
 
-/* line 67, ../scss/module/_cms.scss */
+/* line 68, ../scss/module/_cms.scss */
 .cms-page-view .std .messages,
 .cms-home .std .messages,
 .cms-no-route .std .messages {
   margin-bottom: 10px;
 }
-/* line 70, ../scss/module/_cms.scss */
+/* line 71, ../scss/module/_cms.scss */
 .cms-page-view .std .messages ul,
 .cms-home .std .messages ul,
 .cms-no-route .std .messages ul {
   margin-bottom: 0;
 }
-/* line 74, ../scss/module/_cms.scss */
+/* line 75, ../scss/module/_cms.scss */
 .cms-page-view .std .messages li,
 .cms-home .std .messages li,
 .cms-no-route .std .messages li {
@@ -10166,57 +10182,57 @@ div.paypal-logo span > img {
 #accordion > dl > dd:last-child {
   border-width: 0 1px 1px 1px;
 }
-/* line 89, ../scss/module/_cms.scss */
+/* line 90, ../scss/module/_cms.scss */
 #accordion li {
   position: relative;
   overflow: hidden;
 }
-/* line 93, ../scss/module/_cms.scss */
+/* line 94, ../scss/module/_cms.scss */
 #accordion li .plusimage h2 {
   margin-right: 10px;
 }
 
-/* line 102, ../scss/module/_cms.scss */
+/* line 103, ../scss/module/_cms.scss */
 .page-sitemap .links {
   display: block;
   text-align: right;
   margin: 0 20px 0 0;
 }
-/* line 107, ../scss/module/_cms.scss */
+/* line 108, ../scss/module/_cms.scss */
 .page-sitemap .links a {
   position: relative;
 }
-/* line 110, ../scss/module/_cms.scss */
+/* line 111, ../scss/module/_cms.scss */
 .page-sitemap .sitemap {
   padding: 0 20px;
   margin: 15px 0;
   font-size: 12px;
 }
-/* line 115, ../scss/module/_cms.scss */
+/* line 116, ../scss/module/_cms.scss */
 .page-sitemap .sitemap li {
   margin: 3px 0;
 }
 
-/* line 125, ../scss/module/_cms.scss */
+/* line 126, ../scss/module/_cms.scss */
 .contacts-index-index h1 {
   border: none;
 }
 
-/* line 130, ../scss/module/_cms.scss */
+/* line 131, ../scss/module/_cms.scss */
 #contactForm {
   padding-left: 40px;
 }
-/* line 133, ../scss/module/_cms.scss */
+/* line 134, ../scss/module/_cms.scss */
 #contactForm h2 {
   display: none;
 }
-/* line 137, ../scss/module/_cms.scss */
+/* line 138, ../scss/module/_cms.scss */
 #contactForm:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 141, ../scss/module/_cms.scss */
+/* line 142, ../scss/module/_cms.scss */
 #contactForm .fieldset .legend + .required {
   margin: 0;
 }

@@ -1,15 +1,10 @@
 @charset "UTF-8";
 
 // Default Variables
-
-$slick-font-path: "./fonts/" !default;
-$slick-font-family: "Flaticon" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\E80E" !default;
-$slick-next-character: "\E80D" !default;
 $slick-dot-character: "•" !default;
 $slick-dot-size: 6px !default;
 $slick-opacity-default: 0.75 !default;
@@ -25,31 +20,12 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
-@function slick-font-url($url) {
-    @if function-exists(font-url) {
-        @return font-url($url);
-    }
-    @else {
-        @return url($slick-font-path + $url);
-    }
-}
 
 /* Slider */
 
 .slick-list {
     .slick-loading & {
         background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
-    }
-}
-
-/* Icons */
-@if $slick-font-family == "slick" {
-    @font-face {
-        font-family: "slick";
-        src: slick-font-url("slick.eot");
-        src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
-        font-weight: normal;
-        font-style: normal;
     }
 }
 
@@ -96,7 +72,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev:before, .slick-next:before{
-    font-family: 'FontAwesome';
+    font-family: 'CatFont';
     font-size: 40px;
     line-height: 1;
     color: #000;
@@ -106,31 +82,9 @@ $slick-opacity-not-active: 0.25 !default;
     top: 0;
 }
 .slick-prev {
-    left: -45px;
-    [dir="rtl"] & {
-        left: auto;
-        right: -25px;
-    }
-    &:before {
-        content: $slick-prev-character;
-        [dir="rtl"] & {
-            content: $slick-next-character;
-        }
-    }
 }
 
 .slick-next {
-    right: -45px;
-    [dir="rtl"] & {
-        left: -25px;
-        right: auto;
-    }
-    &:before {
-        content: $slick-next-character;
-        [dir="rtl"] & {
-            content: $slick-prev-character;
-        }
-    }
 }
 .slick-slider:hover{
     .slick-prev:before, .slick-next:before {
