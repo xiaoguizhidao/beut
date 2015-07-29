@@ -58,7 +58,7 @@ $_category  = Mage::registry('current_category');
             </div>
             <div class="block-content toggle-content">
                 <?php if($this->canShowOptions()): ?>
-                    <p class="block-subtitle block-subtitle--filter"><?php echo $this->__('Filter') ?></p>
+                    <p class="block-subtitle block-subtitle--filter"><?php echo $this->__('Filter'); ?></p>
                     <dl id="narrow-by-list" class="no-display">
                         <?php $options = "";?>
                         <?php $_filters = $this->getFilters() ?>

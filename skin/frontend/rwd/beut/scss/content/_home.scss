@@ -66,16 +66,7 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: "CatFont";
-    src: url("../fonts/flaticon.eot");
-    src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
-    url("../fonts/flaticon.woff") format("woff"),
-    url("../fonts/flaticon.ttf") format("truetype"),
-    url("../fonts/flaticon.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
+
 body.cms-home {
     .main-container {
         margin-top: 50px;
@@ -93,6 +84,7 @@ body.cms-home {
         height: 100%;
         .item{
             height: 100%;
+            position: relative;
         }
     }
     .block2{
@@ -480,7 +472,12 @@ body.cms-home .slideshow-container{
     h2{
         font-size: $f-size-l;
         .hot-prod &{
-            font-size: $f-size-l;
+            font-size: 18px;
+            max-width: 250px;
+            text-align: center;
+            margin: auto;
+            display: block;
+            clear: both;
         }
     }
     .slideshow .banner-msg h2 {
@@ -500,13 +497,14 @@ body.cms-home .slideshow-container{
     .catalog-product-view .breadcrumbs{
         padding: 10px;
     }
-    #slide3{
+    #slide3,#slide1{
         .caption1 {
             .subcaption1,.subcaption3{
                 font-size: 10px;
             }
             .subcaption2{
                 font-size: 22px;
+                line-height: 1;
             }
         }
     }
@@ -591,7 +589,7 @@ body.cms-home .slideshow-container{
     #header-search{
         padding-left: 15px;
         padding-right: 15px;
-        top: 54px;
+        top: 48px;
         padding: 0 10px;
         &.skip-active{
             height: 130px;
@@ -605,7 +603,6 @@ body.cms-home .slideshow-container{
             margin-top: 0;
             width: 100%;
             margin-bottom: 10px;
-            border: 1px solid $c-black;
         }
         label{
             font-size: $f-size-xxs - 1;

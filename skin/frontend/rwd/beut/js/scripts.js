@@ -153,16 +153,16 @@ var FEelementControl = {
 				{
 					breakpoint: 600,
 					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3,
+						slidesToShow: 4,
+						slidesToScroll: 4,
 						dots: true
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2,
+						slidesToShow: 3,
+						slidesToScroll: 3,
 						dots: true
 					}
 				}
@@ -222,8 +222,8 @@ var FEelementControl = {
 					{
 						breakpoint: 768,
 						settings: {
-							slidesToShow: 4,
-							slidesToScroll: 4,
+							slidesToShow: 1,
+							slidesToScroll: 1,
 							dots: true
 						}
 					}
@@ -423,7 +423,14 @@ var FEelementControl = {
         $j('#ewcm_container').on('click',function(){
             $j('.header-language-background,.page-header').removeClass('exten-show');
         });
-    }
+    },
+	searchBox: function(){
+		$j('#search_mini_form #search').val('Search beut products');
+		$j('#search_mini_form #search').on('focus',function(){
+			$j();
+		})
+	}
+
 };
 
 jQuery(document).ready(function ($) {

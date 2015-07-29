@@ -115,12 +115,7 @@ div.block2 a:hover img {
     -ms-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-div.block2 .brand a:hover img {
-    -webkit-transition: all 0;
-    -moz-transition: all 0;
-    -ms-transition: all 0;
-    transition: all 0;
-}
+div.block2 .brand a:hover img {}
 div.wp-custom-menu-popup hr {
     margin: 0px 0px 10px 0px;
 }
@@ -430,7 +425,8 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 #custommenu-mobile .level2 {
     background-color: #fff;
 }
-@media only screen and (max-width: 1024px) and (min-width: $bp-medium){
+
+@media only screen and (max-width: 1024px) and (min-width: 767px){
     div.menu a:link, div.menu a:visited{
         padding-left: 10px;
         padding-right: 10px;
