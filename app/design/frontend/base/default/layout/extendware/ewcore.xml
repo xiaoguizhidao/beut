@@ -36,6 +36,7 @@
         	<action method="addJs"><script>mage/adminhtml/form.js</script></action>
         	<action method="addJs"><script>extendware/ewcore/widget.js</script></action>
         	<action method="addCss"><script>extendware/ewcore/css/widgets.css</script></action>
+        	<action method="addCss"><script>extendware/ewcore/css/widgets_rwd.css</script></action>
         	<action method="addItem"><type>skin_css</type><name>extendware/ewcore/css/widgets-ie7less.css</name><params/><if>lt IE 8</if></action>
         	<action method="addCss"><script>extendware/ewcore/css/widgets-custom.css</script></action>
 		</reference>

@@ -2,10 +2,21 @@
 class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_EWCore_Block_Mage_Adminhtml_Template
 {
 	protected $collection = null;
+	protected $outputDisabled = false;
+	
+	public function _construct() {
+		if (Mage::getStoreConfig('advanced/modules_disable_output/' . $this->getModuleName())) {
+			Mage::app()->getStore()->setConfig('advanced/modules_disable_output/' . $this->getModuleName(), 0);
+			$this->outputDisabled = true;
+		}
+		parent::_construct();
+	}
 	
 	protected function getAllMessages() {
 		$messages = array();
+		$messages = array_merge($messages, $this->getDisabledModuleOutputMessages());
 		$messages = array_merge($messages, $this->getLeaseExpiringMessages());
+		$messages = array_merge($messages, $this->getTrialExpiringMessages());
 		$messages = array_merge($messages, $this->getLicenseExpiringMessages());
 		$messages = array_merge($messages, $this->getLicenseFailedUpdateMessages());
 		$messages = array_merge($messages, $this->getDisabledExtensionMessages());
@@ -185,7 +196,7 @@ class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_
 		        }
 				
 				$messages[] = array(
-		    		'label' => $this->__('Extendware Message'), 
+		    		'label' => $this->__('Message'), 
 		    		'text' => $item->getSubject(),
 			    	'info_url' => $this->getUrl('extendware_ewcore/adminhtml_message/edit', array('id' => $item->getId())),
 					'info_url_on_click' => $item->getUrl() ? "this.target='_blank';" : '',
@@ -193,6 +204,30 @@ class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_
 	    		);
 			}
 		}
+		
+		return $messages;
+	}
+	
+	protected function getDisabledModuleOutputMessages() {
+		$messages = array();
+		$showMessage = $this->outputDisabled === true;
+		$moduleCollection = Mage::getSingleton('ewcore/module')->getCollection();
+		foreach ($moduleCollection as $module) {
+    		if ($module->isExtendware() and $module->isActive() === true) {
+    			if (Mage::getStoreConfigFlag('advanced/modules_disable_output/' . $module->getId())) {
+    				$showMessage = true;
+    				break;
+    			}
+    		}
+    	}
+		
+    	if ($showMessage === true) {
+    		$messages[] = array(
+	    		'label' => $this->__('Module Output Disabled'), 
+	    		'text' => $this->__('<b>Warning: </b>There are Extendware extensions that have their module output disabled in System -> Configuration -> Advanced. You can disable extensions in Extendware -> Manage Extensions -> Overview if needed.'),
+		    	'info_url' => $this->getUrl('adminhtml/system_config/edit/section/advanced'),
+    		);
+    	}
 		
 		return $messages;
 	}
@@ -242,7 +277,7 @@ class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_
 	    		$messages[] = array(
 	    			'id' => 'license_failed_update_message',
 	    			'label' => $this->__('License / Serials Update Issue'), 
-	    			'text' => $this->__('Licenses / serials have failed to update %s times. <b>Failing to fix this will cause your Extendware extensions to stop working</b>', $numFailures),
+	    			'text' => $this->__('Licenses / serials have failed to update %s times. <b>Failing to fix this will cause your Extendware extensions to disable</b>', $numFailures),
 	    			'info_url' => $this->getUrl('extendware_ewcore/adminhtml_content_page/view', array('id' => 'license_troubleshooting')),
     				'info_label' => '<b>' . $this->__('Resolve this issue (click here)') . '</b>',
 	    			'configure_url' => $this->getUrl('extendware_ewcore/adminhtml_config/', array('section' => 'ewcore_messaging')),
@@ -276,7 +311,7 @@ class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_
 				$messages[] = array(
 	    			'id' => 'license_expiring_message',
 	    			'label' => $this->__('License / Serials Update Issue'), 
-	    			'text' => $this->__('Licenses / serials <u>will expire</u> in %s day(s) or less. <b>Failing to fix this will cause your Extendware extensions to stop working</b>. Please click read more for more info.', (int) $minExpirationDelta),
+	    			'text' => $this->__('Licenses / serials <u>will expire</u> in %s day(s) or less. <b>Failing to fix this will cause your Extendware extensions to disable</b>. Please click read more for more info.', (int) $minExpirationDelta),
 		    		'info_url' => $this->getUrl('extendware_ewcore/adminhtml_content_page/view', array('id' => 'license_troubleshooting')),
     				'info_label' => '<b>' . $this->__('Resolve this issue (click here)') . '</b>',
 					'configure_url' => $this->getUrl('extendware_ewcore/adminhtml_config/', array('section' => 'ewcore_messaging')),
@@ -288,43 +323,81 @@ class Extendware_EWCore_Block_Adminhtml_Notification_Toolbar extends Extendware_
 		return $messages;
 	}
 	
+	protected function getTrialExpiringMessages() {
+		$messages = array();
+		$numDaysBeforeExpiration = 15;
+    	$minExpirationTime = time() + 60*60*24*999999;
+		$moduleCollection = Mage::getSingleton('ewcore/module')->getCollection();
+		foreach ($moduleCollection as $module) {
+    		if ($module->isActive() === true and $module->isExtendware() === true and $module->isForMainSite() === false) {
+    			if ($module->isLicensed() === false) continue;
+    			if (in_array($module->getLicense()->getType(), array('trial', 'demo')) === false) continue;
+    			if ($module->getLicense()->getLeaseExpiry() > 0) $minExpirationTime = min($minExpirationTime, $module->getLicense()->getLeaseExpiry());
+    		}
+    	}
+
+    	$minExpirationDelta = max(0, floor(($minExpirationTime - time())/(60*60*24)));
+    	if ($minExpirationDelta <= $numDaysBeforeExpiration) {
+    		$scripts = array();
+    		if ($minExpirationDelta <= 3) $scripts[] = "Effect.Shake('trial_expiring_message', {duration: 3})";
+    		if ($this->mHelper('config')->isWhiteLabeled() === false) {
+				$messages[] = array(
+	    			'id' => 'trial_expiring_message',
+	    			'label' => $this->__('Trial Expiring'), 
+	    			'text' => $this->__('Extension trial will end in %d day(s). <b>Please purchase the Extendware extension to continue using it.</b>', (int) $minExpirationDelta),
+		    		'info_url' => 'http://www.extendware.com/rwcore/redirect/normal/to/purchase_trial/',
+    				'info_label' => '<b>' . $this->__('Purchase Trial') . '</b>',
+					'configure_url' => $this->getUrl('extendware_ewcore/adminhtml_config/', array('section' => 'ewcore_messaging')),
+	    			'script' => join ('; ', $scripts)
+				);
+    		} else {
+    			$messages[] = array(
+	    			'id' => 'lease_expiring_message',
+	    			'label' => $this->__('Plan Expiring'), 
+	    			'text' => $this->__('Extension trial will end in %d day(s). <b>Please purchase the Extendware extension to continue using it.</b>', (int) $minExpirationDelta),
+	    			'script' => join ('; ', $scripts)
+				);
+    		}
+    	}
+		
+		return $messages;
+	}
+	
 	protected function getLeaseExpiringMessages() {
 		$messages = array();
-		if ($this->mHelper('config')->isLicenseExpiringMessageEnabled() === true) {
-			$numDaysBeforeExpiration = 20;
-	    	$minExpirationTime = time() + 60*60*24*999999;
-			$moduleCollection = Mage::getSingleton('ewcore/module')->getCollection();
-			foreach ($moduleCollection as $module) {
-	    		if ($module->isActive() === true and $module->isExtendware() === true and $module->isForMainSite() === false) {
-	    			if ($module->isLicensed() === false) continue;
-	    			if ($module->getLicense()->getType() != 'normal') continue;
-	    			if ($module->getLicense()->getLeaseExpiry() > 0) $minExpirationTime = min($minExpirationTime, $module->getLicense()->getLeaseExpiry());
-	    		}
-	    	}
+		$numDaysBeforeExpiration = 20;
+    	$minExpirationTime = time() + 60*60*24*999999;
+		$moduleCollection = Mage::getSingleton('ewcore/module')->getCollection();
+		foreach ($moduleCollection as $module) {
+    		if ($module->isActive() === true and $module->isExtendware() === true and $module->isForMainSite() === false) {
+    			if ($module->isLicensed() === false) continue;
+    			if (in_array($module->getLicense()->getType(), array('normal', 'promotion', 'gift')) === false) continue;
+    			if ($module->getLicense()->getLeaseExpiry() > 0) $minExpirationTime = min($minExpirationTime, $module->getLicense()->getLeaseExpiry());
+    		}
+    	}
 
-	    	$minExpirationDelta = max(0, floor(($minExpirationTime - time())/(60*60*24)));
-	    	if ($minExpirationDelta <= $numDaysBeforeExpiration) {
-	    		$scripts = array();
-	    		if ($minExpirationDelta <= 10) $scripts[] = "Effect.Shake('lease_expiring_message', {duration: 3})";
-	    		if ($this->mHelper('config')->isWhiteLabeled() === false) {
-					$messages[] = array(
-		    			'id' => 'lease_expiring_message',
-		    			'label' => $this->__('Plan Expiring'), 
-		    			'text' => $this->__('Extension upgrade / support / access will end in %d day(s). <b>Please extend your Extendware plan to continue using the extension.</b>', (int) $minExpirationDelta),
-			    		'info_url' => 'http://www.extendware.com/rwcore/redirect/normal/to/purchase_plan/',
-	    				'info_label' => '<b>' . $this->__('Resolve this issue (click here)') . '</b>',
-						'configure_url' => $this->getUrl('extendware_ewcore/adminhtml_config/', array('section' => 'ewcore_messaging')),
-		    			'script' => join ('; ', $scripts)
-					);
-	    		} else {
-	    			$messages[] = array(
-		    			'id' => 'lease_expiring_message',
-		    			'label' => $this->__('Plan Expiring'), 
-		    			'text' => $this->__('Extension upgrade / support / access will end in %d day(s). <b>Please contact Extendware to renew your plan.</b>', (int) $minExpirationDelta),
-		    			'script' => join ('; ', $scripts)
-					);
-	    		}
-	    	}
+    	$minExpirationDelta = max(0, floor(($minExpirationTime - time())/(60*60*24)));
+    	if ($minExpirationDelta <= $numDaysBeforeExpiration) {
+    		$scripts = array();
+    		if ($minExpirationDelta <= 10) $scripts[] = "Effect.Shake('lease_expiring_message', {duration: 3})";
+    		if ($this->mHelper('config')->isWhiteLabeled() === false) {
+				$messages[] = array(
+	    			'id' => 'lease_expiring_message',
+	    			'label' => $this->__('Plan Expiring'), 
+	    			'text' => $this->__('Extension upgrade / support / access selected when ordering the extension will end in %d day(s). <b>Please extend your Extendware plan to continue using the extension.</b>', (int) $minExpirationDelta),
+		    		'info_url' => 'http://www.extendware.com/rwcore/redirect/normal/to/renew_yearly_plan/',
+    				'info_label' => '<b>' . $this->__('Resolve this issue (click here)') . '</b>',
+					'configure_url' => $this->getUrl('extendware_ewcore/adminhtml_config/', array('section' => 'ewcore_messaging')),
+	    			'script' => join ('; ', $scripts)
+				);
+    		} else {
+    			$messages[] = array(
+	    			'id' => 'lease_expiring_message',
+	    			'label' => $this->__('Plan Expiring'), 
+	    			'text' => $this->__('Extension upgrade / support / access will end in %d day(s). <b>Please contact Extendware to renew your plan.</b>', (int) $minExpirationDelta),
+	    			'script' => join ('; ', $scripts)
+				);
+    		}
     	}
 		
 		return $messages;

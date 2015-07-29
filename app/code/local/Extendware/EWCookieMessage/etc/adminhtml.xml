@@ -8,7 +8,7 @@
 					<message_rules translate="title" module="ewcookiemessage">
 						<title>Message Rules</title>
 						<action>extendware_ewcookiemessage/adminhtml_message_rule</action>
-						<resource>extendware/ewcookiemessage/message/rule</resource>
+						<resource>extendware/ewcookiemessage/message_rule</resource>
 						<sort_order>1</sort_order>
 					</message_rules>
 					<tester translate="title" module="ewcookiemessage">
@@ -34,6 +34,12 @@
                         	<ewcookiemessage translate="title" module="ewcookiemessage">
                         		<title>Cookie Message</title>
                         		<children>
+                        			<message_rule translate="title">
+                        				<title>Message Rules</title>
+			            			</message_rule>
+			            			<tester translate="title">
+                        				<title>Rule Tester</title>
+			            			</tester>
                         			<settings translate="title">
                         				<title>Settings</title>
                         				<children>

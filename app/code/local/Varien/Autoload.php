@@ -49,28 +49,37 @@ $autoloader->addOverride('model', 'Aitoc_Aitsys_Model_Rewriter_Autoload', 'Exten
 $autoloader->addOverride('model', 'Mage_Core_Model_Cache', 'Extendware_EWCacheBackend_Model_Override_Mage_Core_Cache');
 
 // unregister autoloaders (Varien_Autoloader will be added back later by varien code)
-$functions = spl_autoload_functions();
-foreach ($functions as $function) {
-	spl_autoload_unregister($function);
+$originalAutoloadFunctions = spl_autoload_functions();
+if (is_array($originalAutoloadFunctions) === true) { // done due hhvm bug
+	foreach ($originalAutoloadFunctions as $function) {
+		spl_autoload_unregister($function);
+	}
 }
 
 // regster our auto loader as the first autoloader
 spl_autoload_register(array($autoloader, 'autoload'));
 
+
 // this is used by the store / currency auto switching. if you do not need this you can delete it
-if (isset($_SERVER['REQUEST_METHOD']) === true and (isset($_COOKIE['frontend']) === false or isset($_GET['__currency']) === true)) {
+if (isset($_SERVER['REQUEST_METHOD'])) {
 	if (@is_file($autoloader->getMemoryReadFilePath(BP.DS.'app'.DS.'etc'.DS.'Extendware_EWAutoSwitcher.php')) === true) {
 		$autoloader->setOption('can_load_all', true);
 		try {
 			$helper = new Extendware_EWAutoSwitcher_Helper_Data();
-			if ($helper->getConfig()->isEnabled() === true and $helper->isEnabledForUserAgent() === true and $helper->isEnabledForUrl()) {
-				$websiteId = $helper->getDeterminedWebsiteId();
-				if (!$websiteId) $websiteId = $helper->getDeterminedWebsiteId('hostname');
-				$storeCode = $helper->autoSwitchToStore($websiteId);
-				if (!$storeCode and $websiteId > 0) {
-					$helper->setCookieSettingsFromWebsite($websiteId);
+			if ($helper->getConfig()->isEnabled() === true) {
+				if ($helper->getConfig()->doSwitchOnEveryRequest() or empty($_POST) and (isset($_COOKIE['frontend']) === false or isset($_GET['__currency']) === true)) {
+					if ($helper->isEnabledForUserAgent() === true and $helper->isEnabledForUrl() === true and $helper->isEnabledForIpAddress() === true) {
+						$websiteId = $helper->getDeterminedWebsiteId();
+						if (!$websiteId) $websiteId = $helper->getDeterminedWebsiteId('hostname');
+						$storeCode = $helper->autoSwitchToStore($websiteId);
+						if (!$storeCode and $websiteId > 0) {
+							$helper->setCookieSettingsFromWebsite($websiteId);
+						}
+						$currencyCode = $helper->autoSwitchToCurrency($storeCode, $websiteId);
+						$_COOKIE['__ewstore'] = $storeCode;
+						$_COOKIE['__ewcurrency'] = $currencyCode;
+					}
 				}
-				$currencyCode = $helper->autoSwitchToCurrency($storeCode, $websiteId);
 			}
 		} catch (Exception $e) {}
 		$autoloader->setOption('can_load_all', false);
@@ -122,10 +131,17 @@ if (class_exists('Varien_Autoload') === false) {
 	else include_once(BP . DS . 'lib/Varien/Autoload.php');
 }
 
-// these are some convenience functions. you can delete __extendwareErrorHandler() if you really want to
-// __ewDisableModule sounds scary, but you do not want to modify it
-function __extendwareErrorHandler($errno, $errstr, $errfile, $errline) {
-	if ($errno == 0) return;
+// add back original autoloaders
+if (is_array($originalAutoloadFunctions) === true) { // done due hhvm bug
+	foreach ($originalAutoloadFunctions as $function) {
+		spl_autoload_register($function);
+	}
+}
+
+// uncomment this function if you want to enable advanced logging / debugging functions of Extendware Core
+/*function __extendwareErrorHandler($errno, $errstr, $errfile, $errline) {
+	if ($errno == 0) return false;
+	if (!($errno & error_reporting())) return false;
 	if (class_exists('Mage', false) === false) return;
 	static $maxLogItems = 25; // prevent infinite loops
 	if ($maxLogItems-- > 0) {
@@ -138,13 +154,15 @@ function __extendwareErrorHandler($errno, $errstr, $errfile, $errline) {
 			if ($isDeveloperMode) {
 				throw $e;
 			} else {
-				Mage::setIsDeveloperMode($isDeveloperMode);
-		        Mage::log($e->getMessage(), Zend_Log::ERR);
-		        Mage::setIsDeveloperMode(true);
+				if (@class_exists('Zend_Log')) {
+					Mage::setIsDeveloperMode($isDeveloperMode);
+			        Mage::log($e->getMessage(), Zend_Log::ERR);
+			        Mage::setIsDeveloperMode(true);
+				}
 		    }
 		    
 		    try {
-    			if (Mage::getConfig()) {
+    			if (Mage::getConfig() and @class_exists('Zend_Log')) {
     		        if (Mage::getStoreConfig('ewcore_developer/system_exception_log/enabled')) {
     			        $file = 'exception_system.log';
     			        Mage::log("\n" . $e->__toString(), Zend_Log::ERR, $file);
@@ -157,8 +175,9 @@ function __extendwareErrorHandler($errno, $errstr, $errfile, $errline) {
     } else {
     	mageCoreErrorHandler($errno, $errstr, $errfile, $errline);
     }
-}
+}*/
 
+// sounds scary but should never be modified as it protects the store
 function __ewDisableModule($module) {
 	if (class_exists('Mage', false) === false) return;
 	try {
@@ -171,16 +190,24 @@ function __ewDisableModule($module) {
 }
 
 function __ewDependencyCheck() {
+	$file = BP . DS . 'app' . DS . 'code' . DS . 'local' . DS . 'Extendware' . DS . 'EWCore' . DS . 'Model' . DS . 'Autoload.php';
+	if (@file_exists($file) === false) {
+		if (@class_exists('Extendware_EWCore_Model_Autoload') === false and @is_dir(dirname($file)) === true) {
+			die(sprintf('Cannot load file %s/app/code/local/Extendware/EWCore/Model/Autoload.php. Please ensure all files have been uploaded. If all files have been uploaded, then your hosting company is deleting files without your permission. <br/><br/>To resolve please login to your extendware.com account and re-download the software. When you redownload the software ensure that you select the PHP version as <b>PHP 5.3 - 5.6 (ic)</b>. Re-uploading all the files from the "ic" package type should resolve this.', BP));
+		}
+	}
+	
 	if (function_exists('ioncube_license_properties') === false) {
-		$files = array();
-		$files[] = BP . DS . 'app' . DS . 'code' . DS . 'local' . DS . 'Extendware' . DS . 'EWCore' . DS . 'de.php';
-		$files[] = BP . DS . 'app' . DS . 'code' . DS . 'community' . DS . 'Extendware' . DS . 'EWCore' . DS . 'de.php';
-		foreach ($files as $file) {
-			if (is_file($file)) {
-				include $file;
-				exit;
+		$flagFile = DS . 'var' . DS . 'extendware' . DS . 'system' . DS . 'encoded.flag';
+		if (@filesize($flagFile) > 0) {
+			$files = array();
+			$files[] = BP . DS . 'app' . DS . 'code' . DS . 'local' . DS . 'Extendware' . DS . 'EWCore' . DS . 'de.php';
+			$files[] = BP . DS . 'app' . DS . 'code' . DS . 'community' . DS . 'Extendware' . DS . 'EWCore' . DS . 'de.php';
+			foreach ($files as $file) {
+				if (is_file($file)) {
+					include $file;
+				}
 			}
 		}
-		die('IonCube is required to be installed. Please contact your hosting provider');
 	}
 }

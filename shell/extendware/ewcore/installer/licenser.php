@@ -50,7 +50,7 @@ if ($depth == 0) {
 	die($o);
 }
 
-if (!@Mage::getSingleton('ewcore/module')) {
+if (!@class_exists('Extendware_EWCore_Model_Autoload')) {
 	die('ERROR - Extendware Core does not appear to be installed');
 }
 

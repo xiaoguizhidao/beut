@@ -25,6 +25,6 @@ class Extendware_EWCore_Block_Frontend_Widget_Grid_Container extends Extendware_
 	protected function _toHtml()
     {
     	// do this so adminhtml specific callback is not called in the frontend
-        return Mage_Core_Block_Template::_toHtml();
+        return '<div class="ewfwidget ewfgridcontainer">' . Mage_Core_Block_Template::_toHtml() . '</div>';
     }
 }

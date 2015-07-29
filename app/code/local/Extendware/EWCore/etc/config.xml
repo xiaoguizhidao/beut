@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Extendware_EWCore>
-            <version>2.2.8</version>
+            <version>2.6.8</version>
             <extendware>
 	            <copyright_holder>extendware</copyright_holder>
 	            <configure_url>extendware_ewcore/adminhtml_config/index</configure_url>
@@ -170,23 +170,24 @@
                 <min_num>1</min_num>
             </disabled_extensions>
             <messages>
-            	<updating_enabled>1</updating_enabled>
+            	<recommendations_enabled>1</recommendations_enabled>
             </messages>
             <misc>
+            	<message_upating_enabled>1</message_upating_enabled>
             	<writeable_enabled>1</writeable_enabled>
             	<config_help_notice_threshold>3</config_help_notice_threshold>
             </misc>
         </ewcore_messaging>
         <ewcore_licensing>
         	<serial>
-        		<verify_integrity>automatic</verify_integrity>
+        		<verify_integrity>never</verify_integrity>
         	</serial>
         	<license>
-        		<verify_integrity>automatic</verify_integrity>
+        		<verify_integrity>never</verify_integrity>
         		<ignore_staging_websites>0</ignore_staging_websites>
         	</license>
         	<encoder_license>
-        		<verify_integrity>automatic</verify_integrity>
+        		<verify_integrity>never</verify_integrity>
         		<verify_file_path>1</verify_file_path>
         	</encoder_license>
             <violation_disabling>
@@ -199,6 +200,7 @@
             <automatic_license_updating>
             	<cronjob_enabled>1</cronjob_enabled>
             	<admin_login_enabled>1</admin_login_enabled>
+            	<database_fallback_enabled>1</database_fallback_enabled>
             </automatic_license_updating>
         </ewcore_licensing>
         <ewcore_developer>
@@ -229,6 +231,7 @@
             			<order>0</order>
            			</replace>
            		</mage_compiler_process_ewcore_override>
+           		<!-- remove ones with extension_is_installed soon 09/13/2014 -->
            		<mage_core_layout_ewcore_override>
            			<mode>extendware</mode>
            			<search><class>Mage_Core_Model_Layout</class></search>
@@ -236,6 +239,14 @@
            				<class>Extendware_EWCore_Model_Override_Mage_Core_Layout</class>
             			<order>0</order>
            			</replace>
+           			<conditions>
+           				<extension_exists>
+	           				<type>simple</type>
+	           				<name>extension_is_installed</name>
+	           				<extension>Extendware_EWQuickView|Extendware_EWCart</extension>
+           					<value>1</value>
+           				</extension_exists>
+           			</conditions>
            		</mage_core_layout_ewcore_override>
            		<mage_core_layout_update_ewcore_override>
            			<mode>extendware</mode>
@@ -244,6 +255,14 @@
            				<class>Extendware_EWCore_Model_Override_Mage_Core_Layout_Update</class>
             			<order>0</order>
            			</replace>
+           			<conditions>
+           				<extension_exists>
+	           				<type>simple</type>
+	           				<name>extension_is_installed</name>
+	           				<extension>Extendware_EWQuickView|Extendware_EWLayeredNav|Extendware_EWCart|Extendware_EWAutoTranslate|Extendware_EWPageCache|Extendware_EWSpamProtection|Extendware_EWPRibbon</extension>
+           					<value>1</value>
+           				</extension_exists>
+           			</conditions>
            		</mage_core_layout_update_ewcore_override>
            		<mage_core_exception_ewcore_override>
            			<mode>extendware</mode>
@@ -252,6 +271,14 @@
            				<class>Extendware_EWCore_Model_Override_Mage_Core_Exception</class>
             			<order>0</order>
            			</replace>
+           			<!-- <conditions>
+           				<function_exists>
+	           				<type>simple</type>
+	           				<name>function_exists</name>
+	           				<function>__extendwareErrorHandler</function>
+           					<value>1</value>
+           				</function_exists>
+           			</conditions>  -->
            		</mage_core_exception_ewcore_override>
            	</model>
            	<block>
@@ -262,6 +289,14 @@
 						<class>Extendware_EWCore_Block_Override_Mage_Page_Html_Head</class>
 						<order>0</order>
 					</replace>
+					<conditions>
+           				<extension_exists>
+	           				<type>simple</type>
+	           				<name>extension_is_installed</name>
+	           				<extension>Extendware_EWMinify|Extendware_EWQuickView|Extendware_EWLayeredNav|Extendware_EWCartReminder|Extendware_EWCookieMessage|Extendware_EWCart|Extendware_EWAutoTranslate|Extendware_EWSearchSuggest|Extendware_EWPRibbon</extension>
+           					<value>1</value>
+           				</extension_exists>
+           			</conditions>
 				</mage_page_head_ewcore_override>
 				<mage_adminhtml_page_menu_ewcore_override>
            			<mode>extendware</mode>
@@ -288,6 +323,14 @@
 						<class>Extendware_EWCore_Controller_Override_Mage_Core_Varien_Router_Standard</class>
 						<order>0</order>
 					</replace>
+					<conditions>
+           				<extension_exists>
+	           				<type>simple</type>
+	           				<name>extension_is_installed</name>
+	           				<extension>Extendware_EWAuthenticator|Extendware_EWGADashboard|EWPageCache|EWSpamProtection</extension>
+           					<value>1</value>
+           				</extension_exists>
+           			</conditions>
 				</mage_core_controller_varient_router_standard_ewcore_override>
 			</controller>
 		</override>

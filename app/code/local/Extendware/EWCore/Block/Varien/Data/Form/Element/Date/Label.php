@@ -12,6 +12,7 @@ class Extendware_EWCore_Block_Varien_Data_Form_Element_Date_Label extends Varien
     public function getValue($format = null)
     {
 		$data = $this->getData('value');
+		if ($data === null) return $data;
 		if ($format === null) $format = $this->getFormat();
 		try {
 			$data = Mage::app()->getLocale()->date($data, Varien_Date::DATETIME_INTERNAL_FORMAT)->toString($format);

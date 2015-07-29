@@ -10,49 +10,76 @@ class Extendware_EWCore_Block_Override_Mage_Page_Html_Head extends Extendware_EW
     	$this->mediaBasePath = 'extendware/ewcore/generated';
 	}
 
+	public function addItem($type, $name, $params=null, $if=null, $cond=null)
+    {
+    	$key = $type.'/'.$name;
+    	$existedBefore = isset($this->_data['items'][$key]);
+    	parent::addItem($type, $name, $params, $if, $cond);
+
+    	list($newKey, $newItem) = $this->rewriteItemForDynamicContent($key);
+        if ($existedBefore === false) {
+        	unset($this->_data['items'][$key]);
+        	$this->_data['items'][$newKey] = $newItem;
+        } else {
+        	$items = array();
+        	foreach ($this->_data['items'] as $k => $v) {
+        		if ($k == $key) {
+        			$k = $newKey;
+        			$v = $newItem;
+        		}
+        		$items[$k] = $v;
+        	}
+        	$this->_data['items'] = $items;
+        }
+        return $this;
+    }
+    
+    private function rewriteItemForDynamicContent($key) {
+    	if (!isset($this->_data['items'][$key])) return null;
+    	$item = $this->_data['items'][$key];
+    	
+    	$newKey = $key;
+	    switch ($item['type']) {
+			case 'ewgenerated_js':
+				$block = $this->getLayout()->createBlock($item['name']);
+				if ($block) {
+					$newItemType = 'js';
+					$newItemName = $this->mediaBaseUrl . '/js/' . $block->getFilename();
+					$newKey = $newItemType. '/' . $newItemName;
+					$item['type'] = $newItemType;
+					$item['name'] = $newItemName;
+					$item['filepath'] = $block->getCachedFilePath();
+					$item['original'] = $item;
+				}
+				break;
+			case 'ewgenerated_css':
+				$block = $this->getLayout()->createBlock($item['name']);
+				if ($block) {
+					$newItemType = 'js_css';
+					$newItemName = $this->mediaBaseUrl . '/css/' . $block->getFilename();
+					$newKey = $newItemType. '/' . $newItemName;
+					$item['type'] = $newItemType;
+					$item['name'] = $newItemName;
+					$item['filepath'] = $block->getCachedFilePath();
+					$item['original'] = $item;
+					
+					if (!@$item['params']) {
+						$item['params'] = 'media="all"';
+					}
+				}
+				break;
+		}
+    	return array($newKey, $item);
+    }
+    
 	public function getCssJsHtml()
 	{
 		$items = array(); // this is used to keep the order the same
 		if (!isset($this->_data['items']) or !is_array($this->_data['items'])) $this->_data['items'] = array();
 		foreach ($this->_data['items'] as $key => $item) {
-			switch ($item['type']) {
-				case 'ewgenerated_js':
-		            $block = $this->getLayout()->createBlock($item['name']);
-		            if ($block) {
-			            $newItemType = 'js';
-			            $newItemName = $this->mediaBaseUrl . '/js/' . $block->getFilename();
-			            $newItemKey = $newItemType. '/' . $newItemName;
-			            $items[$newItemKey] = $item;
-			            $items[$newItemKey]['type'] = $newItemType;
-			            $items[$newItemKey]['name'] = $newItemName;
-			            $items[$newItemKey]['filepath'] = $block->getCachedFilePath();
-			            $items[$newItemKey]['original'] = $item;
-		            }
-				    break;
-			    case 'ewgenerated_css':
-		            $block = $this->getLayout()->createBlock($item['name']);
-		            if ($block) {
-			            $newItemType = 'js_css';
-			            $newItemName = $this->mediaBaseUrl . '/css/' . $block->getFilename();
-			            $newItemKey = $newItemType. '/' . $newItemName;
-			            $items[$newItemKey] = $item;
-			            $items[$newItemKey]['type'] = $newItemType;
-			            $items[$newItemKey]['name'] = $newItemName;
-			            $items[$newItemKey]['filepath'] = $block->getCachedFilePath();
-						$items[$newItemKey]['original'] = $item;
-						
-			            if (!@$items[$newItemKey]['params']) {
-				            $items[$newItemKey]['params'] = 'media="all"';
-				        }
-		            }
-				    break;
-			    default:
-			    	$items[$key] = $item;
-			    	break;
-			}
-			
+			list ($newKey, $newItem) = $this->rewriteItemForDynamicContent($key);
+			$items[$newKey] = $newItem;
 		}
-
 		$this->_data['items'] = $items;
 		return $this->rewriteUrlsInString(parent::getCssJsHtml());
 	}

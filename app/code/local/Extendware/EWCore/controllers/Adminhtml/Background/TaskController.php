@@ -19,20 +19,24 @@ class Extendware_EWCore_Adminhtml_Background_TaskController extends Extendware_E
 	}
 	
 	public function updateLicensesAction() {
-		if ($this->mHelper('config')->isUpdateLicensesOnAdminLoginEnabled() === true) {
-			$modules = Mage::getSingleton('ewcore/module')->getCollection()->getItems();
-	    	shuffle($modules);
-			foreach ($modules as $module) {
-				if ($module->isActive() === true) {
-	    			$module->updateLicensesAndSerial();
-				}
-	    	}
-		}
+		try {
+			if ($this->mHelper('config')->isUpdateLicensesOnAdminLoginEnabled() === true) {
+				$modules = Mage::getSingleton('ewcore/module')->getCollection()->getItems();
+		    	shuffle($modules);
+				foreach ($modules as $module) {
+					if ($module->isActive() === true) {
+		    			$module->updateLicensesAndSerial();
+					}
+		    	}
+			}
+		} catch (Exception $e) {}
 		return $this;
 	}
 	
 	public function updateMessagesAction() {
-		Mage::getResourceModel('ewcore/message')->update();
+		try {
+			Mage::getResourceModel('ewcore/message')->update();
+		} catch (Exception $e) {}
 		return $this;
 	}
 }

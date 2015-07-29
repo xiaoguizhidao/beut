@@ -41,7 +41,8 @@ abstract class Extendware_EWCore_Block_Generated_Abstract extends Extendware_EWC
         $key .= '-' . Mage::app()->getStore()->getId();
         $key .= '-' . Mage::getDesign()->getPackageName();
         $key .= '-' . Mage::getDesign()->getTheme('template');
-
+		$key .= '-' . (int) @filemtime($this->getTemplateFilePath());
+	
         return md5($key);
 	}
     

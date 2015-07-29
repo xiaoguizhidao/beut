@@ -15,5 +15,4 @@ foreach ($configCollection as $item) {
 	$item->delete();
 }
 
-$installer->run($command);
 $installer->endSetup();

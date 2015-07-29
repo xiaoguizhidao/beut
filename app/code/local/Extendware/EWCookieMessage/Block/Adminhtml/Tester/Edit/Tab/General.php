@@ -40,7 +40,7 @@ class Extendware_EWCookieMessage_Block_Adminhtml_Tester_Edit_Tab_General extends
 	        $fieldset->addField('messages', 'label', array(
 	        	'name'      => 'messages',
 	            'label'     => $this->__('Shown Messages'),
-	        	'value'		=> $messages,
+	        	'value'		=> $messages ? $messages : $this->__('[None]'),
 	        	'note'		=> $this->__('The names of messags that will be displayed.'),
 	        ));
         
@@ -54,6 +54,18 @@ class Extendware_EWCookieMessage_Block_Adminhtml_Tester_Edit_Tab_General extends
 	            'label'     => $this->__('Country'),
 	        	'value'		=> $country,
 	        	'note'		=> $this->__('The detected country of the IP address'),
+	        ));
+	        
+	        $region = 'UNKNOWN';
+	        if ($this->getResult()->getRegionCode()) {
+	        	$regionCode = $this->getResult()->getRegionCode();
+	        	$region = $this->mHelper()->getRegionByCode($regionCode, $result->getCountryCode()) . ' [' . $regionCode . ']';
+	        }
+	        $fieldset->addField('region', 'label', array(
+	        	'name'      => 'region',
+	            'label'     => $this->__('Region'),
+	        	'value'		=> $region,
+	        	'note'		=> $this->__('The detected region of the IP address'),
 	        ));
          }
          

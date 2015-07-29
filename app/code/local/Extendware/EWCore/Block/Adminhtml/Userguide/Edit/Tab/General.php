@@ -28,7 +28,6 @@ class Extendware_EWCore_Block_Adminhtml_Userguide_Edit_Tab_General extends Exten
     		'type' => 'large',
     		'reset' => 1,
     	);
-    	
     	return $this->mHelper()->getGuideUrl('rwsoftware/guide/iframe', $params);
     }
     

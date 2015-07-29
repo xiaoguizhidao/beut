@@ -1,5 +1,4 @@
 <?php
-
 class Extendware_EWCore_Controller_Override_Mage_Core_Varien_Router_Standard extends Extendware_EWCore_Controller_Override_Mage_Core_Varien_Router_Standard_Bridge
 {
 	protected function _includeControllerClass($controllerFileName, $controllerClassName)

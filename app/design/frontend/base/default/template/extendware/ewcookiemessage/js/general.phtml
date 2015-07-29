@@ -32,7 +32,7 @@ function ewcmInit() {
 	if (ewcookiemessage.stop) return;
 	ewcookiemessage.stop = 1;
 	<?php foreach ($messages as $message): ?>
-		<?php if ($this->canShowMessage($message) === false) continue; ?>
+		<?php if ($this->canOutputMessage($message) === false) continue; ?>
 		<?php 
 		if ($message->hasCountries()) {
 			$jsCondition = 0;
@@ -43,9 +43,8 @@ function ewcmInit() {
 					if (isset($regions[$country]) === false or empty($regions[$country])) {
 						$jsCondition .= ' || ewcmCCookie == ' . json_encode($country);
 					} else {
-						$jsCondition .= ' || (ewcmCCookie == ' . json_encode($country) . ' && ' . json_encode($regions[$country]) . '.indexOf(ewcmRCookie) >= 0';
+						$jsCondition .= ' || (ewcmCCookie == ' . json_encode($country) . ' && ' . json_encode($regions[$country]) . '.indexOf(ewcmRCookie) >= 0)';
 					}
-					$jsCondition .= ')';
 				}
 			} else $jsCondition = json_encode($message->getCountries()) . '.indexOf(ewcmCCookie) >= 0';
 		} else $jsCondition = 1;
@@ -56,7 +55,14 @@ function ewcmInit() {
 		if (<?php echo $jsCondition; ?>) {
 			var message = <?php echo json_encode($message->getMessage()); ?>;
 			message = message.replace('%%BASE_URL%%', <?php echo json_encode(rtrim(Mage::getBaseUrl(), '/')); ?>);
-			$$(<?php echo json_encode($message->getElementSelector()); ?>).first().insert({ <?php echo json_encode($message->getInsertionPosition()); ?>: message });
+			var elem = $$(<?php echo json_encode($message->getElementSelector()); ?>).first();
+			if (elem) {
+				<?php if (in_array($message->getInsertionPosition(), array('update', 'replace'))): ?>
+					elem.<?php echo $message->getInsertionPosition(); ?>(message);
+				<?php else: ?>
+					elem.insert({ <?php echo json_encode($message->getInsertionPosition()); ?>: message });
+				<?php endif; ?>
+			}
 			<?php echo $message->getJs() . "\n"; ?>
 		}
 	<?php endforeach; ?>
@@ -67,6 +73,6 @@ Event.observe(window, 'load', ewcmInit);
 document.observe('dom:loaded', ewcmInit);
 
 <?php foreach ($messages as $message): ?>
-	<?php if ($this->canShowMessage($message) === false) continue; ?>
+	<?php if ($this->canOutputMessage($message) === false) continue; ?>
 	<?php echo $message->getLibraryJs() . "\n"; ?>
 <?php endforeach; ?>

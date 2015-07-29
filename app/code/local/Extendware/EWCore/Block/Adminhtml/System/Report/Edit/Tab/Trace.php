@@ -1,96 +1,55 @@
-<?php //00107
-// Copyright © 2014 Extendware
-// Are you trying to customize your extension? Contact us and maybe we can help! Please note, not all files are encoded.
+<?php
+class Extendware_EWCore_Block_Adminhtml_System_Report_Edit_Tab_Trace extends Extendware_EWCore_Block_Mage_Adminhtml_Widget_Form
+{
+    protected function _prepareForm()
+    {    	
+    	$data = $this->getReportFile()->getParsedData();
+    	
+        $form = new Extendware_EWCore_Block_Varien_Data_Form();
+		
+    	$count = 1;
+        foreach ($data['trace'] as $trace) {
+        	$fieldset = $form->addFieldset('trace_' . $count, array(
+        		'legend' => $this->__('Item #%s Information', $count),
+        	));
+        	
+        	if ($trace['file']) {
+	        	$fieldset->addField('file_' . $count, 'label', array(
+		        	'name'      => 'file_path',
+		        	'value'		=> $trace['file'],
+		            'label'     => $this->__('File Path'),
+		        ));
+        	}
+        	
+        	if ($trace['line']) {
+	        	$fieldset->addField('line_' . $count, 'label', array(
+		        	'name'      => 'line',
+		        	'value'		=> $trace['line'],
+		            'label'     => $this->__('Line'),
+		        ));
+        	}
+        	
+        	if ($trace['caller']) {
+	        	$fieldset->addField('caller_' . $count, 'label', array(
+		        	'name'      => 'caller',
+		        	'value'		=> $trace['caller'],
+		            'label'     => $this->__('Caller'),
+		        ));
+        	}
+        	
+        	$count++;
+        }
+        
 
-
-/**
- * Below are methods found in this class
- *
- * @method mixed public getReportFile()
- *
- */
-?>
-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
+        $form->addValues($this->getAction()->getPersistentData('form_data', true));
+        $form->addFieldNameSuffix('general');
+		$form->setUseContainer(false);
+        $this->setForm($form);
+        
+		return parent::_prepareForm();
+	}
+    
+	public function getReportFile() {
+        return Mage::registry('ew:current_report_file');
+    }
+}
