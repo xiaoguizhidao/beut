@@ -667,6 +667,17 @@ var AW_AjaxCartProUIBlocks = [
             }
             cntBtn.stopObserving('click', this._cntBtnOnClick.bind(this));
             cntBtn.observe('click', this._cntBtnOnClick.bind(this));
+            var quote_content = document.getElementById('minicart-after-add');
+            $("header-cart").update(quote_content.innerHTML);
+            var countItems = $("count-items-after-add").getValue();
+            if(countItems >0) {
+                contentUpdate = '<span class="count">'+ countItems +'</span><span class="label"> Items</span>';
+                $("top-minicart-beut").update(contentUpdate);
+            }
+            else {
+                contentUpdate = '<span class="count">0</span><span class="label"> Item</span>';
+                $("top-minicart-beut").update(contentUpdate);
+            }
             $("top-minicart-beut").click();
             if (AW_AjaxCartPro.config.data.addProductCounterBeginFrom > 0) {
                 this._initCounterForBtn(cntBtn, AW_AjaxCartPro.config.data.addProductCounterBeginFrom);
@@ -738,7 +749,15 @@ var AW_AjaxCartProUIBlocks = [
             }
             cntBtn.stopObserving('click', this._cntBtnOnClick.bind(this));
             cntBtn.observe('click', this._cntBtnOnClick.bind(this));
-
+            var countItems = $("count-items-after-remove").getValue();
+            if(countItems >0) {
+                contentUpdate = '<span class="count">'+ countItems +'</span><span class="label"> Items</span>';
+                $("top-minicart-beut").update(contentUpdate);
+            }
+            else {
+                contentUpdate = '<span class="count">0</span><span class="label"> Item</span>';
+                $("top-minicart-beut").update(contentUpdate);
+            }
             if (AW_AjaxCartPro.config.data.removeProductCounterBeginFrom > 0) {
                 this._initCounterForBtn(cntBtn, AW_AjaxCartPro.config.data.removeProductCounterBeginFrom);
             }

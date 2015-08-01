@@ -27,4 +27,6 @@
  */
 ?><div id="ajaxcartpro-remove-confirm" class="ajaxcartpro-box-hide">
     <?php echo $this->getContent(); ?>
+    <?php $countItems = Mage::helper('checkout/cart')->getSummaryCount(); ?>
+    <input type="hidden" id="count-items-after-remove" value="<?php echo $countItems; ?>" />
 </div>
