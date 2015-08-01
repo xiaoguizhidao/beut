@@ -27,7 +27,9 @@ padding: 0pt 10px 10px 0pt; float: left;
 	overflow: hidden;
 }
 div.block-layered-nav dd a {padding:0px 5px 0px 0px; display:block; float: left;}
-div.block-layered-nav dd a.clear-all {float: right;border: 1px solid;padding: 4px 15px;}
+div.block-layered-nav dd a.clear-all {border: 1px solid;padding: 4px 15px;position: absolute;right: 100px;}
+div.block-layered-nav dd a.clear-all.f-left {border: none;left: 85px; right: inherit;text-transform: none;}
+
 div.block-layered-nav dd a.clear-all:hover {text-decoration: none;}
 div.block-layered-nav dd a.amshopby-attr {padding-left:20px; position: relative;}
 div.block-layered-nav dd a.amshopby-attr-selected {font-weight: bold; padding-left:20px;position: relative;}
@@ -75,7 +77,16 @@ div.block-layered-nav dt.amshopby-collapsed {}
 
 
 div.block-layered-nav div.amshopby-slider {
-	 position:relative; margin:10px auto 5px auto; z-index:9; height:18px;  background: url(../images/amshopby-slider-bg.gif) no-repeat 50% 50%; cursor:pointer;
+	 position:relative; margin:10px auto 5px auto; z-index:9; height:18px;cursor:pointer;
+}
+div.block-layered-nav div.amshopby-slider:before{
+    position: absolute;
+    height: 2px;
+    background: #498fd8;
+    content:'';
+    width: 100%;
+    left: 0;
+    top: 9px;
 }
 div.block-layered-nav div.amshopby-slider div.handle {width:8px; top:3px; height:14px; background: transparent url(../images/amshopby-hadle.png) no-repeat; position: absolute; cursor:move;}
 

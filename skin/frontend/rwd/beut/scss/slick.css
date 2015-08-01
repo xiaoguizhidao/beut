@@ -56,7 +56,6 @@
   [dir="rtl"] .slick-slide {
     float: right; }
   .slick-slide img {
-    display: block;
     width: 100%;
     height: auto; }
   .slick-slide.slick-loading img {

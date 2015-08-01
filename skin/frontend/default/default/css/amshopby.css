@@ -83,7 +83,19 @@ div.block-layered-nav div.amshopby-slider div.handle {width:8px; top:3px; height
 	top: 14px;
 	left: 0px;
 }
-
+div.block-layered-nav div.amshopby-slider:before {
+    width: 100%;
+    content: '';
+    background-color: #4d91d5;
+    height: 3px;
+    display: block;
+    top: 8px;
+    position: absolute;
+    left: 0;
+}
+.block-layered-nav dl dd ol li .amshopby-slider-price span{
+    padding: 5px 0;
+}
 .amshopby-tooltip {
     padding:2px 5px;
     background:#FEC;

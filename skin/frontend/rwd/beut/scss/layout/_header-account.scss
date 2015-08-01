@@ -45,7 +45,7 @@
     }
 }
 .wishlist-link{
-    background: url(../images/icon4.png) no-repeat 10px 14px;
+    background: url(../images/icon4.png) no-repeat 10px 16px;
 }
 .skip-cart{
     background: url(../images/icon5.png) no-repeat 10px 14px;
@@ -222,7 +222,7 @@
     .hamburger{
         width: 36px;
         height: 100%;
-        margin-top: 18px;
+        padding-top: 20px;
         .line + .line{
             margin-top: 6px;
         }
@@ -247,14 +247,16 @@
         display: inline-block;
         margin-left: auto;
         margin-right: auto;
+        float: none;
     }
     .logo-large{
         display: none;
     }
     .logo{
         .small{
-            display: block !important;
+            margin: auto;
             max-width: 60px;
+            display: inline-block;
         }
     }
     .mobile-search{

@@ -31,32 +31,24 @@
  * @see Mage_Directory_Block_Currency
  */
 ?>
+<div class="currency"><img src="<?php echo $this->getSkinUrl().'images/currency/'?>usd.png" alt="currency" title="currency">
 <?php if($this->getCurrencyCount()>1): ?>
 <div class="currency-switcher">
     <select id="select-currency" name="currency" title="<?php echo $this->__('Your Currency') ?>" onchange="setLocation(this.value)">
         <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
-        <option value="<?php echo $this->getSwitchCurrencyUrl($_code) ?>"<?php if($_code==$this->getCurrentCurrencyCode()): ?> selected="selected"<?php endif; ?>>
-            <?php echo $_name ?> - <?php echo $_code ?>
-        </option>
-    <?php endforeach; ?>
+            <option value="<?php echo $this->getSwitchCurrencyUrl($_code) ?>"<?php if($_code==$this->getCurrentCurrencyCode()): ?> selected="selected"<?php endif; ?>>
+                <?php echo $_name ?> - <?php echo $_code ?>
+            </option>
+        <?php if($_code==$this->getCurrentCurrencyCode()): ?>
+                <?php $curr = $_code;?>
+        <?php endif;?>
+        <?php endforeach; ?>
     </select>
-    <script>
-        jQuery(window).bind('load resize orientationchange', function() {
-            var e = window,
-                a = 'inner';
-            if (!('innerWidth' in window)) {
-                a = 'client';
-                e = document.documentElement || document.body;
-            }
-            var vpWidth = e[a + 'Width'];
-            if(vpWidth > 767){
-                jQuery('.currency-switcher div.selector span').css('background','url(<?php echo $this->getBaseUrl()?>media/wysiwyg/currency/<?php echo $this->getCurrentCurrencyCode() ?>.png)');
-            }
-        });
-    </script>
+    <span class="curr"><?php echo $curr;?></span>
 </div>
 <?php
     else:
-        echo '<div class="currency"><img src="'.$this->getSkinUrl().'images/currency/'.strtolower($this->getCurrentCurrencyCode()).'.png" alt="currency" title="currency">'.$this->getCurrentCurrencyCode().'</div>';
+        echo $this->getCurrentCurrencyCode();
     endif;
 ?>
+</div>

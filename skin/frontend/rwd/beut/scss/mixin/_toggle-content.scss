@@ -124,16 +124,21 @@
             float: none;
             width: 100%;
             position: relative;
+            padding: 5px 0;
+            margin-bottom: 10px;
             .title{
                 text-transform: uppercase;
             }
             &:hover {
                 color: $c-action;
+
             }
             &:after {
-                @include triangle(right, 4px, $c-action);
+                content: "\f105";
+                font-family: 'FontAwesome';
                 right: 10px;
-                top: 12px;
+                top: 0;
+                position: absolute;
             }
             &.last {
                 border-bottom-width: 1px;
@@ -150,13 +155,10 @@
             > dt {
                 &.current {
                     border-bottom-width: 1px;
-                }
-
-                &.current:after {
-                    @include triangle(down, 4px, $c-action);
-                    left: 6px;
-                    top: 50%;
-                    margin-top: -3px;
+                    &:after{
+                        content: '\f107';
+                        font-family: 'FontAwesome';
+                    }
                 }
             }
 

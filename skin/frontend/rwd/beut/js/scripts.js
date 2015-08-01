@@ -84,12 +84,17 @@ var FEelementControl = {
 				if ($j(window).width() > 767) {
 					$j('#header').addClass('sticky');
 					$j('.header-language-background').hide();
-					$j('#header').css({top: 0});
+					if($j('#ewcm_container').is(':visible')){
+						$j('#header').css({top: '39px'});
+					}else{
+						$j('#header').css({top: 0});
+					}
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 					$j('#header').hover(function(){
 						$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 					});
 				}
+
 			} else {
 				$j('#header').removeClass('sticky').removeAttr('style');
 				$j('.header-language-background').show();
@@ -113,7 +118,11 @@ var FEelementControl = {
 		if($j(window).scrollTop() > 1){
 			$j('#header').addClass('sticky');
 			$j('.header-language-background').hide();
-			$j('#header').css({top: 0});
+			if($j('#ewcm_container').is(':visible')){
+				$j('#header').css({top: '39px'});
+			}else{
+				$j('#header').css({top: 0});
+			}
 			$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 			$j('#header').hover(function(){
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
@@ -423,14 +432,7 @@ var FEelementControl = {
         $j('#ewcm_container').on('click',function(){
             $j('.header-language-background,.page-header').removeClass('exten-show');
         });
-    },
-	searchBox: function(){
-		$j('#search_mini_form #search').val('Search beut products');
-		$j('#search_mini_form #search').on('focus',function(){
-			$j();
-		})
-	}
-
+    }
 };
 
 jQuery(document).ready(function ($) {
@@ -450,7 +452,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.aboutSlide();
 	FEelementControl.toggleCmsMenu();
 	FEelementControl.ewToggle();
-	FEelementControl.equalHeight('.category-products .item');
+//	FEelementControl.equalHeight('.category-products .item');
 });
 jQuery(window).load(function($){
 	FEelementControl.calcRowHeight();

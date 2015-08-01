@@ -65,7 +65,9 @@ $_category  = Mage::registry('current_category');
                         <?php foreach ($_filters as $_filter): ?>
                             <?php if($_filter->getItemsCount()): ?>
                                 <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                                <dd class="mobile-filter"><?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?>
+                                <dd class="mobile-filter">
+                                    <a class="clear-all f-left" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
+                                    <?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?>
                                     <a class="clear-all f-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
                                 </dd>
                             <?php endif; ?>
