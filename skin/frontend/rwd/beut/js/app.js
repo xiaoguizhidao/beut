@@ -730,6 +730,7 @@ $j(document).ready(function () {
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
+            $j('#header-search #search_mini_form #search').focus();
             if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
                 $j('body').addClass('overflow');
             }
