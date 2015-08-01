@@ -568,7 +568,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   color: #000;
   font-size: 12px;
   line-height: 1.5;
@@ -633,7 +633,7 @@ h3, .h3 {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -647,7 +647,7 @@ h4, .h4 {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -661,7 +661,7 @@ h5, .h5 {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
   font-style: normal;
@@ -675,7 +675,7 @@ h6, .h6 {
   margin: 0;
   margin-bottom: 5px;
   color: #636363;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -949,7 +949,7 @@ div[class^='col-lg-'] {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -1118,7 +1118,7 @@ body:not(.customer-account) .block:first-child .block-title {
     margin: 0;
     margin-bottom: 10px;
     color: #636363;
-    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
@@ -1167,7 +1167,7 @@ body:not(.customer-account) .block:first-child .block-title {
     margin: 0;
     margin-bottom: 10px;
     color: #636363;
-    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
@@ -1233,7 +1233,7 @@ body:not(.customer-account) .block:first-child .block-title {
 .block-account li,
 .block-cms-menu li {
   text-transform: uppercase;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin: 7px 0;
 }
 /* line 414, ../scss/core/_common.scss */
@@ -2019,7 +2019,7 @@ a.button:hover {
   text-align: center;
   margin: 10px;
   text-transform: uppercase;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
 /* -------------------------------------------- *
@@ -2261,7 +2261,7 @@ a.button:hover {
 /* line 1295, ../scss/core/_common.scss */
 .price-box {
   margin: 7px 0;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
 /* line 1300, ../scss/core/_common.scss */
@@ -2286,7 +2286,7 @@ a.button:hover {
 .price-box .price-label {
   color: #A0A0A0;
   white-space: nowrap;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
 /* line 1320, ../scss/core/_common.scss */
@@ -2388,7 +2388,7 @@ span.weee {
 /* line 1404, ../scss/core/_common.scss */
 .item-options {
   font-size: 12px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 1408, ../scss/core/_common.scss */
 .item-options:after {
@@ -3133,7 +3133,7 @@ form .legend {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -3181,7 +3181,7 @@ li.centinel-logos div.input-box img {
 label {
   display: inline-block;
   font-size: 13px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: 600;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3196,7 +3196,7 @@ span.required:after {
   content: ' *';
   color: #DF280A;
   font-weight: normal;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   font-size: 12px;
 }
 
@@ -3283,7 +3283,7 @@ input[type=number],
 input[type=password],
 input[type=tel],
 input[type=text] {
-  height: 30px;
+  height: 38px;
   padding: 0 8px;
 }
 
@@ -3534,7 +3534,7 @@ p.required,
 /* line 385, ../scss/core/_form.scss */
 form .form-instructions {
   font-style: italic;
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-size: 13px;
   color: #A0A0A0;
 }
@@ -3566,7 +3566,7 @@ form .form-instructions {
 .data-table th {
   background: #F4F4F4;
   text-transform: uppercase;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   line-height: 1.4;
   white-space: nowrap;
 }
@@ -3580,7 +3580,7 @@ form .form-instructions {
 /* line 61, ../scss/core/_table.scss */
 .data-table tbody td,
 .data-table tfoot td {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
 }
 
 /* line 66, ../scss/core/_table.scss */
@@ -3714,7 +3714,7 @@ form .form-instructions {
   .linearize-table tbody td[data-rwd-label]:before {
     content: attr(data-rwd-label) ":";
     font-size: 12px;
-    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
     text-transform: uppercase;
   }
@@ -3818,7 +3818,7 @@ form .form-instructions {
   .linearize-table-large tbody td[data-rwd-label]:before {
     content: attr(data-rwd-label) ":";
     font-size: 12px;
-    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
     text-transform: uppercase;
   }
@@ -4030,7 +4030,7 @@ body {
 /* line 32, ../scss/layout/_header.scss */
 .header-language-container,
 .page-header {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 15px;
   display: block;
 }
@@ -4411,12 +4411,14 @@ body {
 
 /* line 82, ../scss/layout/_header-nav.scss */
 .cms-home .skip-search,
-.catalog-category-view .skip-search {
+.catalog-category-view .skip-search,
+.cms-delivery .skip-search,
+.cms-about-us .skip-search {
   border: 1px solid #fff;
   background-position: 10px 10px;
 }
 
-/* line 87, ../scss/layout/_header-nav.scss */
+/* line 89, ../scss/layout/_header-nav.scss */
 .mobile-search {
   display: none;
 }
@@ -4427,35 +4429,35 @@ body {
 /* ============================================ *
  * General Navigation Styles
  * ============================================ */
-/* line 103, ../scss/layout/_header-nav.scss */
+/* line 105, ../scss/layout/_header-nav.scss */
 .nav-primary a {
   text-decoration: none;
   position: relative;
   display: block;
   color: #fff;
   line-height: 1.3;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
-/* line 111, ../scss/layout/_header-nav.scss */
+/* line 113, ../scss/layout/_header-nav.scss */
 .nav-primary li {
   position: relative;
 }
-/* line 116, ../scss/layout/_header-nav.scss */
+/* line 118, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1 a {
   color: #777777;
   padding: 10px 25px;
   transition: all 0.25s ease 0s;
 }
-/* line 120, ../scss/layout/_header-nav.scss */
+/* line 122, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1 a:hover {
   color: #498fd8;
   padding-left: 30px;
 }
-/* line 123, ../scss/layout/_header-nav.scss */
+/* line 125, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1 a:hover:before {
   padding-left: 10px;
 }
-/* line 127, ../scss/layout/_header-nav.scss */
+/* line 129, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1 a:before {
   font-size: 14px;
   content: '\f105';
@@ -4477,13 +4479,13 @@ body {
   transition: all 0.25s ease 0s;
 }
 
-/* line 153, ../scss/layout/_header-nav.scss */
+/* line 155, ../scss/layout/_header-nav.scss */
 .nav-primary .menu-active > ul.level0,
 .nav-primary li.level0 li.sub-menu-active > ul {
   display: block;
 }
 
-/* line 158, ../scss/layout/_header-nav.scss */
+/* line 160, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 > a {
   text-transform: uppercase;
   padding: 15px 20px;
@@ -4498,24 +4500,24 @@ body {
  * Small Viewports - Accordion Style Menu
  * ============================================ */
 @media only screen and (max-width: 768px) {
-  /* line 173, ../scss/layout/_header-nav.scss */
+  /* line 175, ../scss/layout/_header-nav.scss */
   .nav-primary a.level0,
   .nav-primary a {
     line-height: 6.3px;
   }
-  /* line 179, ../scss/layout/_header-nav.scss */
+  /* line 181, ../scss/layout/_header-nav.scss */
   .nav-primary li.level0 ul {
     display: none;
   }
-  /* line 184, ../scss/layout/_header-nav.scss */
+  /* line 186, ../scss/layout/_header-nav.scss */
   .nav-primary li.level0 li {
     padding: 0 0 0 25px;
   }
-  /* line 188, ../scss/layout/_header-nav.scss */
+  /* line 190, ../scss/layout/_header-nav.scss */
   .nav-primary li.level1 a {
     padding: 0 15px 0 25px;
   }
-  /* line 192, ../scss/layout/_header-nav.scss */
+  /* line 194, ../scss/layout/_header-nav.scss */
   .nav-primary li.parent > a:after {
     content: '';
     position: absolute;
@@ -4531,7 +4533,7 @@ body {
     right: auto;
     margin-top: -5px;
   }
-  /* line 201, ../scss/layout/_header-nav.scss */
+  /* line 203, ../scss/layout/_header-nav.scss */
   .nav-primary li.parent.sub-menu-active > a:after,
   .nav-primary li.parent.menu-active > a:after {
     content: '';
@@ -4548,7 +4550,7 @@ body {
     right: auto;
     margin-top: -5px;
   }
-  /* line 210, ../scss/layout/_header-nav.scss */
+  /* line 212, ../scss/layout/_header-nav.scss */
   .nav-primary li.menu-active > a,
   .nav-primary li.sub-menu-active > a {
     color: #498fd8;
@@ -4557,7 +4559,7 @@ body {
 /* ============================================ *
  * Large Viewports - Dropdown Menu
  * ============================================ */
-/* line 220, ../scss/layout/_header-nav.scss */
+/* line 222, ../scss/layout/_header-nav.scss */
 .nav-primary {
   /* Default styles for 1+ drop-down menus */
   /* Level 2+ */
@@ -4565,16 +4567,16 @@ body {
   /* Correct menus that will hang off the page (class added by js) */
   /* Level 1+ */
 }
-/* line 222, ../scss/layout/_header-nav.scss */
+/* line 224, ../scss/layout/_header-nav.scss */
 .nav-primary a.level0 {
   padding: 0 25px;
 }
-/* line 226, ../scss/layout/_header-nav.scss */
+/* line 228, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0,
 .nav-primary a.level0 {
   display: inline-block;
 }
-/* line 231, ../scss/layout/_header-nav.scss */
+/* line 233, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0:hover > ul {
   display: block;
   z-index: 9999;
@@ -4583,20 +4585,20 @@ body {
   filter: alpha(opacity=100);
   top: 97%;
 }
-/* line 240, ../scss/layout/_header-nav.scss */
+/* line 242, ../scss/layout/_header-nav.scss */
 .nav-primary li:last-child > a {
   border-bottom: none;
 }
-/* line 244, ../scss/layout/_header-nav.scss */
+/* line 246, ../scss/layout/_header-nav.scss */
 .nav-primary a:hover,
 .nav-primary li:hover > a {
   color: #fff;
 }
-/* line 249, ../scss/layout/_header-nav.scss */
+/* line 251, ../scss/layout/_header-nav.scss */
 .nav-primary .menu-active {
   z-index: 200;
 }
-/* line 254, ../scss/layout/_header-nav.scss */
+/* line 256, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 ul {
   background: #fff;
   border-top: 3px solid #498fd8;
@@ -4618,7 +4620,7 @@ body {
   z-index: 10;
   width: 250px;
 }
-/* line 274, ../scss/layout/_header-nav.scss */
+/* line 276, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1 ul {
   display: none;
   position: absolute;
@@ -4645,7 +4647,7 @@ body {
   visibility: hidden;
   border-top: 3px solid #498fd8;
 }
-/* line 297, ../scss/layout/_header-nav.scss */
+/* line 299, ../scss/layout/_header-nav.scss */
 .nav-primary li.level1:hover ul {
   display: block;
   opacity: 1;
@@ -4663,28 +4665,28 @@ body {
   transform-origin: top left;
   visibility: visible;
 }
-/* line 318, ../scss/layout/_header-nav.scss */
+/* line 320, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 ul.level0.position-test {
   display: block;
 }
-/* line 323, ../scss/layout/_header-nav.scss */
+/* line 325, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 ul.level0.spill,
 .nav-primary li.level0 ul.level0.last {
   right: 10px;
   left: auto;
 }
-/* line 329, ../scss/layout/_header-nav.scss */
+/* line 331, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 ul.level0.spill li.level1 ul,
 .nav-primary li.level0 ul.level0.last li.level1 ul {
   left: auto;
   right: 100%;
   top: 26px;
 }
-/* line 337, ../scss/layout/_header-nav.scss */
+/* line 339, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 li.parent > a {
   position: relative;
 }
-/* line 340, ../scss/layout/_header-nav.scss */
+/* line 342, ../scss/layout/_header-nav.scss */
 .nav-primary li.level0 li.parent > a:after {
   content: '';
   position: absolute;
@@ -4700,18 +4702,18 @@ body {
   margin-top: -3px;
 }
 
-/* line 350, ../scss/layout/_header-nav.scss */
+/* line 352, ../scss/layout/_header-nav.scss */
 .nav-primary li.menu-active > ul {
   display: block;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1400px) {
-  /* line 356, ../scss/layout/_header-nav.scss */
+  /* line 358, ../scss/layout/_header-nav.scss */
   #header-nav .skip-search {
     margin-left: 20px;
   }
 
-  /* line 360, ../scss/layout/_header-nav.scss */
+  /* line 362, ../scss/layout/_header-nav.scss */
   .page-header .page-header-container {
     padding-left: 50px;
     padding-right: 50px;
@@ -4843,7 +4845,7 @@ body {
   width: 100%;
   height: 40px;
   padding-right: 40px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   border: none;
 }
 /* line 140, ../scss/layout/_header-search.scss */
@@ -5261,7 +5263,7 @@ body {
   font-size: 11px;
   line-height: 22px;
   text-align: center;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
 /* line 47, ../scss/layout/_header-cart.scss */
@@ -5365,7 +5367,7 @@ body {
 /* line 137, ../scss/layout/_header-cart.scss */
 .cart-menu .subtotal {
   padding: 0 15px 15px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -5428,7 +5430,7 @@ body {
 /* line 34, ../scss/layout/_footer.scss */
 .footer,
 .footer button {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
 /* line 39, ../scss/layout/_footer.scss */
@@ -5903,7 +5905,7 @@ h4.product-name,
 h5.product-name,
 p.product-name {
   font-size: 13px;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.4;
 }
@@ -6641,7 +6643,7 @@ p.product-name a:hover {
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -7443,7 +7445,7 @@ p.product-name a:hover {
 /* line 462, ../scss/module/_catalog-product.scss */
 .product-view .add-to-links a {
   color: #000;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   text-decoration: none;
 }
 /* line 466, ../scss/module/_catalog-product.scss */
@@ -7827,7 +7829,7 @@ p.product-name a:hover {
 /* line 689, ../scss/module/_catalog-product.scss */
 .grouped-items-table .name-wrapper {
   color: #498fd8;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 694, ../scss/module/_catalog-product.scss */
 .grouped-items-table .qty-wrapper {
@@ -8680,7 +8682,7 @@ p.product-name a:hover {
 }
 /* line 237, ../scss/module/_checkout-cart.scss */
 .cart-table {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 240, ../scss/module/_checkout-cart.scss */
 .cart-table th,
@@ -8701,7 +8703,7 @@ p.product-name a:hover {
 .cart-table tbody td {
   background-color: transparent;
   padding: 10px 5px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 262, ../scss/module/_checkout-cart.scss */
 .cart-table .product-cart-info,
@@ -8727,7 +8729,7 @@ p.product-name a:hover {
   font-size: 9px;
   padding: 0 5px;
   text-transform: uppercase;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 288, ../scss/module/_checkout-cart.scss */
 .cart-table .product-cart-image .cart-links,
@@ -8751,7 +8753,7 @@ p.product-name a:hover {
 }
 /* line 308, ../scss/module/_checkout-cart.scss */
 .cart-table .product-cart-sku {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-style: italic;
   font-size: 12px;
   margin: 5px 0 12px;
@@ -8921,7 +8923,7 @@ p.product-name a:hover {
   .cart-table td[data-rwd-label]:before {
     content: attr(data-rwd-label) ":";
     font-size: 12px;
-    font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
     text-transform: uppercase;
   }
@@ -9021,7 +9023,7 @@ p.product-name a:hover {
   .cart-table .product-cart-price:before {
     font-weight: 500;
     font-size: 15px;
-    font-family: "Century Gothic", Verdana, Arial, sans-serif;
+    font-family: "CenturyGothic", Verdana, Arial, sans-serif;
   }
   /* line 573, ../scss/module/_checkout-cart.scss */
   .cart-table .cart-footer-actions {
@@ -9135,14 +9137,14 @@ p.product-name a:hover {
 }
 /* line 692, ../scss/module/_checkout-cart.scss */
 .shipping .sp-methods label {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-size: 12px;
   font-style: italic;
   min-width: 100px;
 }
 /* line 698, ../scss/module/_checkout-cart.scss */
 .shipping .sp-methods label span {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
 }
@@ -9262,7 +9264,7 @@ p.product-name a:hover {
 /* line 816, ../scss/module/_checkout-cart.scss */
 #discount-coupon-form label,
 .cart .giftcard label {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-align: left;
@@ -9768,7 +9770,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   margin: 0;
   margin-bottom: 10px;
   color: #636363;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -9788,7 +9790,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .block-progress dd {
   padding-left: 15px;
   margin-bottom: 10px;
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-style: italic;
 }
 /* line 373, ../scss/module/_checkout-onepage.scss */
@@ -9804,7 +9806,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   padding: 0;
   margin: 0 0 3px 0;
   color: #636363;
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   text-transform: none;
   font-style: italic;
   float: left;
@@ -10420,7 +10422,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 /* line 119, ../../default/scss/module/_customer.scss */
 .opc #opc-login p:not(.required) {
   font-style: italic;
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-size: 13px;
   color: #A0A0A0;
 }
@@ -10448,7 +10450,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 }
 /* line 146, ../../default/scss/module/_customer.scss */
 .remember-me-popup p {
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 /* line 150, ../../default/scss/module/_customer.scss */
 .remember-me-popup .remember-me-popup-close {
@@ -10558,7 +10560,7 @@ body.customer-account .data-table {
 }
 /* line 257, ../../default/scss/module/_customer.scss */
 body.customer-account .data-table td a {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-size: 13px;
@@ -10668,7 +10670,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 /* line 392, ../../default/scss/module/_customer.scss */
 .dashboard .box-account p,
 .dashboard .box-account address {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-style: italic;
 }
 /* line 400, ../../default/scss/module/_customer.scss */
@@ -10731,7 +10733,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 /* line 450, ../../default/scss/module/_customer.scss */
 .dashboard .box-reviews li .details .ratings strong {
   float: left;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 13px;
   margin-right: 5px;
 }
@@ -10746,7 +10748,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
  * ============================================ */
 /* line 472, ../../default/scss/module/_customer.scss */
 .my-account .addresses-list {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
 }
 /* line 475, ../../default/scss/module/_customer.scss */
 .my-account .addresses-list .col-1,
@@ -10818,7 +10820,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 
 /* line 547, ../../default/scss/module/_customer.scss */
 .order-date {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -10857,7 +10859,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 /* line 582, ../../default/scss/module/_customer.scss */
 .order-info-box .box-title h2 {
   font-size: 12px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: bold;
   line-height: 1.5;
 }
@@ -10868,12 +10870,12 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 /* line 594, ../../default/scss/module/_customer.scss */
 .order-info-box .box-content {
   float: left;
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
 }
 /* line 598, ../../default/scss/module/_customer.scss */
 .order-info-box .box-content td,
 .order-info-box .box-content th {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   line-height: 1.3;
 }
 /* line 604, ../../default/scss/module/_customer.scss */
@@ -10886,7 +10888,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 /* line 612, ../../default/scss/module/_customer.scss */
 .order-info-box .box-content strong {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -11030,7 +11032,7 @@ ol#cart-sidebar-reorder p.product-name {
   }
   /* line 787, ../../default/scss/module/_customer.scss */
   .dashboard .welcome-msg {
-    font-family: "Century Gothic", "Times New Roman", serif;
+    font-family: "CenturyGothic", "Times New Roman", serif;
   }
   /* line 790, ../../default/scss/module/_customer.scss */
   .dashboard .welcome-msg .hello {
@@ -11395,7 +11397,7 @@ div.paypal-logo span > img {
 }
 /* line 57, ../../default/scss/module/_review.scss */
 #customer-reviews .review-heading .pager .count-container .limiter label {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -11415,7 +11417,7 @@ div.paypal-logo span > img {
 }
 /* line 81, ../../default/scss/module/_review.scss */
 #customer-reviews h3 {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
@@ -11432,7 +11434,7 @@ div.paypal-logo span > img {
 /* line 96, ../../default/scss/module/_review.scss */
 #customer-reviews .fieldset h4 {
   border-bottom: 1px solid #CCCCCC;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   padding-bottom: 5px;
@@ -11444,7 +11446,7 @@ div.paypal-logo span > img {
 }
 /* line 109, ../../default/scss/module/_review.scss */
 #customer-reviews .fieldset .form-list {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   margin: 10px 0;
@@ -11486,7 +11488,7 @@ div.paypal-logo span > img {
 }
 /* line 158, ../../default/scss/module/_review.scss */
 #customer-reviews dl {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   margin-bottom: 10px;
@@ -11498,13 +11500,13 @@ div.paypal-logo span > img {
 }
 /* line 169, ../../default/scss/module/_review.scss */
 #customer-reviews dl dd {
-  font-family: "Century Gothic", "Times New Roman", serif;
+  font-family: "CenturyGothic", "Times New Roman", serif;
   font-size: 12px;
   margin: 10px 0;
 }
 /* line 174, ../../default/scss/module/_review.scss */
 #customer-reviews dl dd .ratings-table {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   width: 100%;
 }
@@ -11524,7 +11526,7 @@ div.paypal-logo span > img {
 /* line 193, ../../default/scss/module/_review.scss */
 #customer-reviews dl dd .review-meta {
   color: #498fd8;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   font-weight: normal;
   text-transform: uppercase;
@@ -11583,7 +11585,7 @@ div.paypal-logo span > img {
  * ============================================ */
 /* line 260, ../../default/scss/module/_review.scss */
 .ratings-table {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -11945,7 +11947,7 @@ div.paypal-logo span > img {
 }
 /* line 35, ../../default/scss/module/_wishlist.scss */
 #wishlist-table.clean-table {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   width: 100%;
@@ -11961,14 +11963,14 @@ div.paypal-logo span > img {
 }
 /* line 50, ../../default/scss/module/_wishlist.scss */
 #wishlist-table.clean-table thead th {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
 }
 /* line 57, ../../default/scss/module/_wishlist.scss */
 #wishlist-table .product-name {
   font-size: 16px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -11979,7 +11981,7 @@ div.paypal-logo span > img {
 /* line 68, ../../default/scss/module/_wishlist.scss */
 #wishlist-table .wishlist-sku {
   font-size: 11px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin: 5px 0;
 }
 /* line 74, ../../default/scss/module/_wishlist.scss */
@@ -11988,7 +11990,7 @@ div.paypal-logo span > img {
   width: 100%;
   height: 45px;
   font-size: 11px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 81, ../../default/scss/module/_wishlist.scss */
 #wishlist-table textarea::-webkit-input-placeholder {
@@ -12076,7 +12078,7 @@ div.paypal-logo span > img {
 }
 /* line 166, ../../default/scss/module/_wishlist.scss */
 #wishlist-table .price-box {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
 }
 /* line 170, ../../default/scss/module/_wishlist.scss */
@@ -12368,7 +12370,7 @@ div.paypal-logo span > img {
 /* line 58, ../scss/module/_checkout-cart-minicart.scss */
 .header-minicart .block-subtitle {
   color: #50A4CF;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
   line-height: 1.4;
@@ -12718,7 +12720,7 @@ div.paypal-logo span > img {
 .product-review .product-img-box p.label {
   border-bottom: 1px solid #CCCCCC;
   font-size: 16px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-top: 20px;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -12733,12 +12735,12 @@ div.paypal-logo span > img {
   color: #3399CC;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   padding-bottom: 10px;
 }
 /* line 57, ../../default/scss/module/_account-reviews.scss */
 .product-review .ratings-table {
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 60, ../../default/scss/module/_account-reviews.scss */
 .product-review .ratings-table th {
@@ -12756,7 +12758,7 @@ div.paypal-logo span > img {
   border-bottom: 1px solid #CCCCCC;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-top: 20px;
   padding: 10px 0;
   text-transform: uppercase;
@@ -12764,7 +12766,7 @@ div.paypal-logo span > img {
 /* line 83, ../../default/scss/module/_account-reviews.scss */
 .product-review .ratings-description dd {
   color: #737373;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 13px;
 }
 
@@ -12839,7 +12841,7 @@ div.paypal-logo span > img {
   list-style: none;
   margin-left: 0;
   font-style: normal;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
 /* line 101, ../scss/mixin/_toggle-content.scss */
@@ -12927,7 +12929,7 @@ div.paypal-logo span > img {
 /* line 32, ../../default/scss/module/_pricing_conditions.scss */
 .price-box .minimal-price-link .label {
   color: #CF5050;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -13568,7 +13570,7 @@ body[class*="checkout-multishipping-"] .checkout-progress > li {
   border-bottom: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   margin-bottom: 10px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 /* line 46, ../../default/scss/module/_checkout-multi-address.scss */
 body[class*="checkout-multishipping-"] .checkout-progress > li.active {

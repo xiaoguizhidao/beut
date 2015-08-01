@@ -821,7 +821,7 @@ p.sku {
 /* line 600, ../scss/email-inline.scss */
 .price-box {
   margin: 7px 0;
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
 /* line 605, ../scss/email-inline.scss */
@@ -843,14 +843,14 @@ p.sku {
 /* line 618, ../scss/email-inline.scss */
 .price-box .price,
 .price {
-  font-family: "Century Gothic", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
 /* line 623, ../scss/email-inline.scss */
 .price-box .price-label {
   color: #A0A0A0;
   white-space: nowrap;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
 /* line 629, ../scss/email-inline.scss */

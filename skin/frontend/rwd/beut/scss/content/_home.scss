@@ -58,6 +58,15 @@
     font-weight:400;
     font-style:normal
 }
+@font-face {
+    font-family:'CenturyGothic';
+    src:url(../fonts/CenturyGothic.eot);
+    src:url(../fonts/CenturyGothic.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/CenturyGothic.woff) format("woff"),
+    url(../fonts/CenturyGothic.ttf) format("truetype");
+    font-weight:400;
+    font-style:normal
+}
 
 @font-face {
     font-family: 'FontAwesome';

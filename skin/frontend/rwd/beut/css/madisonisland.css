@@ -84,48 +84,55 @@ $mq-fixed-value: 1024;
   font-style: normal;
 }
 @font-face {
+  font-family: 'CenturyGothic';
+  src: url(../fonts/CenturyGothic.eot);
+  src: url(../fonts/CenturyGothic.eot?#iefix) format("embedded-opentype"), url(../fonts/CenturyGothic.woff) format("woff"), url(../fonts/CenturyGothic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot");
   src: local("☺"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/* line 71, ../scss/content/_home.scss */
+/* line 80, ../scss/content/_home.scss */
 body.cms-home .main-container {
   margin-top: 50px;
 }
-/* line 75, ../scss/content/_home.scss */
+/* line 84, ../scss/content/_home.scss */
 body.cms-home .slideshow-container {
   margin-top: 0;
 }
 
-/* line 79, ../scss/content/_home.scss */
+/* line 88, ../scss/content/_home.scss */
 .row2 {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: hidden;
 }
-/* line 83, ../scss/content/_home.scss */
+/* line 92, ../scss/content/_home.scss */
 .row2 .row {
   height: 100%;
 }
-/* line 85, ../scss/content/_home.scss */
+/* line 94, ../scss/content/_home.scss */
 .row2 .row .item {
   height: 100%;
   position: relative;
 }
-/* line 90, ../scss/content/_home.scss */
+/* line 99, ../scss/content/_home.scss */
 .row2 .block2 {
   padding-left: 0;
   padding-right: 5px;
 }
-/* line 94, ../scss/content/_home.scss */
+/* line 103, ../scss/content/_home.scss */
 .row2 .block3 {
   padding-right: 0;
   padding-left: 5px;
 }
 
-/* line 99, ../scss/content/_home.scss */
+/* line 108, ../scss/content/_home.scss */
 .hot-prod {
   text-align: center;
   padding-left: 100px;
@@ -134,30 +141,30 @@ body.cms-home .slideshow-container {
   overflow: hidden;
   width: 100%;
 }
-/* line 106, ../scss/content/_home.scss */
+/* line 115, ../scss/content/_home.scss */
 .hot-prod.brand-block {
   text-align: center;
 }
-/* line 108, ../scss/content/_home.scss */
+/* line 117, ../scss/content/_home.scss */
 .hot-prod.brand-block img {
   max-width: 100%;
   height: auto;
 }
-/* line 113, ../scss/content/_home.scss */
+/* line 122, ../scss/content/_home.scss */
 .hot-prod h2 {
   text-transform: uppercase;
   color: #000;
   font-size: 26px;
   margin-bottom: 0;
 }
-/* line 119, ../scss/content/_home.scss */
+/* line 128, ../scss/content/_home.scss */
 .hot-prod .desc {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   text-align: center;
   margin-bottom: 20px;
   display: block;
 }
-/* line 125, ../scss/content/_home.scss */
+/* line 134, ../scss/content/_home.scss */
 .hot-prod a {
   font-size: 20px;
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
@@ -166,72 +173,72 @@ body.cms-home .slideshow-container {
   display: block;
   margin-bottom: 30px;
 }
-/* line 132, ../scss/content/_home.scss */
+/* line 141, ../scss/content/_home.scss */
 .hot-prod a.shop-more {
   font-style: italic;
 }
 
-/* line 137, ../scss/content/_home.scss */
+/* line 146, ../scss/content/_home.scss */
 #lightSlider {
   text-align: center;
   margin-bottom: 40px;
 }
-/* line 140, ../scss/content/_home.scss */
+/* line 149, ../scss/content/_home.scss */
 #lightSlider h2.product-name {
   text-transform: none;
 }
-/* line 142, ../scss/content/_home.scss */
+/* line 151, ../scss/content/_home.scss */
 #lightSlider h2.product-name a {
   font-size: 11px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   color: #000;
   margin-bottom: 0;
 }
-/* line 149, ../scss/content/_home.scss */
+/* line 158, ../scss/content/_home.scss */
 #lightSlider .price-box {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 14px;
 }
-/* line 153, ../scss/content/_home.scss */
+/* line 162, ../scss/content/_home.scss */
 #lightSlider .product-image {
   margin-bottom: 45px;
 }
-/* line 155, ../scss/content/_home.scss */
+/* line 164, ../scss/content/_home.scss */
 #lightSlider .product-image img {
   float: none;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-/* line 162, ../scss/content/_home.scss */
+/* line 171, ../scss/content/_home.scss */
 #lightSlider .amconf-block {
   display: none;
 }
-/* line 165, ../scss/content/_home.scss */
+/* line 174, ../scss/content/_home.scss */
 #lightSlider .product-brand {
   font-size: 14px;
   line-height: 1.2;
   margin-bottom: 3px;
 }
-/* line 170, ../scss/content/_home.scss */
+/* line 179, ../scss/content/_home.scss */
 #lightSlider li {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 175, ../scss/content/_home.scss */
+/* line 184, ../scss/content/_home.scss */
 .lSSlideOuter .lSPager.lSpg {
   display: none;
 }
 
-/* line 180, ../scss/content/_home.scss */
+/* line 189, ../scss/content/_home.scss */
 .row4 .item {
   position: relative;
   overflow: hidden;
   padding-left: 10px;
   color: #fff;
 }
-/* line 181, ../scss/content/_home.scss */
+/* line 190, ../scss/content/_home.scss */
 .row4 .item:first-child {
   background: #4d91d5;
   /*margin-bottom: 10px;*/
@@ -239,7 +246,7 @@ body.cms-home .slideshow-container {
   overflow: hidden;
 }
 @media only screen and (min-width: 767px) {
-  /* line 192, ../scss/content/_home.scss */
+  /* line 201, ../scss/content/_home.scss */
   .row4 .item .absolute-block {
     position: absolute;
     top: 50%;
@@ -258,13 +265,13 @@ body.cms-home .slideshow-container {
     overflow: hidden;
   }
 }
-/* line 198, ../scss/content/_home.scss */
+/* line 207, ../scss/content/_home.scss */
 .row4 .item .content {
   margin-bottom: 30px;
   overflow: hidden;
   font-size: 16px;
 }
-/* line 203, ../scss/content/_home.scss */
+/* line 212, ../scss/content/_home.scss */
 .row4 .item a {
   font-size: 20px;
   display: inline-block;
@@ -272,12 +279,12 @@ body.cms-home .slideshow-container {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-style: italic;
 }
-/* line 209, ../scss/content/_home.scss */
+/* line 218, ../scss/content/_home.scss */
 .row4 .item a.find-out {
   font-size: 26px;
   letter-spacing: 3px;
 }
-/* line 214, ../scss/content/_home.scss */
+/* line 223, ../scss/content/_home.scss */
 .row4 .item h3 {
   color: #fff;
   font-size: 26px;
@@ -286,64 +293,64 @@ body.cms-home .slideshow-container {
   margin-bottom: 14px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
-  /* line 223, ../scss/content/_home.scss */
+  /* line 232, ../scss/content/_home.scss */
   .row4 .item .absolute-block {
     width: -moz-calc(100% - 100px);
     width: -webkit-calc(100% - 100px);
     width: calc(100% - 100px);
   }
-  /* line 226, ../scss/content/_home.scss */
+  /* line 235, ../scss/content/_home.scss */
   .row4 .item .content {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  /* line 230, ../scss/content/_home.scss */
+  /* line 239, ../scss/content/_home.scss */
   .row4 .item a, .row4 .item h3 {
     font-size: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 236, ../scss/content/_home.scss */
+  /* line 245, ../scss/content/_home.scss */
   .row4 .item .content {
     font-size: 10px;
     margin-bottom: 10px;
   }
-  /* line 240, ../scss/content/_home.scss */
+  /* line 249, ../scss/content/_home.scss */
   .row4 .item a, .row4 .item h3 {
     font-size: 16px;
   }
 }
-/* line 244, ../scss/content/_home.scss */
+/* line 253, ../scss/content/_home.scss */
 .row4 .item.right-item {
   padding-right: 0;
 }
 
-/* line 250, ../scss/content/_home.scss */
+/* line 259, ../scss/content/_home.scss */
 .row5 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 253, ../scss/content/_home.scss */
+/* line 262, ../scss/content/_home.scss */
 .row5 .row {
   height: 100%;
 }
-/* line 255, ../scss/content/_home.scss */
+/* line 264, ../scss/content/_home.scss */
 .row5 .row .block2 {
   padding-left: 0;
   padding-right: 5px;
 }
-/* line 259, ../scss/content/_home.scss */
+/* line 268, ../scss/content/_home.scss */
 .row5 .row .block3 {
   padding-right: 0;
   padding-left: 5px;
 }
-/* line 264, ../scss/content/_home.scss */
+/* line 273, ../scss/content/_home.scss */
 .row5 .item {
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 268, ../scss/content/_home.scss */
+/* line 277, ../scss/content/_home.scss */
 .row5 .item:before {
   content: '';
   position: absolute;
@@ -353,27 +360,27 @@ body.cms-home .slideshow-container {
   height: 100%;
 }
 
-/* line 279, ../scss/content/_home.scss */
+/* line 288, ../scss/content/_home.scss */
 .caption1 {
   right: 130px;
   left: initial;
   color: #fff;
 }
-/* line 283, ../scss/content/_home.scss */
+/* line 292, ../scss/content/_home.scss */
 #slide1 .caption1 {
   left: 100px;
 }
-/* line 286, ../scss/content/_home.scss */
+/* line 295, ../scss/content/_home.scss */
 .caption1 .subcaption1 {
   font-size: 18px;
   text-transform: uppercase;
 }
-/* line 290, ../scss/content/_home.scss */
+/* line 299, ../scss/content/_home.scss */
 .caption1 .subcaption2 {
   font-size: 45px;
   text-transform: uppercase;
 }
-/* line 294, ../scss/content/_home.scss */
+/* line 303, ../scss/content/_home.scss */
 .caption1 .subcaption3 {
   font-size: 18px;
   line-height: 1.5;
@@ -381,7 +388,7 @@ body.cms-home .slideshow-container {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 301, ../scss/content/_home.scss */
+/* line 310, ../scss/content/_home.scss */
 .caption1 .link-text {
   margin-top: 60px;
   font-size: 22px;
@@ -394,7 +401,7 @@ body.cms-home .slideshow-container {
   display: inline-block;
 }
 
-/* line 314, ../scss/content/_home.scss */
+/* line 323, ../scss/content/_home.scss */
 body.cms-home .slideshow-container {
   overflow: hidden;
 }
@@ -402,14 +409,14 @@ body.cms-home .slideshow-container {
 /* -------------------------------------------- *
  * Promotion Banner Section
  */
-/* line 322, ../scss/content/_home.scss */
+/* line 331, ../scss/content/_home.scss */
 .promos {
   margin: 0 0 10px 0;
   padding: 0;
   width: 100%;
 }
 
-/* line 328, ../scss/content/_home.scss */
+/* line 337, ../scss/content/_home.scss */
 .promos:after {
   content: '';
   display: table;
@@ -417,7 +424,7 @@ body.cms-home .slideshow-container {
 }
 
 /* Specifying the body only in order to override the .std ul li styling */
-/* line 334, ../scss/content/_home.scss */
+/* line 343, ../scss/content/_home.scss */
 body .promos > li {
   margin: 0 0 10px 0;
   list-style: none;
@@ -431,25 +438,25 @@ body .promos > li {
   user-select: none;
 }
 
-/* line 343, ../scss/content/_home.scss */
+/* line 352, ../scss/content/_home.scss */
 .promos > li:last-child {
   margin-bottom: 0;
 }
 
-/* line 347, ../scss/content/_home.scss */
+/* line 356, ../scss/content/_home.scss */
 .promos img {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 352, ../scss/content/_home.scss */
+/* line 361, ../scss/content/_home.scss */
 .promos a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: block;
 }
 
-/* line 357, ../scss/content/_home.scss */
+/* line 366, ../scss/content/_home.scss */
 .promos span {
   color: #FFFFFF;
   text-transform: uppercase;
@@ -459,11 +466,11 @@ body .promos > li {
   top: 10%;
   font-weight: 500;
   font-size: 20px;
-  font-family: "Century Gothic", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   text-shadow: 1px 1px 3px #555555;
 }
 
-/* line 370, ../scss/content/_home.scss */
+/* line 379, ../scss/content/_home.scss */
 .promos strong {
   font-weight: 600;
   font-size: 26px;
@@ -471,25 +478,25 @@ body .promos > li {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 378, ../scss/content/_home.scss */
+  /* line 387, ../scss/content/_home.scss */
   .promos span {
     font-size: 16px;
   }
 
-  /* line 382, ../scss/content/_home.scss */
+  /* line 391, ../scss/content/_home.scss */
   .promos strong {
     font-size: 17px;
   }
 
   /* Config: Three columns + flexible gutter */
-  /* line 389, ../scss/content/_home.scss */
+  /* line 398, ../scss/content/_home.scss */
   body .promos > li {
     float: left;
     width: 31.74603%;
     margin-right: 2.38095%;
   }
 
-  /* line 395, ../scss/content/_home.scss */
+  /* line 404, ../scss/content/_home.scss */
   .promos > li:nth-child(3n) {
     margin-right: 0;
   }
@@ -499,7 +506,7 @@ body .promos > li {
  */
 /* Hiding the reviews content via CSS because we can't modify the template, */
 /* since it may be used in other places where those elements are needed */
-/* line 407, ../scss/content/_home.scss */
+/* line 416, ../scss/content/_home.scss */
 .cms-index-index .products-grid .ratings,
 .cms-index-index .products-grid .actions,
 .cms-index-noroute .products-grid .ratings,
@@ -507,7 +514,7 @@ body .promos > li {
   display: none;
 }
 
-/* line 414, ../scss/content/_home.scss */
+/* line 423, ../scss/content/_home.scss */
 .cms-index-index h2.subtitle {
   padding: 6px 0;
   text-align: center;
@@ -517,57 +524,57 @@ body .promos > li {
   border-top: 1px solid #CCCCCC;
 }
 
-/* line 423, ../scss/content/_home.scss */
+/* line 432, ../scss/content/_home.scss */
 .cms-index-noroute h2.subtitle {
   display: none;
 }
 
-/* line 426, ../scss/content/_home.scss */
+/* line 435, ../scss/content/_home.scss */
 .payment1 {
   display: none;
 }
 
-/* line 429, ../scss/content/_home.scss */
+/* line 438, ../scss/content/_home.scss */
 .payment2 {
   display: block;
 }
 
-/* line 433, ../scss/content/_home.scss */
+/* line 442, ../scss/content/_home.scss */
 .product-shop .product-brand {
   font-size: 32px;
 }
 
-/* line 438, ../scss/content/_home.scss */
+/* line 447, ../scss/content/_home.scss */
 .prod-top {
   padding-left: 100px;
   padding-right: 100px;
   color: #000;
 }
 
-/* line 443, ../scss/content/_home.scss */
+/* line 452, ../scss/content/_home.scss */
 .widget {
   clear: both;
 }
-/* line 445, ../scss/content/_home.scss */
+/* line 454, ../scss/content/_home.scss */
 .widget:after {
   clear: both;
   content: '';
   display: block;
 }
-/* line 450, ../scss/content/_home.scss */
+/* line 459, ../scss/content/_home.scss */
 .widget .pager {
   float: none;
   width: 100%;
 }
 
-/* line 455, ../scss/content/_home.scss */
+/* line 464, ../scss/content/_home.scss */
 .square-container {
   margin-left: 10px;
   margin-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 461, ../scss/content/_home.scss */
+  /* line 470, ../scss/content/_home.scss */
   body,
   h2.product-name,
   h3.product-name,
@@ -579,11 +586,11 @@ body .promos > li {
     font-size: 10px;
   }
 
-  /* line 472, ../scss/content/_home.scss */
+  /* line 481, ../scss/content/_home.scss */
   h2 {
     font-size: 15px;
   }
-  /* line 474, ../scss/content/_home.scss */
+  /* line 483, ../scss/content/_home.scss */
   .hot-prod h2 {
     font-size: 18px;
     max-width: 250px;
@@ -593,17 +600,17 @@ body .promos > li {
     clear: both;
   }
 
-  /* line 483, ../scss/content/_home.scss */
+  /* line 492, ../scss/content/_home.scss */
   .slideshow .banner-msg h2 {
     font-size: 20px;
   }
 
-  /* line 486, ../scss/content/_home.scss */
+  /* line 495, ../scss/content/_home.scss */
   .slideshow .banner-msg h2 strong {
     font-size: 24px;
   }
 
-  /* line 489, ../scss/content/_home.scss */
+  /* line 498, ../scss/content/_home.scss */
   .caption1 {
     left: 0 !important;
     right: 0 !important;
@@ -613,58 +620,58 @@ body .promos > li {
     max-width: 70% !important;
   }
 
-  /* line 497, ../scss/content/_home.scss */
+  /* line 506, ../scss/content/_home.scss */
   .catalog-product-view .breadcrumbs {
     padding: 10px;
   }
 
-  /* line 501, ../scss/content/_home.scss */
+  /* line 510, ../scss/content/_home.scss */
   .caption1 .subcaption1, .caption1 .subcaption3 {
     font-size: 10px;
   }
-  /* line 504, ../scss/content/_home.scss */
+  /* line 513, ../scss/content/_home.scss */
   .caption1 .subcaption2 {
     font-size: 22px;
     line-height: 1;
   }
 
-  /* line 509, ../scss/content/_home.scss */
+  /* line 518, ../scss/content/_home.scss */
   .hot-prod a {
     font-size: 10px;
   }
 
-  /* line 513, ../scss/content/_home.scss */
+  /* line 522, ../scss/content/_home.scss */
   .row4 .item:first-child {
     padding: 40px 30px;
   }
 
-  /* line 516, ../scss/content/_home.scss */
+  /* line 525, ../scss/content/_home.scss */
   body.cms-home .main-container {
     margin-top: 0;
   }
 
-  /* line 519, ../scss/content/_home.scss */
+  /* line 528, ../scss/content/_home.scss */
   .main, #le_slideshow {
     margin-top: 0;
   }
 
-  /* line 522, ../scss/content/_home.scss */
+  /* line 531, ../scss/content/_home.scss */
   .lSSlideOuter .lSPager.lSpg {
     display: none;
     margin-bottom: 10px;
   }
 
-  /* line 526, ../scss/content/_home.scss */
+  /* line 535, ../scss/content/_home.scss */
   .payment1 {
     display: block;
   }
 
-  /* line 529, ../scss/content/_home.scss */
+  /* line 538, ../scss/content/_home.scss */
   .payment2 {
     display: none;
   }
 
-  /* line 532, ../scss/content/_home.scss */
+  /* line 541, ../scss/content/_home.scss */
   .block-cart {
     position: fixed;
     right: 0;
@@ -679,7 +686,7 @@ body .promos > li {
     -o-transform: translate3d(320px, 0, 0);
     -ms-transform: translate3d(320px, 0, 0);
   }
-  /* line 541, ../scss/content/_home.scss */
+  /* line 550, ../scss/content/_home.scss */
   .block-cart.skip-active {
     position: fixed;
     transform: translate3d(0, 0, 0);
@@ -694,7 +701,7 @@ body .promos > li {
     right: 0;
   }
 
-  /* line 551, ../scss/content/_home.scss */
+  /* line 560, ../scss/content/_home.scss */
   .minicart-wrapper {
     left: 0;
     top: 0;
@@ -703,12 +710,12 @@ body .promos > li {
     -o-animation: cartOpen .35s ease-out forwards;
     animation: cartOpen .35s ease-out forwards;
   }
-  /* line 558, ../scss/content/_home.scss */
+  /* line 567, ../scss/content/_home.scss */
   .minicart-wrapper .block-subtitle {
     top: 10px;
     right: 26px;
   }
-  /* line 562, ../scss/content/_home.scss */
+  /* line 571, ../scss/content/_home.scss */
   .minicart-wrapper header {
     text-transform: uppercase;
     border-bottom: 1px solid #eee;
@@ -716,18 +723,18 @@ body .promos > li {
     width: 100%;
     padding: 30px 10px;
   }
-  /* line 568, ../scss/content/_home.scss */
+  /* line 577, ../scss/content/_home.scss */
   .minicart-wrapper header h6 {
     font-size: 15px;
     color: #000;
   }
-  /* line 573, ../scss/content/_home.scss */
+  /* line 582, ../scss/content/_home.scss */
   .minicart-wrapper .empty {
     text-align: center;
     margin-top: 30px;
   }
 
-  /* line 578, ../scss/content/_home.scss */
+  /* line 587, ../scss/content/_home.scss */
   .overflow {
     overflow: hidden;
     height: 100%;
@@ -735,7 +742,7 @@ body .promos > li {
     position: fixed;
   }
 
-  /* line 584, ../scss/content/_home.scss */
+  /* line 593, ../scss/content/_home.scss */
   .block-cart {
     -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -744,102 +751,102 @@ body .promos > li {
     transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  /* line 587, ../scss/content/_home.scss */
+  /* line 596, ../scss/content/_home.scss */
   #header-search {
     padding-left: 15px;
     padding-right: 15px;
     top: 48px;
     padding: 0 10px;
   }
-  /* line 592, ../scss/content/_home.scss */
+  /* line 601, ../scss/content/_home.scss */
   #header-search.skip-active {
     height: 130px;
   }
 
-  /* line 597, ../scss/content/_home.scss */
+  /* line 606, ../scss/content/_home.scss */
   #search_mini_form .input-box {
     margin-top: 20px;
   }
-  /* line 600, ../scss/content/_home.scss */
+  /* line 609, ../scss/content/_home.scss */
   #search_mini_form #search {
     margin-top: 0;
     width: 100%;
     margin-bottom: 10px;
   }
-  /* line 605, ../scss/content/_home.scss */
+  /* line 614, ../scss/content/_home.scss */
   #search_mini_form label {
     font-size: 10px;
   }
-  /* line 608, ../scss/content/_home.scss */
+  /* line 617, ../scss/content/_home.scss */
   #search_mini_form .search-button {
     font-size: 15px;
   }
 
-  /* line 612, ../scss/content/_home.scss */
+  /* line 621, ../scss/content/_home.scss */
   .hot-prod,
   .prod-top {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  /* line 617, ../scss/content/_home.scss */
+  /* line 626, ../scss/content/_home.scss */
   .block-layered-nav .block-content.accordion-open > dl > dd.current {
     position: relative;
   }
 
-  /* line 620, ../scss/content/_home.scss */
+  /* line 629, ../scss/content/_home.scss */
   .catalog-product-view .main-container {
     margin-top: 0;
   }
 
-  /* line 624, ../scss/content/_home.scss */
+  /* line 633, ../scss/content/_home.scss */
   .product-view .add-to-cart .qty-wrapper .qty {
     width: 50px;
     height: 50px;
     font-size: 16px;
   }
 
-  /* line 629, ../scss/content/_home.scss */
+  /* line 638, ../scss/content/_home.scss */
   .product-view .add-to-cart-buttons {
     width: -moz-calc(100% - 70px);
     width: -webkit-calc(100% - 70px);
     width: calc(100% - 70px);
   }
 
-  /* line 632, ../scss/content/_home.scss */
+  /* line 641, ../scss/content/_home.scss */
   .product-view .add-to-cart-buttons .button {
     height: 50px;
     font-size: 16px;
   }
 
-  /* line 636, ../scss/content/_home.scss */
+  /* line 645, ../scss/content/_home.scss */
   .product-view .product-shop .product-spec-attributes {
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 479px) {
-  /* line 642, ../scss/content/_home.scss */
+  /* line 651, ../scss/content/_home.scss */
   .slideshow .banner-msg {
     top: 20%;
   }
 
-  /* line 646, ../scss/content/_home.scss */
+  /* line 655, ../scss/content/_home.scss */
   .slideshow .banner-msg h2 {
     font-size: 14px;
   }
 
-  /* line 650, ../scss/content/_home.scss */
+  /* line 659, ../scss/content/_home.scss */
   .slideshow .banner-msg h2 strong {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 880px) {
-  /* line 656, ../scss/content/_home.scss */
+  /* line 665, ../scss/content/_home.scss */
   .promos span {
     font-size: 18px;
   }
 
-  /* line 660, ../scss/content/_home.scss */
+  /* line 669, ../scss/content/_home.scss */
   .promos strong {
     font-size: 24px;
   }
