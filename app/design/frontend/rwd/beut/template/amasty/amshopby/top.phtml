@@ -7,10 +7,12 @@
                 <div class="category-head">
                     <h2><?php echo $opt['title']?></h2>
                 </div>
+                <div class="category-ams-content">
                 <?php if ($opt['image']): ?>
                     <img alt="<?php echo $opt['title']?>" src="<?php echo $opt['image']?>" class="amshopby-logo"/>
                 <?php endif ?>
                 <?php echo Mage::helper('catalog')->__($opt['descr'])?>
+                </div>
                 <?php echo $opt['cms_block']?>
             </div>
             <div style="clear:both"></div>
@@ -18,4 +20,4 @@
     </div>
         <div style="clear:both"></div>
 
-    <?php endif ?>        
+    <?php endif ?>
