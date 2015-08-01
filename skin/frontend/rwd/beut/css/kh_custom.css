@@ -2567,3 +2567,19 @@ ul.delivery-tabs li a{
         text-align: center;
     }
 }
+.menu-title span {
+    margin-left: 10px!important;
+    color:black;
+    font-size: 15px;
+}
+.menu-title {
+    margin-bottom: 25px;
+}
+.menu-viewall {
+    clear:both; width:100%; text-align:right; padding-right:50px; min-height:40px; background: #458ddb;color:white;margin-top:65px;"
+}
+.wp-custom-menu-popup .menu-viewall a{
+    color: white;
+    line-height: 40px;
+    text-transform: uppercase;
+}

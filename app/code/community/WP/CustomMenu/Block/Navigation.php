@@ -29,19 +29,15 @@ class WP_CustomMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         }
         $html[] = '<span>' . $name . '</span>';
         $html[] = '</a>';
-        $blockHtml = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId("submenu-mobile-".$id )->toHtml();
-        //if ($hasSubMenu) {
-        if ($blockHtml) {
+        if ($hasSubMenu) {
             $html[] = '<span class="button" rel="submenu-mobile-' . $id . '" onclick="wpSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
         }
         $html[] = '</div>';
         // --- Add Popup block (hidden) ---
-       // if ($hasSubMenu) {
-        if ($blockHtml) {
+       if ($hasSubMenu) {
             // --- draw Sub Categories ---
             $html[] = '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="wp-custom-menu-submenu" style="display: none;">';
-            $html[] = $blockHtml;
-            //$html[] = $this->drawMobileMenuItem($activeChildren);
+            $html[] = $this->drawMobileMenuItem($activeChildren);
             $html[] = '<div class="clearBoth"></div>';
             $html[] = '</div>';
         }
@@ -120,6 +116,8 @@ class WP_CustomMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
                 $htmlPopup[] = $blockHtml;
                 $htmlPopup[] = '</div>';
             }
+            $htmlPopup[]= '<div class="menu-viewall"> <a href="'.$this->getCategoryUrl($category).'"> view all '.$name.' » </a></div>';
+
             $htmlPopup[] = '</div>';
             $this->_popupMenu[] = implode("\n", $htmlPopup);
         }

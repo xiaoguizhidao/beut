@@ -442,6 +442,18 @@ var FEelementControl = {
         $j('#ewcm_container').on('click',function(){
             $j('.header-language-background,.page-header').removeClass('exten-show');
         });
+    },
+    filterCat: function(){
+        if($j("#narrow-by-list li a").length) {
+            $j("#narrow-by-list li a").each(function (i) {
+                if ($j(this).attr('class') == "amshopby-attr-selected") {
+                    $j(this).parents("dd.mobile-filter").addClass("current");
+                    $j(this).parents("dd.mobile-filter").prev().addClass("current");
+                    $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
+                }
+
+            });
+        }
     }
 };
 
@@ -462,6 +474,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.aboutSlide();
 	FEelementControl.toggleCmsMenu();
 	FEelementControl.ewToggle();
+	FEelementControl.filterCat();
 	FEelementControl.aboutEqualHeight();
 //	FEelementControl.equalHeight('.category-products .item');
 });
