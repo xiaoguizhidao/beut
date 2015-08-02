@@ -445,11 +445,17 @@ var FEelementControl = {
     },
     filterCat: function(){
         if($j("#narrow-by-list li a").length) {
+            var selectedAttribute = 0;
             $j("#narrow-by-list li a").each(function (i) {
                 if ($j(this).attr('class') == "amshopby-attr-selected") {
+                    if(selectedAttribute==1) {
+                        return true;
+                    }
                     $j(this).parents("dd.mobile-filter").addClass("current");
                     $j(this).parents("dd.mobile-filter").prev().addClass("current");
                     $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
+                    selectedAttribute = 1;
+
                 }
 
             });
