@@ -454,6 +454,16 @@ var FEelementControl = {
 
             });
         }
+    },
+    moveDescBlockCat:function(){
+        if($j("#move-cat-desc-top .amshopby-descr .category-head h1").length) {
+            var  description =  '<div class="col-lg-12 item category-description std col-xs-12"><div class="description">';
+            if ($j("#move-cat-desc-img").length) {
+                description =  '<div class="col-lg-8 item category-description std col-xs-12"><div class="description">';            }
+             var descriptionFinal = '</div></div>';
+            $j("#move-cat-desc").html(description + $j("#move-cat-desc-top").html() + descriptionFinal );
+            $j("#move-cat-desc-top").html("");
+        }
     }
 };
 
@@ -476,6 +486,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.ewToggle();
 	FEelementControl.filterCat();
 	FEelementControl.aboutEqualHeight();
+    FEelementControl.moveDescBlockCat();
 //	FEelementControl.equalHeight('.category-products .item');
 });
 jQuery(window).load(function($){
