@@ -81,6 +81,9 @@
 
     <amquickview_ajax_view>
         <update handle="catalog_product_view"/>
+        <remove name="footer.before"/>
+        <remove name="product.info.upsell"/>
+        <remove name="cross-sell"/>
         <remove name="header"/>
         <remove name="breadcrumbs"/>
         <remove name="messages"/>
@@ -90,5 +93,7 @@
         <remove name="footer"/>
         <remove name="store_switcher"/>
         <remove name="before_body_end"/>
+        <remove name="carpet-product-desc-img"/>
+
     </amquickview_ajax_view>
 </layout>

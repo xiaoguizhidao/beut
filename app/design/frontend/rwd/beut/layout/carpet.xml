@@ -19,6 +19,7 @@
         <reference name="product.info.options.wrapper">
         	<block  type="catalog/product_view" name="bs.calc" after="-" template="carpet/calc.phtml"/>
         </reference>
+        <block type="catalog/product_view" name="carpet-product-desc-img" as="carpet-product-desc-img" template="carpet/product-desc-img.phtml"></block>
         <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
             <action method="setColumnCount"><columns>12</columns></action>
             <action method="setItemLimit"><type>upsell</type><limit>12</limit></action>
