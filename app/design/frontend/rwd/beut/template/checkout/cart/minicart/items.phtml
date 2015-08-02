@@ -57,6 +57,14 @@ if(empty($_cartQty)) {
                 <?php endforeach; ?>
             </ul>
         </div>
+        <?php
+        $totals = Mage::getSingleton('checkout/session')->getQuote()->getTotals(); //Total object
+        $grandtotal = $totals["grand_total"]->getValue(); //Grandtotal value
+
+        ?>
+        <div class="grand-total">
+            <?php echo $this->__('Subtotal').' - '.$formattedPrice = Mage::helper('core')->currency($grandtotal , true, false); ?>
+        </div>
         <script type="text/javascript">
             truncateOptions();
             decorateList('cart-sidebar', 'none-recursive');

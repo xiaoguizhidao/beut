@@ -1962,7 +1962,40 @@ ul.delivery-tabs li a{
 .container-footer-toolbar .col-lg-6.a-center{
     padding-left: 0;
     padding-right: 0;
-
+}
+.checkout-types.minicart .button.checkout-button,.checkout-types .cart-link{
+    float: left;
+    margin: 0 2px;
+    display: inline-block;
+    width: calc(50% - 4px);
+    width: -webkit-calc(50% - 4px);
+    width: -moz-calc(50% - 4px);
+    width: -ms-calc(50% - 4px);
+    width: -o-calc(50% - 4px);
+}
+.checkout-types.minicart .button.checkout-button{
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #000;
+}
+.checkout-types .cart-link{
+    background: #498fd8;
+    text-transform: uppercase;
+    float: left;
+    padding: 7px 0;
+    color: #fff;
+}
+.checkout-types .cart-link:hover{
+    text-decoration: none;
+}
+.grand-total{
+    width: 100%;
+    background: #efeef0;
+    color: #000;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px 0 5px;
+    margin-bottom: 5px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
