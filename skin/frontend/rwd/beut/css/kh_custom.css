@@ -2056,6 +2056,40 @@ ul.delivery-tabs li a{
     .customer-account-login p.required{
         padding-left: 40px;
     }
+    div[class^='col-lg-']{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container-footer-toolbar .toolbar-left .pager,
+    .pages,
+    .pager{
+        float: none;
+        text-align: center;
+    }
+    .container-footer-toolbar .toolbar-left{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .container-footer-toolbar .pages li,
+    .container-footer-toolbar .toolbar-left .first,
+    .container-footer-toolbar .toolbar-left .last{
+        float: none;
+        display: inline-block;
+        height: 16px;
+    }
+    .container-footer-toolbar .col-lg-6.a-center,
+    .container-footer-toolbar .col-lg-3.a-right{
+        width: 100%;
+    }
+    .container-footer-toolbar .toolbar{
+        text-align: center;
+    }
+    .container-footer-toolbar .pager{
+        white-space: nowrap;
+        display: inline-block;
+    }
 }
 
 @media only screen and (max-width: 767px) {
