@@ -4789,7 +4789,7 @@ body {
   border: none;
   float: none;
   padding: 0;
-  font-size: 26px;
+  font-size: 35px;
 }
 /* line 93, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {

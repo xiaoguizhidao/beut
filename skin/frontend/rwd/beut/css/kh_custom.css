@@ -2639,3 +2639,8 @@ ul.delivery-tabs li a{
     line-height: 40px;
     text-transform: uppercase;
 }
+.currency img
+{
+    width: 25px;
+    height: 25px;
+}
