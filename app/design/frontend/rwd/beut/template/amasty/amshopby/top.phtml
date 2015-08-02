@@ -1,23 +1,24 @@
 
     <?php $options = $this->getOptions()?>
     <?php if (count($options)): ?>
-    <div class="amshopby-wrapper amshopby-filters-wrapper">
-        <?php foreach ($options as $opt): ?>
-            <div class="amshopby-descr">
-                <div class="category-head">
-                    <h2><?php echo $opt['title']?></h2>
+    <div class="amshopby-wrapper amshopby-filters-wrapper" style="display:none;">
+        <div id="move-cat-desc-top">
+            <?php foreach ($options as $opt): ?>
+                <div class="amshopby-descr">
+                    <div class="category-head">
+                        <h1><?php echo $opt['title']?></h1>
+                    </div>
+                    <div class="category-ams-content">
+                    <?php if ($opt['image']): ?>
+                        <img alt="<?php echo $opt['title']?>" src="<?php echo $opt['image']?>" class="amshopby-logo"/>
+                    <?php endif ?>
+                    <?php echo Mage::helper('catalog')->__($opt['descr'])?>
+                    </div>
+                    <?php echo $opt['cms_block']?>
                 </div>
-                <div class="category-ams-content">
-                <?php if ($opt['image']): ?>
-                    <img alt="<?php echo $opt['title']?>" src="<?php echo $opt['image']?>" class="amshopby-logo"/>
-                <?php endif ?>
-                <?php echo Mage::helper('catalog')->__($opt['descr'])?>
-                </div>
-                <?php echo $opt['cms_block']?>
-            </div>
-            <div style="clear:both"></div>
-        <?php endforeach ?>
+                <div style="clear:both"></div>
+            <?php endforeach ?>
+        </div>
     </div>
         <div style="clear:both"></div>
-
     <?php endif ?>

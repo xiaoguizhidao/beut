@@ -70,6 +70,7 @@
 
 <div class="category-footer container-fluid">
     <div class="row">
+        <div id="move-cat-desc">
         <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
             <div class="col-lg-<?php echo ($imgThumb != '' )? '8':'12';?> item category-description std col-xs-12">
                 <div class="description">
@@ -77,8 +78,9 @@
                 </div>
             </div>
         <?php endif; ?>
+        </div>
         <?php if($imgThumb): ?>
-            <div class="<?php echo ($_description == '' )? 'col-lg-12 thumb-full':' col-lg-4';?> item thumb">
+            <div id="move-cat-desc-img" class="<?php echo ($_description == '' )? 'col-lg-12 thumb-full':' col-lg-4';?> item thumb">
                 <img src="<?php echo $imgThumb ?>" alt="<?php echo $this->escapeHtml($_category->getName()) ?>" class="f-right" />
             </div>
         <?php endif; ?>

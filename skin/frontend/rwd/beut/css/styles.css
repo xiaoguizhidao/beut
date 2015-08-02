@@ -13806,5 +13806,13 @@ div.calendar table td.button {
   color: inherit;
   text-transform: none;
 }
-
+.amquickview-ajax-view.catalog-product-view .main-container{
+    margin-top:15px!important;
+}
+.amquickview-ajax-view.catalog-product-view .product-view {
+    padding-top:0px!important;
+}
+.amquickview-ajax-view {
+    border: 6px solid #498fd8;
+}
 /*# sourceMappingURL=styles.css.map */
