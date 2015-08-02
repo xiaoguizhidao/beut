@@ -729,7 +729,7 @@ $j(document).ready(function () {
             self.removeClass('skip-active');
             $j('body').removeClass('overflow');
             if(skipLinks.hasClass('skip-currency')){
-                skipLinks.parents('.currency').remove('isOpen');
+                skipLinks.parents('.currency').removeClass('isOpen');
             }
         } else {
             self.addClass('skip-active');
