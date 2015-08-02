@@ -116,7 +116,7 @@ class WP_CustomMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
                 $htmlPopup[] = $blockHtml;
                 $htmlPopup[] = '</div>';
             }
-            $htmlPopup[]= '<div class="menu-viewall"> <a href="'.$this->getCategoryUrl($category).'"> view all '.$name.' » </a></div>';
+            $htmlPopup[]= '<div class="menu-viewall"> <a href="'.$this->getCategoryUrl($category).'"> view all '.$name.'</a></div>';
 
             $htmlPopup[] = '</div>';
             $this->_popupMenu[] = implode("\n", $htmlPopup);

@@ -10,5 +10,4 @@ relative_assets = true
 
 output_style = :expanded
 environment = :development
-sourcemap = true
-extensions_dir = "bower_components"
+

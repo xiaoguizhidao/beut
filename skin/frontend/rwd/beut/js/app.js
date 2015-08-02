@@ -723,15 +723,22 @@ $j(document).ready(function () {
         if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
             $j('body').addClass('overflow');
         }
+
         // Toggle stubs
         if (isSkipContentOpen) {
             self.removeClass('skip-active');
             $j('body').removeClass('overflow');
+            if(skipLinks.hasClass('skip-currency')){
+                skipLinks.parents('.currency').remove('isOpen');
+            }
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
             if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
                 $j('body').addClass('overflow');
+            }
+            if(skipLinks.hasClass('skip-currency')){
+                skipLinks.parents('.currency').addClass('isOpen');
             }
         }
     });

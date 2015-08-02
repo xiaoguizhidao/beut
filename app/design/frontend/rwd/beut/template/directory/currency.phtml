@@ -31,20 +31,46 @@
  * @see Mage_Directory_Block_Currency
  */
 ?>
-<div class="currency"><img src="<?php echo $this->getSkinUrl().'images/currency/'?>usd.png" alt="currency" title="currency">
+<div class="currency">
 <?php if($this->getCurrencyCount()>1): ?>
+    <?php
+/*    if(!is_null($this->getRequest()->getParam('currency'))):
+        if($this->getRequest()->getParam('currency')==Mage::app()->getStore()->getCurrentCurrencyCode()){
+
+        }else{
+            Mage::app()->getStore()->setCurrentCurrencyCode($this->getRequest()->getParam('currency'));
+        }
+        $this->setQueryParam('currency',  $this->getRequest()->getParam('currency'));
+    else:
+        $this->setQueryParam('currency',  Mage::app()->getStore()->getCurrentCurrencyCode());
+
+    endif;
+    */?>
 <div class="currency-switcher">
-    <select id="select-currency" name="currency" title="<?php echo $this->__('Your Currency') ?>" onchange="setLocation(this.value)">
-        <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
-            <option value="<?php echo $this->getSwitchCurrencyUrl($_code) ?>"<?php if($_code==$this->getCurrentCurrencyCode()): ?> selected="selected"<?php endif; ?>>
-                <?php echo $_name ?> - <?php echo $_code ?>
+    <div id="header-currency" class="skip-content">
+        <div class="links">
+            <ul>
+                <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
+                    <li><a href="<?php echo $this->getSwitchCurrencyUrl($_code) ?>"> <?php echo $_name ?> - <?php echo $_code ?></a></li>
+                    <?php if($_code==$this->getCurrentCurrencyCode()): ?>
+                        <?php $curr = $_code;?>
+                    <?php endif;?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+
+    <!--<select id="select-currency" name="currency" title="<?php /*echo $this->__('Your Currency') */?>" onchange="setLocation(this.value)">
+        <?php /*foreach ($this->getCurrencies() as $_code => $_name): */?>
+            <option value="<?php /*echo $this->getSwitchCurrencyUrl($_code) */?>"<?php /*if($_code==$this->getCurrentCurrencyCode()): */?> selected="selected"<?php /*endif; */?>>
+                <?php /*echo $_name */?> - <?php /*echo $_code */?>
             </option>
-        <?php if($_code==$this->getCurrentCurrencyCode()): ?>
-                <?php $curr = $_code;?>
-        <?php endif;?>
-        <?php endforeach; ?>
-    </select>
-    <span class="curr"><?php echo $curr;?></span>
+        <?php /*if($_code==$this->getCurrentCurrencyCode()): */?>
+                <?php /*$curr = $_code;*/?>
+        <?php /*endif;*/?>
+        <?php /*endforeach; */?>
+    </select>-->
+    <span class="curr skip-link skip-currency" data-target-element="#header-currency"><?php echo $curr;?></span>
 </div>
 <?php
     else:

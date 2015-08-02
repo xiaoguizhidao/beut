@@ -45,8 +45,9 @@
     font-family: $f-stack-sans;
 }
 .skip-cart.skip-active{
-    background: $white url(../images/icon5.png) no-repeat 10px -35px;
+    background: $white url(../images/icon5.png) no-repeat 10px -31px;
     color: $c-black;
+    background-size: 19px;
 }
 .minicart-wrapper{
     position: absolute;

@@ -32,49 +32,43 @@
  */
 
 .skip-account,.wishlist-link,.skip-cart {
-    background: url(../images/icon3.png) no-repeat 10px 14px;
+    background: url(../images/icon3.png) no-repeat 10px 16px;
     padding-left: 35px;
     display: inline-block;
     padding-right: 10px;
     margin-left: 20px;
+    background-size: 16px auto;
 }
 .skip-account{
     &.skip-active{
-        background: $white url(../images/icon3.png) no-repeat 10px -25px;
+        background: $white url(../images/icon3.png) no-repeat 10px -27px;
         color: $c-black;
+        background-size: 16px auto;
     }
 }
 .wishlist-link{
     background: url(../images/icon4.png) no-repeat 10px 16px;
+    background-size: 19px auto;
 }
 .skip-cart{
-    background: url(../images/icon5.png) no-repeat 10px 14px;
+    background: url(../images/icon5.png) no-repeat 10px 15px;
+    background-size: 19px;
 }
 
 // ---------------------------------------------
 
-#header-account.skip-active {
+#header-account.skip-active ,#header-currency.skip-active{
     @include menu;
     display: block;
     position: absolute;
     z-index: 2000;
     top: 50px;
     left: 0;
-    min-width: 200px;
+    min-width: 230px;
 }
-
-#header-account a {
-    display: block;
-    padding: 5px 10px;
-    color: $c-text;
-    line-height: 2;
+#header-currency.skip-active{
+    left: 30px;
 }
-
-#header-account a:hover {
-    color: $c-action;
-}
-
-
 /* -------------------------------------------- *
  * Account Links
  */
@@ -83,11 +77,12 @@
     padding: 5px 0;
 }
 
-#header-account a {
+#header-account a,#header-currency a {
+    color: $c-text;
+    line-height: 2;
     position: relative;
     display: block;
     padding: 5px 10px;
-    line-height:23px;
     text-align: left;
     padding-left: 30px;
     &:before{
