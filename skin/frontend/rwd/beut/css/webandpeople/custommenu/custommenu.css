@@ -47,7 +47,6 @@ div.wp-custom-menu-popup {
     top: 134px !important;
     background: #eeeeee;
     max-height: 100%;
-    overflow-y: scroll;
 }
 div.menu a, div.wp-custom-menu-popup a {
     text-decoration: none;
