@@ -11,21 +11,34 @@
 }
 .currency.custom-service {
     margin-left: -5px;
+    padding-top: 12px;
 }
 .currency {
     font-size: 12px;
     line-height: 25px;
     float: left;
     height: 100%;
-    padding-top: 12px;
 }
-.currency:first-child{
+.header-language-background .currency-switcher{
+    height: 100%;
+}
+.currency .curr{
     background: url(../images/icon6.png) no-repeat 10px 13px;
     background-size: 24px;
     padding-left: 40px;
+    height: 100%;
+    padding-top: 12px;
+    display: block;
+    padding-right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
 }
-.currency.isOpen {
-    background: #fff url(../images/icon6.png) no-repeat 10px -30px !important;
+.currency .curr.skip-active{
+    background: #fff url(../images/icon6.png) no-repeat 10px -30px;
     color: #000;
     background-size: 24px;
 }
@@ -1936,6 +1949,21 @@ ul.delivery-tabs li a{
 .popup-subscribe-form{
     width: 90% !important;
 }
+.currency img{
+    width: 25px;
+    height: 25px;
+}
+.container-footer-toolbar .col-lg-3.a-right{
+    padding-left: 0;
+}
+.container-footer-toolbar .toolbar-left{
+    padding-right: 0;
+}
+.container-footer-toolbar .col-lg-6.a-center{
+    padding-left: 0;
+    padding-right: 0;
+
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -1994,6 +2022,40 @@ ul.delivery-tabs li a{
     }
     .customer-account-login p.required{
         padding-left: 40px;
+    }
+    div[class^='col-lg-']{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container-footer-toolbar .toolbar-left .pager,
+    .pages,
+    .pager{
+        float: none;
+        text-align: center;
+    }
+    .container-footer-toolbar .toolbar-left{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .container-footer-toolbar .pages li,
+    .container-footer-toolbar .toolbar-left .first,
+    .container-footer-toolbar .toolbar-left .last{
+        float: none;
+        display: inline-block;
+        height: 16px;
+    }
+    .container-footer-toolbar .col-lg-6.a-center,
+    .container-footer-toolbar .col-lg-3.a-right{
+        width: 100%;
+    }
+    .container-footer-toolbar .toolbar{
+        text-align: center;
+    }
+    .container-footer-toolbar .pager{
+        white-space: nowrap;
+        display: inline-block;
     }
 }
 
@@ -2610,7 +2672,22 @@ ul.delivery-tabs li a{
         margin-bottom: 0;
     }
     #magentoPopupContainer{
-        height: 300px !important;
+        height: 300px;
+    }
+    .currency.custom-service{
+        padding-top: 5px;
+    }
+    .currency .curr{
+        background-size: 12px;
+        background-position: 10px 3px;
+    }
+    .currency .curr.skip-active{
+        background-size: 12px;
+        background-position: center -18px;
+    }
+    .currency img{
+        width: 15px;
+        height: auto;
     }
 }
 
@@ -2638,9 +2715,4 @@ ul.delivery-tabs li a{
     color: white;
     line-height: 40px;
     text-transform: uppercase;
-}
-.currency img
-{
-    width: 25px;
-    height: 25px;
 }

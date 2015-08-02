@@ -125,9 +125,6 @@
         z-index: 1;
         .header-language-container{
             @include calc(width,"100% - 20px");
-            .store-language-container{
-                padding-top: 5px;
-            }
             a{
                 text-indent: -999px;
                 float: right;
@@ -169,23 +166,27 @@
         margin: 0;
         min-width: 30px;
     }
-    #header-account.skip-active{
+    #header-account.skip-active,
+    #header-currency.skip-active{
         top: 75px;
         position: fixed;
         width: 100%;
         background: $white;
+        left: 0;
     }
     // ---------------------------------------------
     // Link
 
     #header-account li a,
-    .nav-primary a.level0 {
+    .nav-primary a.level0,
+    #header-currency li a{
         text-align: left;
         width: 100%;
         text-indent: initial;
     }
 
     #header-account li:last-child a,
+    #header-currency li:last-child a,
     .nav-primary li.level0:last-child a.level0 {
         border-bottom: 0;
     }
@@ -263,7 +264,7 @@
         border: 1px solid $c-black !important;
         background-size: 10px;
         background-position: 4px -19px !important;
-        top: 15px;
+        top: 17px;
         right: 55px;
         position: absolute;
         .page-header:hover &{
@@ -272,7 +273,7 @@
     }
 
     .skip-cart{
-        background-position: 0 -47px;
+        background-position: 0 -42px;
         background-size: 20px;
         position: absolute;
         right: 15px;
