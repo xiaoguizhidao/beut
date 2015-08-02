@@ -4165,16 +4165,15 @@ body {
 /* line 151, ../scss/layout/_header.scss */
 .currency {
   display: inline-block;
-  margin-right: 30px;
   line-height: 2;
 }
-/* line 155, ../scss/layout/_header.scss */
+/* line 154, ../scss/layout/_header.scss */
 .currency img {
   float: left;
   margin-right: 5px;
 }
 
-/* line 160, ../scss/layout/_header.scss */
+/* line 159, ../scss/layout/_header.scss */
 .mobile-nav {
   display: none;
 }
@@ -4182,7 +4181,7 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
-/* line 167, ../scss/layout/_header.scss */
+/* line 166, ../scss/layout/_header.scss */
 .header-language-background {
   padding: 0;
   background-color: #498fd8;
@@ -4194,7 +4193,7 @@ body {
   width: 100%;
   top: 0;
 }
-/* line 178, ../scss/layout/_header.scss */
+/* line 177, ../scss/layout/_header.scss */
 .header-language-background .header-language-container {
   margin-left: auto;
   margin-right: auto;
@@ -4205,59 +4204,59 @@ body {
   height: 100%;
   font-size: 12px;
 }
-/* line 185, ../scss/layout/_header.scss */
+/* line 184, ../scss/layout/_header.scss */
 .header-language-background .header-language-container .store-language-container {
   display: inline-block;
   float: left;
   height: 100%;
 }
-/* line 191, ../scss/layout/_header.scss */
+/* line 190, ../scss/layout/_header.scss */
 .header-language-background .header-language-container a {
   text-decoration: none;
 }
-/* line 196, ../scss/layout/_header.scss */
+/* line 195, ../scss/layout/_header.scss */
 .header-language-background:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 200, ../scss/layout/_header.scss */
+/* line 199, ../scss/layout/_header.scss */
 .header-language-background .form-language,
 .header-language-background .currency-switcher {
   float: left;
   margin-right: 10px;
 }
-/* line 206, ../scss/layout/_header.scss */
+/* line 205, ../scss/layout/_header.scss */
 .header-language-background .welcome-msg {
   float: right;
 }
 
-/* line 211, ../scss/layout/_header.scss */
+/* line 210, ../scss/layout/_header.scss */
 .page-header-container .store-language-container {
   float: right;
   max-width: 35%;
   padding: 13px 15px 10px 10px;
 }
-/* line 216, ../scss/layout/_header.scss */
+/* line 215, ../scss/layout/_header.scss */
 .page-header-container .store-language-container label {
   display: none;
 }
-/* line 219, ../scss/layout/_header.scss */
+/* line 218, ../scss/layout/_header.scss */
 .page-header-container .store-language-container select {
   max-width: 100%;
 }
 
 @media only screen and (max-width: 479px) {
-  /* line 225, ../scss/layout/_header.scss */
+  /* line 224, ../scss/layout/_header.scss */
   .page-header-container .store-language-container {
     padding-top: 8px;
   }
-  /* line 227, ../scss/layout/_header.scss */
+  /* line 226, ../scss/layout/_header.scss */
   .page-header-container .store-language-container select {
     font-size: 12px;
   }
 }
-/* line 234, ../scss/layout/_header.scss */
+/* line 233, ../scss/layout/_header.scss */
 .header-language-background,
 .header-language-background a {
   color: #fff;
@@ -4268,39 +4267,39 @@ body {
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 246, ../scss/layout/_header.scss */
+/* line 245, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
   float: left;
   text-align: center;
 }
-/* line 250, ../scss/layout/_header.scss */
+/* line 249, ../scss/layout/_header.scss */
 .logo img {
   max-width: 100%;
 }
-/* line 254, ../scss/layout/_header.scss */
+/* line 253, ../scss/layout/_header.scss */
 .logo .small {
   display: block;
 }
-/* line 257, ../scss/layout/_header.scss */
+/* line 256, ../scss/layout/_header.scss */
 .logo .large {
   display: none;
 }
 
-/* line 262, ../scss/layout/_header.scss */
+/* line 261, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8;
 }
 
-/* line 269, ../scss/layout/_header.scss */
+/* line 268, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
 }
-/* line 271, ../scss/layout/_header.scss */
+/* line 270, ../scss/layout/_header.scss */
 .logo .small {
   display: none;
 }
-/* line 274, ../scss/layout/_header.scss */
+/* line 273, ../scss/layout/_header.scss */
 .logo .large {
   display: block;
   max-width: 75px;
@@ -4315,12 +4314,12 @@ body {
 /* ============================================ *
  * Skip Content
  * ============================================ */
-/* line 297, ../scss/layout/_header.scss */
+/* line 296, ../scss/layout/_header.scss */
 .skip-content {
   display: none;
 }
 
-/* line 301, ../scss/layout/_header.scss */
+/* line 300, ../scss/layout/_header.scss */
 .skip-content.skip-active {
   display: block;
 }
@@ -4328,12 +4327,12 @@ body {
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 309, ../scss/layout/_header.scss */
+/* line 308, ../scss/layout/_header.scss */
 .account-cart-wrapper {
   float: right;
   height: 100%;
 }
-/* line 312, ../scss/layout/_header.scss */
+/* line 311, ../scss/layout/_header.scss */
 .account-cart-wrapper > [class^="skip-"] {
   padding-top: 16px;
   height: 100%;
@@ -4346,7 +4345,7 @@ body {
   -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
-/* line 321, ../scss/layout/_header.scss */
+/* line 320, ../scss/layout/_header.scss */
 .account-cart-wrapper .wishlist-link .icon {
   background: url(../images/icon4.png) no-repeat;
   width: 19px;
@@ -4789,7 +4788,7 @@ body {
   border: none;
   float: none;
   padding: 0;
-  font-size: 35px;
+  font-size: 26px;
 }
 /* line 93, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {
@@ -4992,73 +4991,72 @@ body {
     width: calc(100% - 20px);
   }
   /* line 128, ../scss/layout/_header-account.scss */
-  .header-language-background .header-language-container .store-language-container {
-    padding-top: 5px;
-  }
-  /* line 131, ../scss/layout/_header-account.scss */
   .header-language-background .header-language-container a {
     text-indent: -999px;
     float: right;
     min-width: 30px;
   }
 
-  /* line 138, ../scss/layout/_header-account.scss */
+  /* line 135, ../scss/layout/_header-account.scss */
   .currency {
     text-indent: -9999px;
     line-height: 1.5;
   }
-  /* line 141, ../scss/layout/_header-account.scss */
+  /* line 138, ../scss/layout/_header-account.scss */
   .currency img {
     width: 10px;
     height: auto;
   }
 
-  /* line 146, ../scss/layout/_header-account.scss */
+  /* line 143, ../scss/layout/_header-account.scss */
   .wishlist-link, .skip-account {
     background-size: 10px;
     text-indent: -999px;
     background-position: 24px 5px;
     margin: 0;
   }
-  /* line 151, ../scss/layout/_header-account.scss */
+  /* line 148, ../scss/layout/_header-account.scss */
   .wishlist-link.skip-active, .skip-account.skip-active {
     background-position: 24px -21px;
     background-size: 10px;
   }
 
-  /* line 156, ../scss/layout/_header-account.scss */
+  /* line 153, ../scss/layout/_header-account.scss */
   .wishlist-link {
     background-position: 9px 5px;
   }
 
-  /* line 160, ../scss/layout/_header-account.scss */
+  /* line 157, ../scss/layout/_header-account.scss */
   .page-header {
     position: relative;
     top: inherit;
   }
-  /* line 163, ../scss/layout/_header-account.scss */
+  /* line 160, ../scss/layout/_header-account.scss */
   .page-header .page-header-container {
     padding: 10px;
   }
 
-  /* line 167, ../scss/layout/_header-account.scss */
+  /* line 164, ../scss/layout/_header-account.scss */
   .account-cart-wrapper > [class^="skip-"] {
     padding: 0;
     margin: 0;
     min-width: 30px;
   }
 
-  /* line 172, ../scss/layout/_header-account.scss */
-  #header-account.skip-active {
+  /* line 169, ../scss/layout/_header-account.scss */
+  #header-account.skip-active,
+  #header-currency.skip-active {
     top: 75px;
     position: fixed;
     width: 100%;
     background: #fff;
+    left: 0;
   }
 
-  /* line 181, ../scss/layout/_header-account.scss */
+  /* line 180, ../scss/layout/_header-account.scss */
   #header-account li a,
-  .nav-primary a.level0 {
+  .nav-primary a.level0,
+  #header-currency li a {
     text-align: left;
     width: 100%;
     text-indent: initial;
@@ -5066,23 +5064,24 @@ body {
 
   /* line 188, ../scss/layout/_header-account.scss */
   #header-account li:last-child a,
+  #header-currency li:last-child a,
   .nav-primary li.level0:last-child a.level0 {
     border-bottom: 0;
   }
 
-  /* line 193, ../scss/layout/_header-account.scss */
+  /* line 194, ../scss/layout/_header-account.scss */
   .no-touch #header-account a:hover,
   .no-touch .nav-primary a:hover {
     background-color: #F4F4F4;
     text-decoration: none;
   }
 
-  /* line 198, ../scss/layout/_header-account.scss */
+  /* line 199, ../scss/layout/_header-account.scss */
   .mobile-nav {
     display: block;
     text-align: center;
   }
-  /* line 201, ../scss/layout/_header-account.scss */
+  /* line 202, ../scss/layout/_header-account.scss */
   .mobile-nav .skip-nav {
     width: 45px;
     position: absolute;
@@ -5090,7 +5089,7 @@ body {
     top: 0;
     height: 100%;
   }
-  /* line 208, ../scss/layout/_header-account.scss */
+  /* line 209, ../scss/layout/_header-account.scss */
   .mobile-nav .skip-search {
     display: block;
     position: absolute;
@@ -5100,21 +5099,21 @@ body {
     top: 14px;
   }
 
-  /* line 217, ../scss/layout/_header-account.scss */
+  /* line 218, ../scss/layout/_header-account.scss */
   .hamburger {
     width: 36px;
     height: 100%;
     padding-top: 20px;
   }
-  /* line 221, ../scss/layout/_header-account.scss */
+  /* line 222, ../scss/layout/_header-account.scss */
   .hamburger .line + .line {
     margin-top: 6px;
   }
-  /* line 224, ../scss/layout/_header-account.scss */
+  /* line 225, ../scss/layout/_header-account.scss */
   .hamburger .line + .line + .line {
     margin-top: 12px;
   }
-  /* line 227, ../scss/layout/_header-account.scss */
+  /* line 228, ../scss/layout/_header-account.scss */
   .hamburger .line {
     background: #0b0a0c;
     -webkit-transform-origin: 20px center;
@@ -5126,12 +5125,12 @@ body {
     height: 2px;
   }
 
-  /* line 238, ../scss/layout/_header-account.scss */
+  /* line 239, ../scss/layout/_header-account.scss */
   #menu-content {
     display: block !important;
   }
 
-  /* line 241, ../scss/layout/_header-account.scss */
+  /* line 242, ../scss/layout/_header-account.scss */
   .logo-small {
     display: inline-block;
     margin-left: auto;
@@ -5139,42 +5138,42 @@ body {
     float: none;
   }
 
-  /* line 247, ../scss/layout/_header-account.scss */
+  /* line 248, ../scss/layout/_header-account.scss */
   .logo-large {
     display: none;
   }
 
-  /* line 251, ../scss/layout/_header-account.scss */
+  /* line 252, ../scss/layout/_header-account.scss */
   .logo .small {
     margin: auto;
     max-width: 60px;
     display: inline-block;
   }
 
-  /* line 257, ../scss/layout/_header-account.scss */
+  /* line 258, ../scss/layout/_header-account.scss */
   .mobile-search {
     display: block;
   }
 
-  /* line 260, ../scss/layout/_header-account.scss */
+  /* line 261, ../scss/layout/_header-account.scss */
   .skip-search {
     width: 20px;
     height: 20px;
     border: 1px solid #000 !important;
     background-size: 10px;
     background-position: 4px -19px !important;
-    top: 15px;
+    top: 17px;
     right: 55px;
     position: absolute;
   }
-  /* line 269, ../scss/layout/_header-account.scss */
+  /* line 270, ../scss/layout/_header-account.scss */
   .page-header:hover .skip-search {
     background-position: 4px -19px;
   }
 
-  /* line 274, ../scss/layout/_header-account.scss */
+  /* line 275, ../scss/layout/_header-account.scss */
   .skip-cart {
-    background-position: 0 -47px;
+    background-position: 0 -42px;
     background-size: 20px;
     position: absolute;
     right: 15px;
@@ -5183,17 +5182,17 @@ body {
     width: 20px;
     padding: 0;
   }
-  /* line 283, ../scss/layout/_header-account.scss */
+  /* line 284, ../scss/layout/_header-account.scss */
   .skip-cart .count, .skip-cart .label {
     display: none !important;
   }
-  /* line 286, ../scss/layout/_header-account.scss */
+  /* line 287, ../scss/layout/_header-account.scss */
   .skip-cart.skip-active {
     background-position: 0 -47px !important;
     background-size: 20px !important;
   }
 
-  /* line 291, ../scss/layout/_header-account.scss */
+  /* line 292, ../scss/layout/_header-account.scss */
   #header-nav {
     position: fixed;
     top: 0;
@@ -5214,17 +5213,17 @@ body {
     animation: menuOpen .35s ease-out forwards;
     z-index: 1000;
   }
-  /* line 310, ../scss/layout/_header-account.scss */
+  /* line 311, ../scss/layout/_header-account.scss */
   #header-nav.skip-active {
     display: block;
   }
 
-  /* line 314, ../scss/layout/_header-account.scss */
+  /* line 315, ../scss/layout/_header-account.scss */
   .nav-container {
     width: 100%;
   }
 
-  /* line 317, ../scss/layout/_header-account.scss */
+  /* line 318, ../scss/layout/_header-account.scss */
   .close-nav {
     background: url(../images/close.png) no-repeat top right;
     background-size: 20px;
@@ -6705,15 +6704,12 @@ p.product-name a:hover {
     font-size: 12px;
   }
 
-  /* line 673, ../scss/module/_product-list.scss */
-  .load-more {
+  /* line 674, ../scss/module/_product-list.scss */
+  .load-more a {
+    font-size: 15px;
     width: 135px;
     height: 45px;
     padding-top: 8px;
-  }
-  /* line 677, ../scss/module/_product-list.scss */
-  .load-more a {
-    font-size: 15px;
   }
   /* line 680, ../scss/module/_product-list.scss */
   .load-more .container-footer-toolbar .toolbar-bottom {
