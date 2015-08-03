@@ -32,6 +32,7 @@ class Amasty_Shopby_Helper_Url extends Mage_Core_Helper_Abstract
         /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Apr 16, 2014*/
         $currentParams = Mage::registry('amshopby_current_params');
         $isCatPage = Mage::registry('current_category');
+        $catUrl = "";
         if($isCatPage && !$currentParams){
             $catUrl = Mage::helper('core/url')->getCurrentUrl();
         }
