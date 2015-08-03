@@ -1849,9 +1849,13 @@ ul.delivery-tabs li a{
     background: #f7f8f9;
     padding: 30px 100px 50px 175px;
 }
+.block-layered-nav .block-content > dl > dt{
+    border-bottom: 2px solid #f7f8f9;
+}
 .block-layered-nav .block-content > dl > dt.current{
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #498fd8;
     padding: 0 15px 0 0;
+    margin-left: 15px;
 }
 .block-layered-nav .block-content > dl > dt{
     margin-left: 0;
@@ -1872,24 +1876,27 @@ ul.delivery-tabs li a{
 .confirm-control{
     clear: both;
 }
-.aw-acp-continue {
+.aw-acp-continue ,.aw-acp-checkout{
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
     color: black!important;
     float: left;
     height: auto!important;
-    margin-right: 25px!important;
-    padding: 5px 15px!important;
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+    padding: 5px !important;
     width: auto;
     border:1px solid #cccccc;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    transition: all 0.25ms ease;
+    -webkit-transition: all 0.25ms ease;
+    -moz-transition: all 0.25ms ease;
+    -ms-transition: all 0.25ms ease;
+    -o-transition: all 0.25ms ease;
 }
-.aw-acp-checkout {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
-    color: black!important;
-    float: left;
-    height: auto!important;
-    padding: 5px 15px!important;
-    width: auto;
-    border:1px solid #cccccc;
+.aw-acp-continue:hover ,.aw-acp-checkout:hover{
+    background: #999;
+    color: #fff;
 }
 .aw-acp-continue:hover, .aw-acp-checkout:hover{
     background: #777;
@@ -2002,13 +2009,6 @@ ul.delivery-tabs li a{
 }
 .catalogsearch-result-index .page-title {
     padding-left: 100px;
-}
-.block-filter{
-    position: relative;
-}
-.block-layered-nav .block-content.accordion-open > dl > dd.current {
-    position: relative;
-    margin-left: -70px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
@@ -2607,6 +2607,7 @@ ul.delivery-tabs li a{
     .block-filter .block-layered-nav .block-content.accordion-open > dl > dd.current{
         background: transparent;
         top: 5px;
+        margin-bottom: 6px;
     }
     .block-layered-nav .block-content.accordion-open > dl > dd.current ol:after{
         clear: both;
@@ -2629,6 +2630,7 @@ ul.delivery-tabs li a{
     }
     .block-layered-nav .block-content > dl > dt.current{
         padding: 10px 15px;
+        margin-left: 0;
     }
     div.block-layered-nav dd a.amshopby-attr-selected:before,
     div.block-layered-nav dd a.amshopby-attr:before{
@@ -2755,6 +2757,13 @@ ul.delivery-tabs li a{
     #narrow-by-list{
         width: 100% !important;
     }
+    .catalog-breadcrumbs{
+        margin-top: 0 !important;
+    }
+    .block-filter .block-layered-nav .block-content > dl > dt{
+        margin-bottom: 0;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {

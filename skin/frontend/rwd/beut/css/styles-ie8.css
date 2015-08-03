@@ -3484,26 +3484,27 @@ body {
 .page-header.sticky .page-header-container {
   padding-top: 14px;
   padding-bottom: 1px;
+  z-index: 1000;
 }
-/* line 70, ../scss/layout/_header.scss */
+/* line 71, ../scss/layout/_header.scss */
 .page-header.sticky .page-header-container:after {
   content: '';
   clear: both;
 }
-/* line 76, ../scss/layout/_header.scss */
+/* line 77, ../scss/layout/_header.scss */
 .page-header.sticky .menu a.level0 {
   color: #000;
 }
-/* line 80, ../scss/layout/_header.scss */
+/* line 81, ../scss/layout/_header.scss */
 .page-header.sticky .wp-custom-menu-popup {
   top: 60px !important;
 }
-/* line 84, ../scss/layout/_header.scss */
+/* line 85, ../scss/layout/_header.scss */
 .page-header.sticky .nav-primary li.level0 > a {
   color: #3f3f3f;
   padding-top: 4px;
 }
-/* line 90, ../scss/layout/_header.scss */
+/* line 91, ../scss/layout/_header.scss */
 .page-header.sticky #header-nav .skip-search {
   width: 30px;
   height: 30px;
@@ -3511,11 +3512,11 @@ body {
   background-position: 6px -28px;
   background-size: 55%;
 }
-/* line 98, ../scss/layout/_header.scss */
+/* line 99, ../scss/layout/_header.scss */
 .page-header.sticky #header-search {
   top: 60px;
 }
-/* line 102, ../scss/layout/_header.scss */
+/* line 103, ../scss/layout/_header.scss */
 .page-header .page-header-container {
   padding: 20px 100px;
   width: 100%;
@@ -3523,34 +3524,34 @@ body {
   background-color: #fff;
 }
 
-/* line 110, ../scss/layout/_header.scss */
+/* line 111, ../scss/layout/_header.scss */
 .cms-home .page-header .page-header-container,
 .catalog-category-view .page-header .page-header-container {
   background: transparent;
 }
 
-/* line 116, ../scss/layout/_header.scss */
+/* line 117, ../scss/layout/_header.scss */
 .catalog-product-view .page-header {
   background: #fff;
 }
-/* line 119, ../scss/layout/_header.scss */
+/* line 120, ../scss/layout/_header.scss */
 .catalog-product-view div.menu a:link, .catalog-product-view div.menu a:visited {
   color: #000;
 }
-/* line 122, ../scss/layout/_header.scss */
+/* line 123, ../scss/layout/_header.scss */
 .catalog-product-view #header-nav .skip-search {
   background-position: 10px -38px;
   border: 1px solid #000;
 }
-/* line 126, ../scss/layout/_header.scss */
+/* line 127, ../scss/layout/_header.scss */
 .catalog-product-view .main-container {
   margin-top: 134px;
 }
-/* line 129, ../scss/layout/_header.scss */
+/* line 130, ../scss/layout/_header.scss */
 .catalog-product-view .main {
   margin: 0;
 }
-/* line 132, ../scss/layout/_header.scss */
+/* line 133, ../scss/layout/_header.scss */
 .catalog-product-view .breadcrumbs {
   display: block;
   width: 100%;
@@ -3561,29 +3562,29 @@ body {
   padding: 25px;
   margin-top: 30px;
 }
-/* line 140, ../scss/layout/_header.scss */
+/* line 141, ../scss/layout/_header.scss */
 .catalog-product-view .breadcrumbs:after {
   clear: both;
   content: '';
 }
-/* line 144, ../scss/layout/_header.scss */
+/* line 145, ../scss/layout/_header.scss */
 .catalog-product-view .breadcrumbs li {
   float: none;
   display: inline-block;
 }
 
-/* line 151, ../scss/layout/_header.scss */
+/* line 152, ../scss/layout/_header.scss */
 .currency {
   display: inline-block;
   line-height: 2;
 }
-/* line 154, ../scss/layout/_header.scss */
+/* line 155, ../scss/layout/_header.scss */
 .currency img {
   float: left;
   margin-right: 5px;
 }
 
-/* line 159, ../scss/layout/_header.scss */
+/* line 160, ../scss/layout/_header.scss */
 .mobile-nav {
   display: none;
 }
@@ -3591,7 +3592,7 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
-/* line 166, ../scss/layout/_header.scss */
+/* line 167, ../scss/layout/_header.scss */
 .header-language-background {
   padding: 0;
   background-color: #498fd8;
@@ -3603,7 +3604,7 @@ body {
   width: 100%;
   top: 0;
 }
-/* line 177, ../scss/layout/_header.scss */
+/* line 178, ../scss/layout/_header.scss */
 .header-language-background .header-language-container {
   margin-left: auto;
   margin-right: auto;
@@ -3614,49 +3615,49 @@ body {
   height: 100%;
   font-size: 12px;
 }
-/* line 184, ../scss/layout/_header.scss */
+/* line 185, ../scss/layout/_header.scss */
 .header-language-background .header-language-container .store-language-container {
   display: inline-block;
   float: left;
   height: 100%;
 }
-/* line 190, ../scss/layout/_header.scss */
+/* line 191, ../scss/layout/_header.scss */
 .header-language-background .header-language-container a {
   text-decoration: none;
 }
-/* line 195, ../scss/layout/_header.scss */
+/* line 196, ../scss/layout/_header.scss */
 .header-language-background:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 199, ../scss/layout/_header.scss */
+/* line 200, ../scss/layout/_header.scss */
 .header-language-background .form-language,
 .header-language-background .currency-switcher {
   float: left;
   margin-right: 10px;
 }
-/* line 205, ../scss/layout/_header.scss */
+/* line 206, ../scss/layout/_header.scss */
 .header-language-background .welcome-msg {
   float: right;
 }
 
-/* line 210, ../scss/layout/_header.scss */
+/* line 211, ../scss/layout/_header.scss */
 .page-header-container .store-language-container {
   float: right;
   max-width: 35%;
   padding: 13px 15px 10px 10px;
 }
-/* line 215, ../scss/layout/_header.scss */
+/* line 216, ../scss/layout/_header.scss */
 .page-header-container .store-language-container label {
   display: none;
 }
-/* line 218, ../scss/layout/_header.scss */
+/* line 219, ../scss/layout/_header.scss */
 .page-header-container .store-language-container select {
   max-width: 100%;
 }
 
-/* line 233, ../scss/layout/_header.scss */
+/* line 234, ../scss/layout/_header.scss */
 .header-language-background,
 .header-language-background a {
   color: #fff;
@@ -3667,39 +3668,39 @@ body {
 /* ============================================ *
  * Logo
  * ============================================ */
-/* line 245, ../scss/layout/_header.scss */
+/* line 246, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
   float: left;
   text-align: center;
 }
-/* line 249, ../scss/layout/_header.scss */
+/* line 250, ../scss/layout/_header.scss */
 .logo img {
   max-width: 100%;
 }
-/* line 253, ../scss/layout/_header.scss */
+/* line 254, ../scss/layout/_header.scss */
 .logo .small {
   display: block;
 }
-/* line 256, ../scss/layout/_header.scss */
+/* line 257, ../scss/layout/_header.scss */
 .logo .large {
   display: none;
 }
 
-/* line 261, ../scss/layout/_header.scss */
+/* line 262, ../scss/layout/_header.scss */
 .logo:hover {
   opacity: 0.8;
 }
 
-/* line 268, ../scss/layout/_header.scss */
+/* line 269, ../scss/layout/_header.scss */
 .logo {
   display: inline-block;
 }
-/* line 270, ../scss/layout/_header.scss */
+/* line 271, ../scss/layout/_header.scss */
 .logo .small {
   display: none;
 }
-/* line 273, ../scss/layout/_header.scss */
+/* line 274, ../scss/layout/_header.scss */
 .logo .large {
   display: block;
   max-width: 75px;
@@ -3714,12 +3715,12 @@ body {
 /* ============================================ *
  * Skip Content
  * ============================================ */
-/* line 296, ../scss/layout/_header.scss */
+/* line 297, ../scss/layout/_header.scss */
 .skip-content {
   display: none;
 }
 
-/* line 300, ../scss/layout/_header.scss */
+/* line 301, ../scss/layout/_header.scss */
 .skip-content.skip-active {
   display: block;
 }
@@ -3727,12 +3728,12 @@ body {
 /* ============================================ *
  * Global Header Navigation
  * ============================================ */
-/* line 308, ../scss/layout/_header.scss */
+/* line 309, ../scss/layout/_header.scss */
 .account-cart-wrapper {
   float: right;
   height: 100%;
 }
-/* line 311, ../scss/layout/_header.scss */
+/* line 312, ../scss/layout/_header.scss */
 .account-cart-wrapper > [class^="skip-"] {
   padding-top: 16px;
   height: 100%;
@@ -3745,7 +3746,7 @@ body {
   -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
 }
-/* line 320, ../scss/layout/_header.scss */
+/* line 321, ../scss/layout/_header.scss */
 .account-cart-wrapper .wishlist-link .icon {
   background: url(../images/icon4.png) no-repeat;
   width: 19px;
@@ -10860,5 +10861,3 @@ div.calendar table td.button {
   color: inherit;
   text-transform: none;
 }
-
-/*# sourceMappingURL=styles-ie8.css.map */

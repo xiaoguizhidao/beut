@@ -1011,9 +1011,9 @@ $j(document).ready(function () {
             var index = jQuery(this).index()/2;
             jQuery('.desktop-filter').children('dd').removeClass('current');
             jQuery('.desktop-filter').children('dd').eq(index).addClass('current');
-            console.log($j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length);
-            if($j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
-                $j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
+            jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 80);
+            if(jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
+                jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
             }
         })
     })
