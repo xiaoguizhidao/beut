@@ -731,18 +731,24 @@ $j(document).ready(function () {
             if(skipLinks.hasClass('skip-currency')){
                 skipLinks.parents('.currency').removeClass('isOpen');
             }
-            skipLinks.parents('#header').addClass('isActive');
+            if(skipLinks.hasClass('skip-search')){
+                skipLinks.parents('.page-header').removeClass('isActive');
+            }
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
-            $j('#header-search #search_mini_form #search').focus();
+
             if(skipLinks.hasClass('skip-cart') || skipLinks.hassClass('mobile-nav')){
                 $j('body').addClass('overflow');
             }
             if(skipLinks.hasClass('skip-currency')){
                 skipLinks.parents('.currency').addClass('isOpen');
             }
-            skipLinks.parents('#header').removeClass('isActive');
+            if(skipLinks.hasClass('skip-search')){
+                skipLinks.parents('.page-header').addClass('isActive');
+                skipLinks.prev().prev('.logo-large').children('.large').attr("src", skinUrl+"images/logo3.png");
+
+            }
         }
     });
 	//Skip Nav Menu	

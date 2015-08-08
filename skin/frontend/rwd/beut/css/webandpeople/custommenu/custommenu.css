@@ -41,7 +41,7 @@ div.wp-custom-menu-popup {
     z-index: 1000;
     display: none;
     text-align: left;
-    padding: 50px 0px 0px 0px;
+    padding: 50px 70px 0px 70px;
     border-top: 0;
     width: 100%;
     top: 134px !important;
@@ -207,6 +207,10 @@ a.level2:link, a.level2:visited {
 .cms-about-us div.menu a:link,
 .cms-about-us div.menu a:visited{
     color: #fff;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
 }
 div.menu a:link, div.menu a:visited {
     text-transform: uppercase;
@@ -218,13 +222,25 @@ a.level1:link, a.level1:visited {
 a.level2:link, a.level2:visited {
     color: #000;
 }
+a.level1:hover{
+    padding-left: 10px;
+}
 div.menu a:hover,
 div.menu.act a,
 div.menu.active a {
     color: #000;
 }
+div.menu a.level1{
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
+}
 a.level1:hover, a.level1.act, a.level1.actParent {
     color: #000;
+}
+a.level1:hover{
+    padding-left: 15px;
 }
 a.level2:hover, a.level2.act, a.level2.actParent {
     color: #000;
@@ -438,7 +454,20 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 #custommenu-mobile .level2 {
     background-color: #fff;
 }
-
+@media only screen and (max-width: 1400px) and (min-width: 768px){
+    div.wp-custom-menu-popup{
+        padding: 50px 20px 0px 20px;
+    }
+    .menu-viewall {
+        width:calc(100% + 40px);
+        width:-ms-calc(100% + 40px);
+        width:-webkit-calc(100% + 40px);
+        width:-moz-calc(100% + 40px);
+        width:-o-calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
 @media only screen and (max-width: 1024px) and (min-width: 767px){
     div.menu a:link, div.menu a:visited{
         padding-left: 10px;

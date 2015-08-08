@@ -28,28 +28,55 @@ padding: 0pt 10px 10px 0pt; float: left;
 }
 div.block-layered-nav dd a {padding:0px 5px 0px 0px; display:block; float: left;}
 div.block-layered-nav dd a.clear-all {border: 1px solid;padding: 4px 15px;position: absolute;right: 100px;}
-div.block-layered-nav dd a.clear-all.f-left {border: none;left: 85px; right: inherit;text-transform: none;}
+div.block-layered-nav dd a.clear-all.f-left {border: none;left: 35px; right: inherit;text-transform: none;}
 
 div.block-layered-nav dd a.clear-all:hover {text-decoration: none;}
-div.block-layered-nav dd a.amshopby-attr {padding-left:20px; position: relative;}
+div.block-layered-nav dd a.amshopby-attr {padding-left:17px; position: relative;}
 div.block-layered-nav dd a.amshopby-attr-selected {font-weight: bold; padding-left:20px;position: relative;}
 div.block-layered-nav dd a img {padding: 0px 4px 5px; float:left;}
 div.block-layered-nav dd a.amshopby-attr-selected:before,
-div.block-layered-nav dd a.amshopby-attr:before{
+div.block-layered-nav dd a.amshopby-attr:before,
+div.block-layered-nav dd a.amshopby-price:before,
+div.block-layered-nav dd .amshopby-cat a:before{
     content: "\f00c";
     font-family: 'FontAwesome';
     border: 1px solid #ccc;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin-right: 5px;
     display: inline-block;
     position: absolute;
     left: 0;
     top: 3px;
-    line-height: 1;
+    line-height: 0.7;
 }
-div.block-layered-nav dd a.amshopby-attr:before{
+div.block-layered-nav dd .amshopby-cat{
+    position: relative;
+}
+div.block-layered-nav dd a.amshopby-price:before{
+    top: 8px;
+}
+.block-layered-nav dl dd ol li .amshopby-price span{
+    padding-left: 8px;
+}
+.block-layered-nav dl dd ol li span > a, .block-layered-nav dl dd ol li > a{
+    font-size: 11px;
+}
+div.block-layered-nav dd a.amshopby-price:before,
+div.block-layered-nav dd a.amshopby-attr:before,
+div.block-layered-nav dd .amshopby-cat a:before{
     content: '';
+}
+div.block-layered-nav dd .amshopby-cat a:before{
+    top: 8px;
+}
+div.block-layered-nav dd a.amshopby-attr:hover{
+    text-decoration: none;
+    color: #498fd8;
+}
+div.block-layered-nav dd a.amshopby-attr:hover:before{
+    content: "\f00c";
+    border-color: #498fd8;
 }
 div.block-layered-nav dd a.amshopby-attr-selected:hover:before{
     text-decoration: none;

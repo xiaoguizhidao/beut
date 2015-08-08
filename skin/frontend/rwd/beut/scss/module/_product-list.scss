@@ -55,7 +55,7 @@ p.product-name {
     font-size: $f-size-s;
     font-family: $f-stack-sans;
     font-weight: normal;
-    line-height: 1.4;
+    line-height: 1.1;
     a {
         color: $c-black;
         text-transform: none;
@@ -68,8 +68,8 @@ p.product-name {
 
 .products-grid .product-name,
 .products-list .product-name {
-    margin-bottom: 5px;
-    font-size: $f-size;
+    margin-bottom: 10px;
+    font-size: $f-size-l;
 }
 
 /* ============================================ *
@@ -137,7 +137,7 @@ $product-column-spacing: 30px;
 
 .products-grid .product-image {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 33px;
 }
 
 .products-grid .product-image img {
@@ -184,6 +184,7 @@ $productsGridActionHeight: 50px;
 .products-grid .price-box {
     margin: 0 0 5px;
     font-size: 18px;
+    line-height: 1;
 }
 
 .products-grid .add-to-links {
@@ -213,8 +214,6 @@ $productsGridActionHeight: 50px;
 }
 
 .products-grid .product-image {
-    margin-bottom: 5px;
-
     @include loadingOverlay();
 }
 
