@@ -1818,7 +1818,6 @@ ul.delivery-tabs li a{
 }
 .category-image h2{
     font-size: 50px;
-    margin-top: 15px;
 }
 .block-filter span{
     font-style: italic;
@@ -1850,11 +1849,10 @@ ul.delivery-tabs li a{
 .block-layered-nav .block-content.accordion-open > dl > dd.current ol.no-column li{
     float: left;
     width: 25%;
-    position: relative;
 }
 .block-layered-nav .block-content.accordion-open > dl > dd.current {
     background: #f7f8f9;
-    padding: 30px 100px 50px 139px;
+    padding: 30px 100px 50px 175px;
 }
 .block-layered-nav .block-content > dl > dt{
     border-bottom: 2px solid #f7f8f9;
@@ -2034,6 +2032,157 @@ ul.delivery-tabs li a{
 }
 .cms-page-view .std .services img{
     margin-bottom: 25px;
+}
+.customer-account .main-container{
+    padding: 60px 30px;
+}
+
+body.customer-account .my-account .page-title h1 {
+    border: 0;
+    text-align: left;
+}
+body.customer-account .my-account .title-buttons {
+    position: relative;
+    text-align: right;
+}
+body.customer-account .my-account .title-buttons h1 {
+    text-align: left;
+}
+body.customer-account .my-account .title-buttons .button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+body.customer-account .my-account .title-buttons a,
+body.customer-account .my-account .title-buttons span.separator {
+    position: relative;
+    top: -42px;
+}
+body.customer-account .my-account .fieldset h2,
+body.customer-account .my-account .addresses-list h2,
+body.customer-account .my-account .order-details h2 {
+    width: 100%;
+    display: inline-block;
+}
+body.customer-account .my-account .addresses-list h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+body.customer-account .my-account .fieldset {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+body.customer-account .data-table {
+    margin-top: 5px;
+}
+body.customer-account .data-table td a {
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 13px;
+}
+body.customer-account .data-table span.nobr {
+    white-space: normal;
+}
+body.customer-account .data-table span.nobr a {
+    white-space: nowrap;
+}
+body.customer-account .data-table td.view a {
+    display: block;
+}
+body.customer-account .data-table .separator {
+    display: none;
+}
+body.customer-account .sidebar .block ol#compare-items li {
+    margin: 10px 0;
+}
+body.customer-account .sidebar .block .block-content p.block-subtitle {
+    margin-bottom: 15px;
+}
+body.customer-account .sidebar .block .block-content .actions {
+    margin-top: 30px;
+}
+body.customer-account .sidebar ol#cart-sidebar-reorder li {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+body.customer-account .sidebar ol#cart-sidebar-reorder p.product-name {
+    display: inline-block;
+    margin-bottom: 0;
+}
+body.customer-account .sidebar .block-cart .summary {
+    margin-bottom: 15px;
+}
+body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder li {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder li input {
+    margin-right: 10px;
+}
+body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-name {
+    display: inline;
+    margin-bottom: 0;
+}
+.customer-account div.selector span{
+    width: 365px;
+    height: 29px;
+    line-height: 26px;
+}
+.customer-account .selector span:after{
+    top: 12px;
+}
+
+.form-list .customer-dob .dob-month,
+.form-list .customer-dob .dob-day {
+    width: 40px;
+    float: left;
+    margin-right: 10px;
+}
+.form-list .customer-dob .dob-year {
+    width: 80px;
+    float: left;
+}
+.block-cms-menu .block-account li a:hover,
+.block-account li a{
+    text-transform: none;
+    color: #000;
+    font-family: verdana, tahoma, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    display: block;
+    padding: 16px 10px 17px;
+    border-bottom: 1px solid #eee;
+}
+.block-account li a{
+    color: #636363;
+}
+.block-account li a:hover {
+    color: #ff7f00;
+}
+.customer-account-edit .form-list .input-text, .customer-address-form .form-list .input-text{
+    width: 360px;
+}
+.customer-account-edit .field.name-lastname, .customer-address-form .field.name-lastname,.customer-address-form .form-list .fields .field{
+    width: 100%;
+}
+#wishlist-table td.customer-wishlist-item-cart .button, #wishlist-table .item-manage .button{
+    padding:15px;
+}
+#wishlist-view-form .button.button-secondary,#wishlist-view-form .button.btn-add, #wishlist-view-form .button.btn-share{
+    padding: 15px;
+}
+.customer-account-edit .form-list .control label {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: inline-block;
+    line-height: 12px;
+    max-width: none;
+    min-width: 250px;
+    padding-left: 33px !important;
+    width: 40%;
+}
+.customer-account-edit .buttons-set button.button {
+    padding:15px 10px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{

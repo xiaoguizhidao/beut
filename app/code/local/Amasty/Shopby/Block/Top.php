@@ -71,6 +71,11 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
 
         //canonical
         if (!Mage::helper('amshopby')->isVersionLessThan(1, 4)){
+            foreach ($head->getData('items') as $item) {
+                if (strpos($item['params'], 'canonical') !== false) {
+                    $head->removeItem('link_rel', $item['name']);
+                };
+            }
             $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
             $head->removeItem('link_rel', $url);
             $head->addLinkRel('canonical', $page->getUrl());
