@@ -496,7 +496,6 @@ jQuery(document).ready(function ($) {
 	FEelementControl.toggleCmsMenu();
 	FEelementControl.ewToggle();
 	FEelementControl.filterCat();
-	FEelementControl.aboutEqualHeight();
     FEelementControl.moveDescBlockCat();
 //	FEelementControl.equalHeight('.category-products .item');
 });
@@ -507,6 +506,7 @@ jQuery(window).load(function($){
 	FEelementControl.categoryFooter();
 	jQuery('#leSlide .loading').fadeOut();
 	FEelementControl.equalHeight('.category-products .item');
+	FEelementControl.aboutEqualHeight();
 });
 
 // Done Resize
