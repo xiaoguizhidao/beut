@@ -731,6 +731,7 @@ $j(document).ready(function () {
             if(skipLinks.hasClass('skip-currency')){
                 skipLinks.parents('.currency').removeClass('isOpen');
             }
+            skipLinks.parents('#header').addClass('isActive');
         } else {
             self.addClass('skip-active');
             elem.addClass('skip-active');
@@ -741,6 +742,7 @@ $j(document).ready(function () {
             if(skipLinks.hasClass('skip-currency')){
                 skipLinks.parents('.currency').addClass('isOpen');
             }
+            skipLinks.parents('#header').removeClass('isActive');
         }
     });
 	//Skip Nav Menu	

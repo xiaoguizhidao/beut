@@ -57,7 +57,8 @@
         #header-nav{
             .skip-search{
                 border: 1px solid #3f3f3f;
-                background-position: 10px -38px;
+                background-position: 10px 10px;
+                background-color: #000;
             }
         }
     }
@@ -179,7 +180,7 @@
         margin-left: auto;
         margin-right: auto;
         text-align: left;
-        @include calc(width,'100% - 60px');
+        @include calc(width,'100% - 40px');
         height: 100%;
         font-size: $f-size-xs;
         .store-language-container{
