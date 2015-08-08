@@ -93,7 +93,6 @@
         <remove name="footer"/>
         <remove name="store_switcher"/>
         <remove name="before_body_end"/>
-        <remove name="carpet-product-desc-img"/>
-
+        <remove name="carpet.product.desc.img"/>
     </amquickview_ajax_view>
 </layout>
