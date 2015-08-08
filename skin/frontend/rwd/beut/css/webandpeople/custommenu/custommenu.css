@@ -159,11 +159,11 @@ div.menu {
     line-height: 0;
     position: relative;
 }
-.menu.active:before{
+div.wp-custom-menu-popup:before{
     content: ' ';
     position: absolute;
     z-index: 10000;
-    bottom: -40px;
+    top: 0;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -187,6 +187,16 @@ a.level2:link, a.level2:visited {
     font-size: 12px;
     line-height: 12px;
     margin-left: 20px;
+}
+.itemMenu a{
+    transition: all 0.25s ease 0s;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+}
+.itemMenu a:hover{
+    padding-left: 10px;
 }
 /*COLOR*/
 .cms-home div.menu a:link, .cms-home div.menu a:visited,

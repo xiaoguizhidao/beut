@@ -4,10 +4,10 @@
   overflow: hidden;
 }
 .currency.custom-service img {
-    margin-top: -3px;
+    margin-top: -4px;
 }
-.currency img {
-    margin-top: -1px;
+.header-language-background .currency-switcher{
+    margin-right: 24px;
 }
 .currency.custom-service {
     margin-left: -5px;
@@ -46,6 +46,11 @@
     background: #fff url(../images/icon6.png) no-repeat 0 0;
     background-size: 24px auto;
     color: #000;
+}
+.skip-search.skip-active,.skip-search.skip-active:hover{
+    background-color: #000;
+    border: 1px solid #000;
+    background-position: 10px 10px;
 }
 .faqs-title-mobile {
     display: none;
@@ -1957,8 +1962,8 @@ ul.delivery-tabs li a{
     width: 90% !important;
 }
 .currency img{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: auto;
 }
 .container-footer-toolbar .col-lg-3.a-right{
     padding-left: 0;
@@ -2010,14 +2015,8 @@ ul.delivery-tabs li a{
 .catalogsearch-result-index .page-title {
     padding-left: 100px;
 }
-.amquickview-ajax-view.catalog-product-view .main-container{
-    margin-top:15px!important;
-}
-.amquickview-ajax-view.catalog-product-view .product-view {
-    padding-top:0px!important;
-}
-.amquickview-ajax-view {
-    border: 6px solid #498fd8;
+.customer-account-logoutsuccess .col1-layout .col-main{
+    text-align: center;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
@@ -2746,6 +2745,7 @@ ul.delivery-tabs li a{
     .currency .curr{
         background-size: 12px;
         background-position: 10px 3px;
+        padding-left: 10px;
     }
     .currency .curr.skip-active{
         background-size: 12px;
@@ -2755,6 +2755,7 @@ ul.delivery-tabs li a{
         width: 15px;
         height: auto;
     }
+
     .catalogsearch-result-index .page-title{
         padding-left: 0;
         padding-right: 0;
@@ -2772,7 +2773,9 @@ ul.delivery-tabs li a{
     .block-filter .block-layered-nav .block-content > dl > dt{
         margin-bottom: 0;
     }
-
+    .currency.custom-service img{
+        margin-top: -3px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {

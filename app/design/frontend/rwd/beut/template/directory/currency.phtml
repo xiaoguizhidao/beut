@@ -46,6 +46,7 @@
 
     endif;
     */?>
+    <?php $currSymbol = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?>
 <div class="currency-switcher">
     <div id="header-currency" class="skip-content">
         <div class="links">
@@ -70,7 +71,7 @@
         <?php /*endif;*/?>
         <?php /*endforeach; */?>
     </select>-->
-    <span class="curr skip-link skip-currency" data-target-element="#header-currency"><?php echo $curr;?></span>
+    <span class="curr skip-link skip-currency" data-target-element="#header-currency"><?php echo $currSymbol.' '.$curr;?></span>
 </div>
 <?php
     else:
