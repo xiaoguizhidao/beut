@@ -28,71 +28,22 @@ class Amasty_Shopby_Helper_Url extends Mage_Core_Helper_Abstract
         $category = $this->_getCurrentCategory();
         $canonicalType = Mage::getStoreConfig('amshopby/seo/canonical' . (is_object($category) ? '_cat' : ''));
 
-
-        /* Added by S2L Solutions <info@s2lsolutions.com> -- Date added: Wed, Apr 16, 2014*/
-        $currentParams = Mage::registry('amshopby_current_params');
-        $isCatPage = Mage::registry('current_category');
-        $catUrl = "";
-        if($isCatPage && !$currentParams){
-            $catUrl = Mage::helper('core/url')->getCurrentUrl();
+        if (!$isSeo) {
+            return $category ? $category->getUrl() : (Mage::getBaseUrl() . $key);
         }
 
-        if (0 == $canonicalType || !$isSeo){
-            return ($catUrl ? $catUrl : Mage::getBaseUrl() . $key);
-        }
-        if (1 == $canonicalType){ // as is
-            return Mage::helper('core/url')->getCurrentUrl();
-        }
+        switch ($canonicalType) {
+            case Amasty_Shopby_Model_Source_Canonical::CANONICAL_KEY:
+                return $category ? $category->getUrl() : (Mage::getBaseUrl() . $key);
 
-        // show the first attribute value as canonical
-        $url = Mage::helper('core/url')->getCurrentUrl();
-        // remove query params if any
-        $pos = max(0, strpos($url, '?'));
-        if ($pos) {
-            $url = substr($url, 0, $pos);
+            case Amasty_Shopby_Model_Source_Canonical::CANONICAL_CURRENT_URL:
+                return $this->_getCurrentUrlWithoutParams();
+
+            case Amasty_Shopby_Model_Source_Canonical::CANONICAL_FIRST_ATTRIBUTE_VALUE:
+                return $this->_getFirstAttributeValueUrl();
         }
 
-
-        // shopby
-        // shopby/brand-apple.html
-        // shopby/brand-apple-canon.html
-        // shopby/apple.html
-        // shopby/apple-canon.html
-        $parts = explode($key, $url, 2);
-        $attributes = '';
-        if (isset($parts[1])){
-            $attributes = trim($parts[1], '/');
-        }
-
-        // we should look for the second "-" or the first "/"
-        $pos  = max(0, strpos($attributes, Mage::getStoreConfig('amshopby/seo/option_char')));
-        if ($pos){
-            $pos  = max(0, strpos($attributes, Mage::getStoreConfig('amshopby/seo/option_char'), $pos+1));
-        }
-        $pos2 = max(0, strpos($attributes, '/'));
-        if ($pos && $pos2)
-            $pos = min($pos, $pos2);
-        else
-            $pos = max($pos, $pos2);
-
-        if ($pos){
-            $suffix = $this->getUrlSuffix();
-            if ($catUrl){
-                $url = $catUrl;
-                if ($suffix){
-                    $url = substr($url, 0, -strlen($suffix));
-                }
-            }
-            else {
-                $url = Mage::getBaseUrl();
-            }
-
-            $url = trim($url, '/') . '/' . $key . '/' . substr($attributes, 0, $pos);
-            if ($suffix){
-                $url .= $suffix;
-            }
-        }
-        return $url;
+        return null;
 
     }
 
