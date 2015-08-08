@@ -455,6 +455,11 @@ var FEelementControl = {
                     $j(this).parents("dd.mobile-filter").prev().addClass("current");
                     $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
                     selectedAttribute = 1;
+					var currHeight = $j(this).parents('dd.mobile-filter').height() + $j('.block-filter').height() + 80;
+					$j('.catalog-breadcrumbs').css('margin-top',currHeight);
+					if($j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
+						$j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
+					}
 
                 }
 

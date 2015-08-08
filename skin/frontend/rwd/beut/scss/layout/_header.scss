@@ -67,6 +67,7 @@
         .page-header-container{
             padding-top: 14px;
             padding-bottom: 1px;
+            z-index: 1000;
             &:after{
                 content: '';
                 clear: both;
