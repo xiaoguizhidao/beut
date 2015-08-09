@@ -21,16 +21,6 @@
 
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
 <div class="product-image">
-    <?php if (count($this->getGalleryImages()) > 0): ?>
-        <script type="text/javascript">
-            var larImg = [];
-            <?php $media_gallery = $_product->getMediaGallery(); ?>
-            <?php foreach ($media_gallery['images'] as $_image):?>
-                larImg.push({zoomimg: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file']);?>',src: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file'])->resize($imageWidth, $imageHeight); ?>'});
-            <?php endforeach; ?>
-        </script>
-        <?php endif;?>
-
     <?php
         $_img = '<img id="amasty_zoom"
 					data-zoom-image="'.$this->helper('catalog/image')->init($_product, 'image').'" src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($imageWidth, $imageHeight).'" 
@@ -74,7 +64,17 @@
      <?php endif; ?>
 </div>
 <?php endif;?>
-
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+    <?php if (count($this->getGalleryImages()) > 0): ?>
+        <script type="text/javascript">
+            var larImg = [];
+            <?php $media_gallery = $_product->getMediaGallery(); ?>
+            <?php foreach ($media_gallery['images'] as $_image):?>
+            larImg.push({zoomimg: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file']);?>',src: '<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image['file'])->resize($imageWidth, $imageHeight); ?>'});
+            <?php endforeach; ?>
+        </script>
+    <?php endif;?>
+<?php endif; ?>
 <script type="text/javascript" >
     jQuery(document).ready(function(){
         AmZoomerObj = new AmZoomer(<?php echo Mage::helper('amconf/zoom')->jsParam()?>);
