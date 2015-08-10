@@ -1023,7 +1023,10 @@ $j(document).ready(function () {
             if(jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
                 jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
             }
-        })
+            if(!jQuery(this).parents('.toggle-content').hasClass('accordion-open')){
+                jQuery('.catalog-breadcrumbs').removeAttr('style');
+            }
+        });
     })
 
     // ==============================================

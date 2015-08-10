@@ -30,9 +30,9 @@
         position: relative;
         li {
             float: left;
-            background: $c-blue;
+            background: transparent;
             border: 1px solid $c-blue;
-            color: $white;
+            color: $c-black;
             width: 50%;
             max-width: 230px;
             text-align: center;
@@ -48,9 +48,10 @@
         }
 
         li.current {
-            background: transparent;
+            background: $c-blue;
             border: 1px solid $c-blue;
-            color: $c-black;
+            color: $white;
+
         }
         &:after {
             @include clearfix;

@@ -11,7 +11,7 @@
 .lSAction > .lSNext{
     left: 0;
     background: #fff;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.2s;
 }
 .lSAction > .lSNext{
