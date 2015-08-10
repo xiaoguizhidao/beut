@@ -2194,6 +2194,14 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .page-header.sticky:hover #header-nav .skip-search{
     background-position: 6px 7px;
 }
+.page-header.exten-show .wp-custom-menu-popup{
+    top: 162px !important;
+}
+.page-header.sticky.exten-show .wp-custom-menu-popup{
+    top: 99px !important;
+}
+
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -2336,6 +2344,12 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .cms-delivery .main,
     .cms-about-us .main{
         margin-top: 0;
+    }
+    #ewcm_container{
+        position: relative;
+    }
+    .exten-show{
+        top: inherit;
     }
     label.select-label:before, label.select-label:after{
         right: 0;
