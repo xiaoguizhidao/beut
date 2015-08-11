@@ -61,7 +61,11 @@
 }
 
 .amconf-block .lSSlideWrapper{
-    width: 60%;
+    width: calc(60% + 28px);
+    width: -webkit-calc(60% + 28px);
+    width: -moz-calc(60% + 28px);
+    width: -ms-calc(60% + 28px);
+    width: -o-calc(60% + 28px);
 }
 .amconf-block .required{
     display: none;
@@ -182,7 +186,7 @@ hr.amconf-hr{
     float:left;
     position:relative;
     text-align: center;
-    margin-right: 5px;  
+    margin-right: 10px;
 }
 
 .amconf-image-title{

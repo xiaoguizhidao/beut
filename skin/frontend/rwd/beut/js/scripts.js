@@ -304,11 +304,15 @@ var FEelementControl = {
 		}else{
 			options = {loop:false,slideMargin: 0,autoWidth: true}
 		}
-		if($j('.amconf-images-container').length > 0){
-			if($j('.amconf-image-container').length > 6){
-				$j('.amconf-images-container').lightSlider(options);
+
+		$j('.products-grid .item').each(function(){
+			if($j(this).find('.amconf-image-container').length > 6){
+				$j(this).find('.amconf-images-container').lightSlider(options);
+			}else{
+				$j(this).addClass('no-slide');
 			}
-		}
+		});
+
 
 	},
 	calcMenu: function(){

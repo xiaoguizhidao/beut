@@ -2203,7 +2203,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .block-layered-nav .block-content.accordion-open > dl > dd.current {
     z-index: 8;
 }
-
+.lSSlideOuter .lightSlider{
+    margin-left: 18px;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
