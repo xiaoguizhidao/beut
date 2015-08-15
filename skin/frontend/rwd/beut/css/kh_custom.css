@@ -22,9 +22,9 @@ body *{
 .currency.custom-service {
     margin-left: -5px;
     padding-top: 12px;
-    background: url(../images/hotline.png) no-repeat 0 -93px;
-    background-size: 29px auto;
-    padding-left: 35px;
+    background: url(../images/hotline.png) no-repeat 0 -77px;
+    background-size: 25px auto;
+    padding-left: 30px;
 }
 .currency {
     font-size: 12px;
@@ -2040,9 +2040,6 @@ ul.delivery-tabs li a{
 .isActive .page-header-container div.menu a:visited{
     color: #000;
 }
-.page-header.sticky #header-nav .skip-search:hover{
-    background-position: 6px -23px;
-}
 
 .cms-page-view .std .services img{
     margin-bottom: 25px;
@@ -2217,13 +2214,17 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     background-color: transparent;
     background-position: 9px -36px;
 }
-.page-header.isActive:hover #header-nav .skip-search{
-    background-color: #000;
-    background-position: 10px 10px;
+
+.page-header.isActive:hover #header-nav .skip-search,
+.skip-search:hover{
+    background-color: #000 !important;
+    background-position: 10px 10px !important;
 }
 .page-header.isActive.sticky:hover #header-nav .skip-search,
-.isActive.page-header.sticky #header-nav .skip-search{
-    background-position: 6px 6px;
+.isActive.page-header.sticky #header-nav .skip-search,
+.page-header.sticky #header-nav .skip-search:hover{
+    background-position: 6px 6px !important;
+    background-color: #000;
 }
 .sticky.page-header .page-header-container{
     height: 60px;
@@ -3016,8 +3017,11 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .currency.custom-service img{
         margin-top: -3px;
     }
-    .skip-search.skip-active{
+    .skip-search.skip-active,.skip-search:hover{
         background-position: 3px 4px !important;
+    }
+    #search_mini_form .col-xs-2{
+        padding-right: 0;
     }
 }
 

@@ -4156,16 +4156,16 @@ body {
   -ms-transition: all 0.25s ease 0s;
   -o-transition: all 0.25s ease 0s;
   transition: all 0.25s ease 0s;
-  background-size: 20px;
+  background-size: 30px;
   width: 40px;
   height: 40px;
   float: right;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 /* line 112, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover {
   border: none;
-  background-position: 97% -37px;
+  background-position: 97% -51px;
 }
 
 /* line 118, ../scss/layout/_header-search.scss */

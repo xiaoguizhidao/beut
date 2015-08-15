@@ -599,7 +599,7 @@ body.cms-home .slideshow-container{
         top: 48px;
         padding: 0 10px;
         &.skip-active{
-            height: 130px;
+            height: 100px;
         }
     }
     #search_mini_form {
@@ -616,6 +616,7 @@ body.cms-home .slideshow-container{
         }
         .search-button{
             font-size: $f-size-l;
+            margin-top: 4px;
         }
     }
     .hot-prod,

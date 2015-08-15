@@ -104,14 +104,14 @@
         padding: 0;
         background: url(../images/search.png) no-repeat 97% 9px;
         @include letransition(all,0.25s,ease 0s);
-        background-size: 20px;
+        background-size: 30px;
         width: 40px;
         height: 40px;
         float: right;
-        margin-top: 18px;
+        margin-top: 12px;
         &:hover{
             border: none;
-            background-position: 97% -37px;
+            background-position: 97% -51px;
         }
     }
 }
