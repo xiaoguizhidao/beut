@@ -4,8 +4,8 @@
     padding: 0;
     width: 100%;
     border-radius: 2px;
-    height: auto;
     margin: 0;
+    height: 100%;
 }
 /*IE7 fix*/
 *:first-child+html #custommenu {
@@ -13,6 +13,7 @@
 }
 .nav-container{
     float: left;
+    height: 100%;
 }
 div.menu {
     float: left;
@@ -21,7 +22,7 @@ div.menu {
 }
 div.menu a:link, div.menu a:visited {
     display: block;
-    height: 40px;
+    height: 100%;
     padding-left: 15px;
     padding-right: 15px;
      padding-top: 0;
@@ -29,9 +30,11 @@ div.menu a:link, div.menu a:visited {
 }
 div.menu a span {
     display: block;
-    height: 28px;
     padding-right: 0px;
-    padding-top: 12px;
+    margin-top: 16px;
+}
+.sticky div.menu a span{
+    margin-top: 10px;
 }
 div.menu a span:hover {
     cursor: pointer;
@@ -158,23 +161,9 @@ div.menu {
     text-transform: uppercase;
     line-height: 0;
     position: relative;
+    height: 100%;
 }
-div.wp-custom-menu-popup:before{
-    content: ' ';
-    position: absolute;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 16px 16.5px 0 16.5px;
-    border-color: #ffffff transparent transparent transparent;
-    transition: all 0.25s ease-out 0s;
-}
+
 .sticky .menu.active:before{
     bottom: -22px;
 }
@@ -274,6 +263,23 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
     line-height: 0;
     height: 0;
 }
+div.menu.active:after{
+    content: ' ';
+    position: absolute;
+    z-index: 10000;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16.5px 0 16.5px;
+    border-color: #ffffff transparent transparent transparent;
+    transition: all 0.25s ease-out 0s;
+}
+
 #custommenu-mobile {
     position:relative;
     margin: 0 auto;
@@ -453,6 +459,9 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 }
 #custommenu-mobile .level2 {
     background-color: #fff;
+}
+#header-nav{
+    height: 100%;
 }
 @media only screen and (max-width: 1400px) and (min-width: 768px){
     div.wp-custom-menu-popup{
