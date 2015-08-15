@@ -902,6 +902,7 @@ ul.brands li a {
     font-size: 18px;
     font-family: "Century Gothic",Verdana,Arial,sans-serif;
     color:black;
+    min-height: 28px;
 }
 .catalog-product-view .availability {
     clear:both;
