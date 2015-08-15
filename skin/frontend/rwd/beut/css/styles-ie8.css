@@ -4112,21 +4112,6 @@ body {
   position: relative;
 }
 /* line 74, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 78, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus::-moz-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 82, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus:-ms-input-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 86, ../scss/layout/_header-search.scss */
 #search_mini_form #search {
   width: 100%;
   text-align: left;
@@ -4136,31 +4121,31 @@ body {
   font-size: 36px;
   line-height: 1;
 }
-/* line 94, ../scss/layout/_header-search.scss */
+/* line 82, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {
   outline: 0;
   border: none;
 }
-/* line 98, ../scss/layout/_header-search.scss */
+/* line 86, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-moz-placeholder {
   text-transform: uppercase;
 }
-/* line 101, ../scss/layout/_header-search.scss */
+/* line 89, ../scss/layout/_header-search.scss */
 #search_mini_form #search::-webkit-input-placeholder {
   text-transform: uppercase;
 }
-/* line 104, ../scss/layout/_header-search.scss */
+/* line 92, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-ms-input-placeholder {
   text-transform: uppercase;
 }
-/* line 109, ../scss/layout/_header-search.scss */
+/* line 96, ../scss/layout/_header-search.scss */
 #search_mini_form label {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
 }
-/* line 115, ../scss/layout/_header-search.scss */
+/* line 102, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button {
   display: block;
   padding: 0;
@@ -4176,13 +4161,13 @@ body {
   float: right;
   margin-top: 18px;
 }
-/* line 125, ../scss/layout/_header-search.scss */
+/* line 112, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover {
   border: none;
   background-position: 97% -37px;
 }
 
-/* line 132, ../scss/layout/_header-search.scss */
+/* line 118, ../scss/layout/_header-search.scss */
 #search {
   width: 100%;
   height: 48px;
@@ -4190,24 +4175,24 @@ body {
   font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   border: none;
 }
-/* line 138, ../scss/layout/_header-search.scss */
+/* line 124, ../scss/layout/_header-search.scss */
 #search ::-moz-focus-inner, #search :focus {
   border: 0;
   outline: 0;
 }
 
-/* line 144, ../scss/layout/_header-search.scss */
+/* line 130, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover:before {
   opacity: 0.8;
 }
 
-/* line 148, ../scss/layout/_header-search.scss */
+/* line 134, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:active:before {
   margin-top: -13px;
   margin-left: -13px;
 }
 
-/* line 152, ../scss/layout/_header-search.scss */
+/* line 138, ../scss/layout/_header-search.scss */
 #search_mini_form .input-box {
   -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -5410,21 +5395,21 @@ p.product-name a:hover {
   cursor: pointer;
 }
 
-/* line 100, ../scss/mixin/_toggle-content.scss */
+/* line 102, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content .toggle-tabs {
   display: none;
 }
-/* line 104, ../scss/mixin/_toggle-content.scss */
+/* line 106, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dt {
   display: block;
 }
-/* line 107, ../scss/mixin/_toggle-content.scss */
+/* line 109, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dd {
   padding: 10px;
   margin: 0;
   display: none;
 }
-/* line 112, ../scss/mixin/_toggle-content.scss */
+/* line 114, ../scss/mixin/_toggle-content.scss */
 .block-layered-nav .block-content > dl > dd:last-child {
   border-width: 0 1px 1px 1px;
 }
@@ -6167,11 +6152,14 @@ p.product-name a:hover {
 /* line 31, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li {
   float: left;
+  background: transparent;
+  border: 1px solid #498fd8;
+  color: #000;
   width: 50%;
   max-width: 230px;
   text-align: center;
 }
-/* line 37, ../scss/mixin/_toggle-content.scss */
+/* line 39, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li > span {
   -moz-user-select: none;
   -ms-user-select: none;
@@ -6185,33 +6173,33 @@ p.product-name a:hover {
   font-size: 16px;
   position: relative;
 }
-/* line 48, ../scss/mixin/_toggle-content.scss */
+/* line 50, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs li.current {
   background: #498fd8;
   border: 1px solid #498fd8;
   color: #fff;
 }
-/* line 54, ../scss/mixin/_toggle-content.scss */
+/* line 56, ../scss/mixin/_toggle-content.scss */
 .product-collateral .toggle-tabs:after {
   content: '';
   display: table;
   clear: both;
 }
-/* line 59, ../scss/mixin/_toggle-content.scss */
+/* line 61, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl {
   width: 100%;
 }
-/* line 61, ../scss/mixin/_toggle-content.scss */
+/* line 63, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dt {
   display: none;
 }
-/* line 64, ../scss/mixin/_toggle-content.scss */
+/* line 66, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dd {
   width: 100%;
   display: none;
   border-top: 0;
 }
-/* line 69, ../scss/mixin/_toggle-content.scss */
+/* line 71, ../scss/mixin/_toggle-content.scss */
 .product-collateral > dl > dd.current {
   display: block;
 }
@@ -10157,21 +10145,21 @@ div.paypal-logo span > img {
   font-family: "CenturyGothic", Verdana, Arial, sans-serif;
 }
 
-/* line 100, ../scss/mixin/_toggle-content.scss */
+/* line 102, ../scss/mixin/_toggle-content.scss */
 #accordion .toggle-tabs {
   display: none;
 }
-/* line 104, ../scss/mixin/_toggle-content.scss */
+/* line 106, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dt {
   display: block;
 }
-/* line 107, ../scss/mixin/_toggle-content.scss */
+/* line 109, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dd {
   padding: 10px;
   margin: 0;
   display: none;
 }
-/* line 112, ../scss/mixin/_toggle-content.scss */
+/* line 114, ../scss/mixin/_toggle-content.scss */
 #accordion > dl > dd:last-child {
   border-width: 0 1px 1px 1px;
 }

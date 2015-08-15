@@ -4003,7 +4003,7 @@ body {
   text-decoration: none;
   display: inline-block;
   border: 1px solid #fff;
-  padding: 0px 43px;
+  padding: 13px 43px 16px;
   margin-top: 50px;
   font-size: 20px;
   letter-spacing: 1.2px;
@@ -4013,11 +4013,6 @@ body {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-    height:60px;
-   line-height: 53px;
-}
-.caption1 .link_text a.no-border{
-    border:none!important;
 }
 /* line 143, ../scss/layout/_global.scss */
 .caption1 .link_text a:hover {
@@ -4775,21 +4770,6 @@ body {
   position: relative;
 }
 /* line 74, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 78, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus::-moz-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 82, ../scss/layout/_header-search.scss */
-#search_mini_form [placeholder]:focus:-ms-input-placeholder {
-  transition: opacity 0.5ms 0.5ms ease;
-  opacity: 0;
-}
-/* line 86, ../scss/layout/_header-search.scss */
 #search_mini_form #search {
   width: 100%;
   text-align: left;
@@ -4799,31 +4779,31 @@ body {
   font-size: 36px;
   line-height: 1;
 }
-/* line 94, ../scss/layout/_header-search.scss */
+/* line 82, ../scss/layout/_header-search.scss */
 #search_mini_form #search:focus {
   outline: 0;
   border: none;
 }
-/* line 98, ../scss/layout/_header-search.scss */
+/* line 86, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-moz-placeholder {
   text-transform: uppercase;
 }
-/* line 101, ../scss/layout/_header-search.scss */
+/* line 89, ../scss/layout/_header-search.scss */
 #search_mini_form #search::-webkit-input-placeholder {
   text-transform: uppercase;
 }
-/* line 104, ../scss/layout/_header-search.scss */
+/* line 92, ../scss/layout/_header-search.scss */
 #search_mini_form #search:-ms-input-placeholder {
   text-transform: uppercase;
 }
-/* line 109, ../scss/layout/_header-search.scss */
+/* line 96, ../scss/layout/_header-search.scss */
 #search_mini_form label {
   font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
 }
-/* line 115, ../scss/layout/_header-search.scss */
+/* line 102, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button {
   display: block;
   padding: 0;
@@ -4839,13 +4819,13 @@ body {
   float: right;
   margin-top: 18px;
 }
-/* line 125, ../scss/layout/_header-search.scss */
+/* line 112, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover {
   border: none;
   background-position: 97% -37px;
 }
 
-/* line 132, ../scss/layout/_header-search.scss */
+/* line 118, ../scss/layout/_header-search.scss */
 #search {
   width: 100%;
   height: 48px;
@@ -4853,24 +4833,24 @@ body {
   font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
   border: none;
 }
-/* line 138, ../scss/layout/_header-search.scss */
+/* line 124, ../scss/layout/_header-search.scss */
 #search ::-moz-focus-inner, #search :focus {
   border: 0;
   outline: 0;
 }
 
-/* line 144, ../scss/layout/_header-search.scss */
+/* line 130, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:hover:before {
   opacity: 0.8;
 }
 
-/* line 148, ../scss/layout/_header-search.scss */
+/* line 134, ../scss/layout/_header-search.scss */
 #search_mini_form .search-button:active:before {
   margin-top: -13px;
   margin-left: -13px;
 }
 
-/* line 152, ../scss/layout/_header-search.scss */
+/* line 138, ../scss/layout/_header-search.scss */
 #search_mini_form .input-box {
   -webkit-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
