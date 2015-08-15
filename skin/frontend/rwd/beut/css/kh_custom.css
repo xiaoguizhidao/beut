@@ -2192,7 +2192,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     padding:15px 10px;
 }
 .page-header.sticky:hover #header-nav .skip-search{
-    background-position: 6px 7px;
+    background-position: 6px -29px;
 }
 .page-header.exten-show .wp-custom-menu-popup{
     top: 162px !important;
@@ -2205,6 +2205,17 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .lSSlideOuter .lightSlider{
     margin-left: 18px;
+}
+.page-header:hover #header-nav .skip-search{
+    background-color: transparent;
+    background-position: 10px -38px;
+}
+.page-header.isActive:hover #header-nav .skip-search{
+    background-color: #000;
+    background-position: 10px 10px;
+}
+.page-header.isActive.sticky:hover #header-nav .skip-search{
+    background-position: 6px 6px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
@@ -2988,6 +2999,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .currency.custom-service img{
         margin-top: -3px;
+    }
+    .skip-search.skip-active{
+        background-position: 3px 4px !important;
     }
 }
 
