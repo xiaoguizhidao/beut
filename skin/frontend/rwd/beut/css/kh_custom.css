@@ -2233,9 +2233,20 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     top: 4px;
     left: -7px;
 }
+.block-layered-nav .block-content > dl > dd.price,
+.block-layered-nav dl dd ol li > a.amshopby-price span.price{
+    font-family: "CenturyGothic", Verdana, Arial, sans-serif;
+    font-style: normal;
+}
 .block-layered-nav dl dd ol li > a.amshopby-price{
     position: relative;
 }
+.block-layered-nav dl dd ol li > a.amshopby-price:hover{
+    text-decoration: none;
+}
+
+
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
