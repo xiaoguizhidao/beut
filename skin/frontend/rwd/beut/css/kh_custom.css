@@ -11,8 +11,11 @@ body *{
   overflow: hidden;
 }
 .currency.custom-service img {
-    margin-top: -4px;
+    height: 26px;
+    margin-top: 0 !important;
+    width: 29px;
 }
+
 .header-language-background .currency-switcher{
     margin-right: 24px;
 }
@@ -899,6 +902,7 @@ ul.brands li a {
     font-size: 18px;
     font-family: "Century Gothic",Verdana,Arial,sans-serif;
     color:black;
+    min-height: 28px;
 }
 .catalog-product-view .availability {
     clear:both;

@@ -240,7 +240,7 @@ a.level1:hover, a.level1.act, a.level1.actParent {
     color: #000;
 }
 a.level1:hover{
-    padding-left: 15px;
+    margin-left: -5px;
 }
 a.level2:hover, a.level2.act, a.level2.actParent {
     color: #000;

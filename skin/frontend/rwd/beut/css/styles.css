@@ -4003,7 +4003,7 @@ body {
   text-decoration: none;
   display: inline-block;
   border: 1px solid #fff;
-  padding: 13px 43px 16px;
+  padding: 0px 43px;
   margin-top: 50px;
   font-size: 20px;
   letter-spacing: 1.2px;
@@ -4013,6 +4013,11 @@ body {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+    height:60px;
+   line-height: 53px;
+}
+.caption1 .link_text a.no-border{
+    border:none!important;
 }
 /* line 143, ../scss/layout/_global.scss */
 .caption1 .link_text a:hover {
