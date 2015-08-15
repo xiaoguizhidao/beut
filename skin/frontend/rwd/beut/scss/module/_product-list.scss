@@ -612,6 +612,10 @@ $productsGridActionHeight: 50px;
             top: 0;
             @include letransition(all, 0.25s, ease-out 0s);
             transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
         }
         &:before{
             color: #f7f8f9;

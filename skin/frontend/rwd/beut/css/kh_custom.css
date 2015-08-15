@@ -2229,6 +2229,13 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .sticky.page-header .page-header-container{
     height: 60px;
 }
+.block-layered-nav dl dd ol li > a.amshopby-price:before{
+    top: 4px;
+    left: -7px;
+}
+.block-layered-nav dl dd ol li > a.amshopby-price{
+    position: relative;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
