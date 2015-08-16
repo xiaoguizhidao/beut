@@ -2470,7 +2470,10 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .can-we-help .title,
     .category-designers p strong,
     .cms-brand .std p strong,
-    .brand-block h2{
+    .brand-block h2,
+    .product-shop .product-brand,
+    .catalog-product-view .product-view .product-shop .price-box .regular-price .price,
+    .catalog-product-view .product-view .product-shop .price-box .full-product-price .price{
         font-size: 16px;
     }
 
@@ -2495,7 +2498,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .col-2.registered-users a,
     .customer-account-login .form-instructions,
     #magentoPopupContainer p,
-    .popup-subscribe-form .button{
+    .popup-subscribe-form .button,
+    .product-view .product-shop .product-name,
+    .tab-content .std .title{
         font-size: 12px !important;
     }
     .item-options,
@@ -2510,7 +2515,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .header-language-container, .page-header,
     .collapse .content p,
     .cms-about-us .our-history p,
-    .customer-account-login .scaffold-form label{
+    .customer-account-login .scaffold-form label,
+    .breadcrumbs li:before,
+    .breadcrumbs a{
         font-size: 10px;
     }
     .slick-dots li button{
@@ -3040,6 +3047,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     #search_mini_form .col-xs-2{
         padding-right: 0;
+    }
+    .catalog-product-view .breadcrumbs{
+        margin-top: 0;
     }
 }
 
