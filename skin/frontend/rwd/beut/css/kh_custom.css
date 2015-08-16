@@ -2524,7 +2524,8 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .cms-about-us .our-history p,
     .customer-account-login .scaffold-form label,
     .breadcrumbs li:before,
-    .breadcrumbs a{
+    .breadcrumbs a,
+    .block-filter select{
         font-size: 10px;
     }
     .slick-dots li button{
@@ -3057,6 +3058,28 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .catalog-product-view .breadcrumbs{
         margin-top: 0;
+    }
+    .customer-account-login .account-login{
+        padding: 20px;
+        margin-top: 20px;
+        width: calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        width: -webkit-calc(100% - 40px);
+        width: -ms-calc(100% - 40px);
+        width: -o-calc(100% - 40px);
+    }
+    .customer-account-login .main-container.col1-layout{
+        margin-bottom: 20px;
+    }
+    .block-filter select{
+        font-family: "CenturyGothic", Verdana, Arial, sans-serif;
+    }
+
+    .block-layered-nav dl dd ol li span{
+        padding-left: 0;
+    }
+    .block-filter .block-layered-nav .block-subtitle--filter{
+        color: #a7a39b;
     }
 }
 

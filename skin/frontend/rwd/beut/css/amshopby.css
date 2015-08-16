@@ -50,6 +50,7 @@ div.block-layered-nav dd .amshopby-cat a:before{
     top: 3px;
     line-height: 0.7;
 }
+
 div.block-layered-nav dd .amshopby-cat{
     position: relative;
 }
@@ -190,4 +191,12 @@ div.amshopby-overlay div {
 	width: 300px;
 	height: 200px;
 	background:  url('../images/amshopby-overlay.gif') 50% 50% no-repeat;
+}
+@media only screen and (max-width: 1200px) {
+    div.block-layered-nav dd .amshopby-cat a:before{
+        left: 15px;
+    }
+    .block-filter .block-layered-nav .block-content.accordion-open > dl li a.amshopby-price{
+        padding-left: 0;
+    }
 }
