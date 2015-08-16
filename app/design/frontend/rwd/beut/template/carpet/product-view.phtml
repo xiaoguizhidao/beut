@@ -63,11 +63,21 @@
                 <?php
                 if ($_product->getDescription()) {
                     $pdest = $_product->getDescription();
-                    $pdest = substr($pdest,0,strpos($pdest,"."));
-                    $pdest = str_replace("<p>","",$pdest);
-                    $pdest = str_replace("</p>","",$pdest);
+                    $pdestArr = explode(" ",$pdest);
+                    $pdestShow = "";
+                    if (count($pdestArr) > 24){
+                        for($i=0; $i<23; $i++){
+                            $pdestShow .= $pdestArr[$i]." ";
+                        }
+                        $pdestShow .= $pdestArr[24]."...";
+                    }
+                    else {
+                        $pdestShow = $pdest;
+                    }
+                    $pdestShow = str_replace(array("<p>","</p>"),"",$pdestShow);
+
                     ?>
-                    <p class="product-short-dest"><?php echo $pdest ?>.</p>
+                    <p class="product-short-dest"><?php echo $pdestShow ?></p>
 
                 <?php
                 }
@@ -156,7 +166,7 @@
                 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($_product->getSliderBlock())->toHtml();?>
             </div>
         <?php endif;?>
-        <?php //echo $this->getChildHtml('related_products') ?>
+        <?php echo $this->getChildHtml('related_products') ?>
 
 
 
