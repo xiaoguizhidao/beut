@@ -297,5 +297,15 @@ hr.amconf-hr{
         text-align: center;
         float: none;
     }
-
+    .amconf-image-container{
+        margin-right: 5px;
+    }
+    .amconf-image{
+        width: 20px;
+        height: auto;
+    }
+    .lSAction > .lSPrev:before, .lSAction > .lSPrev:after,
+    .lSAction > .lSNext:before, .lSAction > .lSNext:after{
+        line-height: 2;
+    }
 }

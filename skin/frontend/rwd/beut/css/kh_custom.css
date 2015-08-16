@@ -906,7 +906,6 @@ ul.brands li a {
     font-size: 18px;
     font-family: "Century Gothic",Verdana,Arial,sans-serif;
     color:black;
-    min-height: 28px;
 }
 .catalog-product-view .availability {
     clear:both;
@@ -2484,7 +2483,6 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
         font-size: 16px;
     }
 
-    h2.product-name a,
     .cart-content .checkout-types .btn-checkout,
     .shipping #co-shipping-method-form .buttons-set .button,
     .order-review-button .amscheckout-submit,
@@ -2507,7 +2505,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     #magentoPopupContainer p,
     .popup-subscribe-form .button,
     .product-view .product-shop .product-name,
-    .tab-content .std .title{
+    .tab-content .std .title,
+    .product-brand,
+    .products-grid .price-box{
         font-size: 12px !important;
     }
     .item-options,
@@ -2525,7 +2525,8 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .customer-account-login .scaffold-form label,
     .breadcrumbs li:before,
     .breadcrumbs a,
-    .block-filter select{
+    .block-filter select,
+    h2.product-name a{
         font-size: 10px;
     }
     .slick-dots li button{
@@ -3080,6 +3081,15 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .block-filter .block-layered-nav .block-subtitle--filter{
         color: #a7a39b;
+    }
+    .amquickview-hover{
+        display: none !important;
+    }
+    .products-grid .product-image{
+        margin-bottom: 8px;
+    }
+    .products-grid .product-name{
+        margin-bottom: 4px;
     }
 }
 
