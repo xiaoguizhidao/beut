@@ -646,6 +646,7 @@ ul.brands li a,
     font-size: 14px;
     text-transform: capitalize;
 }
+
 .faqs-top {
     background: #f7f8f9 none repeat scroll 0 0;
     height: 62px;
@@ -1360,12 +1361,22 @@ dl.sp-methods.f-right dd{
     margin-bottom: 0;
 }
 .cms-delivery .delivery-message li {
-    width: 33%;
+    width: 48%;
     display: inline-block;
     text-align: center;
     margin: 0!important;
     padding:0!important;
     font-style: normal;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.delivery-message li:first-child{
+    text-align: right;
+    width: 25%;
+}
+.delivery-message li:last-child{
+    text-align: left;
+    width: 25%;
 }
 .cms-delivery .left-block{
     width: 75%;
@@ -1449,11 +1460,7 @@ ul.delivery-tabs li a{
    width: 100%;
    margin-left: 15px;
 }
-.delivery-contents .menu-left li{
-    border-bottom: 0px;
-    font-style: normal;
-    padding-top:0px;
-}
+
 /*cms*/
 .can-we-help .title{
     text-transform: capitalize;
@@ -3080,4 +3087,11 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     color: white;
     line-height: 40px;
     text-transform: uppercase;
+}
+.delivery-contents  .menu-left li a:hover{
+    color: #498fd8;
+    text-decoration: none;
+}
+.delivery-contents  .menu-left{
+   margin-top: 95px;
 }
