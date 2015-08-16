@@ -76,9 +76,13 @@ var FEelementControl = {
 	},
 	stickyTop: function(skinUrl){
 		var normal = 1;
-		if($j('.cms-home').length > 0 || $j('.catalog-category-view').length > 0 || $j('.cms-delivery').length > 0 || $j('.cms-about-us').length > 0){
+        /*|| $j('.cms-delivery').length > 0 || $j('.cms-about-us').length > 0*/
+		if($j('.cms-home').length > 0 || $j('.catalog-category-view').length > 0 ){
 			normal = 0;
 		}
+        if($j('.category-designers').length>0){
+            normal = 1;
+        }
 		$j(window).scroll(function() {
 			if ($j(this).scrollTop() > 1) {
 				if ($j(window).width() > 767) {
