@@ -4415,8 +4415,8 @@ body {
 /* line 83, ../scss/layout/_header-nav.scss */
 .cms-home .skip-search,
 .catalog-category-view .skip-search,
-.cms-delivery .skip-search,
-.cms-about-us .skip-search {
+/*.cms-delivery .skip-search,
+.cms-about-us .skip-search*/ {
   border: 1px solid #fff;
   background-position: 10px 10px;
 }
