@@ -625,7 +625,18 @@ ul.brands li a,
 .cms-page-view .std img, .cms-no-route .std img{
     margin: auto auto 20px;
 }
-.cms-faqs .main-container.col1-layout, .contacts-index-index .main-container.col1-layout,.category-designers .main-container.col1-layout, .cms-brand .main-container.col1-layout, .checkout-cart-index{
+.ewcm-show .cms-faqs .main-container.col1-layout,
+.ewcm-show .contacts-index-index .main-container.col1-layout,
+.ewcm-show .category-designers .main-container.col1-layout,
+.ewcm-show .cms-brand .main-container.col1-layout,
+.ewcm-show .checkout-cart-index{
+    margin-top: 168px;
+}
+.cms-faqs .main-container.col1-layout,
+.contacts-index-index .main-container.col1-layout,
+.category-designers .main-container.col1-layout,
+.cms-brand .main-container.col1-layout,
+.checkout-cart-index{
     margin-top: 135px;
 }
 
@@ -2250,8 +2261,13 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .block-layered-nav dl dd ol li > a.amshopby-price:hover{
     text-decoration: none;
 }
-
-
+.cms-home .skip-search,
+.catalog-category-view .skip-search,
+.cms-about-us .skip-search,
+.cms-delivery .skip-search{
+    border: 1px solid #fff;
+    background-position: 10px 10px;
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{

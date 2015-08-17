@@ -445,10 +445,11 @@ var FEelementControl = {
     ewToggle: function(){
         if($j('#ewcm_container').is(':visible')){
             $j('.header-language-background,.page-header').addClass('exten-show');
-
+			$j(this).parent('body').addClass('ewcm-show');
         }
         $j('#ewcm_container').on('click',function(){
             $j('.header-language-background,.page-header').removeClass('exten-show');
+			$j(this).parent('body').removeClass('ewcm-show');
         });
     },
     filterCat: function(){

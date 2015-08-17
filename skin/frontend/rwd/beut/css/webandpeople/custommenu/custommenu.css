@@ -201,10 +201,21 @@ a.level2:link, a.level2:visited {
     -ms-transition: all .1s linear;
     transition: all .1s linear;
 }
-div.menu a:link, div.menu a:visited {
-    text-transform: uppercase;
+.cms-home div.menu a:link,
+.catalog-category-view div.menu a:link,
+.cms-about-us div.menu a:link,
+.cms-delivery div.menu a:link,
+.cms-home div.menu a:visited,
+.catalog-category-view div.menu a:visited,
+.cms-about-us div.menu a:visited,
+.cms-delivery div.menu a:visited{
     color: #fff;
 }
+div.menu a:link, div.menu a:visited {
+    text-transform: uppercase;
+    color: #000;
+}
+
 a.level1:link, a.level1:visited {
     color: #000;
 }
