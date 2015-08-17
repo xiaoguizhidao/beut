@@ -203,7 +203,7 @@ a.level2:link, a.level2:visited {
 }
 div.menu a:link, div.menu a:visited {
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
 }
 a.level1:link, a.level1:visited {
     color: #000;
