@@ -203,12 +203,8 @@ a.level2:link, a.level2:visited {
 }
 .cms-home div.menu a:link,
 .catalog-category-view div.menu a:link,
-.cms-about-us div.menu a:link,
-.cms-delivery div.menu a:link,
 .cms-home div.menu a:visited,
-.catalog-category-view div.menu a:visited,
-.cms-about-us div.menu a:visited,
-.cms-delivery div.menu a:visited{
+.catalog-category-view div.menu a:visited{
     color: #fff;
 }
 div.menu a:link, div.menu a:visited {
@@ -290,7 +286,9 @@ div.menu.active:after{
     border-color: #ffffff transparent transparent transparent;
     transition: all 0.25s ease-out 0s;
 }
-
+.exten-show div.menu.active::after{
+    bottom: -11px;
+}
 #custommenu-mobile {
     position:relative;
     margin: 0 auto;
