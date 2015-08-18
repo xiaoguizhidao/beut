@@ -207,7 +207,7 @@ a.level2:link, a.level2:visited {
 .catalog-category-view div.menu a:visited{
     color: #fff;
 }
-div.menu a:link, div.menu a:visited {
+div.menu a:link, div.menu a:visited,.category-designers div.menu a:link {
     text-transform: uppercase;
     color: #000;
 }

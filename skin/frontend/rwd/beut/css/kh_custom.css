@@ -626,11 +626,12 @@ ul.brands li a,
     margin: auto auto 20px;
 }
 .main-container.col1-layout,
-.checkout-cart-index{
+.checkout-cart-index,.category-designers .main-container.col1-layout{
     margin-top: 135px;
 }
 .ewcm-show .main-container.col1-layout,
-.ewcm-show .checkout-cart-index{
+.ewcm-show .checkout-cart-index,
+.ewcm-show.category-designers .main-container.col1-layout{
     margin-top: 168px;
 }
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
@@ -1608,9 +1609,7 @@ ul.delivery-tabs li a{
     margin-left: auto;
     margin-right: auto;
 }
-.catalog-category-view .main-container,
-.cms-delivery .main,
-.cms-about-us .main{
+.catalog-category-view .main-container{
     margin-top: 50px;
 }
 .slick-track{
@@ -2255,8 +2254,15 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     border: 1px solid #fff;
     background-position: 10px 10px;
 }
+.catalog-category-view.category-designers .skip-search{
+    border: 1px solid #000;
+    background-position: 10px -37px;
+}
 .page-title h1{
     display: none;
+}
+.category-designers .page-title h1{
+    display: block;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px){

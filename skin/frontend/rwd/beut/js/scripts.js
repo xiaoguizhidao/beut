@@ -76,7 +76,6 @@ var FEelementControl = {
 	},
 	stickyTop: function(skinUrl){
 		var normal = 1;
-        /*|| $j('.cms-delivery').length > 0 || $j('.cms-about-us').length > 0*/
 		if($j('.cms-home').length > 0 || $j('.catalog-category-view').length > 0 ){
 			normal = 0;
 		}
@@ -445,11 +444,11 @@ var FEelementControl = {
     ewToggle: function(){
         if($j('#ewcm_container').is(':visible')){
             $j('.header-language-background,.page-header').addClass('exten-show');
-			$j(this).parent('body').addClass('ewcm-show');
+			$j('#ewcm_container').parent('body').addClass('ewcm-show');
         }
         $j('#ewcm_container').on('click',function(){
             $j('.header-language-background,.page-header').removeClass('exten-show');
-			$j(this).parent('body').removeClass('ewcm-show');
+			$j('#ewcm_container').parent('body').removeClass('ewcm-show');
         });
     },
     filterCat: function(){
@@ -479,12 +478,39 @@ var FEelementControl = {
         if($j("#move-cat-desc-top .amshopby-descr .category-head h1").length) {
             var  description =  '<div class="col-lg-12 item category-description std col-xs-12"><div class="description">';
             if ($j("#move-cat-desc-img").length) {
-                description =  '<div class="col-lg-8 item category-description std col-xs-12"><div class="description">';            }
+                description =  '<div class="col-lg-8 item category-description std col-xs-12"><div class="description">';
+			}
              var descriptionFinal = '</div></div>';
             $j("#move-cat-desc").html(description + $j("#move-cat-desc-top").html() + descriptionFinal );
             $j("#move-cat-desc-top").html("");
         }
-    }
+    },
+	scroll: function(){
+		if($j('.category-designers').length > 0){
+			var scrollTo;
+			$j('a[href^="#"]').on('click', function(event) {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $j(this.hash);
+					target = target.length ? target : $j('[name=' + this.hash.slice(1) + ']');
+
+/*
+					if ($j(window).width() > 767) {
+					} else {
+						scrollTo = target.offset().top;
+					}
+*/
+					if (target.length) {
+						event.preventDefault();
+						$j('html, body').animate({
+							scrollTop: (target.offset().top - 50)
+						}, 1000);
+					}
+
+				}
+			});
+		}
+
+	}
 };
 
 jQuery(document).ready(function ($) {
@@ -506,6 +532,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.ewToggle();
 	FEelementControl.filterCat();
     FEelementControl.moveDescBlockCat();
+    FEelementControl.scroll();
 //	FEelementControl.equalHeight('.category-products .item');
 });
 jQuery(window).load(function($){
@@ -540,6 +567,7 @@ jQuery(window).resize(function ($) {
 			FEelementControl.miniCartPos();
 			FEelementControl.aboutSlide();
 			FEelementControl.aboutEqualHeight();
+			FEelementControl.scroll();
 			FEelementControl.equalHeight('.category-products .item');
 		}
 	}, 200);
