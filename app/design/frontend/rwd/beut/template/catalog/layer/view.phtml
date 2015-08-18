@@ -62,12 +62,7 @@ $_category  = Mage::registry('current_category');
                     <dl id="narrow-by-list" class="no-display">
                         <?php $options = "";?>
                         <?php $_filters = $this->getFilters() ?>
-                        <?php
 
-                        $stateBlock = $this->getLayout()->getBlockSingleton('amshopby/catalog_layer_view');
-                        $state = $stateBlock->getStateHtml();
-                        var_dump($state);
-                        ?>
                         <?php foreach ($_filters as $_filter): ?>
                             <?php if($_filter->getItemsCount()): ?>
                                 <dt><?php echo $this->__($_filter->getName()) ?></dt>

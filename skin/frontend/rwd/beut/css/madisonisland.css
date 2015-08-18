@@ -862,7 +862,7 @@ body .promos > li {
 /* line 32, ../scss/content/_category.scss */
 .category-image h2 {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 18px);
   left: 0;
   right: 0;
   transform: translateY(-50%);
