@@ -1901,8 +1901,6 @@ ul.delivery-tabs li a{
     clear: both;
 }
 .aw-acp-continue ,.aw-acp-checkout{
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
-    color: black!important;
     float: left;
     height: auto!important;
     margin-left: 5px!important;
@@ -1917,13 +1915,19 @@ ul.delivery-tabs li a{
     -moz-transition: all 0.25ms ease;
     -ms-transition: all 0.25ms ease;
     -o-transition: all 0.25ms ease;
+    text-transform: uppercase;
 }
-.aw-acp-continue:hover ,.aw-acp-checkout:hover{
-    background: #999;
-    color: #fff;
+.aw-acp-continue{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    color: black!important;
+}
+.aw-acp-checkout{
+    background: gray!important;
+    color: white!important;
 }
 .aw-acp-continue:hover, .aw-acp-checkout:hover{
     background: #777;
+    color: #fff;
 }
 .control-confirm{
     clear: both;
@@ -2005,6 +2009,7 @@ ul.delivery-tabs li a{
     width: -o-calc(50% - 4px);
     font-size: 12px;
     line-height: 1;
+    padding: 8px 0;
 }
 .checkout-types.minicart .button.checkout-button{
     background: transparent;
@@ -2015,7 +2020,7 @@ ul.delivery-tabs li a{
     background: #498fd8;
     text-transform: uppercase;
     float: left;
-    padding: 7px 0;
+    padding: 8px 0;
     color: #fff;
     border: 1px solid #498fd8;
 }

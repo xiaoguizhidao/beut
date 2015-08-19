@@ -38,7 +38,8 @@ function Minicart(options) {
         success:              '#minicart-success-message',
         quantityButtonPrefix: '#qbutton-',
         quantityInputPrefix:  '#qinput-',
-        quantityButtonClass:  '.quantity-button'
+        quantityButtonClass:  '.quantity-button',
+        qtyBeut: "#top-minicart-beut"
     };
 
     if (options.selectors) {
@@ -173,6 +174,12 @@ Minicart.prototype = {
 
     updateCartQty: function(qty) {
         if (typeof qty != 'undefined') {
+            var realString = qty + " item";
+            if(qty>1)
+            {
+                realString = qty + " items";
+            }
+            $j(this.selectors.qtyBeut).text(realString);
             $j(this.selectors.qty).text(qty);
         }
     },

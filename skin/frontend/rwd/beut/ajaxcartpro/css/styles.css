@@ -60,7 +60,7 @@
     margin:0 auto;
     display:block;
     font-family:Arial;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
     text-decoration:none;
     cursor: pointer;
@@ -110,8 +110,8 @@
     width:100%;
     height:100%;
     background-color:#000;
-    -moz-opacity: 0.3;
-    opacity:.30;
+    -moz-opacity: 0.8;
+    opacity:.80;
     filter: alpha(opacity=30);
     z-index: 100;
 }
