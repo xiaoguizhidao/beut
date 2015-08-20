@@ -770,7 +770,7 @@ body .promos > li {
   /* line 609, ../scss/content/_home.scss */
   #search_mini_form #search {
     margin-top: 0;
-    width: 100%;
+    width: 240px;
     margin-bottom: 10px;
   }
   /* line 614, ../scss/content/_home.scss */
@@ -862,7 +862,7 @@ body .promos > li {
 /* line 32, ../scss/content/_category.scss */
 .category-image h2 {
   position: absolute;
-  top: calc(50% + 18px);
+  top: 50%;
   left: 0;
   right: 0;
   transform: translateY(-50%);

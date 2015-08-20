@@ -52,6 +52,7 @@
     background: $gray-light;
     height: 0;
     overflow: hidden;
+    text-align: center;
     -webkit-animation: searchOpen .15s ease-out;
     -moz-animation: searchOpen .15s ease-out;
     -o-animation: searchOpen .15s ease-out;
@@ -66,13 +67,14 @@
  * ============================================ */
 #search_mini_form{
     color: #878787;
+    display: inline-block;
     .input-box {
         display: block;
         width: 100%;
         position: relative;
     }
     #search{
-        width: 100%;
+        width: 425px;
         text-align: left;
         border: none;
         float: none;
@@ -107,8 +109,8 @@
         background-size: 30px;
         width: 40px;
         height: 40px;
-        float: right;
         margin-top: 12px;
+        margin-right: 15px;
         &:hover{
             border: none;
             background-position: 97% -51px;

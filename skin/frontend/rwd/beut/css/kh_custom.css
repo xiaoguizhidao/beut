@@ -2232,7 +2232,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     background-color: #000;
 }
 .sticky.page-header .page-header-container{
-    height: 60px;
+    height: 70px;
 }
 .block-layered-nav dl dd ol li > a.amshopby-price:before{
     top: 4px;
@@ -2264,7 +2264,23 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .category-designers .page-title h1{
     display: block;
 }
-
+.caption1 .link_text a {
+    padding: 0 43px;
+    height: 60px;
+    line-height: 53px;
+}
+.caption1 .link_text a.no-border {
+    border:none;
+}
+.fancybox-wrap{
+    border: 5px solid #498fd8;
+ }
+.fancybox-lock .page-header{
+    display: none;
+}
+.fancybox-lock .main-container.col1-layout{
+    margin-top: 0 !important;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;

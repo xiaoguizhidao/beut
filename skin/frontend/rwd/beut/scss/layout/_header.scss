@@ -65,8 +65,7 @@
     &.sticky{
         background: $white;
         .page-header-container{
-            padding-top: 14px;
-            padding-bottom: 1px;
+            padding-top: 19px;
             z-index: 1000;
             &:after{
                 content: '';
@@ -79,7 +78,7 @@
             }
         }
         .wp-custom-menu-popup{
-            top: 60px !important;
+            top: 70px !important;
         }
         .nav-primary{
             li.level0 > a{
