@@ -3172,3 +3172,171 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .delivery-contents  .menu-left{
    margin-top: 95px;
 }
+
+/*style for testimonial*/
+.row5 .item {
+    position: relative;
+    overflow: hidden;
+    padding-left: 10px;
+    color: #bbbbbb;
+}
+/* line 190, ../scss/content/_home.scss */
+.row5 .item:first-child {
+    background: #bbbbbb
+    /*margin-bottom: 10px;*/
+    padding: 0 30px;
+    overflow: hidden;
+}
+.cms-home .row5 .item:first-child {
+    background: #bbbbbb;
+}
+.cms-home .row5 .item .absolute-block .content::before, .cms-home .row5 .item .absolute-block .content::after {
+    color: #fff;
+    content: open-quote;
+    display: block;
+    float: none;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.cms-home .row5 .item .absolute-block p.autho {
+    font-family: "Neuton-Regular", Verdana, Arial, sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+}
+.cms-home .row5 .item .absolute-block.home-testimonial .title {
+    text-align: center;
+    color: white;
+}
+.cms-home .row5 .item .absolute-block.home-testimonial .content {
+    text-align: center;
+    color: white;
+    line-height: 1.5em;
+}
+.cms-home .row5 .item .absolute-block .content::after {
+    content: close-quote;
+    top: inherit;
+}
+@media only screen and (min-width: 767px) {
+    .cms-home .row5 .item .absolute-block {
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+    }
+    .cms-home .row5 .item .absolute-block .content::before, .cms-home .row5 .item .absolute-block .content::after {
+        font-size: 67px;
+        margin-top: -27px;
+    }
+    .cms-home .row5 .item .absolute-block p.autho {
+        margin-top: 88px;
+        font-size: 16px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .title {
+        font-size: 34px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .content {
+        font-size: 16px;
+        margin-top: 60px;
+    }
+    .cms-home .row5 .item .absolute-block .content::after {
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .cms-home .row5 .item .absolute-block .content::before, .cms-home .row5 .item .absolute-block .content::after {
+       font-size: 30px;
+        margin-top: -20px;
+    }
+    .cms-home .row5 .item .absolute-block p.autho {
+        margin-top: 40px;
+        font-size: 12px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .title {
+        font-size: 24px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .content {
+        font-size: 12px;
+        margin-top: 37px;
+    }
+    .cms-home .row5 .item .absolute-block .content::after {
+        margin-top: 17px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .row5 .item .content {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    /* line 249, ../scss/content/_home.scss */
+    .row5 .item a, .row5 .item h2 {
+        font-size: 16px;
+    }
+    .row5 .item:first-child {
+        padding: 40px 30px!important;
+        background: #bbbbbb;
+    }
+    .cms-home .row5 .item .absolute-block .content::before, .cms-home .row5 .item .absolute-block .content::after {
+        font-size: 25px;
+        margin-top: -20px;
+    }
+    .cms-home .row5 .item .absolute-block p.autho {
+        margin-top: 40px;
+        font-size: 12px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .title {
+        font-size: 16px;
+    }
+    .cms-home .row5 .item .absolute-block.home-testimonial .content {
+        font-size: 12px;
+        margin-top: 35px;
+    }
+    .cms-home .row5 .item .absolute-block .content::after {
+        margin-top: 15px;
+    }
+}
+
+/*fix other bug*/
+.products-grid .product-image{
+    margin-top: 15px;
+}
+.products-grid .product-name, .products-list .product-name{
+    margin-bottom: 5px;
+}
+.category-footer .category-description .description{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+div.block-layered-nav dd a.amshopby-attr{
+    padding-left:15px;
+}
+.prod-top{
+    padding:0 50px;
+}
+.product-options dd select{
+    display: block;
+}
+.product-options dd select.no-display
+{
+    display: none!important;
+}
+
+
+required-entry super-attribute-select no-display
