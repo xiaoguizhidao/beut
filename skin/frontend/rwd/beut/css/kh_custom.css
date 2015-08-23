@@ -3362,9 +3362,15 @@ div.block-layered-nav dd a.amshopby-attr{
     text-transform: capitalize;
     color: black;
 }
-
 .popup-subscribe-form .button {
     font-weight: bold;
     text-transform: capitalize;
     background: #498fd8!important;
+}
+.amquickview-ajax-view #ewcm_container{
+    display: none;
+}
+
+.amquickview-ajax-view .main-container.col1-layout{
+    margin-top: 0px !important;
 }
