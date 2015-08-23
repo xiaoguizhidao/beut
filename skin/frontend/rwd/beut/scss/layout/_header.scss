@@ -136,7 +136,8 @@
         text-transform: uppercase;
         text-align: center;
         color: $c-bread;
-        padding: 19px;
+        padding: 15px 19px 12px;
+        line-height: 1;
         &:after{
             clear: both;
             content: '';
@@ -144,6 +145,10 @@
         li {
             float: none;
             display: inline-block;
+            line-height: 1;
+            a{
+                line-height: 1;
+            }
         }
         margin-top: 30px;
     }

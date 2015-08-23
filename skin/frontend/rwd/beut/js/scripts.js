@@ -503,7 +503,7 @@ var FEelementControl = {
 					if (target.length) {
 						event.preventDefault();
 						$j('html, body').animate({
-							scrollTop: (target.offset().top - 50)
+							scrollTop: (target.offset().top - 70)
 						}, 1000);
 					}
 

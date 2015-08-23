@@ -608,25 +608,7 @@ document.observe("dom:loaded", function() {
 
 			F.hideLoading();
 
-			el = $('<div id="fancybox-loading" class="amscheckout-loading"><div id="circularG">'+
-			'<div id="circularG_1" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_2" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_3" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_4" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_5" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_6" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_7" class="circularG">'+
-			'</div>'+
-			'<div id="circularG_8" class="circularG">'+
-			'</div>'+
-			'</div>'+
-			'</div></div>').click(F.cancel).appendTo('body');
+			el = $('<div id="fancybox-loading" class="amscheckout-loading"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>').click(F.cancel).appendTo('body');
 
 			// If user will press the escape-button, the request will be canceled
 			D.bind('keydown.loading', function(e) {

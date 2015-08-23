@@ -47,7 +47,7 @@ $_category  = Mage::registry('current_category');
     <?php if ($this->getLayer()->getState()->getFilters()): ?>
         <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
     <?php endif; ?>
-    <?php echo $this->getStateHtml() ?>
+    <?php echo $this->getStateHtml(); ?>
 </div>
 <?php endif;?>
 <?php if($this->canShowBlock()): ?>
