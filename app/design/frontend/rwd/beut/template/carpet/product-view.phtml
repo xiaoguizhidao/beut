@@ -145,6 +145,7 @@
                             <span><a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a></span>
                         <?php endforeach; ?>
                     </div>
+                    <div class="view-prod-full"><a href="<?php echo $_product->getProductUrl()?>" target="_parent"><?php echo $this->__('View Product Full Information')?></a></div>
 
                 </div>
             </div>
@@ -194,7 +195,9 @@
                 if (button && button != 'undefined') {
                     button.disabled = true;
                 }
+
             }
+
         }.bind(productAddToCartForm);
 
         productAddToCartForm.submitLight = function(button, url){

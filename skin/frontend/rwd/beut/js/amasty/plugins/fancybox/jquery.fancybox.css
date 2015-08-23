@@ -37,12 +37,7 @@
 .fancybox-opened {
 	z-index: 8030;
 	min-width: 900px;
-}
-
-.fancybox-opened .fancybox-skin {
-	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	border: 5px solid #498fd8;
 }
 
 .fancybox-outer, .fancybox-inner {
