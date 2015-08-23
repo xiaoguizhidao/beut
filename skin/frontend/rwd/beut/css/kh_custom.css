@@ -3395,3 +3395,9 @@ div.block-layered-nav dd a.amshopby-attr{
 .amquickview-ajax-view .product-view .product-shop{
     width: 50%;
 }
+#search_mini_form #search{
+    width: auto;
+}
+.no-image .description{
+    transform: translateY(0%) !important;
+}

@@ -73,7 +73,7 @@
     <div class="row">
         <div id="move-cat-desc">
         <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
-            <div class="col-lg-<?php echo ($imgThumb != '' )? '8':'12';?> item category-description std col-xs-12">
+            <div class="col-lg-<?php echo ($imgThumb != '' )? '8':'12 no-image';?> item category-description std col-xs-12">
                 <div class="description">
                     <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
                 </div>
