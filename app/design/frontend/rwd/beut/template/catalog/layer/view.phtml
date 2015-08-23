@@ -53,7 +53,7 @@ if ( $curRouter == "catalogsearch" && $curConstroller=="result" && $curAction=="
 ?>
 <?php if($searchKeyWord): ?>
     <div class="search-title-message">
-        <?php echo $this->__('You search for "').$searchKeyWord.'"'; ?>
+        <?php echo $this->__('You search for “').$searchKeyWord.'”'; ?>
     <?php
     $resultSearchBlock = $this->getLayout()->createBlock('catalog/product_list');
     $_productCollection=$resultSearchBlock->getLoadedProductCollection();

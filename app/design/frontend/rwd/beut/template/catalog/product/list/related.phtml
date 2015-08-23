@@ -36,7 +36,7 @@
         <p><?php echo $this->__('Here is a selection of products we think you will love!') ?></p>
     </h2>
     <div id="upsell-product-table2">
-        <div class="row">
+        <div class="row"  id="lightSlider">
             <?php foreach($this->getItems() as $_item): ?>
             <div class="square-container">
                 <?php if(!$_item->isComposite() && $_item->isSaleable()): ?>

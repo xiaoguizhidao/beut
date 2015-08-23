@@ -178,8 +178,7 @@
         }
     }
 
-    .add-to-cart-wrapper,
-    .block-related {
+    .add-to-cart-wrapper{
         width: 50%;
         float: right;
         clear: right;
@@ -319,8 +318,7 @@
 }
 
 .product-view .product-shop,
-.product-view .add-to-cart-wrapper,
-.product-view .block-related {
+.product-view .add-to-cart-wrapper{
     padding-left: $trim/2;
 }
 
@@ -973,6 +971,9 @@
     .ratings {
         display: none;
     }
+    h2{
+        margin-bottom: 30px;
+    }
     .view-more{
         font-family: $f-neuton;
         text-transform: none;
@@ -981,7 +982,7 @@
         font-size: 16px;
         display: block;
         text-align: center;
-        margin-bottom: 30px;
+        margin-top: 5px;
     }
 }
 
