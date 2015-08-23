@@ -2296,6 +2296,16 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .fancybox-lock .main-container.col1-layout{
     margin-top: 0 !important;
 }
+.search-title-message{
+    background: #f7f8f9;
+    text-align: center;
+    font-size: 26px;
+    padding-top: 10px;
+}
+.search-title-message > div{
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
