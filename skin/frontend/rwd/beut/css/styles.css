@@ -5265,7 +5265,7 @@ body {
   background: #fff;
   color: #000;
   padding: 10px;
-  min-width: 300px;
+  width: 100%;
   text-transform: none;
 }
 /* line 61, ../scss/layout/_header-cart.scss */
@@ -5792,51 +5792,53 @@ body {
   /* line 346, ../scss/layout/_footer.scss */
   .footer .block-subscribe .input-text {
     height: 30px;
+    -webkit-appearance: none;
+    border-radius: 0;
   }
-  /* line 349, ../scss/layout/_footer.scss */
+  /* line 351, ../scss/layout/_footer.scss */
   .footer .block-subscribe .actions {
     width: 59px;
   }
-  /* line 351, ../scss/layout/_footer.scss */
+  /* line 353, ../scss/layout/_footer.scss */
   .footer .block-subscribe .actions .button {
     height: 30px;
   }
-  /* line 356, ../scss/layout/_footer.scss */
+  /* line 358, ../scss/layout/_footer.scss */
   .footer .footer-links {
     padding-left: 15px;
     margin-top: 10px;
   }
-  /* line 359, ../scss/layout/_footer.scss */
+  /* line 361, ../scss/layout/_footer.scss */
   .footer .footer-links ul {
     margin-top: 14px;
   }
-  /* line 361, ../scss/layout/_footer.scss */
+  /* line 363, ../scss/layout/_footer.scss */
   .footer .footer-links ul li {
     margin-bottom: 5px;
   }
-  /* line 366, ../scss/layout/_footer.scss */
+  /* line 368, ../scss/layout/_footer.scss */
   .footer .phone-footer-block {
     float: none;
   }
-  /* line 370, ../scss/layout/_footer.scss */
+  /* line 372, ../scss/layout/_footer.scss */
   .footer .footer-newsleter label {
     font-size: 12px;
     margin-bottom: 14px;
   }
-  /* line 375, ../scss/layout/_footer.scss */
+  /* line 377, ../scss/layout/_footer.scss */
   .footer address {
     margin-top: 3px;
     font-size: 8px;
   }
-  /* line 378, ../scss/layout/_footer.scss */
+  /* line 380, ../scss/layout/_footer.scss */
   .footer address .design-by {
     padding-left: 0;
   }
-  /* line 381, ../scss/layout/_footer.scss */
+  /* line 383, ../scss/layout/_footer.scss */
   .footer address .payment-method-desktop {
     display: none;
   }
-  /* line 384, ../scss/layout/_footer.scss */
+  /* line 386, ../scss/layout/_footer.scss */
   .footer address .payment-method-mobile {
     display: block;
     width: -moz-calc(100% - 40px);
@@ -5844,19 +5846,19 @@ body {
     width: calc(100% - 40px);
     margin-bottom: 20px;
   }
-  /* line 389, ../scss/layout/_footer.scss */
+  /* line 391, ../scss/layout/_footer.scss */
   .footer address .payment1 {
     display: block;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 15px;
   }
-  /* line 394, ../scss/layout/_footer.scss */
+  /* line 396, ../scss/layout/_footer.scss */
   .footer address .payment1 img {
     width: 100%;
     height: auto;
   }
-  /* line 399, ../scss/layout/_footer.scss */
+  /* line 401, ../scss/layout/_footer.scss */
   .footer address .payment2 {
     display: none;
   }

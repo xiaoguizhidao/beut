@@ -5,6 +5,10 @@ body *{
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
 }
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
 .clearer {
   clear: both;
   content: "";
@@ -1496,7 +1500,9 @@ ul.delivery-tabs li a{
 .filter-show{
     display: none;
 }
-
+.block-layered-nav dl dd ol li.filter-selected{
+    display: none;
+}
 /*collapse*/
 .about-us-container h3{
     font-size: 15px;
@@ -2430,7 +2436,10 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .cms-about-us .services,
     .catalog-category-view .main-container,
     .cms-delivery .main,
-    .cms-about-us .main{
+    .cms-about-us .main,
+    .ewcm-show .main-container.col1-layout,
+    .ewcm-show .checkout-cart-index,
+    .ewcm-show.category-designers .main-container.col1-layout{
         margin-top: 0;
     }
     #ewcm_container{
@@ -2563,7 +2572,8 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     .breadcrumbs li:before,
     .breadcrumbs a,
     .block-filter select,
-    h2.product-name a{
+    h2.product-name a,
+    div#ewcm_container{
         font-size: 10px;
     }
     .slick-dots li button{
@@ -2575,7 +2585,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .caption1 .link_text a{
         margin-top: 10px;
-        padding: 5px 19px 8px;
+        padding: 1px 49px;
+        line-height: 3;
+        height: 40px;
     }
     .slideshow-pager span:before{
         width: 5px;
@@ -3259,6 +3271,10 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .cms-home .row5 .item .absolute-block .content::after {
         margin-top: 30px;
+    }
+    .minicart-wrapper .block-subtitle{
+        top: 40px;
+        right: 20px;
     }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {

@@ -4348,7 +4348,7 @@ body {
   background: #fff;
   color: #000;
   padding: 10px;
-  min-width: 300px;
+  width: 100%;
   text-transform: none;
 }
 /* line 61, ../scss/layout/_header-cart.scss */

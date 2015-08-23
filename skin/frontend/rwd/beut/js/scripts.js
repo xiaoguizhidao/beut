@@ -459,6 +459,7 @@ var FEelementControl = {
                     if(selectedAttribute==1) {
                         return true;
                     }
+					$j(this).parent('li').addClass('filter-selected');
                     $j(this).parents("dd.mobile-filter").addClass("current");
                     $j(this).parents("dd.mobile-filter").prev().addClass("current");
                     $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
