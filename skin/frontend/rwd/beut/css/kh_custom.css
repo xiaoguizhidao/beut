@@ -634,8 +634,8 @@ ul.brands li a,
 .ewcm-show.category-designers .main-container.col1-layout{
     margin-top: 168px;
 }
-body.cms-home .main-container.col1-layout,
-body.catalog-category-view .main-container.col1-layout{
+body.cms-home.ewcm-show .main-container.col1-layout,
+body.catalog-category-view.ewcm-show .main-container.col1-layout{
     margin-top: 90px;
 }
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
