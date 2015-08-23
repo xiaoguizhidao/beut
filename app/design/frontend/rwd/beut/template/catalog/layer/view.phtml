@@ -42,8 +42,34 @@ $_category  = Mage::registry('current_category');
     </div>
 </div>-->
 <?php endif;?>
+<?php
+$curRouter = Mage::app()->getRequest()->getRouteName();
+$curConstroller = Mage::app()->getRequest()->getControllerName();
+$curAction =Mage::app()->getRequest()->getActionName();
+$searchKeyWord = "";
+if ( $curRouter == "catalogsearch" && $curConstroller=="result" && $curAction=="index"){
+    $searchKeyWord = $this->getRequest()->getParam("q");
+}
+?>
+<?php if($searchKeyWord): ?>
+    <div class="search-title-message">
+        <?php echo $this->__('You search for "').$searchKeyWord.'"'; ?>
+    <?php
+    $resultSearchBlock = $this->getLayout()->createBlock('catalog/product_list');
+    $_productCollection=$resultSearchBlock->getLoadedProductCollection();
+    $resultSearch =  $_productCollection->count();
+    if ($resultSearch>0):?>
+        <div><?php echo $this->__('We found %s products',$resultSearch)?></div>
+    <?php else: ?>
+        <div><?php echo $this->__('We found %s product',$resultSearch)?></div>
+    <?php endif; ?>
+    </div>
+<?php
+endif;
+?>
 <?php if($this->canShowBlock()): ?>
     <div class="block-filter">
+
         <div class="block block-layered-nav<?php if (!$this->getLayer()->getState()->getFilters()): ?> block-layered-nav--no-filters<?php endif; ?>">
             <div class="block-title">
                 <span><?php echo $this->__('Filter:') ?></span>
