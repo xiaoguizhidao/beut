@@ -1498,7 +1498,7 @@ ul.delivery-tabs li a{
 
 }
 .filter-show{
-    display: none;
+    display: block;
 }
 .block-layered-nav dl dd ol li.filter-selected{
     display: none;
@@ -3332,7 +3332,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 
 /*fix other bug*/
 .products-grid .product-image{
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .products-grid .product-name, .products-list .product-name{
     margin-bottom: 5px;
@@ -3357,6 +3357,14 @@ div.block-layered-nav dd a.amshopby-attr{
 {
     display: none!important;
 }
+.product-detail-description{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: black;
+}
 
-
-required-entry super-attribute-select no-display
+.popup-subscribe-form .button {
+    font-weight: bold;
+    text-transform: capitalize;
+    background: #498fd8!important;
+}

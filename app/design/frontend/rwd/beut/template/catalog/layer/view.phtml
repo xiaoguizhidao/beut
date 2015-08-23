@@ -43,12 +43,12 @@ $_category  = Mage::registry('current_category');
 </div>-->
 <?php endif;?>
 <?php if($this->canShowBlock()): ?>
-    <div class="filter-show">
-        <?php if ($this->getLayer()->getState()->getFilters()): ?>
-            <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
-        <?php endif; ?>
-        <?php echo $this->getStateHtml() ?>
-    </div>
+<div class="filter-show">
+    <?php if ($this->getLayer()->getState()->getFilters()): ?>
+        <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
+    <?php endif; ?>
+    <?php echo $this->getStateHtml() ?>
+</div>
 <?php endif;?>
 <?php if($this->canShowBlock()): ?>
     <div class="block-filter">

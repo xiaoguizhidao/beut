@@ -11,7 +11,7 @@
     $smallImageSize = Mage::getStoreConfig('amconf/size/thumb');
     $small = explode(',',$smallImageSize);
     $smallW = (int)Mage::getStoreConfig('amconf/size/thumb');
-    $smallH = 100;
+    $smallH = $smallW; //100;
     $itemCount = (int)Mage::getStoreConfig('amconf/carousel/visible_items');
 ?>
 <?php if ('true' == (string) Mage::getConfig()->getNode('modules/Amasty_Label/active')): ?>
