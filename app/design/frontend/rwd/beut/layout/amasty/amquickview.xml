@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <cms_page>
+     <reference name="head"> 
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+            <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+     </reference>
+   </cms_page>
+
+    <catalog_category_default>
+        <reference name="head">
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+            <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+        </reference>
+    </catalog_category_default>  
+    
+    <catalogsearch_result_index>
+        <reference name="head">
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+            <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+        </reference>
+    </catalogsearch_result_index>  
+    
+     <catalogsearch_advanced_result>
+         <reference name="head">
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+             <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+         </reference>
+     </catalogsearch_advanced_result>
+	
+
+     <amshopby_index_index>
+         <reference name="head">
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+             <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+         </reference>
+     </amshopby_index_index>
+
+     <amlanding_page_view>
+         <reference name="head">
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+             <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+             <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+         </reference>
+     </amlanding_page_view>
+
+    
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/jquery.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/plugins/fancybox/jquery.fancybox.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_js</type><name>js/amasty/amquickview/amquickview.js</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>js/amasty/plugins/fancybox/jquery.fancybox.css</name><params/></action>
+            <action method="addItem" ifconfig="amquickview/general/enable"><type>skin_css</type><name>css/amasty/amquickview/amquickview.css</name><params/></action>
+            <block type="amquickview/config" ifconfig="amquickview/general/enable" name="amquickview.config" before="-" />
+        </reference>
+    </catalog_category_layered>
+
+    <amquickview_ajax_view>
+        <update handle="catalog_product_view"/>
+        <remove name="footer.before"/>
+        <remove name="product.info.upsell"/>
+        <remove name="cross-sell"/>
+        <remove name="header"/>
+        <remove name="breadcrumbs"/>
+        <remove name="messages"/>
+        <remove name="global_messages"/>
+        <remove name="left"/>
+        <remove name="right"/>
+        <remove name="footer"/>
+        <remove name="store_switcher"/>
+        <remove name="before_body_end"/>
+        <remove name="carpet.product.desc.img"/>
+    </amquickview_ajax_view>
+</layout>
