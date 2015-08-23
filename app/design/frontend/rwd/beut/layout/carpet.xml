@@ -7,9 +7,10 @@
 
         <reference name="product.info">
         	<action method="setTemplate"><template>carpet/product-view.phtml</template></action>
-            <block type="catalog/product_view_attributes" name="product.attributes" as="attributes" template="easytabs/attributes.phtml"></block>
             <block type="catalog/product_view_description" name="product.description" as="description" template="easytabs/description.phtml"> </block>
-            <block type="catalog/product_view" name="carpet.product.desc.img" as="carpet-product-desc-img" template="carpet/productdescimg.phtml" />
+            <block type="catalog/product_view" name="carpet.product.desc.img" as="carpet-product-desc-img" template="carpet/productdescimg.phtml">
+                <block type="catalog/product_view_attributes" name="product.attributes" as="attributes" template="easytabs/attributes.phtml"></block>
+            </block>
         </reference>
         <reference name="product.info.options">
         	<action  method="addOptionRenderer"><type>text</type><block>catalog/product_view_options_type_text</block><template>carpet/text.phtml</template></action>

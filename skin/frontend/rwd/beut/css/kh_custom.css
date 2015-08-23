@@ -3312,7 +3312,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 
 /*fix other bug*/
 .products-grid .product-image{
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .products-grid .product-name, .products-list .product-name{
     margin-bottom: 5px;
@@ -3337,6 +3337,8 @@ div.block-layered-nav dd a.amshopby-attr{
 {
     display: none!important;
 }
-
-
-required-entry super-attribute-select no-display
+.product-detail-description{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: black;
+}

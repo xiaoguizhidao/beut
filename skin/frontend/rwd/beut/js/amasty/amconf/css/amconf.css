@@ -76,6 +76,7 @@
 
 #amasty_gallery img{
     display: inline !important;
+    margin-right: 12px;
 }
 
 .amasty-main-spinner{
@@ -163,6 +164,8 @@ hr.amconf-hr{
 }
  .amconf-image{
      border: 1px solid #fff;
+     margin-bottom: 10px;
+     margin-right: 10px;
  }
 .amconf-image-selected
 {
