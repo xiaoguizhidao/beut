@@ -638,8 +638,7 @@ ul.brands li a,
 .ewcm-show.category-designers .main-container.col1-layout{
     margin-top: 168px;
 }
-body.cms-home.ewcm-show .main-container.col1-layout,
-body.catalog-category-view.ewcm-show .main-container.col1-layout{
+body.overlay-.ewcm-show .main-container.col1-layout{
     margin-top: 90px;
 }
 .cms-faqs .breadcrumbs, .cms-about-us .breadcrumbs{
@@ -1619,9 +1618,7 @@ ul.delivery-tabs li a{
     margin-left: auto;
     margin-right: auto;
 }
-.catalog-category-view .main-container{
-    margin-top: 50px;
-}
+
 .slick-track{
     margin-left: auto;
     margin-right: auto;
@@ -1755,7 +1752,7 @@ ul.delivery-tabs li a{
     top: 40px;
 }
 .page-header.exten-show{
-    top: 82px;
+    top: 90px;
 }
 .clone.left{
     clear: none !important;
@@ -2219,10 +2216,10 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     background-position: 6px -23px;
 }
 .page-header.exten-show .wp-custom-menu-popup{
-    top: 162px !important;
+    top: 174px !important;
 }
 .page-header.sticky.exten-show .wp-custom-menu-popup{
-    top: 99px !important;
+    top: 108px !important;
 }
 .block-layered-nav .block-content.accordion-open > dl > dd.current {
     z-index: 8;
@@ -2305,7 +2302,16 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .search-title-message > div{
     font-size: 18px;
 }
-
+.products-grid .amconf-image-container{
+    margin-right: 0;
+}
+.product-options dd div.selector select{
+    height: 41px;
+    width: 100%;
+}
+.upsell-product-table{
+    margin-bottom: 30px;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;

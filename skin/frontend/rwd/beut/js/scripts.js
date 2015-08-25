@@ -76,7 +76,8 @@ var FEelementControl = {
 	},
 	stickyTop: function(skinUrl){
 		var normal = 1;
-		if($j('.cms-home').length > 0 || $j('.catalog-category-view').length > 0 ){
+		$j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+		if($j('.overlay-menu').length > 0 ){
 			normal = 0;
 		}
         if($j('.category-designers').length>0){
@@ -146,7 +147,7 @@ var FEelementControl = {
 			slidesToShow: 1,
 			slidesToScroll: 1
 		});
-		$j('#lightSlider').slick({
+		$j('#lightSlider,.footer-prod-slider').slick({
 			dots:true,
 			infinite: true,
 			speed: 300,
@@ -303,11 +304,10 @@ var FEelementControl = {
 	confProdImage: function(){
 		var options;
 		if($j('.category-products').length > 0){
-			options = {loop:false,autoWidth: true}
+			options = {loop:false,autoWidth: true,slideMargin: 0}
 		}else{
 			options = {loop:false,slideMargin: 0,autoWidth: true}
 		}
-
 		$j('.products-grid .item').each(function(){
 			if($j(this).find('.amconf-image-container').length > 6){
 				$j(this).find('.amconf-images-container').lightSlider(options);
@@ -336,7 +336,7 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
-		$j('.shipping-country select').uniform();
+		//$j('.shipping-country select').uniform();
 	},
 	prodSlide: function(){
 		$j('.prod-slide').slick({
@@ -523,7 +523,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.swipeFilter();
 	FEelementControl.confProdImage();
 	FEelementControl.miniCartPos();
-//	FEelementControl.prodSelectBox();
+	FEelementControl.prodSelectBox();
 	FEelementControl.prodSlide();
 	FEelementControl.mediaSlide();
 	FEelementControl.voucherToggle();

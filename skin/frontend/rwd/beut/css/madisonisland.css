@@ -98,11 +98,11 @@ $mq-fixed-value: 1024;
   font-style: normal;
 }
 /* line 80, ../scss/content/_home.scss */
-body.cms-home .main-container {
+body.overlay-menu .main-container {
   margin-top: 50px;
 }
 /* line 84, ../scss/content/_home.scss */
-body.cms-home .slideshow-container {
+body.overlay-menu .slideshow-container {
   margin-top: 0;
 }
 

@@ -201,10 +201,8 @@ a.level2:link, a.level2:visited {
     -ms-transition: all .1s linear;
     transition: all .1s linear;
 }
-.cms-home div.menu a:link,
-.catalog-category-view div.menu a:link,
-.cms-home div.menu a:visited,
-.catalog-category-view div.menu a:visited{
+.overlay-menu div.menu a:link,
+.overlay-menu div.menu a:visited{
     color: #fff;
 }
 div.menu a:link, div.menu a:visited,.category-designers div.menu a:link {

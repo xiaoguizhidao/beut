@@ -5,7 +5,9 @@
 <div class="product-feature-descirption container">
             <div class="row">
                 <div class="col-lg-<?php echo ($_product->getBrandLogoUrl() !=='')?'8':'12'?> col-xs-12">
-
+                    <?php
+                        if($_product->getDescription() !=''){
+                    ?>
                     <div class="product-collateral toggle-content tabs">
                         <dl id="collateral-tabs" class="collateral-tabs">
                             <dt class="tab"><span class="title"><?php echo $this->__('Description & details')?></span></dt>
@@ -38,6 +40,32 @@
                             </dd>
                         </dl>
                     </div>
+                    <?php
+                        }else{
+                    ?>
+                            <div class="tab-content">
+                                <div class="std">
+                                    <div class="info-block features">
+                                        <p class="title"><?php echo $this->__('Features')?></p>
+                                        <?php echo $this->getChildHtml('attributes') ?>
+                                    </div>
+                                    <?php if ($_product->getSpecifications() != ''):?>
+                                        <div class="info-block dimensions">
+                                            <p class="title"><?php echo $this->__("dimensions"); ?></p>
+                                            <?php echo $_product->getSpecifications() ?>
+                                        </div>
+                                    <?php endif;?>
+                                    <?php if ($_product->getDeliveryReturn() != ''):?>
+                                        <div class="info-block delivery-return">
+                                            <p class="title">delivery & return</p>
+                                            <?php echo $_product->getDeliveryReturn(); ?>
+                                        </div>
+                                    <?php endif;?>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    ?>
                 </div>
                 <?php if($_product->getBrandLogoUrl() !==''):?>
                     <div class="col-lg-4 col-xs-12 brand-img">

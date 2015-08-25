@@ -96,7 +96,7 @@
             }
         }
         #header-search{
-            top: 60px;
+            top: 70px;
         }
     }
     .page-header-container{
@@ -107,8 +107,7 @@
         height: 84px;
     }
 }
-.cms-home .page-header .page-header-container,
-.catalog-category-view .page-header .page-header-container{
+.overlay-menu .page-header .page-header-container{
     background: transparent;
 }
 
@@ -136,7 +135,7 @@
         text-transform: uppercase;
         text-align: center;
         color: $c-bread;
-        padding: 15px 19px 12px;
+        padding: 22px 19px 20px;
         line-height: 1;
         &:after{
             clear: both;
