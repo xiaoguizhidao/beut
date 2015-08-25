@@ -28,8 +28,10 @@
 				/>';
         echo $_helper->productAttribute($_product, $_img, 'image');
     ?>
-    <div id="prevGalleryImg" class="fa fa-angle-left"></div>
-    <div id="nextGalleryImg" class="fa fa-angle-right"></div>
+    <?php if (count($this->getGalleryImages()) > 1): ?>
+        <div id="prevGalleryImg" class="fa fa-angle-left"></div>
+        <div id="nextGalleryImg" class="fa fa-angle-right"></div>
+    <?php endif;?>
 </div>
 
 <?php else: ?>
