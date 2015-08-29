@@ -365,7 +365,9 @@ p.required,
 
 .form-list .control {
     margin-top: 10px;
-
+    border-bottom: 1px solid #C0C0C0;
+    display: block;
+    overflow: hidden;
     label {
         float: none;
     }

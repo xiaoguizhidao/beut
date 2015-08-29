@@ -103,8 +103,11 @@
         padding: 20px 100px 0;
         width: 100%;
         position: relative;
-        background-color: #fff;
         height: 84px;
+        background: transparent;
+        .white-menu & {
+            background-color: #fff;
+        }
     }
 }
 .overlay-menu .page-header .page-header-container{

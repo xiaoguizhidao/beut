@@ -167,11 +167,11 @@ div.menu {
 .sticky .menu.active:before{
     bottom: -22px;
 }
-a.level1:link, a.level1:visited {
+a.level1:link {
     text-transform: none;
     font-weight: normal;
 }
-a.level2:link, a.level2:visited {
+a.level2{
     font-weight: normal;
     font-size: 12px;
     line-height: 12px;
@@ -188,32 +188,23 @@ a.level2:link, a.level2:visited {
     padding-left: 10px;
 }
 /*COLOR*/
-.cms-home div.menu a:link, .cms-home div.menu a:visited,
-.catalog-category-view div.menu a:link,
-.catalog-category-view div.menu a:visited,
-/*.cms-delivery div.menu a:link,
-.cms-delivery div.menu a:visited,
-.cms-about-us div.menu a:link,
-.cms-about-us div.menu a:visited*/{
+.cms-home div.menu a
+.catalog-category-view div.menu a{
     color: #fff;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
     -ms-transition: all .1s linear;
     transition: all .1s linear;
 }
-.overlay-menu div.menu a:link,
-.overlay-menu div.menu a:visited{
+.overlay-menu div.menu a{
     color: #fff;
 }
-div.menu a:link, div.menu a:visited,.category-designers div.menu a:link {
+div.menu a,.category-designers div.menu a {
     text-transform: uppercase;
     color: #000;
 }
 
-a.level1:link, a.level1:visited {
-    color: #000;
-}
-a.level2:link, a.level2:visited {
+a.level2{
     color: #000;
 }
 a.level1:hover{

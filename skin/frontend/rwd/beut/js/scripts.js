@@ -74,15 +74,21 @@ var FEelementControl = {
 			}
 		});
 	},
+
 	stickyTop: function(skinUrl){
 		var normal = 1;
-		$j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
-		if($j('.overlay-menu').length > 0 ){
+		if($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0 ) {
+			$j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
 			normal = 0;
+		}else{
+			$j('body').addClass('white-menu');
+			normal = 1;
 		}
-        if($j('.category-designers').length>0){
-            normal = 1;
-        }
+
+		//logo2: small logo
+		//logo3: big logo with background
+		//logo: big logo with white background
+
 		$j(window).scroll(function() {
 			if ($j(this).scrollTop() > 1) {
 				if ($j(window).width() > 767) {
@@ -102,20 +108,11 @@ var FEelementControl = {
 			} else {
 				$j('#header').removeClass('sticky').removeAttr('style');
 				$j('.header-language-background').show();
-				if(normal === 1){
-					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
-				}else{
-					$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
-				}
-
+				FEelementControl.switchLogo(normal);
 				$j('#header').hover(function(){
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 				},function(){
-					if(normal === 1){
-						$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
-					}else{
-						$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
-					}
+					FEelementControl.switchLogo(normal);
 				});
 			}
 		});
@@ -132,11 +129,21 @@ var FEelementControl = {
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 			});
 		}else{
-			if(normal === 1){
+			FEelementControl.switchLogo(normal);
+			$j('header').hover(function(){
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
-			}else{
-				$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
-			}
+			},function(){
+				FEelementControl.switchLogo(normal);
+			});
+
+		}
+	},
+
+	switchLogo: function(normal) {
+		if(normal === 1){
+			$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+		}else{
+			$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
 		}
 	},
 	homeProdSlide: function(){
@@ -534,12 +541,12 @@ jQuery(document).ready(function ($) {
 	FEelementControl.filterCat();
     FEelementControl.moveDescBlockCat();
     FEelementControl.scroll();
+	FEelementControl.stickyTop(skinUrl);
 //	FEelementControl.equalHeight('.category-products .item');
 });
 jQuery(window).load(function($){
 	FEelementControl.calcRowHeight();
 	FEelementControl.toggleSearchBox();
-	FEelementControl.stickyTop(skinUrl);
 	FEelementControl.categoryFooter();
 	jQuery('#leSlide .loading').fadeOut();
 	FEelementControl.equalHeight('.category-products .item');
