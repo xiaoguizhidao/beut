@@ -19,6 +19,7 @@
                                     </div>
                                 </div>
                             </dd>
+
                             <dt class="tab"><span class="title">Features</span></dt>
                             <dd class="tab-container">
                                 <div class="tab-content">
@@ -27,14 +28,12 @@
                                         <p class="title"><?php echo $this->__('Features')?></p>
                                             <?php echo $this->getChildHtml('attributes') ?>
                                         </div>
-                                        <div class="info-block delivery-return">
-                                            <p class="title">delivery & return</p>
-                                            <?php echo $_product->getDeliveryReturn(); ?>
-                                        </div>
-                                        <div class="info-block dimensions">
-                                            <p class="title"><?php echo $this->__("dimensions"); ?></p>
-                                            <?php echo $_product->getSpecifications() ?>
-                                        </div>
+                                        <?php if (trim($_product->getDeliveryReturn()) != ''): ?>
+                                            <div class="info-block delivery-return">
+                                                <p class="title">delivery & return</p>
+                                                <?php echo $_product->getDeliveryReturn(); ?>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </dd>
@@ -49,13 +48,7 @@
                                         <p class="title"><?php echo $this->__('Features')?></p>
                                         <?php echo $this->getChildHtml('attributes') ?>
                                     </div>
-                                    <?php if ($_product->getSpecifications() != ''):?>
-                                        <div class="info-block dimensions">
-                                            <p class="title"><?php echo $this->__("dimensions"); ?></p>
-                                            <?php echo $_product->getSpecifications() ?>
-                                        </div>
-                                    <?php endif;?>
-                                    <?php if ($_product->getDeliveryReturn() != ''):?>
+                                    <?php if (trim($_product->getDeliveryReturn()) != ''):?>
                                         <div class="info-block delivery-return">
                                             <p class="title">delivery & return</p>
                                             <?php echo $_product->getDeliveryReturn(); ?>

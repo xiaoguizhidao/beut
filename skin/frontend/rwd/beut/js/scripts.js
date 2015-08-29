@@ -354,17 +354,18 @@ var FEelementControl = {
 			adaptiveHeight: true
 		});
 	},
-	mediaSlide: function(){
+	mediaSlide: function(larImg){
 		if($j('#prevGalleryImg').length > 0){
 			var len = larImg.length;
+
 			var prev,prevZoom;
 			var next,nextZoom;
 			$j('body').on('click','#prevGalleryImg',function(){
 				for(var i=0;i < len; i++){
 					if($j('#amasty_zoom').attr('src')===larImg[i].src){
-						if((i-1) == 0 ){
-							prev = larImg[len].src;
-							prevZoom = larImg[len].zoomimg;
+						if((i-1) < 0 ){
+							prev = larImg[len-1].src;
+							prevZoom = larImg[len-1].zoomimg;
 						}else{
 							prev = larImg[i-1].src;
 							prevZoom = larImg[i-1].zoomimg;
@@ -378,7 +379,7 @@ var FEelementControl = {
 			});
 			$j('body').on('click','#nextGalleryImg',function(){
 				for(var i=0;i < len; i++){
-					//console.log(larImg[i].src+'\n');
+
 					if($j('#amasty_zoom').attr('src')===larImg[i].src){
 						if((i+1) == len){
 							next = larImg[0].src;
@@ -532,7 +533,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.miniCartPos();
 	FEelementControl.prodSelectBox();
 	FEelementControl.prodSlide();
-	FEelementControl.mediaSlide();
+	FEelementControl.mediaSlide(larImg);
 	FEelementControl.voucherToggle();
 	FEelementControl.cmsCollapse();
 	FEelementControl.aboutSlide();

@@ -160,14 +160,14 @@
         <?php echo $this->getChildHtml('carpet-product-desc-img'); ?>
 
         <div class="clearfix"></div>
+        <?php echo $this->getChildHtml('related_products') ?>
 
-        <?php echo $this->getChildHtml('upsell_products') ?>
         <?php if($_product->getSliderBlock()):?>
             <div class="slider-static-block">
                 <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($_product->getSliderBlock())->toHtml();?>
             </div>
         <?php endif;?>
-        <?php echo $this->getChildHtml('related_products') ?>
+        <?php echo $this->getChildHtml('upsell_products') ?>
    </div>
 
     </form>

@@ -211,7 +211,7 @@ a.level1:hover{
     padding-left: 10px;
 }
 div.menu a:hover,
-div.menu.act a,
+/*div.menu.act a,*/
 div.menu.active a {
     color: #000;
 }
