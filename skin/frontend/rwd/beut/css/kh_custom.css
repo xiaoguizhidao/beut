@@ -308,8 +308,8 @@ input {
 }
 .account-title {
     background: #f7f8f9 none repeat scroll 0 0;
-    height: 40px;
-    line-height: 40px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
 }
 .account-create{
@@ -2273,7 +2273,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .page-title h1{
     display: none;
 }
-.category-designers .page-title h1{
+.category-designers .page-title h1, .customer-account-create .page-title h1, .customer-account-login .page-title h1{
     display: block;
 }
 .caption1 .link_text a {
@@ -3430,4 +3430,7 @@ div.block-layered-nav dd a.amshopby-attr{
 .cms-delivery .lev2 li {
     list-style: outside none circle;
     margin: 10px 0 10px 20px;
+}
+.customer-account-create [type="checkbox"]:not(:checked) + label, .customer-account-create [type="checkbox"]:checked + label{
+    padding-left: 27px;
 }
