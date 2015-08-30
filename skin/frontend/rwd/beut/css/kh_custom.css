@@ -190,9 +190,10 @@ input {
 }
 /*Login page*/
 .customer-account-login .main,
-.checkout-onepage-index .main-container{
+.checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main{
     margin-top: 130px;
 }
+
 .customer-account-login .account-login{
     margin: auto;
     padding: 40px 0;
@@ -303,14 +304,17 @@ input {
 .button{
     background-color: #4d91d5;
 }
-.account-title > span{
+.account-title span, .account-title-custom span {
     font-size: 20px;
 }
-.account-title {
+.account-title, .account-title-custom {
     background: #f7f8f9 none repeat scroll 0 0;
     height: 60px;
     line-height: 60px;
     text-align: center;
+}
+.account-title-custom {
+    margin-bottom: 25px;
 }
 .account-create{
     background-color: white;
@@ -2061,9 +2065,9 @@ ul.delivery-tabs li a{
 .cms-page-view .std .services img{
     margin-bottom: 25px;
 }
-.customer-account .main-container{
-    padding: 60px 30px;
-}
+/*.customer-account .main-container{
+    padding: 60px 0px;
+}*/
 
 body.customer-account .my-account .page-title h1 {
     border: 0;
@@ -3433,4 +3437,25 @@ div.block-layered-nav dd a.amshopby-attr{
 }
 .customer-account-create [type="checkbox"]:not(:checked) + label, .customer-account-create [type="checkbox"]:checked + label{
     padding-left: 27px;
+}
+.newsletter-manage-index.customer-account [type="checkbox"]:not(:checked) + label, .newsletter-manage-index.customer-account [type="checkbox"]:checked + label{
+
+}
+
+.customer-account .main-container .col-left{
+    padding-left: 50px;
+}
+.customer-account .main-container .col-main{
+    padding-right: 50px;
+}
+.block-account li.current strong
+{
+    border-bottom: 1px solid #eee;
+    color: #498fd8;
+    display: block;
+    font-family: verdana,tahoma,sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 16px 10px 17px;
+    text-transform: none;
 }

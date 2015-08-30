@@ -354,7 +354,7 @@ var FEelementControl = {
 			adaptiveHeight: true
 		});
 	},
-	mediaSlide: function(larImg){
+	mediaSlide: function(){
 		if($j('#prevGalleryImg').length > 0){
 			var len = larImg.length;
 
@@ -533,7 +533,7 @@ jQuery(document).ready(function ($) {
 	FEelementControl.miniCartPos();
 	FEelementControl.prodSelectBox();
 	FEelementControl.prodSlide();
-	FEelementControl.mediaSlide(larImg);
+	FEelementControl.mediaSlide();
 	FEelementControl.voucherToggle();
 	FEelementControl.cmsCollapse();
 	FEelementControl.aboutSlide();
@@ -582,3 +582,13 @@ jQuery(window).resize(function ($) {
 	}, 200);
 });
 
+jQuery(document).ready(function ($) {
+    if (jQuery(".customer-account-index.customer-account").length || jQuery(".customer-account-edit.customer-account").length ||
+        jQuery(".customer-address-form.customer-account").length || jQuery(".sales-order-history.customer-account").length
+        || jQuery(".wishlist-index-index.customer-account").length || jQuery(".newsletter-manage-index.customer-account").length) {
+        var divAccount = "<div class='account-title-custom'><span>Dashboard</span></div>";
+        jQuery(divAccount).insertBefore(".col-left.sidebar.col-left-first");
+        jQuery();
+
+    }
+});
