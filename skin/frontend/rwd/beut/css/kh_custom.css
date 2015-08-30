@@ -3423,3 +3423,11 @@ div.block-layered-nav dd a.amshopby-attr{
 .zoomContainer {
     z-index: 0!important;
 }
+.cms-delivery .lev1 li {
+    list-style: outside none square;
+    margin: 10px 0;
+}
+.cms-delivery .lev2 li {
+    list-style: outside none circle;
+    margin: 10px 0 10px 20px;
+}

@@ -1,0 +1,9 @@
+.amquickview-ajax-view.catalog-product-view .fa-angle-left::before {
+    position: absolute;
+    left: -17px!important;
+
+}
+.amquickview-ajax-view.catalog-product-view .fa-angle-right::before {
+    position: absolute;
+   right: -17px!important;
+}
