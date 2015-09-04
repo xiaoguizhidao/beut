@@ -5441,7 +5441,7 @@ body {
   /* line 39, ../scss/layout/_footer.scss */
   .footer {
     font-size: 10px;
-    padding: 30px 0 20px;
+    padding: 30px 30px 20px;
   }
 }
 /* line 49, ../scss/layout/_footer.scss */

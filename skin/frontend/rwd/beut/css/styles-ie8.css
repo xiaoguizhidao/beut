@@ -1505,7 +1505,7 @@ a.button:hover {
  * Column Layouts
  */
 /* line 866, ../scss/core/_common.scss */
-.white.main {
+.white-menu .main {
   margin-top: 130px;
   padding-top: 2px;
 }
