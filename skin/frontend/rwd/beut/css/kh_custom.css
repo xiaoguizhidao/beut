@@ -3484,3 +3484,20 @@ div.block-layered-nav dd a.amshopby-attr{
     }
 }
 
+.minicart-wrapper .cart-item-qty .price, .minicart-wrapper .info-wrapper .price{
+    font-style: normal;
+    font-size: 11px;
+    color: gray;
+    font-family: "CenturyGothic","Helvetica Neue",Verdana,Arial,sans-serif;
+}
+.mini-products-list .product-details .product-name{
+    line-height: 14px;
+}
+.cart-item-qty{
+    color: gray;
+    font-size: 11px;
+    line-height: 15px;
+}
+.minicart-wrapper #cart-sidebar a.details{
+    color:#498fd8!important;
+}

@@ -667,6 +667,9 @@ var AW_AjaxCartProUIBlocks = [
             }
             cntBtn.stopObserving('click', this._cntBtnOnClick.bind(this));
             cntBtn.observe('click', this._cntBtnOnClick.bind(this));
+            if (AW_AjaxCartPro.config.data.addProductCounterBeginFrom > 0) {
+                this._initCounterForBtn(cntBtn, AW_AjaxCartPro.config.data.addProductCounterBeginFrom);
+            }
             var quote_content = document.getElementById('minicart-after-add');
             $("header-cart").update(quote_content.innerHTML);
             var countItems = $("count-items-after-add").getValue();
@@ -678,10 +681,8 @@ var AW_AjaxCartProUIBlocks = [
                 contentUpdate = '<span class="count">0</span><span class="label"> Item</span>';
                 $("top-minicart-beut").update(contentUpdate);
             }
-            $("top-minicart-beut").click();
-            if (AW_AjaxCartPro.config.data.addProductCounterBeginFrom > 0) {
-                this._initCounterForBtn(cntBtn, AW_AjaxCartPro.config.data.addProductCounterBeginFrom);
-            }
+            $("top-minicart-beut").addClassName("skip-active");
+            $("header-cart").addClassName("skip-active");
         },
 
         _cntBtnOnClick: function(event) {
