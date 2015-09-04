@@ -3416,7 +3416,7 @@ div.block-layered-nav dd a.amshopby-attr{
     width: 50%;
 }
 #search_mini_form #search{
-    width: auto;
+  /*  width: auto;*/
 }
 .no-image .description{
     transform: translateY(0%) !important;

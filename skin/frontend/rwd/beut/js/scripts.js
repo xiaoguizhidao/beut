@@ -591,4 +591,11 @@ jQuery(document).ready(function ($) {
         jQuery();
 
     }
+
+    if(jQuery("#ewcm_container").length && jQuery("#ewcm_container").css("display") !="none" ){
+        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","175px")
+    }
+    else {
+        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","130px")
+    }
 });
