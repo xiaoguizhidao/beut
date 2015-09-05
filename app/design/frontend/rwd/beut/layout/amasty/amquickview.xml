@@ -81,6 +81,26 @@
 
     <amquickview_ajax_view>
         <update handle="catalog_product_view"/>
+        <reference name="head">
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/ajaxcartpro.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/cart.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/sidebar.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/topLinks.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/options.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/wishlist.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/miniWishlist.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/addProductConfirmation.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/updaters/removeProductConfirmation.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnButtonInCartPageForm.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnAddToCartInCategoryList.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnAddToCartInOptionsPopup.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnAddToCartInProductPage.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnDeleteFromCart.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/observers/clickOnAddToCartInMiniWishlist.js</name></action>
+            <action method="removeItem"><type>js</type><name>varien/product.js</name></action>
+            <action method="removeItem"><type>js</type><name>aw_ajaxcartpro/product.js</name></action>
+            <action method="removeItem"><type>skin_js</type><name>js/bundle.js</name></action>
+        </reference>
         <remove name="footer.before"/>
         <remove name="product.info.upsell"/>
         <remove name="cross-sell"/>

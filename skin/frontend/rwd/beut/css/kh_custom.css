@@ -276,7 +276,7 @@ input {
 }
 
 .customer-account-login .page, .customer-account-create .page{
-    background-image: url("../images/create-account.png");
+    background-image: url("../images/brand.png");
     background-repeat: no-repeat;
     background-color: inherit;
     background-size: cover;
@@ -640,7 +640,7 @@ ul.brands li a,
 .ewcm-show .main-container.col1-layout,
 .ewcm-show .checkout-cart-index,
 .ewcm-show.category-designers .main-container.col1-layout{
-    margin-top: 168px;
+    margin-top: 175px;
 }
 body.overlay-menu.ewcm-show .main-container.col1-layout{
     margin-top: 90px;
@@ -1470,6 +1470,7 @@ ul.delivery-tabs li a{
 .delivery-content-block .right{
     width: 68%;
     float: left;
+    padding-top:10px;
 }
 /*cms*/
 .delivery-content-block  .menu-left{
@@ -3500,4 +3501,18 @@ div.block-layered-nav dd a.amshopby-attr{
 }
 .minicart-wrapper #cart-sidebar a.details{
     color:#498fd8!important;
+}
+.qty-wrapper {
+    width: 20%;
+}
+.product-view .add-to-cart .qty-wrapper .qty{
+    width: 100%;
+    margin-right:0!important;
+}
+.product-view .add-to-cart-buttons{
+    float: right;
+    width: 75%;
+}
+.product-view .add-to-cart .qty-wrapper, .product-view .add-to-cart .qty-wrapper label{
+    margin-right:0
 }
