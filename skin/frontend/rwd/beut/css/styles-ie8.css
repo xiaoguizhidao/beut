@@ -5565,7 +5565,7 @@ p.product-name a:hover {
   margin-bottom: 7px;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 656, ../scss/module/_product-list.scss */
   .block-filter,
   .category-footer .category-description .description {
@@ -6619,7 +6619,7 @@ p.product-name a:hover {
   margin-top: 5px;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 1007, ../scss/module/_catalog-product.scss */
   .box-up-sell {
     padding-left: 50px;
@@ -8903,6 +8903,11 @@ body.newsletter-manage-index .my-account .form-list {
 /* ============================================ *
  * PayPal
  * ============================================ */
+/* line 34, ../../default/scss/module/_paypal.scss */
+.paypal-review-order .col2-set .col-1,
+.paypal-review-order .col2-set .col-2 {
+  padding: 0px;
+}
 /* line 42, ../../default/scss/module/_paypal.scss */
 .paypal-review-order .info-set {
   margin-bottom: 10px;
