@@ -1756,6 +1756,7 @@ ul.delivery-tabs li a{
     text-align: center;
     min-height: 40px;
     line-height: 40px;
+    z-index: 1000 !important;
 }
 #ewcm_container a{
     color: #fff !important;
@@ -1805,6 +1806,9 @@ ul.delivery-tabs li a{
         display: none !important;
     }
 }
+
+
+
 .cms-about-us p {
     font-size: 12px;
 }
@@ -2809,6 +2813,9 @@ div.block-layered-nav dd a.amshopby-attr{
     body.overlay-menu .main-container{
         margin-top: -34px;
     }
+    body.overlay-menu.ewcm-show .main-container.col1-layout {
+        margin-top: 6px;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -2835,7 +2842,8 @@ div.block-layered-nav dd a.amshopby-attr{
     .category-designers .main-container.col1-layout,
     .white-menu .main,
     .overlay-menu .main,
-    body.overlay-menu .main-container{
+    body.overlay-menu .main-container,
+    body.overlay-menu.ewcm-show .main-container.col1-layout{
         margin-top: 0;
     }
     #ewcm_container{

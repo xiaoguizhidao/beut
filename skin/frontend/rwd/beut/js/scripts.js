@@ -104,7 +104,6 @@ var FEelementControl = {
 						$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 					});
 				}
-
 			} else {
 				$j('#header').removeClass('sticky').removeAttr('style');
 				$j('.header-language-background').show();
@@ -112,10 +111,17 @@ var FEelementControl = {
 				$j('#header').hover(function(){
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 				},function(){
+					if($j('header').hasClass('isActive')) {
+						normal = 1;
+					}else {
+						normal = 0;
+					}
 					FEelementControl.switchLogo(normal);
 				});
+				FEelementControl.kipLogoHover();
 			}
 		});
+
 		if($j(window).scrollTop() > 1){
 			$j('#header').addClass('sticky');
 			$j('.header-language-background').hide();
@@ -129,22 +135,46 @@ var FEelementControl = {
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 			});
 		}else{
+			if($j('header').hasClass('isActive')) {
+				normal = 1;
+			}else {
+				normal = 0;
+			}
 			FEelementControl.switchLogo(normal);
 			$j('header').hover(function(){
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 			},function(){
+				if($j('header').hasClass('isActive')) {
+					normal = 1;
+				}else {
+					normal = 0;
+				}
 				FEelementControl.switchLogo(normal);
 			});
 
+			FEelementControl.kipLogoHover();
 		}
 	},
-
+	kipLogoHover: function () {
+		if($j('header').hasClass('isActive')) {
+			$j('header').hover(function(){
+				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+			},function(){
+				if($j('#header').hasClass('sticky')) {
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+				}else {
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+				}
+			});
+		}
+	},
 	switchLogo: function(normal) {
 		if(normal === 1){
 			$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 		}else{
 			$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
 		}
+
 	},
 	homeProdSlide: function(){
 		$j('#slide1,#slide3').slick({
