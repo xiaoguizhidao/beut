@@ -137,8 +137,6 @@ var FEelementControl = {
 		}else{
 			if($j('header').hasClass('isActive')) {
 				normal = 1;
-			}else {
-				normal = 0;
 			}
 			FEelementControl.switchLogo(normal);
 			$j('header').hover(function(){
@@ -146,8 +144,6 @@ var FEelementControl = {
 			},function(){
 				if($j('header').hasClass('isActive')) {
 					normal = 1;
-				}else {
-					normal = 0;
 				}
 				FEelementControl.switchLogo(normal);
 			});

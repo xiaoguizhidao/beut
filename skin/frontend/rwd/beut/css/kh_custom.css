@@ -2064,10 +2064,7 @@ ul.delivery-tabs li a{
 }
 .grand-total{
     width: 100%;
-    background: #efeef0;
     color: #000;
-    border: 1px solid #ccc;
-    text-align: center;
     padding: 8px 0 5px;
     margin-bottom: 5px;
 }
