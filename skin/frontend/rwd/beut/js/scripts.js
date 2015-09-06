@@ -104,7 +104,6 @@ var FEelementControl = {
 						$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 					});
 				}
-
 			} else {
 				$j('#header').removeClass('sticky').removeAttr('style');
 				$j('.header-language-background').show();
@@ -112,10 +111,18 @@ var FEelementControl = {
 				$j('#header').hover(function(){
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 				},function(){
+					if($j('header').hasClass('isActive')) {
+						normal = 1;
+					}else {
+						normal = 0;
+					}
 					FEelementControl.switchLogo(normal);
+					console.log(5);
 				});
+				FEelementControl.kipLogoHover();
 			}
 		});
+
 		if($j(window).scrollTop() > 1){
 			$j('#header').addClass('sticky');
 			$j('.header-language-background').hide();
@@ -129,22 +136,52 @@ var FEelementControl = {
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
 			});
 		}else{
+			if($j('header').hasClass('isActive')) {
+				normal = 1;
+			}else {
+				normal = 0;
+			}
 			FEelementControl.switchLogo(normal);
 			$j('header').hover(function(){
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+				console.log(8);
 			},function(){
+				if($j('header').hasClass('isActive')) {
+					normal = 1;
+				}else {
+					normal = 0;
+				}
 				FEelementControl.switchLogo(normal);
+				console.log(10);
 			});
 
+			FEelementControl.kipLogoHover();
 		}
 	},
-
+	kipLogoHover: function () {
+		if($j('header').hasClass('isActive')) {
+			$j('header').hover(function(){
+				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+				console.log(3);
+			},function(){
+				if($j('#header').hasClass('sticky')) {
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+				}else {
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+				}
+				console.log(4);
+			});
+		}
+	},
 	switchLogo: function(normal) {
 		if(normal === 1){
 			$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
+			console.log(6);
 		}else{
 			$j('.logo-large .large').attr("src", skinUrl+"images/logo.png");
+			console.log(7);
 		}
+
 	},
 	homeProdSlide: function(){
 		$j('#slide1,#slide3').slick({

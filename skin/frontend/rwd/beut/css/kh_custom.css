@@ -1756,6 +1756,7 @@ ul.delivery-tabs li a{
     text-align: center;
     min-height: 40px;
     line-height: 40px;
+    z-index: 1000 !important;
 }
 #ewcm_container a{
     color: #fff !important;
@@ -1791,6 +1792,7 @@ ul.delivery-tabs li a{
     font-size: 24px!important;
     color: black!important;
 }
+
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -2765,6 +2767,9 @@ div.block-layered-nav dd a.amshopby-attr{
     body.overlay-menu .main-container{
         margin-top: -34px;
     }
+    body.overlay-menu.ewcm-show .main-container.col1-layout {
+        margin-top: 6px;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -2774,11 +2779,6 @@ div.block-layered-nav dd a.amshopby-attr{
     .desktop-img{
         display: none;
     }
-    .cms-faqs .main-container.col1-layout,
-    .cms-about-us .main-container.col1-layout,
-    .contacts-index-index .main-container.col1-layout,
-    .cms-brand .main-container.col1-layout,
-    .category-designers .main-container.col1-layout,
     .checkout-cart-index,
     .customer-account-login .main,
     .checkout-onepage-index .main-container,
@@ -2791,7 +2791,8 @@ div.block-layered-nav dd a.amshopby-attr{
     .category-designers .main-container.col1-layout,
     .white-menu .main,
     .overlay-menu .main,
-    body.overlay-menu .main-container{
+    body.overlay-menu .main-container,
+    body.overlay-menu.ewcm-show .main-container.col1-layout{
         margin-top: 0;
     }
     #ewcm_container{
