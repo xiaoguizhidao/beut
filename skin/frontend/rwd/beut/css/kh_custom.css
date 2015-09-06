@@ -2491,8 +2491,8 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
 }
 @media only screen and (max-width: 1400px) and (min-width: 768px){
-    .block-filter,
-   /* .customer-account .main-container{
+    /*.block-filter,
+    .customer-account .main-container{
         padding-left: 50px;
         padding-right: 50px;
     }*/
