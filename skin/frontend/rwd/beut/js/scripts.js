@@ -629,5 +629,13 @@ jQuery(document).ready(function ($) {
         jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","130px");
     }
 
+    if(jQuery(".catalog-category-view").length){
+        if(jQuery(".filter-show .currently").length) {
+            jQuery(".filter-show").css("display", "block");
+        }
+        else {
+            jQuery(".filter-show").css("display", "none");
+        }
+    }
 
 });
