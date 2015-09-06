@@ -85,9 +85,9 @@ endif;
                             <?php if($_filter->getItemsCount()): ?>
                                 <dt><?php echo $this->__($_filter->getName()) ?></dt>
                                 <dd class="mobile-filter">
-                                    <a class="clear-all f-left" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
+                                   <!-- <a class="clear-all f-left" href="<?php /*echo $this->getClearUrl() */?>"><?php /*echo $this->__('Clear All');*/?></a>-->
                                     <?php echo $_filter->getHtml() ; $options .= '<dd>'.$_filter->getHtml().'</dd>';?>
-                                    <a class="clear-all f-right" href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All');?></a>
+                                    <!--<a class="clear-all f-right" href="<?php /*echo $this->getClearUrl() */?>"><?php /*echo $this->__('Clear All');*/?></a>-->
                                 </dd>
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -118,10 +118,10 @@ endif;
 <div class="catalog-breadcrumbs">
     <?php if($this->canShowBlock()): ?>
         <div class="filter-show">
+            <?php echo $this->getStateHtml() ?>
             <?php if ($this->getLayer()->getState()->getFilters()): ?>
                 <div class="actions"><a href="<?php echo $this->getClearUrl() ?>"><?php echo $this->__('Clear All') ?></a></div>
             <?php endif; ?>
-            <?php echo $this->getStateHtml() ?>
         </div>
     <?php endif;?>
     <?php  echo $this->getLayout()->getBlock("breadcrumbs")->toHtml()?>

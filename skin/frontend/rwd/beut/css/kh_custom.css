@@ -1791,6 +1791,9 @@ ul.delivery-tabs li a{
     font-size: 24px!important;
     color: black!important;
 }
+.catalog-breadcrumbs {
+    background: #f7f8f9;
+}
 @media only screen and (max-width: 1024px){
     .cart-content .cart-right{
         width: 100%;
@@ -1802,9 +1805,6 @@ ul.delivery-tabs li a{
         display: none !important;
     }
 }
-
-
-
 .cms-about-us p {
     font-size: 12px;
 }
@@ -1902,7 +1902,7 @@ ul.delivery-tabs li a{
 }
 .block-layered-nav .block-content.accordion-open > dl > dd.current {
     background: #f7f8f9;
-    padding: 30px 100px 50px 175px;
+    padding: 30px 100px 50px 130px;
 }
 .block-layered-nav .block-content > dl > dt{
     border-bottom: 2px solid #f7f8f9;
@@ -2343,6 +2343,37 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     padding-left: 100px;
     padding-right: 100px;
 }
+.filter-show {
+    padding: 30px 50px 40px;
+}
+.filter-show .block-subtitle {
+    float: left;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 15px;
+    width: 75px;
+}
+.filter-show .currently{
+    float: left;
+    margin: 0 5px 0 20px;
+}
+.filter-show .actions{
+    line-height: 20px;
+}
+.filter-show .currently > li {
+    border: 1px solid black;
+    padding: 3px 5px 3px 15px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.filter-show .btn-remove{
+    border: none;
+    background: url("../images/filter-remove.png");
+    background-repeat: no-repeat;
+    top: 2px!important;
+    width: 10px!important;
+    height: 10px!important;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -2454,9 +2485,11 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     }
     .catalog-breadcrumbs .breadcrumbs{
         margin-left: 50px;
+        margin-top: 20px;
     }
     .toolbar_top{
         margin-right: 50px;
+        margin-top: 20px;
     }
     .category-products{
         margin-left: 30px;

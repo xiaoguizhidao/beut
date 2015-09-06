@@ -1019,6 +1019,9 @@ $j(document).ready(function () {
             jQuery('.desktop-filter').children('dd').removeClass('current');
             jQuery('.desktop-filter').children('dd').eq(index).addClass('current');
             jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 80);
+            if($j(".filter-show").length) {
+                $j('.filter-show').css('margin-top',"-25px");
+            }
             if(jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
                 jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
             }
