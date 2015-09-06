@@ -290,7 +290,7 @@ body.overlay-menu .slideshow-container {
   text-transform: none;
   margin-bottom: 14px;
 }
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 232, ../scss/content/_home.scss */
   .row4 .item .absolute-block {
     width: -moz-calc(100% - 100px);

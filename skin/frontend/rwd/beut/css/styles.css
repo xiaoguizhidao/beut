@@ -783,7 +783,7 @@ div[class^='col-lg-'] {
   width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 979px) {
   /* line 139, ../scss/core/_common.scss */
   .col-xs-1 {
     width: 8.33333%;
@@ -1100,7 +1100,7 @@ body:not(.customer-account) .block:first-child .block-title {
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 357, ../scss/core/_common.scss */
   .sidebar .block:not(.block-layered-nav) {
     margin-bottom: 0;
@@ -1395,7 +1395,7 @@ a.button:hover {
   color: #2669af;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 556, ../scss/core/_common.scss */
   .col2-set .buttons-set .button,
   .col2-set .buttons-set .button2 {
@@ -1871,7 +1871,7 @@ a.button:hover {
     width: 25%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 979, ../scss/core/_common.scss */
   .col-left,
   .col-right,
@@ -1923,7 +1923,7 @@ a.button:hover {
   width: 50%;
   padding: 20px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 1020, ../scss/core/_common.scss */
   .col2-set .col-1,
   .col2-set .col-2 {
@@ -1969,7 +1969,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Top Container
  */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 1068, ../scss/core/_common.scss */
   .top-container {
     max-width: 1260px;
@@ -2528,7 +2528,7 @@ span.weee {
   display: block;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 1539, ../scss/core/_common.scss */
   body .product-img-box .product-image:hover {
     border-color: #EDEDED;
@@ -4388,7 +4388,7 @@ body {
   background-position: 4px 4px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 55, ../scss/layout/_header-nav.scss */
   .skip-nav {
     display: none;
@@ -4509,7 +4509,7 @@ body {
 /* ============================================ *
  * Small Viewports - Accordion Style Menu
  * ============================================ */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 176, ../scss/layout/_header-nav.scss */
   .nav-primary a.level0,
   .nav-primary a {
@@ -4973,7 +4973,7 @@ body {
   color: #498fd8;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 121, ../scss/layout/_header-account.scss */
   .header-language-background {
     position: relative;
@@ -5312,7 +5312,7 @@ body {
     margin-left: -12px;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 97, ../scss/layout/_header-cart.scss */
   .skip-cart .count {
     border-radius: 0px;
@@ -5437,7 +5437,7 @@ body {
    * Social icons
    */
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 39, ../scss/layout/_footer.scss */
   .footer {
     font-size: 10px;
@@ -5451,7 +5451,7 @@ body {
   max-width: 175px;
   float: right;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 49, ../scss/layout/_footer.scss */
   .footer table {
     font-size: 10px;
@@ -5472,7 +5472,7 @@ body {
   font-size: 13px;
   line-height: 1.7;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 65, ../scss/layout/_footer.scss */
   .footer a {
     text-align: center;
@@ -5521,7 +5521,7 @@ body {
   font-weight: normal;
   font-size: 16px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 106, ../scss/layout/_footer.scss */
   .footer .title {
     text-align: center;
@@ -5533,7 +5533,7 @@ body {
   display: block;
   margin-bottom: 22px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 118, ../scss/layout/_footer.scss */
   .footer .phone-footer-block p {
     text-align: center;
@@ -5761,7 +5761,7 @@ body {
   float: none;
   margin: 0 auto 30px auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 319, ../scss/layout/_footer.scss */
   .footer .form-language,
   .footer .currency-switcher {
@@ -6591,7 +6591,7 @@ p.product-name a:hover {
   color: #A0A0A0;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 592, ../scss/module/_product-list.scss */
   .block-layered-nav .block-content > dl > dt {
     padding-left: 15px;
@@ -6673,7 +6673,7 @@ p.product-name a:hover {
   margin-bottom: 7px;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 656, ../scss/module/_product-list.scss */
   .block-filter,
   .category-footer .category-description .description {
@@ -6724,7 +6724,7 @@ p.product-name a:hover {
     display: none;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 697, ../scss/module/_product-list.scss */
   .block-filter {
     margin-bottom: 13px;
@@ -7155,7 +7155,7 @@ p.product-name a:hover {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 210, ../scss/module/_catalog-product.scss */
   .product-view .add-to-cart-wrapper {
     float: none;
@@ -7613,7 +7613,7 @@ p.product-name a:hover {
   clear: both;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 27, ../scss/mixin/_toggle-content.scss */
   .product-collateral .toggle-tabs {
     display: block;
@@ -7675,7 +7675,7 @@ p.product-name a:hover {
     display: block;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 102, ../scss/mixin/_toggle-content.scss */
   .product-collateral .toggle-tabs {
     display: none;
@@ -7757,7 +7757,7 @@ p.product-name a:hover {
     background: transparent;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 630, ../scss/module/_catalog-product.scss */
   .product-view .product-shop,
   .product-view .add-to-cart-wrapper,
@@ -8190,7 +8190,7 @@ p.product-name a:hover {
   margin-top: 5px;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 1007, ../scss/module/_catalog-product.scss */
   .box-up-sell {
     padding-left: 50px;
@@ -8248,7 +8248,7 @@ p.product-name a:hover {
   width: 450px;
   z-index: 100;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 59, ../../default/scss/module/_catalog-msrp.scss */
   .map-popup.map-popup-right {
     left: 10px !important;
@@ -8259,7 +8259,7 @@ p.product-name a:hover {
     right: 10px !important;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 49, ../../default/scss/module/_catalog-msrp.scss */
   .map-popup {
     width: 100%;
@@ -8856,7 +8856,7 @@ p.product-name a:hover {
   padding-left: 15px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 390, ../scss/module/_checkout-cart.scss */
   .cart-table th {
     font-size: 12px;
@@ -9176,7 +9176,7 @@ p.product-name a:hover {
   background-color: gainsboro;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 723, ../scss/module/_checkout-cart.scss */
   .shipping .shipping-form .form-list > li {
     width: 100%;
@@ -9249,7 +9249,7 @@ p.product-name a:hover {
     text-align: right;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 794, ../scss/module/_checkout-cart.scss */
   .cart .cart-totals table tfoot td {
     font-size: 18px;
@@ -9604,7 +9604,7 @@ p.product-name a:hover {
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 215, ../scss/module/_checkout-onepage.scss */
   .opc #opc-login .description,
   .opc #opc-login p.required {
@@ -10050,7 +10050,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   margin-left: 200px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 620, ../scss/module/_checkout-onepage.scss */
   .gift-message-form .giftmessage-area {
     max-width: 100%;
@@ -10249,7 +10249,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   padding: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 191, ../../default/scss/module/_configurableswatches.scss */
   #narrow-by-list dd .configurable-swatch-list li:nth-child(odd) {
     clear: left;
@@ -10393,7 +10393,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     border-left: 1px solid #EDEDED;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   /* line 72, ../scss/module/_customer.scss */
   .customer-account-login .col2-set .col-1 {
     padding-right: 0;
@@ -10415,7 +10415,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     border-top: 1px solid #EDEDED;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 97, ../scss/module/_customer.scss */
   .customer-account-login .col2-set p.required {
     display: none;
@@ -10771,7 +10771,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .my-account .addresses-list .item p {
   margin-top: 10px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 481, ../scss/module/_customer.scss */
   .my-account .addresses-list .col-1,
   .my-account .addresses-list .col-2 {
@@ -11004,7 +11004,7 @@ ol#cart-sidebar-reorder p.product-name {
     top: -12px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 740, ../scss/module/_customer.scss */
   body.customer-account .data-table.orders th.ship,
   body.customer-account .data-table.orders td.ship,
@@ -11211,7 +11211,7 @@ body.newsletter-manage-index .my-account .form-list {
 /* ============================================ *
  * PayPal
  * ============================================ */
-@media only screen and (max-width: 868px) and (min-width: 769px) {
+@media only screen and (max-width: 1080px) and (min-width: 981px) {
   /* line 34, ../../default/scss/module/_paypal.scss */
   .paypal-review-order .col2-set .col-1,
   .paypal-review-order .col2-set .col-2 {
@@ -11235,7 +11235,7 @@ body.newsletter-manage-index .my-account .form-list {
 .paypal-review-order .buttons-set button {
   margin-bottom: 10px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 59, ../../default/scss/module/_paypal.scss */
   .paypal-review-order .col-1 {
     padding-bottom: 0;
@@ -11293,13 +11293,13 @@ body.newsletter-manage-index .my-account .form-list {
   margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 113, ../../default/scss/module/_paypal.scss */
   .bml-ad.small {
     display: block;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 119, ../../default/scss/module/_paypal.scss */
   .bml-ad.large {
     display: block;
@@ -11619,7 +11619,7 @@ div.paypal-logo span > img {
   text-indent: -9999px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 295, ../../default/scss/module/_review.scss */
   body.review-product-list .product-view .product-shop .price-info {
     padding-left: 0;
@@ -11727,7 +11727,7 @@ div.paypal-logo span > img {
   width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 438, ../../default/scss/module/_review.scss */
   .review-product-view .product-review .product-img-box {
     max-width: 100%;
@@ -12143,7 +12143,7 @@ div.paypal-logo span > img {
     font-size: 13px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 241, ../../default/scss/module/_wishlist.scss */
   #wishlist-table:after {
     content: '';
@@ -12317,7 +12317,7 @@ div.paypal-logo span > img {
 .header-minicart {
   display: inline-block;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 30, ../scss/module/_checkout-cart-minicart.scss */
   .header-minicart {
     display: block;
@@ -12539,7 +12539,7 @@ div.paypal-logo span > img {
   position: relative;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 221, ../scss/module/_checkout-cart-minicart.scss */
   .checkout-types.minicart {
     float: none;
@@ -12552,7 +12552,7 @@ div.paypal-logo span > img {
     z-index: 1;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 236, ../scss/module/_checkout-cart-minicart.scss */
   .header-minicart .subtotal .label {
     color: #636363;
@@ -12778,7 +12778,7 @@ div.paypal-logo span > img {
   font-size: 13px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 96, ../../default/scss/module/_account-reviews.scss */
   .product-review .ratings-table tr {
     float: none;
@@ -12925,7 +12925,7 @@ div.paypal-logo span > img {
   margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 149, ../scss/module/_cms.scss */
   #contactForm {
     padding-left: 0;
@@ -13000,7 +13000,7 @@ div.paypal-logo span > img {
     max-width: 86%;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 72, ../../default/scss/module/_cookies.scss */
   .notice-cookie {
     padding: 0 20px;
@@ -13099,7 +13099,7 @@ div.paypal-logo span > img {
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 74, ../../default/scss/module/_tags.scss */
   .tags-list > li,
   .tags-list {
@@ -13375,7 +13375,7 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
 .sidebar .widget-addbysku .sku-table .input-text:not(.qty) {
   width: 100%;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 37, ../scss/module/_widget.scss */
   .sidebar .widget-addbysku .sku-table .input-text:not(.qty) {
     max-width: 100px;
@@ -13487,7 +13487,7 @@ body.customer-account .my-account .title-buttons.recurring-profiles-title-button
     margin-right: 0;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 980px) {
   /* line 64, ../scss/module/_widget.scss */
   .col1-layout .col-main .widget {
     /* Config: Columns + flexible gutter */
@@ -13753,7 +13753,7 @@ body[class*="checkout-multishipping-"] #review-buttons-container {
     padding-left: 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 198, ../../default/scss/module/_checkout-multi-address.scss */
   body[class*="checkout-multishipping-"] .checkout-progress span {
     width: 12px;

@@ -245,7 +245,7 @@ body.overlay-menu .slideshow-container {
   padding: 0 30px;
   overflow: hidden;
 }
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 979px) {
   /* line 201, ../scss/content/_home.scss */
   .row4 .item .absolute-block {
     position: absolute;
@@ -292,7 +292,7 @@ body.overlay-menu .slideshow-container {
   text-transform: none;
   margin-bottom: 14px;
 }
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 980px) {
   /* line 232, ../scss/content/_home.scss */
   .row4 .item .absolute-block {
     width: -moz-calc(100% - 100px);
@@ -309,7 +309,7 @@ body.overlay-menu .slideshow-container {
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 245, ../scss/content/_home.scss */
   .row4 .item .content {
     font-size: 10px;
@@ -477,7 +477,7 @@ body .promos > li {
   display: block;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 981px) {
   /* line 387, ../scss/content/_home.scss */
   .promos span {
     font-size: 16px;
@@ -573,7 +573,7 @@ body .promos > li {
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 470, ../scss/content/_home.scss */
   body,
   h2.product-name,
@@ -907,7 +907,7 @@ body .promos > li {
   border-color: #498fd8;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
   /* line 66, ../scss/content/_category.scss */
   .catblocks li {
     width: 49% !important;
