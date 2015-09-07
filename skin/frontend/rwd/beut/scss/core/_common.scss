@@ -350,7 +350,7 @@ body:not(.customer-account) .block:first-child .block-title {
     }
 }
 
-@include bp(max-width, $bp-medium) {
+@include bp(max-width, $bp-mobile) {
 
     .sidebar {
         // Don't apply to layered nav, since it gets special treatment
@@ -664,6 +664,7 @@ a.button:hover {
         float: right;
         margin-left: 5px;
         min-width: 140px;
+        padding: 15px 10px;
     }
 
     &:after {
@@ -975,7 +976,7 @@ a.button:hover {
     }
 }
 
-@include bp(max-width, $bp-medium) {
+@include bp(max-width, $bp-mobile) {
     .col-left,
     .col-right,
     .col-main,
