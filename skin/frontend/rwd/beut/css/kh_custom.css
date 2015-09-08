@@ -325,9 +325,7 @@ input {
     max-width: 665px;
     padding: 80px;
 }
-.form-list .fields .field:last-child{
-    float: right;
-}
+
 .customer-account-create .form-list select{
     height: 35px;
     margin-top: 0px;
@@ -368,7 +366,7 @@ input {
     width: 100%;
 }
 .form-list .fields .field{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
 }
 .customer-account-create .buttons-set{
@@ -2122,8 +2120,12 @@ body.customer-account .my-account .addresses-list h3 {
     font-weight: 600;
 }
 body.customer-account .my-account .fieldset {
-    margin-top: 30px;
+    margin-top: 46px;
     margin-bottom: 30px;
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 body.customer-account .data-table {
     margin-top: 5px;
@@ -2178,9 +2180,9 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     margin-bottom: 0;
 }
 .customer-account div.selector span{
-    width: 365px;
-    height: 29px;
-    line-height: 26px;
+    width: 100%;
+    height: 39px;
+    line-height: 1;
 }
 .customer-account .selector span:after{
     top: 12px;
@@ -2213,10 +2215,15 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .block-account li a:hover {
     color: #ff7f00;
 }
-.customer-account-edit .form-list .input-text, .customer-address-form .form-list .input-text{
-    width: 360px;
+.my-account .input-text#dummy {
+    margin-bottom: 10px;
 }
-.customer-account-edit .field.name-lastname, .customer-address-form .field.name-lastname,.customer-address-form .form-list .fields .field{
+.my-account .input-text {
+    width: 100%;
+}
+.customer-account-edit .field.name-lastname,
+.customer-address-form .field.name-lastname,
+.customer-address-form .form-list .fields .field{
     width: 100%;
 }
 #wishlist-table td.customer-wishlist-item-cart .button, #wishlist-table .item-manage .button{
@@ -2829,6 +2836,7 @@ div.block-layered-nav dd a.amshopby-attr{
     body.overlay-menu.ewcm-show .main-container.col1-layout {
         margin-top: 6px;
     }
+
 }
 
 @media only screen and (max-width: 980px) {
@@ -2838,26 +2846,19 @@ div.block-layered-nav dd a.amshopby-attr{
     .desktop-img{
         display: none;
     }
-    .cms-faqs .main-container.col1-layout,
-    .cms-about-us .main-container.col1-layout,
-    .contacts-index-index .main-container.col1-layout,
-    .cms-brand .main-container.col1-layout,
-    .category-designers .main-container.col1-layout,
     .checkout-cart-index,
     .customer-account-login .main,
     .checkout-onepage-index .main-container,
     .cms-about-us .services,
-    .catalog-category-view .main-container,
     .ewcm-show .main-container.col1-layout,
     .ewcm-show .checkout-cart-index,
     .ewcm-show.category-designers .main-container.col1-layout,
     .main-container.col1-layout,
-    .category-designers .main-container.col1-layout,
     .white-menu .main,
     .overlay-menu .main,
     body.overlay-menu .main-container,
     body.overlay-menu.ewcm-show .main-container.col1-layout{
-        margin-top: 0;
+        margin-top: 0 !important;
     }
     #ewcm_container{
         position: relative !important;
@@ -3671,4 +3672,22 @@ div.block-layered-nav dd a.amshopby-attr{
     .faqs-top p{
         font-size: 12px;
     }
+}
+@media only screen and (max-width: 767px) {
+    .customer-account div.selector span,
+    .customer-account .main-container .col-left,
+    body.customer-account .my-account .fieldset,
+    .customer-account .col-left.sidebar{
+        width: 100%;
+        max-width: 100%;
+    }
+    .customer-account .main-container .col-main,
+    .customer-account .col-left.sidebar.col-left-first, .customer-account .col-left.sidebar{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    body.customer-account .my-account .fieldset{
+        margin-top: 10px;
+    }
+
 }

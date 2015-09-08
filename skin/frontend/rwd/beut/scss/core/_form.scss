@@ -40,7 +40,7 @@
     p.required {
         margin-bottom: 5px;
         float: right;
-        font-size: $f-size-xs;
+        font-size: $f-size-xs - 1;
         margin-top: 0px;
     }
 }
@@ -365,7 +365,6 @@ p.required,
 
 .form-list .control {
     margin-top: 10px;
-    border-bottom: 1px solid #C0C0C0;
     display: block;
     overflow: hidden;
     label {

@@ -369,7 +369,7 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
-		//$j('.shipping-country select').uniform();
+		$j('.my-account #country').uniform();
 	},
 	prodSlide: function(){
 		$j('.prod-slide').slick({
