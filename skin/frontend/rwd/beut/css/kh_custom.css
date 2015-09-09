@@ -1784,10 +1784,10 @@ ul.delivery-tabs li a{
     padding-top: 150px;
 }
 .old-price .price{
-    font-size: 24px;
+    font-size: 18px;
 }
 .special-price .price{
-    font-size: 24px!important;
+    font-size: 18px!important;
     color: black!important;
 }
 .catalog-breadcrumbs {
