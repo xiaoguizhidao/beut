@@ -99,14 +99,19 @@ var FEelementControl = {
 					}else{
 						$j('#header').css({top: 0});
 					}
-					$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 					$j('#header').hover(function(){
-						$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+						$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 					});
 				}
 			} else {
 				$j('#header').removeClass('sticky').removeAttr('style');
 				$j('.header-language-background').show();
+                $j(".wp-custom-menu-popup").each(function(){
+                   if($j(this).css("display") == "block") {
+                       normal = 1;
+                   }
+                });
 				FEelementControl.switchLogo(normal);
 				$j('#header').hover(function(){
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
@@ -116,7 +121,16 @@ var FEelementControl = {
 					}else {
 						normal = 0;
 					}
+                    if (normal ==0 ) {
+                        if ($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0) {
+                            $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                            normal = 0;
+                        } else {
+                            normal = 1;
+                        }
+                    }
 					FEelementControl.switchLogo(normal);
+
 				});
 				FEelementControl.kipLogoHover();
 			}
@@ -130,14 +144,19 @@ var FEelementControl = {
 			}else{
 				$j('#header').css({top: 0});
 			}
-			$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+			$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 			$j('#header').hover(function(){
-				$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 			});
 		}else{
 			if($j('header').hasClass('isActive')) {
 				normal = 1;
 			}
+            $j(".wp-custom-menu-popup").each(function(){
+                if($j(this).css("display") == "block") {
+                    normal = 1;
+                }
+            });
 			FEelementControl.switchLogo(normal);
 			$j('header').hover(function(){
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
@@ -145,7 +164,16 @@ var FEelementControl = {
 				if($j('header').hasClass('isActive')) {
 					normal = 1;
 				}
+                if (normal ==0 ) {
+                    if ($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0) {
+                        $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                        normal = 0;
+                    } else {
+                        normal = 1;
+                    }
+                }
 				FEelementControl.switchLogo(normal);
+
 			});
 
 			FEelementControl.kipLogoHover();
@@ -157,7 +185,7 @@ var FEelementControl = {
 				$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 			},function(){
 				if($j('#header').hasClass('sticky')) {
-					$j('.logo-large .large').attr("src", skinUrl+"images/logo2.png");
+					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 				}else {
 					$j('.logo-large .large').attr("src", skinUrl+"images/logo3.png");
 				}
@@ -637,5 +665,7 @@ jQuery(document).ready(function ($) {
             jQuery(".filter-show").css("display", "none");
         }
     }
+
+
 
 });
