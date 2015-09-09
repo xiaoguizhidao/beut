@@ -3672,6 +3672,9 @@ div.block-layered-nav dd a.amshopby-attr{
     .faqs-top p{
         font-size: 12px;
     }
+    .prod-top {
+        padding: 0 20px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .customer-account div.selector span,
