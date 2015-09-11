@@ -515,26 +515,26 @@ var FEelementControl = {
     },
     filterCat: function(){
         if($j("#narrow-by-list li a").length) {
-            var selectedAttribute = 0;
+           // var selectedAttribute = 0;
             $j("#narrow-by-list li a").each(function (i) {
                 if ($j(this).attr('class') == "amshopby-attr-selected") {
-                    if(selectedAttribute==1) {
+                    /*if(selectedAttribute==1) {
                         return true;
-                    }
+                    }*/
 					$j(this).parent('li').addClass('filter-selected');
-                    $j(this).parents("dd.mobile-filter").addClass("current");
-                    $j(this).parents("dd.mobile-filter").prev().addClass("current");
-                    $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
-                    selectedAttribute = 1;
-					var currHeight = $j(this).parents('dd.mobile-filter').height() + $j('.block-filter').height() + 80;
+                   // $j(this).parents("dd.mobile-filter").addClass("current");
+                   // $j(this).parents("dd.mobile-filter").prev().addClass("current");
+                   // $j(".block-filter .block-content.toggle-content").addClass("accordion-open");
+                   // selectedAttribute = 1;
+					/*var currHeight = $j(this).parents('dd.mobile-filter').height() + $j('.block-filter').height() + 80;
 					$j('.catalog-breadcrumbs').css('margin-top',currHeight);
                     if($j(".filter-show").length) {
                         $j('.filter-show').css('margin-top',"-50px");
-                    }
-                    $j('.catalog-breadcrumbs').css('margin-top',currHeight);
-					if($j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
+                    }*/
+                    //$j('.catalog-breadcrumbs').css('margin-top',currHeight);
+					/*if($j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
 						$j('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
-					}
+					}*/
 
                 }
 

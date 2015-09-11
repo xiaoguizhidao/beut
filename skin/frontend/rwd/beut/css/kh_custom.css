@@ -1904,7 +1904,7 @@ ul.delivery-tabs li a{
 }
 .block-layered-nav .block-content.accordion-open > dl > dd.current {
     background: #f7f8f9;
-    padding: 30px 100px 50px 130px;
+    padding: 0px 100px 10px 125px;
 }
 .block-layered-nav .block-content > dl > dt{
     border-bottom: 2px solid #f7f8f9;
@@ -2352,7 +2352,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     padding-right: 100px;
 }*/
 .filter-show {
-    padding: 30px 50px 40px;
+    padding: 5px 50px 20px;
     display: none;
     margin-top: -25px;
 }
@@ -2368,7 +2368,8 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     margin: 0 5px 0 20px;
 }
 .filter-show .actions{
-    line-height: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
 }
 .filter-show .currently > li {
     border: 1px solid black;
@@ -2758,6 +2759,12 @@ div.block-layered-nav dd a.amshopby-attr{
     }
     .customer-account .main-container .col-main{
         padding-right: 50px;
+    }
+    .block-filter{
+        padding: 10px 50px;
+    }
+    .block-layered-nav .block-content.accordion-open > dl > dd.current{
+        left:-50px;
     }
 }
 @media only screen and (max-width: 1200px) {
