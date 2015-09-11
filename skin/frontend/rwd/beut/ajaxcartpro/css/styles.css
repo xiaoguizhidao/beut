@@ -24,13 +24,15 @@
     color: black;
     overflow:  auto;
     min-height:20px;
-    min-width: 260px;
+    min-width: 350px;
     width: auto;
     height: auto;
     /*position:absolute;*/
     /*top: expression(parseInt(document.documentElement.scrollTop, 10) +200+ "px");*/
 }
-
+#ajaxcartpro-add-confirm br{
+    display: none;
+}
 .ajaxcartpro-box-hide{
    display:none;
 }
@@ -58,8 +60,7 @@
     line-height:24px;
     height:24px;
     margin:0 auto;
-    display:block;
-    font-family:Arial;
+    display:inline-block;
     font-weight: normal;
     font-size: 12px;
     text-decoration:none;
@@ -162,4 +163,23 @@
 .map-popup
 {
     z-index: 1001 !important;
+}
+
+@media only screen and (max-width: 980px) {
+    #ajaxcartpro-add-confirm, #ajaxcartpro-remove-confirm {
+        max-width: 300px;
+        min-width: 250px;
+        left: 0 !important;
+        right: 0;
+        margin: auto;
+    }
+    .aw-acp-continue, .aw-acp-checkout, .aw-acp-continue:hover, .aw-acp-checkout:hover {
+        font-size: 8px;
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #ajaxcartpro-progress {
+
+    }
 }

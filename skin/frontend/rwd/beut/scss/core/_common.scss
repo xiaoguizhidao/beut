@@ -127,14 +127,16 @@ div[class^='col-lg-']{
         clear: both;
     }
 }
-
+.col-lg-15{
+    width:20%;
+}
 
 @for $i from 1 through 12{
     .col-lg-#{$i}{
         width: percentage(($i / 12));
     }
 }
-@include bp(max-width, $bp-medium - 1) {
+@include bp(max-width, $bp-mobile) {
     @for $i from 1 through 12{
         .col-xs-#{$i}{
             width: percentage(($i / 12));

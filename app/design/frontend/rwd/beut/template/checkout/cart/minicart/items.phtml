@@ -42,7 +42,7 @@ if(empty($_cartQty)) {
 
 <div class="minicart-wrapper">
 
-    <p class="block-subtitle">
+    <p class="block-subtitle <?php if($_cartQty !=0) echo "not-empty" ?>">
         <a class="close skip-link-close" href="#" title="<?php echo $this->__('Close'); ?>"></a>
     </p>
 

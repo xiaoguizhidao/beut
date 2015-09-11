@@ -789,34 +789,6 @@ body.overlay-menu.ewcm-show .main-container.col1-layout{
     background-size: auto 100%;
     padding:20px 100px 40px;
 }
-.brand-col-1 {
-    clear: both;
-    float: left;
-    margin-bottom: 25px;
-    margin-right: 2%;
-    width: 18%;
-}
-
-.brand-col-2 {
-    float: left;
-    margin-right: 2%;
-    width: 18%;
-}
-.brand-col-3 {
-    float: left;
-    margin-right: 2%;
-    width: 18%;
-}
-.brand-col-4 {
-    float: left;
-    margin-right: 2%;
-    width: 18%;
-}
-.brand-col-5 {
-    float: left;
-    margin-right: 0;
-    width: 20%;
-}
 ul.brands {
     padding: 0px;
 }
@@ -1830,7 +1802,7 @@ ul.delivery-tabs li a{
 }
 .category-designers p a{
     font-size: 14px;
-    line-height: 30px;
+    line-height: 1.8;
 }
 
 .faq strong {
@@ -2617,6 +2589,27 @@ div.block-layered-nav dd a.amshopby-attr{
 .product-view .add-to-cart .qty-wrapper, .product-view .add-to-cart .qty-wrapper label{
     margin-right:0
 }
+.ico {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+.pinterest {
+    background: url(../images/ico-pinterest.svg) no-repeat center;
+    background-size: 100%;
+}
+.twitter {
+    background: url(../images/ico-twitter.svg) no-repeat center;
+    background-size: 100%;
+}
+.instagram {
+    background: url(../images/ico-instagram.svg) no-repeat center;
+    background-size: 100%;
+}
+.facebook {
+    background: url(../images/ico-facebook.svg) no-repeat center;
+    background-size: 100%;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -2905,7 +2898,7 @@ div.block-layered-nav dd a.amshopby-attr{
     .page-not-found .page-title h1,
     .cms-delivery .main-image .title,
     .new-users .page-title h1{
-        font-size: 30px;
+        font-size: 23px;
     }
     #magentoPopupContainer h1{
         font-size: 40px !important;
@@ -2979,7 +2972,9 @@ div.block-layered-nav dd a.amshopby-attr{
     .tab-content .std .title,
     .product-brand,
     .products-grid .price-box,
-    .faqs-top p{
+    .faqs-top p,
+    div[class^='brand-col-'] p a,
+    input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text], select{
         font-size: 12px !important;
     }
     .item-options,
@@ -2995,12 +2990,15 @@ div.block-layered-nav dd a.amshopby-attr{
     .collapse .content p,
     .cms-about-us .our-history p,
     .customer-account-login .scaffold-form label,
-    .breadcrumbs li:before,
-    .breadcrumbs a,
     .block-filter select,
     h2.product-name a,
-    div#ewcm_container{
+    div#ewcm_container,
+    .category-designers p a{
         font-size: 10px;
+    }
+    .breadcrumbs li:before,
+    .breadcrumbs a{
+        font-size: 8px;
     }
     .slick-dots li button{
         width: 5px;
@@ -3125,14 +3123,6 @@ div.block-layered-nav dd a.amshopby-attr{
     ul.brands li {
         margin: 0 5px;
         font-weight: bold;
-    }
-
-    .brand-col-1, .brand-col-2, .brand-col-3, .brand-col-4, .brand-col-5{
-        width: 30%;
-        margin-left: 2%;
-    }
-    .brand-col-3 {
-        margin-right: 0%;
     }
     .contact-block{
         padding: 50px 20px;
@@ -3409,7 +3399,7 @@ div.block-layered-nav dd a.amshopby-attr{
         background: rgba(255,255,255,0.8);
     }
     .MagicScrollArrowPrev:before, .MagicScrollArrowNext:before{
-        opacity: 1;
+        opacity: 1 !important;
     }
     .category-products div[class^='col-lg-']{
         padding-left: 0;
@@ -3571,6 +3561,9 @@ div.block-layered-nav dd a.amshopby-attr{
         top: 40px;
         right: 20px;
     }
+    .minicart-wrapper .block-subtitle.not-empty{
+        top: 10px;
+    }
     .left-block{
         width: 100%;
     }
@@ -3629,16 +3622,14 @@ div.block-layered-nav dd a.amshopby-attr{
         color: black!important;
     }
     .catalog-product-view .breadcrumbs{
-        text-align: left;
+        text-align: center;
         padding-left: 0px;
     }
 
     ul.brands li a{
-        font-size: 12px;
+        font-size: 8px;
     }
-    .brand-col-1 p a, .brand-col-2 p a, .brand-col-3 p a, .brand-col-4 p a, .brand-col-5 p a{
-        font-size: 12px;
-    }
+
     .brand-col-1 p strong, .brand-col-2 p strong, .brand-col-3 p strong, .brand-col-4 p strong, .brand-col-5 p strong{
         font-size: 14px;
     }
@@ -3682,6 +3673,9 @@ div.block-layered-nav dd a.amshopby-attr{
     .prod-top {
         padding: 0 20px;
     }
+    .product-img-box .more-views {
+        max-height: 100px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .customer-account div.selector span,
@@ -3699,5 +3693,4 @@ div.block-layered-nav dd a.amshopby-attr{
     body.customer-account .my-account .fieldset{
         margin-top: 10px;
     }
-
 }
