@@ -3069,9 +3069,6 @@ body, button, input, select, textarea
     .product-brand,
     .products-grid .price-box,
     .faqs-top p,
-    .old-price .price,
-    .special-price .price,
-    .category-footer .category-description .description,
     div[class^='brand-col-'] p a,
     input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text], select{
         font-size: 12px !important;
@@ -3828,13 +3825,10 @@ body, button, input, select, textarea
     .contacts-index-index .buttons-set button.button{
         padding: 12px 21px;
     }
-
-
     #ajaxcartpro-add-confirm .confirm-right{
         font-size: 12px;
         padding-bottom: 15px;
     }
-
     #shopping-cart-table td a.product-image {
         padding: 0;
         margin: 0;
@@ -3887,6 +3881,10 @@ body, button, input, select, textarea
     }
     .checkout-cart-index .col-main {
         margin-bottom: 0;
+    }
+    #ajaxcartpro-add-confirm .confirm-right{
+        font-size: 12px;
+        padding-bottom: 15px;
     }
 
 }
