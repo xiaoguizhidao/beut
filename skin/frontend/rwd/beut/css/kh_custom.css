@@ -3723,6 +3723,17 @@ body, button, input, select, textarea
     .product-img-box .more-views {
         max-height: 100px;
     }
+    .checkout-cart-index .cart-crossell-title,
+    .slick-slider .slick-list{
+        max-width: 100%;
+        width: 100%;
+    }
+    .checkout-cart-index .cart-crossell-title {
+        text-align: center;
+    }
+    .checkout-cart-index .cart-crossell-title h2 br{
+        display: none;
+    }
 }
 @media only screen and (max-width: 767px) {
     .customer-account div.selector span,
