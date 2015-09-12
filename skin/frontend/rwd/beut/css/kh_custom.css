@@ -843,7 +843,7 @@ ul.brands li a {
 
 /*onestepcheckout*/
 .checkout-onepage-index .main{
-    margin: 26px 50px 70px;
+    margin: 26px 50px 10px;
 }
 .checkout-onepage-index .col-main{
     width: 100%;
@@ -1833,6 +1833,9 @@ ul.delivery-tabs li a{
 .footer .phone-footer-block, .footer a{
     font-size: 12px;
     text-transform: capitalize;
+}
+.footer .phone-footer-block span.email-contact {
+    text-transform: none!important;
 }
 .footer address{
     margin-top: 60px;
