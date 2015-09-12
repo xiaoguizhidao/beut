@@ -1018,7 +1018,7 @@ $j(document).ready(function () {
             var index = jQuery(this).index()/2;
             jQuery('.desktop-filter').children('dd').removeClass('current');
             jQuery('.desktop-filter').children('dd').eq(index).addClass('current');
-            jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 80);
+            jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 30);
             if($j(".filter-show").length) {
                 $j('.filter-show').css('margin-top',"-75px");
             }

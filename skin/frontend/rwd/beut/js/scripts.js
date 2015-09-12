@@ -642,9 +642,31 @@ jQuery(window).resize(function ($) {
 
 jQuery(document).ready(function ($) {
     if (jQuery(".customer-account-index.customer-account").length || jQuery(".customer-account-edit.customer-account").length ||
-        jQuery(".customer-address-form.customer-account").length || jQuery(".sales-order-history.customer-account").length
+        jQuery(".customer-address-form.customer-account").length || jQuery(".customer-address-index.customer-account").length ||  jQuery(".sales-order-history.customer-account").length
         || jQuery(".wishlist-index-index.customer-account").length || jQuery(".newsletter-manage-index.customer-account").length) {
-        var divAccount = "<div class='account-title-custom'><span>Dashboard</span></div>";
+
+        var titleDaskboard = "Dashboard";
+        if(jQuery(".customer-account-edit.customer-account").length) {
+            titleDaskboard = "ACCOUNT INFORMATION";
+        }
+        if( jQuery(".customer-address-index.customer-account").length) {
+            titleDaskboard = "Address Book";
+        }
+        if( jQuery(".customer-address-form.customer-account").length) {
+            titleDaskboard = "Address Book";
+        }
+        if( jQuery(".sales-order-history.customer-account").length) {
+            titleDaskboard = "My Orders";
+        }
+        if( jQuery(".wishlist-index-index.customer-account").length) {
+            titleDaskboard = "My Wishlist";
+        }
+        if( jQuery( jQuery(".newsletter-manage-index.customer-account").length)) {
+            titleDaskboard = "NEWSLETTER SUBSCRIPTION";
+        }
+
+        var divAccount = "<div class='account-title-custom'><span>"+titleDaskboard+"</span></div>";
+
         jQuery(divAccount).insertBefore(".col-left.sidebar.col-left-first");
         jQuery();
 
@@ -654,7 +676,7 @@ jQuery(document).ready(function ($) {
         jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","175px")
     }
     else {
-        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","130px");
+        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","135px");
     }
 
     if(jQuery(".catalog-category-view").length){

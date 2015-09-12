@@ -64,7 +64,9 @@
             <!--    <block type="catalogsearch/layer" name="catalogsearch.leftnav" as="sear_filter" after="currency" template="catalog/layer/view.phtml">
                     <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
                 </block>-->
-                <block type="amshopby/search_layer" name="amshopby.navleft" as="sear_filter" template="catalog/layer/view.phtml"/>
+                <block type="amshopby/search_layer" name="amshopby.navleft" as="sear_filter" template="catalog/layer/view.phtml">
+                    <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+                    </block>
 
                 <block type="catalog/product_list" name="search_result_list" template="catalog/product/list.phtml">
                     <block type="core/text_list" name="product_list.name.after" as="name.after" />
