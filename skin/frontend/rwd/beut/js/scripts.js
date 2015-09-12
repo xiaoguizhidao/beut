@@ -638,6 +638,16 @@ jQuery(window).resize(function ($) {
 			FEelementControl.equalHeight('.category-products .item');
 		}
 	}, 200);
+    if (jQuery(window).width() <= 767) {
+        if (jQuery(".contact-right").length) {
+            jQuery(".contact-right").css("pointer-events","none");
+        }
+    }
+    else {
+        if (jQuery(".contact-right").length) {
+            jQuery(".contact-right").css("pointer-events","inherit");
+        }
+    }
 });
 
 jQuery(document).ready(function ($) {
@@ -690,7 +700,16 @@ jQuery(document).ready(function ($) {
             jQuery(".filter-show").css("display", "none");
         }
     }
-
-
+    if (jQuery(window).width() <= 767) {
+        if (jQuery(".contact-right").length) {
+            jQuery(".contact-right").css("pointer-events","none");
+        }
+    }
+    else {
+        if (jQuery(".contact-right").length) {
+            jQuery(".contact-right").css("pointer-events","inherit");
+        }
+    }
 
 });
+

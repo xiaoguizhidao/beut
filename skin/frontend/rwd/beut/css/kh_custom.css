@@ -3748,6 +3748,7 @@ body, button, input, select, textarea
     body.customer-account .my-account .fieldset{
         margin-top: 10px;
     }
+
     .cms-page-view .std .founder img{
         width: 100%;
         margin: 0;
@@ -3778,4 +3779,5 @@ body, button, input, select, textarea
     .contacts-index-index .buttons-set button.button{
         padding: 12px 21px;
     }
+
 }
