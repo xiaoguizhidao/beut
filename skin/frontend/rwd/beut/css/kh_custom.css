@@ -2631,6 +2631,49 @@ div.block-layered-nav dd a.amshopby-attr{
 #wishlist-view-form .fieldset{
     width: 100%;
 }
+.sales-order-history .pager p.amount {
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.sales-order-history .pager > .count-container:after{
+    content: ""!important;
+}
+.sales-order-history #my-orders-table.data-table{
+    clear: both!important;
+}
+.sales-order-view.customer-account .my-account .title-buttons a, .sales-order-view.customer-account .my-account .title-buttons span.separator{
+    top:0px!important;
+}
+body, button, input, select, textarea
+.checkout-cart-index button, .checkout-cart-index input, .checkout-cart-index select, .checkout-cart-index textarea{
+    font-size: 16px!important;
+}
+.checkout-cart-index .cart-table h2{
+    font-size: 16px;
+}
+.checkout-cart-index .product-cart-info {
+    width: 30%;
+}
+.checkout-cart-index .subtotal {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.checkout-cart-index .box-up-sell{
+    padding: 20px 0;
+}
+.checkout-cart-index .cart-crossell-title{
+    float:left;
+    padding-right: 20px;
+    max-width: 255px;
+    text-align: right;
+}
+.checkout-cart-index .box-up-sell h2{
+    margin-bottom: 10px;
+}
+.checkout-cart-index .slick-track{
+    margin-left: 0px;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;

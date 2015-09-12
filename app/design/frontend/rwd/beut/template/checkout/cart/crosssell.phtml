@@ -31,9 +31,14 @@
  * @see Mage_Checkout_Block_Cart_Crosssell
  */
 ?>
-<?php if($this->getItemCount()): ?>
+<?php
+
+if($this->getItemCount()): ?>
     <div class="box-collateral box-up-sell">
-        <h2><?php echo $this->__('You may also like')?></h2>
+        <div class="cart-crossell-title">
+            <h2><?php echo $this->__('You may <br/> also like')?></h2>
+            <p>Here is a selection of products we think you will love!</p>
+        </div>
         <div id="upsell-product-table" class="container">
             <div class="row" id="lightSlider">
                 <?php foreach ($this->getItems() as $_item): ?>
@@ -45,8 +50,8 @@
                         <h3 class="product-name"><a href="<<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a></h3>
                         <?php echo $this->getPriceHtml($_item, true) ?>
                     </div>
-
                 <?php endforeach; ?>
+
             </div>
         </div>
 
