@@ -14,6 +14,12 @@ input {
   content: "";
   overflow: hidden;
 }
+.show-for-mobile {
+    display: none !important;
+}
+.show-for-desktop {
+    display: block !important;
+}
 .currency.custom-service img {
     height: 26px;
     margin-top: 0 !important;
@@ -2317,9 +2323,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .upsell-product-table{
     margin-bottom: 30px;
 }
-.show-for-mobile {
-    display: none;
-}
+
 /*.customer-account .main-container{
     padding-left: 100px;
     padding-right: 100px;
@@ -3369,10 +3373,7 @@ body, button, input, select, textarea
         padding-left: 20px;
         padding-right: 20px;
     }
-    .cms-page-view .std .founder img{
-        width: 100%;
-        margin: 0;
-    }
+
     .slick-prev:before, .slick-next:before{
         opacity: 1;
     }
@@ -3484,33 +3485,7 @@ body, button, input, select, textarea
     .page-not-found .pnf-button{
         width: 35px;
     }
-    .cms-page-view .std .founder img,
-    .founder figure{
-        width: 100%;
-    }
 
-    .founder figure .detail{
-        position: relative;
-        transform: inherit;
-        -webkit-transform: inherit;
-        -ms-transform: inherit;
-        -o-transform: inherit;
-        -moz-transform: inherit;
-    }
-    .cms-brand .skip-cms{
-        position: absolute;
-        top: 50%;
-        right: 0;
-    }
-    input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text]{
-        height: 26px;
-    }
-    .contacts-index-index #contactForm .input-box{
-        margin-bottom: 15px;
-    }
-    .contacts-index-index .buttons-set button.button{
-        padding: 12px 21px;
-    }
     .customer-account-login .account-login{
         padding-top: 50px;
     }
@@ -3566,7 +3541,13 @@ body, button, input, select, textarea
         margin-left: 0;
     }
     #narrow-by-list{
-        width: 100% !important;
+        width: 80% !important;
+        border: 1px solid red;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow-y: auto;
     }
     .catalog-breadcrumbs{
         margin-top: 0 !important;
@@ -3628,7 +3609,10 @@ body, button, input, select, textarea
         width: 100%;
     }
     .show-for-mobile {
-        display: block;
+        display: block !important;
+    }
+    .show-for-desktop{
+        display: none !important;
     }
     .faqs-content {
         padding: 20px 15px 50px;
@@ -3752,6 +3736,37 @@ body, button, input, select, textarea
     }
     body.customer-account .my-account .fieldset{
         margin-top: 10px;
+    }
+
+    .cms-page-view .std .founder img{
+        width: 100%;
+        margin: 0;
+    }
+    .founder figure{
+        width: 100%;
+    }
+
+    .founder figure .detail{
+        position: relative;
+        transform: inherit;
+        -webkit-transform: inherit;
+        -ms-transform: inherit;
+        -o-transform: inherit;
+        -moz-transform: inherit;
+    }
+    .cms-brand .skip-cms{
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+    input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text]{
+        height: 26px;
+    }
+    .contacts-index-index #contactForm .input-box{
+        margin-bottom: 15px;
+    }
+    .contacts-index-index .buttons-set button.button{
+        padding: 12px 21px;
     }
 
 }

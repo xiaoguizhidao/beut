@@ -28,7 +28,7 @@ var FEelementControl = {
 		});
 	},
 	calcRowHeight: function(){
-		if($j(window).width() > 980){
+		if($j(window).width() > 767){
 			if($j('.row2').length > 0){
 				$j('.row2').height($j(window).width()*0.4);
 				$j('.row2 .item img').each(function(){
@@ -50,9 +50,9 @@ var FEelementControl = {
 				$j('.row2,.item img').removeAttr('style');
 			}
 			if($j('.row4').length > 0){
-			//	this.equalHeight('.row4 .item');
-				var rItem = $j('.right-item').height();
-				$j('.row4 .item:first-child').height(rItem);
+				var rItem = $j('.right-item img').height();
+				$j('.row4').height(rItem);
+				//$j('.row4 .item:first-child').height(rItem);
 				var realHeight = $j('.row4 .content').height(),
 					aHeight =  rItem*0.3;
 				if(realHeight > aHeight){
@@ -397,7 +397,7 @@ var FEelementControl = {
 		if($j('.product-options dd select').length > 0){
 			$j('.product-options dd select').uniform();
 		}
-		$j('.my-account #country').uniform();
+		$j('.my-account #country,.shipping-country #country').uniform();
 	},
 	prodSlide: function(){
 		$j('.prod-slide').slick({

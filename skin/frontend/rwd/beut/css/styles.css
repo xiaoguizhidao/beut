@@ -5442,7 +5442,7 @@ body {
    * Social icons
    */
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 39, ../scss/layout/_footer.scss */
   .footer {
     font-size: 10px;
@@ -5456,7 +5456,7 @@ body {
   max-width: 175px;
   float: right;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 49, ../scss/layout/_footer.scss */
   .footer table {
     font-size: 10px;
@@ -5477,7 +5477,7 @@ body {
   font-size: 13px;
   line-height: 1.7;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 65, ../scss/layout/_footer.scss */
   .footer a {
     text-align: center;
@@ -5526,7 +5526,7 @@ body {
   font-weight: normal;
   font-size: 16px;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 106, ../scss/layout/_footer.scss */
   .footer .title {
     text-align: center;
@@ -5538,7 +5538,7 @@ body {
   display: block;
   margin-bottom: 22px;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 118, ../scss/layout/_footer.scss */
   .footer .phone-footer-block p {
     text-align: center;
@@ -5766,7 +5766,7 @@ body {
   float: none;
   margin: 0 auto 30px auto;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
   /* line 319, ../scss/layout/_footer.scss */
   .footer .form-language,
   .footer .currency-switcher {
