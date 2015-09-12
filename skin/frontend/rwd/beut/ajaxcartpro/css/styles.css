@@ -165,21 +165,35 @@
     z-index: 1001 !important;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and  (max-width: 980px) {
     #ajaxcartpro-add-confirm, #ajaxcartpro-remove-confirm {
-        max-width: 300px;
-        min-width: 250px;
         left: 0 !important;
         right: 0;
         margin: auto;
+        width: 320px!important;
+        min-width: 320px!important;
     }
     .aw-acp-continue, .aw-acp-checkout, .aw-acp-continue:hover, .aw-acp-checkout:hover {
-        font-size: 8px;
+        font-size: 10px;
         width: auto;
         padding-left: 10px;
         padding-right: 10px;
     }
-    #ajaxcartpro-progress {
-
+    .aw-acp-continue ,.aw-acp-checkout{
+        float: left;
+        height: auto!important;
+        margin-left: 0px!important;
+        padding: 5px 15px!important;
+        width: auto;
+        border:1px solid #cccccc;
+        margin-left: 0px !important;
+        margin-right: 5px !important;
+        transition: all 0.25ms ease;
+        -webkit-transition: all 0.25ms ease;
+        -moz-transition: all 0.25ms ease;
+        -ms-transition: all 0.25ms ease;
+        -o-transition: all 0.25ms ease;
+        text-transform: uppercase;
     }
+
 }

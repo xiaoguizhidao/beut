@@ -587,6 +587,25 @@ var FEelementControl = {
 			}
 		});
 	}
+	},
+    disableZoomDragMobile: function(){
+        if (jQuery(window).width() <= 767) {
+            if (jQuery(".contact-right").length) {
+                jQuery(".contact-right").css("pointer-events","none");
+            }
+            if(jQuery("#amasty_zoom").length) {
+                jQuery("#amasty_zoom").css("pointer-events","none");
+            }
+        }
+        else {
+            if (jQuery(".contact-right").length) {
+                jQuery(".contact-right").css("pointer-events","inherit");
+            }
+            if(jQuery("#amasty_zoom").length) {
+                jQuery("#amasty_zoom").css("pointer-events","inherit");
+            }
+        }
+    }
 };
 
 jQuery(document).ready(function ($) {
@@ -611,7 +630,9 @@ jQuery(document).ready(function ($) {
     FEelementControl.scroll();
 	FEelementControl.stickyTop(skinUrl);
 	FEelementControl.countryChange();
+    FEelementControl.disableZoomDragMobile();
 //	FEelementControl.equalHeight('.category-products .item');
+
 });
 jQuery(window).load(function($){
 	FEelementControl.calcRowHeight();
@@ -620,6 +641,7 @@ jQuery(window).load(function($){
 	jQuery('#leSlide .loading').fadeOut();
 	FEelementControl.equalHeight('.category-products .item');
 	FEelementControl.aboutEqualHeight();
+    FEelementControl.disableZoomDragMobile();
 });
 
 // Done Resize
@@ -646,18 +668,10 @@ jQuery(window).resize(function ($) {
 			FEelementControl.aboutEqualHeight();
 			FEelementControl.scroll();
 			FEelementControl.equalHeight('.category-products .item');
+            FEelementControl.disableZoomDragMobile();
 		}
 	}, 200);
-    if (jQuery(window).width() <= 767) {
-        if (jQuery(".contact-right").length) {
-            jQuery(".contact-right").css("pointer-events","none");
-        }
-    }
-    else {
-        if (jQuery(".contact-right").length) {
-            jQuery(".contact-right").css("pointer-events","inherit");
-        }
-    }
+
 });
 
 jQuery(document).ready(function ($) {
@@ -710,16 +724,7 @@ jQuery(document).ready(function ($) {
             jQuery(".filter-show").css("display", "none");
         }
     }
-    if (jQuery(window).width() <= 767) {
-        if (jQuery(".contact-right").length) {
-            jQuery(".contact-right").css("pointer-events","none");
-        }
-    }
-    else {
-        if (jQuery(".contact-right").length) {
-            jQuery(".contact-right").css("pointer-events","inherit");
-        }
-    }
+
 
 });
 

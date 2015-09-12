@@ -844,7 +844,7 @@ ul.brands li a {
 
 /*onestepcheckout*/
 .checkout-onepage-index .main{
-    margin: 26px 50px 70px;
+    margin: 26px 50px 10px;
 }
 .checkout-onepage-index .col-main{
     width: 100%;
@@ -1860,6 +1860,9 @@ ul.delivery-tabs li a{
     font-size: 12px;
     text-transform: capitalize;
 }
+.footer .phone-footer-block span.email-contact {
+    text-transform: none!important;
+}
 .footer address{
     margin-top: 60px;
     padding: 30px 15px;
@@ -1927,7 +1930,7 @@ ul.delivery-tabs li a{
 }
 .confirm-right {
     float: left;
-    margin-top: 30px;
+    margin-top: 0px;
     text-align: left;
     width: 190px;
 }
@@ -3691,7 +3694,7 @@ body, button, input, select, textarea
 
     }
     .special-price .price{
-        font-size: 16px!important;
+
         color: black!important;
     }
     .catalog-product-view .breadcrumbs{
@@ -3877,4 +3880,8 @@ body, button, input, select, textarea
         margin-bottom: 0;
     }
 
+    #ajaxcartpro-add-confirm .confirm-right{
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
 }
