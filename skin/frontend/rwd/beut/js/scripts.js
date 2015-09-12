@@ -643,7 +643,7 @@ jQuery(window).resize(function ($) {
 jQuery(document).ready(function ($) {
     if (jQuery(".customer-account-index.customer-account").length || jQuery(".customer-account-edit.customer-account").length ||
         jQuery(".customer-address-form.customer-account").length || jQuery(".customer-address-index.customer-account").length ||  jQuery(".sales-order-history.customer-account").length
-        || jQuery(".wishlist-index-index.customer-account").length || jQuery(".newsletter-manage-index.customer-account").length) {
+        || jQuery(".wishlist-index-index.customer-account").length || jQuery(".newsletter-manage-index.customer-account").length || jQuery(".sales-order-view.customer-account").length) {
 
         var titleDaskboard = "Dashboard";
         if(jQuery(".customer-account-edit.customer-account").length) {
@@ -661,8 +661,11 @@ jQuery(document).ready(function ($) {
         if( jQuery(".wishlist-index-index.customer-account").length) {
             titleDaskboard = "My Wishlist";
         }
-        if( jQuery( jQuery(".newsletter-manage-index.customer-account").length)) {
+        if( jQuery(".newsletter-manage-index.customer-account").length) {
             titleDaskboard = "NEWSLETTER SUBSCRIPTION";
+        }
+        if(jQuery(".sales-order-view.customer-account").length) {
+            titleDaskboard = "My Orders";
         }
 
         var divAccount = "<div class='account-title-custom'><span>"+titleDaskboard+"</span></div>";
