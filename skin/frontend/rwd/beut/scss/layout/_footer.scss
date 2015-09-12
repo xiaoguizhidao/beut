@@ -42,7 +42,7 @@
     padding: 55px 40px 15px;
     background: $c-footer;
     color: $white;
-    @include bp(max-width, $bp-medium) {
+    @include bp(max-width, $bp-mobile) {
         font-size: 10px;
         padding: 30px 30px 20px;
     }
@@ -51,7 +51,7 @@
         color: $white;
         max-width: 175px;
         float: right;
-        @include bp(max-width, $bp-medium) {
+        @include bp(max-width, $bp-mobile) {
             font-size: $f-size-xxs - 1;
             float: none;
             margin-right: auto;
@@ -67,7 +67,7 @@
         text-decoration: none;
         font-size: $f-size-s;
         line-height: 1.7;
-        @include bp(max-width,$bp-medium){
+        @include bp(max-width,$bp-mobile){
             text-align: center;
             display: block;
         }
@@ -109,7 +109,7 @@
         margin-bottom: 25px;
         font-weight: normal;
         font-size: $f-size-xl;
-        @include bp(max-width, $bp-medium){
+        @include bp(max-width, $bp-mobile){
             text-align: center;
             margin-bottom: 10px;
         }
@@ -118,7 +118,7 @@
         p{
             display: block;
             margin-bottom: 22px;
-            @include bp(max-width, $bp-medium) {
+            @include bp(max-width, $bp-mobile) {
                 text-align: center;
                 margin-bottom: 8px;
                 a{
@@ -313,7 +313,7 @@
         margin: 0 auto $trim auto;
     }
 
-    @include bp(max-width, $bp-medium) {
+    @include bp(max-width, $bp-mobile) {
         $links-trim: percentage(15px / 480px);
         $links-width: (100 - $links-trim) / 2;
         .form-language,
