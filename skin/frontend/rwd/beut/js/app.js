@@ -1018,10 +1018,8 @@ $j(document).ready(function () {
             var index = jQuery(this).index()/2;
             jQuery('.desktop-filter').children('dd').removeClass('current');
             jQuery('.desktop-filter').children('dd').eq(index).addClass('current');
-            jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 30);
-            if($j(".filter-show").length) {
-                $j('.filter-show').css('margin-top',"-75px");
-            }
+           // jQuery('.catalog-breadcrumbs').css('margin-top',jQuery(this).next('dd').height() + 30);
+            updateFilterState();
             if(jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol li').length < 4){
                 jQuery('.block-layered-nav .block-content.accordion-open > dl > dd.current ol').addClass('no-column');
             }
@@ -1029,7 +1027,19 @@ $j(document).ready(function () {
                 jQuery('.catalog-breadcrumbs').removeAttr('style');
             }
         });
-    })
+    });
+
+
+
+    jQuery(window).bind('resize', function(e){
+        window.resizeEvt;
+        jQuery(window).resize(function(){
+            clearTimeout(window.resizeEvt);
+            window.resizeEvt = setTimeout(function(){
+                updateFilterState();
+            }, 250);
+        });
+    });
 
     // ==============================================
     // Layered Navigation Block
@@ -1360,7 +1370,20 @@ var ProductMediaManager = {
         $j(document).trigger('product-media-loaded', ProductMediaManager);
     }
 };
-
+function updateFilterState(){
+    if(jQuery(".mobile-filter.current").length) {
+        jQuery('.catalog-breadcrumbs').css('margin-top', jQuery(".mobile-filter.current").height() + 35);
+        if ($j(".filter-show").length) {
+            $j('.filter-show').css('margin-top', "-30px");
+        }
+    }
+    else {
+        jQuery('.catalog-breadcrumbs').css('margin-top',0);
+        if ($j(".filter-show").length) {
+            $j('.filter-show').css('margin-top', "-25px");
+        }
+    }
+}
 $j(document).ready(function() {
     ProductMediaManager.init();
 });

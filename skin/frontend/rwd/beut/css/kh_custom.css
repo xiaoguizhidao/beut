@@ -2358,9 +2358,11 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     padding-right: 100px;
 }*/
 .filter-show {
-    padding: 5px 50px 20px;
-
+    background: #f7f8f9 none repeat scroll 0 0;
+    float: left;
     margin-top: -25px;
+    padding: 5px 50px 10px;
+    width: 100%;
 }
 .filter-show .block-subtitle {
     float: left;
