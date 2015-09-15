@@ -2676,10 +2676,10 @@ div.block-layered-nav dd a.amshopby-attr{
 .sales-order-view.customer-account .my-account .title-buttons a, .sales-order-view.customer-account .my-account .title-buttons span.separator{
     top:0px!important;
 }
-body, button, input, select, textarea
+/*body, button, input, select, textarea
 .checkout-cart-index button, .checkout-cart-index input, .checkout-cart-index select, .checkout-cart-index textarea{
-    font-size: 16px!important;
-}
+    font-size: 16px;
+}*/
 .checkout-cart-index .cart-table h2{
     font-size: 16px;
 }
