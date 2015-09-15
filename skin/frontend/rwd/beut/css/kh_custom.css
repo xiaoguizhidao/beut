@@ -2562,12 +2562,12 @@ div.block-layered-nav dd a.amshopby-attr{
     z-index: 0!important;
 }
 .cms-delivery .lev1 li {
-    list-style: outside none square;
+    list-style: square;
     margin: 10px 0 0 -10px;
     padding: 0 0 0 10px;
 }
 .cms-delivery .lev2 li {
-    list-style: outside none circle;
+    list-style: circle;
     margin: 10px 0 10px 30px;
     padding: 0 0 0 10px;
 }
