@@ -960,8 +960,12 @@ $j(document).ready(function () {
             groups[i].filter(':last').addClass('last');
         }
 
-        function toggleClasses(clickedItem, group) {
-            var index = group.index(clickedItem);
+        function toggleClasses(clickedItem, group,isFilter) {
+            if(isFilter == 1) {
+                var index = group.index(clickedItem) -1;
+            }else {
+                var index = group.index(clickedItem);
+            }
             var i;
             for (i = 0; i < groups.length; i++) {
                 groups[i].removeClass('current');
@@ -979,20 +983,7 @@ $j(document).ready(function () {
             } else {
                 //They're clicking something new. Reflect the explicit user interaction.
                 wrapper.addClass('accordion-open');
-                toggleClasses(jQuery(this), dts);
-                if(jQuery(".catalog-product-view").length > 0 ){
-                    //jQuery("dd.current").niceScroll(".scrollbar-inner",{cursorcolor:"#999",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});
-                    jQuery('dd.current').niceScroll({
-                        cursorborder: "",
-                        autohidemode: false,
-                        boxzoom: false,
-                        cursorfixedheight: 10,
-                        cursorwidth: 10,
-                        cursorcolor: "#999",
-                        cursorborderradius: '50%'
-                    });
-
-                }
+                toggleClasses(jQuery(this), dts,1);
             }
           //  toggleClasses(jQuery(this), dts);
         });
@@ -1000,7 +991,7 @@ $j(document).ready(function () {
         //Toggle on tab (li) click.
         if (hasTabs) {
             lis.on('click', function (e) {
-                toggleClasses(jQuery(this), lis);
+                toggleClasses(jQuery(this), lis,0);
             });
             //Open the first tab.
             lis.eq(0).trigger('click');

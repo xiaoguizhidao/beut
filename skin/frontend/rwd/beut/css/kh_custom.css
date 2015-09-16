@@ -3576,12 +3576,20 @@ div.block-layered-nav dd a.amshopby-attr{
     }
     #narrow-by-list{
         width: 80% !important;
-        border: 1px solid red;
         position: fixed;
         left: 0;
         top: 0;
         height: 100%;
         overflow-y: auto;
+    }
+    #narrow-by-list #narrow-by-list:after {
+        content: '';
+        position: relative;
+        float: right;
+        width: 20px;
+        height: 20px;
+        background: url(../images/close.png) no-repeat 0 0;
+        background-size: 100%;
     }
     .catalog-breadcrumbs{
         margin-top: 0 !important;
