@@ -744,7 +744,7 @@ $j(document).ready(function () {
             if(skipLinks.hasClass('skip-currency')){
                 skipLinks.parents('.currency').addClass('isOpen');
             }
-            if(skipLinks.hasClass('skip-search')){
+            if(target === '#header-search'){
                 skipLinks.parents('.page-header').addClass('isActive');
                 //skipLinks.prev().prev('.logo-large').children('.large').attr("src", skinUrl+"images/logo3.png");
             }

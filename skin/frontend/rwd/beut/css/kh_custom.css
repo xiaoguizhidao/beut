@@ -2708,6 +2708,9 @@ div.block-layered-nav dd a.amshopby-attr{
 .cart-table .cart-links > li > a {
     color: #000;
 }
+.overlay-menu .page-header.isActive .page-header-container{
+    background: #fff;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
