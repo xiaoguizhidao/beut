@@ -110,6 +110,17 @@ input {
 .cms-index-noroute #newsletter-container{
     display: none;
 }
+.cms-no-route .main{
+    /* background: url("../images/404-bg.png");*/
+    width: 100%;
+    min-height: 720px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background: #fafcff
+}
+.cms-no-route #newsletter-container{
+    display: none;
+}
 .page-not-found{
     margin: auto;
     padding-top: 125px;
@@ -186,13 +197,20 @@ input {
     float: left;
     margin: auto;
     text-align: center;
-    padding-left: 5%;
+    paddingg-left: 50px;
+    width: 50%;
+}
+.pnf-right {
+    float: right;
+    margin: auto;
+    text-align: center;
+    padding-right: 50px;
+    width: calc(50%);
 }
 .pnf-right img {
     padding-top: 150px;
     width: 94%!important;
     text-align: left;
-    float: left;
 }
 /*Login page*/
 .customer-account-login .main,
@@ -1860,9 +1878,7 @@ ul.delivery-tabs li a{
     font-size: 12px;
     text-transform: capitalize;
 }
-.footer .phone-footer-block span.email-contact {
-    text-transform: none!important;
-}
+
 .footer address{
     margin-top: 60px;
     padding: 30px 15px;
@@ -2513,7 +2529,7 @@ div.block-layered-nav dd a.amshopby-attr{
 }
 .product-options dd select.no-display
 {
-    display: none!important;
+   display: none!important;
 }
 .product-detail-description{
     font-size: 14px;
@@ -2710,6 +2726,14 @@ div.block-layered-nav dd a.amshopby-attr{
 }
 .overlay-menu .page-header.isActive .page-header-container{
     background: #fff;
+}
+span.unstyled{
+    font-style: normal!important;
+    text-transform: none!important;
+}
+.cms-no-route .skip-search{
+    border: 1px solid #000;
+    background-position: 10px -37px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
@@ -3074,6 +3098,8 @@ div.block-layered-nav dd a.amshopby-attr{
     .product-brand,
     .products-grid .price-box,
     .faqs-top p,
+    .old-price .price,
+    .special-price .price,
     div[class^='brand-col-'] p a,
     input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text], select{
         font-size: 12px !important;
@@ -3899,5 +3925,4 @@ div.block-layered-nav dd a.amshopby-attr{
         font-size: 12px;
         padding-bottom: 15px;
     }
-
 }
