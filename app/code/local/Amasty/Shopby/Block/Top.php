@@ -137,6 +137,21 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
             return parent::_prepareLayout();
         }
 
+		$hasCanonical = !Mage::helper('amshopby')->isVersionLessThan(1, 4);
+        if ($hasCanonical){
+            $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
+
+            $head = $this->getLayout()->getBlock('head');
+            //remove canonical URL for the categories starting from CE 1.4.x
+            $head->removeItem('link_rel', $url);
+
+            $isShopby = in_array(Mage::app()->getRequest()->getModuleName(), array(Mage::getStoreConfig('amshopby/seo/key'), 'amshopby'));
+            if ($isShopby){
+                $url = '';
+            }
+            $head->addLinkRel('canonical', Mage::helper('amshopby/url')->getCanonicalUrl($url));
+        }
+		
         $robotsIndex  = 'index';
         $robotsFollow = 'follow';
 
