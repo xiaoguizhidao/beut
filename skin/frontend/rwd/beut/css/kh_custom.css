@@ -3246,9 +3246,10 @@ span.unstyled{
 
     ul.brands {
         text-align: center;
+        padding-top: 30px;
     }
     ul.brands li {
-        margin: 0 5px;
+        margin: 0 3px;
         font-weight: bold;
     }
     .contact-block{
@@ -3742,7 +3743,7 @@ span.unstyled{
     }
 
     ul.brands li a{
-        font-size: 8px;
+        font-size: 13px;
     }
 
     .brand-col-1 p strong, .brand-col-2 p strong, .brand-col-3 p strong, .brand-col-4 p strong, .brand-col-5 p strong{
@@ -3924,5 +3925,8 @@ span.unstyled{
     #ajaxcartpro-add-confirm .confirm-right{
         font-size: 12px;
         padding-bottom: 15px;
+    }
+    .category-designers .page-title h1{
+        display: none;
     }
 }
