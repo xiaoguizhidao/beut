@@ -2735,7 +2735,16 @@ span.unstyled{
     border: 1px solid #000;
     background-position: 10px -37px;
 }
-
+.close-nav {
+    background: rgba(0, 0, 0, 0) url("../images/close.png") no-repeat scroll right top / 15px auto;
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    z-index: 1000;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
