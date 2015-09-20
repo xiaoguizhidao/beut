@@ -770,5 +770,12 @@ jQuery(document).ready(function ($) {
             }
         }
     }
+
+    jQuery(".close.skip-link-close").click(function()
+    {
+       if(jQuery("#narrow-by-list").length) {
+           jQuery("#narrow-by-list").addClass("no-display");
+       }
+    });
 });
 
