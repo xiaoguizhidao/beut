@@ -78,8 +78,8 @@ endif;
                 <?php if($this->canShowOptions()): ?>
                     <p class="block-subtitle block-subtitle--filter"><?php echo $this->__('Filter'); ?></p>
                     <dl id="narrow-by-list" class="no-display">
+                        <a class="close skip-link-close" href="#" title="Close"></a>
                         <dt class="show-for-mobile">Filter
-                            <a class="close skip-link-close" href="#" title="Close"></a>
                         </dt>
                         <?php $options = "";?>
                         <?php $_filters = $this->getFilters() ?>
