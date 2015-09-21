@@ -535,6 +535,9 @@ $productsGridActionHeight: 50px;
         > dl > dd.current{
             display: block;
             position: absolute;
+            @include bp(max-width, $bp-medium) {
+                position: relative;
+            }
             background-color: #fff;
             left: -100px;
             top: 41px;
