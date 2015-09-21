@@ -3095,7 +3095,7 @@ div.block-layered-nav dd a.amshopby-attr{
     h2.product-name a,
     div#ewcm_container,
     .category-designers p a{
-        font-size: 10px;
+        font-size: 10px !important;
     }
     .breadcrumbs li:before,
     .breadcrumbs a{

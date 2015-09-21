@@ -963,14 +963,25 @@ $j(document).ready(function () {
         function toggleClasses(clickedItem, group,isFilter) {
             if(isFilter == 1) {
                 var index = group.index(clickedItem) -1;
+                var i;
+                for (i = 0; i < groups.length; i++) {
+                    groups[i].removeClass('current');
+                    if(i === 1) {
+                        groups[i].eq(index).addClass('current');
+                    } else {
+                        groups[i].eq(index + 1).addClass('current');
+                    }
+                }
             }else {
                 var index = group.index(clickedItem);
+                var i;
+                for (i = 0; i < groups.length; i++) {
+                    groups[i].removeClass('current');
+                    groups[i].eq(index).addClass('current');
+                    console.log(index);
+                }
             }
-            var i;
-            for (i = 0; i < groups.length; i++) {
-                groups[i].removeClass('current');
-                groups[i].eq(index).addClass('current');
-            }
+
         }
 
         //Toggle on tab (dt) click.
