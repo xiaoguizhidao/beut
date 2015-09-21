@@ -891,6 +891,8 @@ ul.brands li a {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
+    width: 100%;
+    float: left;
 }
 .amscheckout-login input.input-text, .amscheckout input.input-text{
     border-radius: 0;
@@ -2972,7 +2974,16 @@ span.unstyled{
     body.overlay-menu.ewcm-show .main-container.col1-layout {
         margin-top: 6px;
     }
-
+    .checkout-onepage-index .first-column > div,
+    .checkout-onepage-index .second-column .step-2,
+    .checkout-onepage-index .second-column .step-3,
+    .checkout-onepage-index .third-column > div{
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        float: left;
+    }
 }
 
 @media only screen and (max-width: 980px) {
