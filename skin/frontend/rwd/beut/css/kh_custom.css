@@ -2460,7 +2460,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .row5 .item {
     position: relative;
     overflow: hidden;
-    padding-left: 10px;
+    padding-left: 10px!important;
     color: #bbbbbb;
 }
 /* line 190, ../scss/content/_home.scss */
@@ -2983,6 +2983,12 @@ span.unstyled{
         margin-bottom: 20px;
         width: 100%;
         float: left;
+    }
+    .main-container.col1-layout, .checkout-cart-index, .category-designers .main-container.col1-layout{
+        margin-top: 0px;
+    }
+    .white-menu .main{
+        margin-top: 75px;
     }
 }
 
