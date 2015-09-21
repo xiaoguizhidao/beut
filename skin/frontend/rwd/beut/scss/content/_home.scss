@@ -99,10 +99,16 @@ body.overlay-menu {
     .block2{
         padding-left: 0;
         padding-right: 5px;
+        @include bp(max-width, $bp-medium) {
+            padding-right: 1px;
+        }
     }
     .block3{
         padding-right: 0;
         padding-left: 5px;
+        @include bp(max-width, $bp-medium) {
+            padding-left: 1px;
+        }
     }
 }
 .hot-prod{
@@ -198,6 +204,9 @@ body.overlay-menu {
         overflow: hidden;
         padding-left: 10px;
         color: $white;
+        @include bp(max-width, $bp-medium) {
+            padding-left: 2px;
+        }
         @include bp(min-width, $bp-mobile) {
             .absolute-block{
                 @include absolute-block;
@@ -264,11 +273,13 @@ body.overlay-menu {
         height: 100%;
         .block2{
             padding-left: 0;
-            padding-right: 5px;
         }
         .block3{
             padding-right: 0;
-            padding-left: 5px;
+            padding-left: 10px;
+            @include bp(max-width, $bp-medium) {
+                padding-left: 2px;
+            }
         }
     }
     .item{
