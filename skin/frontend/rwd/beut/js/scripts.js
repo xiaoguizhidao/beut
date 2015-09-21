@@ -689,6 +689,7 @@ var DoneResize = {
 
 var resize = 0;
 jQuery(window).resize(function ($) {
+    calCulateMagintop();
 	var _self = $j(this);
 	resize++;
 	setTimeout(function () {
@@ -709,6 +710,25 @@ jQuery(window).resize(function ($) {
 	}, 200);
 
 });
+
+function calCulateMagintop(){
+    if(jQuery("#ewcm_container").length && jQuery("#ewcm_container").css("display") !="none" ){
+        if(jQuery(window).width() > 767 && jQuery(window).width() < 1025) {
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "125px")
+        }
+        else {
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "175px")
+        }
+    }
+    else {
+        if(jQuery(window).width() > 767 && jQuery(window).width() < 1025) {
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "70px")
+        }
+        else {
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "135px")
+        }
+    }
+}
 
 jQuery(document).ready(function ($) {
     if (jQuery(".customer-account-index.customer-account").length || jQuery(".customer-account-edit.customer-account").length ||
@@ -744,13 +764,8 @@ jQuery(document).ready(function ($) {
         jQuery();
 
     }
+    calCulateMagintop();
 
-    if(jQuery("#ewcm_container").length && jQuery("#ewcm_container").css("display") !="none" ){
-        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","175px")
-    }
-    else {
-        jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top","135px");
-    }
 
     if(jQuery(".catalog-category-view").length){
         if(jQuery(".filter-show .currently").length) {
