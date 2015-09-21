@@ -347,7 +347,7 @@
     width: 20%;
 }
 .amscheckout-data-table tr th.prod-name{
-    width: 65%;
+    width: 55%;
 }
 .amscheckout-data-table tr td.a-center{
     text-align: center;
@@ -357,6 +357,8 @@
 }
 .amscheckout-data-table tr td.prod-qty{
     width: 10%;
+    font-size: 12px;
+    font-family: neuton-regular;
 }
 .amscheckout-data-table tr th:last-child{
     padding-right: 10px;
@@ -394,7 +396,7 @@
 }
 .amscheckout-data-table tr.subtotal td,
 .amscheckout-data-table tr.subtotal td .price{
-    font-size: 32px;
+    font-size: 20px;
     font-family: 'futura-medium';
 }
 
@@ -456,6 +458,7 @@
 .amscheckout .product-name img{
     float: left;
     padding-right: 5px;
+    padding-bottom: 5px;
 } 
 .amscheckout .product-name{
     line-height: 16px;
@@ -588,7 +591,11 @@ spiner
     clear: both;
     width: 100%;
 }
-
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .amscheckout-data-table tr th:last-child{
+        padding-right: 0px;
+    }
+}
 @media only screen and (max-width: 767px) {
     .amscheckout .three-columns .first-column,
     .amscheckout .three-columns .second-column,

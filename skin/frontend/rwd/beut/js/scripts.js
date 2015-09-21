@@ -78,8 +78,15 @@ var FEelementControl = {
 	stickyTop: function(skinUrl){
 		var normal = 1;
 		if($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0 ) {
-			$j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
-			normal = 0;
+			if($j('.cms-no-route').length){
+                normal = 1;
+                $j('body').addClass('white-menu');
+                normal = 1;
+            }
+            else {
+                $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                normal = 0;
+            }
 		}else{
 			$j('body').addClass('white-menu');
 			normal = 1;
@@ -114,8 +121,14 @@ var FEelementControl = {
 
                     if (normal ==0 ) {
                         if ($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0) {
-                            $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
-                            normal = 0;
+                            if($j('.cms-no-route').length){
+                                normal = 1;
+                                $j('body').addClass('white-menu');
+                            }
+                            else {
+                                $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                                normal = 0;
+                            }
                         } else {
                             normal = 1;
                         }
@@ -141,8 +154,14 @@ var FEelementControl = {
 					}
                     if (normal ==0 ) {
                         if ($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0) {
-                            $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
-                            normal = 0;
+                            if($j('.cms-no-route').length){
+                                $j('body').addClass('white-menu');
+                                normal = 1;
+                            }
+                            else {
+                                $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                                normal = 0;
+                            }
                         } else {
                             normal = 1;
                         }
@@ -183,8 +202,14 @@ var FEelementControl = {
 				}
                 if (normal ==0 ) {
                     if ($j('.cms-home').length > 0 || ($j('.catalog-category-view').length > 0 && !$j('body').hasClass('category-designers')) || $j('.cms-about-us').length > 0 || $j('.cms-delivery').length > 0) {
-                        $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
-                        normal = 0;
+                        if($j('.cms-no-route').length){
+                            $j('body').addClass('white-menu');
+                            normal = 1;
+                        }
+                        else {
+                            $j('.cms-home, .catalog-category-view, .cms-about-us, .cms-delivery').addClass('overlay-menu');
+                            normal = 0;
+                        }
                     } else {
                         normal = 1;
                     }
@@ -399,7 +424,12 @@ var FEelementControl = {
 	},
 	prodSelectBox: function(){
 		if($j('.product-options dd select').length > 0){
-			$j('.product-options dd select').uniform();
+            var elmClassName = $j('.product-options dd select').attr("class");
+            if(elmClassName.indexOf("no-display")>=0){
+            }
+            else {
+                $j('.product-options dd select').uniform();
+            }
 		}
 		$j('.my-account #country,.shipping-country #country').uniform();
 	},
@@ -740,5 +770,12 @@ jQuery(document).ready(function ($) {
             }
         }
     }
+
+    jQuery(".close.skip-link-close").click(function()
+    {
+       if(jQuery("#narrow-by-list").length) {
+           jQuery("#narrow-by-list").addClass("no-display");
+       }
+    });
 });
 
