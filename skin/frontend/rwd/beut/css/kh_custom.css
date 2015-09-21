@@ -2748,6 +2748,10 @@ span.unstyled{
 .footer .col-lg-4.a-center.payment2 img{
     width: 100%;
 }
+.load-more a{
+    line-height: 53px;
+    padding-top: 0!important;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -2990,6 +2994,7 @@ span.unstyled{
     .white-menu .main{
         margin-top: 75px;
     }
+    
 }
 
 @media only screen and (max-width: 980px) {
@@ -3993,6 +3998,8 @@ span.unstyled{
     .category-designers .page-title h1{
         display: none;
     }
-
-
+    .load-more a{
+        line-height: 33px;
+        padding-top: 0!important;
+    }
 }
