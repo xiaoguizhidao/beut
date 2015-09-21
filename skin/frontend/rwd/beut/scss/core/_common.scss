@@ -283,6 +283,9 @@ label.select-label {
     color:$gray2;
     padding: 10px 100px;
     margin-bottom: 25px;
+    @include bp(max-width, $bp-medium) {
+        margin-bottom: 0;
+    }
     .block-layered-nav{
         float: left;
         @include calc(max-width, "100% - 220px");

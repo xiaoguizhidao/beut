@@ -2817,6 +2817,7 @@ span.unstyled{
     .pager{
         float: none;
         text-align: center;
+        display: inline-block;
     }
     .container-footer-toolbar .toolbar-left{
         text-align: center;
@@ -2859,7 +2860,7 @@ span.unstyled{
     }*/
     .catalog-breadcrumbs .breadcrumbs{
         margin-left: 50px;
-        margin-top: 20px;
+        margin-top: 0;
     }
     .prod-top{
         padding-left: 50px;
@@ -2867,7 +2868,7 @@ span.unstyled{
     }
     .toolbar_top{
         margin-right: 50px;
-        margin-top: 20px;
+        margin-top: 0;
     }
     .category-products{
         margin-left: 30px;
