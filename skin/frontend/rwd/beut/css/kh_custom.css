@@ -2743,6 +2743,9 @@ span.unstyled{
 .minicart-wrapper .close.skip-link-close{
     background: none!important;
 }
+.footer .col-lg-4.a-center.payment2 img{
+    width: 100%;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
