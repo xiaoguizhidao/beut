@@ -1082,6 +1082,12 @@ label.select-label:before, label.select-label:after {
   padding: 10px 100px;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 980px) {
+  /* line 279, ../scss/core/_common.scss */
+  .block-filter {
+    margin-bottom: 0;
+  }
+}
 /* line 289, ../scss/core/_common.scss */
 .block-filter .block-layered-nav {
   float: left;
@@ -1166,7 +1172,7 @@ body:not(.customer-account) .block:first-child .block-title {
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   /* line 369, ../scss/core/_common.scss */
   .sidebar .block:not(.block-layered-nav) {
     margin-bottom: 0;

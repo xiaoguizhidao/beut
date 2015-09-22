@@ -362,7 +362,7 @@ body:not(.customer-account) .block:first-child .block-title {
     }
 }
 
-@include bp(max-width, $bp-mobile) {
+@include bp(max-width, $bp-mobile + 1) {
 
     .sidebar {
         // Don't apply to layered nav, since it gets special treatment

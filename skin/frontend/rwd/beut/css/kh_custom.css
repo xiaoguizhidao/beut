@@ -2895,7 +2895,15 @@ span.unstyled{
     }
     .customer-account .main-container .col-main{
         padding-right: 50px;
+        padding-left: 50px;
     }
+    .customer-account .col-main,.customer-account .col-left {
+        width: 100%;
+    }
+    .customer-account .main-container .col-left {
+        max-width: 100%;
+    }
+
     .block-filter{
         padding: 10px 50px;
     }
@@ -2995,7 +3003,6 @@ span.unstyled{
     .white-menu .main{
         margin-top: 75px;
     }
-    
 }
 
 @media only screen and (max-width: 980px) {
