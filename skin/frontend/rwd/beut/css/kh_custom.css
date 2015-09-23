@@ -3880,6 +3880,10 @@ span.unstyled{
         width: 30px;
         z-index: 1000;
     }
+    .catalog-product-view .breadcrumbs {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .cart-content, .cart-crossel {
