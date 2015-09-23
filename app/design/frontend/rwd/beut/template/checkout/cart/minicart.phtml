@@ -41,7 +41,6 @@
 
 <a href="<?php echo $this->helper('checkout/cart')->getCartUrl(); ?>" id="top-minicart-beut" data-target-element="#header-cart" class="skip-link skip-cart <?php if($_cartQty <= 0): ?> no-count<?php endif; ?>">
     <span class="count"><?php echo $_cartQty; ?></span>
-    <span class="label"><?php echo ($_cartQty > 0 ) ? $this->__('Items') : $this->__('item'); ?></span>
 </a>
 
 <div id="header-cart" class="block block-cart skip-content">
