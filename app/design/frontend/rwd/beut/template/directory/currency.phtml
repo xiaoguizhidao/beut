@@ -75,7 +75,9 @@
 </div>
 <?php
     else:
-        echo $this->getCurrentCurrencyCode();
+        ?>
+    <span class="curr skip-link skip-currency" data-target-element="#header-currency"><?php echo $this->getCurrentCurrencyCode(); ?> </span>
+    <?php
     endif;
 ?>
 </div>

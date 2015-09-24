@@ -53,7 +53,7 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
             };
         }
 
-        $head->addLinkRel('canonical', $url);
+       $head->addLinkRel('canonical', $url);
     }
 
     protected function _isPageHandled()
@@ -78,6 +78,8 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
             }
             $url = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getUrl();
             $head->removeItem('link_rel', $url);
+
+
             $head->addLinkRel('canonical', $page->getUrl());
         }
 
@@ -148,6 +150,13 @@ class Amasty_Shopby_Block_Top extends Mage_Core_Block_Template
             $isShopby = in_array(Mage::app()->getRequest()->getModuleName(), array(Mage::getStoreConfig('amshopby/seo/key'), 'amshopby'));
             if ($isShopby){
                 $url = '';
+            }
+
+
+            foreach ($head->getData('items') as $item) {
+                if (strpos($item['params'], 'canonical') !== false) {
+                    $head->removeItem('link_rel', $item['name']);
+                };
             }
             $head->addLinkRel('canonical', Mage::helper('amshopby/url')->getCanonicalUrl($url));
         }

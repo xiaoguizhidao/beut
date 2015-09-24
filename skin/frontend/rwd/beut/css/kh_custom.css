@@ -2752,6 +2752,9 @@ span.unstyled{
     line-height: 53px;
     padding-top: 0!important;
 }
+.box-up-sell{
+    margin-top:50px;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
