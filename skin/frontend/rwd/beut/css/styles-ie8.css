@@ -4410,11 +4410,10 @@ body {
 /* line 47, ../scss/layout/_header-cart.scss */
 .skip-cart.skip-active {
   background: #fff url(../images/icon5.png) no-repeat 10px -31px;
-  color: #000;
   background-size: 19px;
 }
 
-/* line 52, ../scss/layout/_header-cart.scss */
+/* line 51, ../scss/layout/_header-cart.scss */
 .minicart-wrapper {
   position: absolute;
   right: 0;
@@ -4425,7 +4424,7 @@ body {
   width: 100%;
   text-transform: none;
 }
-/* line 61, ../scss/layout/_header-cart.scss */
+/* line 60, ../scss/layout/_header-cart.scss */
 .minicart-wrapper .block-subtitle {
   position: absolute;
   right: 15px;
@@ -4435,27 +4434,27 @@ body {
   background: url(../images/close.png) no-repeat 0 0;
   background-size: 20px;
 }
-/* line 69, ../scss/layout/_header-cart.scss */
+/* line 68, ../scss/layout/_header-cart.scss */
 .minicart-wrapper .block-subtitle .skip-link-close {
   width: 100%;
   height: 100%;
   display: block;
 }
-/* line 75, ../scss/layout/_header-cart.scss */
+/* line 74, ../scss/layout/_header-cart.scss */
 .minicart-wrapper .skip-link-close {
   color: #000;
 }
-/* line 78, ../scss/layout/_header-cart.scss */
+/* line 77, ../scss/layout/_header-cart.scss */
 .minicart-wrapper .empty {
   text-transform: none;
 }
-/* line 81, ../scss/layout/_header-cart.scss */
+/* line 80, ../scss/layout/_header-cart.scss */
 .minicart-wrapper .num-item {
   margin-bottom: 10px;
   font-size: 12px;
 }
 
-/* line 97, ../scss/layout/_header-cart.scss */
+/* line 96, ../scss/layout/_header-cart.scss */
 .skip-cart .count {
   border-radius: 0px;
   -webkit-border-radius: 0px;
@@ -4471,7 +4470,7 @@ body {
 /* -------------------------------------------- *
  * Mini Cart - Empty
  */
-/* line 111, ../scss/layout/_header-cart.scss */
+/* line 110, ../scss/layout/_header-cart.scss */
 .cart-menu .empty {
   padding: 20px;
   text-align: center;
@@ -4481,25 +4480,25 @@ body {
  * Mini Cart - Full
  */
 /* Actions */
-/* line 122, ../scss/layout/_header-cart.scss */
+/* line 121, ../scss/layout/_header-cart.scss */
 .cart-menu .actions {
   overflow: hidden;
   padding: 15px;
 }
 
-/* line 127, ../scss/layout/_header-cart.scss */
+/* line 126, ../scss/layout/_header-cart.scss */
 .cart-menu .actions .button {
   float: left;
   width: 48%;
 }
 
-/* line 132, ../scss/layout/_header-cart.scss */
+/* line 131, ../scss/layout/_header-cart.scss */
 .cart-menu .actions .button + .button {
   margin-left: 4%;
 }
 
 /* Subtotal */
-/* line 138, ../scss/layout/_header-cart.scss */
+/* line 137, ../scss/layout/_header-cart.scss */
 .cart-menu .subtotal {
   padding: 0 15px 15px;
   font-family: "CenturyGothic", "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -4508,12 +4507,12 @@ body {
 }
 
 /* List */
-/* line 147, ../scss/layout/_header-cart.scss */
+/* line 146, ../scss/layout/_header-cart.scss */
 .mini-cart-list {
   margin-bottom: 5px;
 }
 
-/* line 151, ../scss/layout/_header-cart.scss */
+/* line 150, ../scss/layout/_header-cart.scss */
 .mini-cart-list li {
   position: relative;
   min-height: 90px;
@@ -4523,25 +4522,25 @@ body {
   line-height: 1.35;
 }
 
-/* line 160, ../scss/layout/_header-cart.scss */
+/* line 159, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-name {
   display: inline-block;
 }
 
-/* line 164, ../scss/layout/_header-cart.scss */
+/* line 163, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-image {
   position: absolute;
   left: 15px;
   top: 15px;
 }
 
-/* line 170, ../scss/layout/_header-cart.scss */
+/* line 169, ../scss/layout/_header-cart.scss */
 .mini-cart-list .product-image img {
   width: 60px;
   height: 60px;
 }
 
-/* line 177, ../scss/layout/_header-cart.scss */
+/* line 176, ../scss/layout/_header-cart.scss */
 .mini-cart-list .has-options {
   margin-bottom: 0;
   color: #A0A0A0;
@@ -4549,7 +4548,7 @@ body {
 }
 
 /* Too full - additional items will be shown in cart */
-/* line 184, ../scss/layout/_header-cart.scss */
+/* line 183, ../scss/layout/_header-cart.scss */
 .cart-menu .last-added {
   padding: 10px 15px 15px;
   border-top: 1px solid #CCCCCC;

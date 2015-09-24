@@ -2752,6 +2752,7 @@ span.unstyled{
     line-height: 53px;
     padding-top: 0!important;
 }
+
 .box-up-sell{
     margin-top:50px;
 }
@@ -2858,7 +2859,19 @@ span.unstyled{
         column-count: 3;
         column-gap: 20px;
     }
+
+.skip-cart .count {
+    position: absolute;
+    background: none;
+    margin-left: 0px;
+    top: 9px;
+    right: 3px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #3D78B5;
+
 }
+
 @media only screen and (max-width: 1400px) and (min-width: 768px){
     /*.block-filter,
     .customer-account .main-container{
@@ -2963,6 +2976,108 @@ span.unstyled{
     }
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .product-feature-descirption{
+        padding: 12px 50px 25px 50px;
+    }
+    .prod-top,
+    .about-us-container > .content,
+    .catalogsearch-result-index .page-title{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .cms-faqs .main-container.col1-layout,
+    .cms-about-us .main-container.col1-layout,
+    .contacts-index-index .main-container.col1-layout,
+    .cms-brand .main-container.col1-layout, .category-designers .main-container.col1-layout,
+    .customer-account-login .main,
+    .checkout-cart-index {
+        margin-top:0px;
+    }
+    .contact-block{
+        padding: 50px 20px;
+    }
+    /*about us*/
+    .about-us-container .content-right .item{
+        width: 100%;
+        display: block;
+    }
+    .new-users .page-title h1{
+        font-size: 28px;
+    }
+    .slider-static-block .content{
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        width: 80%;
+        padding: 30px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .customer-account-login .account-login{
+        width: calc(100% - 100px);
+        width: -moz-calc(100% - 100px);
+        width: -webkit-calc(100% - 100px);
+        width: -ms-calc(100% - 100px);
+        width: -o-calc(100% - 100px);
+    }
+    .customer-account-login .account-login{
+        padding: 0;
+    }
+    .customer-account-login .col2-set .col-1,
+    .customer-account-login .col2-set .col-2{
+        padding: 25px;
+    }
+    .customer-account-login p.required{
+        padding-left: 40px;
+    }
+    div[class^='col-lg-']{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .container-footer-toolbar .toolbar-left .pager,
+    .pages,
+    .pager{
+        float: none;
+        text-align: center;
+        display: inline-block;
+    }
+    .container-footer-toolbar .toolbar-left{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .container-footer-toolbar .pages li,
+    .container-footer-toolbar .toolbar-left .first,
+    .container-footer-toolbar .toolbar-left .last{
+        float: none;
+        display: inline-block;
+        height: 16px;
+    }
+    .container-footer-toolbar .col-lg-6.a-center,
+    .container-footer-toolbar .col-lg-3.a-right{
+        width: 100%;
+    }
+    .container-footer-toolbar .toolbar{
+        text-align: center;
+    }
+    .container-footer-toolbar .pager{
+        white-space: nowrap;
+        display: inline-block;
+    }
+    .block-layered-nav .block-content.accordion-open > dl > dd.current ol{
+        -moz-column-count: 3;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+    }
     .cms-home .row5 .item .absolute-block .content::before, .cms-home .row5 .item .absolute-block .content::after {
        font-size: 30px;
         margin-top: -20px;
@@ -3006,6 +3121,7 @@ span.unstyled{
     .white-menu .main{
         margin-top: 75px;
     }
+
 }
 
 @media only screen and (max-width: 980px) {
@@ -3882,6 +3998,16 @@ span.unstyled{
         top: 10px;
         width: 30px;
         z-index: 1000;
+    }
+    .catalog-product-view .breadcrumbs {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .skip-cart .count {
+        top: 0px;
+        right: -10px;
+        color: #fff;
+        z-index: 0;
     }
 }
 @media only screen and (max-width: 767px) {
