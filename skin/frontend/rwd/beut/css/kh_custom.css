@@ -978,6 +978,7 @@ ul.brands li a {
 }
 .cart-crossel{
     width: 100%;
+    background: #f7f8f9;
 }
 .cart-content .page-title h1{
     font-size: 32px;
@@ -2753,7 +2754,10 @@ span.unstyled{
     padding-top: 0!important;
 }
 .box-up-sell{
-    margin-top:50px;
+    padding-top:50px;
+    background: #f7f8f9;
+    margin-top: 0;
+    padding-bottom: 50px;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
@@ -3005,6 +3009,10 @@ span.unstyled{
     }
     .white-menu .main{
         margin-top: 75px;
+    }
+    .load-more a {
+        line-height: 35px;
+        padding-top: 0 !important;
     }
 }
 
@@ -3883,6 +3891,19 @@ span.unstyled{
         width: 30px;
         z-index: 1000;
     }
+    .row5 .item{
+        padding-left:2px!important;
+    }
+    .amscheckout-img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .amscheckout-review {
+        background-position: 1px -1px !important;
+    }
+    .catalog-breadcrumbs {
+        background: transparent;
+    }
 }
 @media only screen and (max-width: 767px) {
     .cart-content, .cart-crossel {
@@ -4012,5 +4033,8 @@ span.unstyled{
     .load-more a{
         line-height: 33px;
         padding-top: 0!important;
+    }
+    .row5 .item{
+        padding-left:0px!important;
     }
 }
