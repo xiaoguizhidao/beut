@@ -3006,6 +3006,10 @@ span.unstyled{
     .white-menu .main{
         margin-top: 75px;
     }
+    .load-more a {
+        line-height: 35px;
+        padding-top: 0 !important;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -3883,6 +3887,9 @@ span.unstyled{
         width: 30px;
         z-index: 1000;
     }
+    .row5 .item{
+        padding-left:2px!important;
+    }
 }
 @media only screen and (max-width: 767px) {
     .cart-content, .cart-crossel {
@@ -4012,5 +4019,8 @@ span.unstyled{
     .load-more a{
         line-height: 33px;
         padding-top: 0!important;
+    }
+    .row5 .item{
+        padding-left:0px!important;
     }
 }
