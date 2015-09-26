@@ -3892,6 +3892,8 @@ span.unstyled{
     .row5 .item{
         padding-left:2px!important;
     }
+
+
     .amscheckout-img {
         width: 25px !important;
         height: 25px !important;
@@ -3902,6 +3904,7 @@ span.unstyled{
     .catalog-breadcrumbs {
         background: transparent;
     }
+
 }
 @media only screen and (max-width: 767px) {
     .sorter select {
