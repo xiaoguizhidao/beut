@@ -6829,31 +6829,42 @@ p.product-name a:hover {
   }
   /* line 720, ../scss/module/_product-list.scss */
   .block-filter .sorter label:before {
-    top: 4px;
+    top: 6px;
     font-size: 16px;
   }
   /* line 724, ../scss/module/_product-list.scss */
   .block-filter .sorter label:after {
-    top: 2px;
+    top: 4px;
     font-size: 16px;
   }
+}
+@media only screen and (max-width: 980px) and (max-width: 767px) {
   /* line 729, ../scss/module/_product-list.scss */
+  .block-filter .sorter label:before {
+    top: 4px;
+  }
+  /* line 732, ../scss/module/_product-list.scss */
+  .block-filter .sorter label:after {
+    top: 2px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  /* line 737, ../scss/module/_product-list.scss */
   .block-filter select {
-    font-size: 10px;
     line-height: 2.3;
   }
 
-  /* line 734, ../scss/module/_product-list.scss */
+  /* line 741, ../scss/module/_product-list.scss */
   .sidebar .block.block-layered-nav {
     border-bottom: none;
   }
 
-  /* line 739, ../scss/module/_product-list.scss */
+  /* line 746, ../scss/module/_product-list.scss */
   .block-layered-nav--no-filters .block-title {
     display: none;
   }
 
-  /* line 746, ../scss/module/_product-list.scss */
+  /* line 753, ../scss/module/_product-list.scss */
   .block-filter .block-layered-nav .block-content {
     padding-top: 0;
     margin: 0;
@@ -6922,7 +6933,7 @@ p.product-name a:hover {
     padding-left: 22px;
     background: transparent;
   }
-  /* line 753, ../scss/module/_product-list.scss */
+  /* line 760, ../scss/module/_product-list.scss */
   .block-filter .block-layered-nav .block-subtitle--filter {
     margin-bottom: 0;
     padding-top: 2px;
@@ -6930,12 +6941,12 @@ p.product-name a:hover {
     color: #bbb8b2;
   }
 
-  /* line 761, ../scss/module/_product-list.scss */
+  /* line 768, ../scss/module/_product-list.scss */
   .no-display {
     display: none !important;
   }
 
-  /* line 765, ../scss/module/_product-list.scss */
+  /* line 772, ../scss/module/_product-list.scss */
   #narrow-by-list,
   #narrow-by-list2 {
     padding: 10px 0;
@@ -6949,38 +6960,38 @@ p.product-name a:hover {
     background: #fff;
   }
 
-  /* line 778, ../scss/module/_product-list.scss */
+  /* line 785, ../scss/module/_product-list.scss */
   .block-layered-nav dl ol > li > a,
   .block-layered-nav dl ol > li > span {
     padding: 7px;
     margin: 5px;
   }
 
-  /* line 784, ../scss/module/_product-list.scss */
+  /* line 791, ../scss/module/_product-list.scss */
   .block-layered-nav dl ol > li > a {
     color: #636363;
     background-color: #F4F4F4;
     padding: 5px 10px;
   }
-  /* line 787, ../scss/module/_product-list.scss */
+  /* line 794, ../scss/module/_product-list.scss */
   .block-layered-nav dl ol > li > a:hover {
     text-decoration: none;
     background: #ededed;
   }
 
-  /* line 792, ../scss/module/_product-list.scss */
+  /* line 799, ../scss/module/_product-list.scss */
   .category-products {
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
   }
 
-  /* line 797, ../scss/module/_product-list.scss */
+  /* line 804, ../scss/module/_product-list.scss */
   body:not(.customer-account) .block:first-child .block-title {
     display: none;
   }
 
-  /* line 801, ../scss/module/_product-list.scss */
+  /* line 808, ../scss/module/_product-list.scss */
   .catalog-breadcrumbs .breadcrumbs {
     text-align: center;
     float: none;
@@ -6989,7 +7000,7 @@ p.product-name a:hover {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  /* line 808, ../scss/module/_product-list.scss */
+  /* line 815, ../scss/module/_product-list.scss */
   .catalog-breadcrumbs .breadcrumbs li {
     display: inline-block;
     float: none;
@@ -6997,53 +7008,53 @@ p.product-name a:hover {
     font-size: 10px;
   }
 
-  /* line 818, ../scss/module/_product-list.scss */
+  /* line 825, ../scss/module/_product-list.scss */
   .col1-layout .sorter {
     width: 50%;
     border-left: 1px solid #eee;
   }
-  /* line 821, ../scss/module/_product-list.scss */
+  /* line 828, ../scss/module/_product-list.scss */
   .col1-layout .sorter:hover {
     background: #f9f9f9;
   }
-  /* line 825, ../scss/module/_product-list.scss */
+  /* line 832, ../scss/module/_product-list.scss */
   .col1-layout .pager {
     width: 100%;
   }
-  /* line 829, ../scss/module/_product-list.scss */
+  /* line 836, ../scss/module/_product-list.scss */
   .col1-layout .pager {
     float: left;
     clear: both;
   }
-  /* line 833, ../scss/module/_product-list.scss */
+  /* line 840, ../scss/module/_product-list.scss */
   .col1-layout .pager .pages {
     display: none;
   }
-  /* line 836, ../scss/module/_product-list.scss */
+  /* line 843, ../scss/module/_product-list.scss */
   .col1-layout .pager .count-container {
     float: right;
   }
 
-  /* line 843, ../scss/module/_product-list.scss */
+  /* line 850, ../scss/module/_product-list.scss */
   .products-grid > li .product-brand {
     font-size: 12px;
   }
-  /* line 847, ../scss/module/_product-list.scss */
+  /* line 854, ../scss/module/_product-list.scss */
   .products-grid .product-name {
     font-size: 10px;
   }
 
-  /* line 851, ../scss/module/_product-list.scss */
+  /* line 858, ../scss/module/_product-list.scss */
   .category-footer .thumb {
     display: none;
   }
 
-  /* line 854, ../scss/module/_product-list.scss */
+  /* line 861, ../scss/module/_product-list.scss */
   .category-footer {
     margin-top: 30px;
   }
 
-  /* line 858, ../scss/module/_product-list.scss */
+  /* line 865, ../scss/module/_product-list.scss */
   .load-more a {
     width: 131px;
     height: 35px;
@@ -7052,13 +7063,13 @@ p.product-name a:hover {
     margin-right: 10px;
   }
 
-  /* line 866, ../scss/module/_product-list.scss */
+  /* line 873, ../scss/module/_product-list.scss */
   .category-footer .category-description .description {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  /* line 871, ../scss/module/_product-list.scss */
+  /* line 878, ../scss/module/_product-list.scss */
   .block-filter .block-layered-nav .block-content > dl > dt {
     width: 100%;
     padding: 10px 15px;
