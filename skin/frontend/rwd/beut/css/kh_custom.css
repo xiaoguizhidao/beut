@@ -1907,7 +1907,6 @@ ul.delivery-tabs li a{
     width: 100%;
     background: transparent;
     padding: 0 20px 0 0;
-    font-size: 13px;
 }
 .block-filter label.select-label{
     padding: 6px 0;
@@ -3153,7 +3152,7 @@ span.unstyled{
     .old-price .price,
     .special-price .price,
     div[class^='brand-col-'] p a,
-    input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text], select{
+    input[type=email], input[type=search], input[type=number], input[type=password], input[type=tel], input[type=text]{
         font-size: 12px !important;
     }
     .item-options,
@@ -3169,7 +3168,6 @@ span.unstyled{
     .collapse .content p,
     .cms-about-us .our-history p,
     .customer-account-login .scaffold-form label,
-    .block-filter select,
     h2.product-name a,
     div#ewcm_container,
     .category-designers p a{
@@ -3906,6 +3904,9 @@ span.unstyled{
     }
 }
 @media only screen and (max-width: 767px) {
+    .sorter select {
+        font-size: 10px;
+    }
     .cart-content, .cart-crossel {
         padding-left: 15px;
         padding-right: 15px;

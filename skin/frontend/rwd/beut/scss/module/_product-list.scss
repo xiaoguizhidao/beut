@@ -718,16 +718,23 @@ $productsGridActionHeight: 50px;
         }
         .sorter label{
             &:before{
-                top: 4px;
+                top: 6px;
                 font-size: 16px;
             }
             &:after{
-                top: 2px;
+                top: 4px;
                 font-size: 16px;
+            }
+            @include bp(max-width, $bp-mobile) {
+                &:before{
+                    top: 4px;
+                }
+                &:after{
+                    top: 2px;
+                }
             }
         }
         select{
-            font-size: $f-10;
             line-height: 2.3;
         }
     }

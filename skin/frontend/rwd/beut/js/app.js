@@ -994,7 +994,11 @@ $j(document).ready(function () {
             } else {
                 //They're clicking something new. Reflect the explicit user interaction.
                 wrapper.addClass('accordion-open');
-                toggleClasses(jQuery(this), dts,1);
+                if(wrapper.hasClass('product-collateral')) {
+                    toggleClasses(jQuery(this), dts,0);
+                }else {
+                    toggleClasses(jQuery(this), dts,1);
+                }
             }
           //  toggleClasses(jQuery(this), dts);
         });
