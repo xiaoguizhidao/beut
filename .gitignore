@@ -1425,3 +1425,8 @@ app/etc/local.xml
 .idea/.beutugrade
 
 
+app/etc/modules/untitled folder/Extendware_EWAutoSwitcher_.xml
+app/etc/modules/untitled folder/Extendware_EWCacheBackend_.xml
+app/etc/modules/untitled folder/Extendware_EWCartReminder_.xml
+app/etc/modules/untitled folder/Extendware_EWCookieMessage_.xml
+app/etc/modules/untitled folder/Extendware_EWPageCache_.xml

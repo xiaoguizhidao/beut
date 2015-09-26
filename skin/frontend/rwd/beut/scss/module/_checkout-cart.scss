@@ -709,7 +709,12 @@
         border: 1px solid $c-module-border;
         background-color: $c-module-background-hover;
         min-width: 220px;
-
+        &:before {
+            top: 7px;
+        }
+        &:after {
+            top: 11px;
+        }
         &:hover {
             background-color: shade($c-module-background, 10%)
         }
