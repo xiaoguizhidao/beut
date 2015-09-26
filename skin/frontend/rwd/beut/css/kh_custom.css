@@ -387,7 +387,6 @@ input {
 .form-list .control label, .sp-methods dt label, #checkout-shipping-method-load .sp-methods dd label, #co-shipping-method-form .sp-methods dd label, .product-options ul.options-list label {
     display: inline-block;
     max-width: none;
-    min-width: 250px;
     width: 100%;
 }
 .form-list .fields .field{
@@ -2936,6 +2935,9 @@ span.unstyled{
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         width: 65%;
         margin-left: auto;
         margin-right: auto;
