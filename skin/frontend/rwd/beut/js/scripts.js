@@ -719,6 +719,10 @@ function calCulateMagintop(){
         else {
             jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "175px")
         }
+        if(jQuery(window).width() > 980 && jQuery(window).width() < 1025) {
+            jQuery(".checkout-cart-index .main-container").css("margin-top", "100px");
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "90px")
+        }
     }
     else {
         if(jQuery(window).width() > 767 && jQuery(window).width() < 1025) {
@@ -726,6 +730,11 @@ function calCulateMagintop(){
         }
         else {
             jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "135px")
+        }
+
+        if(jQuery(window).width() > 980 && jQuery(window).width() < 1025) {
+            jQuery(".checkout-cart-index .main-container").css("margin-top", "70px");
+            jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "50px")
         }
     }
 }
