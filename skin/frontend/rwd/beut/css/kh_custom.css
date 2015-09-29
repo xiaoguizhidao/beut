@@ -3027,6 +3027,12 @@ span.unstyled{
     .ewcm-show.category-designers .main-container.col1-layout{
         margin-top: 0px;
     }
+    .white-menu .main{
+        margin-top: 75px;
+    }
+    .ewcm-show.white-menu .main{
+        margin-top: 90px;
+    }
 
 }
 @media only screen and (max-width: 980px) and (min-width: 768px){
