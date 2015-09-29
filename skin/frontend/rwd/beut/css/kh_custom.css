@@ -936,7 +936,6 @@ ul.brands li a {
     margin-bottom:20px;
 }
 .product-feature-descirption {
-    background:#f7f8f9;
     padding:60px 100px;
     margin-top: 30px;
 }
@@ -975,13 +974,14 @@ ul.brands li a {
 .cart-content,.cart-crossel{
     padding:25px 50px;
 }
+.checkout-cart-index .cart-crossel{
+    background: #f7f8f9;
+}
 .cart-crossel{
     width: 100%;
-    background: #f7f8f9;
 }
 .cart-content .page-title h1{
     font-size: 32px;
-    font-family: futura-medium;
     color: #000000;
 }
 .cart .page-title{
@@ -2753,7 +2753,6 @@ span.unstyled{
 }
 .box-up-sell{
     padding-top:50px;
-    background: #f7f8f9;
     margin-top: 0;
     padding-bottom: 50px;
 }
