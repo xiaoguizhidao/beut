@@ -1118,7 +1118,6 @@ h2.product-brand{
 .cart .cart-totals table tfoot tr:last-child td,
 .cart .cart-totals table tfoot tr:last-child span.price{
     font-size: 32px;
-    font-family: 'futura-medium';
 }
 .cart-content .checkout-types{
     width: 100%;
