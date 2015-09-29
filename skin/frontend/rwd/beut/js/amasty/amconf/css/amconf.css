@@ -311,4 +311,10 @@ hr.amconf-hr{
     .lSAction > .lSNext:before, .lSAction > .lSNext:after{
         line-height: 2;
     }
+    .product-view .product-img-box .product-image #nextGalleryImg{
+        right: -8px;
+    }
+    .product-view .product-img-box .product-image #prevGalleryImg{
+        left: -10px;
+    }
 }
