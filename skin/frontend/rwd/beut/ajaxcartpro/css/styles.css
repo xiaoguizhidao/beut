@@ -1,11 +1,9 @@
 #ajaxcartpro-progress{
-    border: 1px #999999 solid;
     position: fixed;
     text-align: center;
     padding: 10px;
-    background-color: #ffffff;
     z-index: 9999;
-    color: black;
+    color: #4d91d5;
     overflow:  auto;
     min-height: 50px;
     min-width: 260px;
