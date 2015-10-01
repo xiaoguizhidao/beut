@@ -594,6 +594,18 @@ spiner
     .amscheckout-data-table tr th:last-child{
         padding-right: 0px;
     }
+
+    .amscheckout-data-table tr.subtotal td,
+    .amscheckout-data-table tr.subtotal td .price{
+        font-size: 16px;
+    }
+
+    .amscheckout-data-table tfoot td {
+        font-size: 16px;
+    }
+    .amscheckout-submit-button{
+        font-size: 16px;
+    }
 }
 @media only screen and (max-width: 767px) {
     .amscheckout .three-columns .first-column,

@@ -195,6 +195,9 @@ body.overlay-menu .slideshow-container {
   text-align: center;
   margin-bottom: 40px;
 }
+.checkout-cart-index #lightSlider {
+    margin-bottom: 0px;
+}
 /* line 155, ../scss/content/_home.scss */
 #lightSlider h2.product-name {
   text-transform: none;

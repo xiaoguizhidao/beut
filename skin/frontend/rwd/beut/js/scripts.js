@@ -737,6 +737,12 @@ function calCulateMagintop(){
             jQuery(".customer-account-login .main, .checkout-onepage-index .main-container, .customer-account-index .main, .customer-account .main").css("margin-top", "50px")
         }
     }
+    if(jQuery(window).width() > 767 && jQuery(window).width() <= 980) {
+        if(jQuery(".customer-account .block-account .block-title").length) {
+            jQuery(".customer-account .block-account .block-title").addClass("active");
+            jQuery(".customer-account .block-account .block-content").removeClass("no-display");
+        }
+    }
 }
 
 jQuery(document).ready(function ($) {
