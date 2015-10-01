@@ -461,13 +461,6 @@ ul.brands li a,
 .cms-about-us .page-title{
     display: none;
 }
-.slider-top {
-    background-image: url("../images/about-us-banner.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    padding: 100px 0;
-    text-align: center;
-}
 .cms-page-view .col1-layout .col-main .std{
     margin: 0!important;
     padding: 0!important;
@@ -2757,6 +2750,27 @@ span.unstyled{
     margin-top: 0;
     padding-bottom: 50px;
 }
+.cms-about-us .top {
+    margin-top: 50px;
+}
+.ewcm-show.cms-about-us .top {
+    margin-top: 90px;
+}
+.cms-about-us .top {
+    position: relative;
+}
+.cms-about-us .slider-top{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -2920,15 +2934,6 @@ span.unstyled{
         left:-50px;
     }
 }
-@media only screen and (max-width: 1200px) {
-    .slider-top {
-        background-image: url("../images/about-us-banner.jpg");
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        padding: 100px 0;
-        text-align: center;
-    }
-}
 @media only screen and (min-width: 767px) {
     .cms-home .row5 .item .absolute-block {
         left: 0;
@@ -3041,6 +3046,9 @@ span.unstyled{
 
 }
 @media only screen and (max-width: 980px) {
+    .cms-about-us .top {
+        margin-top: 0;
+    }
     .mobile-img{
         display: block !important;
     }
