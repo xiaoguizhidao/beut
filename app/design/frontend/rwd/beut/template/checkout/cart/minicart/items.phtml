@@ -49,7 +49,7 @@ if(empty($_cartQty)) {
     <?php $_items = $this->getRecentItems() ?>
     <?php $countItems = count($_items); ?>
     <?php if($countItems): ?>
-        <div class="num-item"><?php echo $this->__('My Basket (').$this->getSummaryCount().$this->__(' items) ');?></div>
+        <div class="num-item"><?php echo $this->__('My Cart (').$this->getSummaryCount().$this->__(' items) ');?></div>
         <div>
             <ul id="cart-sidebar" class="mini-products-list">
                 <?php foreach($_items as $_item): ?>
@@ -87,7 +87,7 @@ if(empty($_cartQty)) {
                     <?php echo $this->getChildHtml('extra_actions') ?>
                     <li>
                         <a title="<?php echo $this->__('Checkout') ?>" class="button checkout-button" href="<?php echo $this->getBaseUrl().'checkout/cart' ?>">
-                            <?php echo $this->__('Go to bag') ?>
+                            <?php echo $this->__('Go to Cart') ?>
                         </a>
                         <a class="cart-link" href="<?php echo $this->getUrl('checkout/cart'); ?>">
                             <?php echo $this->__('Checkout'); ?>
