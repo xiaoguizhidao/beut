@@ -30,7 +30,7 @@ input {
     margin-right: 20px;
 }
 .currency.custom-service {
-    margin-left: -5px;
+    margin-left: 20px;
     padding-top: 12px;
     background: url(../images/hotline.png) no-repeat 0 -77px;
     background-size: 25px auto;
@@ -1424,7 +1424,8 @@ dl.sp-methods.f-right dd{
 }
 .right-block{
     width: 24%;
-    margin-top: -30px;
+    margin-top: 0px;
+    padding-right: 1%;
 }
 .delivery-contents {
     padding: 30px 50px;
@@ -1432,11 +1433,13 @@ dl.sp-methods.f-right dd{
 .cms-delivery .delivery-contents h1.title{
     text-transform: capitalize;
     color:black;
+    float: right;
+    padding-left: 25%;
+    width: 100%;
 }
 .can-we-help {
-    border-left: 1px solid #eeeeee;
-    padding-left: 20px;
-    padding-top: 20px;
+    border-right: 1px solid #eeeeee;
+    padding-right: 5%;
 }
 .can-we-help img{
     margin: 5px 0!important;
@@ -2433,7 +2436,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     min-height:40px;
     background: #458ddb;
     color:white;
-    margin-top:65px;
+    margin-top:50px;
 }
 .wp-custom-menu-popup .menu-viewall a{
     color: white;
@@ -2445,7 +2448,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
     text-decoration: none;
 }
 .delivery-contents  .menu-left{
-    margin-top: 95px;
+    margin-top: 50px;
 }
 
 /*style for testimonial*/
@@ -2771,6 +2774,24 @@ span.unstyled{
     -webkit-transform: translateY(-50%);
     text-align: center;
 }
+#ajaxcartpro-progress{
+    min-height: 75px!important;
+}
+.footer-before-container {
+    border-top: 1px solid #eeeeee;
+}
+.cms-index-index.cms-home .footer-before-container, .cms-about-us .footer-before-container, .cms-no-route .footer-before-container, .catalog-category-view .footer-before-container{
+    border-top: none;
+}
+.skip-search.skip-active{
+    background: url("../images/close-white.png") ;
+    background-color: black;
+    background-origin: padding-box;
+    background-position: 10px 10px!important;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px){
     .product-feature-descirption{
         padding: 12px 50px 25px 50px;
@@ -3723,7 +3744,7 @@ span.unstyled{
         margin-top: -3px;
     }
     .skip-search.skip-active,.skip-search:hover{
-        background-position: 3px 4px !important;
+        /*background-position: 3px 4px !important;*/
     }
     #search_mini_form .col-xs-2{
         padding-right: 0;
