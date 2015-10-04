@@ -1902,6 +1902,7 @@ ul.delivery-tabs li a{
     width: 100%;
     background: transparent;
     padding: 0 20px 0 0;
+    text-indent: 46px;
 }
 .block-filter label.select-label{
     padding: 6px 0;
@@ -3766,6 +3767,7 @@ span.unstyled{
     }
     .block-filter select{
         font-family: "CenturyGothic", Verdana, Arial, sans-serif;
+        text-indent: inherit;
     }
 
     .block-layered-nav dl dd ol li span{
